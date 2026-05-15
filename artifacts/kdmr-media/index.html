@@ -116,11 +116,57 @@
         flex: 1; display: flex; align-items: center; padding: 70px 60px;
         background: linear-gradient(105deg, rgba(15,10,0,0.6) 0%, transparent 50%), #0a0a0a;
       }
+      /* ── Mobile: cinematic full-bleed hero (Variant C) ──────── */
       @media (max-width: 860px) {
-        .hero-cinema { flex-direction: column; min-height: auto; }
-        .hero-portrait { width: 100%; min-height: 260px; padding: 40px 0; }
-        .hero-avatar-wrap { width: 130px; height: 130px; }
-        .hero-story { padding: 32px 20px 44px; }
+        .hero-cinema {
+          display: block; flex-direction: unset;
+          position: relative; min-height: 100svh; overflow: hidden;
+        }
+        .hero-portrait {
+          position: absolute; inset: 0; z-index: 0;
+          width: 100%; height: 100%; min-height: 0; padding: 0;
+          background: #000;
+        }
+        .hero-portrait::before {
+          background:
+            radial-gradient(ellipse at 50% 28%, transparent 0%, rgba(0,0,0,0.45) 78%),
+            linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.85) 78%, #050505 100%);
+          z-index: 2; pointer-events: none;
+        }
+        .hero-portrait::after { display: none; }
+        .hero-deco { display: none; }
+        .hero-avatar-wrap {
+          position: absolute; inset: 0; z-index: 1;
+          width: 100%; height: 100%; border-radius: 0;
+          background: #000; border: none; box-shadow: none;
+          display: flex; align-items: center; justify-content: center;
+        }
+        .hero-avatar-wrap::before { display: none; }
+        .hero-avatar-wrap > img { object-position: 50% 18% !important; }
+        #heroInitials { font-size: 6rem !important; }
+        #heroYearBadge {
+          top: 16px !important; left: 16px !important;
+          background: rgba(0,0,0,0.4) !important;
+          backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+          z-index: 3;
+        }
+        .hero-badge-anchor { display: none !important; }
+        .hero-story {
+          position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+          padding: 24px 20px 30px;
+          background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 25%, rgba(5,5,5,0.96) 100%);
+        }
+        .hero-story #heroName {
+          font-size: 2.4rem !important; line-height: 1.0 !important;
+          color: #ffffff !important; text-shadow: 0 2px 24px rgba(0,0,0,0.7);
+        }
+        .hero-story #heroSubtitle { opacity: 1 !important; }
+        .hero-story #heroBioText {
+          color: rgba(240,240,240,0.8) !important; max-width: 320px;
+          text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+        }
+        .hero-story #heroVotes { color: rgba(255,255,255,0.55) !important; }
+        .scroll-hint { display: none !important; }
       }
       /* ── Bento grid ─────────────────────────────────────── */
       .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
@@ -265,7 +311,7 @@
         <div class="hero-avatar-wrap" id="heroAvatarWrap">
           <span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">—</span>
         </div>
-        <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;">
+        <div class="hero-badge-anchor" style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;">
           <span id="heroBadgeChip" style="display:none;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.22);color:#f0a820;font-size:0.52rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:4px 14px;border-radius:2px;white-space:nowrap;"></span>
         </div>
       </div>
