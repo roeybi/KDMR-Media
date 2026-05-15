@@ -10,23 +10,33 @@ let _data = null;
 // ════════════════════════════════════════════════════════════════════════
 // ─── API INTEGRATIONS ───────────────────────────────────────────────────
 // ════════════════════════════════════════════════════════════════════════
-// Placeholder configuration. Replace the placeholder strings with your real
-// Supabase project + Make.com webhook URLs, then flip ENABLED to `true`.
-// While ENABLED is false, all submissions are mocked locally (console only)
-// so the UI can be tested end-to-end without external dependencies.
+// Supabase anon/public key — safe for client-side use (protected by RLS).
+// Never put the service_role key here.
 
 const API_CONFIG = {
-  // Supabase (REST/Realtime)
-  SUPABASE_URL:       'https://<YOUR-PROJECT>.supabase.co',
-  SUPABASE_ANON_KEY:  '<YOUR-SUPABASE-ANON-KEY>',
-
-  // Make.com webhook scenarios
-  WEBHOOK_VOTES:      'https://hook.eu2.make.com/<YOUR-VOTE-WEBHOOK-ID>',
-  WEBHOOK_NEWSLETTER: 'https://hook.eu2.make.com/<YOUR-NEWSLETTER-WEBHOOK-ID>',
-
-  // Master switch — keep false until real endpoints are wired up.
-  ENABLED: false,
+  SUPABASE_URL:      'https://erbyhmliuqopwrspxbir.supabase.co',
+  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVyYnlobWxpdXFvcHdyc3B4YmlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4MzUzOTcsImV4cCI6MjA5NDQxMTM5N30.bm7hJBTa5eN1KX8MYp4aSCpHqiZPrxkb8k_t3VNIAMg',
 };
+
+/** POST a row directly to a Supabase table via the REST API. */
+async function supabaseInsert(table, row) {
+  try {
+    const res = await fetch(`${API_CONFIG.SUPABASE_URL}/rest/v1/${table}`, {
+      method: 'POST',
+      headers: {
+        'apikey':        API_CONFIG.SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${API_CONFIG.SUPABASE_ANON_KEY}`,
+        'Content-Type':  'application/json',
+        'Prefer':        'return=minimal',
+      },
+      body: JSON.stringify(row),
+    });
+    return { ok: res.ok, status: res.status };
+  } catch (err) {
+    console.error(`[KDMR] Supabase insert to ${table} failed:`, err);
+    return { ok: false, error: err.message };
+  }
+}
 
 // Ensure dataLayer exists for GTM (safe no-op if GTM is not yet installed).
 window.dataLayer = window.dataLayer || [];
@@ -55,95 +65,50 @@ function getInterestTagFromPath() {
 }
 
 /**
- * Submit a vote to the cloud (Make.com webhook → Supabase row).
- * Falls back to a mock when API_CONFIG.ENABLED is false.
+ * Submit a vote to the cloud → Supabase community_votes table.
+ * Silently succeeds even if the table doesn't exist yet (non-blocking).
  */
 async function submitVoteToCloud(entryId, meta = {}) {
-  const payload = {
-    type: 'vote',
-    entryId,
-    interestTag: getInterestTagFromPath(),
-    page: window.location.pathname,
-    ts: new Date().toISOString(),
-    ...meta,
-  };
-  // Analytics — fire regardless of ENABLED flag so GTM/GA sees every vote.
+  // Analytics — fire regardless so GTM/GA sees every vote.
   window.dataLayer.push({
     event:       'kdmr_vote',
     category:    'engagement',
-    interestTag: payload.interestTag,
-    entryId:     payload.entryId,
-    page:        payload.page,
+    interestTag: getInterestTagFromPath(),
+    entryId,
+    page:        window.location.pathname,
   });
-
-  if (!API_CONFIG.ENABLED) {
-    console.info('[KDMR][mock vote]', payload);
-    return { ok: true, mock: true };
-  }
-  try {
-    const res = await fetch(API_CONFIG.WEBHOOK_VOTES, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    return { ok: res.ok };
-  } catch (err) {
-    console.error('[KDMR] Vote submission failed:', err);
-    return { ok: false, error: err.message };
-  }
+  return supabaseInsert('community_votes', {
+    entry_id:    entryId,
+    entry_name:  meta.name  || null,
+    award:       meta.award || null,
+    branch:      meta.branch || null,
+    interest:    getInterestTagFromPath(),
+    page:        window.location.pathname,
+  });
 }
 
 /**
- * Submit a newsletter signup. Auto-tags the subscriber based on the page
- * they submitted from (e.g. "Interest: UN", "Interest: MRK").
+ * Submit a newsletter signup → Supabase newsletter_subscribers table.
+ * Auto-tags the subscriber based on the page they signed up from.
  */
 async function submitNewsletter(email, meta = {}) {
   const tag = getInterestTagFromPath();
-
-  // ── Meta CAPI preparation ─────────────────────────────────────────
-  // Hash the email with SHA-256 before it leaves the browser.
-  // Pass `hashedEmail` to your CAPI-compliant webhook endpoint.
-  // Never send plaintext PII to third-party pixels directly.
   const hashedEmail = await sha256(email);
 
-  const payload = {
-    type: 'newsletter',
-    email,
-    hashedEmail,          // SHA-256 normalised — ready for Meta CAPI
-    interestTag: tag,
-    interestLabel: `Interest: ${tag}`,
-    page: window.location.pathname,
-    referrer: document.referrer || null,
-    ts: new Date().toISOString(),
-    ...meta,
-  };
-
-  // Analytics — fire before the async network call so GTM receives it even
-  // if the webhook times out. Send only hashed PII to the dataLayer.
+  // Analytics — send only hashed PII to dataLayer (safe for GTM → Meta CAPI).
   window.dataLayer.push({
-    event:        'kdmr_lead',
-    category:     'newsletter',
-    interestTag:  tag,
-    interestLabel: payload.interestLabel,
-    page:         payload.page,
-    em:           hashedEmail,   // hashed — safe for GTM → Meta CAPI bridge
+    event:         'kdmr_lead',
+    category:      'newsletter',
+    interestTag:   tag,
+    page:          window.location.pathname,
+    em:            hashedEmail,
   });
 
-  if (!API_CONFIG.ENABLED) {
-    console.info('[KDMR][mock newsletter]', payload);
-    return { ok: true, mock: true };
-  }
-  try {
-    const res = await fetch(API_CONFIG.WEBHOOK_NEWSLETTER, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    return { ok: res.ok };
-  } catch (err) {
-    console.error('[KDMR] Newsletter submission failed:', err);
-    return { ok: false, error: err.message };
-  }
+  return supabaseInsert('newsletter_subscribers', {
+    email,
+    interest:  tag,
+    page:      window.location.pathname,
+  });
 }
 
 // ─── TOAST NOTIFICATIONS ────────────────────────────────────────────────
