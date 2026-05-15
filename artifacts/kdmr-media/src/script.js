@@ -354,7 +354,8 @@ function renderStats(entry, panelId) {
   panel.innerHTML = `
     <div style="margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.06);">
       <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:${acc};margin-bottom:6px;">KDCA Champion Profile</div>
-      <div style="font-size:1rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;line-height:1.2;">${entry.name}</div>
+      <div style="font-size:1rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;line-height:1.2;margin-bottom:${entry.badge ? '7px' : '0'};">${entry.name}</div>
+      ${entry.badge ? `<div style="display:inline-flex;align-items:center;gap:5px;background:rgba(240,168,32,0.1);border:1px solid rgba(240,168,32,0.28);color:#f0a820;font-size:0.55rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;">✦ ${entry.badge}</div>` : ''}
     </div>
     <div class="stat-row"><div class="stat-label">Category</div><div class="stat-value">${entry.award}</div></div>
     <div class="stat-row"><div class="stat-label">Year</div><div class="stat-value">${entry.year}</div></div>

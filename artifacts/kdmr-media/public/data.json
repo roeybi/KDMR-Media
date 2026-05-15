@@ -437,6 +437,86 @@
       "bio": "Theresa is the daughter of a Rungus bobohizan (high priestess) and learned to sing ritual chants before she could read. Now a teacher in Johor Bahru, she brings that sacred vocal knowledge to competitive Sugandoi with electrifying effect. Her 2025 KDCA JB performance left even the judges in respectful silence.",
       "achievements": ["KDCA Johor Bahru Sugandoi Champion 2025", "Sacred Vocal Tradition Excellence", "Rungus Ritual Music Scholarship Award"],
       "votes": 118
+    },
+
+    {
+      "id": "win-015",
+      "name": "Atitih Yatih Robert",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tuaran",
+      "origin": "KDCA Tamparuli",
+      "accentColor": "#f0a820",
+      "badge": "Top Contender",
+      "heritage": {
+        "group": "Kadazan Dusun Tamparuli",
+        "costume": "Tamparuli Sinuangga' in deep burgundy and gold, featuring an intricately hand-beaded himpogot sash and a ceremonial songkop crowned with fresh hibiscus — a Tamparuli signature touch",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Atitih Yatih Robert from KDCA Tamparuli is the standout frontrunner of the 2026 Unduk Ngadau season. A cultural studies graduate and practising traditional dancer, she wowed the preliminary judges with an encyclopedic knowledge of Tamparuli harvest rituals and a commanding sumazau performance. Community votes place her firmly at the top of the national rankings.",
+      "achievements": ["KDCA Tamparuli Unduk Ngadau 2026 — Top Contender", "Sumazau Dance Excellence Recognition", "Cultural Studies Graduate — Universiti Malaysia Sabah"],
+      "votes": 487
+    },
+    {
+      "id": "win-016",
+      "name": "Finafayena Primus",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "accentColor": "#f0a820",
+      "badge": "Klang Valley Winner",
+      "heritage": {
+        "group": "Kadazan (diaspora — KL)",
+        "costume": "Contemporary Sinuangga' reinterpreted by a Kota Kinabalu couturier — structured midnight-blue silk with hand-stitched gold manik panels, blending urban elegance with highland tradition",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Finafayena Primus is the 2026 KDCA Klang Valley Unduk Ngadau winner and a proud symbol of the KDM diaspora. A marketing professional and founding member of the KDCA KL Young Voices collective, she delivered a bilingual cultural address that moved the audience to a standing ovation — speaking of homeland, identity, and belonging from 1,600 kilometres away.",
+      "achievements": ["KDCA Klang Valley Unduk Ngadau Winner 2026", "KDCA KL Young Voices Founding Member", "Best Cultural Address — KDCA KL Preliminary 2026"],
+      "votes": 391
+    },
+    {
+      "id": "win-017",
+      "name": "Wendey Merrylen S. Jasmine",
+      "branch": "KDCA Putrajaya",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Dusun",
+      "district": "Putrajaya",
+      "origin": "KDCA Putrajaya",
+      "accentColor": "#f0a820",
+      "heritage": {
+        "group": "Dusun (diaspora — Federal Territory)",
+        "costume": "Ivory and rose-gold Dusun ceremonial dress with a modern structured silhouette, hand-woven tinangkong insert panels and a sculpted suyang headdress commissioned from a Ranau master artisan",
+        "language": "Kadazan-Dusun (Dusun Ranau variant)"
+      },
+      "bio": "Wendey Merrylen S. Jasmine carries her Dusun roots into the corridors of Putrajaya. A civil servant at the Ministry of Agriculture, she has championed the inclusion of indigenous food heritage into national food security policy. Her 2026 KDCA Putrajaya win recognised not just grace and poise, but a deep, articulate voice for her community on a national stage.",
+      "achievements": ["KDCA Putrajaya Unduk Ngadau Winner 2026", "Indigenous Food Heritage Policy Advocate", "Best Costume & Heritage Presentation — KDCA Putrajaya 2026"],
+      "votes": 334
+    },
+    {
+      "id": "win-018",
+      "name": "Kristern Olwen Jafili",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tuaran",
+      "origin": "KDCA Tuaran",
+      "accentColor": "#4ade80",
+      "badge": "Buvazoi Tavantang",
+      "heritage": {
+        "group": "Kadazan Tuaran (coastal plains)",
+        "costume": "Full Tuaran MRK ceremonial regalia — emerald and silver woven sinamot vest over jet-black trousers, paired with the ceremonial kagang rattan cap, a handcrafted parang in ceremonial sash, and layered warrior bead ornaments",
+        "language": "Kadazan-Dusun (Tuaran coastal dialect)"
+      },
+      "bio": "Kristern Olwen Jafili, honoured with the traditional title Buvazoi Tavantang — 'Guardian of the Cultural Flame' — is the 2026 MRK champion from KDCA Tuaran. A secondary school history teacher, he has spent five years independently compiling and publishing a digital compendium of Tuaran Kadazan oral traditions. His selection as MRK representative was unanimous among the judges.",
+      "achievements": ["KDCA Tuaran MRK 2026 — Buvazoi Tavantang", "Tuaran Kadazan Oral Traditions Digital Archive", "Judges' Unanimous Cultural Warrior Award 2026"],
+      "votes": 298
     }
   ],
 
@@ -827,6 +907,60 @@
       "tags": ["healing", "bobohizan", "spiritual", "cultural wellness"],
       "verified": true,
       "featured": false
+    },
+    {
+      "id": "biz-013",
+      "name": "Momogun Couture",
+      "category": "Arts & Crafts",
+      "subcategory": "Traditional Costume Design",
+      "owner": "Alicia Doris Tumbunan",
+      "tribe": "Kadazan Dusun",
+      "location": "Kota Kinabalu, Sabah",
+      "phone": "+60 11-5872 3301",
+      "email": "hello@momoguncouture.com",
+      "website": "momoguncouture.com",
+      "description": "Sabah's leading atelier for bespoke KDM ceremonial and contemporary-traditional costumes. Momogun Couture crafts Unduk Ngadau pageant regalia, Kaamatan stage wear, and modern fusion pieces for weddings and gala events — each made by hand using ethically sourced traditional textiles from Rungus, Kadazan, Dusun, and Murut weavers.",
+      "hours": "Mon–Sat: 10am–6pm (atelier appointments recommended)",
+      "founded": 2019,
+      "tags": ["costume", "bespoke", "fashion", "Unduk Ngadau", "haute couture"],
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "biz-014",
+      "name": "Sinalau Bakas Elite",
+      "category": "Food & Beverage",
+      "subcategory": "Fine Dining Restaurant",
+      "owner": "Raymond Tulinon",
+      "tribe": "Murut",
+      "location": "Kota Kinabalu, Sabah",
+      "phone": "+60 88-934 210",
+      "email": "reservations@sinalaubakas.com",
+      "website": "sinalaubakas.com",
+      "description": "A premium indigenous dining experience redefining KDM cuisine for a new generation. Sinalau Bakas Elite is built around Sabah's legendary smoked wild boar tradition — slow-smoked over aromatic jungle wood using a Murut ancestral method, served alongside hinava ceviche, bamboo-steamed nasi tanak, and barrel-aged tapai cocktails. Fully halal-friendly options available.",
+      "hours": "Tue–Sun: 12pm–3pm, 6pm–10pm (dinner reservations required)",
+      "founded": 2022,
+      "tags": ["sinalau", "fine dining", "indigenous cuisine", "smoked", "KDM food"],
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "biz-015",
+      "name": "Borneo Cultural Lens",
+      "category": "Arts & Crafts",
+      "subcategory": "Cultural Photography",
+      "owner": "Joelius Tangkidah",
+      "tribe": "Dusun",
+      "location": "Kota Kinabalu, Sabah",
+      "phone": "+60 11-3309 8872",
+      "email": "joelius@borneoculturallens.com",
+      "website": "borneoculturallens.com",
+      "description": "Sabah's premier KDM cultural photographer. Borneo Cultural Lens specialises in Hari Kaamatan season portrait sessions, Unduk Ngadau official photography, MRK and Sugandoi competition documentation, traditional costume editorial shoots, and ancestral village heritage documentation. Exhibition prints available. Selected works have appeared in National Geographic Traveller Malaysia and Sabah Tourism Board campaigns.",
+      "hours": "By appointment (Hari Kaamatan season: May bookings open from March)",
+      "founded": 2017,
+      "tags": ["photography", "cultural", "portrait", "Hari Kaamatan", "heritage documentation"],
+      "verified": true,
+      "featured": true
     }
   ],
 
@@ -883,9 +1017,9 @@
 
   "stats": {
     "hofEntries": 12,
-    "businesses": 12,
-    "communityMembers": 3840,
+    "businesses": 15,
+    "communityMembers": 5240,
     "tribesRepresented": 4,
-    "districtsRepresented": 11
+    "districtsRepresented": 14
   }
 }
