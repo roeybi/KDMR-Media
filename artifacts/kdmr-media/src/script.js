@@ -329,17 +329,50 @@ function renderPortrait(entry) {
   const acc = entry.accentColor || '#f0a820';
   const hex = acc.replace('#','');
   const r=parseInt(hex.slice(0,2),16), g=parseInt(hex.slice(2,4),16), b=parseInt(hex.slice(4,6),16);
+  const hasPhoto = !!entry.imageUrl;
 
+  // ── Background: photo + cinematic glow, or solid dark gradient ────────────
   const bg = document.getElementById('portraitBg');
-  if (bg) bg.style.background =
-    `linear-gradient(160deg, rgba(${r},${g},${b},0.2) 0%, rgba(${r},${g},${b},0.07) 30%, #060606 70%)`;
+  if (bg) {
+    if (hasPhoto) {
+      // Photo base layer with accent-tinted glow on top
+      bg.style.background =
+        `linear-gradient(160deg, rgba(${r},${g},${b},0.38) 0%, rgba(${r},${g},${b},0.1) 45%, transparent 68%),` +
+        `url('${entry.imageUrl}') center top / cover no-repeat`;
+    } else {
+      bg.style.background =
+        `linear-gradient(160deg, rgba(${r},${g},${b},0.2) 0%, rgba(${r},${g},${b},0.07) 30%, #060606 70%)`;
+    }
+  }
 
+  // ── Diagonal pattern: visible only when no photo ───────────────────────
+  const pattern = document.getElementById('portraitPattern');
+  if (pattern) pattern.style.opacity = hasPhoto ? '0' : '';
+
+  // ── Large letter glyph: hide when photo is shown ───────────────────────
   const glyph = document.getElementById('portraitGlyph');
-  if (glyph) { glyph.textContent = initials(entry.name)[0] || '?'; glyph.style.color = `rgba(${r},${g},${b},0.07)`; }
+  if (glyph) {
+    if (hasPhoto) {
+      glyph.textContent = '';
+    } else {
+      glyph.textContent = initials(entry.name)[0] || '?';
+      glyph.style.color = `rgba(${r},${g},${b},0.07)`;
+    }
+  }
 
+  // ── Initials circle: hide when photo is shown ──────────────────────────
   const avatar = document.getElementById('portraitAvatar');
-  if (avatar) { avatar.textContent = initials(entry.name); avatar.style.background = acc; avatar.style.display = ''; }
+  if (avatar) {
+    if (hasPhoto) {
+      avatar.style.display = 'none';
+    } else {
+      avatar.textContent = initials(entry.name);
+      avatar.style.background = acc;
+      avatar.style.display = '';
+    }
+  }
 
+  // ── Name plate elements ────────────────────────────────────────────────
   const badge = document.getElementById('portraitAwardBadge');
   if (badge) { badge.textContent = `${entry.award}  ${entry.year}`; badge.style.background = acc; badge.style.display = ''; }
 
@@ -349,9 +382,10 @@ function renderPortrait(entry) {
   const yearEl = document.getElementById('portraitYear');
   if (yearEl) { yearEl.textContent = `${entry.branch}  ·  ${entry.tribe}`; yearEl.style.display = ''; }
 
+  // ── Ambient page glow ──────────────────────────────────────────────────
   const ambEl = document.getElementById('ambientBg');
   if (ambEl) ambEl.style.background =
-    `radial-gradient(ellipse 70% 60% at 50% 55%, rgba(${r},${g},${b},0.1) 0%, transparent 70%)`;
+    `radial-gradient(ellipse 70% 60% at 50% 55%, rgba(${r},${g},${b},${hasPhoto ? '0.14' : '0.1'}) 0%, transparent 70%)`;
 
   document.documentElement.style.setProperty('--hero-accent', acc);
 

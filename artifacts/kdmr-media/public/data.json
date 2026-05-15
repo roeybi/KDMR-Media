@@ -16,8 +16,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Adriana captivated judges with her poise, depth of cultural knowledge, and graceful performance of the sumazau during the 2025 Hari Kaamatan national festival, earning the highest crown in KDCA Sabah.",
-      "achievements": ["KDCA Sabah Unduk Ngadau 2025", "Best Cultural Knowledge Award", "National-level representative"],
-      "votes": 342
+      "achievements": [
+        "KDCA Sabah Unduk Ngadau 2025",
+        "Best Cultural Knowledge Award",
+        "National-level representative"
+      ],
+      "votes": 342,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-002",
@@ -35,8 +40,13 @@
         "language": "Dusun Tambunan dialect"
       },
       "bio": "Vanessa's mastery of Dusun oral poetry (tontolian) and her intricate knowledge of highland Dusun weaving traditions set her apart in the 2024 competition, making her the first Tambunan-origin winner in a decade.",
-      "achievements": ["KDCA Sabah Unduk Ngadau 2024", "Tontolian Oral Poetry Award", "Highland Heritage Ambassador"],
-      "votes": 298
+      "achievements": [
+        "KDCA Sabah Unduk Ngadau 2024",
+        "Tontolian Oral Poetry Award",
+        "Highland Heritage Ambassador"
+      ],
+      "votes": 298,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-003",
@@ -54,8 +64,13 @@
         "language": "Rungus dialect"
       },
       "bio": "Cynthia's victory in 2023 was historic — the first Rungus queen from Kudat to win the KDCA Sabah crown. Her breathtaking performance of the monogit dance and her encyclopedic knowledge of Rungus ritual songs left the audience spellbound.",
-      "achievements": ["KDCA Sabah Unduk Ngadau 2023", "First Rungus winner from Kudat", "Monogit Dance Excellence Award"],
-      "votes": 411
+      "achievements": [
+        "KDCA Sabah Unduk Ngadau 2023",
+        "First Rungus winner from Kudat",
+        "Monogit Dance Excellence Award"
+      ],
+      "votes": 411,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-004",
@@ -73,8 +88,13 @@
         "language": "Murut Nabai dialect"
       },
       "bio": "Roselind is a formidable advocate for Murut cultural heritage, selected as the 2025 MRK (Momogun Rungus Kadazan) representative for her deep knowledge of traditional Murut martial arts, craft, and oral history.",
-      "achievements": ["KDCA Sabah MRK 2025", "Traditional Martial Arts Excellence", "Murut Oral History Keeper"],
-      "votes": 187
+      "achievements": [
+        "KDCA Sabah MRK 2025",
+        "Traditional Martial Arts Excellence",
+        "Murut Oral History Keeper"
+      ],
+      "votes": 187,
+      "imageUrl": "/images/Sample MRK Winner.png"
     },
     {
       "id": "win-005",
@@ -92,8 +112,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Born and raised in Kuala Lumpur but deeply rooted in her Kadazan Dusun heritage, Patricia won hearts at KDCA Klang Valley 2025 with her bilingual cultural presentation and her advocacy for urban indigenous identity.",
-      "achievements": ["KDCA Klang Valley Unduk Ngadau 2025", "Urban Heritage Advocacy Award", "Bilingual Presentation Excellence"],
-      "votes": 263
+      "achievements": [
+        "KDCA Klang Valley Unduk Ngadau 2025",
+        "Urban Heritage Advocacy Award",
+        "Bilingual Presentation Excellence"
+      ],
+      "votes": 263,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-006",
@@ -111,8 +136,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Sheryl moved to KL to pursue a career in medicine but never lost her connection to Papar. Her 2024 KDCA KL victory was powered by an emotionally charged cultural monologue delivered entirely in Kadazan, moved the audience to tears.",
-      "achievements": ["KDCA Klang Valley Unduk Ngadau 2024", "Kadazan Language Excellence Award", "Community Spirit Award"],
-      "votes": 219
+      "achievements": [
+        "KDCA Klang Valley Unduk Ngadau 2024",
+        "Kadazan Language Excellence Award",
+        "Community Spirit Award"
+      ],
+      "votes": 219,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-007",
@@ -130,8 +160,13 @@
         "language": "Rungus dialect"
       },
       "bio": "A cultural warrior in the truest sense, Janelle has spent years documenting endangered Rungus chants and weaving patterns in Pitas. Her MRK win at KDCA KL 2025 is a testament to her lifelong commitment to Rungus preservation.",
-      "achievements": ["KDCA Klang Valley MRK 2025", "Rungus Language Documentation Award", "Heritage Preservation Champion"],
-      "votes": 144
+      "achievements": [
+        "KDCA Klang Valley MRK 2025",
+        "Rungus Language Documentation Award",
+        "Heritage Preservation Champion"
+      ],
+      "votes": 144,
+      "imageUrl": "/images/Sample MRK Winner.png"
     },
     {
       "id": "win-008",
@@ -149,8 +184,13 @@
         "language": "Kadazan-Dusun (highland variant)"
       },
       "bio": "Mellisa works as a civil servant in Putrajaya but dedicates her weekends to teaching Kadazan folk songs at the community centre. Her calm authority and cultural depth won the 2025 KDCA Putrajaya crown.",
-      "achievements": ["KDCA Putrajaya Unduk Ngadau 2025", "Folk Music Excellence Award", "Community Education Champion"],
-      "votes": 176
+      "achievements": [
+        "KDCA Putrajaya Unduk Ngadau 2025",
+        "Folk Music Excellence Award",
+        "Community Education Champion"
+      ],
+      "votes": 176,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-009",
@@ -168,8 +208,13 @@
         "language": "Dusun Keningau dialect"
       },
       "bio": "A graphic designer by profession, Doreen's creative mind extends to reviving traditional Dusun textile patterns for contemporary fashion. Her cultural vision and eloquent advocacy earned her the 2024 KDCA Putrajaya title.",
-      "achievements": ["KDCA Putrajaya Unduk Ngadau 2024", "Traditional Textile Innovation Award", "Best Cultural Presentation"],
-      "votes": 201
+      "achievements": [
+        "KDCA Putrajaya Unduk Ngadau 2024",
+        "Traditional Textile Innovation Award",
+        "Best Cultural Presentation"
+      ],
+      "votes": 201,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-010",
@@ -187,8 +232,13 @@
         "language": "Murut Tagal dialect"
       },
       "bio": "A researcher specialising in Murut customary law (adat), Lorraine uses her legal expertise to advocate for indigenous land rights. Her MRK win at KDCA Putrajaya 2025 recognised her as a pillar of Murut cultural resilience.",
-      "achievements": ["KDCA Putrajaya MRK 2025", "Adat Customary Law Advocacy", "Indigenous Rights Champion"],
-      "votes": 133
+      "achievements": [
+        "KDCA Putrajaya MRK 2025",
+        "Adat Customary Law Advocacy",
+        "Indigenous Rights Champion"
+      ],
+      "votes": 133,
+      "imageUrl": "/images/Sample MRK Winner.png"
     },
     {
       "id": "win-011",
@@ -206,8 +256,13 @@
         "language": "Kadazan-Dusun (coastal variant)"
       },
       "bio": "Vivienne is a secondary school teacher in Shah Alam who channels her cultural knowledge into curriculum development. Her 2025 KDCA Selangor victory highlighted the importance of KDM education in diaspora communities.",
-      "achievements": ["KDCA Selangor Unduk Ngadau 2025", "Cultural Education Innovation Award", "Diaspora Ambassador"],
-      "votes": 158
+      "achievements": [
+        "KDCA Selangor Unduk Ngadau 2025",
+        "Cultural Education Innovation Award",
+        "Diaspora Ambassador"
+      ],
+      "votes": 158,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-012",
@@ -225,8 +280,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "An environmental scientist and passionate cultural keeper, Charlene bridges traditional ecological knowledge of the KDM people with modern conservation science. Her MRK win at KDCA Selangor 2025 celebrates this unique intersection.",
-      "achievements": ["KDCA Selangor MRK 2025", "Traditional Ecological Knowledge Award", "Environmental Conservation Champion"],
-      "votes": 122
+      "achievements": [
+        "KDCA Selangor MRK 2025",
+        "Traditional Ecological Knowledge Award",
+        "Environmental Conservation Champion"
+      ],
+      "votes": 122,
+      "imageUrl": "/images/Sample MRK Winner.png"
     },
     {
       "id": "win-013",
@@ -244,8 +304,13 @@
         "language": "Dusun Tambunan dialect"
       },
       "bio": "An architect based in Johor Bahru, Irene incorporates traditional KDM longhouse architectural elements into her modern designs. Her 2025 KDCA JB win celebrated her vision of indigenous design in a contemporary world.",
-      "achievements": ["KDCA Johor Bahru Unduk Ngadau 2025", "Heritage Architecture Innovation", "Cultural Fusion Award"],
-      "votes": 109
+      "achievements": [
+        "KDCA Johor Bahru Unduk Ngadau 2025",
+        "Heritage Architecture Innovation",
+        "Cultural Fusion Award"
+      ],
+      "votes": 109,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-014",
@@ -263,10 +328,14 @@
         "language": "Rungus dialect"
       },
       "bio": "Felicity is a community nurse in Johor who founded a KDM cultural club to keep young diaspora Rungus connected to their heritage. Her passion for community building earned her the MRK recognition at KDCA JB 2025.",
-      "achievements": ["KDCA Johor Bahru MRK 2025", "Community Nursing Excellence", "Diaspora Youth Programme Founder"],
-      "votes": 97
+      "achievements": [
+        "KDCA Johor Bahru MRK 2025",
+        "Community Nursing Excellence",
+        "Diaspora Youth Programme Founder"
+      ],
+      "votes": 97,
+      "imageUrl": "/images/Sample MRK Winner.png"
     },
-
     {
       "id": "sug-001",
       "name": "Jenifer Sindol",
@@ -283,8 +352,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Jenifer's voice is described as carrying the sound of the Crocker Range — powerful, clear, and deeply rooted in Kadazan tonal tradition. Her 2025 Sugandoi victory at KDCA Sabah was marked by her flawless rendition of the ancient harvest song 'Pirousan do Bambazon', performed entirely without instrumental backing.",
-      "achievements": ["KDCA Sabah Sugandoi Champion 2025", "Best Traditional Vocal Performance", "Hari Kaamatan Cultural Excellence Award"],
-      "votes": 278
+      "achievements": [
+        "KDCA Sabah Sugandoi Champion 2025",
+        "Best Traditional Vocal Performance",
+        "Hari Kaamatan Cultural Excellence Award"
+      ],
+      "votes": 278,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-002",
@@ -302,8 +376,13 @@
         "language": "Dusun Ranau dialect"
       },
       "bio": "A highland farmer by profession and a singer of rare natural talent, Marcus's 2024 Sugandoi performance moved the Penampang audience with a poignant tontolian — a traditional Dusun epic poem sung to a haunting pentatonic melody, passed down through twelve generations of his family.",
-      "achievements": ["KDCA Sabah Sugandoi Champion 2024", "Tontolian Epic Poetry Excellence", "Dusun Vocal Heritage Award"],
-      "votes": 241
+      "achievements": [
+        "KDCA Sabah Sugandoi Champion 2024",
+        "Tontolian Epic Poetry Excellence",
+        "Dusun Vocal Heritage Award"
+      ],
+      "votes": 241,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-003",
@@ -321,8 +400,13 @@
         "language": "Rungus dialect"
       },
       "bio": "Rosalinda is one of the last practitioners of the moginakan — a Rungus chanted lament traditionally performed at healing ceremonies. Her 2023 Sugandoi performance introduced this vanishing vocal form to a new generation, earning a standing ovation and the judges' unanimous top score.",
-      "achievements": ["KDCA Sabah Sugandoi Champion 2023", "Moginakan Oral Heritage Preservation", "UNESCO Special Recognition for Endangered Vocal Arts"],
-      "votes": 312
+      "achievements": [
+        "KDCA Sabah Sugandoi Champion 2023",
+        "Moginakan Oral Heritage Preservation",
+        "UNESCO Special Recognition for Endangered Vocal Arts"
+      ],
+      "votes": 312,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-004",
@@ -340,8 +424,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "An IT professional in Kuala Lumpur who trains for Sugandoi every weekend, Harison's rich baritone voice has been compared to the deep resonance of the traditional gong. His 2025 KDCA KL win was powered by an original composition blending traditional pentatonic scales with contemporary KDM poetry.",
-      "achievements": ["KDCA Klang Valley Sugandoi Champion 2025", "Best Original Composition Award", "Diaspora Cultural Ambassador"],
-      "votes": 189
+      "achievements": [
+        "KDCA Klang Valley Sugandoi Champion 2025",
+        "Best Original Composition Award",
+        "Diaspora Cultural Ambassador"
+      ],
+      "votes": 189,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-005",
@@ -359,8 +448,13 @@
         "language": "Murut Tagal dialect"
       },
       "bio": "Cecilia's career in healthcare left little time for the arts — until the pandemic led her to rediscover her grandmother's songbook of traditional Murut lullabies. Her 2024 KDCA KL Sugandoi win was a deeply personal performance that brought the 40-year-old tunes back into the public consciousness.",
-      "achievements": ["KDCA Klang Valley Sugandoi Champion 2024", "Murut Lullaby Revival Award", "Cultural Reconnection Story of the Year"],
-      "votes": 154
+      "achievements": [
+        "KDCA Klang Valley Sugandoi Champion 2024",
+        "Murut Lullaby Revival Award",
+        "Cultural Reconnection Story of the Year"
+      ],
+      "votes": 154,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-006",
@@ -378,8 +472,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "A civil servant by day and a cultural activist by night, Bernard has spent years transcribing traditional Tuaran Kadazan melodies into sheet music so they can be taught in schools. His 2025 KDCA Putrajaya Sugandoi title validated years of quiet, dedicated work to keep these songs alive.",
-      "achievements": ["KDCA Putrajaya Sugandoi Champion 2025", "Traditional Music Transcription Project", "KDM Cultural Education Medal"],
-      "votes": 143
+      "achievements": [
+        "KDCA Putrajaya Sugandoi Champion 2025",
+        "Traditional Music Transcription Project",
+        "KDM Cultural Education Medal"
+      ],
+      "votes": 143,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-007",
@@ -397,8 +496,13 @@
         "language": "Dusun Keningau dialect"
       },
       "bio": "Angelina works as a policy analyst in Putrajaya and brings the same rigour to her Sugandoi preparation. Her 2024 KDCA Putrajaya performance featured a rare three-part a cappella vocal technique used in traditional Dusun wedding ceremonies, performed entirely from memory.",
-      "achievements": ["KDCA Putrajaya Sugandoi Champion 2024", "A Cappella Technique Excellence Award", "Traditional Vocal Research Recognition"],
-      "votes": 167
+      "achievements": [
+        "KDCA Putrajaya Sugandoi Champion 2024",
+        "A Cappella Technique Excellence Award",
+        "Traditional Vocal Research Recognition"
+      ],
+      "votes": 167,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-008",
@@ -416,8 +520,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "An engineer based in Shah Alam, Julian has been performing traditional KDM songs at community events since his university days. His 2025 KDCA Selangor Sugandoi win came after three consecutive runner-up finishes — his persistence is a reflection of the same spirit he applies to preserving his heritage.",
-      "achievements": ["KDCA Selangor Sugandoi Champion 2025", "Best Stage Presence Award", "Community Dedication Recognition"],
-      "votes": 131
+      "achievements": [
+        "KDCA Selangor Sugandoi Champion 2025",
+        "Best Stage Presence Award",
+        "Community Dedication Recognition"
+      ],
+      "votes": 131,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
       "id": "sug-009",
@@ -435,10 +544,14 @@
         "language": "Rungus dialect"
       },
       "bio": "Theresa is the daughter of a Rungus bobohizan (high priestess) and learned to sing ritual chants before she could read. Now a teacher in Johor Bahru, she brings that sacred vocal knowledge to competitive Sugandoi with electrifying effect. Her 2025 KDCA JB performance left even the judges in respectful silence.",
-      "achievements": ["KDCA Johor Bahru Sugandoi Champion 2025", "Sacred Vocal Tradition Excellence", "Rungus Ritual Music Scholarship Award"],
-      "votes": 118
+      "achievements": [
+        "KDCA Johor Bahru Sugandoi Champion 2025",
+        "Sacred Vocal Tradition Excellence",
+        "Rungus Ritual Music Scholarship Award"
+      ],
+      "votes": 118,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
-
     {
       "id": "win-015",
       "name": "Atitih Yatih Robert",
@@ -456,8 +569,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Atitih Yatih Robert from KDCA Tamparuli advanced as a State Level Finalist in the 2026 Unduk Ngadau season. Wearing a Penampang-style Sinuangga adaptation, she captivated judges with her commanding sumazau performance and encyclopedic knowledge of Tamparuli Dusun harvest rituals.",
-      "achievements": ["KDCA Tamparuli Unduk Ngadau 2026 — State Level Finalist", "Sumazau Dance Excellence Recognition", "Cultural Studies Graduate — Universiti Malaysia Sabah"],
-      "votes": 487
+      "achievements": [
+        "KDCA Tamparuli Unduk Ngadau 2026 — State Level Finalist",
+        "Sumazau Dance Excellence Recognition",
+        "Cultural Studies Graduate — Universiti Malaysia Sabah"
+      ],
+      "votes": 487,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-016",
@@ -476,8 +594,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Finafayena Primus is the Juara Unduk Ngadau KDCA Klang Valley 2026 — a proud symbol of the KDM diaspora. Adorned in the Lapoi, the traditional Dusun ceremonial costume, she delivered a bilingual cultural address that moved the audience to a standing ovation, speaking of homeland, identity, and belonging from 1,600 kilometres away.",
-      "achievements": ["Juara Unduk Ngadau KDCA Klang Valley 2026", "Best Lapoi Costume Presentation 2026", "KDCA KL Young Voices Founding Member"],
-      "votes": 391
+      "achievements": [
+        "Juara Unduk Ngadau KDCA Klang Valley 2026",
+        "Best Lapoi Costume Presentation 2026",
+        "KDCA KL Young Voices Founding Member"
+      ],
+      "votes": 391,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-017",
@@ -496,8 +619,13 @@
         "language": "Kadazan-Dusun (Dusun Ranau variant)"
       },
       "bio": "Wendey Merrylen S. Jasmine is the Juara Unduk Ngadau KDCA Putrajaya 2026. A civil servant at the Ministry of Agriculture, she carries her Dusun roots into the corridors of Putrajaya, championing indigenous food heritage in national policy. Dressed in a Sinuangga Dusun interpretation, her victory was recognised for grace, cultural depth, and a powerful community voice.",
-      "achievements": ["Juara Unduk Ngadau KDCA Putrajaya 2026", "Indigenous Food Heritage Policy Advocate", "Best Costume & Heritage Presentation — KDCA Putrajaya 2026"],
-      "votes": 334
+      "achievements": [
+        "Juara Unduk Ngadau KDCA Putrajaya 2026",
+        "Indigenous Food Heritage Policy Advocate",
+        "Best Costume & Heritage Presentation — KDCA Putrajaya 2026"
+      ],
+      "votes": 334,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-018",
@@ -516,10 +644,14 @@
         "language": "Lotud (Tuaran dialect)"
       },
       "bio": "Kristern Olwen Jafili, honoured with the title Buvazoi Tavantang — 'Guardian of the Cultural Flame' — is the 2026 MRK champion from KDCA Tuaran. Representing the Lotud people, he wore the Binadan ceremonial costume with pride. A secondary school history teacher, he has independently compiled a digital compendium of Lotud oral traditions, and was selected unanimously by the judges.",
-      "achievements": ["Buvazoi Tavantang Tuaran — KDCA Sabah MRK 2026", "Lotud Oral Traditions Digital Compendium", "Judges' Unanimous Cultural Warrior Award 2026"],
-      "votes": 298
+      "achievements": [
+        "Buvazoi Tavantang Tuaran — KDCA Sabah MRK 2026",
+        "Lotud Oral Traditions Digital Compendium",
+        "Judges' Unanimous Cultural Warrior Award 2026"
+      ],
+      "votes": 298,
+      "imageUrl": "/images/Sample MRK Winner.png"
     },
-
     {
       "id": "win-019",
       "name": "Deanera Clarissa Jamdin",
@@ -537,8 +669,13 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "Deanera Clarissa Jamdin is the Juara Unduk Ngadau KDCA Sarawak 2026, representing the Kadazan diaspora community in the Land of the Hornbill. Dressed in the Sinuangga, she brought the traditions of Sabah's highland Kadazan to the Sarawak stage with grace and cultural authority, earning a unanimous decision from the judging panel.",
-      "achievements": ["Juara Unduk Ngadau KDCA Sarawak 2026", "Best Cultural Knowledge Award — Sarawak Region", "Cross-Borneo Cultural Heritage Ambassador"],
-      "votes": 267
+      "achievements": [
+        "Juara Unduk Ngadau KDCA Sarawak 2026",
+        "Best Cultural Knowledge Award — Sarawak Region",
+        "Cross-Borneo Cultural Heritage Ambassador"
+      ],
+      "votes": 267,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-020",
@@ -557,8 +694,13 @@
         "language": "Kadazan-Dusun (Papar coastal variant)"
       },
       "bio": "Gelvia Vanessa Jenny, District Winner from KDCA Papar 2026, wore the distinctive Sia do Binokian — a costume unique to the Kadazan Papar community of coastal Sabah. Her confident presentation of the binokian weaving tradition and deep knowledge of coastal Kadazan harvest ceremonies set her apart as a champion of her district's heritage.",
-      "achievements": ["KDCA Papar District Winner — Unduk Ngadau 2026", "Sia do Binokian Heritage Presentation Award", "Kadazan Papar Coastal Traditions Advocate"],
-      "votes": 198
+      "achievements": [
+        "KDCA Papar District Winner — Unduk Ngadau 2026",
+        "Sia do Binokian Heritage Presentation Award",
+        "Kadazan Papar Coastal Traditions Advocate"
+      ],
+      "votes": 198,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "win-021",
@@ -577,51 +719,410 @@
         "language": "Kadazan-Dusun"
       },
       "bio": "The 2026 Sugandoi champion will be announced at the Hari Kaamatan celebration. This space is reserved for the voice that will carry the song of the KDMR people into the new decade.",
-      "achievements": ["Sugandoi 2026 — Finalist", "Hari Kaamatan Vocal Competition"],
-      "votes": 0
+      "achievements": [
+        "Sugandoi 2026 — Finalist",
+        "Hari Kaamatan Vocal Competition"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
-
-    { "id":"leg-001","name":"Norlinda Garai","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
-    { "id":"leg-002","name":"Maziha Garon","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2015,"tribe":"Dusun","district":"Ranau","origin":"KDCA Ranau","legacy":true },
-    { "id":"leg-003","name":"Roselyn Kadang","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2014,"tribe":"Kadazan","district":"Tuaran","origin":"KDCA Tuaran","legacy":true },
-    { "id":"leg-004","name":"Florency Dusing","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2013,"tribe":"Dusun","district":"Keningau","origin":"KDCA Keningau","legacy":true },
-    { "id":"leg-005","name":"Anastasia Sindol","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2012,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
-    { "id":"leg-006","name":"Stephanie Kimpin","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2011,"tribe":"Rungus","district":"Kudat","origin":"KDCA Kudat","legacy":true },
-    { "id":"leg-007","name":"Jeanette Pangiran","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2010,"tribe":"Murut","district":"Tenom","origin":"KDCA Tenom","legacy":true },
-
-    { "id":"leg-008","name":"Veronica Mojilun","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2016,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-009","name":"Patricia Gidabun","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2015,"tribe":"Dusun","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-010","name":"Sandra Lobikin","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2014,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-011","name":"Christine Tingan","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2013,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-
-    { "id":"leg-012","name":"Angela Rambilin","branch":"KDCA Putrajaya","award":"Unduk Ngadau","year":2016,"tribe":"Dusun","district":"Putrajaya","origin":"KDCA Putrajaya","legacy":true },
-    { "id":"leg-013","name":"Diana Gunsanad","branch":"KDCA Putrajaya","award":"Unduk Ngadau","year":2015,"tribe":"Kadazan","district":"Putrajaya","origin":"KDCA Putrajaya","legacy":true },
-
-    { "id":"leg-014","name":"Bernard Garai","branch":"KDCA Sabah","award":"MRK","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
-    { "id":"leg-015","name":"Andrew Mansul","branch":"KDCA Sabah","award":"MRK","year":2015,"tribe":"Dusun","district":"Tambunan","origin":"KDCA Tambunan","legacy":true },
-    { "id":"leg-016","name":"Jerome Kimpin","branch":"KDCA Sabah","award":"MRK","year":2014,"tribe":"Murut","district":"Tenom","origin":"KDCA Tenom","legacy":true },
-    { "id":"leg-017","name":"Francis Gunsanad","branch":"KDCA Sabah","award":"MRK","year":2013,"tribe":"Kadazan","district":"Tuaran","origin":"KDCA Tuaran","legacy":true },
-    { "id":"leg-018","name":"Gilbert Garon","branch":"KDCA Sabah","award":"MRK","year":2012,"tribe":"Dusun","district":"Ranau","origin":"KDCA Ranau","legacy":true },
-    { "id":"leg-019","name":"Kenneth Pangiran","branch":"KDCA Sabah","award":"MRK","year":2011,"tribe":"Murut","district":"Keningau","origin":"KDCA Keningau","legacy":true },
-    { "id":"leg-020","name":"Michael Sindol","branch":"KDCA Sabah","award":"MRK","year":2010,"tribe":"Rungus","district":"Kudat","origin":"KDCA Kudat","legacy":true },
-
-    { "id":"leg-021","name":"Peter Rambilin","branch":"KDCA Klang Valley","award":"MRK","year":2016,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-022","name":"David Kadang","branch":"KDCA Klang Valley","award":"MRK","year":2015,"tribe":"Dusun","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-023","name":"Robert Garon","branch":"KDCA Klang Valley","award":"MRK","year":2014,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-
-    { "id":"leg-024","name":"Josephine Lobikin","branch":"KDCA Sabah","award":"Sugandoi","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
-    { "id":"leg-025","name":"Catherine Dusing","branch":"KDCA Sabah","award":"Sugandoi","year":2015,"tribe":"Dusun","district":"Tambunan","origin":"KDCA Tambunan","legacy":true },
-    { "id":"leg-026","name":"Maria Tingan","branch":"KDCA Sabah","award":"Sugandoi","year":2014,"tribe":"Murut","district":"Tenom","origin":"KDCA Tenom","legacy":true },
-    { "id":"leg-027","name":"Cecelia Mojilun","branch":"KDCA Sabah","award":"Sugandoi","year":2013,"tribe":"Rungus","district":"Kudat","origin":"KDCA Kudat","legacy":true },
-    { "id":"leg-028","name":"Victoria Gidabun","branch":"KDCA Sabah","award":"Sugandoi","year":2012,"tribe":"Kadazan","district":"Ranau","origin":"KDCA Ranau","legacy":true },
-    { "id":"leg-029","name":"Felicia Kimpin","branch":"KDCA Sabah","award":"Sugandoi","year":2011,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
-    { "id":"leg-030","name":"Grace Pangiran","branch":"KDCA Sabah","award":"Sugandoi","year":2010,"tribe":"Dusun","district":"Keningau","origin":"KDCA Keningau","legacy":true },
-
-    { "id":"leg-031","name":"Theresa Sindol","branch":"KDCA Klang Valley","award":"Sugandoi","year":2016,"tribe":"Dusun","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-032","name":"Lorraine Garai","branch":"KDCA Klang Valley","award":"Sugandoi","year":2015,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
-    { "id":"leg-033","name":"Monica Mansul","branch":"KDCA Klang Valley","award":"Sugandoi","year":2014,"tribe":"Murut","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true }
+    {
+      "id": "leg-001",
+      "name": "Norlinda Garai",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2016,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-002",
+      "name": "Maziha Garon",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2015,
+      "tribe": "Dusun",
+      "district": "Ranau",
+      "origin": "KDCA Ranau",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-003",
+      "name": "Roselyn Kadang",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2014,
+      "tribe": "Kadazan",
+      "district": "Tuaran",
+      "origin": "KDCA Tuaran",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-004",
+      "name": "Florency Dusing",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2013,
+      "tribe": "Dusun",
+      "district": "Keningau",
+      "origin": "KDCA Keningau",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-005",
+      "name": "Anastasia Sindol",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2012,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-006",
+      "name": "Stephanie Kimpin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2011,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Kudat",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-007",
+      "name": "Jeanette Pangiran",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2010,
+      "tribe": "Murut",
+      "district": "Tenom",
+      "origin": "KDCA Tenom",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-008",
+      "name": "Veronica Mojilun",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2016,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-009",
+      "name": "Patricia Gidabun",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2015,
+      "tribe": "Dusun",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-010",
+      "name": "Sandra Lobikin",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2014,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-011",
+      "name": "Christine Tingan",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2013,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-012",
+      "name": "Angela Rambilin",
+      "branch": "KDCA Putrajaya",
+      "award": "Unduk Ngadau",
+      "year": 2016,
+      "tribe": "Dusun",
+      "district": "Putrajaya",
+      "origin": "KDCA Putrajaya",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-013",
+      "name": "Diana Gunsanad",
+      "branch": "KDCA Putrajaya",
+      "award": "Unduk Ngadau",
+      "year": 2015,
+      "tribe": "Kadazan",
+      "district": "Putrajaya",
+      "origin": "KDCA Putrajaya",
+      "legacy": true,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "leg-014",
+      "name": "Bernard Garai",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2016,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-015",
+      "name": "Andrew Mansul",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2015,
+      "tribe": "Dusun",
+      "district": "Tambunan",
+      "origin": "KDCA Tambunan",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-016",
+      "name": "Jerome Kimpin",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2014,
+      "tribe": "Murut",
+      "district": "Tenom",
+      "origin": "KDCA Tenom",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-017",
+      "name": "Francis Gunsanad",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2013,
+      "tribe": "Kadazan",
+      "district": "Tuaran",
+      "origin": "KDCA Tuaran",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-018",
+      "name": "Gilbert Garon",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2012,
+      "tribe": "Dusun",
+      "district": "Ranau",
+      "origin": "KDCA Ranau",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-019",
+      "name": "Kenneth Pangiran",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2011,
+      "tribe": "Murut",
+      "district": "Keningau",
+      "origin": "KDCA Keningau",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-020",
+      "name": "Michael Sindol",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2010,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Kudat",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-021",
+      "name": "Peter Rambilin",
+      "branch": "KDCA Klang Valley",
+      "award": "MRK",
+      "year": 2016,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-022",
+      "name": "David Kadang",
+      "branch": "KDCA Klang Valley",
+      "award": "MRK",
+      "year": 2015,
+      "tribe": "Dusun",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-023",
+      "name": "Robert Garon",
+      "branch": "KDCA Klang Valley",
+      "award": "MRK",
+      "year": 2014,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample MRK Winner.png"
+    },
+    {
+      "id": "leg-024",
+      "name": "Josephine Lobikin",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2016,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-025",
+      "name": "Catherine Dusing",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2015,
+      "tribe": "Dusun",
+      "district": "Tambunan",
+      "origin": "KDCA Tambunan",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-026",
+      "name": "Maria Tingan",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2014,
+      "tribe": "Murut",
+      "district": "Tenom",
+      "origin": "KDCA Tenom",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-027",
+      "name": "Cecelia Mojilun",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2013,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Kudat",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-028",
+      "name": "Victoria Gidabun",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2012,
+      "tribe": "Kadazan",
+      "district": "Ranau",
+      "origin": "KDCA Ranau",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-029",
+      "name": "Felicia Kimpin",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2011,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-030",
+      "name": "Grace Pangiran",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2010,
+      "tribe": "Dusun",
+      "district": "Keningau",
+      "origin": "KDCA Keningau",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-031",
+      "name": "Theresa Sindol",
+      "branch": "KDCA Klang Valley",
+      "award": "Sugandoi",
+      "year": 2016,
+      "tribe": "Dusun",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-032",
+      "name": "Lorraine Garai",
+      "branch": "KDCA Klang Valley",
+      "award": "Sugandoi",
+      "year": 2015,
+      "tribe": "Kadazan",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "leg-033",
+      "name": "Monica Mansul",
+      "branch": "KDCA Klang Valley",
+      "award": "Sugandoi",
+      "year": 2014,
+      "tribe": "Murut",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "legacy": true,
+      "imageUrl": "/images/Sample Sugandoi Winner.png"
+    }
   ],
-
   "hallOfFame": [
     {
       "id": "hof-001",
@@ -632,10 +1133,18 @@
       "district": "Penampang",
       "era": "1980s–2000s",
       "bio": "A pioneering Kadazan political figure who championed indigenous rights and the formalization of the KDM identity in Sabah. Served multiple terms as a state assemblyman and was instrumental in cultural preservation efforts.",
-      "achievements": ["Kadazan Cultural Association founder", "Hari Kaamatan advocate", "State Legislative Assembly member"],
+      "achievements": [
+        "Kadazan Cultural Association founder",
+        "Hari Kaamatan advocate",
+        "State Legislative Assembly member"
+      ],
       "votes": 124,
       "image": null,
-      "tags": ["leadership", "indigenous rights", "culture"]
+      "tags": [
+        "leadership",
+        "indigenous rights",
+        "culture"
+      ]
     },
     {
       "id": "hof-002",
@@ -646,10 +1155,18 @@
       "district": "Penampang",
       "era": "1960s–1970s",
       "bio": "Known as 'The Undying Eagle of Penampang,' Mojuntin was a founding father of Sabah politics and one of the most respected KDM leaders. He died tragically in the Rajah Brooke aircraft disaster in 1976.",
-      "achievements": ["Co-founder of Berjaya party", "Sabah Deputy Chief Minister", "Champion of KDM unity"],
+      "achievements": [
+        "Co-founder of Berjaya party",
+        "Sabah Deputy Chief Minister",
+        "Champion of KDM unity"
+      ],
       "votes": 287,
       "image": null,
-      "tags": ["legacy", "politics", "pioneer"]
+      "tags": [
+        "legacy",
+        "politics",
+        "pioneer"
+      ]
     },
     {
       "id": "hof-003",
@@ -660,10 +1177,18 @@
       "district": "Tambunan",
       "era": "2000s–present",
       "bio": "A master of the sompoton and tongkungon, Judeth has dedicated her life to preserving traditional Kadazan Dusun musical heritage. She has performed at national and international folk festivals, bringing KDM music to global audiences.",
-      "achievements": ["National Heritage Award recipient", "15+ years of traditional music education", "International folk festival performer"],
+      "achievements": [
+        "National Heritage Award recipient",
+        "15+ years of traditional music education",
+        "International folk festival performer"
+      ],
       "votes": 193,
       "image": null,
-      "tags": ["music", "culture", "heritage"]
+      "tags": [
+        "music",
+        "culture",
+        "heritage"
+      ]
     },
     {
       "id": "hof-004",
@@ -674,10 +1199,18 @@
       "district": "Tenom",
       "era": "1990s–2000s",
       "bio": "One of Sabah's greatest long-distance runners, Arnold represented Malaysia at multiple SEA Games events. His achievements brought pride to the Murut community and paved the way for generations of KDM athletes.",
-      "achievements": ["SEA Games medalist (1997, 2001)", "National record holder (10,000m)", "Sabah Sports Icon Award"],
+      "achievements": [
+        "SEA Games medalist (1997, 2001)",
+        "National record holder (10,000m)",
+        "Sabah Sports Icon Award"
+      ],
       "votes": 156,
       "image": null,
-      "tags": ["sports", "athletics", "SEA Games"]
+      "tags": [
+        "sports",
+        "athletics",
+        "SEA Games"
+      ]
     },
     {
       "id": "hof-005",
@@ -688,10 +1221,18 @@
       "district": "Kudat",
       "era": "2005–present",
       "bio": "A celebrated Rungus traditional dancer and costume designer who has worked to preserve authentic Rungus sumazau choreography and the intricate manik (beadwork) traditions of Northern Sabah.",
-      "achievements": ["Rungus Cultural Ambassador", "Hari Kaamatan Unduk Ngadau judge", "Manik craft master instructor"],
+      "achievements": [
+        "Rungus Cultural Ambassador",
+        "Hari Kaamatan Unduk Ngadau judge",
+        "Manik craft master instructor"
+      ],
       "votes": 211,
       "image": null,
-      "tags": ["dance", "costume", "Rungus heritage"]
+      "tags": [
+        "dance",
+        "costume",
+        "Rungus heritage"
+      ]
     },
     {
       "id": "hof-006",
@@ -702,10 +1243,18 @@
       "district": "Ranau",
       "era": "2000s–present",
       "bio": "A linguistics professor at Universiti Malaysia Sabah, Dr. Disimon has published extensively on Kadazan-Dusun dialects and co-authored the first comprehensive Kadazan-Dusun dictionary for academic use.",
-      "achievements": ["Published 3 KDM linguistics books", "UNESCO language preservation grant", "UMS Distinguished Research Award"],
+      "achievements": [
+        "Published 3 KDM linguistics books",
+        "UNESCO language preservation grant",
+        "UMS Distinguished Research Award"
+      ],
       "votes": 98,
       "image": null,
-      "tags": ["education", "linguistics", "academia"]
+      "tags": [
+        "education",
+        "linguistics",
+        "academia"
+      ]
     },
     {
       "id": "hof-007",
@@ -716,10 +1265,18 @@
       "district": "Kota Belud",
       "era": "2010s–present",
       "bio": "A world-class silat practitioner who has won gold at multiple international championships. Richard is known for blending traditional Kadazan warrior philosophy with competitive silat, inspiring a new generation of KDM martial artists.",
-      "achievements": ["World Silat Championships gold (2016, 2019)", "National team captain", "Silat youth academy founder"],
+      "achievements": [
+        "World Silat Championships gold (2016, 2019)",
+        "National team captain",
+        "Silat youth academy founder"
+      ],
       "votes": 175,
       "image": null,
-      "tags": ["sports", "martial arts", "silat"]
+      "tags": [
+        "sports",
+        "martial arts",
+        "silat"
+      ]
     },
     {
       "id": "hof-008",
@@ -730,10 +1287,18 @@
       "district": "Papar",
       "era": "1990s–present",
       "bio": "One of Malaysia's most celebrated vocalists with Kadazan-Dusun roots, Dayang Nurfaizah has sold millions of albums nationally while proudly representing her heritage on the biggest stages in the country.",
-      "achievements": ["Multiple Anugerah Industri Muzik wins", "Album sales exceeding 2M copies", "Cultural Ambassador of Sabah"],
+      "achievements": [
+        "Multiple Anugerah Industri Muzik wins",
+        "Album sales exceeding 2M copies",
+        "Cultural Ambassador of Sabah"
+      ],
       "votes": 342,
       "image": null,
-      "tags": ["music", "entertainment", "national icon"]
+      "tags": [
+        "music",
+        "entertainment",
+        "national icon"
+      ]
     },
     {
       "id": "hof-009",
@@ -744,10 +1309,18 @@
       "district": "Kundasang",
       "era": "2010s–present",
       "bio": "A committed servant of the Dusun people in the Mount Kinabalu highlands, Joniston has advocated tirelessly for eco-tourism rights, indigenous land protection, and rural community development in the Ranau district.",
-      "achievements": ["Ranau state assemblyman (multiple terms)", "Mount Kinabalu Eco-Tourism Task Force chair", "Rural electrification champion"],
+      "achievements": [
+        "Ranau state assemblyman (multiple terms)",
+        "Mount Kinabalu Eco-Tourism Task Force chair",
+        "Rural electrification champion"
+      ],
       "votes": 134,
       "image": null,
-      "tags": ["politics", "environment", "rural development"]
+      "tags": [
+        "politics",
+        "environment",
+        "rural development"
+      ]
     },
     {
       "id": "hof-010",
@@ -758,10 +1331,18 @@
       "district": "Tambunan",
       "era": "2010s–present",
       "bio": "Founder of Tambunan Tapai Co-op, Felicia has commercialized traditional rice wine (tapai) using sustainable fermentation methods, creating livelihoods for over 200 KDM families while preserving a centuries-old tradition.",
-      "achievements": ["Malaysia Agri-Entrepreneur Award 2021", "200+ family livelihoods created", "Tapai export to Singapore & Brunei"],
+      "achievements": [
+        "Malaysia Agri-Entrepreneur Award 2021",
+        "200+ family livelihoods created",
+        "Tapai export to Singapore & Brunei"
+      ],
       "votes": 162,
       "image": null,
-      "tags": ["entrepreneurship", "food heritage", "agribusiness"]
+      "tags": [
+        "entrepreneurship",
+        "food heritage",
+        "agribusiness"
+      ]
     },
     {
       "id": "hof-011",
@@ -772,10 +1353,18 @@
       "district": "Kudat",
       "era": "1980s–present",
       "bio": "A master weaver of the traditional Rungus linangkit and tuhau cloth, Sirinah's intricate patterns have been exhibited at the National Museum of Malaysia and acquired by collectors across Southeast Asia.",
-      "achievements": ["National Living Heritage designation", "National Museum exhibition artist", "UNESCO craft recognition"],
+      "achievements": [
+        "National Living Heritage designation",
+        "National Museum exhibition artist",
+        "UNESCO craft recognition"
+      ],
       "votes": 118,
       "image": null,
-      "tags": ["craft", "weaving", "Rungus"]
+      "tags": [
+        "craft",
+        "weaving",
+        "Rungus"
+      ]
     },
     {
       "id": "hof-012",
@@ -786,13 +1375,20 @@
       "district": "Penampang",
       "era": "2000s–2010s",
       "bio": "A stalwart midfielder for Sabah FA, Vincent captained the team during their historic return to the Malaysia Super League, becoming one of the most beloved footballers among the KDM community.",
-      "achievements": ["Sabah FA captain (2018 season)", "Malaysia Cup quarter-finalist", "KDM Sports Icon Award 2019"],
+      "achievements": [
+        "Sabah FA captain (2018 season)",
+        "Malaysia Cup quarter-finalist",
+        "KDM Sports Icon Award 2019"
+      ],
       "votes": 147,
       "image": null,
-      "tags": ["football", "sports", "Sabah FA"]
+      "tags": [
+        "football",
+        "sports",
+        "Sabah FA"
+      ]
     }
   ],
-
   "businesses": [
     {
       "id": "biz-001",
@@ -808,7 +1404,12 @@
       "description": "Artisan producers of premium traditional tapai (rice wine) using generations-old fermentation recipes. Supplying local restaurants and exporting to Singapore and Brunei.",
       "hours": "Mon–Sat: 8am–5pm",
       "founded": 2012,
-      "tags": ["tapai", "traditional", "rice wine", "export"],
+      "tags": [
+        "tapai",
+        "traditional",
+        "rice wine",
+        "export"
+      ],
       "verified": true,
       "featured": true
     },
@@ -826,7 +1427,12 @@
       "description": "Authentic handmade Rungus beadwork (manik), traditional accessories, and wearable art. Each piece is crafted using centuries-old techniques passed down through generations.",
       "hours": "Daily: 9am–6pm",
       "founded": 2008,
-      "tags": ["beads", "manik", "handmade", "Rungus craft"],
+      "tags": [
+        "beads",
+        "manik",
+        "handmade",
+        "Rungus craft"
+      ],
       "verified": true,
       "featured": true
     },
@@ -844,7 +1450,12 @@
       "description": "An immersive eco-lodge on the foothills of Mount Kinabalu offering cultural homestay experiences, guided highland treks, and traditional Dusun cuisine. A certified sustainable tourism operator.",
       "hours": "Open year-round (advance booking required)",
       "founded": 2015,
-      "tags": ["eco-lodge", "Mount Kinabalu", "cultural experience", "trekking"],
+      "tags": [
+        "eco-lodge",
+        "Mount Kinabalu",
+        "cultural experience",
+        "trekking"
+      ],
       "verified": true,
       "featured": false
     },
@@ -862,7 +1473,12 @@
       "description": "A certified traditional medicine practice specializing in KDM herbal remedies including tuhau preparations, medicinal roots, and customized wellness consultations rooted in Kadazan ancestral knowledge.",
       "hours": "Tue–Sun: 8am–4pm",
       "founded": 2003,
-      "tags": ["herbal", "traditional medicine", "tuhau", "wellness"],
+      "tags": [
+        "herbal",
+        "traditional medicine",
+        "tuhau",
+        "wellness"
+      ],
       "verified": true,
       "featured": false
     },
@@ -880,7 +1496,12 @@
       "description": "Sabah's premier cultural heritage site dedicated to the legendary Kadazan warrior Monsopiad. Offers guided tours, traditional dance shows, and a museum of indigenous artefacts.",
       "hours": "Daily: 9am–5pm",
       "founded": 1996,
-      "tags": ["heritage", "museum", "cultural tourism", "Kadazan warrior"],
+      "tags": [
+        "heritage",
+        "museum",
+        "cultural tourism",
+        "Kadazan warrior"
+      ],
       "verified": true,
       "featured": true
     },
@@ -898,7 +1519,12 @@
       "description": "Specializing in authentic Dusun cuisine for weddings, corporate events, and Hari Kaamatan celebrations. Menu features hinava, tuhau dishes, bamboo-cooked rice, and pinasakan.",
       "hours": "By appointment",
       "founded": 2018,
-      "tags": ["catering", "Dusun food", "hinava", "events"],
+      "tags": [
+        "catering",
+        "Dusun food",
+        "hinava",
+        "events"
+      ],
       "verified": false,
       "featured": false
     },
@@ -916,7 +1542,12 @@
       "description": "A working Murut farm offering agro-tourism packages including traditional paddy harvesting, indigenous crop tours, and farm-to-table dining experiences with Murut specialty dishes.",
       "hours": "Mon–Sat: 7am–4pm",
       "founded": 2010,
-      "tags": ["agro-tourism", "Murut", "paddy", "farm experience"],
+      "tags": [
+        "agro-tourism",
+        "Murut",
+        "paddy",
+        "farm experience"
+      ],
       "verified": true,
       "featured": false
     },
@@ -934,7 +1565,12 @@
       "description": "A curated gallery and retail shop featuring authentic KDM crafts from over 50 indigenous artisans. Stocks traditional costumes, bamboo instruments, hand-woven baskets, and ceremonial accessories.",
       "hours": "Mon–Sun: 10am–8pm",
       "founded": 2014,
-      "tags": ["crafts", "gallery", "artisan", "instruments"],
+      "tags": [
+        "crafts",
+        "gallery",
+        "artisan",
+        "instruments"
+      ],
       "verified": true,
       "featured": true
     },
@@ -952,7 +1588,12 @@
       "description": "Offering conversational and literacy classes in Kadazan Dusun and Rungus languages. Also provides online courses, children's language programmes, and corporate cultural training.",
       "hours": "Mon–Fri: 9am–7pm, Sat: 9am–2pm",
       "founded": 2019,
-      "tags": ["language", "education", "Kadazan Dusun", "Rungus"],
+      "tags": [
+        "language",
+        "education",
+        "Kadazan Dusun",
+        "Rungus"
+      ],
       "verified": true,
       "featured": false
     },
@@ -970,7 +1611,12 @@
       "description": "Dedicated to preserving and promoting the ancient Rungus weaving traditions. Visitors can watch master weavers at work, purchase authentic linangkit textiles, and book weaving workshops.",
       "hours": "Tue–Sun: 9am–5pm",
       "founded": 2006,
-      "tags": ["weaving", "linangkit", "textile", "Rungus"],
+      "tags": [
+        "weaving",
+        "linangkit",
+        "textile",
+        "Rungus"
+      ],
       "verified": true,
       "featured": true
     },
@@ -988,7 +1634,12 @@
       "description": "Producer of certified organic highland vegetables, wild tuhau (wild ginger), and traditional ulam herbs. Supplies to KK restaurants and weekly farmers markets.",
       "hours": "Wed & Sat: Farmers Market 6am–12pm",
       "founded": 2016,
-      "tags": ["organic", "vegetables", "tuhau", "farmers market"],
+      "tags": [
+        "organic",
+        "vegetables",
+        "tuhau",
+        "farmers market"
+      ],
       "verified": false,
       "featured": false
     },
@@ -1006,7 +1657,12 @@
       "description": "Offering traditional Kadazan healing practices guided by a certified bobohizan (high priestess). Services include ritual blessings, ancestral healing ceremonies, and cultural orientation retreats.",
       "hours": "By appointment only",
       "founded": 2009,
-      "tags": ["healing", "bobohizan", "spiritual", "cultural wellness"],
+      "tags": [
+        "healing",
+        "bobohizan",
+        "spiritual",
+        "cultural wellness"
+      ],
       "verified": true,
       "featured": false
     },
@@ -1024,7 +1680,13 @@
       "description": "Sabah's leading atelier for bespoke KDM ceremonial and contemporary-traditional costumes. Momogun Couture crafts Unduk Ngadau pageant regalia, Kaamatan stage wear, and modern fusion pieces for weddings and gala events — each made by hand using ethically sourced traditional textiles from Rungus, Kadazan, Dusun, and Murut weavers.",
       "hours": "Mon–Sat: 10am–6pm (atelier appointments recommended)",
       "founded": 2019,
-      "tags": ["costume", "bespoke", "fashion", "Unduk Ngadau", "haute couture"],
+      "tags": [
+        "costume",
+        "bespoke",
+        "fashion",
+        "Unduk Ngadau",
+        "haute couture"
+      ],
       "verified": true,
       "featured": true
     },
@@ -1042,7 +1704,13 @@
       "description": "A premium indigenous dining experience redefining KDM cuisine for a new generation. Sinalau Bakas Elite is built around Sabah's legendary smoked wild boar tradition — slow-smoked over aromatic jungle wood using a Murut ancestral method, served alongside hinava ceviche, bamboo-steamed nasi tanak, and barrel-aged tapai cocktails. Fully halal-friendly options available.",
       "hours": "Tue–Sun: 12pm–3pm, 6pm–10pm (dinner reservations required)",
       "founded": 2022,
-      "tags": ["sinalau", "fine dining", "indigenous cuisine", "smoked", "KDM food"],
+      "tags": [
+        "sinalau",
+        "fine dining",
+        "indigenous cuisine",
+        "smoked",
+        "KDM food"
+      ],
       "verified": true,
       "featured": true
     },
@@ -1060,12 +1728,17 @@
       "description": "Sabah's premier KDM cultural photographer. Borneo Cultural Lens specialises in Hari Kaamatan season portrait sessions, Unduk Ngadau official photography, MRK and Sugandoi competition documentation, traditional costume editorial shoots, and ancestral village heritage documentation. Exhibition prints available. Selected works have appeared in National Geographic Traveller Malaysia and Sabah Tourism Board campaigns.",
       "hours": "By appointment (Hari Kaamatan season: May bookings open from March)",
       "founded": 2017,
-      "tags": ["photography", "cultural", "portrait", "Hari Kaamatan", "heritage documentation"],
+      "tags": [
+        "photography",
+        "cultural",
+        "portrait",
+        "Hari Kaamatan",
+        "heritage documentation"
+      ],
       "verified": true,
       "featured": true
     }
   ],
-
   "news": [
     {
       "id": "news-001",
@@ -1116,7 +1789,6 @@
       "source": "Borneo Post"
     }
   ],
-
   "stats": {
     "hofEntries": 12,
     "businesses": 15,
