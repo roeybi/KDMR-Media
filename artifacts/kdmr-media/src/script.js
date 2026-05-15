@@ -743,7 +743,7 @@ async function initIndex(data) {
       badgeChip.style.display = 'inline-flex';
       badgeChip.textContent = `✦ ${legend.badge}`;
     }
-    const awardSlug = legend.award === 'MRK' ? '/mrk/' : legend.award === 'Sugandoi' ? '/sugandoi/' : '/unduk-ngadau/';
+    const awardSlug = import.meta.env.BASE_URL.replace(/\/$/, '') + '/winners.html';
     if (ctaBtn) {
       ctaBtn.href = awardSlug;
       ctaBtn.textContent = legend.award === 'MRK' ? 'Explore His Story →' : 'Explore Her Story →';
