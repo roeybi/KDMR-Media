@@ -2,21 +2,203 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Hall of Fame — KDMR Media</title>
-    <meta name="description" content="Search and explore the Hall of Fame celebrating notable Kadazan, Dusun, Murut, and Rungus individuals from Sabah." />
+    <meta name="description" content="KDMR Cultural Champions — Unduk Ngadau and MRK award winners across all KDCA branches." />
     <meta name="theme-color" content="#0a0a0a" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/index.css" />
-  </head>
-  <body style="background:#0a0a0a;color:#f0f0f0;">
+    <style>
+      :root { --accent: #f0a820; }
 
-    <!-- ── Nav ─────────────────────────────────────────────────────── -->
-    <nav style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:50;">
-      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
+      html, body { height: 100%; overflow: hidden; }
+
+      /* Ambient BG */
+      #ambientBg {
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        transition: background 1s ease;
+        background: radial-gradient(ellipse 60% 50% at 50% 60%, rgba(240,168,32,0.06) 0%, transparent 70%);
+      }
+
+      /* Portrait card */
+      #portraitCard {
+        position: relative;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 32px 80px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.06);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+      }
+      #portraitCard.fading { opacity: 0; transform: scale(0.97) translateY(6px); }
+
+      /* Portrait inner */
+      #portraitInner {
+        width: 100%; padding-top: 150%; position: relative;
+      }
+      #portraitBg {
+        position: absolute; inset: 0;
+        background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 100%);
+        transition: background 0.6s ease;
+      }
+      #portraitPattern {
+        position: absolute; inset: 0; opacity: 0.04;
+        background-image:
+          repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%),
+          repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%);
+        background-size: 20px 20px;
+      }
+      #portraitGlyph {
+        position: absolute; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 11vmax; font-weight: 900; letter-spacing: -0.05em;
+        color: rgba(255,255,255,0.03); user-select: none;
+        font-family: Inter, sans-serif;
+        transition: color 0.4s;
+      }
+      #portraitAvatar {
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -58%);
+        width: 96px; height: 96px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem; font-weight: 900; color: #0a0a0a;
+        background: #f0a820;
+        box-shadow: 0 0 0 4px rgba(240,168,32,0.15), 0 20px 60px rgba(0,0,0,0.7);
+        transition: background 0.4s;
+        font-family: Inter, sans-serif;
+        letter-spacing: -0.04em;
+      }
+      /* Vignette overlays */
+      #portraitVignette {
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 50% 40%, transparent 35%, rgba(0,0,0,0.55) 80%);
+        pointer-events: none;
+      }
+      #portraitGradient {
+        position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+        background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.85) 40%, transparent 100%);
+        pointer-events: none;
+      }
+      /* Name overlay */
+      #portraitNameWrap {
+        position: absolute; bottom: 0; left: 0; right: 0;
+        padding: 20px 18px 16px;
+      }
+      #portraitAwardBadge {
+        display: inline-flex; align-items: center; gap: 6px;
+        font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+        color: #0a0a0a; background: #f0a820; padding: 3px 9px; border-radius: 2px;
+        margin-bottom: 6px;
+        transition: background 0.3s;
+      }
+      #portraitName {
+        font-size: 1.4rem; font-weight: 900; color: #fff; line-height: 1.1;
+        letter-spacing: -0.03em; font-family: Inter, sans-serif;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+      }
+      #portraitYear {
+        font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 4px; font-weight: 500;
+      }
+
+      /* Arrow buttons */
+      .hero-arrow {
+        position: absolute; top: 50%; transform: translateY(-60%);
+        z-index: 30; width: 44px; height: 44px; border-radius: 50%;
+        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.7); cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        transition: all 0.2s; backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      .hero-arrow:hover {
+        background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); color: #fff;
+        transform: translateY(-60%) scale(1.05);
+      }
+      #prevBtn { left: -20px; }
+      #nextBtn { right: -20px; }
+
+      /* Dot indicators */
+      #dotRow {
+        display: flex; align-items: center; justify-content: center; gap: 6px;
+        padding: 12px 0 0;
+      }
+      .dot {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: rgba(255,255,255,0.15); transition: all 0.25s; cursor: pointer;
+      }
+      .dot.active { background: #f0a820; width: 18px; border-radius: 3px; }
+
+      /* Stats panel */
+      #statsPanel {
+        backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+        background: rgba(8,8,8,0.78);
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 4px;
+        transition: opacity 0.3s ease;
+      }
+      #statsPanel.fading { opacity: 0; }
+
+      .stat-row {
+        display: flex; flex-direction: column; gap: 2px;
+        padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+      }
+      .stat-row:last-child { border-bottom: none; }
+      .stat-label {
+        font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+        color: rgba(255,255,255,0.25);
+      }
+      .stat-value { font-size: 0.88rem; font-weight: 600; color: #f0f0f0; line-height: 1.4; }
+      .stat-sub { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 2px; line-height: 1.5; }
+
+      /* Branch tabs */
+      #branchTabs {
+        display: flex; overflow-x: auto; gap: 0;
+        scrollbar-width: none; -ms-overflow-style: none;
+        border-bottom: 1px solid #1a1a1a;
+        background: rgba(0,0,0,0.5); backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      #branchTabs::-webkit-scrollbar { display: none; }
+      .branch-tab {
+        flex-shrink: 0; padding: 0 16px; height: 40px;
+        display: flex; align-items: center;
+        font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.35);
+        cursor: pointer; border-bottom: 2px solid transparent;
+        transition: all 0.2s; white-space: nowrap; background: transparent; border-top: none; border-left: none; border-right: none;
+        font-family: Inter, sans-serif; letter-spacing: 0.02em;
+      }
+      .branch-tab:hover { color: rgba(255,255,255,0.7); }
+      .branch-tab.active { color: #f0a820; border-bottom-color: #f0a820; }
+
+      /* Scroll area for mobile stats */
+      #mobileStats { overflow-y: auto; max-height: 38vh; }
+
+      /* Vote button */
+      #voteBtn {
+        width: 100%; padding: 10px; border-radius: 2px; border: none; cursor: pointer;
+        font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+        font-family: Inter, sans-serif;
+        transition: all 0.2s;
+        background: rgba(240,168,32,0.15); color: #f0a820; border: 1px solid rgba(240,168,32,0.3);
+      }
+      #voteBtn:hover { background: #f0a820; color: #0a0a0a; }
+      #voteBtn.voted { background: rgba(240,168,32,0.08); color: rgba(240,168,32,0.4); border-color: rgba(240,168,32,0.15); cursor: default; }
+
+      /* Bio toggle */
+      #bioText { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.7; }
+    </style>
+  </head>
+  <body style="background:#0a0a0a;color:#f0f0f0;font-family:Inter,sans-serif;">
+
+    <!-- ambient background -->
+    <div id="ambientBg"></div>
+
+    <!-- ── Nav ──────────────────────────────────────────────────────── -->
+    <nav style="background:rgba(10,10,10,0.95);border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);">
+      <div style="max-width:1400px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
         <a href="./index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
           <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;letter-spacing:-0.03em;">KM</span>
@@ -31,132 +213,89 @@
         <div style="display:flex;align-items:center;gap:10px;">
           <a href="./index.html#join" style="background:#f0a820;color:#0a0a0a;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Join</a>
           <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;">
-            <svg id="menuIconOpen" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-            <svg id="menuIconClose" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none;">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
         </div>
       </div>
-      <div id="mobileMenu" style="display:none;border-top:1px solid #1e1e1e;padding:12px 16px;background:#0a0a0a;">
-        <a href="./archive.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#f0f0f0;text-decoration:none;border-bottom:1px solid #1a1a1a;">Archive</a>
+      <div id="mobileMenu" style="display:none;border-top:1px solid #1a1a1a;padding:12px 16px;background:#0a0a0a;">
+        <a href="./archive.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:600;color:#f0a820;text-decoration:none;border-bottom:1px solid #1a1a1a;">Archive</a>
         <a href="./directory.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Directory</a>
-        <a href="./index.html#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">News</a>
+        <a href="./index.html#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;">News</a>
       </div>
     </nav>
 
-    <!-- ── Page header ─────────────────────────────────────────────── -->
-    <div style="background:#0d0d0d;border-bottom:1px solid #1a1a1a;padding:40px 16px 32px;">
-      <div style="max-width:1200px;margin:0 auto;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <a href="./index.html" style="font-size:0.72rem;color:#444;text-decoration:none;">Home</a>
-          <span style="color:#333;font-size:0.72rem;">/</span>
-          <span style="font-size:0.72rem;color:#888;">Archive</span>
-        </div>
-        <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;margin:0 0 8px;color:#f0f0f0;">Hall of Fame</h1>
-        <p style="font-size:0.875rem;color:#666;margin:0;max-width:520px;line-height:1.6;">Celebrating notable Kadazan, Dusun, Murut, and Rungus individuals who shaped culture, history, and community across Sabah.</p>
-      </div>
-    </div>
+    <!-- ── Hero Selector Container ──────────────────────────────────── -->
+    <div id="heroSelectorRoot" style="position:relative;z-index:1;height:calc(100vh - 52px);display:flex;flex-direction:column;overflow:hidden;">
 
-    <!-- ── Sticky search & filter bar ─────────────────────────────── -->
-    <div style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:52px;z-index:40;">
-      <div style="max-width:1200px;margin:0 auto;padding:12px 16px;">
-        <div style="display:flex;gap:8px;margin-bottom:10px;">
-          <div style="position:relative;flex:1;">
-            <svg style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#444;" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
-            </svg>
-            <input id="hofSearch" type="search" placeholder="Search by name, tribe, district, achievement…"
-              class="search-input"
-              style="width:100%;background:#141414;border:1px solid #252525;border-radius:2px;padding:9px 12px 9px 32px;font-size:0.8rem;color:#f0f0f0;font-family:Inter,sans-serif;outline:none;" />
-          </div>
-          <select id="hofSort" style="background:#141414;border:1px solid #252525;border-radius:2px;padding:0 10px;font-size:0.75rem;color:#888;font-family:Inter,sans-serif;cursor:pointer;outline:none;white-space:nowrap;">
-            <option value="votes">Most Voted</option>
-            <option value="nameAsc">A–Z</option>
-            <option value="nameDesc">Z–A</option>
-          </select>
-        </div>
-        <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;">
-          <button class="filter-btn active" data-cat="all">All</button>
-          <button class="filter-btn" data-cat="Politics">Politics</button>
-          <button class="filter-btn" data-cat="Arts & Culture">Arts &amp; Culture</button>
-          <button class="filter-btn" data-cat="Sports">Sports</button>
-          <button class="filter-btn" data-cat="Education">Education</button>
-          <button class="filter-btn" data-cat="Entrepreneurship">Entrepreneurship</button>
-        </div>
+      <!-- Branch tabs -->
+      <div id="branchTabs">
+        <!-- Filled by JS -->
       </div>
-    </div>
 
-    <!-- ── Results count ────────────────────────────────────────────── -->
-    <div style="max-width:1200px;margin:0 auto;padding:14px 16px 4px;">
-      <p id="resultsCount" style="font-size:0.72rem;color:#444;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;margin:0;"></p>
-    </div>
+      <!-- Main area — will be set to flex-row (desktop) or flex-col (mobile) by JS -->
+      <div id="heroMain" style="flex:1;display:flex;position:relative;overflow:hidden;min-height:0;">
 
-    <!-- ── Grid ─────────────────────────────────────────────────────── -->
-    <main style="max-width:1200px;margin:0 auto;padding:8px 16px 60px;">
-      <div id="hofGrid" style="display:grid;grid-template-columns:1fr;gap:1px;">
-        <div class="skeleton" style="height:120px;margin-bottom:1px;"></div>
-        <div class="skeleton" style="height:120px;margin-bottom:1px;"></div>
-        <div class="skeleton" style="height:120px;margin-bottom:1px;"></div>
-        <div class="skeleton" style="height:120px;"></div>
-      </div>
-      <div id="hofEmpty" style="display:none;text-align:center;padding:60px 0;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">🔍</div>
-        <h3 style="font-size:1rem;font-weight:700;color:#f0f0f0;margin:0 0 6px;">No results</h3>
-        <p style="font-size:0.8rem;color:#555;">Try a different search term or category.</p>
-      </div>
-    </main>
+        <!-- Portrait region -->
+        <div id="portraitRegion" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 48px;position:relative;overflow:hidden;min-height:0;">
 
-    <!-- ── HOF Detail Modal ─────────────────────────────────────────── -->
-    <div id="hofModal" style="display:none;" class="modal-bg">
-      <div class="modal-panel">
-        <div style="background:#141414;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #252525;">
-          <span id="modalCategory" style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;"></span>
-          <button id="modalClose" style="background:transparent;border:none;cursor:pointer;color:#444;padding:4px;">
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-        <div style="padding:24px 20px;">
-          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;">
-            <div id="modalAvatar" style="width:52px;height:52px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;font-weight:800;color:#0a0a0a;background:#f0a820;letter-spacing:-0.02em;"></div>
-            <div>
-              <h2 id="modalName" style="font-size:1.3rem;font-weight:800;letter-spacing:-0.02em;margin:0 0 4px;color:#f0f0f0;"></h2>
-              <p id="modalMeta" style="font-size:0.75rem;color:#555;margin:0 0 10px;"></p>
-              <div id="modalTags" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
-            </div>
-          </div>
-          <p id="modalBio" style="font-size:0.85rem;color:#888;line-height:1.75;margin-bottom:20px;"></p>
-          <div style="margin-bottom:20px;">
-            <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;margin-bottom:10px;">Achievements</div>
-            <ul id="modalAchievements" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;"></ul>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #1e1e1e;">
-            <div>
-              <span style="font-size:0.72rem;color:#444;">Community votes · </span>
-              <span id="modalVoteCount" style="font-size:0.9rem;font-weight:800;color:#f0a820;"></span>
-            </div>
-            <button id="modalVoteBtn" class="vote-btn">
-              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+          <!-- Portrait card with arrows -->
+          <div style="position:relative;width:100%;max-width:320px;">
+            <button id="prevBtn" class="hero-arrow" aria-label="Previous">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
               </svg>
-              <span id="modalVoteBtnText">Upvote</span>
+            </button>
+
+            <div id="portraitCard">
+              <div id="portraitInner">
+                <div id="portraitBg"></div>
+                <div id="portraitPattern"></div>
+                <!-- Decorative textile border lines -->
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.6;"></div>
+                <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.3;"></div>
+                <div id="portraitGlyph"></div>
+                <div id="portraitAvatar"></div>
+                <div id="portraitVignette"></div>
+                <div id="portraitGradient"></div>
+                <div id="portraitNameWrap">
+                  <div id="portraitAwardBadge"></div>
+                  <div id="portraitName"></div>
+                  <div id="portraitYear"></div>
+                </div>
+              </div>
+            </div>
+
+            <button id="nextBtn" class="hero-arrow" aria-label="Next">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+              </svg>
             </button>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- ── Footer ──────────────────────────────────────────────────── -->
-    <footer style="background:#0a0a0a;border-top:1px solid #1a1a1a;padding:20px 16px;text-align:center;">
-      <span style="font-size:0.7rem;color:#333;">&copy; 2026 KDMR Media · Sabah, Malaysia</span>
-    </footer>
+          <!-- Dot indicators -->
+          <div id="dotRow"></div>
+
+        </div>
+
+        <!-- Stats panel (desktop: right column | mobile: bottom sheet) -->
+        <div id="statsPanel" style="width:300px;flex-shrink:0;display:flex;flex-direction:column;overflow-y:auto;padding:20px 18px;gap:0;border-left:1px solid rgba(255,255,255,0.05);">
+          <!-- Filled by JS -->
+        </div>
+
+      </div>
+
+      <!-- Mobile stats (separate scrollable panel below portrait) -->
+      <div id="mobileStats" style="display:none;padding:0 16px 20px;overflow-y:auto;border-top:1px solid rgba(255,255,255,0.06);">
+        <!-- Filled by JS (mirrors statsPanel on mobile) -->
+      </div>
+
+    </div>
 
     <script type="module" src="./src/script.js"></script>
     <script>
+      // Nav layout
       function applyNavLayout() {
         const links = document.getElementById('navLinks');
         const hamburger = document.getElementById('mobileMenuBtn');
@@ -171,11 +310,8 @@
       applyNavLayout();
       window.addEventListener('resize', applyNavLayout);
       document.getElementById('mobileMenuBtn').addEventListener('click', function () {
-        const menu = document.getElementById('mobileMenu');
-        const open = menu.style.display === 'block';
-        menu.style.display = open ? 'none' : 'block';
-        document.getElementById('menuIconOpen').style.display = open ? 'block' : 'none';
-        document.getElementById('menuIconClose').style.display = open ? 'none' : 'block';
+        const m = document.getElementById('mobileMenu');
+        m.style.display = m.style.display === 'block' ? 'none' : 'block';
       });
     </script>
   </body>

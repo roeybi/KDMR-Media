@@ -1,4 +1,273 @@
 {
+  "winners": [
+    {
+      "id": "win-001",
+      "name": "Adriana Kimpin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2025,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "accentColor": "#f0a820",
+      "heritage": {
+        "group": "Kadazan Penampang",
+        "costume": "Traditional Sinuangga' dress woven in black & gold, adorned with himpogot (belt) and manik (beadwork) breastplate",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Adriana captivated judges with her poise, depth of cultural knowledge, and graceful performance of the sumazau during the 2025 Hari Kaamatan national festival, earning the highest crown in KDCA Sabah.",
+      "achievements": ["KDCA Sabah Unduk Ngadau 2025", "Best Cultural Knowledge Award", "National-level representative"],
+      "votes": 342
+    },
+    {
+      "id": "win-002",
+      "name": "Vanessa Gunsanad",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2024,
+      "tribe": "Dusun",
+      "district": "Tambunan",
+      "origin": "KDCA Tambunan",
+      "accentColor": "#c084fc",
+      "heritage": {
+        "group": "Dusun Tambunan",
+        "costume": "Souduh Dusun in deep indigo and silver, featuring hand-stitched linangkit panels and togkol headpiece",
+        "language": "Dusun Tambunan dialect"
+      },
+      "bio": "Vanessa's mastery of Dusun oral poetry (tontolian) and her intricate knowledge of highland Dusun weaving traditions set her apart in the 2024 competition, making her the first Tambunan-origin winner in a decade.",
+      "achievements": ["KDCA Sabah Unduk Ngadau 2024", "Tontolian Oral Poetry Award", "Highland Heritage Ambassador"],
+      "votes": 298
+    },
+    {
+      "id": "win-003",
+      "name": "Cynthia Rambilin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2023,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Kudat",
+      "accentColor": "#f472b6",
+      "heritage": {
+        "group": "Rungus Kudat",
+        "costume": "Full Rungus bridal regalia — tinangkong (black wrap skirt) with intricate manik collar, arm rings, and brass coil anklets",
+        "language": "Rungus dialect"
+      },
+      "bio": "Cynthia's victory in 2023 was historic — the first Rungus queen from Kudat to win the KDCA Sabah crown. Her breathtaking performance of the monogit dance and her encyclopedic knowledge of Rungus ritual songs left the audience spellbound.",
+      "achievements": ["KDCA Sabah Unduk Ngadau 2023", "First Rungus winner from Kudat", "Monogit Dance Excellence Award"],
+      "votes": 411
+    },
+    {
+      "id": "win-004",
+      "name": "Roselind Mansul",
+      "branch": "KDCA Sabah",
+      "award": "MRK",
+      "year": 2025,
+      "tribe": "Murut",
+      "district": "Tenom",
+      "origin": "KDCA Tenom",
+      "accentColor": "#4ade80",
+      "heritage": {
+        "group": "Murut Nabai",
+        "costume": "Warrior's regalia featuring kagang (ceremonial rattan cap), woven sinamot vest, and traditional parang (blade) sash",
+        "language": "Murut Nabai dialect"
+      },
+      "bio": "Roselind is a formidable advocate for Murut cultural heritage, selected as the 2025 MRK (Momogun Rungus Kadazan) representative for her deep knowledge of traditional Murut martial arts, craft, and oral history.",
+      "achievements": ["KDCA Sabah MRK 2025", "Traditional Martial Arts Excellence", "Murut Oral History Keeper"],
+      "votes": 187
+    },
+    {
+      "id": "win-005",
+      "name": "Patricia Limundok",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2025,
+      "tribe": "Kadazan Dusun",
+      "district": "Klang Valley",
+      "origin": "KDCA Klang Valley",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora)",
+        "costume": "Contemporary-traditional Sinuangga' reinterpreted with ikat-dyed panels and modern silhouette, representing the KDM diaspora identity",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Born and raised in Kuala Lumpur but deeply rooted in her Kadazan Dusun heritage, Patricia won hearts at KDCA Klang Valley 2025 with her bilingual cultural presentation and her advocacy for urban indigenous identity.",
+      "achievements": ["KDCA Klang Valley Unduk Ngadau 2025", "Urban Heritage Advocacy Award", "Bilingual Presentation Excellence"],
+      "votes": 263
+    },
+    {
+      "id": "win-006",
+      "name": "Sheryl Bunsin",
+      "branch": "KDCA Klang Valley",
+      "award": "Unduk Ngadau",
+      "year": 2024,
+      "tribe": "Kadazan",
+      "district": "Papar",
+      "origin": "KDCA Klang Valley",
+      "accentColor": "#f0a820",
+      "heritage": {
+        "group": "Kadazan Papar",
+        "costume": "Pinamorokan Papar dress in red and black silk, featuring distinctive gold thread embroidery and the traditional suluk head tie",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Sheryl moved to KL to pursue a career in medicine but never lost her connection to Papar. Her 2024 KDCA KL victory was powered by an emotionally charged cultural monologue delivered entirely in Kadazan, moved the audience to tears.",
+      "achievements": ["KDCA Klang Valley Unduk Ngadau 2024", "Kadazan Language Excellence Award", "Community Spirit Award"],
+      "votes": 219
+    },
+    {
+      "id": "win-007",
+      "name": "Janelle Mumin",
+      "branch": "KDCA Klang Valley",
+      "award": "MRK",
+      "year": 2025,
+      "tribe": "Rungus",
+      "district": "Pitas",
+      "origin": "KDCA Klang Valley",
+      "accentColor": "#4ade80",
+      "heritage": {
+        "group": "Rungus Pitas",
+        "costume": "Full ceremonial Rungus attire: black and red woven dress, layered manik (glass bead) necklaces, and brass decorative rings",
+        "language": "Rungus dialect"
+      },
+      "bio": "A cultural warrior in the truest sense, Janelle has spent years documenting endangered Rungus chants and weaving patterns in Pitas. Her MRK win at KDCA KL 2025 is a testament to her lifelong commitment to Rungus preservation.",
+      "achievements": ["KDCA Klang Valley MRK 2025", "Rungus Language Documentation Award", "Heritage Preservation Champion"],
+      "votes": 144
+    },
+    {
+      "id": "win-008",
+      "name": "Mellisa Gansai",
+      "branch": "KDCA Putrajaya",
+      "award": "Unduk Ngadau",
+      "year": 2025,
+      "tribe": "Kadazan",
+      "district": "Ranau",
+      "origin": "KDCA Putrajaya",
+      "accentColor": "#f0a820",
+      "heritage": {
+        "group": "Kadazan Ranau (highland)",
+        "costume": "Highland Kadazan attire in forest green and gold, featuring the distinctive suyang headdress and hand-pounded silver accessories",
+        "language": "Kadazan-Dusun (highland variant)"
+      },
+      "bio": "Mellisa works as a civil servant in Putrajaya but dedicates her weekends to teaching Kadazan folk songs at the community centre. Her calm authority and cultural depth won the 2025 KDCA Putrajaya crown.",
+      "achievements": ["KDCA Putrajaya Unduk Ngadau 2025", "Folk Music Excellence Award", "Community Education Champion"],
+      "votes": 176
+    },
+    {
+      "id": "win-009",
+      "name": "Doreen Bujang",
+      "branch": "KDCA Putrajaya",
+      "award": "Unduk Ngadau",
+      "year": 2024,
+      "tribe": "Dusun",
+      "district": "Keningau",
+      "origin": "KDCA Putrajaya",
+      "accentColor": "#c084fc",
+      "heritage": {
+        "group": "Dusun Keningau",
+        "costume": "Dusun Keningau ceremonial dress in deep maroon and ivory, with handwoven banat (cloth) panels and silver coin accessories",
+        "language": "Dusun Keningau dialect"
+      },
+      "bio": "A graphic designer by profession, Doreen's creative mind extends to reviving traditional Dusun textile patterns for contemporary fashion. Her cultural vision and eloquent advocacy earned her the 2024 KDCA Putrajaya title.",
+      "achievements": ["KDCA Putrajaya Unduk Ngadau 2024", "Traditional Textile Innovation Award", "Best Cultural Presentation"],
+      "votes": 201
+    },
+    {
+      "id": "win-010",
+      "name": "Lorraine Sibog",
+      "branch": "KDCA Putrajaya",
+      "award": "MRK",
+      "year": 2025,
+      "tribe": "Murut",
+      "district": "Nabawan",
+      "origin": "KDCA Putrajaya",
+      "accentColor": "#4ade80",
+      "heritage": {
+        "group": "Murut Tagal",
+        "costume": "Tagal warrior dress in deep ochre and black woven sinamot, featuring feathered ceremonial headpiece and traditional boar tusk ornaments",
+        "language": "Murut Tagal dialect"
+      },
+      "bio": "A researcher specialising in Murut customary law (adat), Lorraine uses her legal expertise to advocate for indigenous land rights. Her MRK win at KDCA Putrajaya 2025 recognised her as a pillar of Murut cultural resilience.",
+      "achievements": ["KDCA Putrajaya MRK 2025", "Adat Customary Law Advocacy", "Indigenous Rights Champion"],
+      "votes": 133
+    },
+    {
+      "id": "win-011",
+      "name": "Vivienne Dungkang",
+      "branch": "KDCA Selangor",
+      "award": "Unduk Ngadau",
+      "year": 2025,
+      "tribe": "Kadazan Dusun",
+      "district": "Kota Marudu",
+      "origin": "KDCA Selangor",
+      "accentColor": "#f0a820",
+      "heritage": {
+        "group": "Kadazan Kota Marudu",
+        "costume": "Kota Marudu coastal Kadazan attire in sea-blue and gold, with distinctive perak (silver) headwear and mother-of-pearl accessories",
+        "language": "Kadazan-Dusun (coastal variant)"
+      },
+      "bio": "Vivienne is a secondary school teacher in Shah Alam who channels her cultural knowledge into curriculum development. Her 2025 KDCA Selangor victory highlighted the importance of KDM education in diaspora communities.",
+      "achievements": ["KDCA Selangor Unduk Ngadau 2025", "Cultural Education Innovation Award", "Diaspora Ambassador"],
+      "votes": 158
+    },
+    {
+      "id": "win-012",
+      "name": "Charlene Asli",
+      "branch": "KDCA Selangor",
+      "award": "MRK",
+      "year": 2025,
+      "tribe": "Kadazan",
+      "district": "Tuaran",
+      "origin": "KDCA Selangor",
+      "accentColor": "#4ade80",
+      "heritage": {
+        "group": "Kadazan Tuaran",
+        "costume": "Kadazan Tuaran dress in emerald and silver with the distinctive kagang headdress and layered beaded neck ornaments",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "An environmental scientist and passionate cultural keeper, Charlene bridges traditional ecological knowledge of the KDM people with modern conservation science. Her MRK win at KDCA Selangor 2025 celebrates this unique intersection.",
+      "achievements": ["KDCA Selangor MRK 2025", "Traditional Ecological Knowledge Award", "Environmental Conservation Champion"],
+      "votes": 122
+    },
+    {
+      "id": "win-013",
+      "name": "Irene Mansun",
+      "branch": "KDCA Johor Bahru",
+      "award": "Unduk Ngadau",
+      "year": 2025,
+      "tribe": "Dusun",
+      "district": "Tambunan",
+      "origin": "KDCA Johor Bahru",
+      "accentColor": "#f0a820",
+      "heritage": {
+        "group": "Dusun Tambunan",
+        "costume": "Souduh Dusun highland weave in ivory and crimson, featuring handmade tupi' (shoulder wrap) and tinansad (front panel) with geometric motifs",
+        "language": "Dusun Tambunan dialect"
+      },
+      "bio": "An architect based in Johor Bahru, Irene incorporates traditional KDM longhouse architectural elements into her modern designs. Her 2025 KDCA JB win celebrated her vision of indigenous design in a contemporary world.",
+      "achievements": ["KDCA Johor Bahru Unduk Ngadau 2025", "Heritage Architecture Innovation", "Cultural Fusion Award"],
+      "votes": 109
+    },
+    {
+      "id": "win-014",
+      "name": "Felicity Sundang",
+      "branch": "KDCA Johor Bahru",
+      "award": "MRK",
+      "year": 2025,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Johor Bahru",
+      "accentColor": "#f472b6",
+      "heritage": {
+        "group": "Rungus Kudat",
+        "costume": "Rungus festival dress in black tindal cloth with copper-coloured woven stripes, paired with full manik jewellery set and miniature gong instrument",
+        "language": "Rungus dialect"
+      },
+      "bio": "Felicity is a community nurse in Johor who founded a KDM cultural club to keep young diaspora Rungus connected to their heritage. Her passion for community building earned her the MRK recognition at KDCA JB 2025.",
+      "achievements": ["KDCA Johor Bahru MRK 2025", "Community Nursing Excellence", "Diaspora Youth Programme Founder"],
+      "votes": 97
+    }
+  ],
+
   "hallOfFame": [
     {
       "id": "hof-001",
