@@ -678,7 +678,19 @@ async function initIndex(data) {
     const votesEl = document.getElementById('heroVotes');
     const yearBadge = document.getElementById('heroYearBadge');
 
-    if (ini) ini.textContent = initials(legend.name);
+    // If a portrait photo exists, show it; otherwise fall back to initials
+    const avatarWrap = document.getElementById('heroAvatarWrap');
+    if (avatarWrap && legend.imageUrl) {
+      avatarWrap.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = import.meta.env.BASE_URL.replace(/\/$/, '') + legend.imageUrl;
+      img.alt = legend.name;
+      img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:top center;display:block;';
+      img.onerror = () => { avatarWrap.innerHTML = `<span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">${initials(legend.name)}</span>`; };
+      avatarWrap.appendChild(img);
+    } else if (ini) {
+      ini.textContent = initials(legend.name);
+    }
     if (nameEl) nameEl.textContent = legend.name;
     if (subtitleEl) subtitleEl.textContent = `${legend.award} · ${legend.origin} · ${legend.year}`;
     if (bioEl) bioEl.textContent = legend.bio.slice(0, 220) + '…';
