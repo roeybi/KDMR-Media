@@ -1,45 +1,56 @@
-# [Project name]
+# KDMR Media
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A high-performance static web platform serving as a cultural archive and community hub for the Kadazan Dusun Murut Rungus (KDMR) people of Sabah, Borneo.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `pnpm --filter @workspace/kdmr-media run dev` — run the static site dev server
+- `pnpm --filter @workspace/kdmr-media run build` — build for production (GitHub Pages)
+- `pnpm --filter @workspace/kdmr-media run serve` — preview the production build locally
 
 ## Stack
 
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Vanilla HTML5, Tailwind CSS 4, Vanilla JavaScript (ES modules)
+- Multi-page application (MPA) via Vite
+- Static site — no backend, no database
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/kdmr-media/index.html` — Landing page & community news feed
+- `artifacts/kdmr-media/archive.html` — Searchable Hall of Fame
+- `artifacts/kdmr-media/directory.html` — KDM-owned business listings
+- `artifacts/kdmr-media/src/script.js` — All JS logic: search, filtering, sorting, voting
+- `artifacts/kdmr-media/src/index.css` — Tailwind CSS with KDMR brand theme
+- `artifacts/kdmr-media/public/data.json` — Local mock data (HOF, businesses, news, stats)
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Pure vanilla HTML/JS/CSS — no framework, maximally portable for GitHub Pages
+- Vite as build tool only (Tailwind CSS processing + MPA bundling)
+- Votes stored in `localStorage` (no backend needed for MVP)
+- `public/data.json` is the single source of truth for all content (drop-in replaceable with a real API)
+- Category filtering and full-text search all happen client-side for zero-latency UX
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- **Home / News** — Hero banner, live stats counter, community news feed, top-voted HOF sidebar, featured business spotlight
+- **Hall of Fame** — 12 notable KDMR individuals, searchable by name/tribe/district/achievement, filterable by category (Politics, Arts & Culture, Sports, Education, Entrepreneurship), community upvoting with detail modal
+- **Business Directory** — 12 KDM-owned businesses, searchable, filterable by 6 categories, verified badges, contact info modal with phone/email/website
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Site must be deployable to GitHub Pages as static HTML
+- HTML5 + Tailwind CSS + Vanilla JavaScript only (no React or frameworks)
+- Cultural identity: Kadazan, Dusun, Murut, Rungus — Sabah, Borneo
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Vite serves `public/` files at root, so `data.json` is fetched as `./data.json` (not `./public/data.json`)
+- This is a Vite MPA project — `rollupOptions.input` in `vite.config.ts` must include all HTML entry points
+- No TypeScript files are checked (`tsconfig.json` has empty `include` array) since the project is plain JS
 
 ## Pointers
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- See the `pnpm-workspace` skill for workspace structure
+- To add a new page: create `artifacts/kdmr-media/<name>.html` and add it to `rollupOptions.input` in `vite.config.ts`
+- To add data: edit `artifacts/kdmr-media/public/data.json`

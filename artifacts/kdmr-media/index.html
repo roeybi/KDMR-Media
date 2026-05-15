@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KDMR Media — Cultural Archive & Community Hub</title>
+    <meta name="description" content="The official cultural archive, Hall of Fame, and community hub for the Kadazan Dusun Murut Rungus people of Sabah, Borneo." />
+    <meta property="og:title" content="KDMR Media" />
+    <meta property="og:description" content="Cultural archive and community hub for the Kadazan Dusun Murut Rungus people." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/index.css" />
+  </head>
+  <body class="bg-[#faf5ee] min-h-screen" style="font-family:'Inter',system-ui,sans-serif;color:#1c0f00;">
+
+    <!-- Navigation -->
+    <nav style="background:#1a4436;" class="sticky top-0 z-50 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="./index.html" class="flex items-center gap-3">
+            <div style="background:#d4890a;" class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0">
+              <span style="color:#1c0f00;" class="font-bold text-sm">KM</span>
+            </div>
+            <span class="text-white font-bold text-xl tracking-tight" style="font-family:'Playfair Display',serif;">KDMR Media</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="./index.html" class="text-white text-sm font-semibold border-b-2 border-[#d4890a] pb-0.5">Home</a>
+            <a href="./archive.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors">Hall of Fame</a>
+            <a href="./directory.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors">Business Directory</a>
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden text-white p-2" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-white/20 mt-2 pt-3 space-y-2">
+          <a href="./index.html" class="block text-white text-sm font-medium py-1">Home</a>
+          <a href="./archive.html" class="block text-white/75 text-sm font-medium py-1">Hall of Fame</a>
+          <a href="./directory.html" class="block text-white/75 text-sm font-medium py-1">Business Directory</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header style="background:linear-gradient(135deg,#1a4436 0%,#2a6650 45%,#1c3a2a 75%,#0f241a 100%);" class="relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none opacity-10">
+        <div style="background:#d4890a;" class="absolute top-0 left-0 right-0 h-1"></div>
+        <div style="background:#d4890a;" class="absolute bottom-0 left-0 right-0 h-1"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3 mb-5">
+            <div style="background:#d4890a;" class="h-px w-8"></div>
+            <span style="color:#f0a820;" class="text-xs font-semibold uppercase tracking-widest">Sabah, Borneo</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" style="font-family:'Playfair Display',serif;">
+            Honouring the People<br/>
+            <span style="color:#f0a820;">of the Interior</span>
+          </h1>
+          <p class="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
+            KDMR Media is the community-built cultural archive and living record of the Kadazan, Dusun, Murut, and Rungus peoples — their heroes, traditions, and enterprises.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="./archive.html" style="background:#d4890a;color:#1c0f00;" class="hover:opacity-90 font-semibold px-6 py-3 rounded-lg transition-opacity text-sm shadow-lg">
+              Explore Hall of Fame
+            </a>
+            <a href="./directory.html" class="border border-white/40 hover:border-white text-white font-medium px-6 py-3 rounded-lg transition-colors text-sm">
+              Business Directory
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats bar -->
+    <div style="background:#1c0f00;" class="text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statHof">—</div>
+            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">Hall of Fame</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statBiz">—</div>
+            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">KDM Businesses</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statTribes">—</div>
+            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">Tribes Represented</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statDistricts">—</div>
+            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">Districts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+        <!-- News feed -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-2">
+            <div style="background:#d4890a;" class="h-px w-6"></div>
+            <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Community News</span>
+          </div>
+          <h2 class="text-3xl font-bold mb-8" style="font-family:'Playfair Display',serif;">Latest Updates</h2>
+          <div id="newsFeed" class="space-y-5">
+            <div class="rounded-xl h-32 animate-pulse" style="background:#e8d9c4;"></div>
+            <div class="rounded-xl h-32 animate-pulse" style="background:#e8d9c4;"></div>
+            <div class="rounded-xl h-32 animate-pulse" style="background:#e8d9c4;"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-10">
+
+          <!-- Top voted -->
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div style="background:#d4890a;" class="h-px w-6"></div>
+              <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Community Picks</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-5" style="font-family:'Playfair Display',serif;">Top Voted</h2>
+            <div id="topVoted" class="space-y-3">
+              <div class="rounded-lg h-16 animate-pulse" style="background:#e8d9c4;"></div>
+              <div class="rounded-lg h-16 animate-pulse" style="background:#e8d9c4;"></div>
+              <div class="rounded-lg h-16 animate-pulse" style="background:#e8d9c4;"></div>
+            </div>
+            <a href="./archive.html" style="color:#1a4436;" class="inline-block mt-4 text-sm font-semibold hover:underline">View all in Hall of Fame →</a>
+          </div>
+
+          <!-- Featured business -->
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div style="background:#d4890a;" class="h-px w-6"></div>
+              <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Featured Business</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-5" style="font-family:'Playfair Display',serif;">Spotlight</h2>
+            <div id="featuredBusiness">
+              <div class="rounded-xl h-48 animate-pulse" style="background:#e8d9c4;"></div>
+            </div>
+            <a href="./directory.html" style="color:#1a4436;" class="inline-block mt-4 text-sm font-semibold hover:underline">Explore all KDM businesses →</a>
+          </div>
+
+          <!-- Quick links -->
+          <div class="rounded-xl p-6 border" style="background:rgba(26,68,54,0.06);border-color:rgba(26,68,54,0.18);">
+            <h3 class="font-bold text-lg mb-4" style="font-family:'Playfair Display',serif;">Quick Links</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="./archive.html?category=Arts+%26+Culture" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Arts &amp; Culture figures</a></li>
+              <li><a href="./archive.html?category=Sports" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Sports legends</a></li>
+              <li><a href="./directory.html?category=Tourism+%26+Hospitality" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Tourism businesses</a></li>
+              <li><a href="./directory.html?category=Arts+%26+Crafts" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Craft &amp; artisan shops</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- HOF preview -->
+      <section class="mt-20">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div style="background:#d4890a;" class="h-px w-6"></div>
+              <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Hall of Fame</span>
+            </div>
+            <h2 class="text-3xl font-bold" style="font-family:'Playfair Display',serif;">Community Icons</h2>
+          </div>
+          <a href="./archive.html" style="color:#1a4436;" class="hidden md:block text-sm font-semibold hover:underline">View all →</a>
+        </div>
+        <div id="hofPreview" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-xl h-52 animate-pulse" style="background:#e8d9c4;"></div>
+          <div class="rounded-xl h-52 animate-pulse" style="background:#e8d9c4;"></div>
+          <div class="rounded-xl h-52 animate-pulse" style="background:#e8d9c4;"></div>
+        </div>
+        <div class="mt-6 md:hidden">
+          <a href="./archive.html" style="color:#1a4436;" class="text-sm font-semibold hover:underline">View all in Hall of Fame →</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background:#1c0f00;" class="text-white mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div style="background:#d4890a;" class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
+                <span style="color:#1c0f00;" class="font-bold text-xs">KM</span>
+              </div>
+              <span class="font-bold text-lg" style="font-family:'Playfair Display',serif;">KDMR Media</span>
+            </div>
+            <p class="text-white/60 text-sm leading-relaxed">A community-built archive celebrating the Kadazan, Dusun, Murut, and Rungus peoples of Sabah, Borneo.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm uppercase tracking-wide text-white/80 mb-4">Pages</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li><a href="./index.html" class="hover:text-white transition-colors">Home &amp; News</a></li>
+              <li><a href="./archive.html" class="hover:text-white transition-colors">Hall of Fame Archive</a></li>
+              <li><a href="./directory.html" class="hover:text-white transition-colors">Business Directory</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm uppercase tracking-wide text-white/80 mb-4">Heritage Communities</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li>Kadazan — Penampang &amp; Papar</li>
+              <li>Dusun — Tambunan &amp; Ranau</li>
+              <li>Murut — Tenom &amp; Nabawan</li>
+              <li>Rungus — Kudat &amp; Pitas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 mt-10 pt-6 text-center text-white/40 text-xs">
+          &copy; 2026 KDMR Media. Built for the community, by the community. Sabah, Malaysia.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/script.js"></script>
+    <script>
+      document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "KDMR Media"
+version = "1.0.0"
+id = "artifacts/kdmr-media"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25958
+
+[services.development]
+run = "pnpm --filter @workspace/kdmr-media run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kdmr-media", "run", "build" ]
+publicDir = "artifacts/kdmr-media/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25958"
+BASE_PATH = "/"
