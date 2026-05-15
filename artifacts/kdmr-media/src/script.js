@@ -491,59 +491,125 @@ function initHeroSelector(data, award) {
 // ─── INDEX PAGE ───────────────────────────────────────────────────────────
 
 async function initIndex(data) {
+  // ── Stats counter ────────────────────────────────────────────────────────
   animateCount('statHof', data.stats.hofEntries);
   animateCount('statBiz', data.stats.businesses);
   animateCount('statTribes', data.stats.tribesRepresented);
   animateCount('statDistricts', data.stats.districtsRepresented);
 
-  buildTicker('breakingTicker', data.news.map(n=>n.headline));
-  buildTicker('newsTicker', data.news.map(n=>`${n.category.toUpperCase()}: ${n.headline} (${n.source})`));
+  // ── Cinematic Hero — Legend of the Week ─────────────────────────────────
+  // Pick highest-voted winner from 2026; fall back to overall highest
+  const allWinners = data.winners || [];
+  const legend =
+    [...allWinners].filter(w => w.year === 2026).sort((a, b) => b.votes - a.votes)[0] ||
+    [...allWinners].sort((a, b) => b.votes - a.votes)[0];
 
-  const feedEl=document.getElementById('newsFeed');
-  if (feedEl) {
-    feedEl.innerHTML=data.news.map(item=>`
-      <article data-fade style="background:#111;border:1px solid #1e1e1e;padding:16px;display:flex;flex-direction:column;gap:8px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1e1e1e'">
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-          <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f0a820;">${item.category}</span>
-          <span style="color:#252525;">·</span><span style="font-size:0.72rem;color:#444;">${formatDate(item.date)}</span>
-          <span style="color:#252525;">·</span><span style="font-size:0.72rem;color:#333;">${item.source}</span>
-        </div>
-        <h3 style="font-size:0.95rem;font-weight:700;color:#f0f0f0;line-height:1.4;margin:0;letter-spacing:-0.01em;">${item.headline}</h3>
-        <p style="font-size:0.8rem;color:#555;line-height:1.65;margin:0;">${item.summary}</p>
-      </article>
-    `).join(''); fadein(feedEl);
-  }
+  if (legend) {
+    const ini = document.getElementById('heroInitials');
+    const nameEl = document.getElementById('heroName');
+    const subtitleEl = document.getElementById('heroSubtitle');
+    const bioEl = document.getElementById('heroBioText');
+    const ctaBtn = document.getElementById('heroCtaBtn');
+    const badgeChip = document.getElementById('heroBadgeChip');
+    const votesEl = document.getElementById('heroVotes');
+    const yearBadge = document.getElementById('heroYearBadge');
 
-  const topEl=document.getElementById('topVoted');
-  if (topEl) {
-    const sorted=[...data.hallOfFame].sort((a,b)=>b.votes-a.votes).slice(0,5);
-    topEl.innerHTML=sorted.map((p,i)=>`
-      <div data-fade style="display:flex;align-items:center;gap:10px;padding:10px;background:#111;border:1px solid #1e1e1e;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1e1e1e'">
-        <span style="font-size:0.75rem;font-weight:800;color:#333;width:16px;text-align:center;flex-shrink:0;">${i+1}</span>
-        <div style="width:32px;height:32px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:#0a0a0a;flex-shrink:0;">${initials(p.name)}</div>
-        <div style="min-width:0;flex:1;"><div style="font-size:0.82rem;font-weight:600;color:#f0f0f0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.name}</div><div style="font-size:0.7rem;color:#444;">${p.tribe} · ${p.category}</div></div>
-        <span style="font-size:0.72rem;font-weight:700;color:#f0a820;flex-shrink:0;">${p.votes}</span>
-      </div>
-    `).join(''); fadein(topEl);
-  }
-
-  const bizEl=document.getElementById('featuredBusiness');
-  if (bizEl) {
-    const featured=data.businesses.filter(b=>b.featured);
-    const biz=featured[Math.floor(Math.random()*featured.length)];
-    if (biz) {
-      const col=catCol(biz.category,BIZ_CAT_COLORS);
-      bizEl.innerHTML=`<div data-fade style="background:#111;border:1px solid #1e1e1e;border-left:2px solid #f0a820;padding:16px;"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px;"><div><span style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;color:${col.text};text-transform:uppercase;">${biz.category}</span><h3 style="font-size:1rem;font-weight:800;color:#f0f0f0;margin:4px 0 0;letter-spacing:-0.01em;">${biz.name}</h3></div>${biz.verified?'<span style="font-size:0.6rem;font-weight:700;padding:2px 8px;background:#1a3a26;color:#4ade80;border-radius:2px;letter-spacing:0.08em;flex-shrink:0;">✓ VERIFIED</span>':''}</div><p style="font-size:0.72rem;color:#444;margin:0 0 8px;">📍 ${biz.location}</p><p style="font-size:0.8rem;color:#666;line-height:1.6;margin:0;">${biz.description.slice(0,140)}…</p><a href="/directory.html" style="display:inline-block;margin-top:14px;font-size:0.72rem;font-weight:600;color:#f0a820;text-decoration:none;">View in directory →</a></div>`;
-      fadein(bizEl);
+    if (ini) ini.textContent = initials(legend.name);
+    if (nameEl) nameEl.textContent = legend.name;
+    if (subtitleEl) subtitleEl.textContent = `${legend.award} · ${legend.origin} · ${legend.year}`;
+    if (bioEl) bioEl.textContent = legend.bio.slice(0, 220) + '…';
+    if (yearBadge) yearBadge.textContent = `${legend.year} Season`;
+    if (votesEl) votesEl.textContent = `✦ ${legend.votes.toLocaleString()} community votes`;
+    if (badgeChip && legend.badge) {
+      badgeChip.style.display = 'inline-flex';
+      badgeChip.textContent = `✦ ${legend.badge}`;
+    }
+    const awardSlug = legend.award === 'MRK' ? '/mrk/' : legend.award === 'Sugandoi' ? '/sugandoi/' : '/unduk-ngadau/';
+    if (ctaBtn) {
+      ctaBtn.href = awardSlug;
+      ctaBtn.textContent = legend.award === 'MRK' ? 'Explore His Story →' : 'Explore Her Story →';
     }
   }
 
-  const hofEl=document.getElementById('hofPreview');
-  if (hofEl) {
-    const preview=[...data.hallOfFame].sort((a,b)=>b.votes-a.votes).slice(0,3);
-    hofEl.innerHTML=preview.map(p=>{const col=catCol(p.category);return`<article data-fade style="background:#111;border:1px solid #1e1e1e;padding:14px 16px;display:flex;align-items:flex-start;gap:14px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1e1e1e'"><div style="width:44px;height:44px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem;font-weight:800;color:#0a0a0a;">${initials(p.name)}</div><div style="flex:1;min-width:0;"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px;"><div><h3 style="font-size:0.9rem;font-weight:700;color:#f0f0f0;margin:0 0 2px;letter-spacing:-0.01em;">${p.name}</h3><span style="font-size:0.68rem;color:#444;">${p.tribe} · ${p.district}</span></div><span style="font-size:0.6rem;font-weight:700;padding:3px 8px;border-radius:2px;flex-shrink:0;background:${col.bg};color:${col.text};white-space:nowrap;">${p.category}</span></div><p style="font-size:0.78rem;color:#555;margin:6px 0 10px;line-height:1.6;">${p.bio.slice(0,120)}…</p><div style="font-size:0.7rem;color:#f0a820;font-weight:600;">${hasVoted(p.id)?`✦ ${p.votes} votes`:`↑ ${p.votes} votes`}</div></div></article>`;}).join('');
-    fadein(hofEl);
+  // ── Bento Box 2: Winning Costume ────────────────────────────────────────
+  const costume2026 = [...allWinners].filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
+    .sort((a, b) => b.votes - a.votes)[0];
+  if (costume2026) {
+    const nameEl = document.getElementById('bentoCostumeName');
+    const descEl = document.getElementById('bentoCostumeDesc');
+    const ctaEl  = document.getElementById('bentoCostumeCta');
+    if (nameEl) nameEl.textContent = `${costume2026.name} — ${costume2026.origin}`;
+    if (descEl) descEl.textContent = costume2026.heritage?.costume || '—';
+    if (ctaEl)  ctaEl.href = '/unduk-ngadau/';
   }
+
+  // ── Bento Box 3: Countdown to Hari Kaamatan ─────────────────────────────
+  const countdownEl = document.getElementById('countdownNum');
+  if (countdownEl) {
+    const target = new Date('2026-05-30T00:00:00+08:00');
+    const now = new Date();
+    const diffMs = target - now;
+    const diffDays = Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
+    countdownEl.textContent = diffDays > 0 ? diffDays : '🎉';
+    if (diffDays === 0) {
+      countdownEl.style.fontSize = '2rem';
+      countdownEl.textContent = 'Today!';
+    }
+  }
+
+  // ── Bento Box 4: New in Directory ───────────────────────────────────────
+  const featured = data.businesses.filter(b => b.featured);
+  const newestFeatured = [...featured].sort((a, b) => b.founded - a.founded)[0];
+  if (newestFeatured) {
+    const catEl  = document.getElementById('bentoBizCategory');
+    const nameEl = document.getElementById('bentoBizName');
+    const locEl  = document.getElementById('bentoBizLocation');
+    if (catEl)  catEl.textContent  = newestFeatured.category;
+    if (nameEl) nameEl.textContent = newestFeatured.name;
+    if (locEl)  locEl.textContent  = newestFeatured.location;
+  }
+
+  // ── Floating Live Pill ticker ────────────────────────────────────────────
+  const pillEl = document.getElementById('pillText');
+  if (pillEl && data.news.length) {
+    const headlines = data.news.map(n => `${n.category.toUpperCase()}: ${n.headline}`);
+    let idx = 0;
+    pillEl.textContent = headlines[0];
+    setInterval(() => {
+      idx = (idx + 1) % headlines.length;
+      pillEl.style.opacity = '0';
+      setTimeout(() => { pillEl.textContent = headlines[idx]; pillEl.style.opacity = '1'; }, 300);
+    }, 5000);
+    pillEl.style.transition = 'opacity 0.3s ease';
+  }
+
+  // ── News Feed ─────────────────────────────────────────────────────────────
+  const feedEl = document.getElementById('newsFeed');
+  if (feedEl) {
+    feedEl.innerHTML = data.news.map(item => `
+      <article class="reveal" style="background:#111;border:1px solid #1a1a1a;padding:18px 20px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1a1a1a'">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#f0a820;background:rgba(240,168,32,0.07);padding:2px 8px;border-radius:2px;">${item.category}</span>
+          <span style="font-size:0.68rem;color:#333;">${formatDate(item.date)}</span>
+          <span style="font-size:0.68rem;color:#2a2a2a;">· ${item.source}</span>
+        </div>
+        <h3 style="font-size:0.92rem;font-weight:700;color:#f0f0f0;line-height:1.45;margin:0;letter-spacing:-0.01em;">${item.headline}</h3>
+        <p style="font-size:0.78rem;color:#444;line-height:1.7;margin:0;">${item.summary}</p>
+      </article>
+    `).join('');
+  }
+
+  // ── Scroll reveal via IntersectionObserver ───────────────────────────────
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   initGlobalSearch(data);
 }

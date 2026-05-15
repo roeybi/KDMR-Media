@@ -35,7 +35,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main:         path.resolve(import.meta.dirname, "index.html"),
-        winners:      path.resolve(import.meta.dirname, "winners.html")),
+        winners:      path.resolve(import.meta.dirname, "winners.html"),
         directory:    path.resolve(import.meta.dirname, "directory.html"),
         undukNgadau:  path.resolve(import.meta.dirname, "unduk-ngadau/index.html"),
         mrk:          path.resolve(import.meta.dirname, "mrk/index.html"),
