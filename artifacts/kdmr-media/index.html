@@ -443,5 +443,20 @@
     </footer>
 
     <script type="module" src="./src/script.js"></script>
+    <script>
+      (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('menuIconOpen');
+        const iconClose = document.getElementById('menuIconClose');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function(){
+          const open = menu.style.display === 'block';
+          menu.style.display = open ? 'none' : 'block';
+          if (iconOpen) iconOpen.style.display = open ? 'block' : 'none';
+          if (iconClose) iconClose.style.display = open ? 'none' : 'block';
+        });
+      })();
+    </script>
   </body>
 </html>
