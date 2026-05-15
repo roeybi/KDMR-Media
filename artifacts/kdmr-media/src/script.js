@@ -960,18 +960,15 @@ async function initIndex(data) {
     });
   }
 
-  // ── Floating Live Pill ticker ────────────────────────────────────────────
-  const pillEl = document.getElementById('pillText');
-  if (pillEl && data.news.length) {
-    const headlines = data.news.map(n => `${n.category.toUpperCase()}: ${n.headline}`);
-    let idx = 0;
-    pillEl.textContent = headlines[0];
-    setInterval(() => {
-      idx = (idx + 1) % headlines.length;
-      pillEl.style.opacity = '0';
-      setTimeout(() => { pillEl.textContent = headlines[idx]; pillEl.style.opacity = '1'; }, 300);
-    }, 5000);
-    pillEl.style.transition = 'opacity 0.3s ease';
+  // ── News Marquee Ticker ──────────────────────────────────────────────────
+  const tickerTrack = document.getElementById('tickerTrack');
+  if (tickerTrack && data.news.length) {
+    const items = data.news.map(n => `${n.category.toUpperCase()}: ${n.headline}`);
+    // Duplicate items so the seamless loop works (CSS animates -50%)
+    const all = [...items, ...items];
+    tickerTrack.innerHTML = all.map(text =>
+      `<span class="ticker-item">${text}</span><span class="ticker-sep">◆</span>`
+    ).join('');
   }
 
   // ── News Feed ─────────────────────────────────────────────────────────────

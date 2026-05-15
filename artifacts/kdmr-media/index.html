@@ -209,18 +209,35 @@
         .bento-grid { grid-template-columns: 1fr; }
         .bento-song { grid-column: span 1; grid-row: span 1; min-height: 240px; }
       }
-      /* ── Floating live pill ─────────────────────────────── */
-      #livePill {
-        position: fixed; bottom: 22px; right: 22px; z-index: 1000;
-        display: flex; align-items: center; gap: 8px;
-        background: rgba(8,8,8,0.94); border: 1px solid #252525;
-        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-        border-radius: 28px; padding: 7px 16px 7px 10px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-        cursor: default; max-width: 260px; overflow: hidden; transition: max-width 0.4s ease;
+      /* ── Marquee ticker ──────────────────────────────────── */
+      #newsTicker {
+        position: sticky; top: 52px; z-index: 49;
+        background: #c0160e; overflow: hidden;
+        display: flex; align-items: center; height: 30px;
       }
-      #livePill:hover { max-width: 360px; }
-      #pillText { font-size: 0.62rem; color: #444; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #newsTicker .ticker-label {
+        flex-shrink: 0; background: #8a0f09; color: #fff;
+        font-size: 0.58rem; font-weight: 900; letter-spacing: 0.16em;
+        text-transform: uppercase; padding: 0 12px; height: 100%;
+        display: flex; align-items: center; gap: 6px; white-space: nowrap;
+      }
+      #newsTicker .ticker-track {
+        display: flex; align-items: center;
+        animation: ticker-scroll 40s linear infinite;
+        white-space: nowrap;
+      }
+      #newsTicker .ticker-track:hover { animation-play-state: paused; }
+      #newsTicker .ticker-item {
+        font-size: 0.62rem; font-weight: 600; color: rgba(255,255,255,0.92);
+        padding: 0 32px; letter-spacing: 0.01em;
+      }
+      #newsTicker .ticker-sep {
+        color: rgba(255,255,255,0.35); font-size: 0.5rem; flex-shrink: 0;
+      }
+      @keyframes ticker-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
       /* ── Scroll hint ────────────────────────────────────── */
       @keyframes scroll-bob {
         0%,100% { opacity: 0.25; transform: translateY(0); }
@@ -233,13 +250,6 @@
 
     <!-- Film grain -->
     <div class="film-grain" aria-hidden="true"></div>
-
-    <!-- ── Floating Live Pill ───────────────────────────────── -->
-    <div id="livePill" aria-label="Live news">
-      <span class="live-dot" style="flex-shrink:0;"></span>
-      <span style="font-size:0.58rem;font-weight:900;letter-spacing:0.14em;color:#f0a820;flex-shrink:0;">LIVE</span>
-      <span id="pillText">Loading…</span>
-    </div>
 
     <!-- ── Sticky Nav ──────────────────────────────────────────── -->
     <nav id="mainNav" style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:50;">
@@ -297,6 +307,17 @@
         </div>
       </div>
     </nav>
+
+    <!-- ── News Ticker ────────────────────────────────────────── -->
+    <div id="newsTicker" aria-label="Live news ticker">
+      <div class="ticker-label">
+        <span class="live-dot" style="flex-shrink:0;"></span>
+        <span>LIVE</span>
+      </div>
+      <div class="ticker-track" id="tickerTrack">
+        <!-- populated by script.js -->
+      </div>
+    </div>
 
     <!-- ── Global Search Overlay ──────────────────────────────── -->
     <div id="searchOverlay" class="search-overlay" style="display:none;">
