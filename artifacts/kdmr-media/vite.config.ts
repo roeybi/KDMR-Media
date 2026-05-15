@@ -37,6 +37,7 @@ export default defineConfig({
         main:         path.resolve(import.meta.dirname, "index.html"),
         winners:      path.resolve(import.meta.dirname, "winners.html"),
         directory:    path.resolve(import.meta.dirname, "directory.html"),
+        news:         path.resolve(import.meta.dirname, "news.html"),
         undukNgadau:  path.resolve(import.meta.dirname, "unduk-ngadau/index.html"),
         mrk:          path.resolve(import.meta.dirname, "mrk/index.html"),
         sugandoi:     path.resolve(import.meta.dirname, "sugandoi/index.html"),
