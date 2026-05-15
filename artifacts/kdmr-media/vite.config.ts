@@ -34,9 +34,12 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: path.resolve(import.meta.dirname, "index.html"),
-        archive: path.resolve(import.meta.dirname, "archive.html"),
-        directory: path.resolve(import.meta.dirname, "directory.html"),
+        main:         path.resolve(import.meta.dirname, "index.html"),
+        archive:      path.resolve(import.meta.dirname, "archive.html"),
+        directory:    path.resolve(import.meta.dirname, "directory.html"),
+        undukNgadau:  path.resolve(import.meta.dirname, "unduk-ngadau/index.html"),
+        mrk:          path.resolve(import.meta.dirname, "mrk/index.html"),
+        sugandoi:     path.resolve(import.meta.dirname, "sugandoi/index.html"),
       },
     },
   },

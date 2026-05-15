@@ -42,9 +42,18 @@
         </a>
         <!-- Desktop links -->
         <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
-          <a href="./archive.html" class="nav-link">Archive</a>
-          <a href="./directory.html" class="nav-link">Directory</a>
-          <a href="./index.html#news" class="nav-link active">News</a>
+          <div style="position:relative;">
+            <button id="archiveDropBtn" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px;padding:0;font-family:Inter,sans-serif;font-size:0.8rem;font-weight:500;color:#888;letter-spacing:0.03em;transition:color 0.15s;" onmouseover="this.style.color='#f0f0f0'" onmouseout="this.style.color='#888'">
+              Archive <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="archiveMenu" class="nav-dropdown" style="display:none;">
+              <a href="/unduk-ngadau/"><span class="nav-dropdown-badge" style="background:#f0a820;color:#0a0a0a;">UN</span> Unduk Ngadau</a>
+              <a href="/mrk/"><span class="nav-dropdown-badge" style="background:#4ade80;color:#0a0a0a;">MRK</span> Mr. Kaamatan</a>
+              <a href="/sugandoi/"><span class="nav-dropdown-badge" style="background:#60a5fa;color:#0a0a0a;">SG</span> Sugandoi</a>
+            </div>
+          </div>
+          <a href="/directory.html" class="nav-link">Directory</a>
+          <a href="#news" class="nav-link active">News</a>
         </div>
         <!-- Join + Search toggle -->
         <div style="display:flex;align-items:center;gap:10px;">
@@ -301,6 +310,15 @@
       }
       applyNavLayout();
       window.addEventListener('resize', applyNavLayout);
+
+      // Archive dropdown toggle
+      const archiveDropBtn = document.getElementById('archiveDropBtn');
+      const archiveMenu = document.getElementById('archiveMenu');
+      archiveDropBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        archiveMenu.style.display = archiveMenu.style.display === 'block' ? 'none' : 'block';
+      });
+      document.addEventListener('click', function() { archiveMenu.style.display = 'none'; });
 
       // Mobile menu toggle
       document.getElementById('mobileMenuBtn').addEventListener('click', function () {

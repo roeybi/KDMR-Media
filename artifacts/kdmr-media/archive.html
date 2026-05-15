@@ -2,317 +2,181 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Hall of Fame — KDMR Media</title>
-    <meta name="description" content="KDMR Cultural Champions — Unduk Ngadau and MRK award winners across all KDCA branches." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive — KDMR Media</title>
+    <meta name="description" content="KDMR Cultural Archive — explore Unduk Ngadau, Mr. Kaamatan (MRK), and Sugandoi champions from KDCA branches across Malaysia." />
     <meta name="theme-color" content="#0a0a0a" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/index.css" />
-    <style>
-      :root { --accent: #f0a820; }
-
-      html, body { height: 100%; overflow: hidden; }
-
-      /* Ambient BG */
-      #ambientBg {
-        position: fixed; inset: 0; z-index: 0; pointer-events: none;
-        transition: background 1s ease;
-        background: radial-gradient(ellipse 60% 50% at 50% 60%, rgba(240,168,32,0.06) 0%, transparent 70%);
-      }
-
-      /* Portrait card */
-      #portraitCard {
-        position: relative;
-        width: 100%;
-        max-width: 340px;
-        margin: 0 auto;
-        border-radius: 4px;
-        overflow: hidden;
-        box-shadow: 0 32px 80px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.06);
-        transition: opacity 0.35s ease, transform 0.35s ease;
-      }
-      #portraitCard.fading { opacity: 0; transform: scale(0.97) translateY(6px); }
-
-      /* Portrait inner */
-      #portraitInner {
-        width: 100%; padding-top: 150%; position: relative;
-      }
-      #portraitBg {
-        position: absolute; inset: 0;
-        background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 100%);
-        transition: background 0.6s ease;
-      }
-      #portraitPattern {
-        position: absolute; inset: 0; opacity: 0.04;
-        background-image:
-          repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%),
-          repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%);
-        background-size: 20px 20px;
-      }
-      #portraitGlyph {
-        position: absolute; inset: 0;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 11vmax; font-weight: 900; letter-spacing: -0.05em;
-        color: rgba(255,255,255,0.03); user-select: none;
-        font-family: Inter, sans-serif;
-        transition: color 0.4s;
-      }
-      #portraitAvatar {
-        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -58%);
-        width: 96px; height: 96px; border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 2rem; font-weight: 900; color: #0a0a0a;
-        background: #f0a820;
-        box-shadow: 0 0 0 4px rgba(240,168,32,0.15), 0 20px 60px rgba(0,0,0,0.7);
-        transition: background 0.4s;
-        font-family: Inter, sans-serif;
-        letter-spacing: -0.04em;
-      }
-      /* Vignette overlays */
-      #portraitVignette {
-        position: absolute; inset: 0;
-        background: radial-gradient(ellipse at 50% 40%, transparent 35%, rgba(0,0,0,0.55) 80%);
-        pointer-events: none;
-      }
-      #portraitGradient {
-        position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
-        background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.85) 40%, transparent 100%);
-        pointer-events: none;
-      }
-      /* Name overlay */
-      #portraitNameWrap {
-        position: absolute; bottom: 0; left: 0; right: 0;
-        padding: 20px 18px 16px;
-      }
-      #portraitAwardBadge {
-        display: inline-flex; align-items: center; gap: 6px;
-        font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-        color: #0a0a0a; background: #f0a820; padding: 3px 9px; border-radius: 2px;
-        margin-bottom: 6px;
-        transition: background 0.3s;
-      }
-      #portraitName {
-        font-size: 1.4rem; font-weight: 900; color: #fff; line-height: 1.1;
-        letter-spacing: -0.03em; font-family: Inter, sans-serif;
-        text-shadow: 0 2px 20px rgba(0,0,0,0.8);
-      }
-      #portraitYear {
-        font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 4px; font-weight: 500;
-      }
-
-      /* Arrow buttons */
-      .hero-arrow {
-        position: absolute; top: 50%; transform: translateY(-60%);
-        z-index: 30; width: 44px; height: 44px; border-radius: 50%;
-        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-        color: rgba(255,255,255,0.7); cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        transition: all 0.2s; backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
-      .hero-arrow:hover {
-        background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); color: #fff;
-        transform: translateY(-60%) scale(1.05);
-      }
-      #prevBtn { left: -20px; }
-      #nextBtn { right: -20px; }
-
-      /* Dot indicators */
-      #dotRow {
-        display: flex; align-items: center; justify-content: center; gap: 6px;
-        padding: 12px 0 0;
-      }
-      .dot {
-        width: 6px; height: 6px; border-radius: 50%;
-        background: rgba(255,255,255,0.15); transition: all 0.25s; cursor: pointer;
-      }
-      .dot.active { background: #f0a820; width: 18px; border-radius: 3px; }
-
-      /* Stats panel */
-      #statsPanel {
-        backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-        background: rgba(8,8,8,0.78);
-        border: 1px solid rgba(255,255,255,0.07);
-        border-radius: 4px;
-        transition: opacity 0.3s ease;
-      }
-      #statsPanel.fading { opacity: 0; }
-
-      .stat-row {
-        display: flex; flex-direction: column; gap: 2px;
-        padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
-      }
-      .stat-row:last-child { border-bottom: none; }
-      .stat-label {
-        font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-        color: rgba(255,255,255,0.25);
-      }
-      .stat-value { font-size: 0.88rem; font-weight: 600; color: #f0f0f0; line-height: 1.4; }
-      .stat-sub { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 2px; line-height: 1.5; }
-
-      /* Branch tabs */
-      #branchTabs {
-        display: flex; overflow-x: auto; gap: 0;
-        scrollbar-width: none; -ms-overflow-style: none;
-        border-bottom: 1px solid #1a1a1a;
-        background: rgba(0,0,0,0.5); backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-      #branchTabs::-webkit-scrollbar { display: none; }
-      .branch-tab {
-        flex-shrink: 0; padding: 0 16px; height: 40px;
-        display: flex; align-items: center;
-        font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.35);
-        cursor: pointer; border-bottom: 2px solid transparent;
-        transition: all 0.2s; white-space: nowrap; background: transparent; border-top: none; border-left: none; border-right: none;
-        font-family: Inter, sans-serif; letter-spacing: 0.02em;
-      }
-      .branch-tab:hover { color: rgba(255,255,255,0.7); }
-      .branch-tab.active { color: #f0a820; border-bottom-color: #f0a820; }
-
-      /* Scroll area for mobile stats */
-      #mobileStats { overflow-y: auto; max-height: 38vh; }
-
-      /* Vote button */
-      #voteBtn {
-        width: 100%; padding: 10px; border-radius: 2px; border: none; cursor: pointer;
-        font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-        font-family: Inter, sans-serif;
-        transition: all 0.2s;
-        background: rgba(240,168,32,0.15); color: #f0a820; border: 1px solid rgba(240,168,32,0.3);
-      }
-      #voteBtn:hover { background: #f0a820; color: #0a0a0a; }
-      #voteBtn.voted { background: rgba(240,168,32,0.08); color: rgba(240,168,32,0.4); border-color: rgba(240,168,32,0.15); cursor: default; }
-
-      /* Bio toggle */
-      #bioText { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.7; }
-    </style>
   </head>
   <body style="background:#0a0a0a;color:#f0f0f0;font-family:Inter,sans-serif;">
 
-    <!-- ambient background -->
-    <div id="ambientBg"></div>
-
     <!-- ── Nav ──────────────────────────────────────────────────────── -->
-    <nav style="background:rgba(10,10,10,0.95);border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);">
+    <nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.95);border-bottom:1px solid #1a1a1a;backdrop-filter:blur(12px);">
       <div style="max-width:1400px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
-        <a href="./index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
+        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
           <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;letter-spacing:-0.03em;">KM</span>
+            <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;">KM</span>
           </div>
           <span style="font-size:0.95rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
         </a>
         <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
-          <a href="./archive.html" class="nav-link active">Archive</a>
-          <a href="./directory.html" class="nav-link">Directory</a>
-          <a href="./index.html#news" class="nav-link">News</a>
+          <div style="position:relative;">
+            <button id="archiveDropBtn" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px;padding:0;font-family:Inter,sans-serif;font-size:0.8rem;font-weight:600;color:#f0f0f0;letter-spacing:0.03em;">
+              Archive <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="archiveMenu" class="nav-dropdown" style="display:none;">
+              <a href="/unduk-ngadau/"><span class="nav-dropdown-badge" style="background:#f0a820;color:#0a0a0a;">UN</span> Unduk Ngadau</a>
+              <a href="/mrk/"><span class="nav-dropdown-badge" style="background:#4ade80;color:#0a0a0a;">MRK</span> Mr. Kaamatan</a>
+              <a href="/sugandoi/"><span class="nav-dropdown-badge" style="background:#60a5fa;color:#0a0a0a;">SG</span> Sugandoi</a>
+            </div>
+          </div>
+          <a href="/directory.html" class="nav-link">Directory</a>
+          <a href="/#news" class="nav-link">News</a>
         </div>
         <div style="display:flex;align-items:center;gap:10px;">
-          <a href="./index.html#join" style="background:#f0a820;color:#0a0a0a;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Join</a>
+          <a href="/#join" style="background:#f0a820;color:#0a0a0a;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Join</a>
           <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
       </div>
       <div id="mobileMenu" style="display:none;border-top:1px solid #1a1a1a;padding:12px 16px;background:#0a0a0a;">
-        <a href="./archive.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:600;color:#f0a820;text-decoration:none;border-bottom:1px solid #1a1a1a;">Archive</a>
-        <a href="./directory.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Directory</a>
-        <a href="./index.html#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;">News</a>
+        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#444;padding:8px 0 4px;">Archive</div>
+        <a href="/unduk-ngadau/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#f0a820;color:#0a0a0a;padding:2px 6px;border-radius:2px;">UN</span> Unduk Ngadau</a>
+        <a href="/mrk/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#4ade80;color:#0a0a0a;padding:2px 6px;border-radius:2px;">MRK</span> Mr. Kaamatan</a>
+        <a href="/sugandoi/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#60a5fa;color:#0a0a0a;padding:2px 6px;border-radius:2px;">SG</span> Sugandoi</a>
+        <a href="/directory.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Directory</a>
+        <a href="/#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;">News</a>
       </div>
     </nav>
 
-    <!-- ── Hero Selector Container ──────────────────────────────────── -->
-    <div id="heroSelectorRoot" style="position:relative;z-index:1;height:calc(100vh - 52px);display:flex;flex-direction:column;overflow:hidden;">
+    <!-- ── Archive Hub ────────────────────────────────────────────────── -->
+    <main style="max-width:900px;margin:0 auto;padding:48px 20px;">
 
-      <!-- Branch tabs -->
-      <div id="branchTabs">
-        <!-- Filled by JS -->
+      <!-- Header -->
+      <div style="text-align:center;margin-bottom:48px;">
+        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;margin-bottom:12px;">Cultural Archive</div>
+        <h1 style="font-size:clamp(1.8rem,5vw,3rem);font-weight:900;color:#f0f0f0;letter-spacing:-0.03em;line-height:1.1;margin:0 0 16px;">
+          Hari Kaamatan<br><span style="color:#f0a820;">Champions</span>
+        </h1>
+        <p style="font-size:0.9rem;color:#555;max-width:500px;margin:0 auto;line-height:1.7;">
+          Three competitions. One celebration of Kadazan Dusun Murut Rungus heritage.<br>
+          Select a category to explore past champions across all KDCA branches.
+        </p>
       </div>
 
-      <!-- Main area — will be set to flex-row (desktop) or flex-col (mobile) by JS -->
-      <div id="heroMain" style="flex:1;display:flex;position:relative;overflow:hidden;min-height:0;">
+      <!-- Category cards -->
+      <div style="display:grid;gap:16px;">
 
-        <!-- Portrait region -->
-        <div id="portraitRegion" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 48px;position:relative;overflow:hidden;min-height:0;">
-
-          <!-- Portrait card with arrows -->
-          <div style="position:relative;width:100%;max-width:320px;">
-            <button id="prevBtn" class="hero-arrow" aria-label="Previous">
-              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
-              </svg>
-            </button>
-
-            <div id="portraitCard">
-              <div id="portraitInner">
-                <div id="portraitBg"></div>
-                <div id="portraitPattern"></div>
-                <!-- Decorative textile border lines -->
-                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.6;"></div>
-                <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.3;"></div>
-                <div id="portraitGlyph"></div>
-                <div id="portraitAvatar"></div>
-                <div id="portraitVignette"></div>
-                <div id="portraitGradient"></div>
-                <div id="portraitNameWrap">
-                  <div id="portraitAwardBadge"></div>
-                  <div id="portraitName"></div>
-                  <div id="portraitYear"></div>
-                </div>
+        <!-- Unduk Ngadau -->
+        <a href="/unduk-ngadau/" style="text-decoration:none;display:block;background:#111;border:1px solid #1e1e1e;border-left:3px solid #f0a820;padding:24px 28px;transition:all 0.2s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#f0a820';this.style.background='#141414';" onmouseout="this.style.borderColor='#1e1e1e';this.style.borderLeftColor='#f0a820';this.style.background='#111';">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:52px;height:52px;border-radius:4px;background:rgba(240,168,32,0.15);border:1px solid rgba(240,168,32,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:0.62rem;font-weight:900;color:#f0a820;letter-spacing:0.06em;">UN</span>
+              </div>
+              <div>
+                <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f0a820;margin-bottom:4px;">Cultural Beauty Queen</div>
+                <div style="font-size:1.2rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.02em;">Unduk Ngadau</div>
+                <div style="font-size:0.78rem;color:#444;margin-top:3px;">The harvest festival queen — celebrating grace, cultural knowledge & heritage</div>
               </div>
             </div>
-
-            <button id="nextBtn" class="hero-arrow" aria-label="Next">
-              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
-              </svg>
-            </button>
+            <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+              <span style="font-size:0.72rem;color:#555;">Explore champions</span>
+              <svg width="16" height="16" fill="none" stroke="#f0a820" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
           </div>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(240,168,32,0.08);color:#f0a820;border:1px solid rgba(240,168,32,0.15);">KDCA Sabah</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(240,168,32,0.08);color:#f0a820;border:1px solid rgba(240,168,32,0.15);">KDCA Klang Valley</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(240,168,32,0.08);color:#f0a820;border:1px solid rgba(240,168,32,0.15);">KDCA Putrajaya</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(240,168,32,0.08);color:#f0a820;border:1px solid rgba(240,168,32,0.15);">+ more</span>
+          </div>
+        </a>
 
-          <!-- Dot indicators -->
-          <div id="dotRow"></div>
+        <!-- MRK -->
+        <a href="/mrk/" style="text-decoration:none;display:block;background:#111;border:1px solid #1e1e1e;border-left:3px solid #4ade80;padding:24px 28px;transition:all 0.2s;" onmouseover="this.style.borderColor='#4ade80';this.style.background='#141414';" onmouseout="this.style.borderColor='#1e1e1e';this.style.borderLeftColor='#4ade80';this.style.background='#111';">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:52px;height:52px;border-radius:4px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:0.62rem;font-weight:900;color:#4ade80;letter-spacing:0.06em;">MRK</span>
+              </div>
+              <div>
+                <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#4ade80;margin-bottom:4px;">Cultural Heritage Warrior</div>
+                <div style="font-size:1.2rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.02em;">Mr. Kaamatan (MRK)</div>
+                <div style="font-size:0.78rem;color:#444;margin-top:3px;">Momogun Rungus Kadazan — honouring indigenous knowledge keepers & cultural warriors</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+              <span style="font-size:0.72rem;color:#555;">Explore champions</span>
+              <svg width="16" height="16" fill="none" stroke="#4ade80" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(74,222,128,0.06);color:#4ade80;border:1px solid rgba(74,222,128,0.12);">KDCA Sabah</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(74,222,128,0.06);color:#4ade80;border:1px solid rgba(74,222,128,0.12);">KDCA Klang Valley</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(74,222,128,0.06);color:#4ade80;border:1px solid rgba(74,222,128,0.12);">KDCA Putrajaya</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(74,222,128,0.06);color:#4ade80;border:1px solid rgba(74,222,128,0.12);">+ more</span>
+          </div>
+        </a>
 
-        </div>
-
-        <!-- Stats panel (desktop: right column | mobile: bottom sheet) -->
-        <div id="statsPanel" style="width:300px;flex-shrink:0;display:flex;flex-direction:column;overflow-y:auto;padding:20px 18px;gap:0;border-left:1px solid rgba(255,255,255,0.05);">
-          <!-- Filled by JS -->
-        </div>
+        <!-- Sugandoi -->
+        <a href="/sugandoi/" style="text-decoration:none;display:block;background:#111;border:1px solid #1e1e1e;border-left:3px solid #60a5fa;padding:24px 28px;transition:all 0.2s;" onmouseover="this.style.borderColor='#60a5fa';this.style.background='#141414';" onmouseout="this.style.borderColor='#1e1e1e';this.style.borderLeftColor='#60a5fa';this.style.background='#111';">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:52px;height:52px;border-radius:4px;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:0.62rem;font-weight:900;color:#60a5fa;letter-spacing:0.06em;">SG</span>
+              </div>
+              <div>
+                <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#60a5fa;margin-bottom:4px;">Traditional Singing</div>
+                <div style="font-size:1.2rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.02em;">Sugandoi</div>
+                <div style="font-size:0.78rem;color:#444;margin-top:3px;">Traditional KDM vocal competition — preserving indigenous songs and oral heritage</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+              <span style="font-size:0.72rem;color:#555;">Explore champions</span>
+              <svg width="16" height="16" fill="none" stroke="#60a5fa" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(96,165,250,0.06);color:#60a5fa;border:1px solid rgba(96,165,250,0.12);">KDCA Sabah</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(96,165,250,0.06);color:#60a5fa;border:1px solid rgba(96,165,250,0.12);">KDCA Klang Valley</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(96,165,250,0.06);color:#60a5fa;border:1px solid rgba(96,165,250,0.12);">KDCA Putrajaya</span>
+            <span style="font-size:0.62rem;padding:3px 10px;border-radius:2px;background:rgba(96,165,250,0.06);color:#60a5fa;border:1px solid rgba(96,165,250,0.12);">+ more</span>
+          </div>
+        </a>
 
       </div>
 
-      <!-- Mobile stats (separate scrollable panel below portrait) -->
-      <div id="mobileStats" style="display:none;padding:0 16px 20px;overflow-y:auto;border-top:1px solid rgba(255,255,255,0.06);">
-        <!-- Filled by JS (mirrors statsPanel on mobile) -->
-      </div>
+      <!-- Divider -->
+      <div style="border-top:1px solid #1a1a1a;margin:48px 0 32px;"></div>
 
-    </div>
+      <!-- Footer note -->
+      <p style="text-align:center;font-size:0.75rem;color:#333;line-height:1.7;">
+        All champions represent the rich living heritage of the Kadazan, Dusun, Murut and Rungus peoples of Sabah, Borneo.<br>
+        Data reflects KDCA branch competitions held annually during Hari Kaamatan (May).
+      </p>
 
-    <script type="module" src="./src/script.js"></script>
+    </main>
+
     <script>
-      // Nav layout
       function applyNavLayout() {
-        const links = document.getElementById('navLinks');
-        const hamburger = document.getElementById('mobileMenuBtn');
-        if (window.innerWidth >= 768) {
-          links.style.display = 'flex';
-          hamburger.style.display = 'none';
-        } else {
-          links.style.display = 'none';
-          hamburger.style.display = 'flex';
-        }
+        const w = window.innerWidth >= 768;
+        document.getElementById('navLinks').style.display = w ? 'flex' : 'none';
+        document.getElementById('mobileMenuBtn').style.display = w ? 'none' : 'flex';
       }
-      applyNavLayout();
-      window.addEventListener('resize', applyNavLayout);
-      document.getElementById('mobileMenuBtn').addEventListener('click', function () {
-        const m = document.getElementById('mobileMenu');
-        m.style.display = m.style.display === 'block' ? 'none' : 'block';
+      applyNavLayout(); window.addEventListener('resize', applyNavLayout);
+      document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        const m = document.getElementById('mobileMenu'); m.style.display = m.style.display==='block'?'none':'block';
       });
+      const dropBtn = document.getElementById('archiveDropBtn');
+      const dropMenu = document.getElementById('archiveMenu');
+      dropBtn.addEventListener('click', e => { e.stopPropagation(); dropMenu.style.display = dropMenu.style.display==='block'?'none':'block'; });
+      document.addEventListener('click', () => { dropMenu.style.display='none'; });
     </script>
   </body>
 </html>

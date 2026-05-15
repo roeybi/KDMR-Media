@@ -265,6 +265,178 @@
       "bio": "Felicity is a community nurse in Johor who founded a KDM cultural club to keep young diaspora Rungus connected to their heritage. Her passion for community building earned her the MRK recognition at KDCA JB 2025.",
       "achievements": ["KDCA Johor Bahru MRK 2025", "Community Nursing Excellence", "Diaspora Youth Programme Founder"],
       "votes": 97
+    },
+
+    {
+      "id": "sug-001",
+      "name": "Jenifer Sindol",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2025,
+      "tribe": "Kadazan",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Kadazan Penampang",
+        "costume": "Traditional Sinuangga' adorned with silver songkop headpiece, performing in full ceremonial regalia",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Jenifer's voice is described as carrying the sound of the Crocker Range — powerful, clear, and deeply rooted in Kadazan tonal tradition. Her 2025 Sugandoi victory at KDCA Sabah was marked by her flawless rendition of the ancient harvest song 'Pirousan do Bambazon', performed entirely without instrumental backing.",
+      "achievements": ["KDCA Sabah Sugandoi Champion 2025", "Best Traditional Vocal Performance", "Hari Kaamatan Cultural Excellence Award"],
+      "votes": 278
+    },
+    {
+      "id": "sug-002",
+      "name": "Marcus Gununjuk",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2024,
+      "tribe": "Dusun",
+      "district": "Ranau",
+      "origin": "KDCA Ranau",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Dusun Ranau (highland)",
+        "costume": "Highland Dusun ceremonial dress in deep forest green, with handwoven sinamot wrap and traditional bamboo accessories",
+        "language": "Dusun Ranau dialect"
+      },
+      "bio": "A highland farmer by profession and a singer of rare natural talent, Marcus's 2024 Sugandoi performance moved the Penampang audience with a poignant tontolian — a traditional Dusun epic poem sung to a haunting pentatonic melody, passed down through twelve generations of his family.",
+      "achievements": ["KDCA Sabah Sugandoi Champion 2024", "Tontolian Epic Poetry Excellence", "Dusun Vocal Heritage Award"],
+      "votes": 241
+    },
+    {
+      "id": "sug-003",
+      "name": "Rosalinda Sintul",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2023,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Kudat",
+      "accentColor": "#c084fc",
+      "heritage": {
+        "group": "Rungus Kudat",
+        "costume": "Full Rungus ceremonial attire in black with intricate red geometric woven panels, brass ring ornaments, and a ceremonial gong sash",
+        "language": "Rungus dialect"
+      },
+      "bio": "Rosalinda is one of the last practitioners of the moginakan — a Rungus chanted lament traditionally performed at healing ceremonies. Her 2023 Sugandoi performance introduced this vanishing vocal form to a new generation, earning a standing ovation and the judges' unanimous top score.",
+      "achievements": ["KDCA Sabah Sugandoi Champion 2023", "Moginakan Oral Heritage Preservation", "UNESCO Special Recognition for Endangered Vocal Arts"],
+      "votes": 312
+    },
+    {
+      "id": "sug-004",
+      "name": "Harison Apin",
+      "branch": "KDCA Klang Valley",
+      "award": "Sugandoi",
+      "year": 2025,
+      "tribe": "Kadazan Dusun",
+      "district": "Kota Belud",
+      "origin": "KDCA Klang Valley",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Kadazan Kota Belud (coastal plains)",
+        "costume": "Coastal Kadazan ceremonial attire in ocean blue and silver with distinctive suluk headdress and mother-of-pearl beaded vest",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "An IT professional in Kuala Lumpur who trains for Sugandoi every weekend, Harison's rich baritone voice has been compared to the deep resonance of the traditional gong. His 2025 KDCA KL win was powered by an original composition blending traditional pentatonic scales with contemporary KDM poetry.",
+      "achievements": ["KDCA Klang Valley Sugandoi Champion 2025", "Best Original Composition Award", "Diaspora Cultural Ambassador"],
+      "votes": 189
+    },
+    {
+      "id": "sug-005",
+      "name": "Cecilia Mintol",
+      "branch": "KDCA Klang Valley",
+      "award": "Sugandoi",
+      "year": 2024,
+      "tribe": "Murut",
+      "district": "Nabawan",
+      "origin": "KDCA Klang Valley",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Murut Tagal",
+        "costume": "Murut ceremonial dress in ochre and black sinamot weave, paired with layered copper bead necklaces and the traditional bamboo dance rattle",
+        "language": "Murut Tagal dialect"
+      },
+      "bio": "Cecilia's career in healthcare left little time for the arts — until the pandemic led her to rediscover her grandmother's songbook of traditional Murut lullabies. Her 2024 KDCA KL Sugandoi win was a deeply personal performance that brought the 40-year-old tunes back into the public consciousness.",
+      "achievements": ["KDCA Klang Valley Sugandoi Champion 2024", "Murut Lullaby Revival Award", "Cultural Reconnection Story of the Year"],
+      "votes": 154
+    },
+    {
+      "id": "sug-006",
+      "name": "Bernard Kopin",
+      "branch": "KDCA Putrajaya",
+      "award": "Sugandoi",
+      "year": 2025,
+      "tribe": "Kadazan",
+      "district": "Tuaran",
+      "origin": "KDCA Putrajaya",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Kadazan Tuaran",
+        "costume": "Kadazan Tuaran ceremonial wrap in indigo and gold, with the distinctive kagang cap and handmade bamboo flute used as a performance prop",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "A civil servant by day and a cultural activist by night, Bernard has spent years transcribing traditional Tuaran Kadazan melodies into sheet music so they can be taught in schools. His 2025 KDCA Putrajaya Sugandoi title validated years of quiet, dedicated work to keep these songs alive.",
+      "achievements": ["KDCA Putrajaya Sugandoi Champion 2025", "Traditional Music Transcription Project", "KDM Cultural Education Medal"],
+      "votes": 143
+    },
+    {
+      "id": "sug-007",
+      "name": "Angelina Daut",
+      "branch": "KDCA Putrajaya",
+      "award": "Sugandoi",
+      "year": 2024,
+      "tribe": "Dusun",
+      "district": "Keningau",
+      "origin": "KDCA Putrajaya",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Dusun Keningau",
+        "costume": "Dusun Keningau highland dress in crimson and ivory with handwoven banat shoulder cloth and a beaded songkop headdress passed down from her great-grandmother",
+        "language": "Dusun Keningau dialect"
+      },
+      "bio": "Angelina works as a policy analyst in Putrajaya and brings the same rigour to her Sugandoi preparation. Her 2024 KDCA Putrajaya performance featured a rare three-part a cappella vocal technique used in traditional Dusun wedding ceremonies, performed entirely from memory.",
+      "achievements": ["KDCA Putrajaya Sugandoi Champion 2024", "A Cappella Technique Excellence Award", "Traditional Vocal Research Recognition"],
+      "votes": 167
+    },
+    {
+      "id": "sug-008",
+      "name": "Julian Gansau",
+      "branch": "KDCA Selangor",
+      "award": "Sugandoi",
+      "year": 2025,
+      "tribe": "Kadazan Dusun",
+      "district": "Papar",
+      "origin": "KDCA Selangor",
+      "accentColor": "#60a5fa",
+      "heritage": {
+        "group": "Kadazan Papar",
+        "costume": "Pinamorokan Papar ceremonial dress in red and black silk, featuring gold embroidered panels and the traditional suluk head tie worn during formal singing ceremonies",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "An engineer based in Shah Alam, Julian has been performing traditional KDM songs at community events since his university days. His 2025 KDCA Selangor Sugandoi win came after three consecutive runner-up finishes — his persistence is a reflection of the same spirit he applies to preserving his heritage.",
+      "achievements": ["KDCA Selangor Sugandoi Champion 2025", "Best Stage Presence Award", "Community Dedication Recognition"],
+      "votes": 131
+    },
+    {
+      "id": "sug-009",
+      "name": "Theresa Midu",
+      "branch": "KDCA Johor Bahru",
+      "award": "Sugandoi",
+      "year": 2025,
+      "tribe": "Rungus",
+      "district": "Pitas",
+      "origin": "KDCA Johor Bahru",
+      "accentColor": "#c084fc",
+      "heritage": {
+        "group": "Rungus Pitas",
+        "costume": "Rungus ceremonial dress in deep black with vivid red and orange woven detail, adorned with rare glass bead ornaments and a ceremonial bamboo tray headdress",
+        "language": "Rungus dialect"
+      },
+      "bio": "Theresa is the daughter of a Rungus bobohizan (high priestess) and learned to sing ritual chants before she could read. Now a teacher in Johor Bahru, she brings that sacred vocal knowledge to competitive Sugandoi with electrifying effect. Her 2025 KDCA JB performance left even the judges in respectful silence.",
+      "achievements": ["KDCA Johor Bahru Sugandoi Champion 2025", "Sacred Vocal Tradition Excellence", "Rungus Ritual Music Scholarship Award"],
+      "votes": 118
     }
   ],
 

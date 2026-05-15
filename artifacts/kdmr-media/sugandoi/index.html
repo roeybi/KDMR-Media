@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sugandoi — KDMR Media</title>
+    <meta name="description" content="Sugandoi singing competition champions — celebrating the traditional vocal heritage of the Kadazan Dusun Murut Rungus people at Hari Kaamatan." />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/index.css" />
+    <style>
+      :root { --hero-accent: #60a5fa; }
+      html, body { height: 100%; overflow: hidden; }
+    </style>
+  </head>
+  <body style="background:#0a0a0a;color:#f0f0f0;font-family:Inter,sans-serif;">
+
+    <div id="ambientBg" style="position:fixed;inset:0;z-index:0;pointer-events:none;transition:background 1s;"></div>
+
+    <!-- ── Nav ──────────────────────────────────────────────────────── -->
+    <nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.95);border-bottom:1px solid #1a1a1a;backdrop-filter:blur(12px);">
+      <div style="max-width:1400px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
+        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
+          <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;">KM</span>
+          </div>
+          <span style="font-size:0.95rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </a>
+        <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
+          <div style="position:relative;">
+            <button id="archiveDropBtn" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px;padding:0;font-family:Inter,sans-serif;font-size:0.8rem;font-weight:500;color:#f0f0f0;letter-spacing:0.03em;">
+              Archive <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="archiveMenu" class="nav-dropdown" style="display:none;">
+              <a href="/unduk-ngadau/"><span class="nav-dropdown-badge" style="background:#f0a820;color:#0a0a0a;">UN</span> Unduk Ngadau</a>
+              <a href="/mrk/"><span class="nav-dropdown-badge" style="background:#4ade80;color:#0a0a0a;">MRK</span> Mr. Kaamatan</a>
+              <a href="/sugandoi/" style="font-weight:600;color:#60a5fa;"><span class="nav-dropdown-badge" style="background:#60a5fa;color:#0a0a0a;">SG</span> Sugandoi</a>
+            </div>
+          </div>
+          <a href="/directory.html" class="nav-link">Directory</a>
+          <a href="/#news" class="nav-link">News</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <a href="/#join" style="background:#f0a820;color:#0a0a0a;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Join</a>
+          <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" style="display:none;border-top:1px solid #1a1a1a;padding:12px 16px;background:#0a0a0a;">
+        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#444;padding:8px 0 4px;">Archive</div>
+        <a href="/unduk-ngadau/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#f0a820;color:#0a0a0a;padding:2px 6px;border-radius:2px;">UN</span> Unduk Ngadau</a>
+        <a href="/mrk/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#4ade80;color:#0a0a0a;padding:2px 6px;border-radius:2px;">MRK</span> Mr. Kaamatan</a>
+        <a href="/sugandoi/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:600;color:#60a5fa;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#60a5fa;color:#0a0a0a;padding:2px 6px;border-radius:2px;">SG</span> Sugandoi</a>
+        <a href="/directory.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Directory</a>
+        <a href="/#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;">News</a>
+      </div>
+    </nav>
+
+    <div style="position:relative;z-index:1;height:calc(100vh - 52px);display:flex;flex-direction:column;overflow:hidden;">
+      <div style="background:rgba(96,165,250,0.05);border-bottom:1px solid rgba(96,165,250,0.1);padding:0 16px;height:36px;display:flex;align-items:center;gap:10px;flex-shrink:0;">
+        <span style="font-size:0.6rem;font-weight:800;background:#60a5fa;color:#0a0a0a;padding:2px 8px;border-radius:2px;letter-spacing:0.08em;">SG</span>
+        <span style="font-size:0.72rem;font-weight:600;color:#888;letter-spacing:0.06em;text-transform:uppercase;">Sugandoi — Traditional KDM Singing Competition</span>
+      </div>
+
+      <div id="branchTabs"></div>
+
+      <div id="heroMain" style="flex:1;display:flex;position:relative;overflow:hidden;min-height:0;">
+        <div id="portraitRegion" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 48px;position:relative;overflow:hidden;min-height:0;">
+          <div style="position:relative;width:100%;max-width:320px;">
+            <button id="prevBtn" class="hero-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg></button>
+            <div id="portraitCard">
+              <div id="portraitInner">
+                <div id="portraitBg"></div>
+                <div id="portraitPattern"></div>
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#60a5fa,transparent);opacity:0.7;" id="portraitAccentLine"></div>
+                <div id="portraitGlyph"></div>
+                <div id="portraitAvatar"></div>
+                <div id="portraitVignette"></div>
+                <div id="portraitGradient"></div>
+                <div id="portraitNameWrap">
+                  <div id="portraitAwardBadge"></div>
+                  <div id="portraitName"></div>
+                  <div id="portraitYear"></div>
+                </div>
+              </div>
+            </div>
+            <button id="nextBtn" class="hero-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <div id="dotRow"></div>
+        </div>
+        <div id="statsPanel" style="width:300px;flex-shrink:0;display:flex;flex-direction:column;overflow-y:auto;padding:20px 18px;border-left:1px solid rgba(255,255,255,0.05);"></div>
+      </div>
+
+      <div id="mobileStats" style="display:none;padding:0 16px 20px;overflow-y:auto;border-top:1px solid rgba(255,255,255,0.06);"></div>
+    </div>
+
+    <script type="module" src="../src/script.js"></script>
+    <script>
+      function applyNavLayout() {
+        const w = window.innerWidth >= 768;
+        document.getElementById('navLinks').style.display = w ? 'flex' : 'none';
+        document.getElementById('mobileMenuBtn').style.display = w ? 'none' : 'flex';
+      }
+      applyNavLayout(); window.addEventListener('resize', applyNavLayout);
+      document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        const m = document.getElementById('mobileMenu'); m.style.display = m.style.display==='block'?'none':'block';
+      });
+      const dropBtn = document.getElementById('archiveDropBtn');
+      const dropMenu = document.getElementById('archiveMenu');
+      dropBtn.addEventListener('click', e => { e.stopPropagation(); dropMenu.style.display = dropMenu.style.display==='block'?'none':'block'; });
+      document.addEventListener('click', () => { dropMenu.style.display='none'; });
+    </script>
+  </body>
+</html>
