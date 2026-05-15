@@ -3,30 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ═══════════════════════════════════════════════════════════════════
-         GOOGLE TAG MANAGER — replace GTM-XXXXXXX with your container ID
-         ════════════════════════════════════════════════════════════════════
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');
-    </script>
-    -->
-
-    <!-- ═══════════════════════════════════════════════════════════════════
-         META PIXEL — replace XXXXXXXXXXXXXXXXXX with your Pixel ID.
-         ════════════════════════════════════════════════════════════════════
-    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){
-    n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-    t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','XXXXXXXXXXXXXXXXXX');fbq('track','PageView');
-    </script>
-    -->
+    <!-- Analytics: replace GTM-XXXXXXX / Meta Pixel ID before going live -->
     <title>KDMR Media — The Voice of Borneo's Indigenous Peoples</title>
     <meta name="description" content="Cultural archive, Hall of Fame, and community discovery platform for the Kadazan Dusun Murut Rungus people of Sabah, Borneo." />
     <meta property="og:title" content="KDMR Media" />
@@ -46,10 +23,7 @@
         background-size: 180px 180px; opacity: 0.026;
       }
       /* ── Scroll reveal ──────────────────────────────────── */
-      .reveal {
-        opacity: 0; transform: translateY(22px);
-        transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
-      }
+      .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
       .reveal.visible { opacity: 1; transform: translateY(0); }
       .reveal-d1 { transition-delay: 0.08s; }
       .reveal-d2 { transition-delay: 0.16s; }
@@ -79,8 +53,7 @@
         padding: 13px 28px; border-radius: 2px; cursor: pointer;
         font-family: Inter, sans-serif;
         transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
-        animation: vote-glow 3.2s ease-in-out infinite;
-        animation-delay: 1.4s;
+        animation: vote-glow 3.2s ease-in-out infinite; animation-delay: 1.4s;
       }
       .vote-btn:hover:not(:disabled) { background: rgba(240,168,32,0.08); border-color: rgba(240,168,32,0.7); transform: translateY(-2px); box-shadow: 0 0 24px 4px rgba(240,168,32,0.22); }
       .vote-btn.voted { border-color: rgba(74,222,128,0.4); color: #4ade80; animation: none; cursor: default; }
@@ -95,6 +68,15 @@
         100% { transform: scale(1); }
       }
       .vote-pop { animation: vote-count-pop 0.5s cubic-bezier(.36,.07,.19,.97); }
+      /* ── Share button ────────────────────────────────────── */
+      .hero-share-btn {
+        display: none; align-items: center; justify-content: center; gap: 6px;
+        background: none; border: 1px solid rgba(255,255,255,0.07); border-radius: 2px;
+        padding: 5px 10px; cursor: pointer; color: #444;
+        font-size: 0.6rem; font-family: Inter, sans-serif; letter-spacing: 0.06em;
+        transition: color 0.15s, border-color 0.15s, background 0.15s;
+      }
+      .hero-share-btn:hover { color: #f0a820; border-color: rgba(240,168,32,0.35); background: rgba(240,168,32,0.05); }
       /* ── Cinematic hero ─────────────────────────────────── */
       .hero-cinema {
         position: relative; min-height: 100svh;
@@ -104,26 +86,19 @@
       .hero-portrait {
         width: 42%; min-height: 100%; flex-shrink: 0;
         background: #0c0800; position: relative;
-        display: flex; align-items: center; justify-content: center;
-        overflow: hidden;
+        display: flex; align-items: center; justify-content: center; overflow: hidden;
       }
       .hero-portrait::before {
-        content: '';
-        position: absolute; inset: 0;
+        content: ''; position: absolute; inset: 0;
         background: radial-gradient(ellipse at 50% 45%, rgba(240,168,32,0.13) 0%, transparent 65%);
       }
       .hero-portrait::after {
-        content: '';
-        position: absolute; right: 0; top: 0; bottom: 0; width: 1px;
+        content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 1px;
         background: linear-gradient(to bottom, transparent 0%, rgba(240,168,32,0.45) 35%, rgba(240,168,32,0.45) 65%, transparent 100%);
       }
       .hero-deco {
         position: absolute; inset: 0; z-index: 1; pointer-events: none;
-        background:
-          repeating-linear-gradient(
-            -45deg, transparent, transparent 48px,
-            rgba(240,168,32,0.012) 48px, rgba(240,168,32,0.012) 49px
-          );
+        background: repeating-linear-gradient(-45deg, transparent, transparent 48px, rgba(240,168,32,0.012) 48px, rgba(240,168,32,0.012) 49px);
       }
       .hero-avatar-wrap {
         position: relative; z-index: 2;
@@ -134,13 +109,11 @@
         box-shadow: 0 0 80px rgba(240,168,32,0.07), inset 0 0 30px rgba(240,168,32,0.03);
       }
       .hero-avatar-wrap::before {
-        content: '';
-        position: absolute; inset: -10px;
+        content: ''; position: absolute; inset: -10px;
         border: 1px solid rgba(240,168,32,0.07); border-radius: 5px;
       }
       .hero-story {
-        flex: 1; display: flex; align-items: center;
-        padding: 70px 60px;
+        flex: 1; display: flex; align-items: center; padding: 70px 60px;
         background: linear-gradient(105deg, rgba(15,10,0,0.6) 0%, transparent 50%), #0a0a0a;
       }
       @media (max-width: 860px) {
@@ -150,23 +123,38 @@
         .hero-story { padding: 32px 20px 44px; }
       }
       /* ── Bento grid ─────────────────────────────────────── */
-      .bento-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2px;
-      }
-      .bento-box {
-        background: #0f0f0f; border: 1px solid #1a1a1a;
-        position: relative; overflow: hidden;
-        transition: border-color 0.2s ease;
-      }
+      .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+      .bento-box { background: #0f0f0f; border: 1px solid #1a1a1a; position: relative; overflow: hidden; transition: border-color 0.2s ease; }
       .bento-box:hover { border-color: #2c2c2c; }
-      .bento-song    { grid-column: span 2; grid-row: span 2; min-height: 360px; }
-      .bento-sm      { min-height: 178px; }
-      .bento-eyebrow {
-        font-size: 0.55rem; font-weight: 800; letter-spacing: 0.18em;
-        text-transform: uppercase; display: block; margin-bottom: 10px;
+      .bento-song { grid-column: span 2; grid-row: span 2; min-height: 360px; }
+      .bento-sm   { min-height: 178px; }
+      .bento-eyebrow { font-size: 0.55rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+      /* Play button inside bento song box */
+      .bento-play-btn {
+        position: absolute; top: 22px; right: 22px;
+        width: 54px; height: 54px; border-radius: 50%;
+        background: rgba(240,168,32,0.08); border: 1px solid rgba(240,168,32,0.2);
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer; transition: background 0.2s, transform 0.2s;
       }
+      .bento-play-btn:hover { background: rgba(240,168,32,0.18); transform: scale(1.08); }
+      /* Countdown box hover (id-specific for indigo accent) */
+      #countdownBox:hover { border-color: rgba(129,140,248,0.4); box-shadow: 0 0 22px 4px rgba(129,140,248,0.08); }
+      #countdownBox.sched-open { border-color: rgba(129,140,248,0.45); box-shadow: 0 0 22px 4px rgba(129,140,248,0.10); }
+      /* Schedule drawer close button */
+      .sched-close-btn { background: none; border: none; color: #3a3a6a; cursor: pointer; font-size: 0.7rem; padding: 4px 8px; letter-spacing: 0.04em; transition: color 0.15s; }
+      .sched-close-btn:hover { color: #818cf8; }
+      /* Outline button (e.g. "Read News") */
+      .btn-outline {
+        border: 1px solid #252525; color: #666;
+        font-size: 0.8rem; font-weight: 600; padding: 12px 24px;
+        border-radius: 2px; text-decoration: none;
+        transition: border-color 0.15s, color 0.15s;
+      }
+      .btn-outline:hover { border-color: #444; color: #f0f0f0; }
+      /* Footer links */
+      .footer-link { font-size: 0.75rem; color: #444; text-decoration: none; transition: color 0.15s; }
+      .footer-link:hover { color: #888; }
       @media (max-width: 680px) {
         .bento-grid { grid-template-columns: 1fr; }
         .bento-song { grid-column: span 1; grid-row: span 1; min-height: 240px; }
@@ -179,15 +167,11 @@
         backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
         border-radius: 28px; padding: 7px 16px 7px 10px;
         box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-        cursor: default; max-width: 260px; overflow: hidden;
-        transition: max-width 0.4s ease;
+        cursor: default; max-width: 260px; overflow: hidden; transition: max-width 0.4s ease;
       }
       #livePill:hover { max-width: 360px; }
-      #pillText {
-        font-size: 0.62rem; color: #444; white-space: nowrap;
-        overflow: hidden; text-overflow: ellipsis;
-      }
-      /* ── Scroll indicator ───────────────────────────────── */
+      #pillText { font-size: 0.62rem; color: #444; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      /* ── Scroll hint ────────────────────────────────────── */
       @keyframes scroll-bob {
         0%,100% { opacity: 0.25; transform: translateY(0); }
         50%      { opacity: 0.45; transform: translateY(4px); }
@@ -209,7 +193,7 @@
 
     <!-- ── Sticky Nav ──────────────────────────────────────────── -->
     <nav id="mainNav" style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:50;">
-      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;gap:0;">
+      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
         <a href="./index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
           <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;letter-spacing:-0.03em;">KM</span>
@@ -218,7 +202,7 @@
         </a>
         <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
           <div style="position:relative;">
-            <button id="archiveDropBtn" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px;padding:0;font-family:Inter,sans-serif;font-size:0.8rem;font-weight:500;color:#888;letter-spacing:0.03em;transition:color 0.15s;" onmouseover="this.style.color='#f0f0f0'" onmouseout="this.style.color='#888'">
+            <button id="archiveDropBtn" class="nav-link" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px;padding:0;font-family:Inter,sans-serif;">
               Winners <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div id="archiveMenu" class="nav-dropdown" style="display:none;">
@@ -230,7 +214,7 @@
           <a href="./news.html" class="nav-link">News</a>
         </div>
         <div style="display:flex;align-items:center;gap:10px;">
-          <button id="globalSearchToggle" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;transition:color 0.15s;" aria-label="Search" onmouseover="this.style.color='#f0f0f0'" onmouseout="this.style.color='#888'">
+          <button id="globalSearchToggle" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;transition:color 0.15s;" aria-label="Search">
             <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
             </svg>
@@ -260,7 +244,7 @@
           <svg width="16" height="16" fill="none" stroke="#888" viewBox="0 0 24 24" style="flex-shrink:0;">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
           </svg>
-          <input id="overlaySearchInput" type="search" placeholder="Search winners, names, districts, years..."
+          <input id="overlaySearchInput" type="search" placeholder="Search winners, names, districts, years…"
             style="flex:1;background:transparent;border:none;outline:none;font-size:0.95rem;color:#f0f0f0;font-family:Inter,sans-serif;" />
           <button id="overlayClose" style="background:transparent;border:none;cursor:pointer;color:#555;font-size:0.75rem;padding:4px 8px;">ESC</button>
         </div>
@@ -272,17 +256,15 @@
     </div>
 
     <!-- ── Cinematic Hero — Legend of the Week ────────────────── -->
+    <!-- Populated by initIndex() in script.js via pickFeatured(data) -->
     <section class="hero-cinema" id="heroSection">
       <!-- Portrait column -->
       <div class="hero-portrait">
         <div class="hero-deco" aria-hidden="true"></div>
-        <!-- Season badge -->
         <div style="position:absolute;top:24px;left:24px;z-index:3;font-size:0.56rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:rgba(240,168,32,0.5);border:1px solid rgba(240,168,32,0.12);padding:4px 12px;border-radius:2px;" id="heroYearBadge">2026 Season</div>
-        <!-- Avatar -->
         <div class="hero-avatar-wrap" id="heroAvatarWrap">
           <span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">—</span>
         </div>
-        <!-- Badge chip at bottom -->
         <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;">
           <span id="heroBadgeChip" style="display:none;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.22);color:#f0a820;font-size:0.52rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:4px 14px;border-radius:2px;white-space:nowrap;"></span>
         </div>
@@ -298,23 +280,24 @@
           <div id="heroSubtitle" style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f0a820;opacity:0.7;margin-bottom:24px;">—</div>
           <p id="heroBioText" style="font-size:0.9rem;color:#5a5a5a;line-height:1.9;margin:0 0 36px;max-width:430px;">…</p>
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <!-- heroCtaBtn href & text set by script.js based on winner award type -->
             <a id="heroCtaBtn" href="/unduk-ngadau/" class="cta-glow">Explore Her Story →</a>
+            <!-- heroVoteBtn state managed by castVote() / hasVoted() in script.js -->
             <button id="heroVoteBtn" class="vote-btn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 3 13.5 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 13-9 13z"/></svg>
               Community Vote
             </button>
           </div>
-          <!-- Vote count + share -->
+          <!-- heroVotes & heroShareBtn shown/populated by script.js after data loads -->
           <div style="margin-top:20px;display:flex;align-items:center;gap:12px;">
             <div id="heroVotes" style="font-size:0.68rem;color:#333;letter-spacing:0.06em;"></div>
-            <button id="heroShareBtn" title="Share this winner" style="display:none;align-items:center;justify-content:center;gap:6px;background:none;border:1px solid rgba(255,255,255,0.07);border-radius:2px;padding:5px 10px;cursor:pointer;color:#444;font-size:0.6rem;font-family:Inter,sans-serif;letter-spacing:0.06em;transition:color 0.15s,border-color 0.15s,background 0.15s;" onmouseover="this.style.color='#f0a820';this.style.borderColor='rgba(240,168,32,0.35)';this.style.background='rgba(240,168,32,0.05)'" onmouseout="if(!this.classList.contains('share-active')){this.style.color='#444';this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='none'}">
-              <svg id="heroShareIcon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            <button id="heroShareBtn" class="hero-share-btn" title="Share this winner">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               <span id="heroShareLabel">Share</span>
             </button>
           </div>
         </div>
       </div>
-      <!-- Scroll hint -->
       <div class="scroll-hint" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;pointer-events:none;">
         <div style="font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:#333;">Scroll</div>
         <div style="width:1px;height:36px;background:linear-gradient(to bottom,#333,transparent);"></div>
@@ -322,8 +305,9 @@
     </section>
 
     <!-- ── Stats bar ───────────────────────────────────────────── -->
+    <!-- Values animated by animateCount() in script.js -->
     <div style="background:#0d0d0d;border-bottom:1px solid #1a1a1a;padding:14px 16px;">
-      <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;" class="sm:grid-cols-3">
+      <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
         <div style="text-align:center;">
           <div id="statHof" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
           <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Hall of Fame</div>
@@ -347,33 +331,31 @@
       </div>
       <div class="bento-grid">
 
-        <!-- Box 1: This Season's Sound (large 2×2) -->
+        <!-- Box 1: This Season's Sound (2×2) — title/meta/quote set by script.js via featuredSong -->
         <div class="bento-box bento-song reveal" style="background:#0d0b00;border-color:#1c1800;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;">
           <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 28% 38%,rgba(240,168,32,0.07),transparent 60%);pointer-events:none;"></div>
-          <!-- Giant decorative note -->
-          <div style="position:absolute;top:16px;left:20px;font-size:6rem;opacity:0.04;line-height:1;pointer-events:none;user-select:none;color:#f0a820;">♪</div>
-          <!-- Play button top-right -->
-          <div style="position:absolute;top:22px;right:22px;width:54px;height:54px;border-radius:50%;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(240,168,32,0.18)';this.style.transform='scale(1.08)'" onmouseout="this.style.background='rgba(240,168,32,0.08)';this.style.transform='scale(1)'">
+          <div style="position:absolute;top:16px;left:20px;font-size:6rem;opacity:0.04;line-height:1;pointer-events:none;user-select:none;color:#f0a820;" aria-hidden="true">♪</div>
+          <button class="bento-play-btn" aria-label="Play">
             <svg width="18" height="18" fill="#f0a820" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
+          </button>
           <span class="bento-eyebrow" style="color:#f0a820;">This Season's Sound</span>
           <div id="bentoSongTitle" style="font-size:1.5rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.025em;line-height:1.18;margin-bottom:7px;">—</div>
           <div id="bentoSongMeta" style="font-size:0.72rem;color:#444;margin-bottom:16px;">—</div>
           <div id="bentoSongQuote" style="font-size:0.65rem;color:#333;font-style:italic;line-height:1.7;max-width:340px;"></div>
         </div>
 
-        <!-- Box 2: Winning Costume -->
+        <!-- Box 2: Winning Costume — name/desc/link set by script.js (costume2026) -->
         <div class="bento-box bento-sm reveal reveal-d1" id="bentoCostume" style="background:#03100a;border-color:#082018;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
           <span class="bento-eyebrow" style="color:#4ade80;">Winning Costume</span>
           <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;">
-            <div style="font-size:0.88rem;font-weight:800;color:#f0f0f0;line-height:1.25;" id="bentoCostumeName">—</div>
-            <div style="font-size:0.68rem;color:#3a5a3a;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;" id="bentoCostumeDesc">—</div>
+            <div id="bentoCostumeName" style="font-size:0.88rem;font-weight:800;color:#f0f0f0;line-height:1.25;">—</div>
+            <div id="bentoCostumeDesc" style="font-size:0.68rem;color:#3a5a3a;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">—</div>
           </div>
           <a id="bentoCostumeCta" href="/unduk-ngadau/" style="font-size:0.62rem;font-weight:600;color:#4ade80;text-decoration:none;margin-top:12px;display:inline-flex;align-items:center;gap:4px;">View champion →</a>
         </div>
 
-        <!-- Box 3: Live Countdown -->
-        <div id="countdownBox" class="bento-box bento-sm reveal reveal-d2" style="background:#03030f;border-color:#08082a;padding:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='rgba(129,140,248,0.4)';this.style.boxShadow='0 0 22px 4px rgba(129,140,248,0.08)'" onmouseout="if(!this.classList.contains('sched-open')){this.style.borderColor='#08082a';this.style.boxShadow=''}">
+        <!-- Box 3: Live Countdown — number set by script.js; click toggles #scheduleDrawer -->
+        <div id="countdownBox" class="bento-box bento-sm reveal reveal-d2" style="background:#03030f;border-color:#08082a;padding:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <span class="bento-eyebrow" style="color:#818cf8;">Live Countdown</span>
             <span id="schedToggleIcon" style="font-size:0.6rem;color:#3a3a6a;letter-spacing:0.06em;transition:color 0.2s;">View Schedule ↓</span>
@@ -385,33 +367,30 @@
           <div style="font-size:0.6rem;color:#252540;line-height:1.5;">Hari Kaamatan · 30–31 May 2026<br>Penampang, Sabah</div>
         </div>
 
-        <!-- Box 4: Winners Hub -->
+        <!-- Box 4: Winners Hub — label/name/desc set by script.js -->
         <div class="bento-box bento-sm reveal reveal-d3" id="bentoWinners" style="background:#0d0b00;border-color:#1c1800;padding:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;" onclick="window.location.href='./winners.html'">
           <span class="bento-eyebrow" style="color:#f0a820;">Winners Hub</span>
           <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;">
-            <div style="font-size:0.58rem;font-weight:700;color:#8a6a20;letter-spacing:0.1em;text-transform:uppercase;" id="bentoWinnersLabel">Hall of Fame</div>
-            <div style="font-size:0.92rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;line-height:1.2;" id="bentoWinnersName">KDMR Icons</div>
-            <div style="font-size:0.68rem;color:#3a3010;" id="bentoWinnersDesc">Nominate a figure</div>
+            <div id="bentoWinnersLabel" style="font-size:0.58rem;font-weight:700;color:#8a6a20;letter-spacing:0.1em;text-transform:uppercase;">Hall of Fame</div>
+            <div id="bentoWinnersName" style="font-size:0.92rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;line-height:1.2;">KDMR Icons</div>
+            <div id="bentoWinnersDesc" style="font-size:0.68rem;color:#3a3010;">Nominate a figure</div>
           </div>
           <a href="./winners.html" style="font-size:0.62rem;font-weight:600;color:#f0a820;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:12px;" onclick="event.stopPropagation()">Browse all winners →</a>
         </div>
 
       </div>
 
-      <!-- ── Schedule Drawer ──────────────────────────────────────── -->
+      <!-- ── Schedule Drawer — rows populated by script.js; toggled by #countdownBox click -->
       <div id="scheduleDrawer" style="max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;opacity:0;margin-top:0;">
         <div style="border:1px solid #0d0d2a;border-radius:4px;background:#020209;margin-top:12px;overflow:hidden;">
-          <!-- Drawer header -->
           <div style="padding:16px 20px 12px;border-bottom:1px solid #0a0a1e;display:flex;align-items:center;justify-content:space-between;">
             <div style="display:flex;align-items:center;gap:10px;">
               <span style="display:inline-block;width:3px;height:16px;background:#818cf8;border-radius:1px;"></span>
               <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#818cf8;">KDCA State-Level Schedule · May 2026</span>
             </div>
-            <button onclick="document.getElementById('countdownBox').click();event.stopPropagation();" style="background:none;border:none;color:#3a3a6a;cursor:pointer;font-size:0.7rem;padding:4px 8px;letter-spacing:0.04em;transition:color 0.15s;" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='#3a3a6a'">Close ×</button>
+            <button class="sched-close-btn" onclick="document.getElementById('countdownBox').click();event.stopPropagation();">Close ×</button>
           </div>
-          <!-- Event rows — populated by JS -->
           <div id="scheduleRows" style="padding:8px 0;"></div>
-          <!-- Footer note -->
           <div style="padding:12px 20px;border-top:1px solid #0a0a1e;font-size:0.58rem;color:#252540;line-height:1.6;">
             All times MYT (UTC+8) · Venue: KDCA Complex, Penampang, Sabah · Schedule subject to official KDCA confirmation
           </div>
@@ -420,6 +399,7 @@
     </section>
 
     <!-- ── Latest News ─────────────────────────────────────────── -->
+    <!-- #newsFeed populated by script.js from data.news -->
     <section id="newsSection" style="padding:48px 16px 64px;max-width:1200px;margin:0 auto;">
       <div class="reveal" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #1a1a1a;">
         <div style="display:flex;align-items:center;gap:10px;">
@@ -443,12 +423,12 @@
         <p class="reveal reveal-d1" style="font-size:0.9rem;color:#555;line-height:1.75;margin-bottom:28px;">Nominate a KDM icon or submit a news story. KDMR Media is built by the community.</p>
         <div class="reveal reveal-d2" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
           <a href="./winners.html" style="background:#f0a820;color:#0a0a0a;font-size:0.8rem;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;letter-spacing:0.04em;">Nominate a Figure</a>
-          <a href="./news.html" style="border:1px solid #252525;color:#666;font-size:0.8rem;font-weight:600;padding:12px 24px;border-radius:2px;text-decoration:none;transition:border-color 0.15s,color 0.15s;" onmouseover="this.style.borderColor='#444';this.style.color='#f0f0f0'" onmouseout="this.style.borderColor='#252525';this.style.color='#666'">Read News</a>
+          <a href="./news.html" class="btn-outline">Read News</a>
         </div>
       </div>
     </section>
 
-    <!-- ── Newsletter ──────────────────────────────────────────── -->
+    <!-- ── Newsletter — #newsletterForm handled by initNewsletter() in script.js -->
     <section id="newsletterSection" style="background:#0a0a0a;border-top:1px solid #1a1a1a;padding:52px 16px;">
       <div style="max-width:560px;margin:0 auto;text-align:center;">
         <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#f0a820;margin-bottom:12px;">
@@ -480,11 +460,11 @@
           <div>
             <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#333;margin-bottom:10px;">Pages</div>
             <div style="display:flex;flex-direction:column;gap:6px;">
-              <a href="./index.html" style="font-size:0.75rem;color:#444;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#888'" onmouseout="this.style.color='#444'">Home &amp; News</a>
-              <a href="./winners.html" style="font-size:0.75rem;color:#444;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#888'" onmouseout="this.style.color='#444'">Winners Hub</a>
-              <a href="/unduk-ngadau/" style="font-size:0.75rem;color:#444;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#888'" onmouseout="this.style.color='#444'">Unduk Ngadau</a>
-              <a href="/mrk/" style="font-size:0.75rem;color:#444;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#888'" onmouseout="this.style.color='#444'">Mr. Kaamatan</a>
-              <a href="/sugandoi/" style="font-size:0.75rem;color:#444;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#888'" onmouseout="this.style.color='#444'">Sugandoi</a>
+              <a href="./index.html" class="footer-link">Home &amp; News</a>
+              <a href="./winners.html" class="footer-link">Winners Hub</a>
+              <a href="/unduk-ngadau/" class="footer-link">Unduk Ngadau</a>
+              <a href="/mrk/" class="footer-link">Mr. Kaamatan</a>
+              <a href="/sugandoi/" class="footer-link">Sugandoi</a>
             </div>
           </div>
         </div>
@@ -497,18 +477,11 @@
 
     <script type="module" src="./src/script.js"></script>
     <script>
+      /* Mobile menu toggle — inline to avoid FOUC before ES module loads */
       (function(){
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        const iconOpen = document.getElementById('menuIconOpen');
-        const iconClose = document.getElementById('menuIconClose');
-        if (!btn || !menu) return;
-        btn.addEventListener('click', function(){
-          const open = menu.style.display === 'block';
-          menu.style.display = open ? 'none' : 'block';
-          if (iconOpen) iconOpen.style.display = open ? 'block' : 'none';
-          if (iconClose) iconClose.style.display = open ? 'none' : 'block';
-        });
+        var btn=document.getElementById('mobileMenuBtn'),menu=document.getElementById('mobileMenu'),open=document.getElementById('menuIconOpen'),close=document.getElementById('menuIconClose');
+        if(!btn||!menu)return;
+        btn.addEventListener('click',function(){var o=menu.style.display==='block';menu.style.display=o?'none':'block';if(open)open.style.display=o?'block':'none';if(close)close.style.display=o?'none':'block';});
       })();
     </script>
   </body>
