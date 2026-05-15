@@ -1,6 +1,6 @@
 /**
  * KDMR Media — script.js
- * Pages: / (index), /unduk-ngadau/, /mrk/, /sugandoi/, /archive.html, /directory.html
+ * Pages: / (index), /unduk-ngadau/, /mrk/, /sugandoi/, /winners.html, /directory.html
  */
 
 const DATA_URL = import.meta.env.BASE_URL + 'data.json';
@@ -51,7 +51,7 @@ function getInterestTagFromPath() {
   if (p.includes('mrk'))          return 'MRK';
   if (p.includes('sugandoi'))     return 'SG';
   if (p.includes('directory'))    return 'Directory';
-  if (p.includes('archive'))      return 'Archive';
+  if (p.includes('winners'))      return 'Winners';
   return 'General';
 }
 
@@ -294,7 +294,7 @@ function initGlobalSearch(data) {
     let html = '';
     if (hofMatches.length) {
       html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-bottom:1px solid #1e1e1e;">Hall of Fame</div>`;
-      html += hofMatches.map(p=>`<a href="/archive.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;border-bottom:1px solid #1a1a1a;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='transparent'"><div style="width:34px;height:34px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#0a0a0a;flex-shrink:0;">${initials(p.name)}</div><div><div style="font-size:0.85rem;font-weight:600;color:#f0f0f0;">${p.name}</div><div style="font-size:0.72rem;color:#555;">${p.tribe} · ${p.category}</div></div></a>`).join('');
+      html += hofMatches.map(p=>`<a href="/winners.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;border-bottom:1px solid #1a1a1a;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='transparent'"><div style="width:34px;height:34px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#0a0a0a;flex-shrink:0;">${initials(p.name)}</div><div><div style="font-size:0.85rem;font-weight:600;color:#f0f0f0;">${p.name}</div><div style="font-size:0.72rem;color:#555;">${p.tribe} · ${p.category}</div></div></a>`).join('');
     }
     if (bizMatches.length) {
       html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-bottom:1px solid #1e1e1e;border-top:${hofMatches.length?'1px solid #1e1e1e':'none'};">Businesses</div>`;
@@ -617,7 +617,7 @@ function closeBizModal() { const m=document.getElementById('bizModal'); if(m){m.
     else if (path.includes('mrk'))          initHeroSelector(data, 'MRK');
     else if (path.includes('sugandoi'))     initHeroSelector(data, 'Sugandoi');
     else if (path.includes('directory'))    await initDirectory(data);
-    else if (!path.includes('archive'))     await initIndex(data);
+    else if (!path.includes('winners'))     await initIndex(data);
     initNewsletter();
   } catch(err) { console.error('KDMR Media:', err); }
 })();
