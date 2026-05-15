@@ -800,6 +800,52 @@ async function initIndex(data) {
         setTimeout(setVotedState, 300);
       });
     }
+
+    // ── Share button ─────────────────────────────────────────────────────────
+    const shareBtn   = document.getElementById('heroShareBtn');
+    const shareLabel = document.getElementById('heroShareLabel');
+    if (shareBtn) {
+      shareBtn.style.display = 'inline-flex';
+
+      const shareTitle = `${legend.name} · KDMR Media`;
+      const shareText  = `Check out ${legend.name}, ${legend.award} ${legend.year} from ${legend.district}! Cast your community vote on KDMR Media.`;
+      const shareUrl   = window.location.origin + (awardSlug.startsWith('/') ? awardSlug : '/' + awardSlug);
+
+      shareBtn.addEventListener('click', async () => {
+        // Web Share API — works natively on mobile (WhatsApp, Telegram, etc.)
+        if (navigator.share) {
+          try {
+            await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
+          } catch (e) {
+            // User cancelled share sheet — do nothing
+          }
+          return;
+        }
+
+        // Desktop fallback: copy link to clipboard + brief tooltip
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+        } catch {
+          // Last resort — prompt
+          window.prompt('Copy this link:', shareUrl);
+          return;
+        }
+
+        // Flash "Copied!" feedback
+        shareBtn.classList.add('share-active');
+        shareBtn.style.color        = '#4ade80';
+        shareBtn.style.borderColor  = 'rgba(74,222,128,0.35)';
+        shareBtn.style.background   = 'rgba(74,222,128,0.06)';
+        if (shareLabel) shareLabel.textContent = 'Copied!';
+        setTimeout(() => {
+          shareBtn.classList.remove('share-active');
+          shareBtn.style.color        = '#444';
+          shareBtn.style.borderColor  = 'rgba(255,255,255,0.07)';
+          shareBtn.style.background   = 'none';
+          if (shareLabel) shareLabel.textContent = 'Share';
+        }, 2000);
+      });
+    }
   }
 
   // ── Bento Box 2: Winning Costume ────────────────────────────────────────

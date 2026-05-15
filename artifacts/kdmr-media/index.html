@@ -304,8 +304,14 @@
               Community Vote
             </button>
           </div>
-          <!-- Vote count -->
-          <div id="heroVotes" style="margin-top:20px;font-size:0.68rem;color:#333;letter-spacing:0.06em;"></div>
+          <!-- Vote count + share -->
+          <div style="margin-top:20px;display:flex;align-items:center;gap:12px;">
+            <div id="heroVotes" style="font-size:0.68rem;color:#333;letter-spacing:0.06em;"></div>
+            <button id="heroShareBtn" title="Share this winner" style="display:none;align-items:center;justify-content:center;gap:6px;background:none;border:1px solid rgba(255,255,255,0.07);border-radius:2px;padding:5px 10px;cursor:pointer;color:#444;font-size:0.6rem;font-family:Inter,sans-serif;letter-spacing:0.06em;transition:color 0.15s,border-color 0.15s,background 0.15s;" onmouseover="this.style.color='#f0a820';this.style.borderColor='rgba(240,168,32,0.35)';this.style.background='rgba(240,168,32,0.05)'" onmouseout="if(!this.classList.contains('share-active')){this.style.color='#444';this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='none'}">
+              <svg id="heroShareIcon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              <span id="heroShareLabel">Share</span>
+            </button>
+          </div>
         </div>
       </div>
       <!-- Scroll hint -->
