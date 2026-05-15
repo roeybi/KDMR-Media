@@ -322,23 +322,39 @@ function branchMatchesTab(branch, tab) {
 let hs = { allWinners:[], award:'', tab:'Sabah', list:[], index:0, transitioning:false };
 
 function renderPortrait(entry) {
+  // Hide empty-state overlay first — must happen before touching inner elements
+  const overlay = document.getElementById('emptyStateOverlay');
+  if (overlay) overlay.style.display = 'none';
+
   const acc = entry.accentColor || '#f0a820';
   const hex = acc.replace('#','');
   const r=parseInt(hex.slice(0,2),16), g=parseInt(hex.slice(2,4),16), b=parseInt(hex.slice(4,6),16);
-  document.getElementById('portraitBg').style.background =
+
+  const bg = document.getElementById('portraitBg');
+  if (bg) bg.style.background =
     `linear-gradient(160deg, rgba(${r},${g},${b},0.2) 0%, rgba(${r},${g},${b},0.07) 30%, #060606 70%)`;
-  document.getElementById('portraitGlyph').textContent = initials(entry.name)[0] || '?';
-  document.getElementById('portraitGlyph').style.color = `rgba(${r},${g},${b},0.07)`;
-  document.getElementById('portraitAvatar').textContent = initials(entry.name);
-  document.getElementById('portraitAvatar').style.background = acc;
-  document.getElementById('portraitAwardBadge').textContent = `${entry.award}  ${entry.year}`;
-  document.getElementById('portraitAwardBadge').style.background = acc;
-  document.getElementById('portraitName').textContent = entry.name;
-  document.getElementById('portraitYear').textContent = `${entry.branch}  ·  ${entry.tribe}`;
-  document.getElementById('ambientBg').style.background =
+
+  const glyph = document.getElementById('portraitGlyph');
+  if (glyph) { glyph.textContent = initials(entry.name)[0] || '?'; glyph.style.color = `rgba(${r},${g},${b},0.07)`; }
+
+  const avatar = document.getElementById('portraitAvatar');
+  if (avatar) { avatar.textContent = initials(entry.name); avatar.style.background = acc; avatar.style.display = ''; }
+
+  const badge = document.getElementById('portraitAwardBadge');
+  if (badge) { badge.textContent = `${entry.award}  ${entry.year}`; badge.style.background = acc; badge.style.display = ''; }
+
+  const nameEl = document.getElementById('portraitName');
+  if (nameEl) { nameEl.textContent = entry.name; nameEl.style.display = ''; }
+
+  const yearEl = document.getElementById('portraitYear');
+  if (yearEl) { yearEl.textContent = `${entry.branch}  ·  ${entry.tribe}`; yearEl.style.display = ''; }
+
+  const ambEl = document.getElementById('ambientBg');
+  if (ambEl) ambEl.style.background =
     `radial-gradient(ellipse 70% 60% at 50% 55%, rgba(${r},${g},${b},0.1) 0%, transparent 70%)`;
+
   document.documentElement.style.setProperty('--hero-accent', acc);
-  // Top accent line on portrait
+
   const accentLine = document.getElementById('portraitAccentLine');
   if (accentLine) accentLine.style.background = `linear-gradient(90deg,transparent,${acc},transparent)`;
 }
@@ -482,16 +498,16 @@ function renderEmptyState(tab) {
       <div id="portraitPattern" style="position:absolute;inset:0;"></div>
       <div id="portraitAccentLine" style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,rgba(240,168,32,0.18),transparent);opacity:0.7;"></div>
       <div id="portraitGlyph" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);font-size:clamp(7rem,28vw,11rem);font-weight:900;opacity:0.035;color:#f0a820;user-select:none;pointer-events:none;"></div>
-      <div id="portraitAvatar" style="display:none;"></div>
+      <div id="portraitAvatar"></div>
       <div id="portraitVignette" style="position:absolute;inset:0;background:radial-gradient(ellipse at center 80%,transparent 30%,rgba(6,6,6,0.7) 100%);pointer-events:none;"></div>
       <div id="portraitGradient" style="position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(transparent,rgba(6,6,6,0.95));pointer-events:none;"></div>
       <div id="portraitNameWrap" style="position:absolute;bottom:0;left:0;right:0;padding:20px 18px 18px;">
-        <div id="portraitAwardBadge" style="display:none;"></div>
-        <div id="portraitName" style="display:none;"></div>
-        <div id="portraitYear" style="display:none;"></div>
+        <div id="portraitAwardBadge"></div>
+        <div id="portraitName"></div>
+        <div id="portraitYear"></div>
       </div>
     </div>
-    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:11px;padding:28px;text-align:center;pointer-events:none;">
+    <div id="emptyStateOverlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:11px;padding:28px;text-align:center;pointer-events:none;">
       <div style="font-size:2.6rem;opacity:0.09;color:#f0a820;line-height:1;user-select:none;">✦</div>
       <div style="font-size:0.52rem;font-weight:800;letter-spacing:0.24em;text-transform:uppercase;color:rgba(240,168,32,0.28);">KDCA ${branchLabel}</div>
       <div style="width:18px;height:1px;background:rgba(240,168,32,0.14);"></div>
