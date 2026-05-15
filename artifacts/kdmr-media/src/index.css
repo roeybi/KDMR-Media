@@ -240,6 +240,24 @@
   }
   #legacyRoll.fading { opacity: 0; }
 
+  /* ── Mobile overrides ─────────────────────────────────── */
+  @media (max-width: 767px) {
+    #portraitName {
+      font-size: clamp(1rem, 5.5vw, 1.4rem);
+      line-height: 1.15;
+    }
+    #portraitCard {
+      max-width: 100%;
+    }
+    #portraitInner {
+      padding-top: min(150%, calc(100svh - 260px));
+    }
+    #mobileStats {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 0 16px 16px;
+    }
+  }
+
   #statsPanel {
     backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
     background: rgba(8,8,8,0.78); border: 1px solid rgba(255,255,255,0.07);

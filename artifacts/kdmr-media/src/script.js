@@ -621,10 +621,19 @@ function initHeroSelector(data, award) {
 
   function applyLayout() {
     const d = window.innerWidth >= 768;
+    const heroContainer = document.getElementById('heroContainer');
+    if (heroContainer) {
+      heroContainer.style.height   = d ? 'calc(100vh - 52px)' : 'auto';
+      heroContainer.style.overflow = d ? 'hidden' : 'visible';
+    }
+    heroMain.style.flex          = d ? '1' : 'none';
     heroMain.style.flexDirection = d ? 'row' : 'column';
-    statsPanel.style.display = d ? 'flex' : 'none';
-    mobileStats.style.display = d ? 'none' : 'block';
-    portraitRegion.style.padding = d ? '20px 48px' : '12px 48px 0';
+    heroMain.style.overflow      = d ? 'hidden' : 'visible';
+    statsPanel.style.display     = d ? 'flex' : 'none';
+    mobileStats.style.display    = d ? 'none' : 'block';
+    portraitRegion.style.flex    = d ? '1' : 'none';
+    portraitRegion.style.overflow= d ? 'hidden' : 'visible';
+    portraitRegion.style.padding = d ? '20px 48px' : '12px 20px 0';
     if (!d && hs.list[hs.index]) renderStats(hs.list[hs.index], 'mobileStats');
   }
   applyLayout();
