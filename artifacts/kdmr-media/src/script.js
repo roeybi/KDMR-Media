@@ -1,6 +1,6 @@
 /**
  * KDMR Media — script.js
- * Pages: / (index), /unduk-ngadau/, /mrk/, /sugandoi/, /winners.html, /directory.html
+ * Pages: / (index), /unduk-ngadau/, /mrk/, /sugandoi/, /winners.html
  */
 
 const DATA_URL = import.meta.env.BASE_URL + 'data.json';
@@ -50,7 +50,6 @@ function getInterestTagFromPath() {
   if (p.includes('unduk-ngadau')) return 'UN';
   if (p.includes('mrk'))          return 'MRK';
   if (p.includes('sugandoi'))     return 'SG';
-  if (p.includes('directory'))    return 'Directory';
   if (p.includes('winners'))      return 'Winners';
   return 'General';
 }
@@ -251,15 +250,7 @@ const CAT_COLORS = {
   'Education':        { bg:'rgba(168,85,247,0.1)',  text:'#c084fc' },
   'Entrepreneurship': { bg:'rgba(251,191,36,0.1)',  text:'#fbbf24' },
 };
-const BIZ_CAT_COLORS = {
-  'Food & Beverage':       { bg:'rgba(251,191,36,0.1)',  text:'#fbbf24' },
-  'Arts & Crafts':         { bg:'rgba(236,72,153,0.1)',  text:'#f472b6' },
-  'Tourism & Hospitality': { bg:'rgba(59,130,246,0.1)',  text:'#60a5fa' },
-  'Health & Wellness':     { bg:'rgba(34,197,94,0.1)',   text:'#4ade80' },
-  'Agriculture':           { bg:'rgba(74,222,128,0.1)',  text:'#34d399' },
-  'Education':             { bg:'rgba(168,85,247,0.1)',  text:'#c084fc' },
-};
-function catCol(cat, map = CAT_COLORS) { return map[cat] || { bg:'rgba(240,168,32,0.08)', text:'#f0a820' }; }
+function catCol(cat) { return CAT_COLORS[cat] || { bg:'rgba(240,168,32,0.08)', text:'#f0a820' }; }
 
 // ─── Ticker ───────────────────────────────────────────────────────────────
 
@@ -283,11 +274,8 @@ function initGlobalSearch(data) {
     const hofMatches = data.hallOfFame.filter(p =>
       p.name.toLowerCase().includes(q)||p.tribe.toLowerCase().includes(q)||p.district.toLowerCase().includes(q)||p.tags.some(t=>t.toLowerCase().includes(q))
     ).slice(0,4);
-    const bizMatches = data.businesses.filter(b =>
-      b.name.toLowerCase().includes(q)||b.description.toLowerCase().includes(q)||b.location.toLowerCase().includes(q)||b.tags.some(t=>t.toLowerCase().includes(q))
-    ).slice(0,4);
     const newsMatches = data.news.filter(n => n.headline.toLowerCase().includes(q)||n.summary.toLowerCase().includes(q)).slice(0,3);
-    if (!hofMatches.length && !bizMatches.length && !newsMatches.length) {
+    if (!hofMatches.length && !newsMatches.length) {
       resultsEl.innerHTML = `<div style="padding:32px;text-align:center;color:#444;font-size:0.8rem;">No results for "<strong style="color:#888;">${q}</strong>"</div>`;
       return;
     }
@@ -295,10 +283,6 @@ function initGlobalSearch(data) {
     if (hofMatches.length) {
       html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-bottom:1px solid #1e1e1e;">Hall of Fame</div>`;
       html += hofMatches.map(p=>`<a href="/winners.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;border-bottom:1px solid #1a1a1a;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='transparent'"><div style="width:34px;height:34px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#0a0a0a;flex-shrink:0;">${initials(p.name)}</div><div><div style="font-size:0.85rem;font-weight:600;color:#f0f0f0;">${p.name}</div><div style="font-size:0.72rem;color:#555;">${p.tribe} · ${p.category}</div></div></a>`).join('');
-    }
-    if (bizMatches.length) {
-      html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-bottom:1px solid #1e1e1e;border-top:${hofMatches.length?'1px solid #1e1e1e':'none'};">Businesses</div>`;
-      html += bizMatches.map(b=>`<a href="/directory.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;border-bottom:1px solid #1a1a1a;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='transparent'"><div style="width:34px;height:34px;border-radius:2px;background:#1e1e1e;border:1px solid #2a2a2a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:#f0a820;flex-shrink:0;">${initials(b.name)}</div><div><div style="font-size:0.85rem;font-weight:600;color:#f0f0f0;">${b.name}</div><div style="font-size:0.72rem;color:#555;">${b.location} · ${b.category}</div></div></a>`).join('');
     }
     if (newsMatches.length) {
       html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-top:1px solid #1e1e1e;border-bottom:1px solid #1e1e1e;">News</div>`;
@@ -674,7 +658,6 @@ function initHeroSelector(data, award) {
 async function initIndex(data) {
   // ── Stats counter ────────────────────────────────────────────────────────
   animateCount('statHof', data.stats.hofEntries);
-  animateCount('statBiz', data.stats.businesses);
   animateCount('statTribes', data.stats.tribesRepresented);
   animateCount('statDistricts', data.stats.districtsRepresented);
 
@@ -738,18 +721,6 @@ async function initIndex(data) {
     }
   }
 
-  // ── Bento Box 4: New in Directory ───────────────────────────────────────
-  const featured = data.businesses.filter(b => b.featured);
-  const newestFeatured = [...featured].sort((a, b) => b.founded - a.founded)[0];
-  if (newestFeatured) {
-    const catEl  = document.getElementById('bentoBizCategory');
-    const nameEl = document.getElementById('bentoBizName');
-    const locEl  = document.getElementById('bentoBizLocation');
-    if (catEl)  catEl.textContent  = newestFeatured.category;
-    if (nameEl) nameEl.textContent = newestFeatured.name;
-    if (locEl)  locEl.textContent  = newestFeatured.location;
-  }
-
   // ── Floating Live Pill ticker ────────────────────────────────────────────
   const pillEl = document.getElementById('pillText');
   if (pillEl && data.news.length) {
@@ -795,65 +766,6 @@ async function initIndex(data) {
   initGlobalSearch(data);
 }
 
-// ─── DIRECTORY PAGE ───────────────────────────────────────────────────────
-
-async function initDirectory(data) {
-  let currentCat='all', currentSort='featured', searchQuery='';
-  const urlParams=new URLSearchParams(window.location.search);
-  const urlCat=urlParams.get('category');
-  if (urlCat) { currentCat=urlCat; document.querySelectorAll('.biz-filter-btn').forEach(btn=>btn.classList.toggle('active',btn.dataset.cat===urlCat)); }
-
-  function render() {
-    let list=[...data.businesses];
-    if (currentCat!=='all') list=list.filter(b=>b.category===currentCat);
-    if (searchQuery) { const q=searchQuery.toLowerCase(); list=list.filter(b=>b.name.toLowerCase().includes(q)||b.description.toLowerCase().includes(q)||b.location.toLowerCase().includes(q)||b.owner.toLowerCase().includes(q)||b.tags.some(t=>t.toLowerCase().includes(q))); }
-    if (currentSort==='featured') list.sort((a,b)=>(b.featured?1:0)-(a.featured?1:0));
-    else if (currentSort==='nameAsc') list.sort((a,b)=>a.name.localeCompare(b.name));
-    else if (currentSort==='newest') list.sort((a,b)=>b.founded-a.founded);
-    else if (currentSort==='oldest') list.sort((a,b)=>a.founded-b.founded);
-    const grid=document.getElementById('bizGrid'), empty=document.getElementById('bizEmpty'), count=document.getElementById('bizResultsCount');
-    if (count) count.textContent=`${list.length} business${list.length===1?'':'es'} found`;
-    if (!list.length) { grid.innerHTML=''; empty.style.display='block'; return; }
-    empty.style.display='none';
-    grid.innerHTML=list.map(b=>{const col=catCol(b.category,BIZ_CAT_COLORS);return`<article class="biz-card" data-id="${b.id}" data-fade style="background:#111;border:1px solid #1e1e1e;${b.featured?'border-left:2px solid #f0a820;':''}padding:14px 16px;display:flex;align-items:flex-start;gap:14px;cursor:pointer;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='${b.featured?'#f0a820':'#1e1e1e'}'"><div style="width:44px;height:44px;border-radius:2px;background:#1a1a1a;border:1px solid #252525;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:800;color:#f0a820;flex-shrink:0;">${initials(b.name)}</div><div style="flex:1;min-width:0;"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:2px;"><div style="min-width:0;"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:2px;">${b.featured?'<span style="font-size:0.58rem;font-weight:700;color:#f0a820;letter-spacing:0.08em;">★ FEATURED</span>':''}<span style="font-size:0.6rem;font-weight:700;padding:2px 7px;border-radius:2px;background:${col.bg};color:${col.text};letter-spacing:0.06em;">${b.category}</span>${b.verified?'<span style="font-size:0.58rem;font-weight:700;padding:2px 7px;background:#1a3a26;color:#4ade80;border-radius:2px;letter-spacing:0.06em;">✓ VERIFIED</span>':''}</div><h3 style="font-size:0.9rem;font-weight:700;color:#f0f0f0;margin:0;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${b.name}</h3></div><span style="font-size:0.68rem;color:#333;flex-shrink:0;white-space:nowrap;">Est. ${b.founded}</span></div><p style="font-size:0.7rem;color:#444;margin:4px 0 6px;">📍 ${b.location}</p><p style="font-size:0.78rem;color:#555;margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${b.description}</p></div></article>`;}).join('');
-    attachBizListeners(data.businesses); fadein(grid);
-  }
-
-  document.querySelectorAll('.biz-filter-btn').forEach(btn=>btn.addEventListener('click',()=>{ currentCat=btn.dataset.cat; document.querySelectorAll('.biz-filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.cat===currentCat)); render(); }));
-  document.getElementById('bizSearch')?.addEventListener('input',e=>{ searchQuery=e.target.value.trim(); render(); });
-  document.getElementById('bizSort')?.addEventListener('change',e=>{ currentSort=e.target.value; render(); });
-  render(); initBizModal(data.businesses);
-}
-
-function attachBizListeners(allBiz) {
-  document.querySelectorAll('.biz-card').forEach(card=>card.addEventListener('click',()=>{ const b=allBiz.find(x=>x.id===card.dataset.id); if(b) openBizModal(b); }));
-}
-function initBizModal(allBiz) {
-  const modal=document.getElementById('bizModal'); if (!modal) return;
-  document.getElementById('bizModalClose')?.addEventListener('click',closeBizModal);
-  modal.addEventListener('click',e=>{ if(e.target===modal) closeBizModal(); });
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeBizModal(); });
-}
-function openBizModal(biz) {
-  const modal=document.getElementById('bizModal');
-  const col=catCol(biz.category,BIZ_CAT_COLORS);
-  document.getElementById('bizModalCategory').textContent=`${biz.category} · ${biz.subcategory}`;
-  document.getElementById('bizModalName').textContent=biz.name;
-  document.getElementById('bizModalMeta').textContent=`${biz.tribe}-owned · Est. ${biz.founded} · ${biz.owner}`;
-  document.getElementById('bizModalDesc').textContent=biz.description;
-  document.getElementById('bizModalVerified').style.display=biz.verified?'inline-block':'none';
-  function contact(wrapId,linkId,href,text){ const w=document.getElementById(wrapId); if(!w)return; if(text){w.style.display='flex';const l=document.getElementById(linkId);if(l){l.href=href;l.textContent=text;}}else w.style.display='none'; }
-  contact('bizModalPhone','bizModalPhoneLink',`tel:${(biz.phone||'').replace(/\s/g,'')}`,biz.phone);
-  contact('bizModalEmail','bizModalEmailLink',`mailto:${biz.email||''}`,biz.email);
-  const loc=document.getElementById('bizModalLocation'); if(loc){loc.style.display=biz.location?'flex':'none';const t=document.getElementById('bizModalLocationText');if(t)t.textContent=biz.location;}
-  const hrs=document.getElementById('bizModalHours'); if(hrs){hrs.style.display=biz.hours?'flex':'none';const t=document.getElementById('bizModalHoursText');if(t)t.textContent=biz.hours;}
-  document.getElementById('bizModalTags').innerHTML=biz.tags.map(t=>`<span style="font-size:0.62rem;font-weight:600;padding:3px 8px;border-radius:2px;background:${col.bg};color:${col.text};letter-spacing:0.06em;">${t}</span>`).join('');
-  const webW=document.getElementById('bizModalWebsiteWrap'),webL=document.getElementById('bizModalWebsite');
-  if(biz.website){webW.style.display='block';webL.href=`https://${biz.website}`;}else webW.style.display='none';
-  modal.style.display='flex'; document.body.style.overflow='hidden';
-}
-function closeBizModal() { const m=document.getElementById('bizModal'); if(m){m.style.display='none';document.body.style.overflow='';} }
-
 // ─── Bootstrap ────────────────────────────────────────────────────────────
 
 (async function init() {
@@ -863,7 +775,6 @@ function closeBizModal() { const m=document.getElementById('bizModal'); if(m){m.
     if      (path.includes('unduk-ngadau')) initHeroSelector(data, 'Unduk Ngadau');
     else if (path.includes('mrk'))          initHeroSelector(data, 'MRK');
     else if (path.includes('sugandoi'))     initHeroSelector(data, 'Sugandoi');
-    else if (path.includes('directory'))    await initDirectory(data);
     else if (!path.includes('winners'))     await initIndex(data);
     initNewsletter();
   } catch(err) { console.error('KDMR Media:', err); }
