@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/kdmr-media/",
+  base: "/kdmrmedia/",
   plugins: [tailwindcss()],
   resolve: {
     alias: {
