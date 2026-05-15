@@ -445,18 +445,18 @@
       "branch": "KDCA Sabah",
       "award": "Unduk Ngadau",
       "year": 2026,
-      "tribe": "Kadazan Dusun",
-      "district": "Tuaran",
+      "tribe": "Dusun",
+      "district": "Tamparuli",
       "origin": "KDCA Tamparuli",
       "accentColor": "#f0a820",
-      "badge": "Top Contender",
+      "badge": "State Level Finalist 2026",
       "heritage": {
-        "group": "Kadazan Dusun Tamparuli",
-        "costume": "Tamparuli Sinuangga' in deep burgundy and gold, featuring an intricately hand-beaded himpogot sash and a ceremonial songkop crowned with fresh hibiscus — a Tamparuli signature touch",
+        "group": "Dusun Tamparuli",
+        "costume": "Sinuangga — Penampang-style adaptation in black and gold, with hand-beaded himpogot sash and manik breastplate, blending highland Dusun tradition with Penampang ceremonial elegance",
         "language": "Kadazan-Dusun"
       },
-      "bio": "Atitih Yatih Robert from KDCA Tamparuli is the standout frontrunner of the 2026 Unduk Ngadau season. A cultural studies graduate and practising traditional dancer, she wowed the preliminary judges with an encyclopedic knowledge of Tamparuli harvest rituals and a commanding sumazau performance. Community votes place her firmly at the top of the national rankings.",
-      "achievements": ["KDCA Tamparuli Unduk Ngadau 2026 — Top Contender", "Sumazau Dance Excellence Recognition", "Cultural Studies Graduate — Universiti Malaysia Sabah"],
+      "bio": "Atitih Yatih Robert from KDCA Tamparuli advanced as a State Level Finalist in the 2026 Unduk Ngadau season. Wearing a Penampang-style Sinuangga adaptation, she captivated judges with her commanding sumazau performance and encyclopedic knowledge of Tamparuli Dusun harvest rituals.",
+      "achievements": ["KDCA Tamparuli Unduk Ngadau 2026 — State Level Finalist", "Sumazau Dance Excellence Recognition", "Cultural Studies Graduate — Universiti Malaysia Sabah"],
       "votes": 487
     },
     {
@@ -465,18 +465,18 @@
       "branch": "KDCA Klang Valley",
       "award": "Unduk Ngadau",
       "year": 2026,
-      "tribe": "Kadazan",
+      "tribe": "Dusun",
       "district": "Klang Valley",
       "origin": "KDCA Klang Valley",
       "accentColor": "#f0a820",
-      "badge": "Klang Valley Winner",
+      "badge": "Juara KDCA Klang Valley 2026",
       "heritage": {
-        "group": "Kadazan (diaspora — KL)",
-        "costume": "Contemporary Sinuangga' reinterpreted by a Kota Kinabalu couturier — structured midnight-blue silk with hand-stitched gold manik panels, blending urban elegance with highland tradition",
+        "group": "Dusun (diaspora — Klang Valley)",
+        "costume": "Lapoi — the traditional Dusun woven ceremonial wrap in rich indigo and gold, complemented by hand-crafted manik beadwork and the iconic siung headdress of dried seeds and brass",
         "language": "Kadazan-Dusun"
       },
-      "bio": "Finafayena Primus is the 2026 KDCA Klang Valley Unduk Ngadau winner and a proud symbol of the KDM diaspora. A marketing professional and founding member of the KDCA KL Young Voices collective, she delivered a bilingual cultural address that moved the audience to a standing ovation — speaking of homeland, identity, and belonging from 1,600 kilometres away.",
-      "achievements": ["KDCA Klang Valley Unduk Ngadau Winner 2026", "KDCA KL Young Voices Founding Member", "Best Cultural Address — KDCA KL Preliminary 2026"],
+      "bio": "Finafayena Primus is the Juara Unduk Ngadau KDCA Klang Valley 2026 — a proud symbol of the KDM diaspora. Adorned in the Lapoi, the traditional Dusun ceremonial costume, she delivered a bilingual cultural address that moved the audience to a standing ovation, speaking of homeland, identity, and belonging from 1,600 kilometres away.",
+      "achievements": ["Juara Unduk Ngadau KDCA Klang Valley 2026", "Best Lapoi Costume Presentation 2026", "KDCA KL Young Voices Founding Member"],
       "votes": 391
     },
     {
@@ -489,13 +489,14 @@
       "district": "Putrajaya",
       "origin": "KDCA Putrajaya",
       "accentColor": "#f0a820",
+      "badge": "Juara KDCA Putrajaya 2026",
       "heritage": {
         "group": "Dusun (diaspora — Federal Territory)",
-        "costume": "Ivory and rose-gold Dusun ceremonial dress with a modern structured silhouette, hand-woven tinangkong insert panels and a sculpted suyang headdress commissioned from a Ranau master artisan",
+        "costume": "Sinuangga — Dusun interpretation in ivory and rose-gold with hand-woven tinangkong insert panels and a sculpted suyang headdress commissioned from a Ranau master artisan",
         "language": "Kadazan-Dusun (Dusun Ranau variant)"
       },
-      "bio": "Wendey Merrylen S. Jasmine carries her Dusun roots into the corridors of Putrajaya. A civil servant at the Ministry of Agriculture, she has championed the inclusion of indigenous food heritage into national food security policy. Her 2026 KDCA Putrajaya win recognised not just grace and poise, but a deep, articulate voice for her community on a national stage.",
-      "achievements": ["KDCA Putrajaya Unduk Ngadau Winner 2026", "Indigenous Food Heritage Policy Advocate", "Best Costume & Heritage Presentation — KDCA Putrajaya 2026"],
+      "bio": "Wendey Merrylen S. Jasmine is the Juara Unduk Ngadau KDCA Putrajaya 2026. A civil servant at the Ministry of Agriculture, she carries her Dusun roots into the corridors of Putrajaya, championing indigenous food heritage in national policy. Dressed in a Sinuangga Dusun interpretation, her victory was recognised for grace, cultural depth, and a powerful community voice.",
+      "achievements": ["Juara Unduk Ngadau KDCA Putrajaya 2026", "Indigenous Food Heritage Policy Advocate", "Best Costume & Heritage Presentation — KDCA Putrajaya 2026"],
       "votes": 334
     },
     {
@@ -504,19 +505,80 @@
       "branch": "KDCA Sabah",
       "award": "MRK",
       "year": 2026,
-      "tribe": "Kadazan Dusun",
+      "tribe": "Lotud",
       "district": "Tuaran",
       "origin": "KDCA Tuaran",
       "accentColor": "#4ade80",
-      "badge": "Buvazoi Tavantang",
+      "badge": "Buvazoi Tavantang Tuaran 2026",
       "heritage": {
-        "group": "Kadazan Tuaran (coastal plains)",
-        "costume": "Full Tuaran MRK ceremonial regalia — emerald and silver woven sinamot vest over jet-black trousers, paired with the ceremonial kagang rattan cap, a handcrafted parang in ceremonial sash, and layered warrior bead ornaments",
-        "language": "Kadazan-Dusun (Tuaran coastal dialect)"
+        "group": "Lotud (Tuaran)",
+        "costume": "Binadan — full Lotud traditional costume comprising the gomboton feathered headdress, kopo' black vest with colourful manik bead panels, layered warrior necklaces, and the ceremonial parang at the waist",
+        "language": "Lotud (Tuaran dialect)"
       },
-      "bio": "Kristern Olwen Jafili, honoured with the traditional title Buvazoi Tavantang — 'Guardian of the Cultural Flame' — is the 2026 MRK champion from KDCA Tuaran. A secondary school history teacher, he has spent five years independently compiling and publishing a digital compendium of Tuaran Kadazan oral traditions. His selection as MRK representative was unanimous among the judges.",
-      "achievements": ["KDCA Tuaran MRK 2026 — Buvazoi Tavantang", "Tuaran Kadazan Oral Traditions Digital Archive", "Judges' Unanimous Cultural Warrior Award 2026"],
+      "bio": "Kristern Olwen Jafili, honoured with the title Buvazoi Tavantang — 'Guardian of the Cultural Flame' — is the 2026 MRK champion from KDCA Tuaran. Representing the Lotud people, he wore the Binadan ceremonial costume with pride. A secondary school history teacher, he has independently compiled a digital compendium of Lotud oral traditions, and was selected unanimously by the judges.",
+      "achievements": ["Buvazoi Tavantang Tuaran — KDCA Sabah MRK 2026", "Lotud Oral Traditions Digital Compendium", "Judges' Unanimous Cultural Warrior Award 2026"],
       "votes": 298
+    },
+
+    {
+      "id": "win-019",
+      "name": "Deanera Clarissa Jamdin",
+      "branch": "KDCA Sarawak",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan",
+      "district": "Sarawak",
+      "origin": "KDCA Sarawak",
+      "accentColor": "#f0a820",
+      "badge": "Juara KDCA Sarawak 2026",
+      "heritage": {
+        "group": "Kadazan (diaspora — Sarawak)",
+        "costume": "Sinuangga — traditional Kadazan ceremonial dress in jet-black and gold, with hand-stitched manik beadwork, himpogot belt and songkop crown, representing the highland Kadazan identity carried across Borneo",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Deanera Clarissa Jamdin is the Juara Unduk Ngadau KDCA Sarawak 2026, representing the Kadazan diaspora community in the Land of the Hornbill. Dressed in the Sinuangga, she brought the traditions of Sabah's highland Kadazan to the Sarawak stage with grace and cultural authority, earning a unanimous decision from the judging panel.",
+      "achievements": ["Juara Unduk Ngadau KDCA Sarawak 2026", "Best Cultural Knowledge Award — Sarawak Region", "Cross-Borneo Cultural Heritage Ambassador"],
+      "votes": 267
+    },
+    {
+      "id": "win-020",
+      "name": "Gelvia Vanessa Jenny",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Papar",
+      "district": "Papar",
+      "origin": "KDCA Papar",
+      "accentColor": "#f0a820",
+      "badge": "District Winner Papar 2026",
+      "heritage": {
+        "group": "Kadazan Papar (coastal Sabah)",
+        "costume": "Sia do Binokian — the signature Papar Kadazan ceremonial attire in rich maroon and silver, distinguished by its unique binokian (layered sash) woven from pandanus leaf strips, paired with intricate tinuang silver jewellery",
+        "language": "Kadazan-Dusun (Papar coastal variant)"
+      },
+      "bio": "Gelvia Vanessa Jenny, District Winner from KDCA Papar 2026, wore the distinctive Sia do Binokian — a costume unique to the Kadazan Papar community of coastal Sabah. Her confident presentation of the binokian weaving tradition and deep knowledge of coastal Kadazan harvest ceremonies set her apart as a champion of her district's heritage.",
+      "achievements": ["KDCA Papar District Winner — Unduk Ngadau 2026", "Sia do Binokian Heritage Presentation Award", "Kadazan Papar Coastal Traditions Advocate"],
+      "votes": 198
+    },
+    {
+      "id": "win-021",
+      "name": "TBA — Sugandoi Champion",
+      "branch": "KDCA Sabah",
+      "award": "Sugandoi",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Sabah",
+      "origin": "KDCA Sabah",
+      "accentColor": "#60a5fa",
+      "badge": "Finalist 2026",
+      "heritage": {
+        "group": "Kadazan Dusun",
+        "costume": "TBA",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The 2026 Sugandoi champion will be announced at the Hari Kaamatan celebration. This space is reserved for the voice that will carry the song of the KDMR people into the new decade.",
+      "achievements": ["Sugandoi 2026 — Finalist", "Hari Kaamatan Vocal Competition"],
+      "votes": 0
     },
 
     { "id":"leg-001","name":"Norlinda Garai","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
