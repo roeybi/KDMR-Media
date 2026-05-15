@@ -2,26 +2,27 @@
   "winners": [
     {
       "id": "win-001",
-      "name": "Adriana Kimpin",
+      "name": "Atitih Yati Robert",
       "branch": "KDCA Sabah",
       "award": "Unduk Ngadau",
       "year": 2025,
-      "tribe": "Kadazan",
-      "district": "Penampang",
-      "origin": "KDCA Penampang",
+      "tribe": "Dusun",
+      "district": "Tamparuli",
+      "origin": "KDCA Tamparuli",
       "accentColor": "#f0a820",
+      "badge": "65th Unduk Ngadau — State Champion",
       "heritage": {
-        "group": "Kadazan Penampang",
-        "costume": "Traditional Sinuangga' dress woven in black & gold, adorned with himpogot (belt) and manik (beadwork) breastplate",
+        "group": "Dusun Tamparuli",
+        "costume": "Sinuangga — Penampang-style adaptation in black and gold, adorned with hand-beaded himpogot sash and manik breastplate, representing the highland Dusun tradition of Tamparuli",
         "language": "Kadazan-Dusun"
       },
-      "bio": "Adriana captivated judges with her poise, depth of cultural knowledge, and graceful performance of the sumazau during the 2025 Hari Kaamatan national festival, earning the highest crown in KDCA Sabah.",
+      "bio": "Atitih Yati Robert was crowned the 65th Unduk Ngadau Kaamatan 2025 at Hongkod Koisaan, Penampang, triumphing over 51 finalists on 31 May 2025. A 26-year-old Bachelor of Education (Malay Language) graduate from Universiti Putra Malaysia, her victory was especially poignant — it was her second attempt, having first competed representing Kota Marudu eight years earlier. Her prize included RM17,500 cash, a RM35,000 NBUC scholarship, and a trip to South Korea.",
       "achievements": [
-        "KDCA Sabah Unduk Ngadau 2025",
-        "Best Cultural Knowledge Award",
-        "National-level representative"
+        "65th Unduk Ngadau Kaamatan 2025 — State Champion",
+        "RM35,000 NBUC Scholarship Recipient",
+        "People's Choice — 51-Finalist Grand Final"
       ],
-      "votes": 342,
+      "votes": 512,
       "imageUrl": "/images/Sample UN Winner.png"
     },
     {
@@ -338,24 +339,24 @@
     },
     {
       "id": "sug-001",
-      "name": "Jenifer Sindol",
+      "name": "Kimberley Myra Terence",
       "branch": "KDCA Sabah",
       "award": "Sugandoi",
       "year": 2025,
-      "tribe": "Kadazan",
-      "district": "Penampang",
-      "origin": "KDCA Penampang",
+      "tribe": "Kadazan Dusun",
+      "district": "Beluran",
+      "origin": "KDCA Beluran",
       "accentColor": "#60a5fa",
       "heritage": {
-        "group": "Kadazan Penampang",
-        "costume": "Traditional Sinuangga' adorned with silver songkop headpiece, performing in full ceremonial regalia",
+        "group": "Kadazan Dusun (Beluran)",
+        "costume": "Traditional Kadazan Dusun performance attire with ornamental beaded accessories and ceremonial regalia, performing at the KDCA Hall, Penampang",
         "language": "Kadazan-Dusun"
       },
-      "bio": "Jenifer's voice is described as carrying the sound of the Crocker Range — powerful, clear, and deeply rooted in Kadazan tonal tradition. Her 2025 Sugandoi victory at KDCA Sabah was marked by her flawless rendition of the ancient harvest song 'Pirousan do Bambazon', performed entirely without instrumental backing.",
+      "bio": "Kimberley Myra Terence, representing Beluran, was crowned State Sugandoi Kaamatan 2025 champion at the KDCA Hall, Penampang, in an event officiated by Datuk Seri Dr Jeffrey Kitingan. She described her Sugandoi Negeri 2025 victory as her second biggest title, having previously won Bintang Sandakanfm in 2023. Her soulful command of Kadazan-Dusun vocal tradition captivated both the audience and judges at the grand finale.",
       "achievements": [
-        "KDCA Sabah Sugandoi Champion 2025",
-        "Best Traditional Vocal Performance",
-        "Hari Kaamatan Cultural Excellence Award"
+        "State Sugandoi Kaamatan 2025 — Champion",
+        "Bintang Sandakanfm 2023 Winner",
+        "Kaamatan Vocal Excellence Award 2025"
       ],
       "votes": 278,
       "imageUrl": "/images/Sample Sugandoi Winner.png"
@@ -554,27 +555,27 @@
     },
     {
       "id": "win-015",
-      "name": "Atitih Yatih Robert",
+      "name": "Dyann Dharlla",
       "branch": "KDCA Sabah",
       "award": "Unduk Ngadau",
       "year": 2026,
-      "tribe": "Dusun",
-      "district": "Tamparuli",
-      "origin": "KDCA Tamparuli",
+      "tribe": "Kadazan Dusun",
+      "district": "Beluran",
+      "origin": "KDCA Beluran",
       "accentColor": "#f0a820",
-      "badge": "State Level Finalist 2026",
+      "badge": "District Champion Beluran 2026",
       "heritage": {
-        "group": "Dusun Tamparuli",
-        "costume": "Sinuangga — Penampang-style adaptation in black and gold, with hand-beaded himpogot sash and manik breastplate, blending highland Dusun tradition with Penampang ceremonial elegance",
+        "group": "Kadazan Dusun (Beluran)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Beluran district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
         "language": "Kadazan-Dusun"
       },
-      "bio": "Atitih Yatih Robert from KDCA Tamparuli advanced as a State Level Finalist in the 2026 Unduk Ngadau season. Wearing a Penampang-style Sinuangga adaptation, she captivated judges with her commanding sumazau performance and encyclopedic knowledge of Tamparuli Dusun harvest rituals.",
+      "bio": "Dyann Dharlla was crowned Unduk Ngadau Kaamatan Beluran 2026, taking home prizes worth thousands of ringgit — including RM5,000 cash and a travel package to Bali, Indonesia. Her grace, cultural depth, and commanding stage presence earned her the right to represent Beluran at the 2026 State Finals on 31 May at Hongkod Koisaan, Penampang, among 52 finalists from across Sabah and the diaspora.",
       "achievements": [
-        "KDCA Tamparuli Unduk Ngadau 2026 — State Level Finalist",
-        "Sumazau Dance Excellence Recognition",
-        "Cultural Studies Graduate — Universiti Malaysia Sabah"
+        "Unduk Ngadau Kaamatan Beluran 2026 — District Champion",
+        "RM5,000 Cash Prize & Bali Travel Package",
+        "Beluran Representative — 66th Unduk Ngadau State Finals"
       ],
-      "votes": 487,
+      "votes": 287,
       "imageUrl": "/images/Sample UN Winner.png"
     },
     {
@@ -1013,6 +1014,81 @@
       ],
       "votes": 0,
       "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-034",
+      "name": "Ceelecia Reeka Mosungin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Sandakan",
+      "origin": "KDCA Sandakan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Sandakan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Sandakan)",
+        "costume": "Traditional Sinuangga' ceremonial attire adorned with hand-crafted manik beadwork and the ornate silver songkop headdress, representing the Sandakan district",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Ceelecia Reeka Mosungin, 21, a student at Universiti Malaysia Sabah (Sandakan Campus), was crowned Unduk Ngadau Kaamatan Sandakan 2026 at the district-level celebration. Her youth and deep cultural knowledge made her a standout among the Sandakan finalists, earning her the honour of representing the district at the 2026 State Finals at Hongkod Koisaan on 31 May.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Sandakan 2026 — District Champion",
+        "UMS Sandakan Cultural Ambassador",
+        "Sandakan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 214,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "win-035",
+      "name": "Christebell Masius",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Ranau",
+      "origin": "KDCA Ranau",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Ranau 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Ranau highlands)",
+        "costume": "Highland Kadazan Dusun ceremonial attire in deep forest tones, featuring the distinctive suyang headdress and hand-pounded silver accessories of the Ranau tradition",
+        "language": "Kadazan-Dusun (Ranau highland variant)"
+      },
+      "bio": "Christebell Masius from Kampung Bongkud emerged as champion of the Unduk Ngadau Kaamatan Ranau 2026 final, held at Dewan Masyarakat Ranau. Her profound knowledge of highland Kadazan Dusun harvest traditions and her commanding stage presence secured her victory, earning the right to represent Ranau at the 66th Unduk Ngadau State Finals at Hongkod Koisaan on 31 May.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Ranau 2026 — District Champion",
+        "Dewan Masyarakat Ranau Grand Final Winner",
+        "Ranau Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 231,
+      "imageUrl": "/images/Sample UN Winner.png"
+    },
+    {
+      "id": "win-036",
+      "name": "Liane Melve Grace Lias",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kota Kinabalu",
+      "origin": "KDCA Bandaraya Kota Kinabalu",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Bandaraya KK 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kota Kinabalu urban)",
+        "costume": "Contemporary-traditional Sinuangga' reflecting the cosmopolitan spirit of Kota Kinabalu, adorned with manik beadwork and the himpogot ceremonial sash",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Liane Melve Grace Lias was officially named the Unduk Ngadau Kaamatan for Bandaraya Kota Kinabalu 2026, crowned at a celebratory event in the heart of Sabah's capital. Representing the urban face of KDM cultural pride, she carries the heritage of Kadazan Dusun tradition into the city stage and will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan on 31 May.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Bandaraya KK 2026 — District Champion",
+        "Kota Kinabalu Cultural Ambassador 2026",
+        "Bandaraya KK Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 256,
+      "imageUrl": "/images/Sample UN Winner.png"
     },
     {
       "id": "leg-001",
@@ -1752,51 +1828,51 @@
   "news": [
     {
       "id": "news-001",
-      "headline": "Hari Kaamatan 2026: Record Turnout Expected at Kadamaian Festival Grounds",
+      "headline": "RTK Randawi Tavantang Penampang 2026: Brendan Isaiah Tubong Crowned with RM29,000 Prize",
       "category": "Culture",
-      "date": "2026-05-10",
-      "summary": "Organizers of Sabah's biggest annual harvest festival anticipate over 80,000 visitors this year following the reopening of the expanded Kadamaian Festival Grounds in Penampang.",
-      "source": "Sabah Daily"
+      "date": "2026-05-15",
+      "summary": "Brendan Isaiah Tubong was crowned winner of the Randawi Tavantang Kaamatan (RTK) Penampang 2026, taking home prizes worth RM29,000 including cash, a study scholarship, and sponsored goods and services. The RTK male pageant continues to grow, having already been showcased at KDCA Sarawak and set to represent Malaysia in a cultural exchange in Indonesia.",
+      "source": "Daily Express"
     },
     {
       "id": "news-002",
-      "headline": "New KDM Language Preservation Fund Launched with RM2 Million Government Grant",
-      "category": "Education",
-      "date": "2026-05-08",
-      "summary": "The Ministry of National Unity has allocated RM2 million to establish a digital archive of Kadazan Dusun Murut Rungus oral histories and dialects, in partnership with Universiti Malaysia Sabah.",
-      "source": "Bernama"
+      "headline": "State-Level Momohiis, Manangon & Momoroisol Competition Opens This Saturday at Hongkod Koisaan",
+      "category": "Culture",
+      "date": "2026-05-15",
+      "summary": "The public is invited to witness the 2026 state-level Momohiis, Manangon, and Momoroisol Competition at the Hongkod Koisaan Penampang Hall this Saturday, 16 May, in conjunction with Tadau Kaamatan. The competitions celebrate traditional KDM knowledge, weaving, and storytelling arts.",
+      "source": "Daily Express"
     },
     {
       "id": "news-003",
-      "headline": "Rungus Beadwork Recognized by UNESCO as Intangible Cultural Heritage",
-      "category": "Heritage",
-      "date": "2026-05-03",
-      "summary": "The intricate manik beadwork tradition of the Rungus people of Kudat has been officially inscribed on UNESCO's Representative List of the Intangible Cultural Heritage of Humanity.",
-      "source": "The Star"
+      "headline": "Skyrocketing Airfares Crush Kaamatan Homecoming Hopes for Thousands of Sabahans",
+      "category": "Society",
+      "date": "2026-05-12",
+      "summary": "Thousands of Sabahans working in Peninsular Malaysia may be forced to miss Kaamatan 2026 as airfares have surged beyond reach. A one-way KL–KK fare now commands between RM812 and RM1,347, driven by global fuel supply disruptions following the closure of the Strait of Hormuz.",
+      "source": "Borneo Post"
     },
     {
       "id": "news-004",
-      "headline": "KDM Youth Startup Wins National Innovation Award with AI Dialect Translator",
-      "category": "Technology",
-      "date": "2026-04-28",
-      "summary": "A team of Kadazan Dusun entrepreneurs from Kota Kinabalu has won the national MYStartup Innovation Grand Prix with an AI-powered mobile app that translates between 12 KDM dialects in real time.",
-      "source": "Tech in Asia"
+      "headline": "CM Hajiji: Kaamatan 2026 Is a Festival That Unites All Sabahans Regardless of Background",
+      "category": "Politics",
+      "date": "2026-05-09",
+      "summary": "Chief Minister Datuk Seri Panglima Hajiji Noor urged every community in Sabah to participate in the month-long Kaamatan celebration, saying the harvest festival belongs to all Sabahans. He highlighted the 2026 theme 'Harvesting Unity, Celebrating Harmony' as a call for solidarity across all ethnic groups.",
+      "source": "Borneo Post"
     },
     {
       "id": "news-005",
-      "headline": "Sabah Govt Approves Indigenous Land Titles for 3,200 KDM Families in Ranau",
-      "category": "Society",
-      "date": "2026-04-21",
-      "summary": "Following years of advocacy by community groups, the Sabah government has approved native customary rights (NCR) land titles for over 3,200 Kadazan Dusun families in the Ranau district.",
-      "source": "Sabah Post"
+      "headline": "52 Finalists Confirmed for 66th Unduk Ngadau — Brand-New Two-Stage Grand Final Format",
+      "category": "Culture",
+      "date": "2026-05-01",
+      "summary": "KDCA has confirmed 52 finalists for the 66th Unduk Ngadau Kaamatan on 30–31 May at Hongkod Koisaan, Penampang. A new two-stage format sees pre-judging on May 30 narrow the field to 25, before a top 7 is named and one queen is crowned on May 31. Finalists represent districts across Sabah and KDCA branches in the Klang Valley, Putrajaya, Kuching, and Penang.",
+      "source": "KDCA / Sabah Tourism Board"
     },
     {
       "id": "news-006",
-      "headline": "Mount Kinabalu International Folklore Festival Returns in June 2026",
+      "headline": "Kaamatan 2026 Launched in Papar Under Theme 'Harvesting Unity, Celebrating Harmony'",
       "category": "Culture",
-      "date": "2026-04-15",
-      "summary": "The biennial folklore festival celebrating KDM and Bornean indigenous performing arts will return in June, featuring delegations from the Philippines, Indonesia, and Brunei alongside Sabahan groups.",
-      "source": "Borneo Post"
+      "date": "2026-05-01",
+      "summary": "The 66th Kaamatan Harvest Festival was officially launched in Papar on 1 May 2026, marking the start of a month-long celebration across Sabah. The theme — 'Harvesting Unity, Celebrating Harmony' — reflects cultural preservation across generations and the shared spirit of Sabah's diverse indigenous communities.",
+      "source": "Bernama"
     }
   ],
   "stats": {
