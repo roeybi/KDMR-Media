@@ -814,7 +814,7 @@ async function initIndex(data) {
     if (ctaEl)  ctaEl.href = '/unduk-ngadau/';
   }
 
-  // ── Bento Box 3: Countdown to Hari Kaamatan ─────────────────────────────
+  // ── Bento Box 3: Countdown + Schedule Drawer ────────────────────────────
   const countdownEl = document.getElementById('countdownNum');
   if (countdownEl) {
     const target = new Date('2026-05-30T00:00:00+08:00');
@@ -826,6 +826,81 @@ async function initIndex(data) {
       countdownEl.style.fontSize = '2rem';
       countdownEl.textContent = 'Today!';
     }
+  }
+
+  // Schedule events May 20–31 2026
+  const SCHEDULE = [
+    { date:'2026-05-20', day:'Wed · 20 May', title:'District Preliminaries Close',       desc:'All KDCA branches — final deadline for contest entries',                          type:'deadline'  },
+    { date:'2026-05-22', day:'Fri · 22 May', title:'Branch Winners Announced',            desc:'Official results published by all KDCA district branches',                       type:'announce'  },
+    { date:'2026-05-24', day:'Sun · 24 May', title:'State-Level Arrival & Registration',  desc:'Unduk Ngadau, MRK & Sugandoi state contestants arrive · Penampang',              type:'event'     },
+    { date:'2026-05-25', day:'Mon · 25 May', title:'Open Rehearsal',                      desc:'MRK & Sugandoi open rehearsal · KDCA Hall · Public welcome',                     type:'event'     },
+    { date:'2026-05-26', day:'Tue · 26 May', title:'Cultural Night & Costume Showcase',   desc:'Traditional attire parade · Public gallery open from 7:00 PM',                  type:'event'     },
+    { date:'2026-05-27', day:'Wed · 27 May', title:'Sugandoi Semi-Finals',                desc:'Vocal competition semi-finals · KDCA Auditorium · 8:00 PM',                      type:'final'     },
+    { date:'2026-05-28', day:'Thu · 28 May', title:'MRK State Final',                     desc:'Raja Kaamatan crowning night · KDCA Hall · 8:00 PM',                             type:'final'     },
+    { date:'2026-05-29', day:'Fri · 29 May', title:'Cultural Address & Sumazau',          desc:'Traditional dance showcase & cultural address — Unduk Ngadau contestants',       type:'event'     },
+    { date:'2026-05-30', day:'Sat · 30 May', title:'Hari Kaamatan — Day 1  ✦',           desc:'Unduk Ngadau & Sugandoi State Finals · Live broadcast · KDCA Complex',           type:'highlight' },
+    { date:'2026-05-31', day:'Sun · 31 May', title:'Hari Kaamatan — Day 2  ✦',           desc:'Coronation Ceremony · Grand Closing · Cultural Performances · All day',          type:'highlight' },
+  ];
+
+  const TYPE_STYLE = {
+    deadline:  { dot:'#f0a820', label:'Deadline',      labelColor:'rgba(240,168,32,0.18)',  textColor:'#f0a820' },
+    announce:  { dot:'#60a5fa', label:'Announcement',  labelColor:'rgba(96,165,250,0.14)',  textColor:'#60a5fa' },
+    event:     { dot:'#818cf8', label:'Event',         labelColor:'rgba(129,140,248,0.12)', textColor:'#818cf8' },
+    final:     { dot:'#4ade80', label:'Final',         labelColor:'rgba(74,222,128,0.12)',  textColor:'#4ade80' },
+    highlight: { dot:'#f0a820', label:'Main Event',    labelColor:'rgba(240,168,32,0.22)',  textColor:'#f0a820' },
+  };
+
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const rowsEl   = document.getElementById('scheduleRows');
+  if (rowsEl) {
+    rowsEl.innerHTML = SCHEDULE.map(ev => {
+      const s       = TYPE_STYLE[ev.type] || TYPE_STYLE.event;
+      const isPast  = ev.date < todayStr;
+      const isToday = ev.date === todayStr;
+      const rowBg   = isToday ? 'background:rgba(129,140,248,0.06);' : '';
+      const opacity = isPast  ? 'opacity:0.4;' : '';
+      const todayPill = isToday
+        ? `<span style="margin-left:8px;font-size:0.5rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(129,140,248,0.2);color:#818cf8;padding:2px 7px;border-radius:2px;">TODAY</span>`
+        : '';
+      return `
+        <div style="display:flex;align-items:flex-start;gap:14px;padding:11px 20px;border-bottom:1px solid #080818;${rowBg}${opacity}transition:background 0.15s;" onmouseover="if('${isPast}'!=='true')this.style.background='rgba(129,140,248,0.04)'" onmouseout="this.style.background='${isToday ? 'rgba(129,140,248,0.06)' : ''}'">
+          <div style="flex-shrink:0;padding-top:3px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:${s.dot};${isToday ? 'box-shadow:0 0 6px 2px ' + s.dot + '55;' : ''}"></div>
+          </div>
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:0.58rem;color:#3a3a6a;letter-spacing:0.06em;margin-bottom:3px;">${ev.day}${todayPill}</div>
+            <div style="font-size:0.78rem;font-weight:700;color:${isPast ? '#404050' : '#d0d0d8'};line-height:1.25;margin-bottom:3px;">${ev.title}</div>
+            <div style="font-size:0.62rem;color:${isPast ? '#252535' : '#2a2a48'};line-height:1.55;">${ev.desc}</div>
+          </div>
+          <div style="flex-shrink:0;">
+            <span style="font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:${s.labelColor};color:${s.textColor};padding:3px 8px;border-radius:2px;">${s.label}</span>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // Toggle open/close
+  const countdownBox  = document.getElementById('countdownBox');
+  const schedDrawer   = document.getElementById('scheduleDrawer');
+  const toggleIcon    = document.getElementById('schedToggleIcon');
+  if (countdownBox && schedDrawer) {
+    countdownBox.addEventListener('click', () => {
+      const isOpen = countdownBox.classList.toggle('sched-open');
+      if (isOpen) {
+        schedDrawer.style.maxHeight  = schedDrawer.scrollHeight + 'px';
+        schedDrawer.style.opacity    = '1';
+        schedDrawer.style.marginTop  = '0';
+        countdownBox.style.borderColor = 'rgba(129,140,248,0.45)';
+        countdownBox.style.boxShadow   = '0 0 22px 4px rgba(129,140,248,0.10)';
+        if (toggleIcon) { toggleIcon.textContent = 'Hide Schedule ↑'; toggleIcon.style.color = '#818cf8'; }
+      } else {
+        schedDrawer.style.maxHeight = '0';
+        schedDrawer.style.opacity   = '0';
+        countdownBox.style.borderColor = '#08082a';
+        countdownBox.style.boxShadow   = '';
+        if (toggleIcon) { toggleIcon.textContent = 'View Schedule ↓'; toggleIcon.style.color = '#3a3a6a'; }
+      }
+    });
   }
 
   // ── Floating Live Pill ticker ────────────────────────────────────────────

@@ -367,8 +367,11 @@
         </div>
 
         <!-- Box 3: Live Countdown -->
-        <div class="bento-box bento-sm reveal reveal-d2" style="background:#03030f;border-color:#08082a;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
-          <span class="bento-eyebrow" style="color:#818cf8;">Live Countdown</span>
+        <div id="countdownBox" class="bento-box bento-sm reveal reveal-d2" style="background:#03030f;border-color:#08082a;padding:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='rgba(129,140,248,0.4)';this.style.boxShadow='0 0 22px 4px rgba(129,140,248,0.08)'" onmouseout="if(!this.classList.contains('sched-open')){this.style.borderColor='#08082a';this.style.boxShadow=''}">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span class="bento-eyebrow" style="color:#818cf8;">Live Countdown</span>
+            <span id="schedToggleIcon" style="font-size:0.6rem;color:#3a3a6a;letter-spacing:0.06em;transition:color 0.2s;">View Schedule ↓</span>
+          </div>
           <div>
             <div id="countdownNum" style="font-size:3.2rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.04em;line-height:1;margin-bottom:4px;">—</div>
             <div style="font-size:0.65rem;color:#3a3a6a;letter-spacing:0.08em;text-transform:uppercase;">Days to State Final</div>
@@ -387,6 +390,26 @@
           <a href="./winners.html" style="font-size:0.62rem;font-weight:600;color:#f0a820;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:12px;" onclick="event.stopPropagation()">Browse all winners →</a>
         </div>
 
+      </div>
+
+      <!-- ── Schedule Drawer ──────────────────────────────────────── -->
+      <div id="scheduleDrawer" style="max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;opacity:0;margin-top:0;">
+        <div style="border:1px solid #0d0d2a;border-radius:4px;background:#020209;margin-top:12px;overflow:hidden;">
+          <!-- Drawer header -->
+          <div style="padding:16px 20px 12px;border-bottom:1px solid #0a0a1e;display:flex;align-items:center;justify-content:space-between;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="display:inline-block;width:3px;height:16px;background:#818cf8;border-radius:1px;"></span>
+              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#818cf8;">KDCA State-Level Schedule · May 2026</span>
+            </div>
+            <button onclick="document.getElementById('countdownBox').click();event.stopPropagation();" style="background:none;border:none;color:#3a3a6a;cursor:pointer;font-size:0.7rem;padding:4px 8px;letter-spacing:0.04em;transition:color 0.15s;" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='#3a3a6a'">Close ×</button>
+          </div>
+          <!-- Event rows — populated by JS -->
+          <div id="scheduleRows" style="padding:8px 0;"></div>
+          <!-- Footer note -->
+          <div style="padding:12px 20px;border-top:1px solid #0a0a1e;font-size:0.58rem;color:#252540;line-height:1.6;">
+            All times MYT (UTC+8) · Venue: KDCA Complex, Penampang, Sabah · Schedule subject to official KDCA confirmation
+          </div>
+        </div>
       </div>
     </section>
 
