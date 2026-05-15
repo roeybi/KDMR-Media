@@ -517,7 +517,47 @@
       "bio": "Kristern Olwen Jafili, honoured with the traditional title Buvazoi Tavantang — 'Guardian of the Cultural Flame' — is the 2026 MRK champion from KDCA Tuaran. A secondary school history teacher, he has spent five years independently compiling and publishing a digital compendium of Tuaran Kadazan oral traditions. His selection as MRK representative was unanimous among the judges.",
       "achievements": ["KDCA Tuaran MRK 2026 — Buvazoi Tavantang", "Tuaran Kadazan Oral Traditions Digital Archive", "Judges' Unanimous Cultural Warrior Award 2026"],
       "votes": 298
-    }
+    },
+
+    { "id":"leg-001","name":"Norlinda Garai","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
+    { "id":"leg-002","name":"Maziha Garon","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2015,"tribe":"Dusun","district":"Ranau","origin":"KDCA Ranau","legacy":true },
+    { "id":"leg-003","name":"Roselyn Kadang","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2014,"tribe":"Kadazan","district":"Tuaran","origin":"KDCA Tuaran","legacy":true },
+    { "id":"leg-004","name":"Florency Dusing","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2013,"tribe":"Dusun","district":"Keningau","origin":"KDCA Keningau","legacy":true },
+    { "id":"leg-005","name":"Anastasia Sindol","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2012,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
+    { "id":"leg-006","name":"Stephanie Kimpin","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2011,"tribe":"Rungus","district":"Kudat","origin":"KDCA Kudat","legacy":true },
+    { "id":"leg-007","name":"Jeanette Pangiran","branch":"KDCA Sabah","award":"Unduk Ngadau","year":2010,"tribe":"Murut","district":"Tenom","origin":"KDCA Tenom","legacy":true },
+
+    { "id":"leg-008","name":"Veronica Mojilun","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2016,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-009","name":"Patricia Gidabun","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2015,"tribe":"Dusun","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-010","name":"Sandra Lobikin","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2014,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-011","name":"Christine Tingan","branch":"KDCA Klang Valley","award":"Unduk Ngadau","year":2013,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+
+    { "id":"leg-012","name":"Angela Rambilin","branch":"KDCA Putrajaya","award":"Unduk Ngadau","year":2016,"tribe":"Dusun","district":"Putrajaya","origin":"KDCA Putrajaya","legacy":true },
+    { "id":"leg-013","name":"Diana Gunsanad","branch":"KDCA Putrajaya","award":"Unduk Ngadau","year":2015,"tribe":"Kadazan","district":"Putrajaya","origin":"KDCA Putrajaya","legacy":true },
+
+    { "id":"leg-014","name":"Bernard Garai","branch":"KDCA Sabah","award":"MRK","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
+    { "id":"leg-015","name":"Andrew Mansul","branch":"KDCA Sabah","award":"MRK","year":2015,"tribe":"Dusun","district":"Tambunan","origin":"KDCA Tambunan","legacy":true },
+    { "id":"leg-016","name":"Jerome Kimpin","branch":"KDCA Sabah","award":"MRK","year":2014,"tribe":"Murut","district":"Tenom","origin":"KDCA Tenom","legacy":true },
+    { "id":"leg-017","name":"Francis Gunsanad","branch":"KDCA Sabah","award":"MRK","year":2013,"tribe":"Kadazan","district":"Tuaran","origin":"KDCA Tuaran","legacy":true },
+    { "id":"leg-018","name":"Gilbert Garon","branch":"KDCA Sabah","award":"MRK","year":2012,"tribe":"Dusun","district":"Ranau","origin":"KDCA Ranau","legacy":true },
+    { "id":"leg-019","name":"Kenneth Pangiran","branch":"KDCA Sabah","award":"MRK","year":2011,"tribe":"Murut","district":"Keningau","origin":"KDCA Keningau","legacy":true },
+    { "id":"leg-020","name":"Michael Sindol","branch":"KDCA Sabah","award":"MRK","year":2010,"tribe":"Rungus","district":"Kudat","origin":"KDCA Kudat","legacy":true },
+
+    { "id":"leg-021","name":"Peter Rambilin","branch":"KDCA Klang Valley","award":"MRK","year":2016,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-022","name":"David Kadang","branch":"KDCA Klang Valley","award":"MRK","year":2015,"tribe":"Dusun","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-023","name":"Robert Garon","branch":"KDCA Klang Valley","award":"MRK","year":2014,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+
+    { "id":"leg-024","name":"Josephine Lobikin","branch":"KDCA Sabah","award":"Sugandoi","year":2016,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
+    { "id":"leg-025","name":"Catherine Dusing","branch":"KDCA Sabah","award":"Sugandoi","year":2015,"tribe":"Dusun","district":"Tambunan","origin":"KDCA Tambunan","legacy":true },
+    { "id":"leg-026","name":"Maria Tingan","branch":"KDCA Sabah","award":"Sugandoi","year":2014,"tribe":"Murut","district":"Tenom","origin":"KDCA Tenom","legacy":true },
+    { "id":"leg-027","name":"Cecelia Mojilun","branch":"KDCA Sabah","award":"Sugandoi","year":2013,"tribe":"Rungus","district":"Kudat","origin":"KDCA Kudat","legacy":true },
+    { "id":"leg-028","name":"Victoria Gidabun","branch":"KDCA Sabah","award":"Sugandoi","year":2012,"tribe":"Kadazan","district":"Ranau","origin":"KDCA Ranau","legacy":true },
+    { "id":"leg-029","name":"Felicia Kimpin","branch":"KDCA Sabah","award":"Sugandoi","year":2011,"tribe":"Kadazan","district":"Penampang","origin":"KDCA Penampang","legacy":true },
+    { "id":"leg-030","name":"Grace Pangiran","branch":"KDCA Sabah","award":"Sugandoi","year":2010,"tribe":"Dusun","district":"Keningau","origin":"KDCA Keningau","legacy":true },
+
+    { "id":"leg-031","name":"Theresa Sindol","branch":"KDCA Klang Valley","award":"Sugandoi","year":2016,"tribe":"Dusun","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-032","name":"Lorraine Garai","branch":"KDCA Klang Valley","award":"Sugandoi","year":2015,"tribe":"Kadazan","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true },
+    { "id":"leg-033","name":"Monica Mansul","branch":"KDCA Klang Valley","award":"Sugandoi","year":2014,"tribe":"Murut","district":"Klang Valley","origin":"KDCA Klang Valley","legacy":true }
   ],
 
   "hallOfFame": [

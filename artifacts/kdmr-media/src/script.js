@@ -313,6 +313,7 @@ function initGlobalSearch(data) {
 // Branch tabs — all eight KDCA branches
 const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Johor', 'Melaka', 'Sarawak', 'WP Labuan', 'Pulau Pinang'];
 const TAB_LABELS = { 'Sabah': 'Sabah (Central)' };
+const HERO_CUTOFF_YEAR = 2017; // 10-year rolling window: show hero carousel for this year and newer
 
 function branchMatchesTab(branch, tab) {
   return branch === 'KDCA ' + tab;
@@ -419,22 +420,60 @@ function switchTo(idx, immediate=false) {
   }, 300);
 }
 
+function renderLegacyRoll(tab) {
+  const el = document.getElementById('legacyRoll');
+  if (!el) return;
+  const legacy = hs.allWinners
+    .filter(w => w.award === hs.award && branchMatchesTab(w.branch, tab) && w.year < HERO_CUTOFF_YEAR)
+    .sort((a, b) => b.year - a.year);
+  if (!legacy.length) { el.style.display = 'none'; return; }
+  const branchLabel = TAB_LABELS[tab] || tab;
+  el.style.display = 'block';
+  el.innerHTML = `
+    <div style="max-width:960px;margin:0 auto;padding:36px 16px 52px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <span style="display:inline-block;width:3px;height:16px;background:#3a3a3a;border-radius:1px;"></span>
+        <h2 style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#555;margin:0;">The Legacy Roll</h2>
+        <span style="font-size:0.58rem;color:#383838;margin-left:auto;letter-spacing:0.06em;">${branchLabel} · ${HERO_CUTOFF_YEAR - 1} &amp; earlier</span>
+      </div>
+      <p style="font-size:0.68rem;color:#3a3a3a;margin:4px 0 18px;padding-left:13px;line-height:1.6;">Honouring every champion who came before the active decade.</p>
+      <div style="border:1px solid #1e1e1e;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:60px 1fr 1fr 120px;background:#0e0e0e;padding:8px 16px;border-bottom:1px solid #1e1e1e;">
+          <span style="font-size:0.52rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#3c3c3c;">Year</span>
+          <span style="font-size:0.52rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#3c3c3c;">Champion</span>
+          <span style="font-size:0.52rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#3c3c3c;">Origin</span>
+          <span style="font-size:0.52rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#3c3c3c;">Tribe</span>
+        </div>
+        ${legacy.map((w, i) => `
+          <div style="display:grid;grid-template-columns:60px 1fr 1fr 120px;padding:10px 16px;border-bottom:${i < legacy.length - 1 ? '1px solid #161616' : 'none'};transition:background 0.15s;" onmouseover="this.style.background='#0d0d0d'" onmouseout="this.style.background='transparent'">
+            <span style="font-size:0.8rem;font-weight:800;color:#585858;font-variant-numeric:tabular-nums;">${w.year}</span>
+            <span style="font-size:0.8rem;font-weight:600;color:#909090;">${w.name}</span>
+            <span style="font-size:0.75rem;color:#585858;">${w.origin || w.district}</span>
+            <span style="font-size:0.7rem;color:#484848;">${w.tribe}</span>
+          </div>`).join('')}
+      </div>
+    </div>
+  `;
+}
+
 function switchTab(tab) {
   hs.tab = tab;
   hs.list = hs.allWinners
-    .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab))
+    .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab) && w.year >= HERO_CUTOFF_YEAR)
     .sort((a,b) => b.year - a.year);
   hs.index = 0;
   renderTabs();
   if (!hs.list.length) {
-    // Show empty state
+    // Show empty hero state — may still have legacy entries below
     const card = document.getElementById('portraitCard');
     if (card) card.innerHTML = `<div style="padding-top:150%;position:relative;"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><div style="font-size:2rem;opacity:0.2;">✦</div><div style="font-size:0.78rem;color:#444;text-align:center;">No entries for ${tab}<br>yet</div></div></div>`;
     document.getElementById('statsPanel').innerHTML = '';
     document.getElementById('dotRow').innerHTML = '';
+    renderLegacyRoll(tab);
     return;
   }
   switchTo(0, true);
+  renderLegacyRoll(tab);
 }
 
 function initHeroSelector(data, award) {
@@ -443,12 +482,13 @@ function initHeroSelector(data, award) {
   // Pick first tab that has entries
   hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah';
   hs.list = hs.allWinners
-    .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab))
+    .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab) && w.year >= HERO_CUTOFF_YEAR)
     .sort((a,b) => b.year - a.year);
   hs.index = 0;
 
   renderTabs();
   if (hs.list.length) switchTo(0, true);
+  renderLegacyRoll(hs.tab);
 
   // Layout
   const heroMain=document.getElementById('heroMain');
