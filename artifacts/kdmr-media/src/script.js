@@ -427,7 +427,9 @@ function switchTo(idx, immediate=false) {
 
 function switchTab(tab) {
   hs.tab = tab;
-  hs.list = hs.allWinners.filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab));
+  hs.list = hs.allWinners
+    .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab))
+    .sort((a,b) => b.year - a.year);
   hs.index = 0;
   renderTabs();
   if (!hs.list.length) {
@@ -446,7 +448,9 @@ function initHeroSelector(data, award) {
   hs.award = award;
   // Pick first tab that has entries
   hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah';
-  hs.list = hs.allWinners.filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab));
+  hs.list = hs.allWinners
+    .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab))
+    .sort((a,b) => b.year - a.year);
   hs.index = 0;
 
   renderTabs();
