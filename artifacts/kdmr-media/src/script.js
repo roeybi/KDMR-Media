@@ -725,12 +725,23 @@ async function initIndex(data) {
     const avatarWrap = document.getElementById('heroAvatarWrap');
     if (avatarWrap && legend.imageUrl) {
       avatarWrap.innerHTML = '';
-      const img = document.createElement('img');
-      img.src = import.meta.env.BASE_URL.replace(/\/$/, '') + legend.imageUrl;
-      img.alt = legend.name;
-      img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:top center;display:block;';
-      img.onerror = () => { avatarWrap.innerHTML = `<span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">${initials(legend.name)}</span>`; };
-      avatarWrap.appendChild(img);
+      const photoUrl = import.meta.env.BASE_URL.replace(/\/$/, '') + legend.imageUrl;
+      // Use background-image so transparent PNG areas reveal the container's dark background.
+      // Must also set backgroundColor so transparent pixels show dark, not transparent.
+      avatarWrap.style.backgroundColor = '#0c0800';
+      avatarWrap.style.backgroundImage = `url('${photoUrl}')`;
+      avatarWrap.style.backgroundSize = 'cover';
+      avatarWrap.style.backgroundPosition = 'top center';
+      avatarWrap.style.backgroundRepeat = 'no-repeat';
+      // Invisible img for onerror fallback only
+      const probe = document.createElement('img');
+      probe.src = photoUrl;
+      probe.style.cssText = 'display:none;position:absolute;';
+      probe.onerror = () => {
+        avatarWrap.style.backgroundImage = '';
+        avatarWrap.innerHTML = `<span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">${initials(legend.name)}</span>`;
+      };
+      avatarWrap.appendChild(probe);
     } else if (ini) {
       ini.textContent = initials(legend.name);
     }
