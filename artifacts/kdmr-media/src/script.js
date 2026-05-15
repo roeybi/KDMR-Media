@@ -389,15 +389,30 @@ function renderStats(entry, panelId) {
 function renderDots() {
   const row = document.getElementById('dotRow'); if (!row) return;
   row.innerHTML = hs.list.map((_,i)=>`<div class="dot ${i===hs.index?'active':''}" data-i="${i}"></div>`).join('');
-  row.querySelectorAll('.dot').forEach(d => d.addEventListener('click', ()=>switchTo(parseInt(d.dataset.i))));
+  // Event delegation — one listener on container avoids accumulation on re-render
+  row.onclick = e => {
+    const dot = e.target.closest('.dot');
+    if (dot) switchTo(parseInt(dot.dataset.i));
+  };
 }
 
 function renderTabs() {
+  // Only update the active class — never re-attach listeners (avoids accumulation)
+  document.querySelectorAll('#branchTabs .branch-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === hs.tab);
+  });
+}
+
+function initBranchTabs() {
+  // Called once from initHeroSelector — sets up tabs + single event-delegated listener
   const el = document.getElementById('branchTabs'); if (!el) return;
   el.innerHTML = TABS.map(t =>
     `<button class="branch-tab ${t===hs.tab?'active':''}" data-tab="${t}">${TAB_LABELS[t]||t}</button>`
   ).join('');
-  el.querySelectorAll('.branch-tab').forEach(btn => btn.addEventListener('click', ()=>switchTab(btn.dataset.tab)));
+  el.onclick = e => {
+    const btn = e.target.closest('.branch-tab');
+    if (btn) switchTab(btn.dataset.tab);
+  };
 }
 
 function switchTo(idx, immediate=false) {
@@ -486,10 +501,9 @@ function renderEmptyState(tab) {
 }
 
 function switchTab(tab) {
-  if (hs.tab === tab && !hs.transitioning) {
-    // Re-clicking the active tab — do nothing
-    return;
-  }
+  if (hs.transitioning) return; // block all clicks during animation
+  if (hs.tab === tab) return;   // re-clicking the active tab — no-op
+
   hs.tab = tab;
   hs.list = hs.allWinners
     .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab) && w.year >= HERO_CUTOFF_YEAR)
@@ -544,8 +558,9 @@ function initHeroSelector(data, award) {
     .sort((a,b) => b.year - a.year);
   hs.index = 0;
 
-  renderTabs();
+  initBranchTabs(); // builds tabs + attaches one delegated listener
   if (hs.list.length) switchTo(0, true);
+  else renderEmptyState(hs.tab);
   renderLegacyRoll(hs.tab);
 
   // Layout
