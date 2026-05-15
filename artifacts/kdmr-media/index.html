@@ -3,222 +3,283 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KDMR Media — Cultural Archive & Community Hub</title>
-    <meta name="description" content="The official cultural archive, Hall of Fame, and community hub for the Kadazan Dusun Murut Rungus people of Sabah, Borneo." />
+    <title>KDMR Media — The Voice of Borneo's Indigenous Peoples</title>
+    <meta name="description" content="Cultural archive, Hall of Fame, and community news hub for the Kadazan Dusun Murut Rungus people of Sabah, Borneo." />
     <meta property="og:title" content="KDMR Media" />
-    <meta property="og:description" content="Cultural archive and community hub for the Kadazan Dusun Murut Rungus people." />
+    <meta property="og:description" content="The Voice of Borneo's Indigenous Peoples." />
     <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0a0a0a" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/index.css" />
   </head>
-  <body class="bg-[#faf5ee] min-h-screen" style="font-family:'Inter',system-ui,sans-serif;color:#1c0f00;">
+  <body style="background:#0a0a0a;color:#f0f0f0;">
 
-    <!-- Navigation -->
-    <nav style="background:#1a4436;" class="sticky top-0 z-50 shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <a href="./index.html" class="flex items-center gap-3">
-            <div style="background:#d4890a;" class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0">
-              <span style="color:#1c0f00;" class="font-bold text-sm">KM</span>
-            </div>
-            <span class="text-white font-bold text-xl tracking-tight" style="font-family:'Playfair Display',serif;">KDMR Media</span>
-          </a>
-          <div class="hidden md:flex items-center gap-8">
-            <a href="./index.html" class="text-white text-sm font-semibold border-b-2 border-[#d4890a] pb-0.5">Home</a>
-            <a href="./archive.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors">Hall of Fame</a>
-            <a href="./directory.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors">Business Directory</a>
-          </div>
-          <button id="mobileMenuBtn" class="md:hidden text-white p-2" aria-label="Open menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-        <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-white/20 mt-2 pt-3 space-y-2">
-          <a href="./index.html" class="block text-white text-sm font-medium py-1">Home</a>
-          <a href="./archive.html" class="block text-white/75 text-sm font-medium py-1">Hall of Fame</a>
-          <a href="./directory.html" class="block text-white/75 text-sm font-medium py-1">Business Directory</a>
-        </div>
+    <!-- ── Breaking news bar ───────────────────────────────────────── -->
+    <div id="breakingBar" style="background:#ff3b3b;overflow:hidden;height:32px;display:flex;align-items:center;">
+      <div style="flex-shrink:0;display:flex;align-items:center;gap:6px;padding:0 14px;border-right:1px solid rgba(255,255,255,0.3);height:100%;">
+        <span class="live-dot"></span>
+        <span style="font-size:0.65rem;font-weight:800;letter-spacing:0.12em;color:#fff;">LIVE</span>
       </div>
-    </nav>
-
-    <!-- Hero -->
-    <header style="background:linear-gradient(135deg,#1a4436 0%,#2a6650 45%,#1c3a2a 75%,#0f241a 100%);" class="relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none opacity-10">
-        <div style="background:#d4890a;" class="absolute top-0 left-0 right-0 h-1"></div>
-        <div style="background:#d4890a;" class="absolute bottom-0 left-0 right-0 h-1"></div>
-      </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
-        <div class="max-w-3xl">
-          <div class="flex items-center gap-3 mb-5">
-            <div style="background:#d4890a;" class="h-px w-8"></div>
-            <span style="color:#f0a820;" class="text-xs font-semibold uppercase tracking-widest">Sabah, Borneo</span>
-          </div>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" style="font-family:'Playfair Display',serif;">
-            Honouring the People<br/>
-            <span style="color:#f0a820;">of the Interior</span>
-          </h1>
-          <p class="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-            KDMR Media is the community-built cultural archive and living record of the Kadazan, Dusun, Murut, and Rungus peoples — their heroes, traditions, and enterprises.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="./archive.html" style="background:#d4890a;color:#1c0f00;" class="hover:opacity-90 font-semibold px-6 py-3 rounded-lg transition-opacity text-sm shadow-lg">
-              Explore Hall of Fame
-            </a>
-            <a href="./directory.html" class="border border-white/40 hover:border-white text-white font-medium px-6 py-3 rounded-lg transition-colors text-sm">
-              Business Directory
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Stats bar -->
-    <div style="background:#1c0f00;" class="text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div>
-            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statHof">—</div>
-            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">Hall of Fame</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statBiz">—</div>
-            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">KDM Businesses</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statTribes">—</div>
-            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">Tribes Represented</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold" style="color:#d4890a;font-family:'Playfair Display',serif;" id="statDistricts">—</div>
-            <div class="text-xs text-white/60 mt-1 uppercase tracking-wide">Districts</div>
-          </div>
+      <div style="flex:1;overflow:hidden;position:relative;">
+        <div class="ticker-track" id="breakingTicker" style="font-size:0.75rem;font-weight:500;color:#fff;gap:0;">
+          <!-- Filled by JS -->
         </div>
       </div>
     </div>
 
-    <!-- Main content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <!-- ── Sticky Nav ──────────────────────────────────────────────── -->
+    <nav id="mainNav" style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:50;">
+      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;gap:0;">
+        <!-- Logo -->
+        <a href="./index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
+          <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;letter-spacing:-0.03em;">KM</span>
+          </div>
+          <span style="font-size:0.95rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </a>
+        <!-- Desktop links -->
+        <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
+          <a href="./archive.html" class="nav-link">Archive</a>
+          <a href="./directory.html" class="nav-link">Directory</a>
+          <a href="./index.html#news" class="nav-link active">News</a>
+        </div>
+        <!-- Join + Search toggle -->
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button id="globalSearchToggle" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;" aria-label="Search">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+            </svg>
+          </button>
+          <a href="#join" style="background:#f0a820;color:#0a0a0a;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Join</a>
+          <!-- Mobile hamburger -->
+          <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;" aria-label="Menu">
+            <svg id="menuIconOpen" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="menuIconClose" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu dropdown -->
+      <div id="mobileMenu" style="display:none;border-top:1px solid #1e1e1e;padding:12px 16px;background:#0a0a0a;">
+        <a href="./archive.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Archive</a>
+        <a href="./directory.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Directory</a>
+        <a href="./index.html#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#f0f0f0;text-decoration:none;border-bottom:1px solid #1a1a1a;">News</a>
+        <a href="#join" style="display:inline-flex;margin-top:12px;background:#f0a820;color:#0a0a0a;font-size:0.8rem;font-weight:700;padding:8px 20px;border-radius:2px;text-decoration:none;">Join the community</a>
+      </div>
+    </nav>
+
+    <!-- ── Global Search Overlay ───────────────────────────────────── -->
+    <div id="searchOverlay" class="search-overlay" style="display:none;">
+      <div class="search-overlay-panel">
+        <div style="padding:16px;border-bottom:1px solid #252525;display:flex;align-items:center;gap:10px;">
+          <svg width="16" height="16" fill="none" stroke="#888" viewBox="0 0 24 24" style="flex-shrink:0;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+          </svg>
+          <input id="overlaySearchInput" type="search" placeholder="Search people, businesses, news..."
+            style="flex:1;background:transparent;border:none;outline:none;font-size:0.95rem;color:#f0f0f0;font-family:Inter,sans-serif;" />
+          <button id="overlayClose" style="background:transparent;border:none;cursor:pointer;color:#555;font-size:0.75rem;padding:4px 8px;">ESC</button>
+        </div>
+        <div id="overlaySearchHint" style="padding:24px 20px;color:#555;font-size:0.8rem;text-align:center;">
+          Start typing to search across Hall of Fame, Businesses, and News…
+        </div>
+        <div id="overlayResults" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- ── Hero ───────────────────────────────────────────────────── -->
+    <section style="background:#0a0a0a;padding:60px 16px 56px;min-height:72vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #1a1a1a;">
+      <div style="max-width:760px;margin:0 auto;width:100%;">
+        <!-- Eyebrow -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+          <span style="display:inline-block;width:24px;height:2px;background:#f0a820;flex-shrink:0;"></span>
+          <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:#f0a820;text-transform:uppercase;">Sabah, Borneo · Est. 2024</span>
+        </div>
+        <!-- Headline -->
+        <h1 style="font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;line-height:1.05;letter-spacing:-0.03em;margin:0 0 20px;color:#f0f0f0;">
+          The Voice of<br/>Borneo's Indigenous<br/><span style="color:#f0a820;">Peoples.</span>
+        </h1>
+        <!-- Subtext -->
+        <p style="font-size:1rem;color:#888;line-height:1.7;margin:0 0 32px;max-width:520px;font-weight:400;">
+          Cultural archive, Hall of Fame, and live news platform for the Kadazan, Dusun, Murut, and Rungus communities of Sabah.
+        </p>
+        <!-- Hero search bar -->
+        <div style="background:#141414;border:1px solid #2a2a2a;border-radius:3px;display:flex;overflow:hidden;max-width:600px;">
+          <select id="heroSearchCat" style="background:#1e1e1e;border:none;border-right:1px solid #2a2a2a;color:#888;font-size:0.75rem;font-weight:600;padding:0 12px;font-family:Inter,sans-serif;cursor:pointer;min-width:100px;outline:none;">
+            <option value="all">All</option>
+            <option value="hof">Hall of Fame</option>
+            <option value="biz">Businesses</option>
+            <option value="news">News</option>
+          </select>
+          <input id="heroSearchInput" type="search" placeholder="Search people, places, businesses…"
+            style="flex:1;background:transparent;border:none;outline:none;padding:14px 16px;font-size:0.875rem;color:#f0f0f0;font-family:Inter,sans-serif;min-width:0;" />
+          <button id="heroSearchBtn" style="background:#f0a820;border:none;padding:0 20px;cursor:pointer;color:#0a0a0a;font-weight:700;font-size:0.8rem;letter-spacing:0.04em;white-space:nowrap;font-family:Inter,sans-serif;">
+            Search
+          </button>
+        </div>
+        <!-- Quick links -->
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;">
+          <a href="./archive.html" style="font-size:0.72rem;color:#555;text-decoration:none;display:flex;align-items:center;gap:4px;">
+            <span style="color:#f0a820;">→</span> Hall of Fame
+          </a>
+          <a href="./directory.html" style="font-size:0.72rem;color:#555;text-decoration:none;display:flex;align-items:center;gap:4px;">
+            <span style="color:#f0a820;">→</span> Business Directory
+          </a>
+          <a href="./archive.html?category=Sports" style="font-size:0.72rem;color:#555;text-decoration:none;display:flex;align-items:center;gap:4px;">
+            <span style="color:#f0a820;">→</span> Sports
+          </a>
+          <a href="./archive.html?category=Arts+%26+Culture" style="font-size:0.72rem;color:#555;text-decoration:none;display:flex;align-items:center;gap:4px;">
+            <span style="color:#f0a820;">→</span> Arts &amp; Culture
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── News ticker ─────────────────────────────────────────────── -->
+    <div style="background:#141414;border-bottom:1px solid #1e1e1e;overflow:hidden;height:40px;display:flex;align-items:center;">
+      <div style="flex-shrink:0;display:flex;align-items:center;gap:7px;padding:0 16px;border-right:1px solid #252525;height:100%;">
+        <span class="live-dot"></span>
+        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;color:#f0a820;">NEWS</span>
+      </div>
+      <div style="flex:1;overflow:hidden;">
+        <div class="ticker-track" id="newsTicker" style="font-size:0.78rem;font-weight:400;color:#888;gap:0;">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Stats bar ───────────────────────────────────────────────── -->
+    <div style="background:#0f0f0f;border-bottom:1px solid #1a1a1a;padding:14px 16px;">
+      <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;" class="sm:grid-cols-4">
+        <div style="text-align:center;">
+          <div id="statHof" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#444;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Hall of Fame</div>
+        </div>
+        <div style="text-align:center;">
+          <div id="statBiz" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#444;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">KDM Businesses</div>
+        </div>
+        <div style="text-align:center;">
+          <div id="statTribes" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#444;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Tribes</div>
+        </div>
+        <div style="text-align:center;">
+          <div id="statDistricts" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#444;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Districts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Main content ────────────────────────────────────────────── -->
+    <main style="max-width:1200px;margin:0 auto;padding:32px 16px 60px;">
+      <div style="display:grid;grid-template-columns:1fr;gap:40px;">
 
         <!-- News feed -->
-        <div class="lg:col-span-2">
-          <div class="flex items-center gap-3 mb-2">
-            <div style="background:#d4890a;" class="h-px w-6"></div>
-            <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Community News</span>
+        <div id="news">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #1e1e1e;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="display:inline-block;width:3px;height:18px;background:#f0a820;border-radius:1px;"></span>
+              <h2 style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#f0f0f0;margin:0;">Latest News</h2>
+            </div>
           </div>
-          <h2 class="text-3xl font-bold mb-8" style="font-family:'Playfair Display',serif;">Latest Updates</h2>
-          <div id="newsFeed" class="space-y-5">
-            <div class="rounded-xl h-32 animate-pulse" style="background:#e8d9c4;"></div>
-            <div class="rounded-xl h-32 animate-pulse" style="background:#e8d9c4;"></div>
-            <div class="rounded-xl h-32 animate-pulse" style="background:#e8d9c4;"></div>
+          <div id="newsFeed" style="display:flex;flex-direction:column;gap:1px;">
+            <div class="skeleton" style="height:96px;margin-bottom:1px;"></div>
+            <div class="skeleton" style="height:96px;margin-bottom:1px;"></div>
+            <div class="skeleton" style="height:96px;"></div>
           </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="space-y-10">
+        <!-- Two-column: Top Voted + Featured Business -->
+        <div style="display:grid;grid-template-columns:1fr;gap:32px;">
 
           <!-- Top voted -->
           <div>
-            <div class="flex items-center gap-3 mb-2">
-              <div style="background:#d4890a;" class="h-px w-6"></div>
-              <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Community Picks</span>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #1e1e1e;">
+              <span style="display:inline-block;width:3px;height:18px;background:#f0a820;border-radius:1px;"></span>
+              <h2 style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#f0f0f0;margin:0;">Top Voted</h2>
+              <a href="./archive.html" style="margin-left:auto;font-size:0.72rem;color:#555;text-decoration:none;">View all →</a>
             </div>
-            <h2 class="text-2xl font-bold mb-5" style="font-family:'Playfair Display',serif;">Top Voted</h2>
-            <div id="topVoted" class="space-y-3">
-              <div class="rounded-lg h-16 animate-pulse" style="background:#e8d9c4;"></div>
-              <div class="rounded-lg h-16 animate-pulse" style="background:#e8d9c4;"></div>
-              <div class="rounded-lg h-16 animate-pulse" style="background:#e8d9c4;"></div>
+            <div id="topVoted" style="display:flex;flex-direction:column;gap:1px;">
+              <div class="skeleton" style="height:60px;margin-bottom:1px;"></div>
+              <div class="skeleton" style="height:60px;margin-bottom:1px;"></div>
+              <div class="skeleton" style="height:60px;"></div>
             </div>
-            <a href="./archive.html" style="color:#1a4436;" class="inline-block mt-4 text-sm font-semibold hover:underline">View all in Hall of Fame →</a>
           </div>
 
-          <!-- Featured business -->
+          <!-- Featured Business -->
           <div>
-            <div class="flex items-center gap-3 mb-2">
-              <div style="background:#d4890a;" class="h-px w-6"></div>
-              <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Featured Business</span>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #1e1e1e;">
+              <span style="display:inline-block;width:3px;height:18px;background:#f0a820;border-radius:1px;"></span>
+              <h2 style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#f0f0f0;margin:0;">Featured Business</h2>
+              <a href="./directory.html" style="margin-left:auto;font-size:0.72rem;color:#555;text-decoration:none;">Directory →</a>
             </div>
-            <h2 class="text-2xl font-bold mb-5" style="font-family:'Playfair Display',serif;">Spotlight</h2>
             <div id="featuredBusiness">
-              <div class="rounded-xl h-48 animate-pulse" style="background:#e8d9c4;"></div>
+              <div class="skeleton" style="height:160px;"></div>
             </div>
-            <a href="./directory.html" style="color:#1a4436;" class="inline-block mt-4 text-sm font-semibold hover:underline">Explore all KDM businesses →</a>
-          </div>
-
-          <!-- Quick links -->
-          <div class="rounded-xl p-6 border" style="background:rgba(26,68,54,0.06);border-color:rgba(26,68,54,0.18);">
-            <h3 class="font-bold text-lg mb-4" style="font-family:'Playfair Display',serif;">Quick Links</h3>
-            <ul class="space-y-3 text-sm">
-              <li><a href="./archive.html?category=Arts+%26+Culture" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Arts &amp; Culture figures</a></li>
-              <li><a href="./archive.html?category=Sports" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Sports legends</a></li>
-              <li><a href="./directory.html?category=Tourism+%26+Hospitality" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Tourism businesses</a></li>
-              <li><a href="./directory.html?category=Arts+%26+Crafts" style="color:#1a4436;" class="flex items-center gap-2 font-medium hover:underline"><span style="color:#d4890a;">→</span> Craft &amp; artisan shops</a></li>
-            </ul>
           </div>
 
         </div>
+
+        <!-- HOF preview -->
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #1e1e1e;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="display:inline-block;width:3px;height:18px;background:#f0a820;border-radius:1px;"></span>
+              <h2 style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#f0f0f0;margin:0;">Hall of Fame</h2>
+            </div>
+            <a href="./archive.html" style="font-size:0.72rem;color:#555;text-decoration:none;">View all →</a>
+          </div>
+          <div id="hofPreview" style="display:grid;grid-template-columns:1fr;gap:1px;">
+            <div class="skeleton" style="height:140px;margin-bottom:1px;"></div>
+            <div class="skeleton" style="height:140px;margin-bottom:1px;"></div>
+            <div class="skeleton" style="height:140px;"></div>
+          </div>
+        </div>
+
       </div>
-
-      <!-- HOF preview -->
-      <section class="mt-20">
-        <div class="flex items-center justify-between mb-8">
-          <div>
-            <div class="flex items-center gap-3 mb-2">
-              <div style="background:#d4890a;" class="h-px w-6"></div>
-              <span style="color:#d4890a;" class="text-xs font-semibold uppercase tracking-widest">Hall of Fame</span>
-            </div>
-            <h2 class="text-3xl font-bold" style="font-family:'Playfair Display',serif;">Community Icons</h2>
-          </div>
-          <a href="./archive.html" style="color:#1a4436;" class="hidden md:block text-sm font-semibold hover:underline">View all →</a>
-        </div>
-        <div id="hofPreview" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="rounded-xl h-52 animate-pulse" style="background:#e8d9c4;"></div>
-          <div class="rounded-xl h-52 animate-pulse" style="background:#e8d9c4;"></div>
-          <div class="rounded-xl h-52 animate-pulse" style="background:#e8d9c4;"></div>
-        </div>
-        <div class="mt-6 md:hidden">
-          <a href="./archive.html" style="color:#1a4436;" class="text-sm font-semibold hover:underline">View all in Hall of Fame →</a>
-        </div>
-      </section>
-
     </main>
 
-    <!-- Footer -->
-    <footer style="background:#1c0f00;" class="text-white mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- ── Join section ────────────────────────────────────────────── -->
+    <section id="join" style="background:#141414;border-top:1px solid #1e1e1e;padding:60px 16px;">
+      <div style="max-width:560px;margin:0 auto;text-align:center;">
+        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;color:#f0a820;text-transform:uppercase;">Community</span>
+        <h2 style="font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin:12px 0 14px;color:#f0f0f0;">Be part of the archive</h2>
+        <p style="font-size:0.9rem;color:#666;line-height:1.7;margin-bottom:28px;">Nominate a KDM icon, list your business, or submit a news story. KDMR Media is built by the community.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <a href="./archive.html" style="background:#f0a820;color:#0a0a0a;font-size:0.8rem;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;">Nominate a Figure</a>
+          <a href="./directory.html" style="border:1px solid #2a2a2a;color:#888;font-size:0.8rem;font-weight:600;padding:12px 24px;border-radius:2px;text-decoration:none;">List a Business</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ──────────────────────────────────────────────────── -->
+    <footer style="background:#0a0a0a;border-top:1px solid #1a1a1a;padding:32px 16px;">
+      <div style="max-width:1200px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
           <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div style="background:#d4890a;" class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
-                <span style="color:#1c0f00;" class="font-bold text-xs">KM</span>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+              <div style="width:22px;height:22px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;">
+                <span style="font-size:0.5rem;font-weight:900;color:#0a0a0a;">KM</span>
               </div>
-              <span class="font-bold text-lg" style="font-family:'Playfair Display',serif;">KDMR Media</span>
+              <span style="font-size:0.8rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;">KDMR MEDIA</span>
             </div>
-            <p class="text-white/60 text-sm leading-relaxed">A community-built archive celebrating the Kadazan, Dusun, Murut, and Rungus peoples of Sabah, Borneo.</p>
+            <p style="font-size:0.75rem;color:#444;line-height:1.6;margin:0;">Cultural archive for the Kadazan, Dusun, Murut &amp; Rungus peoples of Sabah, Borneo.</p>
           </div>
           <div>
-            <h4 class="font-semibold text-sm uppercase tracking-wide text-white/80 mb-4">Pages</h4>
-            <ul class="space-y-2 text-sm text-white/60">
-              <li><a href="./index.html" class="hover:text-white transition-colors">Home &amp; News</a></li>
-              <li><a href="./archive.html" class="hover:text-white transition-colors">Hall of Fame Archive</a></li>
-              <li><a href="./directory.html" class="hover:text-white transition-colors">Business Directory</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-semibold text-sm uppercase tracking-wide text-white/80 mb-4">Heritage Communities</h4>
-            <ul class="space-y-2 text-sm text-white/60">
-              <li>Kadazan — Penampang &amp; Papar</li>
-              <li>Dusun — Tambunan &amp; Ranau</li>
-              <li>Murut — Tenom &amp; Nabawan</li>
-              <li>Rungus — Kudat &amp; Pitas</li>
-            </ul>
+            <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;margin-bottom:10px;">Pages</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <a href="./index.html" style="font-size:0.78rem;color:#555;text-decoration:none;">Home &amp; News</a>
+              <a href="./archive.html" style="font-size:0.78rem;color:#555;text-decoration:none;">Hall of Fame</a>
+              <a href="./directory.html" style="font-size:0.78rem;color:#555;text-decoration:none;">Business Directory</a>
+            </div>
           </div>
         </div>
-        <div class="border-t border-white/10 mt-10 pt-6 text-center text-white/40 text-xs">
+        <div style="border-top:1px solid #1a1a1a;padding-top:16px;font-size:0.7rem;color:#333;text-align:center;">
           &copy; 2026 KDMR Media. Built for the community, by the community. Sabah, Malaysia.
         </div>
       </div>
@@ -226,8 +287,68 @@
 
     <script type="module" src="./src/script.js"></script>
     <script>
+      // ── Nav: desktop/mobile responsive ──
+      function applyNavLayout() {
+        const links = document.getElementById('navLinks');
+        const hamburger = document.getElementById('mobileMenuBtn');
+        if (window.innerWidth >= 768) {
+          links.style.display = 'flex';
+          hamburger.style.display = 'none';
+        } else {
+          links.style.display = 'none';
+          hamburger.style.display = 'flex';
+        }
+      }
+      applyNavLayout();
+      window.addEventListener('resize', applyNavLayout);
+
+      // Mobile menu toggle
       document.getElementById('mobileMenuBtn').addEventListener('click', function () {
-        document.getElementById('mobileMenu').classList.toggle('hidden');
+        const menu = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('menuIconOpen');
+        const iconClose = document.getElementById('menuIconClose');
+        const open = menu.style.display === 'block';
+        menu.style.display = open ? 'none' : 'block';
+        iconOpen.style.display = open ? 'block' : 'none';
+        iconClose.style.display = open ? 'none' : 'block';
+      });
+
+      // Hero search → open overlay
+      document.getElementById('heroSearchBtn').addEventListener('click', function () {
+        const val = document.getElementById('heroSearchInput').value.trim();
+        if (val) {
+          const overlay = document.getElementById('searchOverlay');
+          overlay.style.display = 'flex';
+          const input = document.getElementById('overlaySearchInput');
+          input.value = val;
+          input.dispatchEvent(new Event('input'));
+        }
+      });
+      document.getElementById('heroSearchInput').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') document.getElementById('heroSearchBtn').click();
+      });
+
+      // Search overlay toggle
+      document.getElementById('globalSearchToggle').addEventListener('click', function () {
+        const overlay = document.getElementById('searchOverlay');
+        overlay.style.display = 'flex';
+        setTimeout(() => document.getElementById('overlaySearchInput').focus(), 50);
+      });
+      document.getElementById('overlayClose').addEventListener('click', function () {
+        document.getElementById('searchOverlay').style.display = 'none';
+      });
+      document.getElementById('searchOverlay').addEventListener('click', function (e) {
+        if (e.target === this) this.style.display = 'none';
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.getElementById('searchOverlay').style.display = 'none';
+        }
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          document.getElementById('searchOverlay').style.display = 'flex';
+          setTimeout(() => document.getElementById('overlaySearchInput').focus(), 50);
+        }
       });
     </script>
   </body>

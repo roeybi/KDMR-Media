@@ -5,173 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hall of Fame — KDMR Media</title>
     <meta name="description" content="Search and explore the Hall of Fame celebrating notable Kadazan, Dusun, Murut, and Rungus individuals from Sabah." />
+    <meta name="theme-color" content="#0a0a0a" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/index.css" />
   </head>
-  <body class="bg-[#faf5ee] min-h-screen" style="font-family:'Inter',system-ui,sans-serif;color:#1c0f00;">
+  <body style="background:#0a0a0a;color:#f0f0f0;">
 
-    <!-- Navigation -->
-    <nav style="background:#1a4436;" class="sticky top-0 z-50 shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <a href="./index.html" class="flex items-center gap-3">
-            <div style="background:#d4890a;" class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0">
-              <span style="color:#1c0f00;" class="font-bold text-sm">KM</span>
-            </div>
-            <span class="text-white font-bold text-xl tracking-tight" style="font-family:'Playfair Display',serif;">KDMR Media</span>
-          </a>
-          <div class="hidden md:flex items-center gap-8">
-            <a href="./index.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors">Home</a>
-            <a href="./archive.html" class="text-white text-sm font-semibold border-b-2 border-[#d4890a] pb-0.5">Hall of Fame</a>
-            <a href="./directory.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors">Business Directory</a>
+    <!-- ── Nav ─────────────────────────────────────────────────────── -->
+    <nav style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:50;">
+      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
+        <a href="./index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
+          <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <span style="font-size:0.65rem;font-weight:900;color:#0a0a0a;letter-spacing:-0.03em;">KM</span>
           </div>
-          <button id="mobileMenuBtn" class="md:hidden text-white p-2">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span style="font-size:0.95rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </a>
+        <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
+          <a href="./archive.html" class="nav-link active">Archive</a>
+          <a href="./directory.html" class="nav-link">Directory</a>
+          <a href="./index.html#news" class="nav-link">News</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <a href="./index.html#join" style="background:#f0a820;color:#0a0a0a;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Join</a>
+          <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;">
+            <svg id="menuIconOpen" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
-          </button>
-        </div>
-        <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-white/20 mt-2 pt-3 space-y-2">
-          <a href="./index.html" class="block text-white/75 text-sm font-medium py-1">Home</a>
-          <a href="./archive.html" class="block text-white text-sm font-medium py-1">Hall of Fame</a>
-          <a href="./directory.html" class="block text-white/75 text-sm font-medium py-1">Business Directory</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Header -->
-    <div style="background:linear-gradient(135deg,#1a4436 0%,#2a6650 60%,#1c3a2a 100%);" class="py-14 px-4">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex items-center gap-3 mb-3">
-          <div style="background:#d4890a;" class="h-px w-8"></div>
-          <span style="color:#f0a820;" class="text-xs font-semibold uppercase tracking-widest">Cultural Archive</span>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-3" style="font-family:'Playfair Display',serif;">Hall of Fame</h1>
-        <p class="text-white/70 text-lg max-w-2xl">Celebrating notable Kadazan, Dusun, Murut, and Rungus individuals who shaped culture, history, and community across Sabah.</p>
-      </div>
-    </div>
-
-    <!-- Search & Filter Bar -->
-    <div style="background:#fff;border-bottom:1px solid #e8d9c4;" class="sticky top-16 z-40 shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div class="flex flex-col md:flex-row gap-3">
-          <!-- Search -->
-          <div class="relative flex-1">
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
-            </svg>
-            <input
-              id="hofSearch"
-              type="search"
-              placeholder="Search by name, tribe, district, or achievement..."
-              class="w-full pl-10 pr-4 py-2.5 border rounded-lg text-sm focus:outline-none focus:ring-2 transition-all"
-              style="border-color:#e8d9c4;background:#faf5ee;focus-ring-color:#d4890a;"
-            />
-          </div>
-          <!-- Sort -->
-          <select id="hofSort" class="border rounded-lg px-3 py-2.5 text-sm focus:outline-none bg-white" style="border-color:#e8d9c4;">
-            <option value="votes">Sort: Most Voted</option>
-            <option value="nameAsc">Sort: Name A–Z</option>
-            <option value="nameDesc">Sort: Name Z–A</option>
-          </select>
-        </div>
-        <!-- Category filter pills -->
-        <div class="flex gap-2 mt-3 overflow-x-auto pb-1 scrollbar-hide" id="categoryFilters">
-          <button class="filter-pill active whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all" data-cat="all"
-            style="background:#1a4436;color:#fff;">All</button>
-          <button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all" data-cat="Politics"
-            style="background:#f0e8d8;color:#1c0f00;">Politics</button>
-          <button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all" data-cat="Arts & Culture"
-            style="background:#f0e8d8;color:#1c0f00;">Arts &amp; Culture</button>
-          <button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all" data-cat="Sports"
-            style="background:#f0e8d8;color:#1c0f00;">Sports</button>
-          <button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all" data-cat="Education"
-            style="background:#f0e8d8;color:#1c0f00;">Education</button>
-          <button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all" data-cat="Entrepreneurship"
-            style="background:#f0e8d8;color:#1c0f00;">Entrepreneurship</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Results count -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-      <p id="resultsCount" class="text-sm text-gray-500">Loading entries…</p>
-    </div>
-
-    <!-- Grid -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-      <div id="hofGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-xl h-72 animate-pulse" style="background:#e8d9c4;"></div>
-        <div class="rounded-xl h-72 animate-pulse" style="background:#e8d9c4;"></div>
-        <div class="rounded-xl h-72 animate-pulse" style="background:#e8d9c4;"></div>
-        <div class="rounded-xl h-72 animate-pulse" style="background:#e8d9c4;"></div>
-        <div class="rounded-xl h-72 animate-pulse" style="background:#e8d9c4;"></div>
-        <div class="rounded-xl h-72 animate-pulse" style="background:#e8d9c4;"></div>
-      </div>
-      <div id="hofEmpty" class="hidden text-center py-20">
-        <div class="text-5xl mb-4">🔍</div>
-        <h3 class="font-bold text-xl mb-2" style="font-family:'Playfair Display',serif;">No results found</h3>
-        <p class="text-gray-500 text-sm">Try a different search term or category.</p>
-      </div>
-    </main>
-
-    <!-- Detail Modal -->
-    <div id="hofModal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);">
-      <div id="hofModalContent" class="bg-white w-full sm:max-w-2xl sm:rounded-2xl rounded-t-2xl overflow-hidden shadow-2xl max-h-[92vh] overflow-y-auto">
-        <!-- Header bar -->
-        <div style="background:#1a4436;" class="px-6 py-4 flex items-center justify-between">
-          <span id="modalCategory" class="text-xs font-semibold text-white/70 uppercase tracking-widest"></span>
-          <button id="modalClose" class="text-white/70 hover:text-white transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg id="menuIconClose" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none;">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
         </div>
-        <div class="p-6 sm:p-8">
-          <div class="flex items-start gap-5 mb-6">
-            <div id="modalAvatar" class="w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center text-2xl font-bold text-white" style="background:#1a4436;"></div>
+      </div>
+      <div id="mobileMenu" style="display:none;border-top:1px solid #1e1e1e;padding:12px 16px;background:#0a0a0a;">
+        <a href="./archive.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#f0f0f0;text-decoration:none;border-bottom:1px solid #1a1a1a;">Archive</a>
+        <a href="./directory.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Directory</a>
+        <a href="./index.html#news" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">News</a>
+      </div>
+    </nav>
+
+    <!-- ── Page header ─────────────────────────────────────────────── -->
+    <div style="background:#0d0d0d;border-bottom:1px solid #1a1a1a;padding:40px 16px 32px;">
+      <div style="max-width:1200px;margin:0 auto;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <a href="./index.html" style="font-size:0.72rem;color:#444;text-decoration:none;">Home</a>
+          <span style="color:#333;font-size:0.72rem;">/</span>
+          <span style="font-size:0.72rem;color:#888;">Archive</span>
+        </div>
+        <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;margin:0 0 8px;color:#f0f0f0;">Hall of Fame</h1>
+        <p style="font-size:0.875rem;color:#666;margin:0;max-width:520px;line-height:1.6;">Celebrating notable Kadazan, Dusun, Murut, and Rungus individuals who shaped culture, history, and community across Sabah.</p>
+      </div>
+    </div>
+
+    <!-- ── Sticky search & filter bar ─────────────────────────────── -->
+    <div style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:52px;z-index:40;">
+      <div style="max-width:1200px;margin:0 auto;padding:12px 16px;">
+        <div style="display:flex;gap:8px;margin-bottom:10px;">
+          <div style="position:relative;flex:1;">
+            <svg style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#444;" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+            </svg>
+            <input id="hofSearch" type="search" placeholder="Search by name, tribe, district, achievement…"
+              class="search-input"
+              style="width:100%;background:#141414;border:1px solid #252525;border-radius:2px;padding:9px 12px 9px 32px;font-size:0.8rem;color:#f0f0f0;font-family:Inter,sans-serif;outline:none;" />
+          </div>
+          <select id="hofSort" style="background:#141414;border:1px solid #252525;border-radius:2px;padding:0 10px;font-size:0.75rem;color:#888;font-family:Inter,sans-serif;cursor:pointer;outline:none;white-space:nowrap;">
+            <option value="votes">Most Voted</option>
+            <option value="nameAsc">A–Z</option>
+            <option value="nameDesc">Z–A</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;">
+          <button class="filter-btn active" data-cat="all">All</button>
+          <button class="filter-btn" data-cat="Politics">Politics</button>
+          <button class="filter-btn" data-cat="Arts & Culture">Arts &amp; Culture</button>
+          <button class="filter-btn" data-cat="Sports">Sports</button>
+          <button class="filter-btn" data-cat="Education">Education</button>
+          <button class="filter-btn" data-cat="Entrepreneurship">Entrepreneurship</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Results count ────────────────────────────────────────────── -->
+    <div style="max-width:1200px;margin:0 auto;padding:14px 16px 4px;">
+      <p id="resultsCount" style="font-size:0.72rem;color:#444;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;margin:0;"></p>
+    </div>
+
+    <!-- ── Grid ─────────────────────────────────────────────────────── -->
+    <main style="max-width:1200px;margin:0 auto;padding:8px 16px 60px;">
+      <div id="hofGrid" style="display:grid;grid-template-columns:1fr;gap:1px;">
+        <div class="skeleton" style="height:120px;margin-bottom:1px;"></div>
+        <div class="skeleton" style="height:120px;margin-bottom:1px;"></div>
+        <div class="skeleton" style="height:120px;margin-bottom:1px;"></div>
+        <div class="skeleton" style="height:120px;"></div>
+      </div>
+      <div id="hofEmpty" style="display:none;text-align:center;padding:60px 0;">
+        <div style="font-size:2.5rem;margin-bottom:12px;">🔍</div>
+        <h3 style="font-size:1rem;font-weight:700;color:#f0f0f0;margin:0 0 6px;">No results</h3>
+        <p style="font-size:0.8rem;color:#555;">Try a different search term or category.</p>
+      </div>
+    </main>
+
+    <!-- ── HOF Detail Modal ─────────────────────────────────────────── -->
+    <div id="hofModal" style="display:none;" class="modal-bg">
+      <div class="modal-panel">
+        <div style="background:#141414;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #252525;">
+          <span id="modalCategory" style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;"></span>
+          <button id="modalClose" style="background:transparent;border:none;cursor:pointer;color:#444;padding:4px;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div style="padding:24px 20px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;">
+            <div id="modalAvatar" style="width:52px;height:52px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;font-weight:800;color:#0a0a0a;background:#f0a820;letter-spacing:-0.02em;"></div>
             <div>
-              <h2 id="modalName" class="text-2xl font-bold" style="font-family:'Playfair Display',serif;"></h2>
-              <p id="modalMeta" class="text-sm text-gray-500 mt-1"></p>
-              <div id="modalTags" class="flex flex-wrap gap-2 mt-3"></div>
+              <h2 id="modalName" style="font-size:1.3rem;font-weight:800;letter-spacing:-0.02em;margin:0 0 4px;color:#f0f0f0;"></h2>
+              <p id="modalMeta" style="font-size:0.75rem;color:#555;margin:0 0 10px;"></p>
+              <div id="modalTags" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
             </div>
           </div>
-          <p id="modalBio" class="text-gray-700 leading-relaxed mb-6 text-sm"></p>
-          <div class="mb-6">
-            <h3 class="font-semibold text-sm uppercase tracking-wide mb-3" style="color:#1a4436;">Key Achievements</h3>
-            <ul id="modalAchievements" class="space-y-2"></ul>
+          <p id="modalBio" style="font-size:0.85rem;color:#888;line-height:1.75;margin-bottom:20px;"></p>
+          <div style="margin-bottom:20px;">
+            <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;margin-bottom:10px;">Achievements</div>
+            <ul id="modalAchievements" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;"></ul>
           </div>
-          <div class="flex items-center justify-between pt-5 border-t" style="border-color:#e8d9c4;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #1e1e1e;">
             <div>
-              <span class="text-sm text-gray-500">Community votes</span>
-              <span id="modalVoteCount" class="ml-2 font-bold" style="color:#d4890a;"></span>
+              <span style="font-size:0.72rem;color:#444;">Community votes · </span>
+              <span id="modalVoteCount" style="font-size:0.9rem;font-weight:800;color:#f0a820;"></span>
             </div>
-            <button id="modalVoteBtn" class="flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all"
-              style="background:#1a4436;color:#fff;">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+            <button id="modalVoteBtn" class="vote-btn">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
               </svg>
-              <span id="modalVoteBtnText">Vote</span>
+              <span id="modalVoteBtnText">Upvote</span>
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer style="background:#1c0f00;" class="text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-white/40 text-xs">
-        &copy; 2026 KDMR Media. Celebrating Kadazan, Dusun, Murut &amp; Rungus heritage. Sabah, Malaysia.
-      </div>
+    <!-- ── Footer ──────────────────────────────────────────────────── -->
+    <footer style="background:#0a0a0a;border-top:1px solid #1a1a1a;padding:20px 16px;text-align:center;">
+      <span style="font-size:0.7rem;color:#333;">&copy; 2026 KDMR Media · Sabah, Malaysia</span>
     </footer>
 
     <script type="module" src="./src/script.js"></script>
     <script>
+      function applyNavLayout() {
+        const links = document.getElementById('navLinks');
+        const hamburger = document.getElementById('mobileMenuBtn');
+        if (window.innerWidth >= 768) {
+          links.style.display = 'flex';
+          hamburger.style.display = 'none';
+        } else {
+          links.style.display = 'none';
+          hamburger.style.display = 'flex';
+        }
+      }
+      applyNavLayout();
+      window.addEventListener('resize', applyNavLayout);
       document.getElementById('mobileMenuBtn').addEventListener('click', function () {
-        document.getElementById('mobileMenu').classList.toggle('hidden');
+        const menu = document.getElementById('mobileMenu');
+        const open = menu.style.display === 'block';
+        menu.style.display = open ? 'none' : 'block';
+        document.getElementById('menuIconOpen').style.display = open ? 'block' : 'none';
+        document.getElementById('menuIconClose').style.display = open ? 'none' : 'block';
       });
     </script>
   </body>

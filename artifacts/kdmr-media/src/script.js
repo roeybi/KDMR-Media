@@ -1,186 +1,330 @@
 /**
  * KDMR Media — script.js
- * Handles: data loading, search, filtering, sorting, voting, and rendering
- * for all three pages (index, archive, directory).
+ * Handles: data loading, tickers, global search, HOF, directory, voting
  */
-
-// ─── Config ──────────────────────────────────────────────────────────────────
 
 const DATA_URL = './data.json';
 const VOTES_KEY = 'kdmr_votes';
 
-// ─── Data loading ────────────────────────────────────────────────────────────
+// ─── Data ─────────────────────────────────────────────────────────────────
 
+let _data = null;
 async function loadData() {
+  if (_data) return _data;
   const res = await fetch(DATA_URL);
   if (!res.ok) throw new Error('Failed to load data.json');
-  return res.json();
+  _data = await res.json();
+  return _data;
 }
 
-// ─── Vote helpers (localStorage) ─────────────────────────────────────────────
+// ─── Votes ────────────────────────────────────────────────────────────────
 
 function getVotes() {
-  try {
-    return JSON.parse(localStorage.getItem(VOTES_KEY) || '{}');
-  } catch {
-    return {};
-  }
+  try { return JSON.parse(localStorage.getItem(VOTES_KEY) || '{}'); }
+  catch { return {}; }
 }
-
-function hasVoted(id) {
-  return !!getVotes()[id];
-}
-
+function hasVoted(id) { return !!getVotes()[id]; }
 function castVote(id) {
   if (hasVoted(id)) return false;
-  const votes = getVotes();
-  votes[id] = true;
-  localStorage.setItem(VOTES_KEY, JSON.stringify(votes));
+  const v = getVotes(); v[id] = true;
+  localStorage.setItem(VOTES_KEY, JSON.stringify(v));
   return true;
 }
 
-// ─── Colour helpers ───────────────────────────────────────────────────────────
-
-const CATEGORY_COLORS = {
-  'Politics':       { bg: '#dbeafe', text: '#1e40af' },
-  'Arts & Culture': { bg: '#fce7f3', text: '#9d174d' },
-  'Sports':         { bg: '#d1fae5', text: '#065f46' },
-  'Education':      { bg: '#ede9fe', text: '#5b21b6' },
-  'Entrepreneurship': { bg: '#fef3c7', text: '#92400e' },
-};
-
-const BIZ_CATEGORY_COLORS = {
-  'Food & Beverage':     { bg: '#fef3c7', text: '#92400e' },
-  'Arts & Crafts':       { bg: '#fce7f3', text: '#9d174d' },
-  'Tourism & Hospitality': { bg: '#dbeafe', text: '#1e40af' },
-  'Health & Wellness':   { bg: '#d1fae5', text: '#065f46' },
-  'Agriculture':         { bg: '#dcfce7', text: '#166534' },
-  'Education':           { bg: '#ede9fe', text: '#5b21b6' },
-};
-
-function catStyle(cat, map = CATEGORY_COLORS) {
-  return map[cat] || { bg: '#f0e8d8', text: '#1c0f00' };
-}
+// ─── Helpers ──────────────────────────────────────────────────────────────
 
 function avatarInitial(name) {
   return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 }
 
-// ─── Page detection ───────────────────────────────────────────────────────────
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString('en-MY', { year: 'numeric', month: 'short', day: 'numeric' });
+}
 
-const PAGE = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+function animateCount(id, target) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let current = 0;
+  const step = Math.ceil(target / 30);
+  const interval = setInterval(() => {
+    current = Math.min(current + step, target);
+    el.textContent = current.toLocaleString();
+    if (current >= target) clearInterval(interval);
+  }, 28);
+}
 
-// ─── INDEX PAGE ──────────────────────────────────────────────────────────────
+function fadein(container) {
+  const items = container.querySelectorAll('[data-fade]');
+  items.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(6px)';
+    el.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+    setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 45);
+  });
+}
+
+const CAT_COLORS = {
+  'Politics':        { bg: 'rgba(59,130,246,0.1)', text: '#60a5fa' },
+  'Arts & Culture':  { bg: 'rgba(236,72,153,0.1)', text: '#f472b6' },
+  'Sports':          { bg: 'rgba(34,197,94,0.1)',  text: '#4ade80' },
+  'Education':       { bg: 'rgba(168,85,247,0.1)', text: '#c084fc' },
+  'Entrepreneurship':{ bg: 'rgba(251,191,36,0.1)', text: '#fbbf24' },
+};
+const BIZ_CAT_COLORS = {
+  'Food & Beverage':     { bg: 'rgba(251,191,36,0.1)', text: '#fbbf24' },
+  'Arts & Crafts':       { bg: 'rgba(236,72,153,0.1)', text: '#f472b6' },
+  'Tourism & Hospitality':{ bg:'rgba(59,130,246,0.1)', text: '#60a5fa' },
+  'Health & Wellness':   { bg: 'rgba(34,197,94,0.1)',  text: '#4ade80' },
+  'Agriculture':         { bg: 'rgba(74,222,128,0.1)', text: '#34d399' },
+  'Education':           { bg: 'rgba(168,85,247,0.1)', text: '#c084fc' },
+};
+function catCol(cat, map = CAT_COLORS) {
+  return map[cat] || { bg: 'rgba(240,168,32,0.08)', text: '#f0a820' };
+}
+
+// ─── Ticker ───────────────────────────────────────────────────────────────
+
+function buildTicker(trackId, items, separator = '  ·  ') {
+  const track = document.getElementById(trackId);
+  if (!track || !items.length) return;
+  const text = items.join(separator);
+  // Duplicate for seamless loop
+  track.innerHTML = `
+    <span style="padding-right:40px;">${text}</span>
+    <span style="padding-right:40px;" aria-hidden="true">${text}</span>
+  `;
+}
+
+// ─── Global search overlay (index page) ──────────────────────────────────
+
+function initGlobalSearch(data) {
+  const input = document.getElementById('overlaySearchInput');
+  const resultsEl = document.getElementById('overlayResults');
+  const hintEl = document.getElementById('overlaySearchHint');
+  if (!input) return;
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 2) {
+      resultsEl.style.display = 'none';
+      hintEl.style.display = 'block';
+      return;
+    }
+    hintEl.style.display = 'none';
+    resultsEl.style.display = 'block';
+
+    const hofMatches = data.hallOfFame.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      p.tribe.toLowerCase().includes(q) ||
+      p.district.toLowerCase().includes(q) ||
+      p.tags.some(t => t.toLowerCase().includes(q))
+    ).slice(0, 4);
+
+    const bizMatches = data.businesses.filter(b =>
+      b.name.toLowerCase().includes(q) ||
+      b.description.toLowerCase().includes(q) ||
+      b.location.toLowerCase().includes(q) ||
+      b.tags.some(t => t.toLowerCase().includes(q))
+    ).slice(0, 4);
+
+    const newsMatches = data.news.filter(n =>
+      n.headline.toLowerCase().includes(q) ||
+      n.summary.toLowerCase().includes(q) ||
+      n.category.toLowerCase().includes(q)
+    ).slice(0, 3);
+
+    const total = hofMatches.length + bizMatches.length + newsMatches.length;
+    if (total === 0) {
+      resultsEl.innerHTML = `<div style="padding:32px;text-align:center;color:#444;font-size:0.8rem;">No results for "<strong style="color:#888;">${q}</strong>"</div>`;
+      return;
+    }
+
+    let html = '';
+    if (hofMatches.length) {
+      html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-bottom:1px solid #1e1e1e;">Hall of Fame</div>`;
+      html += hofMatches.map(p => `
+        <a href="./archive.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;border-bottom:1px solid #1a1a1a;transition:background 0.1s;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='transparent'">
+          <div style="width:34px;height:34px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#0a0a0a;flex-shrink:0;">${avatarInitial(p.name)}</div>
+          <div>
+            <div style="font-size:0.85rem;font-weight:600;color:#f0f0f0;">${p.name}</div>
+            <div style="font-size:0.72rem;color:#555;">${p.tribe} · ${p.category}</div>
+          </div>
+          <div style="margin-left:auto;font-size:0.65rem;color:#333;flex-shrink:0;">HOF →</div>
+        </a>
+      `).join('');
+    }
+    if (bizMatches.length) {
+      html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-bottom:1px solid #1e1e1e;border-top:${hofMatches.length ? '1px solid #1e1e1e' : 'none'};">Businesses</div>`;
+      html += bizMatches.map(b => `
+        <a href="./directory.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;border-bottom:1px solid #1a1a1a;transition:background 0.1s;" onmouseover="this.style.background='#1a1a1a'" onmouseout="this.style.background='transparent'">
+          <div style="width:34px;height:34px;border-radius:2px;background:#1e1e1e;border:1px solid #2a2a2a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:#f0a820;flex-shrink:0;">${avatarInitial(b.name)}</div>
+          <div>
+            <div style="font-size:0.85rem;font-weight:600;color:#f0f0f0;">${b.name}</div>
+            <div style="font-size:0.72rem;color:#555;">${b.location} · ${b.category}</div>
+          </div>
+          <div style="margin-left:auto;font-size:0.65rem;color:#333;flex-shrink:0;">Dir →</div>
+        </a>
+      `).join('');
+    }
+    if (newsMatches.length) {
+      html += `<div style="padding:10px 16px 6px;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border-top:1px solid #1e1e1e;border-bottom:1px solid #1e1e1e;">News</div>`;
+      html += newsMatches.map(n => `
+        <div style="padding:12px 16px;border-bottom:1px solid #1a1a1a;">
+          <div style="font-size:0.62rem;font-weight:600;color:#f0a820;margin-bottom:4px;">${n.category.toUpperCase()} · ${formatDate(n.date)}</div>
+          <div style="font-size:0.82rem;font-weight:500;color:#f0f0f0;line-height:1.4;">${n.headline}</div>
+        </div>
+      `).join('');
+    }
+    resultsEl.innerHTML = html;
+  });
+}
+
+// ─── INDEX PAGE ───────────────────────────────────────────────────────────
 
 async function initIndex(data) {
   // Stats
-  const s = data.stats;
-  animateCount('statHof', s.hofEntries);
-  animateCount('statBiz', s.businesses);
-  animateCount('statTribes', s.tribesRepresented);
-  animateCount('statDistricts', s.districtsRepresented);
+  animateCount('statHof', data.stats.hofEntries);
+  animateCount('statBiz', data.stats.businesses);
+  animateCount('statTribes', data.stats.tribesRepresented);
+  animateCount('statDistricts', data.stats.districtsRepresented);
+
+  // Breaking bar ticker
+  buildTicker('breakingTicker', data.news.map(n => n.headline));
+
+  // News ticker
+  buildTicker('newsTicker', data.news.map(n => `${n.category.toUpperCase()}: ${n.headline} (${n.source})`));
 
   // News feed
-  const feed = document.getElementById('newsFeed');
-  if (feed) {
-    feed.innerHTML = data.news.map(item => `
-      <article class="bg-white rounded-xl p-5 shadow-sm border hover:shadow-md transition-shadow" style="border-color:#e8d9c4;" data-fade>
-        <div class="flex items-center gap-2 mb-2">
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold" style="background:#f0e8d8;color:#1c0f00;">${item.category}</span>
-          <span class="text-xs text-gray-400">${formatDate(item.date)}</span>
-          <span class="text-xs text-gray-300">·</span>
-          <span class="text-xs text-gray-400">${item.source}</span>
+  const feedEl = document.getElementById('newsFeed');
+  if (feedEl) {
+    feedEl.innerHTML = data.news.map(item => `
+      <article data-fade style="background:#111;border:1px solid #1e1e1e;padding:16px;display:flex;flex-direction:column;gap:8px;cursor:default;transition:border-color 0.15s;"
+        onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f0a820;">${item.category}</span>
+          <span style="color:#252525;font-size:0.72rem;">·</span>
+          <span style="font-size:0.72rem;color:#444;">${formatDate(item.date)}</span>
+          <span style="color:#252525;font-size:0.72rem;">·</span>
+          <span style="font-size:0.72rem;color:#333;">${item.source}</span>
         </div>
-        <h3 class="font-semibold text-base leading-snug mb-1" style="font-family:'Playfair Display',serif;">${item.headline}</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">${item.summary}</p>
+        <h3 style="font-size:0.95rem;font-weight:700;color:#f0f0f0;line-height:1.4;margin:0;letter-spacing:-0.01em;">${item.headline}</h3>
+        <p style="font-size:0.8rem;color:#555;line-height:1.65;margin:0;">${item.summary}</p>
       </article>
     `).join('');
-    animateFadeIn(feed);
+    fadein(feedEl);
   }
 
-  // Top voted HOF
-  const topVotedEl = document.getElementById('topVoted');
-  if (topVotedEl) {
-    const sorted = [...data.hallOfFame].sort((a, b) => b.votes - a.votes).slice(0, 4);
-    topVotedEl.innerHTML = sorted.map((p, i) => `
-      <div class="flex items-center gap-3 p-3 rounded-lg bg-white border hover:shadow-sm transition-shadow" style="border-color:#e8d9c4;" data-fade>
-        <span class="text-sm font-bold w-5 text-center flex-shrink-0" style="color:#d4890a;">${i + 1}</span>
-        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style="background:#1a4436;">${avatarInitial(p.name)}</div>
-        <div class="min-w-0">
-          <div class="text-sm font-semibold truncate">${p.name}</div>
-          <div class="text-xs text-gray-400">${p.tribe} · ${p.votes} votes</div>
+  // Top voted
+  const topEl = document.getElementById('topVoted');
+  if (topEl) {
+    const sorted = [...data.hallOfFame].sort((a, b) => b.votes - a.votes).slice(0, 5);
+    topEl.innerHTML = sorted.map((p, i) => `
+      <div data-fade style="display:flex;align-items:center;gap:10px;padding:10px;background:#111;border:1px solid #1e1e1e;transition:border-color 0.15s;"
+        onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <span style="font-size:0.75rem;font-weight:800;color:#333;width:16px;text-align:center;flex-shrink:0;">${i + 1}</span>
+        <div style="width:32px;height:32px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:#0a0a0a;flex-shrink:0;">${avatarInitial(p.name)}</div>
+        <div style="min-width:0;flex:1;">
+          <div style="font-size:0.82rem;font-weight:600;color:#f0f0f0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.name}</div>
+          <div style="font-size:0.7rem;color:#444;">${p.tribe} · ${p.category}</div>
         </div>
+        <span style="font-size:0.72rem;font-weight:700;color:#f0a820;flex-shrink:0;">${p.votes}</span>
       </div>
     `).join('');
-    animateFadeIn(topVotedEl);
+    fadein(topEl);
   }
 
-  // Featured business (random featured)
-  const featured = data.businesses.filter(b => b.featured);
-  const biz = featured[Math.floor(Math.random() * featured.length)];
-  const featuredEl = document.getElementById('featuredBusiness');
-  if (featuredEl && biz) {
-    const col = catStyle(biz.category, BIZ_CATEGORY_COLORS);
-    featuredEl.innerHTML = `
-      <div class="bg-white rounded-xl border overflow-hidden hover:shadow-md transition-shadow" style="border-color:#e8d9c4;" data-fade>
-        <div class="h-2" style="background:#b84c28;"></div>
-        <div class="p-5">
-          <div class="flex items-start justify-between gap-2 mb-3">
+  // Featured business
+  const bizEl = document.getElementById('featuredBusiness');
+  if (bizEl) {
+    const featured = data.businesses.filter(b => b.featured);
+    const biz = featured[Math.floor(Math.random() * featured.length)];
+    if (biz) {
+      const col = catCol(biz.category, BIZ_CAT_COLORS);
+      bizEl.innerHTML = `
+        <div data-fade style="background:#111;border:1px solid #1e1e1e;border-left:2px solid #f0a820;padding:16px;">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px;">
             <div>
-              <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold mb-2" style="background:${col.bg};color:${col.text};">${biz.category}</span>
-              <h3 class="font-bold text-base" style="font-family:'Playfair Display',serif;">${biz.name}</h3>
+              <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;color:${col.text};text-transform:uppercase;">${biz.category}</span>
+              <h3 style="font-size:1rem;font-weight:800;color:#f0f0f0;margin:4px 0 0;letter-spacing:-0.01em;">${biz.name}</h3>
             </div>
-            ${biz.verified ? '<span class="flex-shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#d4f0e4;color:#1a6640;">✓ Verified</span>' : ''}
+            ${biz.verified ? '<span style="font-size:0.6rem;font-weight:700;padding:2px 8px;background:#1a3a26;color:#4ade80;border-radius:2px;letter-spacing:0.08em;flex-shrink:0;">✓ VERIFIED</span>' : ''}
           </div>
-          <p class="text-xs text-gray-500 mb-2">📍 ${biz.location}</p>
-          <p class="text-sm text-gray-600 leading-relaxed">${biz.description.slice(0, 130)}…</p>
+          <p style="font-size:0.72rem;color:#444;margin:0 0 8px;">📍 ${biz.location}</p>
+          <p style="font-size:0.8rem;color:#666;line-height:1.6;margin:0;">${biz.description.slice(0, 140)}…</p>
+          <a href="./directory.html" style="display:inline-block;margin-top:14px;font-size:0.72rem;font-weight:600;color:#f0a820;text-decoration:none;">View in directory →</a>
         </div>
-      </div>
-    `;
-    animateFadeIn(featuredEl);
+      `;
+      fadein(bizEl);
+    }
   }
 
-  // HOF preview (top 3 by votes, excluding top-voted-sidebar ones)
-  const hofPreviewEl = document.getElementById('hofPreview');
-  if (hofPreviewEl) {
-    const preview = [...data.hallOfFame]
-      .sort((a, b) => b.votes - a.votes)
-      .slice(0, 6)
-      .slice(0, 3);
-    hofPreviewEl.innerHTML = preview.map(p => renderHofCard(p)).join('');
-    attachHofCardListeners(data.hallOfFame, data);
-    animateFadeIn(hofPreviewEl);
+  // HOF preview
+  const hofEl = document.getElementById('hofPreview');
+  if (hofEl) {
+    const preview = [...data.hallOfFame].sort((a, b) => b.votes - a.votes).slice(0, 3);
+    hofEl.innerHTML = preview.map(p => renderHofRow(p)).join('');
+    fadein(hofEl);
   }
+
+  // Global search
+  initGlobalSearch(data);
 }
 
-// ─── HALL OF FAME PAGE ────────────────────────────────────────────────────────
+// ─── HOF CARD (list row style) ────────────────────────────────────────────
+
+function renderHofRow(p) {
+  const col = catCol(p.category);
+  const voted = hasVoted(p.id);
+  return `
+    <article class="hof-card" data-id="${p.id}" data-fade
+      style="background:#111;border:1px solid #1e1e1e;padding:14px 16px;display:flex;align-items:flex-start;gap:14px;cursor:pointer;transition:border-color 0.15s;"
+      onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='#1e1e1e'">
+      <!-- Avatar -->
+      <div style="width:44px;height:44px;border-radius:2px;background:#f0a820;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem;font-weight:800;color:#0a0a0a;letter-spacing:-0.02em;">${avatarInitial(p.name)}</div>
+      <!-- Info -->
+      <div style="flex:1;min-width:0;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px;">
+          <div>
+            <h3 style="font-size:0.9rem;font-weight:700;color:#f0f0f0;margin:0 0 2px;letter-spacing:-0.01em;">${p.name}</h3>
+            <span style="font-size:0.68rem;color:#444;">${p.tribe} · ${p.district} · ${p.era}</span>
+          </div>
+          <span style="font-size:0.6rem;font-weight:700;padding:3px 8px;border-radius:2px;flex-shrink:0;background:${col.bg};color:${col.text};white-space:nowrap;">${p.category}</span>
+        </div>
+        <p style="font-size:0.78rem;color:#555;margin:6px 0 10px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${p.bio}</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="vote-btn ${voted ? 'voted' : ''}" data-id="${p.id}" onclick="event.stopPropagation()">
+            <svg width="11" height="11" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+            </svg>
+            <span class="vote-count-${p.id}">${p.votes}</span>
+          </button>
+          <span style="font-size:0.7rem;color:#333;">Click for details</span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+// ─── HOF ARCHIVE PAGE ─────────────────────────────────────────────────────
 
 async function initArchive(data) {
-  let currentCategory = 'all';
+  let currentCat = 'all';
   let currentSort = 'votes';
   let searchQuery = '';
 
-  // Pre-populate category from URL param
   const urlParams = new URLSearchParams(window.location.search);
   const urlCat = urlParams.get('category');
   if (urlCat) {
-    currentCategory = urlCat;
-    document.querySelectorAll('.filter-pill').forEach(btn => {
+    currentCat = urlCat;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
       const active = btn.dataset.cat === urlCat;
-      btn.style.background = active ? '#1a4436' : '#f0e8d8';
-      btn.style.color = active ? '#fff' : '#1c0f00';
+      btn.classList.toggle('active', active);
     });
   }
 
   function render() {
     let list = [...data.hallOfFame];
-
-    // Filter by category
-    if (currentCategory !== 'all') {
-      list = list.filter(p => p.category === currentCategory);
-    }
-
-    // Filter by search
+    if (currentCat !== 'all') list = list.filter(p => p.category === currentCat);
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       list = list.filter(p =>
@@ -192,114 +336,46 @@ async function initArchive(data) {
         p.tags.some(t => t.toLowerCase().includes(q))
       );
     }
-
-    // Sort
-    if (currentSort === 'votes') {
-      list.sort((a, b) => b.votes - a.votes);
-    } else if (currentSort === 'nameAsc') {
-      list.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (currentSort === 'nameDesc') {
-      list.sort((a, b) => b.name.localeCompare(a.name));
-    }
+    if (currentSort === 'votes') list.sort((a, b) => b.votes - a.votes);
+    else if (currentSort === 'nameAsc') list.sort((a, b) => a.name.localeCompare(b.name));
+    else if (currentSort === 'nameDesc') list.sort((a, b) => b.name.localeCompare(a.name));
 
     const grid = document.getElementById('hofGrid');
     const empty = document.getElementById('hofEmpty');
     const count = document.getElementById('resultsCount');
-
-    if (count) count.textContent = `${list.length} entr${list.length === 1 ? 'y' : 'ies'} found`;
-
-    if (list.length === 0) {
-      grid.innerHTML = '';
-      empty.classList.remove('hidden');
-      return;
-    }
-    empty.classList.add('hidden');
-    grid.innerHTML = list.map(p => renderHofCard(p)).join('');
-    attachHofCardListeners(data.hallOfFame, data);
-    animateFadeIn(grid);
+    if (count) count.textContent = `${list.length} ${list.length === 1 ? 'entry' : 'entries'} found`;
+    if (!list.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
+    empty.style.display = 'none';
+    grid.innerHTML = list.map(p => renderHofRow(p)).join('');
+    attachHofListeners(data.hallOfFame);
+    fadein(grid);
   }
 
-  // Category pills
-  document.querySelectorAll('.filter-pill').forEach(btn => {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      currentCategory = btn.dataset.cat;
-      document.querySelectorAll('.filter-pill').forEach(b => {
-        const active = b.dataset.cat === currentCategory;
-        b.style.background = active ? '#1a4436' : '#f0e8d8';
-        b.style.color = active ? '#fff' : '#1c0f00';
-      });
+      currentCat = btn.dataset.cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === currentCat));
       render();
     });
   });
-
-  // Search
-  const searchEl = document.getElementById('hofSearch');
-  if (searchEl) {
-    searchEl.addEventListener('input', e => {
-      searchQuery = e.target.value.trim();
-      render();
-    });
-  }
-
-  // Sort
-  const sortEl = document.getElementById('hofSort');
-  if (sortEl) {
-    sortEl.addEventListener('change', e => {
-      currentSort = e.target.value;
-      render();
-    });
-  }
+  const se = document.getElementById('hofSearch');
+  if (se) se.addEventListener('input', e => { searchQuery = e.target.value.trim(); render(); });
+  const so = document.getElementById('hofSort');
+  if (so) so.addEventListener('change', e => { currentSort = e.target.value; render(); });
 
   render();
-
-  // Modal
   initHofModal(data.hallOfFame);
 }
 
-function renderHofCard(p) {
-  const col = catStyle(p.category);
-  const voted = hasVoted(p.id);
-  return `
-    <article class="hof-card bg-white rounded-xl border overflow-hidden hover:shadow-lg transition-all cursor-pointer group" style="border-color:#e8d9c4;" data-id="${p.id}" data-fade>
-      <div class="h-1.5" style="background:#1a4436;"></div>
-      <div class="p-5">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm group-hover:scale-105 transition-transform" style="background:#1a4436;">${avatarInitial(p.name)}</div>
-          <div class="min-w-0">
-            <h3 class="font-bold text-base leading-snug" style="font-family:'Playfair Display',serif;">${p.name}</h3>
-            <p class="text-xs text-gray-400 mt-0.5">${p.tribe} · ${p.district}</p>
-          </div>
-        </div>
-        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold mb-3" style="background:${col.bg};color:${col.text};">${p.category}</span>
-        <p class="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">${p.bio}</p>
-        <div class="flex items-center justify-between pt-3 border-t" style="border-color:#f0e8d8;">
-          <span class="text-xs text-gray-400">${p.era}</span>
-          <button class="vote-inline-btn flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all" data-id="${p.id}"
-            style="${voted ? 'background:#d4890a;color:#fff;' : 'background:#f0e8d8;color:#1c0f00;'}">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
-            </svg>
-            <span class="vote-count-${p.id}">${p.votes}</span>
-          </button>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-function attachHofCardListeners(allEntries, data) {
-  // Open modal on card click
+function attachHofListeners(allEntries) {
   document.querySelectorAll('.hof-card').forEach(card => {
     card.addEventListener('click', e => {
-      if (e.target.closest('.vote-inline-btn')) return;
-      const id = card.dataset.id;
-      const entry = allEntries.find(p => p.id === id);
+      if (e.target.closest('.vote-btn')) return;
+      const entry = allEntries.find(p => p.id === card.dataset.id);
       if (entry) openHofModal(entry);
     });
   });
-
-  // Inline vote button
-  document.querySelectorAll('.vote-inline-btn').forEach(btn => {
+  document.querySelectorAll('.vote-btn').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
       const id = btn.dataset.id;
@@ -307,14 +383,11 @@ function attachHofCardListeners(allEntries, data) {
       if (!entry) return;
       if (castVote(id)) {
         entry.votes++;
-        const countEl = document.querySelector(`.vote-count-${id}`);
-        if (countEl) countEl.textContent = entry.votes;
-        btn.style.background = '#d4890a';
-        btn.style.color = '#fff';
-        // Update modal if open
-        const modalVoteCount = document.getElementById('modalVoteCount');
-        if (modalVoteCount && document.getElementById('hofModal').dataset.openId === id) {
-          modalVoteCount.textContent = entry.votes;
+        document.querySelectorAll(`.vote-count-${id}`).forEach(el => el.textContent = entry.votes);
+        document.querySelectorAll(`.vote-btn[data-id="${id}"]`).forEach(b => b.classList.add('voted'));
+        const mvc = document.getElementById('modalVoteCount');
+        if (mvc && document.getElementById('hofModal')?.dataset.openId === id) {
+          mvc.textContent = entry.votes;
           updateModalVoteBtn(id);
         }
       }
@@ -322,44 +395,30 @@ function attachHofCardListeners(allEntries, data) {
   });
 }
 
-let currentModalEntry = null;
+let _modalEntry = null;
 
 function initHofModal(allEntries) {
   const modal = document.getElementById('hofModal');
   if (!modal) return;
-
-  document.getElementById('modalClose')?.addEventListener('click', () => closeHofModal());
-  modal.addEventListener('click', e => {
-    if (e.target === modal) closeHofModal();
-  });
-
+  document.getElementById('modalClose')?.addEventListener('click', closeHofModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeHofModal(); });
   document.getElementById('modalVoteBtn')?.addEventListener('click', () => {
-    if (!currentModalEntry) return;
-    if (castVote(currentModalEntry.id)) {
-      currentModalEntry.votes++;
-      document.getElementById('modalVoteCount').textContent = currentModalEntry.votes;
-      updateModalVoteBtn(currentModalEntry.id);
-      // Update inline card if visible
-      const countEl = document.querySelector(`.vote-count-${currentModalEntry.id}`);
-      if (countEl) countEl.textContent = currentModalEntry.votes;
-      const inlineBtn = document.querySelector(`.vote-inline-btn[data-id="${currentModalEntry.id}"]`);
-      if (inlineBtn) {
-        inlineBtn.style.background = '#d4890a';
-        inlineBtn.style.color = '#fff';
-      }
+    if (!_modalEntry) return;
+    if (castVote(_modalEntry.id)) {
+      _modalEntry.votes++;
+      document.getElementById('modalVoteCount').textContent = _modalEntry.votes;
+      updateModalVoteBtn(_modalEntry.id);
+      document.querySelectorAll(`.vote-count-${_modalEntry.id}`).forEach(el => el.textContent = _modalEntry.votes);
+      document.querySelectorAll(`.vote-btn[data-id="${_modalEntry.id}"]`).forEach(b => b.classList.add('voted'));
     }
   });
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeHofModal();
-  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeHofModal(); });
 }
 
 function openHofModal(entry) {
-  currentModalEntry = entry;
+  _modalEntry = entry;
   const modal = document.getElementById('hofModal');
-  const col = catStyle(entry.category);
-
+  const col = catCol(entry.category);
   modal.dataset.openId = entry.id;
   document.getElementById('modalCategory').textContent = `${entry.category} · ${entry.subcategory}`;
   document.getElementById('modalName').textContent = entry.name;
@@ -367,19 +426,14 @@ function openHofModal(entry) {
   document.getElementById('modalBio').textContent = entry.bio;
   document.getElementById('modalVoteCount').textContent = entry.votes;
   document.getElementById('modalAvatar').textContent = avatarInitial(entry.name);
-
-  const tagsEl = document.getElementById('modalTags');
-  tagsEl.innerHTML = entry.tags.map(t =>
-    `<span class="px-2.5 py-0.5 rounded-full text-xs font-medium" style="background:${col.bg};color:${col.text};">${t}</span>`
+  document.getElementById('modalTags').innerHTML = entry.tags.map(t =>
+    `<span style="font-size:0.62rem;font-weight:600;padding:3px 8px;border-radius:2px;background:${col.bg};color:${col.text};letter-spacing:0.06em;">${t}</span>`
   ).join('');
-
-  const achEl = document.getElementById('modalAchievements');
-  achEl.innerHTML = entry.achievements.map(a =>
-    `<li class="flex items-start gap-2 text-sm"><span style="color:#d4890a;" class="flex-shrink-0 mt-0.5">✦</span>${a}</li>`
+  document.getElementById('modalAchievements').innerHTML = entry.achievements.map(a =>
+    `<li style="display:flex;align-items:flex-start;gap:8px;font-size:0.82rem;color:#888;"><span style="color:#f0a820;flex-shrink:0;margin-top:2px;">✦</span>${a}</li>`
   ).join('');
-
   updateModalVoteBtn(entry.id);
-  modal.classList.remove('hidden');
+  modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
 
@@ -387,55 +441,34 @@ function updateModalVoteBtn(id) {
   const btn = document.getElementById('modalVoteBtn');
   const txt = document.getElementById('modalVoteBtnText');
   if (!btn || !txt) return;
-  if (hasVoted(id)) {
-    btn.style.background = '#d4890a';
-    btn.style.color = '#fff';
-    txt.textContent = 'Voted';
-    btn.disabled = true;
-  } else {
-    btn.style.background = '#1a4436';
-    btn.style.color = '#fff';
-    txt.textContent = 'Vote';
-    btn.disabled = false;
-  }
+  if (hasVoted(id)) { btn.classList.add('voted'); txt.textContent = 'Voted'; btn.disabled = true; }
+  else { btn.classList.remove('voted'); txt.textContent = 'Upvote'; btn.disabled = false; }
 }
 
 function closeHofModal() {
   const modal = document.getElementById('hofModal');
-  if (modal) {
-    modal.classList.add('hidden');
-    modal.dataset.openId = '';
-    document.body.style.overflow = '';
-    currentModalEntry = null;
-  }
+  if (modal) { modal.style.display = 'none'; modal.dataset.openId = ''; document.body.style.overflow = ''; _modalEntry = null; }
 }
 
-// ─── DIRECTORY PAGE ───────────────────────────────────────────────────────────
+// ─── DIRECTORY PAGE ───────────────────────────────────────────────────────
 
 async function initDirectory(data) {
-  let currentCategory = 'all';
+  let currentCat = 'all';
   let currentSort = 'featured';
   let searchQuery = '';
 
-  // Pre-populate from URL
   const urlParams = new URLSearchParams(window.location.search);
   const urlCat = urlParams.get('category');
   if (urlCat) {
-    currentCategory = urlCat;
-    document.querySelectorAll('.biz-filter-pill').forEach(btn => {
-      const active = btn.dataset.cat === urlCat;
-      btn.style.background = active ? '#b84c28' : '#f0e8d8';
-      btn.style.color = active ? '#fff' : '#1c0f00';
+    currentCat = urlCat;
+    document.querySelectorAll('.biz-filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.cat === urlCat);
     });
   }
 
   function render() {
     let list = [...data.businesses];
-
-    if (currentCategory !== 'all') {
-      list = list.filter(b => b.category === currentCategory);
-    }
-
+    if (currentCat !== 'all') list = list.filter(b => b.category === currentCat);
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       list = list.filter(b =>
@@ -446,93 +479,70 @@ async function initDirectory(data) {
         b.tags.some(t => t.toLowerCase().includes(q))
       );
     }
-
-    if (currentSort === 'featured') {
-      list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
-    } else if (currentSort === 'nameAsc') {
-      list.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (currentSort === 'newest') {
-      list.sort((a, b) => b.founded - a.founded);
-    } else if (currentSort === 'oldest') {
-      list.sort((a, b) => a.founded - b.founded);
-    }
+    if (currentSort === 'featured') list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    else if (currentSort === 'nameAsc') list.sort((a, b) => a.name.localeCompare(b.name));
+    else if (currentSort === 'newest') list.sort((a, b) => b.founded - a.founded);
+    else if (currentSort === 'oldest') list.sort((a, b) => a.founded - b.founded);
 
     const grid = document.getElementById('bizGrid');
     const empty = document.getElementById('bizEmpty');
     const count = document.getElementById('bizResultsCount');
-
     if (count) count.textContent = `${list.length} business${list.length === 1 ? '' : 'es'} found`;
-
-    if (list.length === 0) {
-      grid.innerHTML = '';
-      empty.classList.remove('hidden');
-      return;
-    }
-    empty.classList.add('hidden');
-    grid.innerHTML = list.map(b => renderBizCard(b)).join('');
-    attachBizCardListeners(data.businesses);
-    animateFadeIn(grid);
+    if (!list.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
+    empty.style.display = 'none';
+    grid.innerHTML = list.map(b => renderBizRow(b)).join('');
+    attachBizListeners(data.businesses);
+    fadein(grid);
   }
 
-  document.querySelectorAll('.biz-filter-pill').forEach(btn => {
+  document.querySelectorAll('.biz-filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      currentCategory = btn.dataset.cat;
-      document.querySelectorAll('.biz-filter-pill').forEach(b => {
-        const active = b.dataset.cat === currentCategory;
-        b.style.background = active ? '#b84c28' : '#f0e8d8';
-        b.style.color = active ? '#fff' : '#1c0f00';
-      });
+      currentCat = btn.dataset.cat;
+      document.querySelectorAll('.biz-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === currentCat));
       render();
     });
   });
-
-  const searchEl = document.getElementById('bizSearch');
-  if (searchEl) {
-    searchEl.addEventListener('input', e => {
-      searchQuery = e.target.value.trim();
-      render();
-    });
-  }
-
-  const sortEl = document.getElementById('bizSort');
-  if (sortEl) {
-    sortEl.addEventListener('change', e => {
-      currentSort = e.target.value;
-      render();
-    });
-  }
+  const se = document.getElementById('bizSearch');
+  if (se) se.addEventListener('input', e => { searchQuery = e.target.value.trim(); render(); });
+  const so = document.getElementById('bizSort');
+  if (so) so.addEventListener('change', e => { currentSort = e.target.value; render(); });
 
   render();
   initBizModal(data.businesses);
 }
 
-function renderBizCard(b) {
-  const col = catStyle(b.category, BIZ_CATEGORY_COLORS);
+function renderBizRow(b) {
+  const col = catCol(b.category, BIZ_CAT_COLORS);
   return `
-    <article class="biz-card bg-white rounded-xl border overflow-hidden hover:shadow-lg transition-all cursor-pointer group" style="border-color:#e8d9c4;${b.featured ? 'border-top:3px solid #d4890a;' : ''}" data-id="${b.id}" data-fade>
-      ${b.featured ? '<div class="px-5 pt-3 pb-0"><span class="text-xs font-semibold" style="color:#d4890a;">★ Featured</span></div>' : '<div class="h-1.5" style="background:#b84c28;"></div>'}
-      <div class="p-5">
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="font-bold text-base leading-snug" style="font-family:'Playfair Display',serif;">${b.name}</h3>
-          ${b.verified ? '<span class="flex-shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#d4f0e4;color:#1a6640;">✓</span>' : ''}
+    <article class="biz-card" data-id="${b.id}" data-fade
+      style="background:#111;border:1px solid #1e1e1e;${b.featured ? 'border-left:2px solid #f0a820;' : ''}padding:14px 16px;display:flex;align-items:flex-start;gap:14px;cursor:pointer;transition:border-color 0.15s;"
+      onmouseover="this.style.borderColor='#2a2a2a'" onmouseout="this.style.borderColor='${b.featured ? '#f0a820' : '#1e1e1e'}'">
+      <!-- Logo placeholder -->
+      <div style="width:44px;height:44px;border-radius:2px;background:#1a1a1a;border:1px solid #252525;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:800;color:#f0a820;flex-shrink:0;">${avatarInitial(b.name)}</div>
+      <!-- Info -->
+      <div style="flex:1;min-width:0;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:2px;">
+          <div style="min-width:0;">
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:2px;">
+              ${b.featured ? '<span style="font-size:0.58rem;font-weight:700;color:#f0a820;letter-spacing:0.08em;">★ FEATURED</span>' : ''}
+              <span style="font-size:0.6rem;font-weight:700;padding:2px 7px;border-radius:2px;background:${col.bg};color:${col.text};letter-spacing:0.06em;">${b.category}</span>
+              ${b.verified ? '<span style="font-size:0.58rem;font-weight:700;padding:2px 7px;background:#1a3a26;color:#4ade80;border-radius:2px;letter-spacing:0.06em;">✓ VERIFIED</span>' : ''}
+            </div>
+            <h3 style="font-size:0.9rem;font-weight:700;color:#f0f0f0;margin:0;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${b.name}</h3>
+          </div>
+          <span style="font-size:0.68rem;color:#333;flex-shrink:0;white-space:nowrap;">Est. ${b.founded}</span>
         </div>
-        <p class="text-xs text-gray-400 mb-3">📍 ${b.location}</p>
-        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold mb-3" style="background:${col.bg};color:${col.text};">${b.category}</span>
-        <p class="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">${b.description}</p>
-        <div class="flex items-center justify-between pt-3 border-t text-xs text-gray-400" style="border-color:#f0e8d8;">
-          <span>Est. ${b.founded}</span>
-          <span class="text-[#b84c28] font-semibold group-hover:underline">View details →</span>
-        </div>
+        <p style="font-size:0.7rem;color:#444;margin:4px 0 6px;">📍 ${b.location}</p>
+        <p style="font-size:0.78rem;color:#555;margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${b.description}</p>
       </div>
     </article>
   `;
 }
 
-function attachBizCardListeners(allBiz) {
+function attachBizListeners(allBiz) {
   document.querySelectorAll('.biz-card').forEach(card => {
     card.addEventListener('click', () => {
-      const id = card.dataset.id;
-      const biz = allBiz.find(b => b.id === id);
+      const biz = allBiz.find(b => b.id === card.dataset.id);
       if (biz) openBizModal(biz);
     });
   });
@@ -541,150 +551,82 @@ function attachBizCardListeners(allBiz) {
 function initBizModal(allBiz) {
   const modal = document.getElementById('bizModal');
   if (!modal) return;
-
-  document.getElementById('bizModalClose')?.addEventListener('click', () => closeBizModal());
-  modal.addEventListener('click', e => {
-    if (e.target === modal) closeBizModal();
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeBizModal();
-  });
+  document.getElementById('bizModalClose')?.addEventListener('click', closeBizModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeBizModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBizModal(); });
 }
 
 function openBizModal(biz) {
   const modal = document.getElementById('bizModal');
-  const col = catStyle(biz.category, BIZ_CATEGORY_COLORS);
-
+  const col = catCol(biz.category, BIZ_CAT_COLORS);
   document.getElementById('bizModalCategory').textContent = `${biz.category} · ${biz.subcategory}`;
   document.getElementById('bizModalName').textContent = biz.name;
   document.getElementById('bizModalMeta').textContent = `${biz.tribe}-owned · Est. ${biz.founded} · ${biz.owner}`;
   document.getElementById('bizModalDesc').textContent = biz.description;
 
-  const verifiedEl = document.getElementById('bizModalVerified');
-  if (biz.verified) {
-    verifiedEl.classList.remove('hidden');
-    verifiedEl.classList.add('flex');
-  } else {
-    verifiedEl.classList.add('hidden');
-  }
+  const verified = document.getElementById('bizModalVerified');
+  verified.style.display = biz.verified ? 'inline-block' : 'none';
 
-  // Phone
-  const phoneWrap = document.getElementById('bizModalPhone');
-  if (biz.phone) {
-    phoneWrap.classList.remove('hidden');
-    phoneWrap.classList.add('flex');
-    const phoneLink = document.getElementById('bizModalPhoneLink');
-    phoneLink.href = `tel:${biz.phone.replace(/\s/g, '')}`;
-    phoneLink.textContent = biz.phone;
-  } else {
-    phoneWrap.classList.add('hidden');
+  function toggleContact(wrapId, linkId, href, text) {
+    const wrap = document.getElementById(wrapId);
+    if (!wrap) return;
+    if (text) {
+      wrap.style.display = 'flex';
+      const link = document.getElementById(linkId);
+      if (link) { link.href = href; link.textContent = text; }
+    } else {
+      wrap.style.display = 'none';
+    }
   }
+  toggleContact('bizModalPhone', 'bizModalPhoneLink', `tel:${(biz.phone || '').replace(/\s/g, '')}`, biz.phone);
+  toggleContact('bizModalEmail', 'bizModalEmailLink', `mailto:${biz.email || ''}`, biz.email);
 
-  // Email
-  const emailWrap = document.getElementById('bizModalEmail');
-  if (biz.email) {
-    emailWrap.classList.remove('hidden');
-    emailWrap.classList.add('flex');
-    const emailLink = document.getElementById('bizModalEmailLink');
-    emailLink.href = `mailto:${biz.email}`;
-    emailLink.textContent = biz.email;
-  } else {
-    emailWrap.classList.add('hidden');
-  }
-
-  // Location
   const locWrap = document.getElementById('bizModalLocation');
-  if (biz.location) {
-    locWrap.classList.remove('hidden');
-    locWrap.classList.add('flex');
-    document.getElementById('bizModalLocationText').textContent = biz.location;
-  }
+  if (locWrap) { locWrap.style.display = biz.location ? 'flex' : 'none'; const t = document.getElementById('bizModalLocationText'); if (t) t.textContent = biz.location; }
+  const hWrap = document.getElementById('bizModalHours');
+  if (hWrap) { hWrap.style.display = biz.hours ? 'flex' : 'none'; const t = document.getElementById('bizModalHoursText'); if (t) t.textContent = biz.hours; }
 
-  // Hours
-  const hoursWrap = document.getElementById('bizModalHours');
-  if (biz.hours) {
-    hoursWrap.classList.remove('hidden');
-    hoursWrap.classList.add('flex');
-    document.getElementById('bizModalHoursText').textContent = biz.hours;
-  }
-
-  // Tags
-  const tagsEl = document.getElementById('bizModalTags');
-  tagsEl.innerHTML = biz.tags.map(t =>
-    `<span class="px-2.5 py-0.5 rounded-full text-xs font-medium" style="background:${col.bg};color:${col.text};">${t}</span>`
+  document.getElementById('bizModalTags').innerHTML = biz.tags.map(t =>
+    `<span style="font-size:0.62rem;font-weight:600;padding:3px 8px;border-radius:2px;background:${col.bg};color:${col.text};letter-spacing:0.06em;">${t}</span>`
   ).join('');
 
-  // Website
-  const websiteWrap = document.getElementById('bizModalWebsiteWrap');
-  const websiteLink = document.getElementById('bizModalWebsite');
+  const webWrap = document.getElementById('bizModalWebsiteWrap');
+  const webLink = document.getElementById('bizModalWebsite');
   if (biz.website) {
-    websiteWrap.classList.remove('hidden');
-    websiteLink.href = `https://${biz.website}`;
-    websiteLink.querySelector('span') && (websiteLink.querySelector('span').textContent = 'Visit Website');
+    webWrap.style.display = 'block';
+    webLink.href = `https://${biz.website}`;
   } else {
-    websiteWrap.classList.add('hidden');
+    webWrap.style.display = 'none';
   }
 
-  modal.classList.remove('hidden');
+  modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
 
 function closeBizModal() {
   const modal = document.getElementById('bizModal');
-  if (modal) {
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
+  if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
 }
 
-// ─── Animation helpers ────────────────────────────────────────────────────────
-
-function animateCount(id, target) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  let current = 0;
-  const step = Math.ceil(target / 30);
-  const interval = setInterval(() => {
-    current = Math.min(current + step, target);
-    el.textContent = current.toLocaleString();
-    if (current >= target) clearInterval(interval);
-  }, 30);
-}
-
-function animateFadeIn(container) {
-  const items = container.querySelectorAll('[data-fade]');
-  items.forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(12px)';
-    el.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-    setTimeout(() => {
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-    }, i * 60);
-  });
-}
-
-function formatDate(dateStr) {
-  const d = new Date(dateStr);
-  return d.toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' });
-}
-
-// ─── Bootstrap ────────────────────────────────────────────────────────────────
+// ─── Bootstrap ────────────────────────────────────────────────────────────
 
 (async function init() {
   try {
     const data = await loadData();
-    const page = window.location.pathname;
-
-    if (page.includes('archive')) {
+    const path = window.location.pathname;
+    if (path.includes('archive')) {
       await initArchive(data);
-    } else if (page.includes('directory')) {
+    } else if (path.includes('directory')) {
       await initDirectory(data);
     } else {
-      // Default to index
       await initIndex(data);
     }
+    // Attach HOF card listeners on index page HOF preview
+    if (!path.includes('archive') && !path.includes('directory')) {
+      attachHofListeners(data.hallOfFame);
+      initHofModal(data.hallOfFame);
+    }
   } catch (err) {
-    console.error('KDMR Media: Failed to initialise —', err);
+    console.error('KDMR Media init error:', err);
   }
 })();
