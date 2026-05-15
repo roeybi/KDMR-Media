@@ -310,16 +310,12 @@ function initGlobalSearch(data) {
 
 // ─── HERO SELECTOR ────────────────────────────────────────────────────────
 
-// Tabs: Sabah | Klang Valley | Putrajaya | Other
-const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Other'];
-const PRIMARY_BRANCHES = ['KDCA Sabah', 'KDCA Klang Valley', 'KDCA Putrajaya'];
+// Branch tabs — all eight KDCA branches
+const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Johor', 'Melaka', 'Sarawak', 'WP Labuan', 'Pulau Pinang'];
+const TAB_LABELS = { 'Sabah': 'Sabah (Central)' };
 
 function branchMatchesTab(branch, tab) {
-  if (tab === 'Sabah')         return branch === 'KDCA Sabah';
-  if (tab === 'Klang Valley')  return branch === 'KDCA Klang Valley';
-  if (tab === 'Putrajaya')     return branch === 'KDCA Putrajaya';
-  if (tab === 'Other')         return !PRIMARY_BRANCHES.includes(branch);
-  return false;
+  return branch === 'KDCA ' + tab;
 }
 
 let hs = { allWinners:[], award:'', tab:'Sabah', list:[], index:0, transitioning:false };
@@ -400,7 +396,7 @@ function renderTabs() {
   // Only show tabs that have entries
   const activeTabs = TABS.filter(t => hs.allWinners.filter(w=>w.award===hs.award && branchMatchesTab(w.branch,t)).length > 0);
   el.innerHTML = activeTabs.map(t =>
-    `<button class="branch-tab ${t===hs.tab?'active':''}" data-tab="${t}">${t}</button>`
+    `<button class="branch-tab ${t===hs.tab?'active':''}" data-tab="${t}">${TAB_LABELS[t]||t}</button>`
   ).join('');
   el.querySelectorAll('.branch-tab').forEach(btn => btn.addEventListener('click', ()=>switchTab(btn.dataset.tab)));
 }
