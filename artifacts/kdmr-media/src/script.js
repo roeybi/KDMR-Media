@@ -456,24 +456,82 @@ function renderLegacyRoll(tab) {
   `;
 }
 
+function renderEmptyState(tab) {
+  const card = document.getElementById('portraitCard');
+  if (!card) return;
+  const branchLabel = TAB_LABELS[tab] || tab;
+  // Preserve all inner element IDs so renderPortrait() works after switching back to a data tab
+  card.innerHTML = `
+    <div id="portraitInner">
+      <div id="portraitBg" style="background:linear-gradient(160deg,rgba(240,168,32,0.04) 0%,transparent 60%);position:absolute;inset:0;"></div>
+      <div id="portraitPattern" style="position:absolute;inset:0;"></div>
+      <div id="portraitAccentLine" style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,rgba(240,168,32,0.18),transparent);opacity:0.7;"></div>
+      <div id="portraitGlyph" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);font-size:clamp(7rem,28vw,11rem);font-weight:900;opacity:0.035;color:#f0a820;user-select:none;pointer-events:none;"></div>
+      <div id="portraitAvatar" style="display:none;"></div>
+      <div id="portraitVignette" style="position:absolute;inset:0;background:radial-gradient(ellipse at center 80%,transparent 30%,rgba(6,6,6,0.7) 100%);pointer-events:none;"></div>
+      <div id="portraitGradient" style="position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(transparent,rgba(6,6,6,0.95));pointer-events:none;"></div>
+      <div id="portraitNameWrap" style="position:absolute;bottom:0;left:0;right:0;padding:20px 18px 18px;">
+        <div id="portraitAwardBadge" style="display:none;"></div>
+        <div id="portraitName" style="display:none;"></div>
+        <div id="portraitYear" style="display:none;"></div>
+      </div>
+    </div>
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:11px;padding:28px;text-align:center;pointer-events:none;">
+      <div style="font-size:2.6rem;opacity:0.09;color:#f0a820;line-height:1;user-select:none;">✦</div>
+      <div style="font-size:0.52rem;font-weight:800;letter-spacing:0.24em;text-transform:uppercase;color:rgba(240,168,32,0.28);">KDCA ${branchLabel}</div>
+      <div style="width:18px;height:1px;background:rgba(240,168,32,0.14);"></div>
+      <div style="font-size:0.88rem;font-weight:700;color:rgba(255,255,255,0.16);line-height:1.55;letter-spacing:-0.01em;">Archive<br>in Progress</div>
+      <div style="font-size:0.6rem;color:rgba(255,255,255,0.11);line-height:1.85;max-width:165px;letter-spacing:0.01em;">We are currently verifying historical data for this branch.</div>
+    </div>`;
+}
+
 function switchTab(tab) {
+  if (hs.tab === tab && !hs.transitioning) {
+    // Re-clicking the active tab — do nothing
+    return;
+  }
   hs.tab = tab;
   hs.list = hs.allWinners
     .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab) && w.year >= HERO_CUTOFF_YEAR)
     .sort((a,b) => b.year - a.year);
   hs.index = 0;
+
+  // ── 1. Update tab highlight IMMEDIATELY ────────────────────────────────
   renderTabs();
-  if (!hs.list.length) {
-    // Show empty hero state — may still have legacy entries below
-    const card = document.getElementById('portraitCard');
-    if (card) card.innerHTML = `<div style="padding-top:150%;position:relative;"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><div style="font-size:2rem;opacity:0.2;">✦</div><div style="font-size:0.78rem;color:#444;text-align:center;">No entries for ${tab}<br>yet</div></div></div>`;
-    document.getElementById('statsPanel').innerHTML = '';
-    document.getElementById('dotRow').innerHTML = '';
+
+  // ── 2. Fade out portrait + stats + legacy roll ─────────────────────────
+  const card    = document.getElementById('portraitCard');
+  const panel   = document.getElementById('statsPanel');
+  const dotRow  = document.getElementById('dotRow');
+  const legacyEl = document.getElementById('legacyRoll');
+  hs.transitioning = true;
+  card?.classList.add('fading');
+  panel?.classList.add('fading');
+  if (legacyEl) legacyEl.classList.add('fading');
+
+  // ── 3. After 300ms: render new content and fade back in ─────────────────
+  setTimeout(() => {
+    if (!hs.list.length) {
+      // ─ Cinematic "Archive in Progress" placeholder ─
+      renderEmptyState(tab);
+      if (panel)  panel.innerHTML  = '';
+      if (dotRow) dotRow.innerHTML = '';
+    } else {
+      const entry = hs.list[0];
+      renderPortrait(entry);
+      renderStats(entry, 'statsPanel');
+      const mob = document.getElementById('mobileStats');
+      if (mob?.style.display !== 'none') renderStats(entry, 'mobileStats');
+      renderDots();
+    }
+    card?.classList.remove('fading');
+    panel?.classList.remove('fading');
+    if (legacyEl) legacyEl.classList.remove('fading');
+    hs.transitioning = false;
+
+    // Legacy Roll updates after content is revealed
     renderLegacyRoll(tab);
-    return;
-  }
-  switchTo(0, true);
-  renderLegacyRoll(tab);
+  }, 300);
 }
 
 function initHeroSelector(data, award) {

@@ -234,6 +234,12 @@
   }
   .dot.active { background: #f0a820; width: 18px; border-radius: 3px; }
 
+  /* Legacy Roll fade */
+  #legacyRoll {
+    transition: opacity 0.3s ease;
+  }
+  #legacyRoll.fading { opacity: 0; }
+
   #statsPanel {
     backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
     background: rgba(8,8,8,0.78); border: 1px solid rgba(255,255,255,0.07);
