@@ -215,6 +215,38 @@ async function loadData() {
   return _data;
 }
 
+// ─── Date-based Featured Picker ───────────────────────────────────────────
+// Returns { featuredWinner, featuredSong } based on the current date so the
+// homepage feels updated every time a user returns.
+//   • Featured Winner  — rotates weekly through all voted winners
+//   • Featured Song    — rotates daily through the songs catalogue
+function pickFeatured(data, date = new Date()) {
+  const startOfYear = new Date(date.getFullYear(), 0, 1);
+  const dayOfYear   = Math.floor((date - startOfYear) / 864e5) + 1;
+  const weekIndex   = Math.floor((dayOfYear - 1) / 7); // increments every 7 days
+
+  // ── Featured Winner ──────────────────────────────────────────────────────
+  // Prefer current-year winners with actual votes; fall back to all-time pool.
+  const allW        = data.winners || [];
+  const currentYear = date.getFullYear();
+  const poolCurrent = allW.filter(w => w.year === currentYear && (w.votes || 0) > 0);
+  const poolAll     = allW.filter(w => (w.votes || 0) > 0);
+  const winnerPool  = poolCurrent.length >= 3 ? poolCurrent : poolAll;
+  // Sort descending so week 0 always starts with the season champion
+  const sorted      = [...winnerPool].sort((a, b) => (b.votes || 0) - (a.votes || 0));
+  const featuredWinner = sorted[weekIndex % sorted.length] || sorted[0] || null;
+
+  // ── Featured Song ────────────────────────────────────────────────────────
+  // Changes daily (uses raw day index, offset by 3 so it doesn't sync with winner).
+  const songs      = data.songs || [];
+  const dayIndex   = dayOfYear - 1;
+  const featuredSong = songs.length
+    ? songs[(dayIndex + 3) % songs.length]
+    : null;
+
+  return { featuredWinner, featuredSong };
+}
+
 // ─── Votes ────────────────────────────────────────────────────────────────
 
 function getVotes() { try { return JSON.parse(localStorage.getItem(VOTES_KEY) || '{}'); } catch { return {}; } }
@@ -661,12 +693,23 @@ async function initIndex(data) {
   animateCount('statTribes', data.stats.tribesRepresented);
   animateCount('statDistricts', data.stats.districtsRepresented);
 
-  // ── Cinematic Hero — Legend of the Week ─────────────────────────────────
-  // Pick highest-voted winner from 2026; fall back to overall highest
+  // ── Date-based Featured picks ────────────────────────────────────────────
+  const { featuredWinner, featuredSong } = pickFeatured(data);
   const allWinners = data.winners || [];
-  const legend =
-    [...allWinners].filter(w => w.year === 2026).sort((a, b) => b.votes - a.votes)[0] ||
-    [...allWinners].sort((a, b) => b.votes - a.votes)[0];
+
+  // ── Bento Box 1: This Season's Sound ────────────────────────────────────
+  if (featuredSong) {
+    const titleEl = document.getElementById('bentoSongTitle');
+    const metaEl  = document.getElementById('bentoSongMeta');
+    const quoteEl = document.getElementById('bentoSongQuote');
+    if (titleEl) titleEl.textContent = featuredSong.title;
+    if (metaEl)  metaEl.textContent  = `${featuredSong.category} · ${featuredSong.artist} · ${featuredSong.meta}`;
+    if (quoteEl) quoteEl.textContent = `"${featuredSong.quote}"`;
+  }
+
+  // ── Cinematic Hero — Legend of the Week ─────────────────────────────────
+  // Picked by pickFeatured(): rotates weekly through voted winners
+  const legend = featuredWinner;
 
   if (legend) {
     const ini = document.getElementById('heroInitials');

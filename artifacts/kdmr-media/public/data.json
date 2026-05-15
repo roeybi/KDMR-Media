@@ -1411,6 +1411,78 @@
       "imageUrl": "/images/Sample Sugandoi Winner.png"
     }
   ],
+  "songs": [
+    {
+      "id": "song-001",
+      "title": "Pirousan do Bambazon",
+      "artist": "Jenifer Sindol",
+      "category": "Traditional Kadazan harvest chant",
+      "year": 2025,
+      "district": "Penampang",
+      "meta": "KDCA Sabah 2025 · Sugandoi Champion",
+      "quote": "A voice that carries the sound of the Crocker Range — powerful, clear, and rooted in Kadazan tonal tradition. Performed entirely without instrumental backing."
+    },
+    {
+      "id": "song-002",
+      "title": "Rayuan Kinabalu",
+      "artist": "Rosalinda Sintul",
+      "category": "Dusun folk ballad",
+      "year": 2023,
+      "district": "Kudat",
+      "meta": "KDCA Sabah 2023 · Sugandoi Champion",
+      "quote": "Sintul's interpretation of this classic Dusun ballad left the audience in silence — a rare feat at a competition stage."
+    },
+    {
+      "id": "song-003",
+      "title": "Momolou Oku",
+      "artist": "Marcus Gununjuk",
+      "category": "Kadazan Dusun devotional song",
+      "year": 2024,
+      "district": "Ranau",
+      "meta": "KDCA Sabah 2024 · Sugandoi Champion",
+      "quote": "A devotional piece rooted in Ranau's highland tradition, performed with a clarity that resonated across generations in the audience."
+    },
+    {
+      "id": "song-004",
+      "title": "Tingkau Rungus",
+      "artist": "Harison Apin",
+      "category": "Rungus traditional chant",
+      "year": 2025,
+      "district": "Kota Belud",
+      "meta": "KDCA Sabah 2025 · Sugandoi Runner-up",
+      "quote": "Drawing from the oral traditions of the Rungus people of Kota Belud, Harison brought a rarely-heard vocal style to the Sugandoi stage."
+    },
+    {
+      "id": "song-005",
+      "title": "Ginarang Dusun",
+      "artist": "Cecilia Mintol",
+      "category": "Kadazan harvest hymn",
+      "year": 2024,
+      "district": "Nabawan",
+      "meta": "KDCA Sabah 2024 · Sugandoi Finalist",
+      "quote": "An intimate, meditative performance of a harvest hymn from Nabawan — performed with technical mastery and deep cultural authenticity."
+    },
+    {
+      "id": "song-006",
+      "title": "Sumazau Bambazon",
+      "artist": "Bernard Kopin",
+      "category": "Traditional Dusun ceremonial song",
+      "year": 2025,
+      "district": "Tuaran",
+      "meta": "KDCA Sabah 2025 · Sugandoi Finalist",
+      "quote": "Kopin's baritone gave this ceremonial song from Tuaran a grounded, dignified quality that few have matched on the Sugandoi stage."
+    },
+    {
+      "id": "song-007",
+      "title": "Kadazan Rising",
+      "artist": "Angelina Daut",
+      "category": "Contemporary Kadazan fusion",
+      "year": 2024,
+      "district": "Keningau",
+      "meta": "KDCA Sabah 2024 · Sugandoi Finalist",
+      "quote": "A contemporary arrangement blending traditional Kadazan melodies with modern vocal production — anchored in authentic indigenous heritage."
+    }
+  ],
   "hallOfFame": [
     {
       "id": "hof-001",
