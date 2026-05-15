@@ -102,16 +102,20 @@
       }
       .hero-avatar-wrap {
         position: relative; z-index: 2;
-        width: 196px; height: 196px; border-radius: 3px;
+        width: 72%; max-width: 380px; height: auto;
+        aspect-ratio: 3 / 4; border-radius: 3px;
         background: linear-gradient(135deg, #1a1000, #0f0800);
-        border: 1px solid rgba(240,168,32,0.22);
+        border: 1px solid rgba(240,168,32,0.28);
         display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 0 80px rgba(240,168,32,0.07), inset 0 0 30px rgba(240,168,32,0.03);
+        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 100px rgba(240,168,32,0.09), inset 0 0 30px rgba(240,168,32,0.03);
       }
       .hero-avatar-wrap::before {
-        content: ''; position: absolute; inset: -10px;
-        border: 1px solid rgba(240,168,32,0.07); border-radius: 5px;
+        content: ''; position: absolute; inset: -12px;
+        border: 1px solid rgba(240,168,32,0.1); border-radius: 5px;
+        pointer-events: none;
       }
+      .hero-avatar-wrap > img { object-position: 50% 18%; }
       .hero-story {
         flex: 1; display: flex; align-items: center; padding: 70px 60px;
         background: linear-gradient(105deg, rgba(15,10,0,0.6) 0%, transparent 50%), #0a0a0a;
