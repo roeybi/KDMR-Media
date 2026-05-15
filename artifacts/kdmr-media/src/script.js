@@ -7,6 +7,160 @@ const DATA_URL = import.meta.env.BASE_URL + 'data.json';
 const VOTES_KEY = 'kdmr_votes';
 let _data = null;
 
+// ════════════════════════════════════════════════════════════════════════
+// ─── API INTEGRATIONS ───────────────────────────────────────────────────
+// ════════════════════════════════════════════════════════════════════════
+// Placeholder configuration. Replace the placeholder strings with your real
+// Supabase project + Make.com webhook URLs, then flip ENABLED to `true`.
+// While ENABLED is false, all submissions are mocked locally (console only)
+// so the UI can be tested end-to-end without external dependencies.
+
+const API_CONFIG = {
+  // Supabase (REST/Realtime)
+  SUPABASE_URL:       'https://<YOUR-PROJECT>.supabase.co',
+  SUPABASE_ANON_KEY:  '<YOUR-SUPABASE-ANON-KEY>',
+
+  // Make.com webhook scenarios
+  WEBHOOK_VOTES:      'https://hook.eu2.make.com/<YOUR-VOTE-WEBHOOK-ID>',
+  WEBHOOK_NEWSLETTER: 'https://hook.eu2.make.com/<YOUR-NEWSLETTER-WEBHOOK-ID>',
+
+  // Master switch — keep false until real endpoints are wired up.
+  ENABLED: false,
+};
+
+/** Map current pathname to an interest tag used by Make.com / Supabase. */
+function getInterestTagFromPath() {
+  const p = window.location.pathname;
+  if (p.includes('unduk-ngadau')) return 'UN';
+  if (p.includes('mrk'))          return 'MRK';
+  if (p.includes('sugandoi'))     return 'SG';
+  if (p.includes('directory'))    return 'Directory';
+  if (p.includes('archive'))      return 'Archive';
+  return 'General';
+}
+
+/**
+ * Submit a vote to the cloud (Make.com webhook → Supabase row).
+ * Falls back to a mock when API_CONFIG.ENABLED is false.
+ */
+async function submitVoteToCloud(entryId, meta = {}) {
+  const payload = {
+    type: 'vote',
+    entryId,
+    interestTag: getInterestTagFromPath(),
+    page: window.location.pathname,
+    ts: new Date().toISOString(),
+    ...meta,
+  };
+  if (!API_CONFIG.ENABLED) {
+    console.info('[KDMR][mock vote]', payload);
+    return { ok: true, mock: true };
+  }
+  try {
+    const res = await fetch(API_CONFIG.WEBHOOK_VOTES, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    return { ok: res.ok };
+  } catch (err) {
+    console.error('[KDMR] Vote submission failed:', err);
+    return { ok: false, error: err.message };
+  }
+}
+
+/**
+ * Submit a newsletter signup. Auto-tags the subscriber based on the page
+ * they submitted from (e.g. "Interest: UN", "Interest: MRK").
+ */
+async function submitNewsletter(email, meta = {}) {
+  const tag = getInterestTagFromPath();
+  const payload = {
+    type: 'newsletter',
+    email,
+    interestTag: tag,
+    interestLabel: `Interest: ${tag}`,
+    page: window.location.pathname,
+    referrer: document.referrer || null,
+    ts: new Date().toISOString(),
+    ...meta,
+  };
+  if (!API_CONFIG.ENABLED) {
+    console.info('[KDMR][mock newsletter]', payload);
+    return { ok: true, mock: true };
+  }
+  try {
+    const res = await fetch(API_CONFIG.WEBHOOK_NEWSLETTER, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    return { ok: res.ok };
+  } catch (err) {
+    console.error('[KDMR] Newsletter submission failed:', err);
+    return { ok: false, error: err.message };
+  }
+}
+
+// ─── TOAST NOTIFICATIONS ────────────────────────────────────────────────
+
+function ensureToastContainer() {
+  let c = document.getElementById('kdmrToastContainer');
+  if (c) return c;
+  c = document.createElement('div');
+  c.id = 'kdmrToastContainer';
+  c.style.cssText = 'position:fixed;top:72px;right:16px;left:16px;display:flex;flex-direction:column;gap:8px;z-index:300;pointer-events:none;align-items:flex-end;';
+  document.body.appendChild(c);
+  return c;
+}
+
+/** Show a transient toast notification. type: 'success' | 'info' | 'error' */
+function showToast(message, type = 'success') {
+  const c = ensureToastContainer();
+  const palette = {
+    success: { bg:'#0f1f15', border:'#1f4a2e', text:'#4ade80', icon:'✓' },
+    info:    { bg:'#0f1722', border:'#1f3a4a', text:'#60a5fa', icon:'ℹ' },
+    error:   { bg:'#1f0f0f', border:'#4a1f1f', text:'#ff6b6b', icon:'✕' },
+  };
+  const p = palette[type] || palette.success;
+  const t = document.createElement('div');
+  t.style.cssText = `pointer-events:auto;display:flex;align-items:center;gap:10px;background:${p.bg};border:1px solid ${p.border};color:${p.text};padding:11px 16px;border-radius:3px;font-size:0.82rem;font-weight:600;font-family:Inter,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,0.6);max-width:340px;transform:translateY(-12px);opacity:0;transition:opacity 0.25s ease,transform 0.25s ease;`;
+  t.innerHTML = `<span style="font-size:0.95rem;flex-shrink:0;">${p.icon}</span><span>${message}</span>`;
+  c.appendChild(t);
+  requestAnimationFrame(() => { t.style.opacity = '1'; t.style.transform = 'translateY(0)'; });
+  setTimeout(() => {
+    t.style.opacity = '0'; t.style.transform = 'translateY(-12px)';
+    setTimeout(() => t.remove(), 300);
+  }, 3200);
+}
+
+// ─── NEWSLETTER FORM ────────────────────────────────────────────────────
+
+function initNewsletter() {
+  const form = document.getElementById('newsletterForm');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const emailInput = form.querySelector('input[name="email"]');
+    const btn = form.querySelector('button[type="submit"]');
+    const email = (emailInput.value || '').trim();
+    if (!email) return;
+    const originalText = btn.textContent;
+    btn.disabled = true; btn.style.opacity = '0.6'; btn.textContent = 'Sending…';
+    const result = await submitNewsletter(email);
+    if (result.ok) {
+      showToast('Welcome to the KDMR Pulse!', 'success');
+      emailInput.value = '';
+      btn.textContent = '✓ Subscribed';
+      setTimeout(() => { btn.disabled = false; btn.style.opacity = '1'; btn.textContent = originalText; }, 2500);
+    } else {
+      showToast('Could not subscribe — try again later.', 'error');
+      btn.disabled = false; btn.style.opacity = '1'; btn.textContent = originalText;
+    }
+  });
+}
+// ════════════════════════════════════════════════════════════════════════
+
 // ─── Data ─────────────────────────────────────────────────────────────────
 
 async function loadData() {
@@ -178,9 +332,14 @@ function renderStats(entry, panelId) {
       </button>
     </div>
   `;
-  document.getElementById(btnId)?.addEventListener('click', function() {
+  document.getElementById(btnId)?.addEventListener('click', async function() {
     const id = this.dataset.id; const w = hs.allWinners.find(x=>x.id===id); if (!w) return;
-    if (castVote(id)) { w.votes++; this.textContent=`✦ Voted · ${w.votes}`; this.classList.add('voted'); }
+    if (!castVote(id)) return;
+    w.votes++;
+    this.textContent = `✦ Voted · ${w.votes}`;
+    this.classList.add('voted');
+    const result = await submitVoteToCloud(id, { name: w.name, award: w.award, branch: w.branch });
+    showToast(result.ok ? 'Vote Recorded!' : 'Vote saved locally', result.ok ? 'success' : 'info');
   });
 }
 
@@ -413,5 +572,6 @@ function closeBizModal() { const m=document.getElementById('bizModal'); if(m){m.
     else if (path.includes('sugandoi'))     initHeroSelector(data, 'Sugandoi');
     else if (path.includes('directory'))    await initDirectory(data);
     else if (!path.includes('archive'))     await initIndex(data);
+    initNewsletter();
   } catch(err) { console.error('KDMR Media:', err); }
 })();
