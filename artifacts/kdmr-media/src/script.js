@@ -555,6 +555,11 @@ function switchTab(tab) {
   if (hs.tab === tab) return;   // re-clicking the active tab — no-op
 
   hs.tab = tab;
+  // Sync URL query param for shareable links
+  const url = new URL(window.location);
+  url.searchParams.set('tab', tab);
+  window.history.replaceState({}, '', url);
+
   hs.list = hs.allWinners
     .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab) && w.year >= HERO_CUTOFF_YEAR)
     .sort((a,b) => b.year - a.year);
@@ -601,8 +606,14 @@ function switchTab(tab) {
 function initHeroSelector(data, award) {
   hs.allWinners = data.winners || [];
   hs.award = award;
-  // Pick first tab that has entries
-  hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah';
+  // Check URL query param for tab override
+  const urlTab = new URLSearchParams(window.location.search).get('tab');
+  if (urlTab && TABS.includes(urlTab)) {
+    hs.tab = urlTab;
+  } else {
+    // Pick first tab that has entries
+    hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah';
+  }
   hs.list = hs.allWinners
     .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab) && w.year >= HERO_CUTOFF_YEAR)
     .sort((a,b) => b.year - a.year);

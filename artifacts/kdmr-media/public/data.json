@@ -727,6 +727,294 @@
       "imageUrl": "/images/Sample Sugandoi Winner.png"
     },
     {
+      "id": "win-022",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Johor",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Johor",
+      "origin": "KDCA Johor",
+      "accentColor": "#f0a820",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Johor)",
+        "costume": "Sinuangga — traditional Kadazan ceremonial blouse adorned with hand-beaded manik and gold filigree headdress, representing the KDM diaspora in southern Peninsular Malaysia",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The KDCA Johor chapter is preparing to crown its first Unduk Ngadau champion. This space is reserved for the woman who will carry the torch of Kadazan-Dusun heritage across the Causeway, representing the KDM diaspora community in southern Peninsular Malaysia.",
+      "achievements": [
+        "KDCA Johor Unduk Ngadau 2026 — Champion (awaiting selection)",
+        "First KDCA Johor chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-023",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Melaka",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Melaka",
+      "origin": "KDCA Melaka",
+      "accentColor": "#f0a820",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Melaka)",
+        "costume": "Sinuangga — Melaka-influenced interpretation with nutmeg-inspired beadwork motifs and the classic Rinogoo brass headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The historic city of Melaka will soon see its first KDCA Unduk Ngadau crowned. This placeholder honours the diaspora women who keep the Kadazan-Dusun flame alive far from the Borneo highlands, weaving heritage into every step they take.",
+      "achievements": [
+        "KDCA Melaka Unduk Ngadau 2026 — Champion (awaiting selection)",
+        "First KDCA Melaka chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-024",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA WP Labuan",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "WP Labuan",
+      "origin": "KDCA WP Labuan",
+      "accentColor": "#f0a820",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Labuan)",
+        "costume": "Sinuangga — island-inspired adaptation with pearl-inlaid beadwork reflecting Labuan's maritime identity and the iconic Simpay headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The Pearl of Borneo, Labuan, is preparing to crown its first KDCA Unduk Ngadau champion. This entry celebrates the island's growing KDMR diaspora and the cultural bridge between Labuan's free port spirit and the ancestral homeland.",
+      "achievements": [
+        "KDCA WP Labuan Unduk Ngadau 2026 — Champion (awaiting selection)",
+        "First KDCA WP Labuan chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-025",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Pulau Pinang",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Pulau Pinang",
+      "origin": "KDCA Pulau Pinang",
+      "accentColor": "#f0a820",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Pulau Pinang)",
+        "costume": "Sinuangga — Penang-influenced interpretation with Peranakan beadwork accents and the ornate Simpay headdress, fusing KDM and northern Malaysian motifs",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Pulau Pinang's vibrant cultural tapestry will soon welcome its first KDCA Unduk Ngadau champion. This placeholder honours the diaspora women who bridge the gap between island cosmopolitanism and the deep-rooted traditions of the Kadazan-Dusun highlands.",
+      "achievements": [
+        "KDCA Pulau Pinang Unduk Ngadau 2026 — Champion (awaiting selection)",
+        "First KDCA Pulau Pinang chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-026",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Johor",
+      "award": "MRK",
+      "year": 2026,
+      "tribe": "Momogun Rungus",
+      "district": "Johor",
+      "origin": "KDCA Johor",
+      "accentColor": "#4ade80",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Momogun Rungus (diaspora — Johor)",
+        "costume": "Simpak — warrior ceremonial vest with brass disc armour and the iconic Rungus Tinaukat headdress, symbolising diaspora strength",
+        "language": "Rungus"
+      },
+      "bio": "The KDCA Johor chapter is preparing to crown its first Momogun Rungus Kadazan champion. This space is reserved for the warrior who will carry the Momogun spirit across the Causeway, representing the KDM diaspora community in southern Peninsular Malaysia with pride and valour.",
+      "achievements": [
+        "KDCA Johor MRK 2026 — Champion (awaiting selection)",
+        "First KDCA Johor MRK chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-027",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Melaka",
+      "award": "MRK",
+      "year": 2026,
+      "tribe": "Momogun Rungus",
+      "district": "Melaka",
+      "origin": "KDCA Melaka",
+      "accentColor": "#4ade80",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Momogun Rungus (diaspora — Melaka)",
+        "costume": "Simpak — historic Melaka-influenced warrior vest with Portuguese-tile beadwork accents and the Tinaukat headdress",
+        "language": "Rungus"
+      },
+      "bio": "The historic city of Melaka will soon see its first KDCA MRK crowned. This placeholder honours the diaspora warriors who keep the Momogun flame alive far from the Borneo highlands, defending heritage in the streets where world cultures have met for centuries.",
+      "achievements": [
+        "KDCA Melaka MRK 2026 — Champion (awaiting selection)",
+        "First KDCA Melaka MRK chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-028",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA WP Labuan",
+      "award": "MRK",
+      "year": 2026,
+      "tribe": "Momogun Rungus",
+      "district": "WP Labuan",
+      "origin": "KDCA WP Labuan",
+      "accentColor": "#4ade80",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Momogun Rungus (diaspora — Labuan)",
+        "costume": "Simpak — island warrior vest with shell and pearl beadwork reflecting Labuan's maritime trading heritage and the Tinaukat headdress",
+        "language": "Rungus"
+      },
+      "bio": "The Pearl of Borneo, Labuan, is preparing to crown its first KDCA MRK champion. This entry celebrates the island's growing KDMR diaspora warrior tradition and the cultural bridge between Labuan's free port spirit and the ancestral Momogun homeland.",
+      "achievements": [
+        "KDCA WP Labuan MRK 2026 — Champion (awaiting selection)",
+        "First KDCA WP Labuan MRK chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-029",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Pulau Pinang",
+      "award": "MRK",
+      "year": 2026,
+      "tribe": "Momogun Rungus",
+      "district": "Pulau Pinang",
+      "origin": "KDCA Pulau Pinang",
+      "accentColor": "#4ade80",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Momogun Rungus (diaspora — Pulau Pinang)",
+        "costume": "Simpak — Penang-influenced warrior vest with Peranakan and colonial beadwork motifs and the Tinaukat headdress, fusing Momogun and northern Malaysian heritage",
+        "language": "Rungus"
+      },
+      "bio": "Pulau Pinang's vibrant cultural tapestry will soon welcome its first KDCA MRK champion. This placeholder honours the diaspora warriors who bridge the gap between island cosmopolitanism and the deep-rooted Momogun traditions of the Rungus highlands.",
+      "achievements": [
+        "KDCA Pulau Pinang MRK 2026 — Champion (awaiting selection)",
+        "First KDCA Pulau Pinang MRK chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-030",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Johor",
+      "award": "Sugandoi",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Johor",
+      "origin": "KDCA Johor",
+      "accentColor": "#60a5fa",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Johor)",
+        "costume": "Traditional Kadazan Dusun performance attire with embroidered Voni blouse and ornamental beaded accessories",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The KDCA Johor chapter is preparing to crown its first Sugandoi singing champion. This space is reserved for the voice that will carry the songs of the KDMR diaspora across the Causeway, echoing the ancestral melodies of Sabah in the south of Peninsular Malaysia.",
+      "achievements": [
+        "KDCA Johor Sugandoi 2026 — Champion (awaiting selection)",
+        "First KDCA Johor Sugandoi chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-031",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Melaka",
+      "award": "Sugandoi",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Melaka",
+      "origin": "KDCA Melaka",
+      "accentColor": "#60a5fa",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Melaka)",
+        "costume": "Traditional Kadazan Dusun performance attire with historic Melaka-influenced embroidery and ornamental beaded accessories",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The historic city of Melaka will soon hear its first KDCA Sugandoi champion. This placeholder celebrates the diaspora singers who keep the Kadazan-Dusun vocal tradition alive, harmonising the old songs of Borneo with the multicultural rhythms of the Straits.",
+      "achievements": [
+        "KDCA Melaka Sugandoi 2026 — Champion (awaiting selection)",
+        "First KDCA Melaka Sugandoi chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-032",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA WP Labuan",
+      "award": "Sugandoi",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "WP Labuan",
+      "origin": "KDCA WP Labuan",
+      "accentColor": "#60a5fa",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Labuan)",
+        "costume": "Traditional Kadazan Dusun performance attire with island-inspired shell and pearl embroidery reflecting Labuan's maritime heritage",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "The Pearl of Borneo, Labuan, is preparing to crown its first KDCA Sugandoi champion. This entry celebrates the island's growing KDMR diaspora singing tradition and the cultural bridge between Labuan's free port spirit and the ancestral songs of the Kadazan-Dusun heartland.",
+      "achievements": [
+        "KDCA WP Labuan Sugandoi 2026 — Champion (awaiting selection)",
+        "First KDCA WP Labuan Sugandoi chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-033",
+      "name": "TBA — Coming Soon",
+      "branch": "KDCA Pulau Pinang",
+      "award": "Sugandoi",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Pulau Pinang",
+      "origin": "KDCA Pulau Pinang",
+      "accentColor": "#60a5fa",
+      "badge": "Regional Champion 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Pulau Pinang)",
+        "costume": "Traditional Kadazan Dusun performance attire with Penang-influenced Peranakan embroidery motifs and ornamental beaded accessories",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Pulau Pinang's vibrant cultural tapestry will soon welcome its first KDCA Sugandoi champion. This placeholder honours the diaspora singers who bridge the gap between island cosmopolitanism and the deep-rooted Kadazan-Dusun song traditions of the Borneo highlands.",
+      "achievements": [
+        "KDCA Pulau Pinang Sugandoi 2026 — Champion (awaiting selection)",
+        "First KDCA Pulau Pinang Sugandoi chapter representative"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
       "id": "leg-001",
       "name": "Norlinda Garai",
       "branch": "KDCA Sabah",
