@@ -28,6 +28,22 @@ const API_CONFIG = {
   ENABLED: false,
 };
 
+// Ensure dataLayer exists for GTM (safe no-op if GTM is not yet installed).
+window.dataLayer = window.dataLayer || [];
+
+/**
+ * SHA-256 hash of a string (lowercase-trimmed) via the native Web Crypto API.
+ * Used for Meta Conversion API (CAPI) — hashed email must be sent instead of
+ * plaintext. Replace the placeholder webhook with your real CAPI endpoint.
+ */
+async function sha256(str) {
+  const encoded = new TextEncoder().encode(str.toLowerCase().trim());
+  const hashBuffer = await crypto.subtle.digest('SHA-256', encoded);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
 /** Map current pathname to an interest tag used by Make.com / Supabase. */
 function getInterestTagFromPath() {
   const p = window.location.pathname;
@@ -52,6 +68,15 @@ async function submitVoteToCloud(entryId, meta = {}) {
     ts: new Date().toISOString(),
     ...meta,
   };
+  // Analytics — fire regardless of ENABLED flag so GTM/GA sees every vote.
+  window.dataLayer.push({
+    event:       'kdmr_vote',
+    category:    'engagement',
+    interestTag: payload.interestTag,
+    entryId:     payload.entryId,
+    page:        payload.page,
+  });
+
   if (!API_CONFIG.ENABLED) {
     console.info('[KDMR][mock vote]', payload);
     return { ok: true, mock: true };
@@ -75,9 +100,17 @@ async function submitVoteToCloud(entryId, meta = {}) {
  */
 async function submitNewsletter(email, meta = {}) {
   const tag = getInterestTagFromPath();
+
+  // ── Meta CAPI preparation ─────────────────────────────────────────
+  // Hash the email with SHA-256 before it leaves the browser.
+  // Pass `hashedEmail` to your CAPI-compliant webhook endpoint.
+  // Never send plaintext PII to third-party pixels directly.
+  const hashedEmail = await sha256(email);
+
   const payload = {
     type: 'newsletter',
     email,
+    hashedEmail,          // SHA-256 normalised — ready for Meta CAPI
     interestTag: tag,
     interestLabel: `Interest: ${tag}`,
     page: window.location.pathname,
@@ -85,6 +118,18 @@ async function submitNewsletter(email, meta = {}) {
     ts: new Date().toISOString(),
     ...meta,
   };
+
+  // Analytics — fire before the async network call so GTM receives it even
+  // if the webhook times out. Send only hashed PII to the dataLayer.
+  window.dataLayer.push({
+    event:        'kdmr_lead',
+    category:     'newsletter',
+    interestTag:  tag,
+    interestLabel: payload.interestLabel,
+    page:         payload.page,
+    em:           hashedEmail,   // hashed — safe for GTM → Meta CAPI bridge
+  });
+
   if (!API_CONFIG.ENABLED) {
     console.info('[KDMR][mock newsletter]', payload);
     return { ok: true, mock: true };
