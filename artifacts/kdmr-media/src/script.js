@@ -705,6 +705,58 @@ async function initIndex(data) {
       ctaBtn.href = awardSlug;
       ctaBtn.textContent = legend.award === 'MRK' ? 'Explore His Story →' : 'Explore Her Story →';
     }
+
+    // ── Community Vote button ──────────────────────────────────────────────
+    const voteBtn  = document.getElementById('heroVoteBtn');
+    let liveVotes  = legend.votes;
+
+    function updateVoteDisplay(count, justVoted) {
+      if (!votesEl) return;
+      votesEl.innerHTML = `✦ <span id="heroVoteNum" style="display:inline-block;font-variant-numeric:tabular-nums;">${count.toLocaleString()}</span> community votes`;
+      if (justVoted) {
+        const numEl = document.getElementById('heroVoteNum');
+        if (numEl) {
+          numEl.classList.remove('vote-pop');
+          void numEl.offsetWidth; // force reflow to re-trigger animation
+          numEl.classList.add('vote-pop');
+        }
+      }
+    }
+
+    function setVotedState() {
+      if (!voteBtn) return;
+      voteBtn.classList.add('voted');
+      voteBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 21C12 21 3 13.5 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 13-9 13z"/></svg> Voted ✦`;
+    }
+
+    // Restore voted state from localStorage on page load
+    updateVoteDisplay(liveVotes, false);
+    if (hasVoted(legend.id)) setVotedState();
+
+    if (voteBtn) {
+      voteBtn.addEventListener('click', () => {
+        if (hasVoted(legend.id)) return;
+        const didVote = castVote(legend.id);
+        if (!didVote) return;
+
+        liveVotes += 1;
+
+        // Animate count up one by one
+        let displayed = liveVotes - 1;
+        const tick = setInterval(() => {
+          displayed++;
+          updateVoteDisplay(displayed, displayed === liveVotes);
+          if (displayed >= liveVotes) clearInterval(tick);
+        }, 80);
+
+        // Ripple burst on the button itself
+        voteBtn.style.transform = 'scale(0.94)';
+        setTimeout(() => { voteBtn.style.transform = ''; }, 150);
+
+        // Mark as voted after short delay so user sees the animation
+        setTimeout(setVotedState, 300);
+      });
+    }
   }
 
   // ── Bento Box 2: Winning Costume ────────────────────────────────────────

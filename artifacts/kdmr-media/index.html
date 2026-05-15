@@ -70,6 +70,31 @@
         0%,100% { box-shadow: 0 0 14px 2px rgba(240,168,32,0.28); }
         50%      { box-shadow: 0 0 36px 10px rgba(240,168,32,0.55); }
       }
+      /* ── Vote button ─────────────────────────────────────── */
+      .vote-btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: transparent; color: #f0a820;
+        border: 1px solid rgba(240,168,32,0.35);
+        font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em;
+        padding: 13px 28px; border-radius: 2px; cursor: pointer;
+        font-family: Inter, sans-serif;
+        transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+        animation: vote-glow 3.2s ease-in-out infinite;
+        animation-delay: 1.4s;
+      }
+      .vote-btn:hover:not(:disabled) { background: rgba(240,168,32,0.08); border-color: rgba(240,168,32,0.7); transform: translateY(-2px); box-shadow: 0 0 24px 4px rgba(240,168,32,0.22); }
+      .vote-btn.voted { border-color: rgba(74,222,128,0.4); color: #4ade80; animation: none; cursor: default; }
+      .vote-btn.voted:hover { transform: none; background: transparent; box-shadow: none; }
+      @keyframes vote-glow {
+        0%,100% { box-shadow: 0 0 8px 1px rgba(240,168,32,0.10); }
+        50%      { box-shadow: 0 0 22px 6px rgba(240,168,32,0.28); }
+      }
+      @keyframes vote-count-pop {
+        0%   { transform: scale(1); }
+        40%  { transform: scale(1.45); color: #f0a820; }
+        100% { transform: scale(1); }
+      }
+      .vote-pop { animation: vote-count-pop 0.5s cubic-bezier(.36,.07,.19,.97); }
       /* ── Cinematic hero ─────────────────────────────────── */
       .hero-cinema {
         position: relative; min-height: 100svh;
@@ -272,7 +297,13 @@
           <h1 id="heroName" style="font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-0.03em;line-height:1.04;color:#f0f0f0;margin:0 0 10px;">—</h1>
           <div id="heroSubtitle" style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f0a820;opacity:0.7;margin-bottom:24px;">—</div>
           <p id="heroBioText" style="font-size:0.9rem;color:#5a5a5a;line-height:1.9;margin:0 0 36px;max-width:430px;">…</p>
-          <a id="heroCtaBtn" href="/unduk-ngadau/" class="cta-glow">Explore Her Story →</a>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <a id="heroCtaBtn" href="/unduk-ngadau/" class="cta-glow">Explore Her Story →</a>
+            <button id="heroVoteBtn" class="vote-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 3 13.5 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 13-9 13z"/></svg>
+              Community Vote
+            </button>
+          </div>
           <!-- Vote count -->
           <div id="heroVotes" style="margin-top:20px;font-size:0.68rem;color:#333;letter-spacing:0.06em;"></div>
         </div>
