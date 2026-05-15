@@ -393,9 +393,7 @@ function renderDots() {
 
 function renderTabs() {
   const el = document.getElementById('branchTabs'); if (!el) return;
-  // Only show tabs that have entries
-  const activeTabs = TABS.filter(t => hs.allWinners.filter(w=>w.award===hs.award && branchMatchesTab(w.branch,t)).length > 0);
-  el.innerHTML = activeTabs.map(t =>
+  el.innerHTML = TABS.map(t =>
     `<button class="branch-tab ${t===hs.tab?'active':''}" data-tab="${t}">${TAB_LABELS[t]||t}</button>`
   ).join('');
   el.querySelectorAll('.branch-tab').forEach(btn => btn.addEventListener('click', ()=>switchTab(btn.dataset.tab)));
