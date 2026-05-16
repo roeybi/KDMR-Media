@@ -47,3 +47,6 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Chat attachments (screenshots from conversations — not project files)
+attached_assets/
