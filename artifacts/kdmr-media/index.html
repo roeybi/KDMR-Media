@@ -80,6 +80,7 @@
       /* ── Cinematic hero ─────────────────────────────────── */
       .hero-cinema {
         position: relative; min-height: 100svh;
+        min-height: 100dvh;
         display: flex; overflow: hidden;
         border-bottom: 1px solid #181818;
       }
@@ -161,8 +162,14 @@
           background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 25%, rgba(5,5,5,0.96) 100%);
         }
         .hero-story #heroName {
-          font-size: 2.4rem !important; line-height: 1.0 !important;
+          font-size: 2.0rem !important; line-height: 1.05 !important;
           color: #ffffff !important; text-shadow: 0 2px 24px rgba(0,0,0,0.7);
+        }
+        .hero-story #heroBioText {
+          font-size: 0.9rem !important;
+          -webkit-line-clamp: 3; line-clamp: 3;
+          display: -webkit-box; -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         .hero-story #heroSubtitle { opacity: 1 !important; }
         .hero-story #heroBioText {
