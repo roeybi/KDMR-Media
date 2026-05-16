@@ -14,7 +14,7 @@
 const DATA_URL = import.meta.env.BASE_URL + 'data.json';
 
 const API_CONFIG = {
-  ENABLED: false,
+  ENABLED: true,
   SUPABASE_URL: 'https://erbyhmliuqopwrspxbir.supabase.co',
   SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVyYnlobWxpdXFvcHdyc3B4YmlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4MzUzOTcsImV4cCI6MjA5NDQxMTM5N30.bm7hJBTa5eN1KX8MYp4aSCpHqiZPrxkb8k_t3VNIAMg',
 };
@@ -158,6 +158,47 @@ async function sbInsert(table, row) {
     console.error('[KDMR Live] Supabase insert failed:', err);
     return { ok: false };
   }
+}
+
+async function sbFetch(table, params = '') {
+  try {
+    const res = await fetch(`${API_CONFIG.SUPABASE_URL}/rest/v1/${table}${params}`, {
+      headers: {
+        'apikey': API_CONFIG.SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${API_CONFIG.SUPABASE_ANON_KEY}`,
+      },
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (err) {
+    console.error('[KDMR Live] Supabase fetch failed:', err);
+    return null;
+  }
+}
+
+async function loadInitialChat() {
+  if (!API_CONFIG.ENABLED) return;
+  const rows = await sbFetch('live_chat',
+    '?select=message_id,session_token,username,text,sent_at&order=sent_at.asc&limit=60');
+  if (!rows || !rows.length) return;
+  _chatMessages = rows.map(r => ({
+    id: r.message_id, token: r.session_token,
+    username: r.username, text: r.text, sentAt: r.sent_at,
+  }));
+  renderChat();
+}
+
+async function syncVoteCounts() {
+  if (!API_CONFIG.ENABLED || !_liveEvent?.candidates) return;
+  const rows = await sbFetch('live_votes', '?select=candidate_id');
+  if (!rows) return;
+  const counts = {};
+  rows.forEach(r => { counts[r.candidate_id] = (counts[r.candidate_id] || 0) + 1; });
+  _liveEvent.candidates.forEach(c => {
+    if (counts[c.id] !== undefined) c.liveVotes = counts[c.id];
+  });
+  renderLeaderboard(_liveEvent.candidates);
+  updateRankingTicker();
 }
 
 // ────────────────────────────────────────────────
@@ -645,10 +686,26 @@ async function handleVote(candidateId) {
 // ────────────────────────────────────────────────
 
 function startPolling() {
-  // No-op until Supabase is enabled — no fake messages
   if (!API_CONFIG.ENABLED) return;
   if (_pollTimer) clearInterval(_pollTimer);
-  // Real polling logic goes here when API_CONFIG.ENABLED = true
+
+  _pollTimer = setInterval(async () => {
+    // Poll for new chat messages since the last one we have
+    const lastMsg  = _chatMessages[_chatMessages.length - 1];
+    const since    = lastMsg ? lastMsg.sentAt : new Date(0).toISOString();
+    const rows = await sbFetch('live_chat',
+      `?select=message_id,session_token,username,text,sent_at&sent_at=gt.${encodeURIComponent(since)}&order=sent_at.asc&limit=20`);
+    if (rows && rows.length) {
+      const incoming = rows
+        .map(r => ({ id: r.message_id, token: r.session_token, username: r.username, text: r.text, sentAt: r.sent_at }))
+        .filter(m => !_chatMessages.find(x => x.id === m.id));
+      if (incoming.length) {
+        _chatMessages.push(...incoming);
+        if (_chatMessages.length > 100) _chatMessages = _chatMessages.slice(-100);
+        renderChat();
+      }
+    }
+  }, POLL_INTERVAL);
 }
 
 // ────────────────────────────────────────────────
@@ -679,11 +736,15 @@ function startPolling() {
       renderLeaderboard(_liveEvent.candidates || []);
     }
 
-    // 7. Block 3 — chat input listeners
+    // 7. Block 3 — chat input listeners + load real messages
     initChat();
+    await loadInitialChat();
     renderChat();
 
-    // 8. Demo polling
+    // 8. Sync live vote counts from Supabase
+    await syncVoteCounts();
+
+    // 9. Start real-time polling (chat + future expansions)
     startPolling();
 
   } catch (err) {
