@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Arena — KDMR Media</title>
+    <meta name="description" content="Watch the Hari Kaamatan 2026 State Final live. Vote for Unduk Ngadau, MRK and Sugandoi champions in real time." />
+    <meta property="og:title" content="KDMR Media · Live Arena" />
+    <meta property="og:description" content="Hari Kaamatan 2026 State Final — Live voting & chat" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <style>
+      /* ── Faster activity ticker ── */
+      .ticker-track-fast {
+        display: inline-flex;
+        white-space: nowrap;
+        animation: ticker-scroll 22s linear infinite;
+      }
+      /* ── Ticker clipping fix: force width to content so overflow:hidden clips cleanly ── */
+      .ticker-track, .ticker-track-fast { width: max-content; }
+      /* ── Hide activity ticker on narrow screens to give rankings full width ── */
+      @media (max-width: 600px) { #activityTickerWrap { display: none !important; } }
+      /* ── Live pulse badge ── */
+      .live-badge {
+        display: inline-flex; align-items: center; gap: 5px;
+        background: rgba(255,59,59,0.12); border: 1px solid rgba(255,59,59,0.35);
+        color: #ff3b3b; font-size: 0.58rem; font-weight: 800; letter-spacing: 0.14em;
+        text-transform: uppercase; padding: 3px 9px; border-radius: 2px;
+        animation: live-pulse 2s ease-in-out infinite;
+      }
+      @keyframes live-pulse {
+        0%,100% { opacity: 1; box-shadow: 0 0 6px 1px rgba(255,59,59,0.15); }
+        50%      { opacity: 0.7; box-shadow: 0 0 16px 4px rgba(255,59,59,0.35); }
+      }
+      /* ── Chat messages ── */
+      .chat-msg {
+        padding: 9px 14px; border-bottom: 1px solid #0f0f0f;
+        animation: chat-pop 0.22s ease;
+      }
+      @keyframes chat-pop { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+      /* ── Vote bar ── */
+      .vote-bar { height: 3px; background: #1a1a1a; border-radius: 99px; overflow: hidden; }
+      .vote-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s cubic-bezier(0.22,1,0.36,1); }
+      /* ── Leaderboard rows ── */
+      .lb-row {
+        display: flex; align-items: center; gap: 14px;
+        background: #111; border: 1px solid #1e1e1e; border-radius: 3px;
+        padding: 12px 14px; transition: border-color 0.2s;
+      }
+      .lb-row:hover { border-color: #2a2a2a; }
+      .lb-row.lb-voted { border-color: rgba(74,222,128,0.25); }
+      /* ── Cast Vote button ── */
+      .cast-vote-btn {
+        flex-shrink: 0; padding: 8px 14px;
+        font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+        border-radius: 2px; border: none; cursor: pointer; font-family: Inter,sans-serif;
+        transition: background 0.15s, transform 0.1s;
+      }
+      .cast-vote-btn:hover { transform: translateY(-1px); }
+      .cast-vote-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+      /* ── Gate modal ── */
+      .gate-backdrop {
+        position: fixed; inset: 0; z-index: 9000;
+        background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
+        display: flex; align-items: center; justify-content: center; padding: 16px;
+        opacity: 0; pointer-events: none; transition: opacity 0.22s ease;
+      }
+      .gate-backdrop.open { opacity: 1; pointer-events: auto; }
+      .gate-panel {
+        background: #111; border: 1px solid #252525; border-radius: 4px;
+        width: 100%; max-width: 460px; padding: 30px 26px 22px;
+        box-shadow: 0 32px 80px rgba(0,0,0,0.8);
+        transform: translateY(10px); transition: transform 0.22s ease;
+        max-height: calc(100dvh - 32px); overflow-y: auto; position: relative;
+      }
+      .gate-backdrop.open .gate-panel { transform: translateY(0); }
+      .gate-input {
+        width: 100%; background: #0a0a0a; border: 1px solid #252525;
+        color: #f0f0f0; padding: 10px 12px; font-size: 0.83rem;
+        border-radius: 2px; font-family: Inter,sans-serif; outline: none;
+        transition: border-color 0.15s; box-sizing: border-box;
+      }
+      .gate-input:focus { border-color: rgba(240,168,32,0.45); }
+      .gate-input::placeholder { color: #3a3a3a; }
+      .gate-label { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #555; margin-bottom: 5px; display: block; }
+      .gate-checkbox {
+        appearance: none; width: 15px; height: 15px; min-width: 15px;
+        border: 1px solid #3a3a3a; border-radius: 2px; background: #0a0a0a; cursor: pointer;
+        display: inline-flex; align-items: center; justify-content: center;
+        flex-shrink: 0; transition: all 0.15s;
+      }
+      .gate-checkbox:checked { background: #f0a820; border-color: #f0a820; }
+      .gate-checkbox:checked::after { content: '✓'; color: #0a0a0a; font-size: 0.6rem; font-weight: 900; }
+      .gate-submit {
+        width: 100%; background: #f0a820; color: #0a0a0a; border: none;
+        font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em;
+        padding: 13px; border-radius: 2px; cursor: pointer; font-family: Inter,sans-serif;
+        transition: background 0.15s, transform 0.1s;
+      }
+      .gate-submit:hover { background: #ffc13a; transform: translateY(-1px); }
+      .gate-submit:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+      /* ── Stream placeholder ── */
+      .stream-fallback {
+        background: linear-gradient(160deg, #0d0808 0%, #1a0a0a 50%, #0d0d0d 100%);
+        position: relative;
+      }
+      .stream-fallback::after {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 50% 35%, rgba(255,59,59,0.07) 0%, transparent 65%);
+        pointer-events: none;
+      }
+      .countdown-digit { font-variant-numeric: tabular-nums; font-weight: 900; letter-spacing: -0.03em; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ═══════════════════════════════════════════════
+         GATE MODAL — triggered by vote/chat actions only
+         ════════════════════════════════════════════════ -->
+    <div id="gateModal" class="gate-backdrop" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+      <div class="gate-panel">
+        <button id="gateCloseBtn" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#444;font-size:1rem;cursor:pointer;padding:4px 8px;line-height:1;border-radius:2px;transition:color 0.15s;" onmouseover="this.style.color='#888'" onmouseout="this.style.color='#444'">✕</button>
+
+        <div style="margin-bottom:20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+            <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:0.62rem;font-weight:900;color:#0a0a0a;">KM</span>
+            </div>
+            <div>
+              <div style="font-size:0.5rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;">Cultural Gate Pass · PDPA 2010</div>
+              <div style="font-size:0.72rem;font-weight:700;color:#888;">Hari Kaamatan 2026 State Final</div>
+            </div>
+          </div>
+          <h2 id="gateTitle" style="font-size:1.05rem;font-weight:900;color:#f0f0f0;margin:0 0 7px;letter-spacing:-0.02em;line-height:1.3;">Join the Arena — unlock votes &amp; live chat</h2>
+          <p id="gateHint" style="font-size:0.73rem;color:#555;margin:0;line-height:1.55;">Register once to cast real-time votes for every category and chat live with the community.</p>
+        </div>
+
+        <form id="gateForm" style="display:flex;flex-direction:column;gap:11px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div><label class="gate-label">Full Name</label><input type="text" name="fullName" class="gate-input" placeholder="e.g. Sarah Binti Majin" required autocomplete="name"/></div>
+            <div><label class="gate-label">Username · Public name</label><input type="text" name="username" class="gate-input" placeholder="sarah_dusun_88" required maxlength="20" autocomplete="username"/></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div><label class="gate-label">Email</label><input type="email" name="email" class="gate-input" placeholder="your@email.com" required autocomplete="email"/></div>
+            <div><label class="gate-label">Phone Number</label><input type="tel" name="phone" class="gate-input" placeholder="+60 12-345 6789" required autocomplete="tel"/></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div>
+              <label class="gate-label">Ethnicity</label>
+              <select name="ethnicity" class="gate-input" style="cursor:pointer;" required>
+                <option value="" disabled selected>Select tribe</option>
+                <option value="Kadazan">Kadazan</option>
+                <option value="Dusun">Dusun</option>
+                <option value="Murut">Murut</option>
+                <option value="Rungus">Rungus</option>
+                <option value="Other">Other / Mixed</option>
+              </select>
+            </div>
+            <div><label class="gate-label">Origin / District</label><input type="text" name="origin" class="gate-input" placeholder="e.g. Penampang, KK" required/></div>
+          </div>
+          <label style="display:flex;align-items:flex-start;gap:9px;cursor:pointer;">
+            <input type="checkbox" name="consent" class="gate-checkbox" required/>
+            <span style="font-size:0.68rem;color:#555;line-height:1.55;margin-top:1px;">I consent to KDMR Media collecting my profile data under Malaysia's PDPA 2010. Data retained 30 days post-event, then anonymised.</span>
+          </label>
+          <button type="submit" class="gate-submit" id="gateSubmitBtn">Enter the Live Arena →</button>
+          <p id="gateError" style="font-size:0.7rem;color:#ff6b6b;text-align:center;margin:2px 0 0;display:none;"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         NAV
+         ════════════════════════════════════════════════ -->
+    <nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.96);border-bottom:1px solid #1a1a1a;backdrop-filter:blur(12px);">
+      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:50px;display:flex;align-items:center;gap:16px;">
+        <a href="/" style="display:flex;align-items:center;gap:9px;text-decoration:none;margin-right:auto;">
+          <div style="width:26px;height:26px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:0.6rem;font-weight:900;color:#0a0a0a;">KM</span>
+          </div>
+          <span style="font-size:0.9rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </a>
+        <a href="/winners.html" style="font-size:0.75rem;font-weight:600;color:#666;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#f0f0f0'" onmouseout="this.style.color='#666'">Winners</a>
+        <a href="/news.html" style="font-size:0.75rem;font-weight:600;color:#666;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#f0f0f0'" onmouseout="this.style.color='#666'">News</a>
+        <span style="font-size:0.75rem;font-weight:700;color:#f0a820;">Live</span>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div id="userPill" style="display:none;align-items:center;gap:6px;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.2);padding:3px 9px;border-radius:2px;">
+            <span style="width:5px;height:5px;border-radius:50%;background:#4ade80;"></span>
+            <span id="userPillName" style="font-size:0.68rem;font-weight:600;color:#f0a820;"></span>
+          </div>
+          <a href="/" style="background:#f0a820;color:#0a0a0a;font-size:0.72rem;font-weight:700;padding:6px 12px;border-radius:2px;text-decoration:none;">Home</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+         BLOCK 1 — VIDEO PLAYER ARENA
+         Full-width, zero obstruction, pinned to top
+         ════════════════════════════════════════════════ -->
+    <div style="width:100%;background:#000;position:relative;">
+      <!-- Page title overlay (top-left corner of video area) -->
+      <div style="position:absolute;top:12px;left:14px;z-index:10;display:flex;align-items:center;gap:8px;pointer-events:none;">
+        <span class="live-badge"><span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;"></span> LIVE NOW</span>
+        <span id="liveTitle" style="font-size:0.68rem;font-weight:700;color:rgba(240,240,240,0.7);letter-spacing:-0.01em;">Hari Kaamatan 2026 — State Final</span>
+      </div>
+      <!-- 16:9 video container -->
+      <div style="aspect-ratio:16/9;width:100%;max-height:80vh;overflow:hidden;" id="streamWrap">
+        <!-- Injected by live.js — YouTube iframe or fallback countdown -->
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         BLOCK 2 — UNIFIED LIVE TICKER STRIP
+         Rankings (left) + Activity notifications (right)
+         ════════════════════════════════════════════════ -->
+    <div style="background:#111111;border-top:1px solid #f0a820;border-bottom:1px solid rgba(240,168,32,0.2);height:34px;display:flex;align-items:stretch;">
+      <!-- Left: Rankings ticker — clip mask so text scrolls cleanly without character-level cuts -->
+      <div style="flex:1;display:flex;align-items:center;border-right:1px solid rgba(240,168,32,0.12);padding:0 0 0 8px;gap:6px;overflow:hidden;">
+        <span style="font-size:0.48rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;flex-shrink:0;border:1px solid rgba(240,168,32,0.3);padding:1px 5px;border-radius:1px;white-space:nowrap;">RANK</span>
+        <!-- Clip container: position:relative + overflow:hidden clips at word-safe boundary -->
+        <div style="flex:1;overflow:hidden;position:relative;height:100%;display:flex;align-items:center;">
+          <div id="rankingTrack" class="ticker-track" style="gap:0;padding-left:8px;">
+            <!-- Populated by live.js -->
+          </div>
+        </div>
+      </div>
+      <!-- Right: Activity ticker (hidden on mobile < 600px) -->
+      <div id="activityTickerWrap" style="width:220px;flex-shrink:0;display:flex;align-items:center;overflow:hidden;padding:0 8px 0 6px;gap:5px;">
+        <span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 5px 1px rgba(255,59,59,0.5);flex-shrink:0;animation:live-pulse 1.5s ease-in-out infinite;"></span>
+        <div style="flex:1;overflow:hidden;position:relative;height:100%;display:flex;align-items:center;">
+          <div id="activityTrack" class="ticker-track-fast" style="gap:0;padding-left:4px;">
+            <!-- Populated by live.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         BLOCK 3 — COMMUNITY CHAT ARENA
+         Full-width scrollable chat with inline input bar
+         ════════════════════════════════════════════════ -->
+    <div style="max-width:800px;margin:0 auto;padding:20px 14px 8px;">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:10px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px 2px rgba(74,222,128,0.3);"></span>
+        <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f0f0f0;">Global Chat</span>
+        <span id="chatOnlineCount" style="font-size:0.5rem;color:#444;margin-left:auto;">1 online</span>
+      </div>
+      <!-- Chat feed -->
+      <div id="chatFeed" style="background:#0d0d0d;border:1px solid #1a1a1a;border-radius:3px 3px 0 0;height:320px;overflow-y:auto;scroll-behavior:smooth;">
+        <div style="padding:14px;text-align:center;">
+          <span style="font-size:0.62rem;color:#2a2a2a;">Welcome to the Live Arena. Be respectful and celebrate our shared heritage.</span>
+        </div>
+      </div>
+      <!-- Inline input bar — always enabled, intercepted if unauthenticated -->
+      <div style="display:flex;background:#0a0a0a;border:1px solid #1a1a1a;border-top:none;border-radius:0 0 3px 3px;">
+        <input id="chatInput" type="text" maxlength="140" placeholder="Type comment here…"
+          style="flex:1;background:transparent;border:none;outline:none;padding:11px 14px;font-size:0.82rem;color:#f0f0f0;font-family:Inter,sans-serif;" />
+        <button id="chatSendBtn"
+          style="background:#f0a820;color:#0a0a0a;border:none;font-size:0.7rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0 20px;cursor:pointer;font-family:Inter,sans-serif;border-radius:0 0 3px 0;transition:background 0.15s;"
+          onmouseover="this.style.background='#ffc13a'" onmouseout="this.style.background='#f0a820'">Send</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         BLOCK 4 — LIVE LEADERBOARD ENGINE
+         Sorted by votes, portrait + bar + Cast Vote CTA
+         ════════════════════════════════════════════════ -->
+    <div style="max-width:800px;margin:0 auto;padding:24px 14px 60px;">
+      <!-- Section header -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div>
+          <div style="font-size:0.5rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;margin-bottom:3px;">Rankings</div>
+          <div style="font-size:1rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.02em;">Live Leaderboard</div>
+        </div>
+        <div style="flex:1;height:1px;background:linear-gradient(90deg,#1e1e1e,transparent);"></div>
+        <span id="voteUpdatedAt" style="font-size:0.5rem;color:#333;letter-spacing:0.06em;text-transform:uppercase;"></span>
+      </div>
+      <!-- Leaderboard list — populated by live.js -->
+      <div id="leaderboardList" style="display:flex;flex-direction:column;gap:10px;">
+        <!-- JS renders candidate rows here -->
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="border-top:1px solid #111;background:#050505;padding:28px 16px;">
+      <div style="max-width:800px;margin:0 auto;text-align:center;">
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;">
+          <div style="width:22px;height:22px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:0.55rem;font-weight:900;color:#0a0a0a;">KM</span>
+          </div>
+          <span style="font-size:0.8rem;font-weight:800;color:#333;letter-spacing:-0.01em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </div>
+        <div style="font-size:0.55rem;color:#222;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;">Live Arena · Hari Kaamatan 2026</div>
+        <div style="font-size:0.52rem;color:#1a1a1a;">Celebrating the Kadazan Dusun Murut Rungus heritage of Sabah, Borneo</div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/live.js"></script>
+  </body>
+</html>
