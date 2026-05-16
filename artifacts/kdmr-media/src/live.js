@@ -641,38 +641,14 @@ async function handleVote(candidateId) {
 }
 
 // ────────────────────────────────────────────────
-//  POLLING FALLBACK (demo mode)
+//  POLLING (real API mode only)
 // ────────────────────────────────────────────────
 
 function startPolling() {
-  if (API_CONFIG.ENABLED) return;
+  // No-op until Supabase is enabled — no fake messages
+  if (!API_CONFIG.ENABLED) return;
   if (_pollTimer) clearInterval(_pollTimer);
-
-  const demoUsers = ['KadazanFan_99','DusunPride','MurutWarrior','RungusHeart','SabahBorn','KKLocal','NativeOfSabah'];
-  const demoMsgs  = [
-    'Dyann looks stunning tonight!','The costumes this year are incredible.',
-    'Rooting for Kristern! Lotud strong!','Kimberley\'s voice gives me chills.',
-    'Kaamatan is the best time of year!','Can\'t believe I\'m watching live from KL!',
-    'The heritage segment was so beautiful.','Penampang never disappoints!',
-    'Sogit do kaamatan! 🎉','This live arena is amazing!',
-    'So proud of our Sabah culture!','Marcus Gununjuk\'s voice — wow!',
-  ];
-
-  _pollTimer = setInterval(() => {
-    if (Math.random() > 0.7 && _chatMessages.length < 80) {
-      const dm = {
-        id: uuid(), token: 'demo-' + Math.random(),
-        username: demoUsers[Math.floor(Math.random() * demoUsers.length)],
-        text: demoMsgs[Math.floor(Math.random() * demoMsgs.length)],
-        sentAt: new Date().toISOString(),
-      };
-      _chatMessages.push(dm);
-      _chatOnline = Math.floor(Math.random() * 60) + 18;
-      const ocEl = document.getElementById('chatOnlineCount');
-      if (ocEl) ocEl.textContent = `${_chatOnline} online`;
-      renderChat();
-    }
-  }, POLL_INTERVAL);
+  // Real polling logic goes here when API_CONFIG.ENABLED = true
 }
 
 // ────────────────────────────────────────────────
