@@ -1875,6 +1875,101 @@
       "source": "Bernama"
     }
   ],
+  "liveEvent": {
+    "id": "kaamatan-2026-state-final",
+    "title": "Hari Kaamatan 2026 — State Final Live Arena",
+    "subtitle": "Unduk Ngadau, MRK & Sugandoi · Hongkod Koisaan, Penampang · 30–31 May 2026",
+    "status": "live",
+    "streamUrl": "https://www.youtube.com/embed/live_stream_placeholder",
+    "startDate": "2026-05-30T18:00:00+08:00",
+    "endDate": "2026-05-31T23:00:00+08:00",
+    "candidates": [
+      {
+        "id": "live-un-001",
+        "name": "Dyann Dharlla",
+        "branch": "KDCA Sabah",
+        "award": "Unduk Ngadau",
+        "category": "UN",
+        "round": "State Final",
+        "district": "Beluran",
+        "tribe": "Kadazan Dusun",
+        "accentColor": "#f0a820",
+        "liveVotes": 847,
+        "imageUrl": "/images/finafayena-primus.png",
+        "bioSnippet": "District Champion Beluran 2026. Represents the Beluran district with traditional Sinuangga' ceremonial attire."
+      },
+      {
+        "id": "live-un-002",
+        "name": "Ceelecia Reeka Mosungin",
+        "branch": "KDCA Sabah",
+        "award": "Unduk Ngadau",
+        "category": "UN",
+        "round": "State Final",
+        "district": "Sandakan",
+        "tribe": "Kadazan Dusun",
+        "accentColor": "#f0a820",
+        "liveVotes": 623,
+        "imageUrl": "/images/Sample UN Winner.png",
+        "bioSnippet": "District Champion Sandakan 2026. A UMS student who carries the heritage of the east coast into the state final."
+      },
+      {
+        "id": "live-mrk-001",
+        "name": "Kristern Olwen Jafili",
+        "branch": "KDCA Sabah",
+        "award": "MRK",
+        "category": "MRK",
+        "round": "State Final",
+        "district": "Tuaran",
+        "tribe": "Lotud",
+        "accentColor": "#4ade80",
+        "liveVotes": 512,
+        "imageUrl": "/images/Sample MRK Winner.png",
+        "bioSnippet": "Buvazoi Tavantang Tuaran 2026. A Lotud cultural warrior representing the gomboton heritage of Tuaran."
+      },
+      {
+        "id": "live-mrk-002",
+        "name": "TBA — MRK Finalist",
+        "branch": "KDCA Klang Valley",
+        "award": "MRK",
+        "category": "MRK",
+        "round": "State Final",
+        "district": "Klang Valley",
+        "tribe": "Kadazan Dusun",
+        "accentColor": "#4ade80",
+        "liveVotes": 389,
+        "imageUrl": "/images/Sample MRK Winner.png",
+        "bioSnippet": "KDCA Klang Valley MRK representative advancing to the state final at Hongkod Koisaan."
+      },
+      {
+        "id": "live-sg-001",
+        "name": "Kimberley Myra Terence",
+        "branch": "KDCA Sabah",
+        "award": "Sugandoi",
+        "category": "SG",
+        "round": "State Final",
+        "district": "Beluran",
+        "tribe": "Kadazan Dusun",
+        "accentColor": "#60a5fa",
+        "liveVotes": 734,
+        "imageUrl": "/images/Sample Sugandoi Winner.png",
+        "bioSnippet": "State Sugandoi Kaamatan 2025 Champion returning to defend her title at the 2026 state final."
+      },
+      {
+        "id": "live-sg-002",
+        "name": "Marcus Gununjuk",
+        "branch": "KDCA Sabah",
+        "award": "Sugandoi",
+        "category": "SG",
+        "round": "State Final",
+        "district": "Ranau",
+        "tribe": "Dusun",
+        "accentColor": "#60a5fa",
+        "liveVotes": 556,
+        "imageUrl": "/images/Sample Sugandoi Winner.png",
+        "bioSnippet": "Highland farmer and tontolian epic poet from Ranau. His haunting pentatonic melodies captivate every audience."
+      }
+    ]
+  },
   "stats": {
     "hofEntries": 12,
     "communityMembers": 5240,
