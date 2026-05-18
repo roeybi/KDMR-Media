@@ -22,7 +22,7 @@ const API_CONFIG = {
 // TV Sabah YouTube live stream embed URL.
 // Replace CHANNEL_ID with the actual TV Sabah YouTube channel ID when stream goes live.
 // Example: https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxxxxxxx&autoplay=1&mute=1
-const TV_SABAH_STREAM_URL = 'https://www.youtube.com/embed/U2S-HnKjByg?autoplay=1&rel=0';
+const TV_SABAH_STREAM_URL = '';
 
 const SESSION_KEY   = 'kdmr_live_session';
 const VOTE_PREFIX   = 'kdmr_live_voted_';
@@ -337,14 +337,53 @@ function initStream(streamUrl) {
   const embedUrl = TV_SABAH_STREAM_URL || streamUrl;
 
   if (isLive) {
-    const frame = document.createElement('iframe');
-    frame.src = embedUrl + (embedUrl.includes('?') ? '&' : '?') + 'rel=0&modestbranding=1&color=white';
-    frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
-    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    frame.allowFullscreen = true;
-    frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-    frame.title = 'Hari Kaamatan 2026 Live Stream';
-    wrap.appendChild(frame);
+    const isFacebook = embedUrl.includes('facebook.com');
+    const isYouTube  = embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be');
+
+    if (isFacebook) {
+      // Facebook Live embed via their video plugin iframe
+      const fbSrc = 'https://www.facebook.com/plugins/video.php'
+        + '?href=' + encodeURIComponent(embedUrl)
+        + '&show_text=false&autoplay=true&allowfullscreen=true';
+      const frame = document.createElement('iframe');
+      frame.src = frame.src = fbSrc;
+      frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+      frame.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      frame.title = 'Hari Kaamatan 2026 Live Stream';
+      wrap.appendChild(frame);
+
+    } else if (isYouTube) {
+      // YouTube — embedding may be disabled; show poster + watch button
+      const vidMatch = embedUrl.match(/embed\/([^?&]+)/) || embedUrl.match(/[?&]v=([^&]+)/);
+      const vidId    = vidMatch ? vidMatch[1] : null;
+      const watchUrl = vidId
+        ? `https://www.youtube.com/watch?v=${vidId}`
+        : embedUrl;
+      const thumbUrl = vidId
+        ? `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`
+        : '';
+
+      wrap.innerHTML = `
+        <div style="width:100%;height:100%;position:relative;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
+          ${thumbUrl ? `<img src="${thumbUrl}" alt="Live Stream" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45;" onerror="this.style.display='none'" />` : ''}
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);"></div>
+          <div style="position:relative;z-index:1;text-align:center;padding:24px;">
+            <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,59,59,0.12);border:1px solid rgba(255,59,59,0.3);border-radius:2px;padding:4px 10px;font-size:0.55rem;font-weight:800;letter-spacing:0.15em;color:#ff3b3b;text-transform:uppercase;margin-bottom:16px;">
+              <span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 6px 2px rgba(255,59,59,0.5);animation:live-pulse 2s ease-in-out infinite;display:inline-block;"></span>
+              Live Now · TV Sabah
+            </div>
+            <div style="font-size:clamp(0.85rem,2vw,1.1rem);font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;margin-bottom:6px;">Hari Kaamatan 2026</div>
+            <div style="font-size:0.7rem;color:#888;margin-bottom:22px;">Embedding disabled by broadcaster — watch directly on YouTube</div>
+            <a href="${watchUrl}" target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:10px;background:#ff0000;color:#fff;font-size:0.82rem;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;letter-spacing:0.02em;transition:opacity 0.15s;"
+              onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M17.6 2.2C17.4 1.4 16.8.8 16 .6 14.6.2 9 .2 9 .2S3.4.2 2 .6C1.2.8.6 1.4.4 2.2 0 3.6 0 6.5 0 6.5s0 2.9.4 4.3c.2.8.8 1.4 1.6 1.6C3.4 12.8 9 12.8 9 12.8s5.6 0 7-.4c.8-.2 1.4-.8 1.6-1.6.4-1.4.4-4.3.4-4.3s0-2.9-.4-4.3zM7.2 9.3V3.7L11.9 6.5 7.2 9.3z"/></svg>
+              Watch Live on YouTube →
+            </a>
+          </div>
+        </div>`;
+    }
   } else {
     // Countdown fallback
     wrap.innerHTML = `
