@@ -189,14 +189,13 @@ async function loadInitialChat() {
 }
 
 async function syncVoteCounts() {
-  if (!API_CONFIG.ENABLED || !_liveEvent?.candidates) return;
+  if (!API_CONFIG.ENABLED || !_liveEvent?.candidates?.length) return;
   const rows = await sbFetch('live_votes', '?select=candidate_id');
   if (!rows) return;
   const counts = {};
   rows.forEach(r => { counts[r.candidate_id] = (counts[r.candidate_id] || 0) + 1; });
-  _liveEvent.candidates.forEach(c => {
-    if (counts[c.id] !== undefined) c.liveVotes = counts[c.id];
-  });
+  // Always overwrite from Supabase — including zero — so fake numbers never survive
+  _liveEvent.candidates.forEach(c => { c.liveVotes = counts[c.id] || 0; });
   renderLeaderboard(_liveEvent.candidates);
   updateRankingTicker();
 }
@@ -549,9 +548,24 @@ function renderLeaderboard(candidates) {
   if (!list) return;
 
   // Filter to Unduk Ngadau only, then sort by liveVotes descending
-  const sorted = [...candidates]
+  const sorted = [...(candidates || [])]
     .filter(c => c.award === 'Unduk Ngadau')
     .sort((a, b) => (b.liveVotes || 0) - (a.liveVotes || 0));
+
+  // No candidates yet — show Coming Soon state
+  if (!sorted.length) {
+    list.innerHTML = `
+      <div style="padding:48px 24px;text-align:center;border:1px solid #1a1a1a;border-radius:2px;background:#0a0a0a;">
+        <div style="font-size:2rem;margin-bottom:12px;">🏆</div>
+        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;margin-bottom:10px;">Participant List</div>
+        <div style="font-size:1.05rem;font-weight:800;color:#f0f0f0;margin-bottom:8px;">Coming Soon</div>
+        <div style="font-size:0.75rem;color:#444;line-height:1.6;max-width:280px;margin:0 auto;">
+          Official 2026 State Final candidates will be announced here once confirmed.<br>
+          <span style="color:#f0a820;">Check back closer to 30 May.</span>
+        </div>
+      </div>`;
+    return;
+  }
   const maxVotes = Math.max(...sorted.map(c => c.liveVotes || 0), 1);
   const baseUrl  = import.meta.env.BASE_URL.replace(/\/$/, '');
 
