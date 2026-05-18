@@ -346,8 +346,9 @@ function initStream(streamUrl) {
         + '?href=' + encodeURIComponent(embedUrl)
         + '&show_text=false&autoplay=true&allowfullscreen=true';
       const frame = document.createElement('iframe');
-      frame.src = frame.src = fbSrc;
-      frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+      frame.src = fbSrc;
+      frame.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block;';
+      frame.setAttribute('scrolling', 'no');
       frame.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
       frame.allowFullscreen = true;
       frame.title = 'Hari Kaamatan 2026 Live Stream';
@@ -365,14 +366,10 @@ function initStream(streamUrl) {
         : '';
 
       wrap.innerHTML = `
-        <div style="width:100%;height:100%;position:relative;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
+        <div style="position:absolute;inset:0;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
           ${thumbUrl ? `<img src="${thumbUrl}" alt="Live Stream" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45;" onerror="this.style.display='none'" />` : ''}
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);"></div>
           <div style="position:relative;z-index:1;text-align:center;padding:24px;">
-            <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,59,59,0.12);border:1px solid rgba(255,59,59,0.3);border-radius:2px;padding:4px 10px;font-size:0.55rem;font-weight:800;letter-spacing:0.15em;color:#ff3b3b;text-transform:uppercase;margin-bottom:16px;">
-              <span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 6px 2px rgba(255,59,59,0.5);animation:live-pulse 2s ease-in-out infinite;display:inline-block;"></span>
-              Live Now · TV Sabah
-            </div>
             <div style="font-size:clamp(0.85rem,2vw,1.1rem);font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;margin-bottom:6px;">Hari Kaamatan 2026</div>
             <div style="font-size:0.7rem;color:#888;margin-bottom:22px;">Embedding disabled by broadcaster — watch directly on YouTube</div>
             <a href="${watchUrl}" target="_blank" rel="noopener"
@@ -387,7 +384,7 @@ function initStream(streamUrl) {
   } else {
     // Countdown fallback
     wrap.innerHTML = `
-      <div style="width:100%;height:100%;background:linear-gradient(160deg,#0d0808 0%,#1a0808 50%,#0d0d0d 100%);position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,#0d0808 0%,#1a0808 50%,#0d0d0d 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(255,59,59,0.07) 0%,transparent 65%);pointer-events:none;"></div>
         <div style="width:80px;height:80px;border-radius:50%;background:rgba(255,59,59,0.07);border:1px solid rgba(255,59,59,0.18);display:flex;align-items:center;justify-content:center;z-index:1;">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ff3b3b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
