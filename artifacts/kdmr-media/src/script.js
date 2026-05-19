@@ -673,7 +673,11 @@ async function initIndex(data) {
   }
 
   // ── Cinematic Hero — Legend of the Week ─────────────────────────────────
-  // Picked by pickFeatured(): rotates weekly through voted winners
+  // Skipped when unduk-locator hero is mounted (date-gated until 2026-06-01)
+  const heroSection = document.getElementById('heroSection');
+  if (heroSection?.dataset.hero === 'locator') {
+    // locator hero already mounted — skip portrait rendering
+  } else {
   const legend = featuredWinner;
 
   if (legend) {
@@ -823,6 +827,7 @@ async function initIndex(data) {
       });
     }
   }
+  } // end else (locator not active — portrait hero was rendered above)
 
   // ── Bento Box 2: Winning Costume ────────────────────────────────────────
   const costume2026 = [...allWinners].filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
