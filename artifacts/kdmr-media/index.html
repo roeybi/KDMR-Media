@@ -568,6 +568,13 @@
       </div>
     </footer>
 
+    <!-- ── Dynamic hero gate: show locator until June 1 2026, then portrait ── -->
+    <script type="module">
+      if (new Date() < new Date('2026-06-01T00:00:00+08:00')) {
+        const { mountLocatorHero } = await import('./src/unduk-locator.js');
+        mountLocatorHero(document.getElementById('heroSection'));
+      }
+    </script>
     <script type="module" src="./src/script.js"></script>
     <script>
       /* Mobile menu toggle — inline to avoid FOUC before ES module loads */
