@@ -112,10 +112,20 @@
     <div id="undukLocatorSection" style="background:#0a0a0a;border-bottom:1px solid #141414;padding:20px 16px 24px;position:relative;z-index:1;">
 
       <!-- Floating tooltip (fixed to viewport so it escapes any overflow) -->
-      <div id="undukTooltip" style="position:fixed;pointer-events:none;z-index:9999;display:none;background:rgba(8,8,8,0.97);border:1px solid rgba(240,168,32,0.45);border-radius:3px;padding:10px 14px;min-width:168px;backdrop-filter:blur(16px);box-shadow:0 6px 28px rgba(0,0,0,0.7);">
-        <div id="ttBranchName" style="font-size:0.76rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;margin-bottom:2px;"></div>
-        <div id="ttFullName"   style="font-size:0.62rem;font-weight:600;color:#f0a820;"></div>
-        <div style="margin-top:6px;font-size:0.55rem;color:#555;letter-spacing:0.06em;text-transform:uppercase;">Click to explore →</div>
+      <div id="undukTooltip" style="position:fixed;pointer-events:none;z-index:9999;display:none;perspective:1200px;opacity:0;transition:opacity 0.18s ease;">
+        <div id="undukTtCard" style="position:relative;width:200px;background:linear-gradient(160deg, rgba(32,24,10,0.96) 0%, rgba(14,11,6,0.97) 60%, rgba(8,6,3,0.98) 100%);border-radius:14px;padding:14px 14px 14px;border:1px solid rgba(240,168,32,0.32);box-shadow:0 30px 60px -16px rgba(0,0,0,0.95), 0 20px 40px -10px rgba(240,168,32,0.22), 0 2px 0 rgba(255,255,255,0.04) inset, 0 -2px 0 rgba(240,168,32,0.14) inset;transform-style:preserve-3d;transform:rotateX(10deg) rotateY(-8deg);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);overflow:visible;">
+          <div style="position:absolute;top:-1px;left:18%;right:18%;height:2px;background:linear-gradient(90deg, transparent, #f0a820, transparent);border-radius:2px;box-shadow:0 0 8px rgba(240,168,32,0.6);"></div>
+          <div style="position:absolute;top:7px;right:9px;font-size:0.5rem;font-weight:800;background:linear-gradient(135deg,#f5b830,#a06810);color:#0a0a0a;padding:2px 6px;border-radius:3px;letter-spacing:0.08em;box-shadow:0 2px 4px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1) inset;">UN</div>
+          <div style="position:relative;height:118px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:10px;">
+            <div style="position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:78%;height:14px;background:radial-gradient(ellipse, rgba(240,168,32,0.4), transparent 70%);filter:blur(6px);"></div>
+            <img id="undukTtImg" src="" alt="" style="position:relative;max-width:120px;max-height:118px;width:auto;height:100%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,0.7)) drop-shadow(0 0 18px rgba(240,168,32,0.28));"/>
+          </div>
+          <div id="undukTtWinner" style="font-size:0.78rem;font-weight:800;color:#f5f1e8;letter-spacing:-0.01em;text-align:center;margin-bottom:3px;text-shadow:0 1px 2px rgba(0,0,0,0.8);line-height:1.15;"></div>
+          <div id="undukTtBranch" style="font-size:0.58rem;font-weight:700;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;text-align:center;margin-bottom:2px;"></div>
+          <div id="undukTtSub" style="font-size:0.54rem;color:#777;letter-spacing:0.04em;text-align:center;"></div>
+          <div style="position:absolute;bottom:6px;left:7px;width:6px;height:6px;border-left:1px solid rgba(240,168,32,0.45);border-bottom:1px solid rgba(240,168,32,0.45);"></div>
+          <div style="position:absolute;bottom:6px;right:7px;width:6px;height:6px;border-right:1px solid rgba(240,168,32,0.45);border-bottom:1px solid rgba(240,168,32,0.45);"></div>
+        </div>
       </div>
 
       <div style="width:100%;max-width:500px;margin:0 auto;display:block;">
@@ -138,6 +148,11 @@
                   result="coloredBlur"/>
                 <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
+              <clipPath id="clipPP"><circle cx="42" cy="77" r="8"/></clipPath>
+              <clipPath id="clipKV"><circle cx="68" cy="117" r="9"/></clipPath>
+              <clipPath id="clipPJY"><circle cx="79" cy="124" r="7"/></clipPath>
+              <clipPath id="clipM"><circle cx="78" cy="134" r="7"/></clipPath>
+              <clipPath id="clipJB"><circle cx="91" cy="147" r="9"/></clipPath>
               <style>
                 .un-node { cursor:pointer; }
                 .un-node-body { transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1); transform-box:fill-box; transform-origin:center; }
@@ -174,47 +189,52 @@
                   font-family="Inter,sans-serif" letter-spacing="0.14em">MALAYSIA</text>
 
             <!-- Pulau Pinang (~5.4°N 100.3°E) -->
-            <g class="un-node" data-tab="Pulau Pinang" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026">
+            <g class="un-node" data-tab="Pulau Pinang" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="TBA — Coming Soon" data-img="placeholder-winner_nobg.png">
               <circle class="un-node-pulse" cx="42" cy="77" r="14" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
-                <circle cx="42" cy="77" r="8" fill="#101012" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
-                <text x="42" y="79.5" text-anchor="middle" font-size="4.2" fill="#f0a820" font-family="Inter,sans-serif" font-weight="800">PP</text>
+                <circle cx="42" cy="77" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/placeholder-winner_nobg.png" x="34" y="69" width="16" height="16" clip-path="url(#clipPP)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="42" cy="77" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
 
             <!-- Klang Valley (~3.1°N 101.7°E) -->
-            <g class="un-node" data-tab="Klang Valley" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2025">
-              <circle class="un-node-pulse" cx="68" cy="117" r="16" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+            <g class="un-node" data-tab="Klang Valley" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="finafayena-primus_nobg.png">
+              <circle class="un-node-pulse" cx="68" cy="117" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
-                <circle cx="68" cy="117" r="9" fill="#101012" stroke="#f0a820" stroke-width="1.8" filter="url(#nodeGlow)"/>
-                <text x="68" y="120" text-anchor="middle" font-size="4.5" fill="#f0a820" font-family="Inter,sans-serif" font-weight="800">KV</text>
+                <circle cx="68" cy="117" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/finafayena-primus_nobg.png" x="59" y="108" width="18" height="18" clip-path="url(#clipKV)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="68" cy="117" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
 
             <!-- Putrajaya (~2.9°N 101.7°E — offset SE of KV for clarity) -->
-            <g class="un-node" data-tab="Putrajaya" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2025">
+            <g class="un-node" data-tab="Putrajaya" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendey Merrylen S. Jasmine" data-img="wendey-merrylen_nobg.png">
               <circle class="un-node-pulse" cx="79" cy="124" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
-                <circle cx="79" cy="124" r="7" fill="#101012" stroke="#f0a820" stroke-width="1.5" filter="url(#nodeGlow)"/>
-                <text x="79" y="126.5" text-anchor="middle" font-size="3.8" fill="#f0a820" font-family="Inter,sans-serif" font-weight="800">PJY</text>
+                <circle cx="79" cy="124" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/wendey-merrylen_nobg.png" x="72" y="117" width="14" height="14" clip-path="url(#clipPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="79" cy="124" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
 
             <!-- Melaka (~2.2°N 102.3°E) -->
-            <g class="un-node" data-tab="Melaka" data-name="Melaka" data-sub="KDCA Melaka · 2026">
+            <g class="un-node" data-tab="Melaka" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="TBA — Coming Soon" data-img="placeholder-winner_nobg.png">
               <circle class="un-node-pulse" cx="78" cy="134" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
-                <circle cx="78" cy="134" r="7" fill="#101012" stroke="#f0a820" stroke-width="1.5" filter="url(#nodeGlow)"/>
-                <text x="78" y="136.5" text-anchor="middle" font-size="4.5" fill="#f0a820" font-family="Inter,sans-serif" font-weight="800">M</text>
+                <circle cx="78" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/placeholder-winner_nobg.png" x="71" y="127" width="14" height="14" clip-path="url(#clipM)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="78" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
 
             <!-- Johor Bahru (~1.5°N 103.8°E — south tip) -->
-            <g class="un-node" data-tab="Johor" data-name="Johor Bahru" data-sub="KDCA Johor Bahru · 2025">
-              <circle class="un-node-pulse" cx="91" cy="147" r="16" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+            <g class="un-node" data-tab="Johor" data-name="Johor Bahru" data-sub="KDCA Johor Bahru · 2025" data-winner="Irene Mansun" data-img="sample-un-winner_nobg.png">
+              <circle class="un-node-pulse" cx="91" cy="147" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
-                <circle cx="91" cy="147" r="9" fill="#101012" stroke="#f0a820" stroke-width="1.8" filter="url(#nodeGlow)"/>
-                <text x="91" y="150" text-anchor="middle" font-size="4.5" fill="#f0a820" font-family="Inter,sans-serif" font-weight="800">JB</text>
+                <circle cx="91" cy="147" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/sample-un-winner_nobg.png" x="82" y="138" width="18" height="18" clip-path="url(#clipJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="91" cy="147" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
 
@@ -307,36 +327,55 @@
     <script>
     (function () {
       var tooltip   = document.getElementById('undukTooltip');
-      var ttName    = document.getElementById('ttBranchName');
-      var ttSub     = document.getElementById('ttFullName');
+      var ttCard    = document.getElementById('undukTtCard');
+      var ttImg     = document.getElementById('undukTtImg');
+      var ttWinner  = document.getElementById('undukTtWinner');
+      var ttBranch  = document.getElementById('undukTtBranch');
+      var ttSub     = document.getElementById('undukTtSub');
       var nodes     = document.querySelectorAll('#peninsulaSvg .un-node');
-      var SCROLL_MS = 420; // ms to wait after scroll before clicking tab
+      var SCROLL_MS = 420;
 
       if (!tooltip || !nodes.length) return;
 
-      /* ── tooltip follow ──────────────────────────────────────────── */
+      /* ── 3D tooltip follow — also tilts card based on cursor position ── */
       function positionTooltip(e) {
-        var x = e.clientX + 16;
-        var y = e.clientY - 56;
-        if (x + 190 > window.innerWidth)  x = e.clientX - 194;
-        if (y < 8)                         y = e.clientY + 18;
+        var TW = 232, TH = 240;
+        var x = e.clientX + 22;
+        var y = e.clientY - TH/2;
+        if (x + TW > window.innerWidth - 8)  x = e.clientX - TW - 18;
+        if (y < 8)                            y = 8;
+        if (y + TH > window.innerHeight - 8)  y = window.innerHeight - TH - 8;
         tooltip.style.left = x + 'px';
         tooltip.style.top  = y + 'px';
+
+        /* Subtle parallax tilt — tracks cursor offset from card center */
+        if (ttCard) {
+          var dx = (e.clientX - (x + TW/2)) / (TW/2);
+          var dy = (e.clientY - (y + TH/2)) / (TH/2);
+          var rotY = Math.max(-14, Math.min(14, -dx * 10));
+          var rotX = Math.max(-12, Math.min(12, dy * 8));
+          ttCard.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
+        }
       }
 
       nodes.forEach(function (node) {
 
         node.addEventListener('mouseenter', function (e) {
-          ttName.textContent = this.dataset.name;
-          ttSub.textContent  = this.dataset.sub;
+          ttWinner.textContent = this.dataset.winner || '';
+          ttBranch.textContent = this.dataset.name || '';
+          ttSub.textContent    = this.dataset.sub || '';
+          ttImg.src            = this.dataset.img ? '/images/' + this.dataset.img : '';
           tooltip.style.display = 'block';
           positionTooltip(e);
+          /* Defer opacity flip so transition runs */
+          requestAnimationFrame(function () { tooltip.style.opacity = '1'; });
         });
 
         node.addEventListener('mousemove', positionTooltip);
 
         node.addEventListener('mouseleave', function () {
-          tooltip.style.display = 'none';
+          tooltip.style.opacity = '0';
+          setTimeout(function () { tooltip.style.display = 'none'; }, 180);
         });
 
         /* ── click: scroll hero into view, then fire branch tab ───── */
@@ -363,15 +402,23 @@
       nodes.forEach(function (node) {
         node.addEventListener('touchstart', function (e) {
           e.preventDefault();
-          ttName.textContent = this.dataset.name;
-          ttSub.textContent  = this.dataset.sub;
+          ttWinner.textContent = this.dataset.winner || '';
+          ttBranch.textContent = this.dataset.name || '';
+          ttSub.textContent    = this.dataset.sub || '';
+          ttImg.src            = this.dataset.img ? '/images/' + this.dataset.img : '';
           var touch = e.touches[0];
-          tooltip.style.left    = (touch.clientX + 12) + 'px';
-          tooltip.style.top     = (touch.clientY - 58) + 'px';
+          var x = touch.clientX + 12;
+          var y = touch.clientY - 120;
+          if (x + 232 > window.innerWidth - 8) x = touch.clientX - 244;
+          if (y < 8) y = touch.clientY + 18;
+          tooltip.style.left    = x + 'px';
+          tooltip.style.top     = y + 'px';
           tooltip.style.display = 'block';
+          requestAnimationFrame(function(){ tooltip.style.opacity = '1'; });
           var self = this;
           setTimeout(function () {
-            tooltip.style.display = 'none';
+            tooltip.style.opacity = '0';
+            setTimeout(function(){ tooltip.style.display = 'none'; }, 180);
             var hero = document.getElementById('heroContainer');
             if (hero) hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setTimeout(function () {
