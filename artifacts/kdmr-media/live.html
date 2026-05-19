@@ -9,6 +9,7 @@
     <meta property="og:description" content="Hari Kaamatan 2026 State Final — Live voting & chat" />
     <meta name="theme-color" content="#0a0a0a" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -127,9 +128,7 @@
 
         <div style="margin-bottom:20px;">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-            <div style="width:28px;height:28px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <span style="font-size:0.62rem;font-weight:900;color:#0a0a0a;">KM</span>
-            </div>
+            <img src="/mark-color.svg" alt="KDMR" style="width:28px;height:28px;display:block;flex-shrink:0;" />
             <div>
               <div style="font-size:0.5rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;">Cultural Gate Pass · PDPA 2010</div>
               <div style="font-size:0.72rem;font-weight:700;color:#888;">Hari Kaamatan 2026 State Final</div>
@@ -166,6 +165,7 @@
             <input type="checkbox" name="consent" class="gate-checkbox" required/>
             <span style="font-size:0.68rem;color:#555;line-height:1.55;margin-top:1px;">I consent to KDMR Media collecting my profile data under Malaysia's PDPA 2010. Data retained 30 days post-event, then anonymised.</span>
           </label>
+          <p style="font-size:0.68rem;color:#444;text-align:center;line-height:1.6;margin:10px 0 4px;">Disclaimer: The KDMR Media popular vote has no bearing on official Hongkod Koisaan scoring.</p>
           <button type="submit" class="gate-submit" id="gateSubmitBtn">Enter the Live Arena →</button>
           <p id="gateError" style="font-size:0.7rem;color:#ff6b6b;text-align:center;margin:2px 0 0;display:none;"></p>
         </form>
@@ -178,9 +178,7 @@
     <nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.96);border-bottom:1px solid #1a1a1a;backdrop-filter:blur(12px);">
       <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:50px;display:flex;align-items:center;gap:16px;">
         <a href="/" style="display:flex;align-items:center;gap:9px;text-decoration:none;margin-right:auto;">
-          <div style="width:26px;height:26px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;">
-            <span style="font-size:0.6rem;font-weight:900;color:#0a0a0a;">KM</span>
-          </div>
+          <img src="/mark-color.svg" alt="KDMR" style="width:26px;height:26px;display:block;" />
           <span style="font-size:0.9rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
         </a>
         <a href="/winners.html" style="font-size:0.75rem;font-weight:600;color:#666;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#f0f0f0'" onmouseout="this.style.color='#666'">Winners</a>
@@ -201,13 +199,8 @@
          Full-width, zero obstruction, pinned to top
          ════════════════════════════════════════════════ -->
     <div style="width:100%;background:#000;position:relative;">
-      <!-- Page title overlay (top-left corner of video area) -->
-      <div style="position:absolute;top:12px;left:14px;z-index:10;display:flex;align-items:center;gap:8px;pointer-events:none;">
-        <span class="live-badge"><span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;"></span> LIVE NOW</span>
-        <span id="liveTitle" style="font-size:0.68rem;font-weight:700;color:rgba(240,240,240,0.7);letter-spacing:-0.01em;">Hari Kaamatan 2026 — State Final</span>
-      </div>
       <!-- 16:9 video container -->
-      <div style="aspect-ratio:16/9;width:100%;max-height:80vh;overflow:hidden;" id="streamWrap">
+      <div style="position:relative;width:100%;padding-top:56.25%;" id="streamWrap">
         <!-- Injected by live.js — YouTube iframe or fallback countdown -->
       </div>
     </div>
@@ -278,6 +271,8 @@
         <div style="flex:1;height:1px;background:linear-gradient(90deg,#1e1e1e,transparent);"></div>
         <span id="voteUpdatedAt" style="font-size:0.5rem;color:#333;letter-spacing:0.06em;text-transform:uppercase;"></span>
       </div>
+      <!-- Community vote disclaimer -->
+      <p style="font-size:0.75rem;color:#666;font-style:italic;line-height:1.6;margin:0 0 18px;max-width:640px;">Note: This is a community-driven popular vote designed for fan engagement. It has zero influence on the official competition scores. We fully respect and defer to the final decisions of the professional judges.</p>
       <!-- Leaderboard list — populated by live.js -->
       <div id="leaderboardList" style="display:flex;flex-direction:column;gap:10px;">
         <!-- JS renders candidate rows here -->
@@ -288,9 +283,7 @@
     <footer style="border-top:1px solid #111;background:#050505;padding:28px 16px;">
       <div style="max-width:800px;margin:0 auto;text-align:center;">
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;">
-          <div style="width:22px;height:22px;background:#f0a820;border-radius:2px;display:flex;align-items:center;justify-content:center;">
-            <span style="font-size:0.55rem;font-weight:900;color:#0a0a0a;">KM</span>
-          </div>
+          <img src="/mark-color.svg" alt="KDMR" style="width:22px;height:22px;display:block;" />
           <span style="font-size:0.8rem;font-weight:800;color:#333;letter-spacing:-0.01em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
         </div>
         <div style="font-size:0.55rem;color:#222;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;">Live Arena · Hari Kaamatan 2026</div>

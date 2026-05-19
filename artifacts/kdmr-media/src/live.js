@@ -22,7 +22,7 @@ const API_CONFIG = {
 // TV Sabah YouTube live stream embed URL.
 // Replace CHANNEL_ID with the actual TV Sabah YouTube channel ID when stream goes live.
 // Example: https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxxxxxxx&autoplay=1&mute=1
-const TV_SABAH_STREAM_URL = 'https://www.youtube.com/embed/U2S-HnKjByg?autoplay=1&rel=0';
+const TV_SABAH_STREAM_URL = '';
 
 const SESSION_KEY   = 'kdmr_live_session';
 const VOTE_PREFIX   = 'kdmr_live_voted_';
@@ -189,14 +189,13 @@ async function loadInitialChat() {
 }
 
 async function syncVoteCounts() {
-  if (!API_CONFIG.ENABLED || !_liveEvent?.candidates) return;
+  if (!API_CONFIG.ENABLED || !_liveEvent?.candidates?.length) return;
   const rows = await sbFetch('live_votes', '?select=candidate_id');
   if (!rows) return;
   const counts = {};
   rows.forEach(r => { counts[r.candidate_id] = (counts[r.candidate_id] || 0) + 1; });
-  _liveEvent.candidates.forEach(c => {
-    if (counts[c.id] !== undefined) c.liveVotes = counts[c.id];
-  });
+  // Always overwrite from Supabase — including zero — so fake numbers never survive
+  _liveEvent.candidates.forEach(c => { c.liveVotes = counts[c.id] || 0; });
   renderLeaderboard(_liveEvent.candidates);
   updateRankingTicker();
 }
@@ -338,18 +337,54 @@ function initStream(streamUrl) {
   const embedUrl = TV_SABAH_STREAM_URL || streamUrl;
 
   if (isLive) {
-    const frame = document.createElement('iframe');
-    frame.src = embedUrl + (embedUrl.includes('?') ? '&' : '?') + 'rel=0&modestbranding=1&color=white';
-    frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
-    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    frame.allowFullscreen = true;
-    frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-    frame.title = 'Hari Kaamatan 2026 Live Stream';
-    wrap.appendChild(frame);
+    const isFacebook = embedUrl.includes('facebook.com');
+    const isYouTube  = embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be');
+
+    if (isFacebook) {
+      // Facebook Live embed via their video plugin iframe
+      const fbSrc = 'https://www.facebook.com/plugins/video.php'
+        + '?href=' + encodeURIComponent(embedUrl)
+        + '&show_text=false&autoplay=true&allowfullscreen=true';
+      const frame = document.createElement('iframe');
+      frame.src = fbSrc;
+      frame.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block;';
+      frame.setAttribute('scrolling', 'no');
+      frame.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      frame.title = 'Hari Kaamatan 2026 Live Stream';
+      wrap.appendChild(frame);
+
+    } else if (isYouTube) {
+      // YouTube — embedding may be disabled; show poster + watch button
+      const vidMatch = embedUrl.match(/embed\/([^?&]+)/) || embedUrl.match(/[?&]v=([^&]+)/);
+      const vidId    = vidMatch ? vidMatch[1] : null;
+      const watchUrl = vidId
+        ? `https://www.youtube.com/watch?v=${vidId}`
+        : embedUrl;
+      const thumbUrl = vidId
+        ? `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`
+        : '';
+
+      wrap.innerHTML = `
+        <div style="position:absolute;inset:0;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
+          ${thumbUrl ? `<img src="${thumbUrl}" alt="Live Stream" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45;" onerror="this.style.display='none'" />` : ''}
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);"></div>
+          <div style="position:relative;z-index:1;text-align:center;padding:24px;">
+            <div style="font-size:clamp(0.85rem,2vw,1.1rem);font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;margin-bottom:6px;">Hari Kaamatan 2026</div>
+            <div style="font-size:0.7rem;color:#888;margin-bottom:22px;">Embedding disabled by broadcaster — watch directly on YouTube</div>
+            <a href="${watchUrl}" target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:10px;background:#ff0000;color:#fff;font-size:0.82rem;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;letter-spacing:0.02em;transition:opacity 0.15s;"
+              onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              <svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M17.6 2.2C17.4 1.4 16.8.8 16 .6 14.6.2 9 .2 9 .2S3.4.2 2 .6C1.2.8.6 1.4.4 2.2 0 3.6 0 6.5 0 6.5s0 2.9.4 4.3c.2.8.8 1.4 1.6 1.6C3.4 12.8 9 12.8 9 12.8s5.6 0 7-.4c.8-.2 1.4-.8 1.6-1.6.4-1.4.4-4.3.4-4.3s0-2.9-.4-4.3zM7.2 9.3V3.7L11.9 6.5 7.2 9.3z"/></svg>
+              Watch Live on YouTube →
+            </a>
+          </div>
+        </div>`;
+    }
   } else {
     // Countdown fallback
     wrap.innerHTML = `
-      <div style="width:100%;height:100%;background:linear-gradient(160deg,#0d0808 0%,#1a0808 50%,#0d0d0d 100%);position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,#0d0808 0%,#1a0808 50%,#0d0d0d 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(255,59,59,0.07) 0%,transparent 65%);pointer-events:none;"></div>
         <div style="width:80px;height:80px;border-radius:50%;background:rgba(255,59,59,0.07);border:1px solid rgba(255,59,59,0.18);display:flex;align-items:center;justify-content:center;z-index:1;">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ff3b3b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -549,9 +584,24 @@ function renderLeaderboard(candidates) {
   if (!list) return;
 
   // Filter to Unduk Ngadau only, then sort by liveVotes descending
-  const sorted = [...candidates]
+  const sorted = [...(candidates || [])]
     .filter(c => c.award === 'Unduk Ngadau')
     .sort((a, b) => (b.liveVotes || 0) - (a.liveVotes || 0));
+
+  // No candidates yet — show Coming Soon state
+  if (!sorted.length) {
+    list.innerHTML = `
+      <div style="padding:48px 24px;text-align:center;border:1px solid #1a1a1a;border-radius:2px;background:#0a0a0a;">
+        <div style="font-size:2rem;margin-bottom:12px;">🏆</div>
+        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;margin-bottom:10px;">Participant List</div>
+        <div style="font-size:1.05rem;font-weight:800;color:#f0f0f0;margin-bottom:8px;">Coming Soon</div>
+        <div style="font-size:0.75rem;color:#444;line-height:1.6;max-width:280px;margin:0 auto;">
+          Official 2026 State Final candidates will be announced here once confirmed.<br>
+          <span style="color:#f0a820;">Check back closer to 30 May.</span>
+        </div>
+      </div>`;
+    return;
+  }
   const maxVotes = Math.max(...sorted.map(c => c.liveVotes || 0), 1);
   const baseUrl  = import.meta.env.BASE_URL.replace(/\/$/, '');
 
