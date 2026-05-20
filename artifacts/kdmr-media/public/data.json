@@ -555,7 +555,7 @@
     },
     {
       "id": "win-015",
-      "name": "Dyann Dharlla",
+      "name": "Dyann Dharlla Dominic",
       "branch": "KDCA Sabah",
       "award": "Unduk Ngadau",
       "year": 2026,
@@ -1042,7 +1042,7 @@
     },
     {
       "id": "win-035",
-      "name": "Christebell Masius",
+      "name": "Christebelle Masius",
       "branch": "KDCA Sabah",
       "award": "Unduk Ngadau",
       "year": 2026,
@@ -1485,6 +1485,966 @@
       "origin": "KDCA Klang Valley",
       "legacy": true,
       "imageUrl": "/images/Sample Sugandoi Winner.png"
+    },
+    {
+      "id": "win-037",
+      "name": "Joyce Nia David",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tanjung Aru",
+      "origin": "KDCA Tanjung Aru",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tanjung Aru 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tanjung Aru)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tanjung Aru district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Joyce Nia David was crowned Unduk Ngadau Kaamatan Tanjung Aru 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tanjung Aru, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tanjung Aru 2026 — District Champion",
+        "Tanjung Aru Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-038",
+      "name": "Essmerrellda Cafry",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Inanam",
+      "origin": "KDCA Inanam",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Inanam 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Inanam)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Inanam district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Essmerrellda Cafry was crowned Unduk Ngadau Kaamatan Inanam 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Inanam, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Inanam 2026 — District Champion",
+        "Inanam Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-039",
+      "name": "Natalie Ally Hepeni",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Karambunai",
+      "origin": "KDCA Karambunai",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Karambunai 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Karambunai)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Karambunai district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Natalie Ally Hepeni was crowned Unduk Ngadau Kaamatan Karambunai 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Karambunai, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Karambunai 2026 — District Champion",
+        "Karambunai Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-040",
+      "name": "Felecity Chen Sing Yee",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "KDCA Bandaraya",
+      "origin": "KDCA KDCA Bandaraya",
+      "accentColor": "#f0a820",
+      "badge": "District Champion KDCA Bandaraya 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (KDCA Bandaraya)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the KDCA Bandaraya district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Felecity Chen Sing Yee was crowned Unduk Ngadau Kaamatan KDCA Bandaraya 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of KDCA Bandaraya, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan KDCA Bandaraya 2026 — District Champion",
+        "KDCA Bandaraya Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-041",
+      "name": "Gadrette Gregory",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Penampang",
+      "origin": "KDCA Penampang",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Penampang 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Penampang)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Penampang district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Gadrette Gregory was crowned Unduk Ngadau Kaamatan Penampang 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Penampang, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Penampang 2026 — District Champion",
+        "Penampang Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-042",
+      "name": "Viviyana Jenny",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kapayan",
+      "origin": "KDCA Kapayan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kapayan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kapayan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kapayan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Viviyana Jenny was crowned Unduk Ngadau Kaamatan Kapayan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kapayan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kapayan 2026 — District Champion",
+        "Kapayan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-043",
+      "name": "Amber Weysha Walter John",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Putatan",
+      "origin": "KDCA Putatan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Putatan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Putatan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Putatan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Amber Weysha Walter John was crowned Unduk Ngadau Kaamatan Putatan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Putatan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Putatan 2026 — District Champion",
+        "Putatan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-044",
+      "name": "Juje Elor Francis",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tuaran",
+      "origin": "KDCA Tuaran",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tuaran 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tuaran)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tuaran district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Juje Elor Francis was crowned Unduk Ngadau Kaamatan Tuaran 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tuaran, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tuaran 2026 — District Champion",
+        "Tuaran Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-045",
+      "name": "Evyanarrey Larry",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tamparuli",
+      "origin": "KDCA Tamparuli",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tamparuli 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tamparuli)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tamparuli district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Evyanarrey Larry was crowned Unduk Ngadau Kaamatan Tamparuli 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tamparuli, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tamparuli 2026 — District Champion",
+        "Tamparuli Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-046",
+      "name": "Catsween Su Sun Ping",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kiulu",
+      "origin": "KDCA Kiulu",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kiulu 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kiulu)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kiulu district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Catsween Su Sun Ping was crowned Unduk Ngadau Kaamatan Kiulu 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kiulu, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kiulu 2026 — District Champion",
+        "Kiulu Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-047",
+      "name": "Edreen Lynn Edward",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Keningau",
+      "origin": "KDCA Keningau",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Keningau 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Keningau)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Keningau district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Edreen Lynn Edward was crowned Unduk Ngadau Kaamatan Keningau 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Keningau, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Keningau 2026 — District Champion",
+        "Keningau Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-048",
+      "name": "Alysheron Maunsiong",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Bingkor",
+      "origin": "KDCA Bingkor",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Bingkor 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Bingkor)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Bingkor district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Alysheron Maunsiong was crowned Unduk Ngadau Kaamatan Bingkor 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Bingkor, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Bingkor 2026 — District Champion",
+        "Bingkor Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-049",
+      "name": "Natalia Jinui",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tambunan",
+      "origin": "KDCA Tambunan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tambunan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tambunan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tambunan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Natalia Jinui was crowned Unduk Ngadau Kaamatan Tambunan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tambunan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tambunan 2026 — District Champion",
+        "Tambunan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-050",
+      "name": "Radila Ifa Yanie",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tenom",
+      "origin": "KDCA Tenom",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tenom 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tenom)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tenom district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Radila Ifa Yanie was crowned Unduk Ngadau Kaamatan Tenom 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tenom, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tenom 2026 — District Champion",
+        "Tenom Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-051",
+      "name": "Venica Tuboh",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kemabong",
+      "origin": "KDCA Kemabong",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kemabong 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kemabong)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kemabong district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Venica Tuboh was crowned Unduk Ngadau Kaamatan Kemabong 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kemabong, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kemabong 2026 — District Champion",
+        "Kemabong Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-052",
+      "name": "Myra Evana Robert",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Sook",
+      "origin": "KDCA Sook",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Sook 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Sook)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Sook district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Myra Evana Robert was crowned Unduk Ngadau Kaamatan Sook 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Sook, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Sook 2026 — District Champion",
+        "Sook Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-053",
+      "name": "Sahira Samson",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Nabawan",
+      "origin": "KDCA Nabawan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Nabawan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Nabawan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Nabawan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Sahira Samson was crowned Unduk Ngadau Kaamatan Nabawan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Nabawan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Nabawan 2026 — District Champion",
+        "Nabawan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-054",
+      "name": "Kerishine Danil",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Pagalungan",
+      "origin": "KDCA Pagalungan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Pagalungan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Pagalungan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Pagalungan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Kerishine Danil was crowned Unduk Ngadau Kaamatan Pagalungan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Pagalungan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Pagalungan 2026 — District Champion",
+        "Pagalungan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-055",
+      "name": "Feyrashandy Hanlin Hanis",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Rungus",
+      "district": "Kudat",
+      "origin": "KDCA Kudat",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kudat 2026",
+      "heritage": {
+        "group": "Rungus (Kudat)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kudat district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Rungus"
+      },
+      "bio": "Feyrashandy Hanlin Hanis was crowned Unduk Ngadau Kaamatan Kudat 2026, crowned at a celebratory event in the heart of Sabah. Representing the Rungus cultural heritage of Kudat, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kudat 2026 — District Champion",
+        "Kudat Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-056",
+      "name": "Lora Derlina Lisa Jusley",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Rungus",
+      "district": "Banggi",
+      "origin": "KDCA Banggi",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Banggi 2026",
+      "heritage": {
+        "group": "Rungus (Banggi)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Banggi district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Rungus"
+      },
+      "bio": "Lora Derlina Lisa Jusley was crowned Unduk Ngadau Kaamatan Banggi 2026, crowned at a celebratory event in the heart of Sabah. Representing the Rungus cultural heritage of Banggi, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Banggi 2026 — District Champion",
+        "Banggi Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-057",
+      "name": "Jean Christzabeth Yusevender",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Rungus",
+      "district": "Pitas",
+      "origin": "KDCA Pitas",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Pitas 2026",
+      "heritage": {
+        "group": "Rungus (Pitas)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Pitas district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Rungus"
+      },
+      "bio": "Jean Christzabeth Yusevender was crowned Unduk Ngadau Kaamatan Pitas 2026, crowned at a celebratory event in the heart of Sabah. Representing the Rungus cultural heritage of Pitas, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Pitas 2026 — District Champion",
+        "Pitas Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-058",
+      "name": "Aelvereny Vahidin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kota Marudu",
+      "origin": "KDCA Kota Marudu",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kota Marudu 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kota Marudu)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kota Marudu district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Aelvereny Vahidin was crowned Unduk Ngadau Kaamatan Kota Marudu 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kota Marudu, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kota Marudu 2026 — District Champion",
+        "Kota Marudu Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-059",
+      "name": "Criszelbellkah Lorris",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Rungus",
+      "district": "Matunggong",
+      "origin": "KDCA Matunggong",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Matunggong 2026",
+      "heritage": {
+        "group": "Rungus (Matunggong)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Matunggong district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Rungus"
+      },
+      "bio": "Criszelbellkah Lorris was crowned Unduk Ngadau Kaamatan Matunggong 2026, crowned at a celebratory event in the heart of Sabah. Representing the Rungus cultural heritage of Matunggong, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Matunggong 2026 — District Champion",
+        "Matunggong Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-060",
+      "name": "Althea Tan Pin Yan",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Bajau",
+      "district": "Kota Belud",
+      "origin": "KDCA Kota Belud",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kota Belud 2026",
+      "heritage": {
+        "group": "Bajau (Kota Belud)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kota Belud district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Bajau"
+      },
+      "bio": "Althea Tan Pin Yan was crowned Unduk Ngadau Kaamatan Kota Belud 2026, crowned at a celebratory event in the heart of Sabah. Representing the Bajau cultural heritage of Kota Belud, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kota Belud 2026 — District Champion",
+        "Kota Belud Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-061",
+      "name": "Candycyci Liakim",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Paitan",
+      "origin": "KDCA Paitan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Paitan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Paitan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Paitan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Candycyci Liakim was crowned Unduk Ngadau Kaamatan Paitan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Paitan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Paitan 2026 — District Champion",
+        "Paitan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-062",
+      "name": "Raraa Cyra Eva Bella Stephen",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Telupid",
+      "origin": "KDCA Telupid",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Telupid 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Telupid)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Telupid district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Raraa Cyra Eva Bella Stephen was crowned Unduk Ngadau Kaamatan Telupid 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Telupid, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Telupid 2026 — District Champion",
+        "Telupid Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-063",
+      "name": "Dovena Jessie Isabell Daniel",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Sungai Manila",
+      "origin": "KDCA Sungai Manila",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Sungai Manila 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Sungai Manila)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Sungai Manila district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Dovena Jessie Isabell Daniel was crowned Unduk Ngadau Kaamatan Sungai Manila 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Sungai Manila, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Sungai Manila 2026 — District Champion",
+        "Sungai Manila Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-064",
+      "name": "Vrenda Joan Taji",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kinabatangan",
+      "origin": "KDCA Kinabatangan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kinabatangan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kinabatangan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kinabatangan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Vrenda Joan Taji was crowned Unduk Ngadau Kaamatan Kinabatangan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kinabatangan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kinabatangan 2026 — District Champion",
+        "Kinabatangan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-065",
+      "name": "Ally Denis",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Sukau",
+      "origin": "KDCA Sukau",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Sukau 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Sukau)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Sukau district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Ally Denis was crowned Unduk Ngadau Kaamatan Sukau 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Sukau, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Sukau 2026 — District Champion",
+        "Sukau Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-066",
+      "name": "Elvisa Edna Robert",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tawau",
+      "origin": "KDCA Tawau",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tawau 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tawau)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tawau district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Elvisa Edna Robert was crowned Unduk Ngadau Kaamatan Tawau 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tawau, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tawau 2026 — District Champion",
+        "Tawau Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-067",
+      "name": "Christine Dionysius",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kalabakan",
+      "origin": "KDCA Kalabakan",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kalabakan 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kalabakan)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kalabakan district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Christine Dionysius was crowned Unduk Ngadau Kaamatan Kalabakan 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kalabakan, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kalabakan 2026 — District Champion",
+        "Kalabakan Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-068",
+      "name": "Caesyzizi Liakim",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Lahad Datu",
+      "origin": "KDCA Lahad Datu",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Lahad Datu 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Lahad Datu)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Lahad Datu district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Caesyzizi Liakim was crowned Unduk Ngadau Kaamatan Lahad Datu 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Lahad Datu, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Lahad Datu 2026 — District Champion",
+        "Lahad Datu Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-069",
+      "name": "Mary-An P. Calica",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tungku",
+      "origin": "KDCA Tungku",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Tungku 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Tungku)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Tungku district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Mary-An P. Calica was crowned Unduk Ngadau Kaamatan Tungku 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Tungku, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Tungku 2026 — District Champion",
+        "Tungku Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-070",
+      "name": "Rachel Justin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Kunak",
+      "origin": "KDCA Kunak",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kunak 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Kunak)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kunak district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Rachel Justin was crowned Unduk Ngadau Kaamatan Kunak 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Kunak, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kunak 2026 — District Champion",
+        "Kunak Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-071",
+      "name": "Adylee Arisen",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Semporna",
+      "origin": "KDCA Semporna",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Semporna 2026",
+      "heritage": {
+        "group": "Kadazan Dusun (Semporna)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Semporna district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Adylee Arisen was crowned Unduk Ngadau Kaamatan Semporna 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Semporna, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Semporna 2026 — District Champion",
+        "Semporna Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-072",
+      "name": "Fedelia Viviana Venchin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Bisaya",
+      "district": "Beaufort",
+      "origin": "KDCA Beaufort",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Beaufort 2026",
+      "heritage": {
+        "group": "Bisaya (Beaufort)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Beaufort district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Bisaya"
+      },
+      "bio": "Fedelia Viviana Venchin was crowned Unduk Ngadau Kaamatan Beaufort 2026, crowned at a celebratory event in the heart of Sabah. Representing the Bisaya cultural heritage of Beaufort, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Beaufort 2026 — District Champion",
+        "Beaufort Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-073",
+      "name": "Dorna Mayra Michael",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Bisaya",
+      "district": "Membakut",
+      "origin": "KDCA Membakut",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Membakut 2026",
+      "heritage": {
+        "group": "Bisaya (Membakut)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Membakut district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Bisaya"
+      },
+      "bio": "Dorna Mayra Michael was crowned Unduk Ngadau Kaamatan Membakut 2026, crowned at a celebratory event in the heart of Sabah. Representing the Bisaya cultural heritage of Membakut, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Membakut 2026 — District Champion",
+        "Membakut Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-074",
+      "name": "Lorna Breetney Johnny",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Bisaya",
+      "district": "Kuala Penyu",
+      "origin": "KDCA Kuala Penyu",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Kuala Penyu 2026",
+      "heritage": {
+        "group": "Bisaya (Kuala Penyu)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Kuala Penyu district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Bisaya"
+      },
+      "bio": "Lorna Breetney Johnny was crowned Unduk Ngadau Kaamatan Kuala Penyu 2026, crowned at a celebratory event in the heart of Sabah. Representing the Bisaya cultural heritage of Kuala Penyu, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Kuala Penyu 2026 — District Champion",
+        "Kuala Penyu Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-075",
+      "name": "Hyzlensiska Verron Johnny",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Bisaya",
+      "district": "Menumbok",
+      "origin": "KDCA Menumbok",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Menumbok 2026",
+      "heritage": {
+        "group": "Bisaya (Menumbok)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Menumbok district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Bisaya"
+      },
+      "bio": "Hyzlensiska Verron Johnny was crowned Unduk Ngadau Kaamatan Menumbok 2026, crowned at a celebratory event in the heart of Sabah. Representing the Bisaya cultural heritage of Menumbok, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Menumbok 2026 — District Champion",
+        "Menumbok Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
+    },
+    {
+      "id": "win-076",
+      "name": "Hilda Jaynissa Godwin",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Murut",
+      "district": "Sipitang",
+      "origin": "KDCA Sipitang",
+      "accentColor": "#f0a820",
+      "badge": "District Champion Sipitang 2026",
+      "heritage": {
+        "group": "Murut (Sipitang)",
+        "costume": "Traditional Sinuangga' ceremonial attire representing the Sipitang district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
+        "language": "Murut"
+      },
+      "bio": "Hilda Jaynissa Godwin was crowned Unduk Ngadau Kaamatan Sipitang 2026, crowned at a celebratory event in the heart of Sabah. Representing the Murut cultural heritage of Sipitang, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
+      "achievements": [
+        "Unduk Ngadau Kaamatan Sipitang 2026 — District Champion",
+        "Sipitang Representative — 66th Unduk Ngadau State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": "/images/placeholder-winner.png"
     }
   ],
   "songs": [
@@ -1576,7 +2536,11 @@
       ],
       "votes": 124,
       "image": null,
-      "tags": ["leadership", "indigenous rights", "culture"]
+      "tags": [
+        "leadership",
+        "indigenous rights",
+        "culture"
+      ]
     },
     {
       "id": "hof-002",
@@ -1594,7 +2558,11 @@
       ],
       "votes": 287,
       "image": null,
-      "tags": ["legacy", "politics", "pioneer"]
+      "tags": [
+        "legacy",
+        "politics",
+        "pioneer"
+      ]
     },
     {
       "id": "hof-003",
@@ -1612,7 +2580,11 @@
       ],
       "votes": 193,
       "image": null,
-      "tags": ["music", "culture", "heritage"]
+      "tags": [
+        "music",
+        "culture",
+        "heritage"
+      ]
     },
     {
       "id": "hof-004",
@@ -1630,7 +2602,11 @@
       ],
       "votes": 156,
       "image": null,
-      "tags": ["sports", "athletics", "SEA Games"]
+      "tags": [
+        "sports",
+        "athletics",
+        "SEA Games"
+      ]
     },
     {
       "id": "hof-005",
@@ -1648,7 +2624,11 @@
       ],
       "votes": 211,
       "image": null,
-      "tags": ["dance", "costume", "Rungus heritage"]
+      "tags": [
+        "dance",
+        "costume",
+        "Rungus heritage"
+      ]
     },
     {
       "id": "hof-006",
@@ -1666,7 +2646,11 @@
       ],
       "votes": 98,
       "image": null,
-      "tags": ["education", "linguistics", "academia"]
+      "tags": [
+        "education",
+        "linguistics",
+        "academia"
+      ]
     },
     {
       "id": "hof-007",
@@ -1684,7 +2668,11 @@
       ],
       "votes": 175,
       "image": null,
-      "tags": ["sports", "martial arts", "silat"]
+      "tags": [
+        "sports",
+        "martial arts",
+        "silat"
+      ]
     },
     {
       "id": "hof-008",
@@ -1702,7 +2690,11 @@
       ],
       "votes": 342,
       "image": null,
-      "tags": ["music", "entertainment", "national icon"]
+      "tags": [
+        "music",
+        "entertainment",
+        "national icon"
+      ]
     },
     {
       "id": "hof-009",
@@ -1720,7 +2712,11 @@
       ],
       "votes": 134,
       "image": null,
-      "tags": ["politics", "environment", "rural development"]
+      "tags": [
+        "politics",
+        "environment",
+        "rural development"
+      ]
     },
     {
       "id": "hof-010",
@@ -1738,7 +2734,11 @@
       ],
       "votes": 162,
       "image": null,
-      "tags": ["entrepreneurship", "food heritage", "agribusiness"]
+      "tags": [
+        "entrepreneurship",
+        "food heritage",
+        "agribusiness"
+      ]
     },
     {
       "id": "hof-011",
@@ -1756,7 +2756,11 @@
       ],
       "votes": 118,
       "image": null,
-      "tags": ["craft", "weaving", "Rungus"]
+      "tags": [
+        "craft",
+        "weaving",
+        "Rungus"
+      ]
     },
     {
       "id": "hof-012",
@@ -1774,7 +2778,11 @@
       ],
       "votes": 147,
       "image": null,
-      "tags": ["football", "sports", "Sabah FA"]
+      "tags": [
+        "football",
+        "sports",
+        "Sabah FA"
+      ]
     }
   ],
   "news": [
