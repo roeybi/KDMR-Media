@@ -1576,11 +1576,7 @@
       ],
       "votes": 124,
       "image": null,
-      "tags": [
-        "leadership",
-        "indigenous rights",
-        "culture"
-      ]
+      "tags": ["leadership", "indigenous rights", "culture"]
     },
     {
       "id": "hof-002",
@@ -1598,11 +1594,7 @@
       ],
       "votes": 287,
       "image": null,
-      "tags": [
-        "legacy",
-        "politics",
-        "pioneer"
-      ]
+      "tags": ["legacy", "politics", "pioneer"]
     },
     {
       "id": "hof-003",
@@ -1620,11 +1612,7 @@
       ],
       "votes": 193,
       "image": null,
-      "tags": [
-        "music",
-        "culture",
-        "heritage"
-      ]
+      "tags": ["music", "culture", "heritage"]
     },
     {
       "id": "hof-004",
@@ -1642,11 +1630,7 @@
       ],
       "votes": 156,
       "image": null,
-      "tags": [
-        "sports",
-        "athletics",
-        "SEA Games"
-      ]
+      "tags": ["sports", "athletics", "SEA Games"]
     },
     {
       "id": "hof-005",
@@ -1664,11 +1648,7 @@
       ],
       "votes": 211,
       "image": null,
-      "tags": [
-        "dance",
-        "costume",
-        "Rungus heritage"
-      ]
+      "tags": ["dance", "costume", "Rungus heritage"]
     },
     {
       "id": "hof-006",
@@ -1686,11 +1666,7 @@
       ],
       "votes": 98,
       "image": null,
-      "tags": [
-        "education",
-        "linguistics",
-        "academia"
-      ]
+      "tags": ["education", "linguistics", "academia"]
     },
     {
       "id": "hof-007",
@@ -1708,11 +1684,7 @@
       ],
       "votes": 175,
       "image": null,
-      "tags": [
-        "sports",
-        "martial arts",
-        "silat"
-      ]
+      "tags": ["sports", "martial arts", "silat"]
     },
     {
       "id": "hof-008",
@@ -1730,11 +1702,7 @@
       ],
       "votes": 342,
       "image": null,
-      "tags": [
-        "music",
-        "entertainment",
-        "national icon"
-      ]
+      "tags": ["music", "entertainment", "national icon"]
     },
     {
       "id": "hof-009",
@@ -1752,11 +1720,7 @@
       ],
       "votes": 134,
       "image": null,
-      "tags": [
-        "politics",
-        "environment",
-        "rural development"
-      ]
+      "tags": ["politics", "environment", "rural development"]
     },
     {
       "id": "hof-010",
@@ -1774,11 +1738,7 @@
       ],
       "votes": 162,
       "image": null,
-      "tags": [
-        "entrepreneurship",
-        "food heritage",
-        "agribusiness"
-      ]
+      "tags": ["entrepreneurship", "food heritage", "agribusiness"]
     },
     {
       "id": "hof-011",
@@ -1796,11 +1756,7 @@
       ],
       "votes": 118,
       "image": null,
-      "tags": [
-        "craft",
-        "weaving",
-        "Rungus"
-      ]
+      "tags": ["craft", "weaving", "Rungus"]
     },
     {
       "id": "hof-012",
@@ -1818,11 +1774,7 @@
       ],
       "votes": 147,
       "image": null,
-      "tags": [
-        "football",
-        "sports",
-        "Sabah FA"
-      ]
+      "tags": ["football", "sports", "Sabah FA"]
     }
   ],
   "news": [
@@ -1880,7 +1832,7 @@
     "title": "Hari Kaamatan 2026 — State Final Live Arena",
     "subtitle": "Unduk Ngadau, MRK & Sugandoi · Hongkod Koisaan, Penampang · 30–31 May 2026",
     "status": "upcoming",
-    "streamUrl": "https://www.facebook.com/100063765091959/videos/1289175459530618",
+    "streamUrl": "https://www.facebook.com/tvsabahofficial/videos/2109745463291116",
     "startDate": "2026-05-30T18:00:00+08:00",
     "endDate": "2026-05-31T23:00:00+08:00",
     "candidates": []
