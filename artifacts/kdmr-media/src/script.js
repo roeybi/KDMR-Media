@@ -295,6 +295,7 @@ function initGlobalSearch(data) {
 const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Johor', 'Melaka', 'Sarawak', 'WP Labuan', 'Pulau Pinang'];
 const TAB_LABELS = { 'Sabah': 'Sabah (Central)' };
 const HERO_CUTOFF_YEAR = 2017; // 10-year rolling window: show hero carousel for this year and newer
+const SABAH_GRID_THRESHOLD = 8; // Show district grid when Sabah has >= this many winners
 
 function branchMatchesTab(branch, tab) {
   return branch === 'KDCA ' + tab;
@@ -434,6 +435,103 @@ function renderTabs() {
   });
 }
 
+/* ─── Sabah District Grid helpers ─── */
+
+function isSabahGridMode() {
+  // Only show district grid for Unduk Ngadau Sabah tab (not MRK or Sugandoi)
+  return hs.award === 'Unduk Ngadau' && hs.tab === 'Sabah' && hs.list.length >= SABAH_GRID_THRESHOLD;
+}
+
+function renderSabahGrid() {
+  const grid = document.getElementById('sabahGrid');
+  if (!grid) return;
+  const acc = '#f0a820';
+  // Sort alphabetically by district for the grid
+  const sorted = [...hs.list].sort((a, b) => a.district.localeCompare(b.district));
+  grid.innerHTML = sorted.map(w => {
+    const hasPhoto = w.imageUrl && !w.imageUrl.includes('placeholder');
+    const inits = initials(w.name);
+    return `
+      <div class="sabah-card" data-id="${w.id}" title="${w.name} — ${w.district}">
+        <div class="sabah-card-photo">
+          ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
+          <div class="sabah-card-initials" style="display:${hasPhoto ? 'none' : 'flex'}">${inits}</div>
+          <div class="sabah-card-votes">↑ ${w.votes}</div>
+        </div>
+        <div class="sabah-card-info">
+          <div class="sabah-card-name">${w.name}</div>
+          <div class="sabah-card-district">${w.district}</div>
+          <div class="sabah-card-tribe">${w.tribe}</div>
+        </div>
+      </div>`;
+  }).join('');
+  // Event delegation for card clicks
+  grid.onclick = e => {
+    const card = e.target.closest('.sabah-card');
+    if (!card) return;
+    const id = card.dataset.id;
+    const idx = hs.list.findIndex(w => w.id === id);
+    if (idx >= 0) enterCarousel(idx);
+  };
+}
+
+function enterCarousel(idx) {
+  // Switch from grid view to single-winner carousel view
+  const grid = document.getElementById('sabahGrid');
+  const wrap = document.getElementById('carouselWrap');
+  const dots = document.getElementById('dotRow');
+  const backBtn = document.getElementById('gridBackBtn');
+  const statsPanel = document.getElementById('statsPanel');
+  if (grid) grid.style.display = 'none';
+  if (wrap) wrap.style.display = '';
+  if (dots) dots.style.display = '';
+  if (backBtn) backBtn.style.display = '';
+  // Show arrows
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  if (prev) prev.style.display = '';
+  if (next) next.style.display = '';
+  // Render the selected winner
+  hs.index = ((idx % hs.list.length) + hs.list.length) % hs.list.length;
+  const entry = hs.list[hs.index];
+  if (entry) {
+    renderPortrait(entry);
+    renderStats(entry, 'statsPanel');
+    const mob = document.getElementById('mobileStats');
+    if (mob?.style.display !== 'none') renderStats(entry, 'mobileStats');
+    renderDots();
+  }
+}
+
+function enterGrid() {
+  // Switch from carousel view back to district grid view
+  const grid = document.getElementById('sabahGrid');
+  const wrap = document.getElementById('carouselWrap');
+  const dots = document.getElementById('dotRow');
+  const backBtn = document.getElementById('gridBackBtn');
+  const statsPanel = document.getElementById('statsPanel');
+  if (grid) { grid.style.display = ''; renderSabahGrid(); }
+  if (wrap) wrap.style.display = 'none';
+  if (dots) dots.style.display = 'none';
+  if (backBtn) backBtn.style.display = 'none';
+  // Hide arrows
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  if (prev) prev.style.display = 'none';
+  if (next) next.style.display = 'none';
+  // Clear stats panel or show "select a district" hint
+  if (statsPanel) {
+    statsPanel.innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:14px;text-align:center;padding:20px;">
+        <div style="font-size:2rem;color:rgba(240,168,32,0.08);line-height:1;">✖</div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(240,168,32,0.35);">Sabah Districts</div>
+        <div style="font-size:0.72rem;color:#444;max-width:200px;line-height:1.6;">Click any district champion to view their full profile and upvote.</div>
+      </div>`;
+  }
+  const mob = document.getElementById('mobileStats');
+  if (mob) mob.innerHTML = '';
+}
+
 function initBranchTabs() {
   // Called once from initHeroSelector — sets up tabs + single event-delegated listener
   const el = document.getElementById('branchTabs'); if (!el) return;
@@ -554,7 +652,11 @@ function switchTab(tab) {
   const panel   = document.getElementById('statsPanel');
   const dotRow  = document.getElementById('dotRow');
   const legacyEl = document.getElementById('legacyRoll');
+  const grid    = document.getElementById('sabahGrid');
+  const wrap    = document.getElementById('carouselWrap');
+  const backBtn = document.getElementById('gridBackBtn');
   hs.transitioning = true;
+  if (grid) grid.classList.add('fading');
   card?.classList.add('fading');
   panel?.classList.add('fading');
   if (legacyEl) legacyEl.classList.add('fading');
@@ -564,9 +666,26 @@ function switchTab(tab) {
     if (!hs.list.length) {
       // ─ Cinematic "Archive in Progress" placeholder ─
       renderEmptyState(tab);
+      if (grid) grid.style.display = 'none';
+      if (wrap) wrap.style.display = '';
+      if (backBtn) backBtn.style.display = 'none';
       if (panel)  panel.innerHTML  = '';
       if (dotRow) dotRow.innerHTML = '';
+    } else if (isSabahGridMode()) {
+      // ─ Sabah: show district grid instead of carousel ─
+      enterGrid();
+      if (card) card.classList.remove('fading');
     } else {
+      // ─ Standard: single-winner carousel ─
+      if (grid) grid.style.display = 'none';
+      if (wrap) wrap.style.display = '';
+      if (backBtn) backBtn.style.display = 'none';
+      // Show arrows + dots
+      const prev = document.getElementById('prevBtn');
+      const next = document.getElementById('nextBtn');
+      if (prev) prev.style.display = '';
+      if (next) next.style.display = '';
+      if (dotRow) dotRow.style.display = '';
       const entry = hs.list[0];
       renderPortrait(entry);
       renderStats(entry, 'statsPanel');
@@ -574,6 +693,7 @@ function switchTab(tab) {
       if (mob?.style.display !== 'none') renderStats(entry, 'mobileStats');
       renderDots();
     }
+    if (grid) grid.classList.remove('fading');
     card?.classList.remove('fading');
     panel?.classList.remove('fading');
     if (legacyEl) legacyEl.classList.remove('fading');
@@ -601,8 +721,15 @@ function initHeroSelector(data, award) {
   hs.index = 0;
 
   initBranchTabs(); // builds tabs + attaches one delegated listener
-  if (hs.list.length) switchTo(0, true);
-  else renderEmptyState(hs.tab);
+  if (hs.list.length) {
+    if (isSabahGridMode()) {
+      enterGrid();
+    } else {
+      switchTo(0, true);
+    }
+  } else {
+    renderEmptyState(hs.tab);
+  }
   renderLegacyRoll(hs.tab);
 
   // Layout
@@ -626,28 +753,38 @@ function initHeroSelector(data, award) {
     portraitRegion.style.flex    = d ? '1' : 'none';
     portraitRegion.style.overflow= d ? 'hidden' : 'visible';
     portraitRegion.style.padding = d ? '20px 48px' : '12px 20px 0';
-    if (!d && hs.list[hs.index]) renderStats(hs.list[hs.index], 'mobileStats');
+    if (!d && hs.list[hs.index] && !isSabahGridMode()) renderStats(hs.list[hs.index], 'mobileStats');
   }
   applyLayout();
   window.addEventListener('resize', applyLayout);
 
-  // Arrow navigation
-  document.getElementById('prevBtn')?.addEventListener('click', ()=>switchTo(hs.index-1));
-  document.getElementById('nextBtn')?.addEventListener('click', ()=>switchTo(hs.index+1));
+  // Arrow navigation (only active in carousel mode, not grid mode)
+  document.getElementById('prevBtn')?.addEventListener('click', ()=>{ if (!isSabahGridMode()) switchTo(hs.index-1); });
+  document.getElementById('nextBtn')?.addEventListener('click', ()=>{ if (!isSabahGridMode()) switchTo(hs.index+1); });
 
-  // Keyboard
+  // Keyboard (skip in grid mode — allow Escape to go back to grid)
   document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      const backBtn = document.getElementById('gridBackBtn');
+      if (backBtn && backBtn.style.display !== 'none') { enterGrid(); e.preventDefault(); }
+      return;
+    }
+    if (isSabahGridMode()) return;
     if (e.key==='ArrowLeft')  switchTo(hs.index-1);
     if (e.key==='ArrowRight') switchTo(hs.index+1);
   });
 
-  // Touch swipe
+  // Touch swipe (skip in grid mode)
   let tx=0;
   document.getElementById('portraitCard')?.addEventListener('touchstart', e=>{ tx=e.touches[0].clientX; },{passive:true});
   document.getElementById('portraitCard')?.addEventListener('touchend', e=>{
+    if (isSabahGridMode()) return;
     const dx=e.changedTouches[0].clientX-tx;
     if (Math.abs(dx)>40) switchTo(dx<0?hs.index+1:hs.index-1);
   },{passive:true});
+
+  // Back-to-grid button
+  document.getElementById('gridBackBtn')?.addEventListener('click', enterGrid);
 }
 
 // ─── INDEX PAGE ───────────────────────────────────────────────────────────
