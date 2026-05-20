@@ -1,7 +1,7 @@
 //import { execSync } from "node:child_process";
 //import fs from "node:fs";
 
-const { execSync } = require("child_process");
+const fs = require("fs");
 
 const ua = process.env.npm_config_user_agent || "";
 
@@ -12,9 +12,11 @@ if (ua && !ua.startsWith("pnpm/")) {
   process.exit(1);
 }
 
-// Clean up other lockfiles
-try {
-  execSync("del package-lock.json yarn.lock", { stdio: "ignore", shell: "cmd.exe" });
-} catch {
-  // ignore if files don't exist
-}
+// Cross-platform cleanup
+["package-lock.json", "yarn.lock"].forEach(file => {
+  try {
+    fs.unlinkSync(file);
+  } catch {
+    // ignore if files don't exist
+  }
+});
