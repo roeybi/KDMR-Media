@@ -140,6 +140,8 @@
               <clipPath id="clipPJY"><circle cx="79" cy="124" r="7"/></clipPath>
               <clipPath id="clipM"><circle cx="78" cy="134" r="7"/></clipPath>
               <clipPath id="clipJB"><circle cx="91" cy="147" r="9"/></clipPath>
+              <clipPath id="clipSWK"><circle cx="183" cy="146" r="9"/></clipPath>
+              <clipPath id="clipSBH"><circle cx="263" cy="67" r="9"/></clipPath>
               <style>
                 .un-node { cursor:pointer; }
                 .un-node-body { transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1); transform-box:fill-box; transform-origin:center; }
@@ -225,6 +227,26 @@
               </g>
             </g>
 
+            <!-- Sarawak — Kuching (~1.55°N 110.35°E) -->
+            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="183" cy="146" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body">
+                <circle cx="183" cy="146" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/placeholder-winner_nobg.png" x="174" y="137" width="18" height="18" clip-path="url(#clipSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="183" cy="146" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
+              </g>
+            </g>
+
+            <!-- Sabah — Kota Kinabalu (~5.98°N 116.07°E) -->
+            <g class="un-node" data-tab="Sabah" data-name="Sabah" data-sub="KDCA Sabah · 2026" data-winner="State Finals — 31 May" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="263" cy="67" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body">
+                <circle cx="263" cy="67" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
+                <image href="/images/placeholder-winner_nobg.png" x="254" y="58" width="18" height="18" clip-path="url(#clipSBH)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="263" cy="67" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
+              </g>
+            </g>
+
           </svg>
 
       </div><!-- /max-width container -->
@@ -241,7 +263,13 @@
 
         <!-- Portrait -->
         <div id="portraitRegion" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 48px;position:relative;overflow:hidden;min-height:0;">
-          <div style="position:relative;width:100%;max-width:320px;">
+          <!-- Back-to-grid button (shown when a Sabah district card is clicked) -->
+          <button id="gridBackBtn" style="display:none;position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:10;background:rgba(240,168,32,0.1);border:1px solid rgba(240,168,32,0.3);color:#f0a820;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;font-family:Inter,sans-serif;transition:background 0.2s;">
+            ← All Districts
+          </button>
+          <!-- Sabah district grid (injected by JS when Sabah tab is active) -->
+          <div id="sabahGrid" class="sabah-grid" style="display:none;width:100%;max-height:100%;overflow-y:auto;"></div>
+          <div id="carouselWrap" style="position:relative;width:100%;max-width:320px;">
             <button id="prevBtn" class="hero-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg></button>
             <div id="portraitCard">
               <div id="portraitInner">
@@ -261,7 +289,7 @@
             </div>
             <button id="nextBtn" class="hero-arrow"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></button>
           </div>
-          <div id="dotRow"></div>
+          <div id="dotRow" style="display:none;"></div>
         </div>
 
         <!-- Stats panel (desktop) -->
