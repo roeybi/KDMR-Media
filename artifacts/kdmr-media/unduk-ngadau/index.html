@@ -141,7 +141,7 @@
               <clipPath id="clipM"><circle cx="78" cy="134" r="7"/></clipPath>
               <clipPath id="clipJB"><circle cx="91" cy="147" r="9"/></clipPath>
               <clipPath id="clipSWK"><circle cx="183" cy="146" r="9"/></clipPath>
-              <clipPath id="clipSBH"><circle cx="263" cy="67" r="9"/></clipPath>
+              <!-- district pins are plain circles — no clipPath needed at r=3.5 -->
               <style>
                 .un-node { cursor:pointer; }
                 .un-node-body { transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1); transform-box:fill-box; transform-origin:center; }
@@ -237,14 +237,189 @@
               </g>
             </g>
 
-            <!-- Sabah — Kota Kinabalu (~5.98°N 116.07°E) -->
-            <g class="un-node" data-tab="Sabah" data-name="Sabah" data-sub="KDCA Sabah · 2026" data-winner="State Finals — 31 May" data-img="placeholder-winner_nobg.png">
-              <circle class="un-node-pulse" cx="263" cy="67" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body">
-                <circle cx="263" cy="67" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#nodeGlow)"/>
-                <image href="/images/placeholder-winner_nobg.png" x="254" y="58" width="18" height="18" clip-path="url(#clipSBH)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
-                <circle cx="263" cy="67" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
-              </g>
+            <!-- ── Sabah — 45 district pins ─────────────────────────────── -->
+            <text x="273" y="88" text-anchor="middle" font-size="4.5" fill="rgba(240,168,32,0.12)"
+                  font-family="Inter,sans-serif" font-weight="800" letter-spacing="0.18em">SABAH</text>
+
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-015" data-district="Beluran" data-winner="Dyann Dharlla Dominic" data-name="Beluran" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="283" cy="65" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="283" cy="65" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-020" data-district="Papar" data-winner="Gelvia Vanessa Jenny" data-name="Papar" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="262" cy="71" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="262" cy="71" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-034" data-district="Sandakan" data-winner="Ceelecia Reeka Mosungin" data-name="Sandakan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="292" cy="69" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="292" cy="69" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-035" data-district="Ranau" data-winner="Christebelle Masius" data-name="Ranau" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="271" cy="66" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="271" cy="66" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-036" data-district="Kota Kinabalu" data-winner="Liane Melve Grace Lias" data-name="Kota Kinabalu" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="263" cy="67" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="263" cy="67" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-037" data-district="Tanjung Aru" data-winner="Joyce Nia David" data-name="Tanjung Aru" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="261" cy="70" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="261" cy="70" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-038" data-district="Inanam" data-winner="Essmerrellda Cafry" data-name="Inanam" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="264" cy="65" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="264" cy="65" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-039" data-district="Karambunai" data-winner="Natalie Ally Hepeni" data-name="Karambunai" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="264" cy="63" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="264" cy="63" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-040" data-district="KDCA Bandaraya" data-winner="Felecity Chen Sing Yee" data-name="KDCA Bandaraya" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="265" cy="68" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="265" cy="68" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-041" data-district="Penampang" data-winner="Gadrette Gregory" data-name="Penampang" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="261" cy="68" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="261" cy="68" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-042" data-district="Kapayan" data-winner="Viviyana Jenny" data-name="Kapayan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="262" cy="70" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="262" cy="70" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-043" data-district="Putatan" data-winner="Amber Weysha Walter John" data-name="Putatan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="260" cy="72" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="260" cy="72" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-044" data-district="Tuaran" data-winner="Juje Elor Francis" data-name="Tuaran" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="266" cy="61" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="266" cy="61" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-045" data-district="Tamparuli" data-winner="Evyanarrey Larry" data-name="Tamparuli" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="268" cy="62" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="268" cy="62" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-046" data-district="Kiulu" data-winner="Catsween Su Sun Ping" data-name="Kiulu" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="265" cy="66" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="265" cy="66" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-047" data-district="Keningau" data-winner="Edreen Lynn Edward" data-name="Keningau" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="264" cy="78" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="264" cy="78" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-048" data-district="Bingkor" data-winner="Alysheron Maunsiong" data-name="Bingkor" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="266" cy="74" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="266" cy="74" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-049" data-district="Tambunan" data-winner="Natalia Jinui" data-name="Tambunan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="267" cy="72" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="267" cy="72" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-050" data-district="Tenom" data-winner="Radila Ifa Yanie" data-name="Tenom" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="261" cy="82" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="261" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-051" data-district="Kemabong" data-winner="Venica Tuboh" data-name="Kemabong" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="261" cy="86" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="261" cy="86" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-052" data-district="Sook" data-winner="Myra Evana Robert" data-name="Sook" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="264" cy="81" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="264" cy="81" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-053" data-district="Nabawan" data-winner="Sahira Samson" data-name="Nabawan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="262" cy="84" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="262" cy="84" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-054" data-district="Pagalungan" data-winner="Kerishine Danil" data-name="Pagalungan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="265" cy="83" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="265" cy="83" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-055" data-district="Kudat" data-winner="Feyrashandy Hanlin Hanis" data-name="Kudat" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="274" cy="51" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="274" cy="51" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-056" data-district="Banggi" data-winner="Lora Derlina Lisa Jusley" data-name="Banggi" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="278" cy="46" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="278" cy="46" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-057" data-district="Pitas" data-winner="Jean Christzabeth Yusevender" data-name="Pitas" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="279" cy="53" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="279" cy="53" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-058" data-district="Kota Marudu" data-winner="Aelvereny Vahidin" data-name="Kota Marudu" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="275" cy="56" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="275" cy="56" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-059" data-district="Matunggong" data-winner="Criszelbellkah Lorris" data-name="Matunggong" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="276" cy="55" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="276" cy="55" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-060" data-district="Kota Belud" data-winner="Althea Tan Pin Yan" data-name="Kota Belud" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="268" cy="60" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="268" cy="60" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-061" data-district="Paitan" data-winner="Candycyci Liakim" data-name="Paitan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="281" cy="66" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="281" cy="66" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-062" data-district="Telupid" data-winner="Raraa Cyra Eva Bella Stephen" data-name="Telupid" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="277" cy="69" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="277" cy="69" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-063" data-district="Sungai Manila" data-winner="Dovena Jessie Isabell Daniel" data-name="Sungai Manila" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="281" cy="73" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="281" cy="73" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-064" data-district="Kinabatangan" data-winner="Vrenda Joan Taji" data-name="Kinabatangan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="288" cy="77" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="288" cy="77" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-065" data-district="Sukau" data-winner="Ally Denis" data-name="Sukau" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="291" cy="76" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="291" cy="76" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-066" data-district="Tawau" data-winner="Elvisa Edna Robert" data-name="Tawau" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="286" cy="98" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="286" cy="98" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-067" data-district="Kalabakan" data-winner="Christine Dionysius" data-name="Kalabakan" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="282" cy="96" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="282" cy="96" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-068" data-district="Lahad Datu" data-winner="Caesyzizi Liakim" data-name="Lahad Datu" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="293" cy="84" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="293" cy="84" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-069" data-district="Tungku" data-winner="Mary-An P. Calica" data-name="Tungku" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="294" cy="80" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="294" cy="80" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-070" data-district="Kunak" data-winner="Rachel Justin" data-name="Kunak" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="291" cy="90" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="291" cy="90" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-071" data-district="Semporna" data-winner="Adylee Arisen" data-name="Semporna" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="297" cy="94" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="297" cy="94" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-072" data-district="Beaufort" data-winner="Fedelia Viviana Venchin" data-name="Beaufort" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="258" cy="78" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="258" cy="78" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-073" data-district="Membakut" data-winner="Dorna Mayra Michael" data-name="Membakut" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="257" cy="75" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="257" cy="75" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-074" data-district="Kuala Penyu" data-winner="Lorna Breetney Johnny" data-name="Kuala Penyu" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="256" cy="73" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="256" cy="73" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-075" data-district="Menumbok" data-winner="Hyzlensiska Verron Johnny" data-name="Menumbok" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="255" cy="80" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="255" cy="80" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
+            </g>
+            <g class="un-node un-dist-node" data-tab="Sabah" data-winid="win-076" data-district="Sipitang" data-winner="Hilda Jaynissa Godwin" data-name="Sipitang" data-sub="Sabah 2026 · Unduk Ngadau" data-img="placeholder-winner_nobg.png">
+              <circle class="un-node-pulse" cx="254" cy="83" r="7" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.5,2"/>
+              <g class="un-node-body"><circle cx="254" cy="83" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.2" filter="url(#nodeGlow)"/></g>
             </g>
 
           </svg>
@@ -396,6 +571,7 @@
         /* ── click: scroll hero into view, then fire branch tab ───── */
         node.addEventListener('click', function () {
           var tabName = this.dataset.tab;
+          var winId   = this.dataset.winid || '';
           tooltip.style.display = 'none';
 
           var hero = document.getElementById('heroContainer');
@@ -409,6 +585,22 @@
               '#branchTabs .branch-tab[data-tab="' + tabName + '"]'
             );
             if (btn) btn.click();
+
+            /* District pin: highlight the specific card in the Sabah grid */
+            if (winId) {
+              setTimeout(function () {
+                var card = document.querySelector('.sabah-card[data-id="' + winId + '"]');
+                if (card) {
+                  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  card.style.outline = '2px solid #f0a820';
+                  card.style.outlineOffset = '3px';
+                  setTimeout(function () {
+                    card.style.outline = '';
+                    card.style.outlineOffset = '';
+                  }, 2000);
+                }
+              }, 450);
+            }
           }, SCROLL_MS);
         });
       });
@@ -441,6 +633,18 @@
                 '#branchTabs .branch-tab[data-tab="' + self.dataset.tab + '"]'
               );
               if (btn) btn.click();
+              var winId = self.dataset.winid || '';
+              if (winId) {
+                setTimeout(function () {
+                  var card = document.querySelector('.sabah-card[data-id="' + winId + '"]');
+                  if (card) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.style.outline = '2px solid #f0a820';
+                    card.style.outlineOffset = '3px';
+                    setTimeout(function () { card.style.outline = ''; card.style.outlineOffset = ''; }, 2000);
+                  }
+                }, 450);
+              }
             }, SCROLL_MS);
           }, 600);
         }, { passive: false });
