@@ -296,7 +296,7 @@ export function mountLocatorHero(section) {
         <div id="mapPanel-peninsula" class="map-panel active">
           <div class="map-panel-header">
             <div class="map-panel-title">Peninsular Malaysia</div>
-            <div class="map-panel-sub">5 diaspora branches</div>
+            <div class="map-panel-sub">6 diaspora branches</div>
           </div>
           <svg id="peninsulaSvg" class="map-svg" viewBox="0 38 130 158" style="display:block;overflow:visible;max-width:380px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -306,6 +306,7 @@ export function mountLocatorHero(section) {
                 <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
               <clipPath id="cpPP"><circle cx="20" cy="58" r="8"/></clipPath>
+              <clipPath id="cpPK"><circle cx="55" cy="82" r="7"/></clipPath>
               <clipPath id="cpKV"><circle cx="94" cy="100" r="9"/></clipPath>
               <clipPath id="cpPJY"><circle cx="108" cy="113" r="7"/></clipPath>
               <clipPath id="cpM"><circle cx="108" cy="142" r="7"/></clipPath>
@@ -327,7 +328,7 @@ export function mountLocatorHero(section) {
               <text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
             <!-- Pulau Pinang -->
-            <g class="un-node" data-tab="Pulau Pinang" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="TBA — Coming Soon" data-img="placeholder-winner_nobg.png">
+            <g class="un-node" data-tab="Pulau Pinang" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="placeholder-winner_nobg.png">
               <circle cx="42" cy="77" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="42" y1="77" x2="20" y2="58" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="20" cy="58" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -335,6 +336,17 @@ export function mountLocatorHero(section) {
                 <circle cx="20" cy="58" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
                 <image href="/images/placeholder-winner_nobg.png" x="12" y="50" width="16" height="16" clip-path="url(#cpPP)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="20" cy="58" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/>
+              </g>
+            </g>
+            <!-- Perak -->
+            <g class="un-node" data-tab="Perak" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="placeholder-winner_nobg.png">
+              <circle cx="50" cy="93" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="50" y1="93" x2="55" y2="82" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="55" cy="82" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body">
+                <circle cx="55" cy="82" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
+                <image href="/images/placeholder-winner_nobg.png" x="48" y="75" width="14" height="14" clip-path="url(#cpPK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <circle cx="55" cy="82" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
             <!-- Klang Valley -->
@@ -360,7 +372,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Melaka -->
-            <g class="un-node" data-tab="Melaka" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="TBA — Coming Soon" data-img="placeholder-winner_nobg.png">
+            <g class="un-node" data-tab="Melaka" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="placeholder-winner_nobg.png">
               <circle cx="78" cy="134" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="78" y1="134" x2="108" y2="142" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="108" cy="142" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -370,14 +382,14 @@ export function mountLocatorHero(section) {
                 <circle cx="108" cy="142" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
-            <!-- Johor Bahru -->
-            <g class="un-node" data-tab="Johor" data-name="Johor Bahru" data-sub="KDCA Johor Bahru · 2025" data-winner="Irene Mansun" data-img="sample-un-winner_nobg.png">
+            <!-- Johor -->
+            <g class="un-node" data-tab="Johor" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="placeholder-winner_nobg.png">
               <circle cx="91" cy="147" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="91" y1="147" x2="112" y2="164" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="164" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="112" cy="164" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/sample-un-winner_nobg.png" x="103" y="155" width="18" height="18" clip-path="url(#cpJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/placeholder-winner_nobg.png" x="103" y="155" width="18" height="18" clip-path="url(#cpJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="112" cy="164" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
