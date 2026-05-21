@@ -588,7 +588,8 @@
         "KDCA KL Young Voices Founding Member"
       ],
       "votes": 391,
-      "imageUrl": "/images/finafayena-primus.png"
+      "imageUrl": "/images/finafayena-primus.png",
+      "coronationDate": "2026-05-09"
     },
     {
       "id": "win-017",
@@ -613,7 +614,8 @@
         "Best Costume & Heritage Presentation — KDCA Putrajaya 2026"
       ],
       "votes": 334,
-      "imageUrl": "/images/wendey-merrylen.png"
+      "imageUrl": "/images/wendey-merrylen.png",
+      "coronationDate": "2026-05-02"
     },
     {
       "id": "win-018",
@@ -715,7 +717,7 @@
     },
     {
       "id": "win-022",
-      "name": "TBA — Coming Soon",
+      "name": "Josephine Magdeline Joseph",
       "branch": "KDCA Johor",
       "award": "Unduk Ngadau",
       "year": 2026,
@@ -729,16 +731,17 @@
         "costume": "Sinuangga — traditional Kadazan ceremonial blouse adorned with hand-beaded manik and gold filigree headdress, representing the KDM diaspora in southern Peninsular Malaysia",
         "language": "Kadazan-Dusun"
       },
-      "bio": "The KDCA Johor chapter is preparing to crown its first Unduk Ngadau champion. This space is reserved for the woman who will carry the torch of Kadazan-Dusun heritage across the Causeway, representing the KDM diaspora community in southern Peninsular Malaysia.",
+      "bio": "Josephine Magdeline Joseph was crowned KDCA Johor Unduk Ngadau 2026 on 9 May 2026, representing the Kadazan-Dusun diaspora community in southern Peninsular Malaysia and earning her place among the 52 finalists at the 66th State Finals on 31 May at Hongkod Koisaan, Penampang.",
       "achievements": [
-        "KDCA Johor Unduk Ngadau 2026 — Champion (awaiting selection)",
-        "First KDCA Johor chapter representative"
+        "KDCA Johor Unduk Ngadau 2026 — Champion",
+        "KDCA Johor Unduk Ngadau representative at 66th State Finals"
       ],
-      "votes": 0
+      "votes": 0,
+      "coronationDate": "2026-05-09"
     },
     {
       "id": "win-023",
-      "name": "TBA — Coming Soon",
+      "name": "Clarissa Jane Ahap Fred Michael",
       "branch": "KDCA Melaka",
       "award": "Unduk Ngadau",
       "year": 2026,
@@ -752,12 +755,13 @@
         "costume": "Sinuangga — Melaka-influenced interpretation with nutmeg-inspired beadwork motifs and the classic Rinogoo brass headdress",
         "language": "Kadazan-Dusun"
       },
-      "bio": "The historic city of Melaka will soon see its first KDCA Unduk Ngadau crowned. This placeholder honours the diaspora women who keep the Kadazan-Dusun flame alive far from the Borneo highlands, weaving heritage into every step they take.",
+      "bio": "Clarissa Jane Ahap Fred Michael was crowned KDCA Melaka Unduk Ngadau 2026 on 2 May 2026, representing the KDM diaspora in the historic city of Melaka and earning her place among the 52 finalists at the 66th State Finals on 31 May at Hongkod Koisaan, Penampang.",
       "achievements": [
-        "KDCA Melaka Unduk Ngadau 2026 — Champion (awaiting selection)",
-        "First KDCA Melaka chapter representative"
+        "KDCA Melaka Unduk Ngadau 2026 — Champion",
+        "KDCA Melaka Unduk Ngadau representative at 66th State Finals"
       ],
-      "votes": 0
+      "votes": 0,
+      "coronationDate": "2026-05-02"
     },
     {
       "id": "win-024",
@@ -784,7 +788,7 @@
     },
     {
       "id": "win-025",
-      "name": "TBA — Coming Soon",
+      "name": "Jeraahfinah Jonis (Nanu)",
       "branch": "KDCA Pulau Pinang",
       "award": "Unduk Ngadau",
       "year": 2026,
@@ -798,10 +802,35 @@
         "costume": "Sinuangga — Penang-influenced interpretation with Peranakan beadwork accents and the ornate Simpay headdress, fusing KDM and northern Malaysian motifs",
         "language": "Kadazan-Dusun"
       },
-      "bio": "Pulau Pinang's vibrant cultural tapestry will soon welcome its first KDCA Unduk Ngadau champion. This placeholder honours the diaspora women who bridge the gap between island cosmopolitanism and the deep-rooted traditions of the Kadazan-Dusun highlands.",
+      "bio": "Jeraahfinah Jonis, affectionately known as Nanu, was crowned KDCA Pulau Pinang Unduk Ngadau 2026 on 9 May 2026, bringing the spirit of Kadazan-Dusun heritage to the Pearl of the Orient and earning her place among the 52 finalists at the 66th State Finals on 31 May at Hongkod Koisaan, Penampang.",
       "achievements": [
-        "KDCA Pulau Pinang Unduk Ngadau 2026 — Champion (awaiting selection)",
-        "First KDCA Pulau Pinang chapter representative"
+        "KDCA Pulau Pinang Unduk Ngadau 2026 — Champion",
+        "KDCA Pulau Pinang Unduk Ngadau representative at 66th State Finals"
+      ],
+      "votes": 0,
+      "coronationDate": "2026-05-09"
+    },
+    {
+      "id": "win-077",
+      "name": "Valeriena Karen Aldrin",
+      "branch": "KDCA Perak",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Perak",
+      "origin": "KDCA Perak",
+      "accentColor": "#f0a820",
+      "badge": "Regional Champion 2026",
+      "coronationDate": "2026-05-09",
+      "heritage": {
+        "group": "Kadazan Dusun (diaspora — Perak)",
+        "costume": "Sinuangga — Perak-influenced interpretation with intricate hand-beaded manik panels and the ceremonial Rinogoo headdress, representing the KDM diaspora in the royal state",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Valeriena Karen Aldrin was crowned KDCA Perak Unduk Ngadau 2026 on 9 May 2026, representing the Kadazan-Dusun diaspora in the royal state of Perak and earning her place among the 52 finalists at the 66th State Finals on 31 May at Hongkod Koisaan, Penampang.",
+      "achievements": [
+        "KDCA Perak Unduk Ngadau 2026 — Champion",
+        "KDCA Perak Unduk Ngadau representative at 66th State Finals"
       ],
       "votes": 0
     },
