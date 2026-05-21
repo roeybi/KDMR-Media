@@ -1121,13 +1121,48 @@
       });
 
       /* ── touch support ──────────────────────────────────────────── */
+      /* Mobile UX: tap circle → show tooltip card; tap card → navigate; tap elsewhere → dismiss */
+      var _touchNode = null;
+
+      function doNavigate(node) {
+        var zone   = node.dataset.zone  || '';
+        var winId  = node.dataset.winid || '';
+        var tabName = node.dataset.tab;
+        if (zone) {
+          openZoneModal(zone);
+        } else if (winId) {
+          navigateToCard(winId);
+        } else {
+          var hero = document.getElementById('heroContainer');
+          if (hero) hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(function () {
+            var btn = document.querySelector('#branchTabs .branch-tab[data-tab="' + tabName + '"]');
+            if (btn) btn.click();
+          }, SCROLL_MS);
+        }
+      }
+
+      function dismissTooltip() {
+        tooltip.style.opacity = '0';
+        setTimeout(function () { tooltip.style.display = 'none'; }, 180);
+        _touchNode = null;
+      }
+
       nodes.forEach(function (node) {
         node.addEventListener('touchstart', function (e) {
           e.preventDefault();
-          ttWinner.textContent  = this.dataset.winner || '';
-          ttBranch.textContent  = this.dataset.name   || '';
-          ttSub.textContent     = this.dataset.sub    || '';
-          ttImg.src             = this.dataset.img ? '/images/' + this.dataset.img : '';
+          /* Second tap on same node = navigate */
+          if (_touchNode === this && tooltip.style.display === 'block') {
+            dismissTooltip();
+            doNavigate(this);
+            return;
+          }
+          /* First tap = show tooltip only */
+          _touchNode = this;
+          ttWinner.textContent = this.dataset.winner || '';
+          ttBranch.textContent = this.dataset.name   || '';
+          ttSub.textContent    = this.dataset.sub    || '';
+          ttImg.src            = this.dataset.img ? '/images/' + this.dataset.img : '';
           var touch = e.touches[0];
           var x = touch.clientX + 12;
           var y = touch.clientY - 120;
@@ -1136,24 +1171,25 @@
           tooltip.style.left    = x + 'px';
           tooltip.style.top     = y + 'px';
           tooltip.style.display = 'block';
-          requestAnimationFrame(function(){ tooltip.style.opacity = '1'; });
-          var self = this;
-          setTimeout(function () {
-            tooltip.style.opacity = '0';
-            setTimeout(function(){ tooltip.style.display = 'none'; }, 180);
-            var zone = self.dataset.zone || '';
-            if (zone) {
-              openZoneModal(zone);
-            } else {
-              var hero = document.getElementById('heroContainer');
-              if (hero) hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              setTimeout(function () {
-                var btn = document.querySelector('#branchTabs .branch-tab[data-tab="' + self.dataset.tab + '"]');
-                if (btn) btn.click();
-              }, SCROLL_MS);
-            }
-          }, 600);
+          requestAnimationFrame(function () { tooltip.style.opacity = '1'; });
         }, { passive: false });
+      });
+
+      /* Tap the tooltip card → navigate */
+      tooltip.addEventListener('touchstart', function (e) {
+        e.stopPropagation();
+        if (!_touchNode) return;
+        var node = _touchNode;
+        dismissTooltip();
+        doNavigate(node);
+      }, { passive: false });
+
+      /* Tap anywhere else → dismiss */
+      document.addEventListener('touchstart', function (e) {
+        if (!_touchNode) return;
+        if (tooltip.contains(e.target)) return;
+        if (e.target.closest && e.target.closest('.un-node')) return;
+        dismissTooltip();
       });
 
     })();
