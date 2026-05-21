@@ -292,7 +292,7 @@ function initGlobalSearch(data) {
 // ─── HERO SELECTOR ────────────────────────────────────────────────────────
 
 // Branch tabs — all eight KDCA branches
-const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Johor', 'Melaka', 'Sarawak', 'WP Labuan', 'Pulau Pinang'];
+const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Johor', 'Melaka', 'Sarawak', 'WP Labuan', 'Pulau Pinang', 'Perak'];
 const TAB_LABELS = { 'Sabah': 'Sabah (Central)' };
 const HERO_CUTOFF_YEAR = 2017; // 10-year rolling window: show hero carousel for this year and newer
 const SABAH_GRID_THRESHOLD = 8; // Show district grid when Sabah has >= this many winners
