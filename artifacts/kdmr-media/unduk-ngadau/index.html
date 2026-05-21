@@ -99,7 +99,7 @@
     <div id="undukLocatorSection" style="background:#0a0a0a;border-bottom:1px solid #141414;padding:20px 16px 24px;position:relative;z-index:1;">
 
       <!-- Floating tooltip (fixed to viewport so it escapes any overflow) -->
-      <div id="undukTooltip" style="position:fixed;pointer-events:none;z-index:9999;display:none;perspective:1200px;opacity:0;transition:opacity 0.18s ease;">
+      <div id="undukTooltip" style="position:fixed;pointer-events:none;z-index:9999;display:none;perspective:1200px;opacity:0;transition:opacity 0.18s ease;cursor:pointer;">
         <div id="undukTtCard" style="position:relative;width:200px;background:linear-gradient(160deg, rgba(32,24,10,0.96) 0%, rgba(14,11,6,0.97) 60%, rgba(8,6,3,0.98) 100%);border-radius:14px;padding:14px 14px 14px;border:1px solid rgba(240,168,32,0.32);box-shadow:0 30px 60px -16px rgba(0,0,0,0.95), 0 20px 40px -10px rgba(240,168,32,0.22), 0 2px 0 rgba(255,255,255,0.04) inset, 0 -2px 0 rgba(240,168,32,0.14) inset;transform-style:preserve-3d;transform:rotateX(10deg) rotateY(-8deg);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);overflow:visible;">
           <div style="position:absolute;top:-1px;left:18%;right:18%;height:2px;background:linear-gradient(90deg, transparent, #f0a820, transparent);border-radius:2px;box-shadow:0 0 8px rgba(240,168,32,0.6);"></div>
           <div style="position:absolute;top:7px;right:9px;font-size:0.5rem;font-weight:800;background:linear-gradient(135deg,#f5b830,#a06810);color:#0a0a0a;padding:2px 6px;border-radius:3px;letter-spacing:0.08em;box-shadow:0 2px 4px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1) inset;">UN</div>
@@ -1144,6 +1144,7 @@
 
       function dismissTooltip() {
         tooltip.style.opacity = '0';
+        tooltip.style.pointerEvents = 'none';
         setTimeout(function () { tooltip.style.display = 'none'; }, 180);
         _touchNode = null;
       }
@@ -1171,6 +1172,7 @@
           tooltip.style.left    = x + 'px';
           tooltip.style.top     = y + 'px';
           tooltip.style.display = 'block';
+          tooltip.style.pointerEvents = 'auto';
           requestAnimationFrame(function () { tooltip.style.opacity = '1'; });
         }, { passive: false });
       });
