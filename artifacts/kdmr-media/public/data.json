@@ -2109,6 +2109,32 @@
       "imageUrl": "/images/placeholder-winner.png"
     },
     {
+      "id": "win-078",
+      "name": "Anne Theresse Justin Sentian",
+      "branch": "KDCA Sabah",
+      "award": "Unduk Ngadau",
+      "year": 2026,
+      "tribe": "Kadazan Dusun",
+      "district": "Tongod",
+      "origin": "KDCA Sabah",
+      "accentColor": "#f0a820",
+      "badge": "Regional Champion 2026",
+      "coronationDate": "2026-05-20",
+      "heritage": {
+        "group": "Kadazan Dusun (Tongod, Kinabatangan, Sabah)",
+        "costume": "Sinuangga — traditional ceremonial dress of the Kinabatangan interior region",
+        "language": "Kadazan-Dusun"
+      },
+      "bio": "Anne Theresse Justin Sentian was crowned Unduk Ngadau KDCA Sabah (Tongod) 2026 on 20 May 2026 at Dewan Terbuka Dataran Rakyat Tongod. A 28-year-old private company auditor, she represents the interior Kinabatangan region and carries the cultural heritage of the Kadazan Dusun people of Tongod to the 66th State Finals at Hongkod Koisaan, Penampang.",
+      "achievements": [
+        "Unduk Ngadau KDCA Sabah (Tongod) 2026 — Champion",
+        "Crowned 20 May 2026 at Dewan Terbuka Dataran Rakyat Tongod",
+        "KDCA Sabah Tongod representative at 66th State Finals"
+      ],
+      "votes": 0,
+      "imageUrl": null
+    },
+    {
       "id": "win-066",
       "name": "Elvisa Edna Robert",
       "branch": "KDCA Sabah",
