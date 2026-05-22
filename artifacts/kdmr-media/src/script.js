@@ -786,9 +786,13 @@ function initHeroSelector(data, award) {
 
 async function initIndex(data) {
   // ── Stats counter ────────────────────────────────────────────────────────
-  animateCount('statHof', data.stats.hofEntries);
-  animateCount('statTribes', data.stats.tribesRepresented);
-  animateCount('statDistricts', data.stats.districtsRepresented);
+  const un2026 = (data.winners || []).filter(w => w.year === 2026 && w.award === 'Unduk Ngadau');
+  const contestantCount = un2026.length;
+  const branchCount     = new Set(un2026.map(w => w.branch)).size;
+  const districtCount   = new Set(un2026.map(w => w.district || w.branch)).size;
+  animateCount('statContestants', contestantCount);
+  animateCount('statStates', branchCount);
+  animateCount('statDistricts', districtCount);
 
   // ── Date-based Featured picks ────────────────────────────────────────────
   const { featuredWinner, featuredSong } = pickFeatured(data);
