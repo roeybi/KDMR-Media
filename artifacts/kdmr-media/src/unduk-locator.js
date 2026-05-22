@@ -328,7 +328,7 @@ export function mountLocatorHero(section) {
               <text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
             <!-- Pulau Pinang -->
-            <g class="un-node" data-tab="Pulau Pinang" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png">
               <circle cx="42" cy="77" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="42" y1="77" x2="20" y2="58" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="20" cy="58" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -339,7 +339,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Perak -->
-            <g class="un-node" data-tab="Perak" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png">
               <circle cx="50" cy="93" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="50" y1="93" x2="55" y2="82" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="55" cy="82" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -350,7 +350,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Klang Valley -->
-            <g class="un-node" data-tab="Klang Valley" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="finafayena-primus_nobg.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="finafayena-primus_nobg.png">
               <circle cx="68" cy="117" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="68" y1="117" x2="94" y2="100" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="94" cy="100" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -361,7 +361,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Putrajaya -->
-            <g class="un-node" data-tab="Putrajaya" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendey Merrylen S. Jasmine" data-img="wendey-merrylen_nobg.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendey Merrylen S. Jasmine" data-img="wendey-merrylen_nobg.png">
               <circle cx="79" cy="124" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="79" y1="124" x2="108" y2="113" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="108" cy="113" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -372,7 +372,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Melaka -->
-            <g class="un-node" data-tab="Melaka" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png">
               <circle cx="78" cy="134" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="78" y1="134" x2="108" y2="142" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="108" cy="142" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
@@ -383,7 +383,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Johor -->
-            <g class="un-node" data-tab="Johor" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png">
               <circle cx="91" cy="147" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="91" y1="147" x2="112" y2="164" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="164" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
