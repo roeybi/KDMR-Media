@@ -44,22 +44,41 @@ async function loadBranches() {
     const data = await res.json();
     winnersData = (data.winners || []).filter(w => w.year === 2026 && w.award === 'Unduk Ngadau');
 
+    // Sort: outstation first (non-Sabah), then Sabah districts alphabetically by district
+    const outstation = winnersData.filter(w => w.branch !== 'KDCA Sabah').sort((a, b) => a.branch.localeCompare(b.branch));
+    const sabah = winnersData.filter(w => w.branch === 'KDCA Sabah').sort((a, b) => (a.district || '').localeCompare(b.district || ''));
+
     const select = document.getElementById('branchSelect');
-    const branches = [...new Set(winnersData.map(w => w.branch))].sort();
-    branches.forEach(branch => {
+
+    // Add outstation group
+    const outstationGroup = document.createElement('optgroup');
+    outstationGroup.label = 'Outstation / Peninsular';
+    outstation.forEach(w => {
       const opt = document.createElement('option');
-      opt.value = branch;
-      opt.textContent = branch;
-      select.appendChild(opt);
+      opt.value = w.id;
+      opt.textContent = `${w.branch} — ${w.name}`;
+      outstationGroup.appendChild(opt);
     });
+    select.appendChild(outstationGroup);
+
+    // Add Sabah districts group
+    const sabahGroup = document.createElement('optgroup');
+    sabahGroup.label = 'Sabah Districts';
+    sabah.forEach(w => {
+      const opt = document.createElement('option');
+      opt.value = w.id;
+      opt.textContent = `${w.district} — ${w.name}`;
+      sabahGroup.appendChild(opt);
+    });
+    select.appendChild(sabahGroup);
   } catch (e) {
     showStatus('Failed to load branch data. Please refresh.', 'error');
   }
 }
 
 function onBranchChange() {
-  const branch = document.getElementById('branchSelect').value;
-  const winner = winnersData.find(w => w.branch === branch);
+  const winnerId = document.getElementById('branchSelect').value;
+  const winner = winnersData.find(w => w.id === winnerId);
   document.getElementById('winnerName').value = winner ? winner.name : '';
 }
 
