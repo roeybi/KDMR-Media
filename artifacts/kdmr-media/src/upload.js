@@ -170,7 +170,7 @@ async function uploadPhoto() {
         uploaded_by: contributor,
         uploaded_at: new Date().toISOString(),
         status: 'pending',
-        notes: notes || null,
+        notes: notes || '',
         public_url: publicUrl,
       }),
     });
