@@ -291,17 +291,22 @@ function initGlobalSearch(data) {
 
 // ─── HERO SELECTOR ────────────────────────────────────────────────────────
 
-// Branch tabs — all eight KDCA branches
-const TABS = ['Sabah', 'Klang Valley', 'Putrajaya', 'Johor', 'Melaka', 'Sarawak', 'WP Labuan', 'Pulau Pinang', 'Perak'];
-const TAB_LABELS = { 'Sabah': 'Sabah (Central)' };
+// Branch tabs — grouped by region
+const TABS = ['Sabah (Central)', 'Peninsular Malaysia', 'Sarawak'];
+const TAB_LABELS = {};
 const HERO_CUTOFF_YEAR = 2017; // 10-year rolling window: show hero carousel for this year and newer
 const SABAH_GRID_THRESHOLD = 8; // Show district grid when Sabah has >= this many winners
 
+const PENINSULAR_BRANCHES = ['KDCA Klang Valley', 'KDCA Putrajaya', 'KDCA Johor', 'KDCA Johor Bahru', 'KDCA Melaka', 'KDCA WP Labuan', 'KDCA Pulau Pinang', 'KDCA Perak', 'KDCA Selangor'];
+
 function branchMatchesTab(branch, tab) {
-  return branch === 'KDCA ' + tab;
+  if (tab === 'Sabah (Central)') return branch === 'KDCA Sabah';
+  if (tab === 'Peninsular Malaysia') return PENINSULAR_BRANCHES.includes(branch);
+  if (tab === 'Sarawak') return branch === 'KDCA Sarawak';
+  return false;
 }
 
-let hs = { allWinners:[], award:'', tab:'Sabah', list:[], index:0, transitioning:false };
+let hs = { allWinners:[], award:'', tab:'Sabah (Central)', list:[], index:0, transitioning:false };
 
 function renderPortrait(entry) {
   // Hide empty-state overlay first — must happen before touching inner elements
@@ -434,7 +439,7 @@ function renderTabs() {
 
 function isSabahGridMode() {
   // Only show district grid for Unduk Ngadau Sabah tab (not MRK or Sugandoi)
-  return hs.award === 'Unduk Ngadau' && hs.tab === 'Sabah' && hs.list.length >= SABAH_GRID_THRESHOLD;
+  return hs.award === 'Unduk Ngadau' && hs.tab === 'Sabah (Central)' && hs.list.length >= SABAH_GRID_THRESHOLD;
 }
 
 function renderSabahGrid() {
@@ -708,7 +713,7 @@ function initHeroSelector(data, award) {
     hs.tab = urlTab;
   } else {
     // Pick first tab that has entries
-    hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah';
+    hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah (Central)';
   }
   hs.list = hs.allWinners
     .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab) && w.year >= HERO_CUTOFF_YEAR)
