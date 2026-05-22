@@ -402,19 +402,14 @@ function renderStats(entry, panelId) {
       <div style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-top:4px;">${entry.bio}</div>
     </div>
     <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.06);">
-      <button id="${btnId}" class="vote-hero-btn ${voted?'voted':''}" data-id="${entry.id}">
-        ↑ ${voted ? `Voted · ${entry.votes}` : `Upvote · ${entry.votes}`}
+      <button id="${btnId}" class="vote-hero-btn" data-id="${entry.id}">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#ef4444;box-shadow:0 0 5px #ef4444;flex-shrink:0;"></span>
+        Vote in Live Arena →
       </button>
     </div>
   `;
-  document.getElementById(btnId)?.addEventListener('click', async function() {
-    const id = this.dataset.id; const w = hs.allWinners.find(x=>x.id===id); if (!w) return;
-    if (!castVote(id)) return;
-    w.votes++;
-    this.textContent = `✦ Voted · ${w.votes}`;
-    this.classList.add('voted');
-    const result = await submitVoteToCloud(id, { name: w.name, award: w.award, branch: w.branch });
-    showToast(result.ok ? 'Vote Recorded!' : 'Vote saved locally', result.ok ? 'success' : 'info');
+  document.getElementById(btnId)?.addEventListener('click', function() {
+    window.location.href = import.meta.env.BASE_URL + 'live.html';
   });
 }
 
@@ -866,55 +861,14 @@ async function initIndex(data) {
       ctaBtn.textContent = legend.award === 'MRK' ? 'Explore His Story →' : 'Explore Her Story →';
     }
 
-    // ── Community Vote button ──────────────────────────────────────────────
-    const voteBtn  = document.getElementById('heroVoteBtn');
-    let liveVotes  = legend.votes;
-
-    function updateVoteDisplay(count, justVoted) {
-      if (!votesEl) return;
-      votesEl.innerHTML = `✦ <span id="heroVoteNum" style="display:inline-block;font-variant-numeric:tabular-nums;">${count.toLocaleString()}</span> community votes`;
-      if (justVoted) {
-        const numEl = document.getElementById('heroVoteNum');
-        if (numEl) {
-          numEl.classList.remove('vote-pop');
-          void numEl.offsetWidth; // force reflow to re-trigger animation
-          numEl.classList.add('vote-pop');
-        }
-      }
+    // ── Vote button — redirects to Live Arena ─────────────────────────────
+    const voteBtn = document.getElementById('heroVoteBtn');
+    if (votesEl) {
+      votesEl.innerHTML = `✦ <span style="font-variant-numeric:tabular-nums;">${(legend.votes || 0).toLocaleString()}</span> community votes`;
     }
-
-    function setVotedState() {
-      if (!voteBtn) return;
-      voteBtn.classList.add('voted');
-      voteBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 21C12 21 3 13.5 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 13-9 13z"/></svg> Voted ✦`;
-    }
-
-    // Restore voted state from localStorage on page load
-    updateVoteDisplay(liveVotes, false);
-    if (hasVoted(legend.id)) setVotedState();
-
     if (voteBtn) {
       voteBtn.addEventListener('click', () => {
-        if (hasVoted(legend.id)) return;
-        const didVote = castVote(legend.id);
-        if (!didVote) return;
-
-        liveVotes += 1;
-
-        // Animate count up one by one
-        let displayed = liveVotes - 1;
-        const tick = setInterval(() => {
-          displayed++;
-          updateVoteDisplay(displayed, displayed === liveVotes);
-          if (displayed >= liveVotes) clearInterval(tick);
-        }, 80);
-
-        // Ripple burst on the button itself
-        voteBtn.style.transform = 'scale(0.94)';
-        setTimeout(() => { voteBtn.style.transform = ''; }, 150);
-
-        // Mark as voted after short delay so user sees the animation
-        setTimeout(setVotedState, 300);
+        window.location.href = import.meta.env.BASE_URL + 'live.html';
       });
     }
 
