@@ -100,6 +100,7 @@ function renderQueue() {
         <td><span class="status-badge status-${row.status || 'pending'}">${row.status || 'pending'}</span></td>
         <td style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <button class="copy-btn" data-url="${thumbUrl}" onclick="copyUrl(this)">Copy URL</button>
+          <button class="copy-btn agent-btn" data-text="${row.branch} | ${row.winner_name} | ${thumbUrl}" onclick="copyForAgent(this)" title="Copy formatted string to send to agent">📋 Copy for Agent</button>
           ${row.status !== 'approved' ? `<button class="action-btn approve-btn" onclick="updateStatus('${row.id}','approved',this)">✓ Approve</button>` : ''}
           ${row.status !== 'rejected' ? `<button class="action-btn reject-btn" onclick="updateStatus('${row.id}','rejected',this)">✗ Reject</button>` : ''}
         </td>
@@ -135,6 +136,24 @@ window.copyUrl = async function(btn) {
     btn.textContent = 'Copied!';
     setTimeout(() => btn.textContent = 'Copy URL', 2000);
   }
+};
+
+window.copyForAgent = async function(btn) {
+  const text = btn.dataset.text;
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  }
+  btn.textContent = '✓ Copied!';
+  btn.style.borderColor = '#f0a820';
+  btn.style.color = '#f0a820';
+  setTimeout(() => { btn.textContent = '📋 Copy for Agent'; btn.style.borderColor = ''; btn.style.color = ''; }, 2000);
 };
 
 window.updateStatus = async function(id, newStatus, btn) {
