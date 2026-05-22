@@ -109,7 +109,9 @@ function handleFile(file) {
 // ─── UPLOAD FLOW ─────────────────────────────────────────────────────────
 
 async function uploadPhoto() {
-  const branch = document.getElementById('branchSelect').value;
+  const winnerId = document.getElementById('branchSelect').value;
+  const winnerEntry = winnersData.find(w => w.id === winnerId);
+  const branch = winnerEntry ? winnerEntry.branch : winnerId;
   const winnerName = document.getElementById('winnerName').value;
   const contributor = document.getElementById('contributorName').value.trim();
   const notes = document.getElementById('notes').value.trim();
