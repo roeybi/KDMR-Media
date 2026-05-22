@@ -292,12 +292,12 @@ function initGlobalSearch(data) {
 // ─── HERO SELECTOR ────────────────────────────────────────────────────────
 
 // Branch tabs — grouped by region
-const TABS = ['Sabah (Central)', 'Peninsular Malaysia', 'Sarawak'];
+const TABS = ['Peninsular Malaysia', 'Sarawak', 'Sabah (Central)'];
 const TAB_LABELS = {};
 const HERO_CUTOFF_YEAR = 2017; // 10-year rolling window: show hero carousel for this year and newer
 const SABAH_GRID_THRESHOLD = 8; // Show district grid when Sabah has >= this many winners
 
-const PENINSULAR_BRANCHES = ['KDCA Klang Valley', 'KDCA Putrajaya', 'KDCA Johor', 'KDCA Johor Bahru', 'KDCA Melaka', 'KDCA WP Labuan', 'KDCA Pulau Pinang', 'KDCA Perak', 'KDCA Selangor'];
+const PENINSULAR_BRANCHES = ['KDCA Klang Valley', 'KDCA Putrajaya', 'KDCA Johor', 'KDCA Melaka', 'KDCA Pulau Pinang', 'KDCA Perak'];
 
 function branchMatchesTab(branch, tab) {
   if (tab === 'Sabah (Central)') return branch === 'KDCA Sabah';
@@ -306,7 +306,7 @@ function branchMatchesTab(branch, tab) {
   return false;
 }
 
-let hs = { allWinners:[], award:'', tab:'Sabah (Central)', list:[], index:0, transitioning:false };
+let hs = { allWinners:[], award:'', tab:'Peninsular Malaysia', list:[], index:0, transitioning:false };
 
 function renderPortrait(entry) {
   // Hide empty-state overlay first — must happen before touching inner elements
@@ -442,6 +442,11 @@ function isSabahGridMode() {
   return hs.award === 'Unduk Ngadau' && hs.tab === 'Sabah (Central)' && hs.list.length >= SABAH_GRID_THRESHOLD;
 }
 
+function isPeninsularGridMode() {
+  // Show compact branch grid for Peninsular Malaysia tab on all award pages
+  return hs.tab === 'Peninsular Malaysia' && hs.list.length >= 2;
+}
+
 function renderSabahGrid() {
   const grid = document.getElementById('sabahGrid');
   if (!grid) return;
@@ -456,7 +461,6 @@ function renderSabahGrid() {
         <div class="sabah-card-photo">
           ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
           <div class="sabah-card-initials" style="display:${hasPhoto ? 'none' : 'flex'}">${inits}</div>
-          <div class="sabah-card-votes">↑ ${w.votes}</div>
         </div>
         <div class="sabah-card-info">
           <div class="sabah-card-name">${w.name}</div>
@@ -475,14 +479,69 @@ function renderSabahGrid() {
   };
 }
 
+function renderPeninsularGrid() {
+  const grid = document.getElementById('peninsularGrid');
+  if (!grid) return;
+  // Sort alphabetically by branch name for the grid
+  const sorted = [...hs.list].sort((a, b) => (a.branch || '').localeCompare(b.branch || ''));
+  const currentId = hs.list[hs.index]?.id;
+  grid.innerHTML = sorted.map(w => {
+    const hasPhoto = w.imageUrl && !w.imageUrl.includes('placeholder');
+    const inits = initials(w.name);
+    const isActive = w.id === currentId;
+    const branchShort = (w.branch || '').replace('KDCA ', '');
+    return `
+      <div class="peninsular-card ${isActive ? 'active' : ''}" data-id="${w.id}" title="${w.name} — ${branchShort}">
+        <div class="peninsular-card-photo">
+          ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
+          <div class="peninsular-card-initials" style="display:${hasPhoto ? 'none' : 'flex'}">${inits}</div>
+        </div>
+        <div class="peninsular-card-info">
+          <div class="peninsular-card-name">${w.name}</div>
+          <div class="peninsular-card-district">${branchShort}</div>
+          <div class="peninsular-card-tribe">${w.tribe}</div>
+        </div>
+      </div>`;
+  }).join('');
+  // Event delegation: clicking a card switches the main portrait to that winner
+  grid.onclick = e => {
+    const card = e.target.closest('.peninsular-card');
+    if (!card) return;
+    const id = card.dataset.id;
+    const idx = hs.list.findIndex(w => w.id === id);
+    if (idx >= 0) {
+      hs.index = idx;
+      switchTo(idx, true);
+    }
+  };
+}
+
+function showPeninsularGrid() {
+  const grid = document.getElementById('peninsularGrid');
+  if (grid) { grid.style.display = ''; renderPeninsularGrid(); }
+  // Expand heroContainer to natural height so the page itself scrolls
+  const hc = document.getElementById('heroContainer');
+  if (hc) { hc.style.height = 'auto'; hc.style.overflow = 'visible'; }
+}
+
+function hidePeninsularGrid() {
+  const grid = document.getElementById('peninsularGrid');
+  if (grid) grid.style.display = 'none';
+  // Restore heroContainer to viewport-locked mode
+  const hc = document.getElementById('heroContainer');
+  if (hc) { hc.style.height = 'calc(100vh - 52px)'; hc.style.overflow = 'hidden'; }
+}
+
 function enterCarousel(idx) {
   // Switch from grid view to single-winner carousel view
   const grid = document.getElementById('sabahGrid');
+  const penGrid = document.getElementById('peninsularGrid');
   const wrap = document.getElementById('carouselWrap');
   const dots = document.getElementById('dotRow');
   const backBtn = document.getElementById('gridBackBtn');
   const statsPanel = document.getElementById('statsPanel');
   if (grid) grid.style.display = 'none';
+  if (penGrid) penGrid.style.display = 'none';
   if (wrap) wrap.style.display = '';
   if (dots) dots.style.display = '';
   if (backBtn) backBtn.style.display = '';
@@ -501,6 +560,8 @@ function enterCarousel(idx) {
     if (mob?.style.display !== 'none') renderStats(entry, 'mobileStats');
     renderDots();
   }
+  // Re-apply layout so stats panel re-appears and container locks back to viewport height
+  if (typeof window.__applyHeroLayout === 'function') window.__applyHeroLayout();
 }
 
 function enterGrid() {
@@ -530,6 +591,8 @@ function enterGrid() {
   }
   const mob = document.getElementById('mobileStats');
   if (mob) mob.innerHTML = '';
+  // Re-apply layout so stats panel hides and container expands for the grid
+  if (typeof window.__applyHeroLayout === 'function') window.__applyHeroLayout();
 }
 
 function initBranchTabs() {
@@ -559,6 +622,10 @@ function switchTo(idx, immediate=false) {
     const mob = document.getElementById('mobileStats');
     if (mob?.style.display !== 'none') renderStats(entry, 'mobileStats');
     renderDots();
+    // Update active highlight in Peninsular grid
+    document.querySelectorAll('#peninsularGrid .peninsular-card').forEach(c => {
+      c.classList.toggle('active', c.dataset.id === entry.id);
+    });
     card?.classList.remove('fading'); panel?.classList.remove('fading');
     hs.transitioning = false;
   }, 300);
@@ -640,7 +707,7 @@ function switchTab(tab) {
   window.history.replaceState({}, '', url);
 
   hs.list = hs.allWinners
-    .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab) && w.year >= HERO_CUTOFF_YEAR)
+    .filter(w => w.award===hs.award && branchMatchesTab(w.branch,tab) && (tab === 'Peninsular Malaysia' ? w.year === 2026 : w.year >= HERO_CUTOFF_YEAR))
     .sort((a,b) => b.year - a.year);
   hs.index = 0;
 
@@ -663,6 +730,7 @@ function switchTab(tab) {
 
   // ── 3. After 300ms: render new content and fade back in ─────────────────
   setTimeout(() => {
+    const penGrid = document.getElementById('peninsularGrid');
     if (!hs.list.length) {
       // ─ Cinematic "Archive in Progress" placeholder ─
       renderEmptyState(tab);
@@ -671,10 +739,12 @@ function switchTab(tab) {
       if (backBtn) backBtn.style.display = 'none';
       if (panel)  panel.innerHTML  = '';
       if (dotRow) dotRow.innerHTML = '';
+      if (penGrid) penGrid.style.display = 'none';
     } else if (isSabahGridMode()) {
       // ─ Sabah: show district grid instead of carousel ─
       enterGrid();
       if (card) card.classList.remove('fading');
+      if (penGrid) penGrid.style.display = 'none';
     } else {
       // ─ Standard: single-winner carousel ─
       if (grid) grid.style.display = 'none';
@@ -692,12 +762,21 @@ function switchTab(tab) {
       const mob = document.getElementById('mobileStats');
       if (mob?.style.display !== 'none') renderStats(entry, 'mobileStats');
       renderDots();
+      // Peninsular Malaysia: show compact branch grid below portrait
+      if (isPeninsularGridMode()) {
+        showPeninsularGrid();
+      } else if (penGrid) {
+        penGrid.style.display = 'none';
+      }
     }
     if (grid) grid.classList.remove('fading');
     card?.classList.remove('fading');
     panel?.classList.remove('fading');
     if (legacyEl) legacyEl.classList.remove('fading');
     hs.transitioning = false;
+
+    // Re-run hero layout to honor new grid/carousel mode
+    if (typeof window.__applyHeroLayout === 'function') window.__applyHeroLayout();
 
     // Legacy Roll updates after content is revealed
     renderLegacyRoll(tab);
@@ -716,16 +795,25 @@ function initHeroSelector(data, award) {
     hs.tab = TABS.find(t => hs.allWinners.some(w=>w.award===award && branchMatchesTab(w.branch,t))) || 'Sabah (Central)';
   }
   hs.list = hs.allWinners
-    .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab) && w.year >= HERO_CUTOFF_YEAR)
+    .filter(w=>w.award===award && branchMatchesTab(w.branch,hs.tab) && (hs.tab === 'Peninsular Malaysia' ? w.year === 2026 : w.year >= HERO_CUTOFF_YEAR))
     .sort((a,b) => b.year - a.year);
   hs.index = 0;
 
   initBranchTabs(); // builds tabs + attaches one delegated listener
+  // Check URL ?winner= param (set by homepage locator to select a specific person)
+  const urlWinner = new URLSearchParams(window.location.search).get('winner');
   if (hs.list.length) {
     if (isSabahGridMode()) {
       enterGrid();
     } else {
-      switchTo(0, true);
+      // If a specific winner was requested, find and select them; otherwise default to index 0
+      const winnerIdx = urlWinner
+        ? hs.list.findIndex(w => w.name === urlWinner)
+        : -1;
+      const startIdx = winnerIdx >= 0 ? winnerIdx : 0;
+      hs.index = startIdx;
+      switchTo(startIdx, true);
+      if (isPeninsularGridMode()) showPeninsularGrid();
     }
   } else {
     renderEmptyState(hs.tab);
@@ -738,22 +826,46 @@ function initHeroSelector(data, award) {
   const mobileStats=document.getElementById('mobileStats');
   const portraitRegion=document.getElementById('portraitRegion');
 
+  window.__applyHeroLayout = applyLayout;
+  // Called by the map node click handler to jump to a specific winner by name within the current tab
+  window.__navigateToPeninsularWinner = function(winnerName) {
+    const idx = hs.list.findIndex(w => w.name === winnerName);
+    if (idx >= 0) {
+      hs.index = idx;
+      switchTo(idx, true);
+      renderPeninsularGrid(); // re-render grid to update active highlight
+    }
+  };
   function applyLayout() {
     const d = window.innerWidth >= 768;
     const heroContainer = document.getElementById('heroContainer');
+    const penGrid = document.getElementById('peninsularGrid');
+    const penGridVisible = penGrid && penGrid.style.display !== 'none';
+    // Derive grid visibility from actual DOM (not just tab/data) so it stays correct
+    // after the user clicks a Sabah card and enters carousel mode within the same tab.
+    const sabahGridEl = document.getElementById('sabahGrid');
+    const sabahGridActive = !!(sabahGridEl && sabahGridEl.style.display !== 'none');
+    // Either grid view should let the page expand and scroll naturally
+    const gridFlow = penGridVisible || sabahGridActive;
     if (heroContainer) {
-      heroContainer.style.height   = d ? 'calc(100vh - 52px)' : 'auto';
-      heroContainer.style.overflow = d ? 'hidden' : 'visible';
+      heroContainer.style.height   = (d && !gridFlow) ? 'calc(100vh - 52px)' : 'auto';
+      heroContainer.style.overflow = (d && !gridFlow) ? 'hidden' : 'visible';
     }
     heroMain.style.flex          = d ? '1' : 'none';
     heroMain.style.flexDirection = d ? 'row' : 'column';
     heroMain.style.overflow      = d ? 'hidden' : 'visible';
-    statsPanel.style.display     = d ? 'flex' : 'none';
+    // Cap heroMain only for peninsular (carousel + tall stats panel) — Sabah grid hides stats so it doesn't need capping
+    heroMain.style.maxHeight     = (d && penGridVisible) ? '560px' : '';
+    // Hide stats panel in Sabah grid mode on desktop so the grid spans full width (matches mobile)
+    statsPanel.style.display     = (d && !sabahGridActive) ? 'flex' : 'none';
     mobileStats.style.display    = d ? 'none' : 'block';
     portraitRegion.style.flex    = d ? '1' : 'none';
     portraitRegion.style.overflow= d ? 'hidden' : 'visible';
-    portraitRegion.style.padding = d ? '20px 48px' : '12px 20px 0';
-    if (!d && hs.list[hs.index] && !isSabahGridMode()) renderStats(hs.list[hs.index], 'mobileStats');
+    // Use roomier padding for Sabah grid, normal padding for carousel
+    portraitRegion.style.padding = d ? (sabahGridActive ? '20px 24px 32px' : '20px 48px') : '12px 20px 0';
+    // Align portrait/grid to top (not centered) when a grid is visible
+    portraitRegion.style.justifyContent = (d && gridFlow) ? 'flex-start' : 'center';
+    if (!d && hs.list[hs.index] && !sabahGridActive) renderStats(hs.list[hs.index], 'mobileStats');
   }
   applyLayout();
   window.addEventListener('resize', applyLayout);
