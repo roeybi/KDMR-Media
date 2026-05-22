@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./src/gtm.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 7 Prediction — Unduk Ngadau 2026 | KDMR Media</title>
+    <meta name="description" content="Pick your Top 7 for Unduk Ngadau 2026. Tap contestants to build your stage prediction and download your card." />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <style>
+      /* ── Film grain ─────────────────────────────── */
+      .film-grain {
+        position: fixed; inset: 0; z-index: 9998; pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+        background-size: 180px 180px; opacity: 0.026;
+      }
+      /* ── Nav ────────────────────────────────────── */
+      .nav-link {
+        font-size: 0.82rem; font-weight: 600; color: #888;
+        text-decoration: none; letter-spacing: 0.01em;
+        transition: color 0.15s; cursor: pointer;
+      }
+      .nav-link:hover { color: #f0f0f0; }
+      .nav-dropdown {
+        position: absolute; top: calc(100% + 10px); left: -12px;
+        background: #111; border: 1px solid #222; border-radius: 4px;
+        min-width: 190px; z-index: 100; padding: 6px 0;
+      }
+      .nav-dropdown a {
+        display: flex; align-items: center; gap: 8px; padding: 9px 14px;
+        font-size: 0.8rem; font-weight: 500; color: #aaa;
+        text-decoration: none; transition: color 0.15s, background 0.15s;
+      }
+      .nav-dropdown a:hover { background: #181818; color: #f0f0f0; }
+      .nav-dropdown-badge {
+        font-size: 0.55rem; font-weight: 800; letter-spacing: 0.06em;
+        padding: 2px 5px; border-radius: 2px;
+      }
+      .footer-link { font-size: 0.75rem; color: #444; text-decoration: none; transition: color 0.15s; }
+      .footer-link:hover { color: #888; }
+      @keyframes live-pulse {
+        0%,100% { box-shadow: 0 0 6px 2px rgba(255,59,59,0.35); }
+        50%      { box-shadow: 0 0 12px 4px rgba(255,59,59,0.6); }
+      }
+      /* ── Page hero ──────────────────────────────── */
+      .predict-hero {
+        background: linear-gradient(180deg, #0d0900 0%, #0a0a0a 100%);
+        border-bottom: 1px solid #1a1a1a;
+        padding: 52px 16px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .predict-hero::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 50% 0%, rgba(240,168,32,0.10) 0%, transparent 65%);
+        pointer-events: none;
+      }
+      /* ── Search bar ─────────────────────────────── */
+      .search-wrap {
+        position: relative; max-width: 500px; margin: 0 auto;
+      }
+      .search-input {
+        width: 100%; padding: 13px 16px 13px 44px;
+        background: #111; border: 1px solid #252525;
+        color: #f0f0f0; font-size: 0.9rem; font-family: Inter, sans-serif;
+        border-radius: 3px; outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        box-sizing: border-box;
+      }
+      .search-input::placeholder { color: #444; }
+      .search-input:focus { border-color: rgba(240,168,32,0.5); box-shadow: 0 0 0 3px rgba(240,168,32,0.06); }
+      .search-icon {
+        position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+        color: #444; pointer-events: none; display: flex;
+      }
+      /* ── Contestant pool ────────────────────────── */
+      .pool-section {
+        padding: 0 16px 32px;
+        max-width: 1200px; margin: 0 auto;
+      }
+      .pool-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 10px;
+      }
+      .contestant-card {
+        background: #111; border: 1px solid #1e1e1e;
+        border-radius: 4px; overflow: hidden;
+        cursor: pointer; position: relative;
+        transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+        user-select: none; -webkit-tap-highlight-color: transparent;
+      }
+      .contestant-card:hover:not(.placed):not(.selected) {
+        border-color: rgba(240,168,32,0.45);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      }
+      .contestant-card.selected {
+        border-color: #f0a820;
+        box-shadow: 0 0 0 2px rgba(240,168,32,0.25), 0 8px 24px rgba(0,0,0,0.4);
+        transform: translateY(-2px);
+      }
+      .contestant-card.placed {
+        opacity: 0.32; cursor: default;
+      }
+      .contestant-card.placed:after {
+        content: '✓';
+        position: absolute; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.4rem; color: #f0a820;
+        background: rgba(0,0,0,0.45);
+      }
+      .card-photo {
+        width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center;
+        display: block; background: #0f0800;
+      }
+      .card-photo-placeholder {
+        width: 100%; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center;
+        background: linear-gradient(135deg, #1a1000, #0f0800);
+        font-size: 1.4rem; font-weight: 800; color: #f0a820; letter-spacing: -0.02em;
+      }
+      .card-info {
+        padding: 7px 8px 8px;
+      }
+      .card-name {
+        font-size: 0.65rem; font-weight: 700; color: #e0e0e0;
+        line-height: 1.3; display: -webkit-box; -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; overflow: hidden;
+      }
+      .card-branch {
+        font-size: 0.58rem; color: #555; margin-top: 3px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      .pool-empty {
+        grid-column: 1 / -1; text-align: center;
+        color: #333; font-size: 0.85rem; padding: 40px 0;
+      }
+      /* ── Stage / Podium ─────────────────────────── */
+      .stage-section {
+        padding: 8px 16px 40px;
+        max-width: 900px; margin: 0 auto;
+      }
+      .stage-eyebrow {
+        font-size: 0.58rem; font-weight: 800; letter-spacing: 0.18em;
+        text-transform: uppercase; color: #f0a820; margin-bottom: 8px;
+        display: flex; align-items: center; gap: 8px;
+      }
+      .stage-eyebrow::after {
+        content: ''; flex: 1; height: 1px; background: #1a1a1a;
+      }
+      .stage-title {
+        font-size: 1.5rem; font-weight: 800; color: #f0f0f0;
+        letter-spacing: -0.03em; margin-bottom: 32px;
+      }
+      /* Top 3 podium row */
+      .podium-top {
+        display: flex; align-items: flex-end; justify-content: center;
+        gap: 8px; margin-bottom: 8px;
+      }
+      /* Bottom 4 row */
+      .podium-bottom {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+      /* Slot styles */
+      .slot {
+        position: relative; cursor: pointer;
+        border-radius: 4px; overflow: visible;
+        transition: box-shadow 0.15s, transform 0.15s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .slot:hover .slot-inner { border-color: rgba(240,168,32,0.5); }
+      .slot-inner {
+        background: #0f0f0f; border: 1.5px dashed #252525;
+        border-radius: 4px; overflow: hidden;
+        transition: border-color 0.15s, background 0.15s;
+        position: relative;
+      }
+      .slot.has-contestant .slot-inner {
+        border-style: solid; border-color: #1e1e1e;
+        background: #111;
+      }
+      .slot.highlight .slot-inner {
+        border-color: #f0a820; border-style: solid;
+        box-shadow: 0 0 0 2px rgba(240,168,32,0.2);
+        background: rgba(240,168,32,0.04);
+      }
+      .slot-rank-badge {
+        position: absolute; top: 7px; left: 7px; z-index: 2;
+        width: 22px; height: 22px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 0.62rem; font-weight: 900; letter-spacing: -0.02em;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      }
+      .slot-rank-1 { background: #f0a820; color: #0a0a0a; }
+      .slot-rank-2 { background: #d4d4d8; color: #0a0a0a; }
+      .slot-rank-3 { background: #a87239; color: #fff; }
+      .slot-rank-other { background: #1e1e1e; color: #666; }
+      .slot-remove {
+        position: absolute; top: 5px; right: 5px; z-index: 3;
+        width: 20px; height: 20px; border-radius: 50%;
+        background: rgba(0,0,0,0.7); border: 1px solid #333;
+        color: #888; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;
+        cursor: pointer; transition: background 0.15s, color 0.15s;
+        line-height: 1;
+      }
+      .slot-remove:hover { background: #c0160e; color: #fff; border-color: #c0160e; }
+      .slot-photo {
+        width: 100%; display: block;
+        object-fit: cover; object-position: top center;
+        background: #0f0800;
+      }
+      .slot-photo-placeholder {
+        width: 100%; display: flex; align-items: center; justify-content: center;
+        background: linear-gradient(135deg, #1a1000, #0f0800);
+        font-weight: 800; color: #f0a820;
+      }
+      .slot-empty-content {
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        color: #2a2a2a; text-align: center;
+      }
+      .slot-empty-icon { font-size: 1.4rem; margin-bottom: 4px; opacity: 0.5; }
+      .slot-empty-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+      .slot-name-bar {
+        padding: 7px 8px 8px;
+        border-top: 1px solid #1a1a1a;
+      }
+      .slot-name {
+        font-size: 0.65rem; font-weight: 700; color: #e0e0e0;
+        line-height: 1.3; display: -webkit-box; -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; overflow: hidden;
+      }
+      .slot-branch {
+        font-size: 0.58rem; color: #555; margin-top: 3px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      /* Slot sizing: top 3 */
+      .slot-first  { flex: 0 0 220px; }
+      .slot-second { flex: 0 0 180px; }
+      .slot-third  { flex: 0 0 180px; }
+      .slot-first .slot-photo,
+      .slot-first .slot-photo-placeholder,
+      .slot-first .slot-empty-content { aspect-ratio: 3/4; }
+      .slot-second .slot-photo,
+      .slot-second .slot-photo-placeholder,
+      .slot-second .slot-empty-content { aspect-ratio: 3/4; }
+      .slot-third .slot-photo,
+      .slot-third .slot-photo-placeholder,
+      .slot-third .slot-empty-content { aspect-ratio: 3/4; }
+      /* Bottom row slots */
+      .slot-lower .slot-photo,
+      .slot-lower .slot-photo-placeholder,
+      .slot-lower .slot-empty-content { aspect-ratio: 2/3; }
+      /* Podium platform blocks */
+      .podium-platform {
+        display: flex; flex-direction: column; align-items: center;
+      }
+      .platform-block {
+        width: 100%; background: #141414; border: 1px solid #1e1e1e;
+        border-top: 3px solid #f0a820; border-radius: 0 0 3px 3px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em;
+        text-transform: uppercase; color: #f0a820;
+      }
+      .platform-1 { height: 52px; }
+      .platform-2 { height: 38px; }
+      .platform-3 { height: 28px; }
+      /* ── Instruction pill ──────────────────────── */
+      .instruction-pill {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: rgba(240,168,32,0.06); border: 1px solid rgba(240,168,32,0.15);
+        border-radius: 20px; padding: 6px 14px;
+        font-size: 0.72rem; color: #888;
+        margin-bottom: 28px;
+      }
+      .instruction-pill strong { color: #f0a820; }
+      /* ── Selected indicator ─────────────────────── */
+      #selectedIndicator {
+        display: none;
+        position: sticky; bottom: 16px; z-index: 10;
+        margin: 0 16px 16px;
+        background: #f0a820; color: #0a0a0a;
+        border-radius: 4px; padding: 12px 20px;
+        font-size: 0.82rem; font-weight: 700;
+        display: none; align-items: center; justify-content: space-between; gap: 10px;
+        box-shadow: 0 8px 32px rgba(240,168,32,0.3);
+        max-width: 860px; margin-left: auto; margin-right: auto;
+      }
+      #selectedIndicator.visible { display: flex; }
+      #selectedIndicator button {
+        background: rgba(0,0,0,0.15); border: none; color: #0a0a0a;
+        font-size: 0.72rem; font-weight: 700; padding: 5px 12px;
+        border-radius: 3px; cursor: pointer;
+      }
+      /* ── Download button ────────────────────────── */
+      .download-section {
+        padding: 8px 16px 64px; text-align: center;
+      }
+      .download-btn {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: #f0a820; color: #0a0a0a;
+        font-size: 0.9rem; font-weight: 800; letter-spacing: 0.04em;
+        padding: 16px 36px; border-radius: 3px; border: none;
+        cursor: pointer; font-family: Inter, sans-serif;
+        animation: glow-pulse 2.8s ease-in-out infinite;
+        transition: background 0.15s, transform 0.15s;
+      }
+      .download-btn:hover { background: #ffc13a; transform: translateY(-2px); }
+      .download-btn:disabled { opacity: 0.4; cursor: default; animation: none; transform: none; }
+      @keyframes glow-pulse {
+        0%,100% { box-shadow: 0 0 14px 2px rgba(240,168,32,0.28); }
+        50%      { box-shadow: 0 0 36px 10px rgba(240,168,32,0.55); }
+      }
+      .download-note {
+        font-size: 0.7rem; color: #333; margin-top: 12px;
+      }
+      /* ── Reset link ─────────────────────────────── */
+      .reset-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: transparent; border: 1px solid #252525;
+        color: #555; font-size: 0.78rem; font-weight: 600;
+        padding: 10px 20px; border-radius: 3px; cursor: pointer;
+        font-family: Inter, sans-serif;
+        transition: border-color 0.15s, color 0.15s;
+        margin-left: 12px;
+      }
+      .reset-btn:hover { border-color: #444; color: #f0f0f0; }
+      /* ── Section divider ────────────────────────── */
+      .section-divider {
+        border: none; border-top: 1px solid #141414;
+        margin: 0;
+      }
+      /* ── Responsive ─────────────────────────────── */
+      @media (max-width: 680px) {
+        .slot-first  { flex: 0 0 44%; }
+        .slot-second { flex: 0 0 35%; }
+        .slot-third  { flex: 0 0 35%; }
+        .podium-bottom { grid-template-columns: repeat(4, 1fr); gap: 5px; }
+        .stage-title { font-size: 1.1rem; margin-bottom: 20px; }
+        .platform-block { font-size: 0.5rem; }
+        .platform-1 { height: 40px; }
+        .platform-2 { height: 28px; }
+        .platform-3 { height: 20px; }
+      }
+      @media (max-width: 480px) {
+        .slot-first  { flex: 0 0 46%; }
+        .slot-second { flex: 0 0 27%; }
+        .slot-third  { flex: 0 0 27%; }
+        .podium-top { gap: 5px; }
+      }
+    </style>
+  </head>
+  <body style="background:#0a0a0a;color:#f0f0f0;">
+
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- ── Nav ─────────────────────────────────────────────── -->
+    <nav id="mainNav" style="background:#0a0a0a;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:50;">
+      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;">
+        <a href="./index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;">
+          <img src="/mark-color.svg" alt="KDMR" style="width:28px;height:28px;display:block;flex-shrink:0;" />
+          <span style="font-size:0.95rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </a>
+        <div id="navLinks" style="display:none;align-items:center;gap:24px;margin-right:24px;">
+          <div style="position:relative;">
+            <button id="archiveDropBtn" class="nav-link" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px;padding:0;font-family:Inter,sans-serif;">
+              Winners <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="archiveMenu" class="nav-dropdown" style="display:none;">
+              <a href="/unduk-ngadau/"><span class="nav-dropdown-badge" style="background:#f0a820;color:#0a0a0a;">UN</span> Unduk Ngadau</a>
+              <a href="/mrk/"><span class="nav-dropdown-badge" style="background:#4ade80;color:#0a0a0a;">MRK</span> Mr. Kaamatan</a>
+              <a href="/sugandoi/"><span class="nav-dropdown-badge" style="background:#60a5fa;color:#0a0a0a;">SG</span> Sugandoi</a>
+              <a href="/peninsular-2026.html"><span class="nav-dropdown-badge" style="background:#f0a820;color:#0a0a0a;">PM</span> Peninsular 2026</a>
+            </div>
+          </div>
+          <a href="./news.html" class="nav-link">News</a>
+          <a href="./live.html" class="nav-link"><span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 6px 2px rgba(255,59,59,0.35);animation:live-pulse 2s ease-in-out infinite;"></span>Live Arena</span></a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="display:flex;align-items:center;gap:14px;margin-right:4px;">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color:#444;line-height:0;transition:color 0.15s;" onmouseover="this.style.color='#f0a820'" onmouseout="this.style.color='#444'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#444;line-height:0;transition:color 0.15s;" onmouseover="this.style.color='#f0a820'" onmouseout="this.style.color='#444'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#444;line-height:0;transition:color 0.15s;" onmouseover="this.style.color='#f0a820'" onmouseout="this.style.color='#444'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.19a8.18 8.18 0 0 0 4.78 1.52V6.26a4.87 4.87 0 0 1-1.01-.43z"/></svg></a>
+          </div>
+          <a href="./live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.72rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Watch Live &amp; Vote</a>
+          <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;" aria-label="Menu">
+            <svg id="menuIconOpen" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="menuIconClose" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" style="display:none;border-top:1px solid #1e1e1e;padding:12px 16px;background:#0a0a0a;">
+        <a href="./winners.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Winners</a>
+        <a href="./news.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#f0f0f0;text-decoration:none;border-bottom:1px solid #1a1a1a;">News</a>
+        <a href="./live.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#ff3b3b;text-decoration:none;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;gap:6px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 6px 2px rgba(255,59,59,0.35);animation:live-pulse 2s ease-in-out infinite;"></span>Live Arena</a>
+      </div>
+    </nav>
+
+    <!-- ── Page Hero ────────────────────────────────────────── -->
+    <section class="predict-hero">
+      <div style="position:relative;z-index:1;">
+        <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:#f0a820;margin-bottom:12px;">Unduk Ngadau 2026</div>
+        <h1 style="font-size:2.2rem;font-weight:900;letter-spacing:-0.04em;margin:0 0 12px;line-height:1.05;">
+          Top 7 Prediction
+        </h1>
+        <p style="font-size:0.9rem;color:#555;margin:0 auto 28px;max-width:460px;line-height:1.6;">
+          Tap a contestant, then tap a stage slot to build your prediction. Share your pick with the community.
+        </p>
+
+        <!-- Search -->
+        <div class="search-wrap">
+          <span class="search-icon">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+            </svg>
+          </span>
+          <input id="searchInput" type="text" class="search-input" placeholder="Search by name, branch, or district…" autocomplete="off" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contestant Pool ───────────────────────────────────── -->
+    <section style="background:#0a0a0a;padding:24px 0 0;">
+      <div class="pool-section">
+        <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#333;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+          <span>All Contestants</span>
+          <span id="poolCount" style="color:#555;"></span>
+          <span style="flex:1;height:1px;background:#1a1a1a;display:block;"></span>
+        </div>
+        <div id="poolGrid" class="pool-grid">
+          <div class="pool-empty">Loading contestants…</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ── Stage / Podium ────────────────────────────────────── -->
+    <section style="background:#080808;padding:40px 0 0;">
+      <div class="stage-section">
+        <div class="stage-eyebrow">My Prediction Stage</div>
+        <h2 class="stage-title">Place your Top 7</h2>
+
+        <div class="instruction-pill">
+          <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Tap a contestant above, then tap a <strong>stage slot</strong> to place them. Tap the × to remove.</span>
+        </div>
+
+        <!-- Top 3: podium layout -->
+        <div class="podium-top">
+          <!-- 2nd -->
+          <div class="podium-platform slot-second" style="width:100%;">
+            <div class="slot slot-second" id="slot-2" data-rank="2">
+              <div class="slot-inner" id="slot-inner-2">
+                <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                  <div class="slot-empty-icon">👑</div>
+                  <div class="slot-empty-label">2nd</div>
+                </div>
+              </div>
+            </div>
+            <div class="platform-block platform-2" style="width:100%;">2ND</div>
+          </div>
+
+          <!-- 1st -->
+          <div class="podium-platform slot-first" style="width:100%;">
+            <div class="slot slot-first" id="slot-1" data-rank="1">
+              <div class="slot-inner" id="slot-inner-1">
+                <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                  <div class="slot-empty-icon">🏆</div>
+                  <div class="slot-empty-label">1st — Champion</div>
+                </div>
+              </div>
+            </div>
+            <div class="platform-block platform-1" style="width:100%;">CHAMPION</div>
+          </div>
+
+          <!-- 3rd -->
+          <div class="podium-platform slot-third" style="width:100%;">
+            <div class="slot slot-third" id="slot-3" data-rank="3">
+              <div class="slot-inner" id="slot-inner-3">
+                <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                  <div class="slot-empty-icon">🥉</div>
+                  <div class="slot-empty-label">3rd</div>
+                </div>
+              </div>
+            </div>
+            <div class="platform-block platform-3" style="width:100%;">3RD</div>
+          </div>
+        </div>
+
+        <!-- Bottom 4 -->
+        <div class="podium-bottom">
+          <div class="slot slot-lower" id="slot-4" data-rank="4">
+            <div class="slot-inner" id="slot-inner-4">
+              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                <div class="slot-empty-icon">✨</div>
+                <div class="slot-empty-label">4th</div>
+              </div>
+            </div>
+          </div>
+          <div class="slot slot-lower" id="slot-5" data-rank="5">
+            <div class="slot-inner" id="slot-inner-5">
+              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                <div class="slot-empty-icon">✨</div>
+                <div class="slot-empty-label">5th</div>
+              </div>
+            </div>
+          </div>
+          <div class="slot slot-lower" id="slot-6" data-rank="6">
+            <div class="slot-inner" id="slot-inner-6">
+              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                <div class="slot-empty-icon">✨</div>
+                <div class="slot-empty-label">6th</div>
+              </div>
+            </div>
+          </div>
+          <div class="slot slot-lower" id="slot-7" data-rank="7">
+            <div class="slot-inner" id="slot-inner-7">
+              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                <div class="slot-empty-icon">✨</div>
+                <div class="slot-empty-label">7th</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Selected indicator (sticky) ──────────────────────── -->
+    <div id="selectedIndicator">
+      <span id="selectedLabel">Selected: —</span>
+      <button id="deselectBtn">Deselect</button>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- ── Download Section ──────────────────────────────────── -->
+    <section class="download-section">
+      <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#333;margin-bottom:20px;">Share Your Prediction</div>
+      <button id="downloadBtn" class="download-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+        Download My Prediction
+      </button>
+      <button id="resetBtn" class="reset-btn">
+        <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+        </svg>
+        Reset All
+      </button>
+      <p class="download-note">Saves as a PNG image card — perfect for sharing on social media.</p>
+    </section>
+
+    <!-- ── Footer ───────────────────────────────────────────── -->
+    <footer style="background:#080808;border-top:1px solid #141414;padding:32px 16px;">
+      <div style="max-width:1200px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+              <img src="/mark-color.svg" alt="KDMR" style="width:22px;height:22px;display:block;" />
+              <span style="font-size:0.8rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;">KDMR MEDIA</span>
+            </div>
+            <p style="font-size:0.72rem;color:#333;line-height:1.65;margin:0;">Cultural archive for the Kadazan, Dusun, Murut &amp; Rungus peoples of Sabah, Borneo.</p>
+          </div>
+          <div>
+            <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#333;margin-bottom:10px;">Pages</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <a href="./index.html" class="footer-link">Home &amp; News</a>
+              <a href="./winners.html" class="footer-link">Winners Hub</a>
+              <a href="/unduk-ngadau/" class="footer-link">Unduk Ngadau</a>
+              <a href="/predict.html" class="footer-link" style="color:#f0a820;">Top 7 Prediction</a>
+            </div>
+          </div>
+        </div>
+        <div style="border-top:1px solid #141414;padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+          <p style="font-size:0.65rem;color:#2a2a2a;margin:0;">© 2026 KDMR Media. Built for the community, by the community.</p>
+          <span style="font-size:0.62rem;color:#222;">Sabah, Borneo</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/predict.js"></script>
+    <script>
+      (function(){
+        var btn=document.getElementById('mobileMenuBtn'),menu=document.getElementById('mobileMenu'),open=document.getElementById('menuIconOpen'),close=document.getElementById('menuIconClose');
+        if(!btn||!menu)return;
+        btn.addEventListener('click',function(){var o=menu.style.display==='block';menu.style.display=o?'none':'block';if(open)open.style.display=o?'block':'none';if(close)close.style.display=o?'none':'block';});
+      })();
+      (function(){
+        var drop=document.getElementById('archiveDropBtn'),menu=document.getElementById('archiveMenu');
+        if(!drop||!menu)return;
+        drop.addEventListener('click',function(e){e.stopPropagation();menu.style.display=menu.style.display==='block'?'none':'block';});
+        document.addEventListener('click',function(){if(menu)menu.style.display='none';});
+        var nav=document.getElementById('navLinks');
+        if(nav)nav.style.display='flex';
+      })();
+    </script>
+  </body>
+</html>
