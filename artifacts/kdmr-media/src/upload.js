@@ -178,9 +178,9 @@ async function uploadPhoto() {
     if (!metaRes.ok && metaRes.status !== 409) {
       const err = await metaRes.json().catch(() => ({}));
       if (err.code === '42P01' || metaRes.status === 404) {
-        throw new Error('Database table not found. The admin needs to create the "contributor_uploads" table in Supabase first.');
+        throw new Error('Database table not found. Please contact the admin.');
       }
-      console.warn('Metadata insert warning:', err);
+      throw new Error(`Metadata save failed (${metaRes.status}): ${err.message || err.code || 'Unknown error'}`);
     }
 
     setProgress(100, 'Done!');
