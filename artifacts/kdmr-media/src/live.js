@@ -439,17 +439,22 @@ function buildTickerHTML(items, separator = '  ·  ') {
   return `<span style="font-size:0.58rem;font-weight:600;color:#888;letter-spacing:0.04em;padding-right:0;">${doubled}</span>`;
 }
 
-function initRankingTicker(candidates) {
+function initRankingTicker() {
   const track = document.getElementById('rankingTrack');
-  if (!track) return;
+  if (!track || !_unCandidates.length) return;
 
-  const sorted = [...candidates]
-    .filter(c => c.award === 'Unduk Ngadau')
+  const totalVotes = _unCandidates.reduce((sum, c) => sum + (c.liveVotes || 0), 0);
+  const acc = '#f0a820';
+
+  // If any votes exist, show top 5 only; otherwise show all names (0 votes each)
+  const sorted = [..._unCandidates]
     .sort((a, b) => (b.liveVotes || 0) - (a.liveVotes || 0));
-  const items = sorted.map((c, i) => {
+  const display = totalVotes > 0 ? sorted.slice(0, 5) : sorted;
+
+  const items = display.map((c, i) => {
     const medal = ['🥇','🥈','🥉'][i] || `${i + 1}.`;
-    const acc   = CAT_ACCENT[c.category] || '#f0a820';
-    return `<span style="color:#f0f0f0;font-weight:700;">${medal} ${c.name}</span><span style="color:${acc};font-weight:800;"> ${(c.liveVotes||0).toLocaleString()} votes</span>`;
+    const voteText = totalVotes > 0 ? ` ${(c.liveVotes||0).toLocaleString()} vote${(c.liveVotes||0)===1?'':'s'}` : ' 0 votes';
+    return `<span style="color:#f0f0f0;font-weight:700;">${medal} ${c.name}</span><span style="color:${acc};font-weight:800;">${voteText}</span>`;
   });
 
   // Build doubled text nodes for seamless loop
@@ -464,8 +469,7 @@ function initRankingTicker(candidates) {
 }
 
 function updateRankingTicker() {
-  if (!_liveEvent?.candidates) return;
-  initRankingTicker(_liveEvent.candidates.filter(c => c.award === 'Unduk Ngadau'));
+  initRankingTicker();
 }
 
 const ACTIVITY_PHRASES = [
@@ -841,7 +845,7 @@ function startPolling() {
     initStream(_liveEvent?.streamUrl);
 
     // 5. Block 2 — dual ticker (UN candidates drive the ranking ticker)
-    initRankingTicker(_unCandidates);
+    initRankingTicker();
     initActivityTicker();
 
     // 6. Block 4 — leaderboard: stats + all 52 UN candidates
