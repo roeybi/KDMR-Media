@@ -203,3 +203,54 @@ Use this exact shape when inserting a new winner into the `winners` array in `da
 ### How to Push
 
 After editing `data.json`, push **only** via the GitHub REST API (do not use `git push`). See the **Deployment gotchas** section above for the exact `curl`/`node` pattern. Then tell the user to wait ~2 minutes for the GitHub Pages deployment.
+
+---
+
+## Bulk Image Update Workflow — Adding Multiple Winner Portraits at Once
+
+When you have photos for several winners (e.g., 3–8 new portraits after a coronation ceremony), use this checklist to batch them efficiently.
+
+### Step 1: Prepare your files
+
+1. **Rename each photo** using the winner's first name in kebab-case:
+   - `Clarissa Jane Ahap Fred Michael` → `clarissa-jane.png`
+   - `Valeriena Karen Aldrin` → `valeriena-karen.png`
+   - `Deanera Clarissa Jamdin` → `deanera-clarissa.png`
+2. **Compress each image** to under 1MB (ideally 400–800KB). Use ImageMagick:
+   ```bash
+   convert original.png -resize 800x800 -quality 85 compressed.png
+   ```
+3. **Ensure transparent background** (PNG with alpha). If the photo has a solid background, remove it first.
+
+### Step 2: Upload all images
+
+Drop every `.png` file into the **Replit file pane** under:
+```
+artifacts/kdmr-media/public/images/
+```
+Or attach them in the chat and I'll copy them there.
+
+### Step 3: Update all image references
+
+Provide me a list in this exact format (one per line, no extra prose):
+
+```
+KDCA Melaka | Clarissa Jane Ahap Fred Michael | /images/clarissa-jane.png
+KDCA Perak | Valeriena Karen Aldrin | /images/valeriena-karen.png
+KDCA Sarawak | Deanera Clarissa Jamdin | /images/deanera-clarissa.png
+```
+
+I will then run a single script that updates **all three surfaces simultaneously** for each entry:
+1. `data.json` — `imageUrl` field on the correct `win-XXX` entry
+2. `unduk-ngadau/index.html` — SVG `<image href>` inside the matching branch pin
+3. `src/unduk-locator.js` — SVG `<image href>` inside the matching branch pin (homepage map)
+
+### Step 4: Push everything
+
+I push all changed files to GitHub in one batch (image files + `data.json` + both HTML/JS maps). Live site updates in ~2 minutes.
+
+### What NOT to do
+
+- Do **not** attach photos and ask me to "update everything" without the mapping list — I need the branch-to-filename mapping to avoid mixing up entries (e.g., Johor accidentally getting Pulau Pinang's photo).
+- Do **not** use the same filename for multiple winners — each photo must have a unique name.
+- Do **not** include spaces in filenames — use kebab-case only.
