@@ -414,39 +414,13 @@
       <div style="position:relative;z-index:1;">
         <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:#f0a820;margin-bottom:12px;">Unduk Ngadau 2026</div>
         <h1 style="font-size:2.2rem;font-weight:900;letter-spacing:-0.04em;margin:0 0 12px;line-height:1.05;">
-          Top 7 Prediction
+          My Top 7 Prediction
         </h1>
-        <p style="font-size:0.9rem;color:#555;margin:0 auto 28px;max-width:460px;line-height:1.6;">
-          Tap a contestant, then tap a stage slot to build your prediction. Share your pick with the community.
+        <p style="font-size:0.9rem;color:#555;margin:0 auto 0;max-width:460px;line-height:1.6;">
+          Tap a contestant, then tap a stage slot to place them. Share your pick with the community.
         </p>
-
-        <!-- Search -->
-        <div class="search-wrap">
-          <span class="search-icon">
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
-            </svg>
-          </span>
-          <input id="searchInput" type="text" class="search-input" placeholder="Search by name, branch, or district…" autocomplete="off" />
-        </div>
       </div>
     </section>
-
-    <!-- ── Contestant Pool ───────────────────────────────────── -->
-    <section style="background:#0a0a0a;padding:24px 0 0;">
-      <div class="pool-section">
-        <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#333;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
-          <span>All Contestants</span>
-          <span id="poolCount" style="color:#555;"></span>
-          <span style="flex:1;height:1px;background:#1a1a1a;display:block;"></span>
-        </div>
-        <div id="poolGrid" class="pool-grid">
-          <div class="pool-empty">Loading contestants…</div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="section-divider" />
 
     <!-- ── Stage / Podium ────────────────────────────────────── -->
     <section style="background:#080808;padding:40px 0 0;">
@@ -456,7 +430,7 @@
 
         <div class="instruction-pill">
           <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <span>Tap a contestant above, then tap a <strong>stage slot</strong> to place them. Tap the × to remove.</span>
+          <span>Tap a contestant below, then tap a <strong>stage slot</strong> to place them. Tap the × to remove.</span>
         </div>
 
         <!-- Top 3: podium layout -->
@@ -544,6 +518,31 @@
       <span id="selectedLabel">Selected: —</span>
       <button id="deselectBtn">Deselect</button>
     </div>
+
+    <hr class="section-divider" />
+
+    <!-- ── Contestant Pool ───────────────────────────────────── -->
+    <section style="background:#0a0a0a;padding:32px 0 0;">
+      <div class="pool-section">
+        <!-- Search -->
+        <div class="search-wrap" style="margin-bottom:20px;">
+          <span class="search-icon">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+            </svg>
+          </span>
+          <input id="searchInput" type="text" class="search-input" placeholder="Search by name, branch, or district…" autocomplete="off" />
+        </div>
+        <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#333;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+          <span>All Contestants</span>
+          <span id="poolCount" style="color:#555;"></span>
+          <span style="flex:1;height:1px;background:#1a1a1a;display:block;"></span>
+        </div>
+        <div id="poolGrid" class="pool-grid">
+          <div class="pool-empty">Loading contestants…</div>
+        </div>
+      </div>
+    </section>
 
     <hr class="section-divider" />
 
