@@ -727,6 +727,7 @@
       "origin": "KDCA Johor",
       "accentColor": "#f0a820",
       "badge": "Regional Champion 2026",
+      "imageUrl": "/images/jeraahfinah-jonis.png",
       "heritage": {
         "group": "Kadazan Dusun (diaspora — Johor)",
         "costume": "Sinuangga — traditional Kadazan ceremonial blouse adorned with hand-beaded manik and gold filigree headdress, representing the KDM diaspora in southern Peninsular Malaysia",
@@ -811,7 +812,8 @@
         "KDCA Pulau Pinang Unduk Ngadau representative at 66th State Finals"
       ],
       "votes": 0,
-      "coronationDate": "2026-05-09"
+      "coronationDate": "2026-05-09",
+      "imageUrl": "/images/jeraahfinah-jonis.png"
     },
     {
       "id": "win-077",
