@@ -583,10 +583,13 @@ function renderLeaderboard(candidates) {
   const list = document.getElementById('leaderboardList');
   if (!list) return;
 
-  // Filter to Unduk Ngadau only, then sort by liveVotes descending
+  // Sort all candidates by liveVotes descending (UN first within ties by category order)
+  const CAT_ORDER = { UN: 0, MRK: 1, SG: 2 };
   const sorted = [...(candidates || [])]
-    .filter(c => c.award === 'Unduk Ngadau')
-    .sort((a, b) => (b.liveVotes || 0) - (a.liveVotes || 0));
+    .sort((a, b) =>
+      (b.liveVotes || 0) - (a.liveVotes || 0) ||
+      (CAT_ORDER[a.category] ?? 9) - (CAT_ORDER[b.category] ?? 9)
+    );
 
   // No candidates yet — show Coming Soon state
   if (!sorted.length) {
@@ -712,22 +715,39 @@ async function handleVote(candidateId) {
     return;
   }
 
-  markVoted(candidateId);
-
   const c = _liveEvent?.candidates?.find(x => x.id === candidateId);
   if (!c) return;
-  c.liveVotes = (c.liveVotes || 0) + 1;
 
-  refreshLeaderboardRow(candidateId);
+  // Disable the button immediately to prevent double-clicks
+  const btn = document.getElementById(`lb-btn-${candidateId}`);
+  if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
 
+  // Supabase-first: only mark voted after server confirms
   if (API_CONFIG.ENABLED) {
-    await sbInsert('live_votes', {
+    const result = await sbInsert('live_votes', {
       candidate_id: candidateId, candidate_name: c.name,
       category: c.category, session_token: _session?.token,
       voted_at: new Date().toISOString(),
     });
+    if (!result.ok) {
+      // Restore button so user can retry
+      if (btn) { btn.disabled = false; btn.textContent = 'Cast Vote'; }
+      if (result.status === 409) {
+        // Unique constraint — already voted on another device/browser
+        markVoted(candidateId);
+        showToast('Your vote was already recorded for this candidate.', 'info');
+        if (btn) { btn.innerHTML = '✓ Voted'; btn.style.cssText = 'background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.3);'; btn.disabled = true; }
+      } else {
+        showToast('Could not record your vote — please try again.', 'error');
+      }
+      return;
+    }
   }
 
+  // Only mark locally and update UI after server confirms
+  markVoted(candidateId);
+  c.liveVotes = (c.liveVotes || 0) + 1;
+  refreshLeaderboardRow(candidateId);
   showToast(`Vote cast for ${c.name}!`, 'success');
 }
 
@@ -764,6 +784,17 @@ function startPolling() {
 
 (async function init() {
   try {
+    // ?reset — clear session + all vote markers for fresh testing
+    if (new URLSearchParams(window.location.search).get('reset') !== null) {
+      localStorage.removeItem(SESSION_KEY);
+      Object.keys(localStorage)
+        .filter(k => k.startsWith(VOTE_PREFIX))
+        .forEach(k => localStorage.removeItem(k));
+      // Strip the ?reset param from the URL without reloading
+      const clean = window.location.pathname + window.location.hash;
+      window.history.replaceState(null, '', clean);
+    }
+
     // 1. Gate — restore session if exists, wire up modal if not
     initGate();
 
