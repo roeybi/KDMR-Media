@@ -1,4 +1,5 @@
 // predict.js — Top 7 Prediction module
+import html2canvas from 'html2canvas';
 
 const RANKS = [1, 2, 3, 4, 5, 6, 7];
 const RANK_LABELS = { 1: 'Champion', 2: '2nd Runner-Up', 3: '3rd Runner-Up', 4: '4th', 5: '5th', 6: '6th', 7: '7th' };
@@ -7,8 +8,8 @@ const SAMPLE_IMG = '/images/Sample UN Winner.png';
 
 let allContestants = [];
 let filteredContestants = [];
-let slots = {}; // rank → contestant object or null
-let selectedContestant = null; // currently picked from pool
+let slots = {};
+let selectedContestant = null;
 
 RANKS.forEach(r => { slots[r] = null; });
 
@@ -21,7 +22,6 @@ async function init() {
     allContestants = (data.winners || [])
       .filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
       .sort((a, b) => {
-        // Outstation first, then Sabah districts alphabetically
         const aOut = a.branch !== 'KDCA Sabah';
         const bOut = b.branch !== 'KDCA Sabah';
         if (aOut !== bOut) return aOut ? -1 : 1;
@@ -33,13 +33,14 @@ async function init() {
     setupSearch();
     setupDownload();
     setupReset();
+    updateShareCard();
   } catch (e) {
     document.getElementById('poolGrid').innerHTML =
       '<div class="pool-empty" style="color:#c0160e;">Failed to load contestants. Please refresh.</div>';
   }
 }
 
-// ─── POOL RENDERING ──────────────────────────────────────────────────────────
+// ─── HELPERS ─────────────────────────────────────────────────────────────────
 
 function getInitials(name) {
   return name.split(' ').slice(0, 2).map(p => p[0]).join('').toUpperCase();
@@ -52,80 +53,68 @@ function isPlaceholder(imageUrl) {
   return false;
 }
 
-function photoHTML(imageUrl, name, cssClass, styleAttr = '') {
-  if (!isPlaceholder(imageUrl) && imageUrl) {
-    return `<img class="${cssClass}" src="${imageUrl}" alt="${name}" style="${styleAttr}" loading="lazy" />`;
-  }
-  return `<div class="${cssClass}" style="${styleAttr}"><span>${getInitials(name)}</span></div>`;
+function branchLabel(c) {
+  return c.branch === 'KDCA Sabah' ? (c.district || 'Sabah') : c.branch;
 }
+
+// ─── POOL RENDERING ──────────────────────────────────────────────────────────
 
 function renderPool() {
   const grid = document.getElementById('poolGrid');
   const count = document.getElementById('poolCount');
 
-  const visible = filteredContestants;
-  count.textContent = `(${visible.length} of ${allContestants.length})`;
+  count.textContent = `(${filteredContestants.length} of ${allContestants.length})`;
 
-  if (visible.length === 0) {
+  if (filteredContestants.length === 0) {
     grid.innerHTML = '<div class="pool-empty">No contestants match your search.</div>';
     return;
   }
 
-  // Figure out which IDs are already placed
   const placedIds = new Set(Object.values(slots).filter(Boolean).map(c => c.id));
   const isSelected = (c) => selectedContestant && selectedContestant.id === c.id;
 
-  grid.innerHTML = visible.map(c => {
+  grid.innerHTML = filteredContestants.map(c => {
     const placed = placedIds.has(c.id);
     const selected = isSelected(c);
     const classes = ['contestant-card', placed ? 'placed' : '', selected ? 'selected' : ''].filter(Boolean).join(' ');
-    const imgHTML = photoHTML(c.imageUrl, c.name, isPlaceholder(c.imageUrl) ? 'card-photo-placeholder' : 'card-photo');
-    const branchLabel = c.branch === 'KDCA Sabah' ? (c.district || 'Sabah') : c.branch;
+    const imgHTML = isPlaceholder(c.imageUrl)
+      ? `<div class="card-photo-placeholder">${getInitials(c.name)}</div>`
+      : `<img class="card-photo" src="${c.imageUrl}" alt="${c.name}" loading="lazy" />`;
 
     return `<div class="${classes}" data-id="${c.id}" role="button" tabindex="0" aria-label="Select ${c.name}">
       ${imgHTML}
       <div class="card-info">
         <div class="card-name">${c.name}</div>
-        <div class="card-branch">${branchLabel}</div>
+        <div class="card-branch">${branchLabel(c)}</div>
       </div>
     </div>`;
   }).join('');
 
-  // Bind click events
   grid.querySelectorAll('.contestant-card').forEach(card => {
     card.addEventListener('click', () => onCardClick(card.dataset.id));
     card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') onCardClick(card.dataset.id); });
   });
 }
 
-// ─── SELECTION LOGIC ─────────────────────────────────────────────────────────
+// ─── SELECTION ───────────────────────────────────────────────────────────────
 
 function onCardClick(id) {
   const c = allContestants.find(w => w.id === id);
   if (!c) return;
-
-  // If already placed, do nothing
   const placedIds = new Set(Object.values(slots).filter(Boolean).map(w => w.id));
   if (placedIds.has(id)) return;
 
-  // Toggle selection
-  if (selectedContestant && selectedContestant.id === id) {
-    deselect();
-    return;
-  }
+  if (selectedContestant && selectedContestant.id === id) { deselect(); return; }
 
   selectedContestant = c;
   showSelectedIndicator(c);
 
-  // Auto-place into next empty slot
   const nextEmpty = RANKS.find(r => !slots[r]);
   if (nextEmpty !== undefined) {
     placeInSlot(nextEmpty, c);
     deselect();
     return;
   }
-
-  // All slots full — keep selected so user can pick a slot to swap
   renderPool();
 }
 
@@ -133,24 +122,14 @@ function deselect() {
   selectedContestant = null;
   hideSelectedIndicator();
   renderPool();
-  // Remove all slot highlights
-  RANKS.forEach(r => {
-    const slot = document.getElementById(`slot-${r}`);
-    if (slot) slot.classList.remove('highlight');
-  });
+  RANKS.forEach(r => { const s = document.getElementById(`slot-${r}`); if (s) s.classList.remove('highlight'); });
 }
 
 function showSelectedIndicator(c) {
   const el = document.getElementById('selectedIndicator');
-  const label = document.getElementById('selectedLabel');
-  label.textContent = `Selected: ${c.name}`;
+  document.getElementById('selectedLabel').textContent = `Selected: ${c.name}`;
   el.classList.add('visible');
-
-  // Highlight empty slots
-  RANKS.forEach(r => {
-    const slot = document.getElementById(`slot-${r}`);
-    if (slot && !slots[r]) slot.classList.add('highlight');
-  });
+  RANKS.forEach(r => { const s = document.getElementById(`slot-${r}`); if (s && !slots[r]) s.classList.add('highlight'); });
 }
 
 function hideSelectedIndicator() {
@@ -164,29 +143,19 @@ function setupSlotListeners() {
     const slotEl = document.getElementById(`slot-${r}`);
     if (!slotEl) return;
     slotEl.addEventListener('click', (e) => {
-      // Don't trigger if clicking the remove button
       if (e.target.closest('.slot-remove')) return;
       onSlotClick(r);
     });
   });
-
   document.getElementById('deselectBtn').addEventListener('click', deselect);
 }
 
 function onSlotClick(rank) {
   if (selectedContestant) {
-    // Place selected contestant here, possibly swapping
-    const existing = slots[rank];
-    if (existing && existing.id === selectedContestant.id) {
-      // Clicking the same person's slot — deselect
-      deselect();
-      return;
-    }
-    // If slot is occupied, move existing back to pool (remove placed state)
+    if (slots[rank] && slots[rank].id === selectedContestant.id) { deselect(); return; }
     placeInSlot(rank, selectedContestant);
     deselect();
   } else {
-    // No selection: clicking occupied slot selects that person to reorder
     if (slots[rank]) {
       const c = slots[rank];
       removeFromSlot(rank);
@@ -198,21 +167,18 @@ function onSlotClick(rank) {
 }
 
 function placeInSlot(rank, contestant) {
-  // If contestant is already in another slot, clear that slot first
-  RANKS.forEach(r => {
-    if (slots[r] && slots[r].id === contestant.id) {
-      slots[r] = null;
-    }
-  });
+  RANKS.forEach(r => { if (slots[r] && slots[r].id === contestant.id) slots[r] = null; });
   slots[rank] = contestant;
   renderSlot(rank);
   renderPool();
+  updateShareCard();
 }
 
 function removeFromSlot(rank) {
   slots[rank] = null;
   renderSlot(rank);
   renderPool();
+  updateShareCard();
 }
 
 function renderSlot(rank) {
@@ -226,7 +192,7 @@ function renderSlot(rank) {
   const defaultIcons = { 1: '🏆', 2: '👑', 3: '🥉', 4: '✨', 5: '✨', 6: '✨', 7: '✨' };
   const defaultLabels = { 1: '1st — Champion', 2: '2nd', 3: '3rd', 4: '4th', 5: '5th', 6: '6th', 7: '7th' };
   const rankBadgeClass = rank === 1 ? 'slot-rank-1' : rank === 2 ? 'slot-rank-2' : rank === 3 ? 'slot-rank-3' : 'slot-rank-other';
-  const branchLabel = c ? (c.branch === 'KDCA Sabah' ? (c.district || 'Sabah') : c.branch) : '';
+  const label = c ? branchLabel(c) : '';
 
   slotEl.classList.toggle('has-contestant', !!c);
   slotEl.classList.remove('highlight');
@@ -242,7 +208,7 @@ function renderSlot(rank) {
       ${imgHTML}
       <div class="slot-name-bar">
         <div class="slot-name">${c.name}</div>
-        <div class="slot-branch">${branchLabel}</div>
+        <div class="slot-branch">${label}</div>
       </div>`;
   } else {
     inner.innerHTML = `
@@ -253,25 +219,20 @@ function renderSlot(rank) {
   }
 }
 
-// Expose remove handler for inline onclick
 window.__predictRemoveSlot = removeFromSlot;
 
 // ─── SEARCH ──────────────────────────────────────────────────────────────────
 
 function setupSearch() {
-  const input = document.getElementById('searchInput');
-  input.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
-    if (!q) {
-      filteredContestants = [...allContestants];
-    } else {
-      filteredContestants = allContestants.filter(c =>
-        c.name.toLowerCase().includes(q) ||
-        (c.branch || '').toLowerCase().includes(q) ||
-        (c.district || '').toLowerCase().includes(q) ||
-        (c.tribe || '').toLowerCase().includes(q)
-      );
-    }
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    filteredContestants = q
+      ? allContestants.filter(c =>
+          c.name.toLowerCase().includes(q) ||
+          (c.branch || '').toLowerCase().includes(q) ||
+          (c.district || '').toLowerCase().includes(q) ||
+          (c.tribe || '').toLowerCase().includes(q))
+      : [...allContestants];
     renderPool();
   });
 }
@@ -282,10 +243,157 @@ function setupReset() {
   document.getElementById('resetBtn').addEventListener('click', () => {
     RANKS.forEach(r => { slots[r] = null; renderSlot(r); });
     deselect();
+    updateShareCard();
   });
 }
 
-// ─── DOWNLOAD (Canvas API) ───────────────────────────────────────────────────
+// ─── SHARE CARD (html2canvas target) ─────────────────────────────────────────
+// Fixed 1080×1350px (4:5) container, always mirrors live slots.
+// Positioned off-screen; html2canvas renders it for download.
+
+function scSlotHTML(rank, topRow) {
+  const c = slots[rank];
+  const label = c ? branchLabel(c) : '';
+
+  // Dimensions per position
+  const dims = {
+    1: { photoH: 308, nameH: 60, fontSize: 15, subSize: 12 },
+    2: { photoH: 268, nameH: 60, fontSize: 14, subSize: 11 },
+    3: { photoH: 268, nameH: 60, fontSize: 14, subSize: 11 },
+  };
+  const d = dims[rank] || { photoH: 216, nameH: 56, fontSize: 13, subSize: 11 };
+  const totalH = d.photoH + d.nameH;
+
+  const badgeColors = { 1: '#f0a820', 2: '#d4d4d8', 3: '#a87239' };
+  const badgeBg = badgeColors[rank] || '#1e1e1e';
+  const badgeFg = badgeColors[rank] ? '#0a0a0a' : '#666';
+  const badgeSize = rank <= 3 ? 24 : 20;
+
+  let photoSection;
+  if (c && !isPlaceholder(c.imageUrl)) {
+    photoSection = `<div style="width:100%;height:${d.photoH}px;overflow:hidden;position:relative;background:#0d0800;">
+      <img src="${c.imageUrl}" crossorigin="anonymous"
+        style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;" />
+    </div>`;
+  } else if (c) {
+    photoSection = `<div style="width:100%;height:${d.photoH}px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#1a1000,#0d0800);">
+      <span style="font-size:${Math.round(d.photoH * 0.22)}px;font-weight:900;color:#f0a820;">${getInitials(c.name)}</span>
+    </div>`;
+  } else {
+    const icons = { 1: '🏆', 2: '👑', 3: '🥉', 4: '✨', 5: '✨', 6: '✨', 7: '✨' };
+    const labels = { 1: '1st', 2: '2nd', 3: '3rd', 4: '4th', 5: '5th', 6: '6th', 7: '7th' };
+    photoSection = `<div style="width:100%;height:${d.photoH}px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0d0d0d;gap:8px;">
+      <span style="font-size:${rank <= 3 ? 28 : 22}px;opacity:0.4;">${icons[rank]}</span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2a2a2a;">${labels[rank]}</span>
+    </div>`;
+  }
+
+  const nameSection = c
+    ? `<div style="padding:10px 10px 12px;background:#111;border-top:1px solid #1e1e1e;">
+        <div style="font-size:${d.fontSize}px;font-weight:700;color:#e8e8e8;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;">${c.name}</div>
+        <div style="font-size:${d.subSize}px;color:#555;margin-top:3px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">${label}</div>
+      </div>`
+    : `<div style="padding:10px 10px 12px;background:#0d0d0d;border-top:1px solid #181818;">
+        <div style="font-size:${d.subSize}px;font-weight:600;color:#222;letter-spacing:0.06em;text-transform:uppercase;">Empty</div>
+      </div>`;
+
+  const marginTop = topRow ? (rank === 1 ? '0' : `${308 - d.photoH}px`) : '0';
+
+  return `<div style="flex:1;margin-top:${marginTop};position:relative;border-radius:5px;overflow:hidden;border:1px solid ${c ? '#1e1e1e' : '#161616'};">
+    <div style="position:absolute;top:8px;left:8px;z-index:2;width:${badgeSize}px;height:${badgeSize}px;border-radius:50%;background:${badgeBg};display:flex;align-items:center;justify-content:center;font-size:${Math.round(badgeSize * 0.52)}px;font-weight:900;color:${badgeFg};box-shadow:0 2px 8px rgba(0,0,0,0.6);">${rank}</div>
+    ${photoSection}
+    ${nameSection}
+  </div>`;
+}
+
+function updateShareCard() {
+  const card = document.getElementById('shareCard');
+  if (!card) return;
+
+  const platformColors = { 1: '#f0a820', 2: '#c8c8cc', 3: '#a07040' };
+  const platformH = { 1: 50, 2: 36, 3: 26 };
+  const platformLabel = { 1: 'CHAMPION', 2: '2ND RUNNER-UP', 3: '3RD RUNNER-UP' };
+
+  // Top 3 platform bars (rendered as flex row matching the slot order: 2,1,3)
+  const platformsHTML = [2, 1, 3].map(r => {
+    const col = platformColors[r];
+    const h = platformH[r];
+    const lbl = platformLabel[r];
+    return `<div style="flex:1;height:${h}px;background:#141414;border-top:3px solid ${col};display:flex;align-items:center;justify-content:center;align-self:flex-end;">
+      <span style="font-size:10px;font-weight:800;letter-spacing:0.1em;color:${col};">${lbl}</span>
+    </div>`;
+  }).join('<div style="width:10px;flex-shrink:0;"></div>');
+
+  // Bottom 4 slots
+  const bottomHTML = [4, 5, 6, 7].map(r => scSlotHTML(r, false)).join('');
+
+  card.innerHTML = `
+    <div style="position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Inter,'Helvetica Neue',Arial,sans-serif;background:#0a0a0a;box-sizing:border-box;">
+
+      <!-- Diagonal grid texture -->
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 52px,rgba(240,168,32,0.014) 52px,rgba(240,168,32,0.014) 53px);pointer-events:none;"></div>
+
+      <!-- Radial glow -->
+      <div style="position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(ellipse,rgba(240,168,32,0.10) 0%,transparent 65%);pointer-events:none;"></div>
+
+      <!-- Bottom vignette -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(transparent,rgba(0,0,0,0.5));pointer-events:none;"></div>
+
+      <!-- Gold top accent bar -->
+      <div style="position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#c07800,#f0a820 30%,#ffd060 50%,#f0a820 70%,#c07800);"></div>
+
+      <!-- Header -->
+      <div style="position:relative;z-index:1;padding:54px 64px 0 64px;">
+
+        <!-- Logo row -->
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <img src="/mark-color.svg" width="38" height="38" crossorigin="anonymous" style="display:block;flex-shrink:0;" />
+          <span style="font-size:19px;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+          <div style="flex:1;"></div>
+          <span style="font-size:11px;font-weight:600;color:#2a2a2a;letter-spacing:0.06em;">kdmrmedia.com</span>
+        </div>
+
+        <!-- Eyebrow + title -->
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;margin-bottom:10px;">Unduk Ngadau 2026 — Top 7 Prediction</div>
+        <div style="font-size:50px;font-weight:900;color:#f0f0f0;letter-spacing:-0.04em;line-height:1.0;margin-bottom:6px;">My Prediction</div>
+        <div style="font-size:13px;color:#383838;font-weight:500;letter-spacing:0.02em;">Pick your champions. Share your prediction.</div>
+      </div>
+
+      <!-- Gold divider -->
+      <div style="position:relative;z-index:1;margin:24px 64px 26px;">
+        <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(240,168,32,0.6) 15%,rgba(240,168,32,0.6) 85%,transparent);"></div>
+      </div>
+
+      <!-- Podium — top 3 (order: 2nd | 1st | 3rd) -->
+      <div style="position:relative;z-index:1;display:flex;align-items:flex-end;gap:10px;padding:0 64px;">
+        ${scSlotHTML(2, true)}
+        ${scSlotHTML(1, true)}
+        ${scSlotHTML(3, true)}
+      </div>
+
+      <!-- Platform bars -->
+      <div style="position:relative;z-index:1;display:flex;align-items:flex-end;gap:10px;padding:0 64px;margin-bottom:18px;">
+        ${platformsHTML}
+      </div>
+
+      <!-- Bottom 4 -->
+      <div style="position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:0 64px;margin-bottom:0;">
+        ${bottomHTML}
+      </div>
+
+      <!-- Footer -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:68px;background:#080808;border-top:1px solid #141414;display:flex;align-items:center;justify-content:space-between;padding:0 64px;box-sizing:border-box;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="/mark-color.svg" width="22" height="22" crossorigin="anonymous" style="display:block;opacity:0.7;" />
+          <span style="font-size:13px;font-weight:800;color:#f0a820;letter-spacing:0.02em;">KDMR MEDIA</span>
+          <span style="font-size:12px;color:#2a2a2a;margin-left:4px;">· The Voice of Borneo's Indigenous Peoples</span>
+        </div>
+        <span style="font-size:12px;color:#2a2a2a;letter-spacing:0.04em;">kdmrmedia.com</span>
+      </div>
+    </div>`;
+}
+
+// ─── DOWNLOAD (html2canvas) ───────────────────────────────────────────────────
 
 function setupDownload() {
   document.getElementById('downloadBtn').addEventListener('click', downloadPrediction);
@@ -294,274 +402,65 @@ function setupDownload() {
 async function downloadPrediction() {
   const btn = document.getElementById('downloadBtn');
   btn.disabled = true;
-  btn.textContent = 'Generating…';
+  btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M4 4l16 16"/></svg> Generating…`;
+
+  const card = document.getElementById('shareCard');
+
+  // Pre-load all cross-origin images as blob object URLs
+  // so html2canvas sees same-origin URLs and doesn't hit CORS issues.
+  const imgs = card.querySelectorAll('img[crossorigin]');
+  const blobMap = new Map(); // original src → blob URL
+
+  await Promise.all(Array.from(imgs).map(async img => {
+    const src = img.getAttribute('src');
+    if (!src || src.startsWith('data:') || src.startsWith('blob:')) return;
+    // Skip same-origin SVG (mark-color.svg) — html2canvas handles these fine
+    if (src.endsWith('.svg')) return;
+    try {
+      const response = await fetch(src, { mode: 'cors', credentials: 'omit' });
+      if (!response.ok) return;
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      blobMap.set(src, blobUrl);
+      img.src = blobUrl;
+    } catch {
+      // If CORS fetch fails, leave as-is — html2canvas will use allowTaint
+    }
+  }));
 
   try {
-    const canvas = document.createElement('canvas');
-    const W = 1080, H = 1350;
-    canvas.width = W;
-    canvas.height = H;
-    const ctx = canvas.getContext('2d');
+    const canvas = await html2canvas(card.firstElementChild, {
+      useCORS: true,
+      allowTaint: true,
+      scale: 1,
+      width: 1080,
+      height: 1350,
+      backgroundColor: '#0a0a0a',
+      logging: false,
+      imageTimeout: 10000,
+      onclone: (_doc, el) => {
+        el.style.display = 'block';
+      },
+    });
 
-    // Background
-    ctx.fillStyle = '#0a0a0a';
-    ctx.fillRect(0, 0, W, H);
-
-    // Gold top accent bar
-    ctx.fillStyle = '#f0a820';
-    ctx.fillRect(0, 0, W, 6);
-
-    // Subtle radial glow at top
-    const grd = ctx.createRadialGradient(W / 2, 0, 0, W / 2, 0, 480);
-    grd.addColorStop(0, 'rgba(240,168,32,0.09)');
-    grd.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = grd;
-    ctx.fillRect(0, 0, W, H);
-
-    // Header
-    ctx.fillStyle = '#f0a820';
-    ctx.font = '600 28px Inter, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('UNDUK NGADAU 2026', W / 2, 68);
-
-    ctx.fillStyle = '#f0f0f0';
-    ctx.font = '900 72px Inter, sans-serif';
-    ctx.fillText('MY TOP 7', W / 2, 152);
-
-    ctx.fillStyle = '#2a2a2a';
-    ctx.font = '500 26px Inter, sans-serif';
-    ctx.fillText('kdmrmedia.com', W / 2, 192);
-
-    // Divider
-    ctx.strokeStyle = '#1e1e1e';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(60, 215);
-    ctx.lineTo(W - 60, 215);
-    ctx.stroke();
-
-    // Load images for placed slots (with CORS fallback)
-    const slotData = await Promise.all(RANKS.map(async r => {
-      const c = slots[r];
-      if (!c) return { rank: r, contestant: null, img: null };
-      let img = null;
-      if (!isPlaceholder(c.imageUrl) && c.imageUrl) {
-        img = await loadImage(c.imageUrl).catch(() => null);
-      }
-      return { rank: r, contestant: c, img };
-    }));
-
-    // Layout constants
-    const PAD = 40;
-    const TOP3_Y = 230;
-    const TOP3_H = 360; // card photo height
-    const TOP3_W = 270;
-    const BOTTOM_Y = TOP3_Y + TOP3_H + 110;
-    const BOTTOM_H = 240;
-    const BOTTOM_W = (W - PAD * 2 - 12 * 3) / 4;
-
-    // Positions for top 3: [2nd, 1st, 3rd]
-    const top3Layout = [
-      { rank: 2, x: PAD,                          w: TOP3_W - 20, h: TOP3_H - 30 },
-      { rank: 1, x: PAD + TOP3_W - 20 + 12,       w: TOP3_W + 40, h: TOP3_H },
-      { rank: 3, x: PAD + TOP3_W - 20 + 12 + TOP3_W + 40 + 12, w: TOP3_W - 20, h: TOP3_H - 30 },
-    ];
-
-    // Draw top 3
-    for (const layout of top3Layout) {
-      const entry = slotData.find(s => s.rank === layout.rank);
-      drawSlotCard(ctx, layout.x, TOP3_Y + (TOP3_H - layout.h), layout.w, layout.h, layout.rank, entry);
-    }
-
-    // Podium platforms under top 3
-    const platformColors = { 1: '#f0a820', 2: '#d4d4d8', 3: '#a87239' };
-    for (const layout of top3Layout) {
-      const col = platformColors[layout.rank] || '#222';
-      const ph = layout.rank === 1 ? 52 : layout.rank === 2 ? 38 : 28;
-      const py = TOP3_Y + TOP3_H + 8;
-      ctx.fillStyle = '#141414';
-      ctx.fillRect(layout.x, py, layout.w, ph);
-      ctx.fillStyle = col;
-      ctx.fillRect(layout.x, py, layout.w, 4);
-      ctx.fillStyle = col;
-      ctx.font = '800 18px Inter, sans-serif';
-      ctx.textAlign = 'center';
-      const label = layout.rank === 1 ? 'CHAMPION' : layout.rank === 2 ? '2ND' : '3RD';
-      ctx.fillText(label, layout.x + layout.w / 2, py + ph / 2 + 6);
-    }
-
-    // Draw bottom 4
-    for (let i = 0; i < 4; i++) {
-      const rank = i + 4;
-      const x = PAD + i * (BOTTOM_W + 12);
-      const entry = slotData.find(s => s.rank === rank);
-      drawSlotCard(ctx, x, BOTTOM_Y, BOTTOM_W, BOTTOM_H, rank, entry);
-    }
-
-    // Footer
-    const footerY = BOTTOM_Y + BOTTOM_H + 48;
-    ctx.fillStyle = '#1a1a1a';
-    ctx.fillRect(0, footerY, W, H - footerY);
-
-    ctx.fillStyle = '#f0a820';
-    ctx.font = '800 22px Inter, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('KDMR MEDIA', W / 2, footerY + 44);
-
-    ctx.fillStyle = '#333';
-    ctx.font = '500 20px Inter, sans-serif';
-    ctx.fillText('The Voice of Borneo\'s Indigenous Peoples', W / 2, footerY + 76);
-
-    ctx.fillStyle = '#222';
-    ctx.font = '500 18px Inter, sans-serif';
-    ctx.fillText('kdmrmedia.com  ·  Unduk Ngadau 2026', W / 2, footerY + 108);
-
-    // Download
     const link = document.createElement('a');
-    link.download = 'my-top7-prediction-unduk-ngadau-2026.png';
+    link.download = 'my-unduk-ngadau-top7.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
   } catch (e) {
     alert('Could not generate image. Please try again.');
     console.error(e);
   } finally {
+    // Restore original src values and revoke blob URLs
+    imgs.forEach(img => {
+      const blobUrl = blobMap.get(img.dataset.originalSrc || '');
+      if (blobUrl) URL.revokeObjectURL(blobUrl);
+    });
+    blobMap.forEach((blobUrl) => URL.revokeObjectURL(blobUrl));
+
     btn.disabled = false;
     btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> Download My Prediction`;
   }
-}
-
-function loadImage(src) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => resolve(img);
-    img.onerror = reject;
-    img.src = src;
-  });
-}
-
-function drawSlotCard(ctx, x, y, w, h, rank, entry) {
-  const c = entry ? entry.contestant : null;
-  const img = entry ? entry.img : null;
-  const radius = 6;
-
-  // Card background
-  ctx.save();
-  roundRect(ctx, x, y, w, h);
-  ctx.fillStyle = c ? '#111' : '#0d0d0d';
-  ctx.fill();
-  ctx.strokeStyle = c ? '#222' : '#181818';
-  ctx.lineWidth = 1.5;
-  ctx.stroke();
-  ctx.restore();
-
-  if (c) {
-    // Photo / initials area
-    const photoH = Math.round(h * 0.72);
-    ctx.save();
-    roundRect(ctx, x, y, w, photoH, radius, 0); // clip top corners only
-    ctx.clip();
-
-    if (img) {
-      // Draw image, cover-fit
-      const srcRatio = img.naturalWidth / img.naturalHeight;
-      const dstRatio = w / photoH;
-      let sw, sh, sx, sy;
-      if (srcRatio > dstRatio) {
-        sh = img.naturalHeight;
-        sw = sh * dstRatio;
-        sy = 0;
-        sx = (img.naturalWidth - sw) / 2;
-      } else {
-        sw = img.naturalWidth;
-        sh = sw / dstRatio;
-        sx = 0;
-        sy = 0; // top-align (face at top)
-      }
-      ctx.drawImage(img, sx, sy, sw, sh, x, y, w, photoH);
-    } else {
-      // Initials
-      const grad = ctx.createLinearGradient(x, y, x, y + photoH);
-      grad.addColorStop(0, '#1a1000');
-      grad.addColorStop(1, '#0f0800');
-      ctx.fillStyle = grad;
-      ctx.fillRect(x, y, w, photoH);
-      ctx.fillStyle = '#f0a820';
-      ctx.font = `900 ${Math.round(w * 0.28)}px Inter, sans-serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(getInitials(c.name), x + w / 2, y + photoH / 2);
-    }
-    ctx.restore();
-
-    // Rank badge
-    const badgeColors = { 1: '#f0a820', 2: '#d4d4d8', 3: '#a87239' };
-    const badgeBg = badgeColors[rank] || '#1e1e1e';
-    const badgeText = badgeColors[rank] ? '#0a0a0a' : '#888';
-    const badgeR = Math.round(w * 0.11);
-    ctx.save();
-    ctx.fillStyle = badgeBg;
-    ctx.beginPath();
-    ctx.arc(x + 14 + badgeR, y + 14 + badgeR, badgeR, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillStyle = badgeText;
-    ctx.font = `900 ${Math.round(badgeR * 1.0)}px Inter, sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(String(rank), x + 14 + badgeR, y + 14 + badgeR);
-    ctx.restore();
-
-    // Name / branch text area
-    const textY = y + photoH + 8;
-    ctx.fillStyle = '#e0e0e0';
-    ctx.font = `700 ${Math.round(w * 0.09)}px Inter, sans-serif`;
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'top';
-    const nameFontSize = Math.round(w * 0.09);
-    const maxNameW = w - 16;
-    let name = c.name;
-    // Truncate if too wide
-    while (ctx.measureText(name).width > maxNameW && name.length > 4) {
-      name = name.slice(0, -1);
-    }
-    if (name !== c.name) name += '…';
-    ctx.fillText(name, x + 8, textY);
-
-    const branchLabel = c.branch === 'KDCA Sabah' ? (c.district || 'Sabah') : c.branch;
-    ctx.fillStyle = '#555';
-    ctx.font = `500 ${Math.round(w * 0.075)}px Inter, sans-serif`;
-    let branch = branchLabel;
-    while (ctx.measureText(branch).width > maxNameW && branch.length > 4) {
-      branch = branch.slice(0, -1);
-    }
-    if (branch !== branchLabel) branch += '…';
-    ctx.fillText(branch, x + 8, textY + nameFontSize + 4);
-  } else {
-    // Empty slot
-    ctx.fillStyle = '#222';
-    ctx.font = `700 ${Math.round(w * 0.09)}px Inter, sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(RANK_LABELS[rank] || String(rank), x + w / 2, y + h / 2 - 10);
-    ctx.fillStyle = '#1a1a1a';
-    ctx.font = `500 ${Math.round(w * 0.08)}px Inter, sans-serif`;
-    ctx.fillText('Empty', x + w / 2, y + h / 2 + 16);
-  }
-}
-
-function roundRect(ctx, x, y, w, h, trRadius = 6, brRadius = 6) {
-  const r = trRadius;
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.lineTo(x + w - r, y);
-  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-  ctx.lineTo(x + w, y + h - brRadius);
-  ctx.quadraticCurveTo(x + w, y + h, x + w - brRadius, y + h);
-  ctx.lineTo(x + brRadius, y + h);
-  ctx.quadraticCurveTo(x, y + h, x, y + h - brRadius);
-  ctx.lineTo(x, y + r);
-  ctx.quadraticCurveTo(x, y, x + r, y);
-  ctx.closePath();
 }
 
 // ─── START ───────────────────────────────────────────────────────────────────
