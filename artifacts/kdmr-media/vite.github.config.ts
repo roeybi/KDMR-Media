@@ -26,6 +26,7 @@ export default defineConfig({
         mrk:            path.resolve(import.meta.dirname, "mrk/index.html"),
         sugandoi:       path.resolve(import.meta.dirname, "sugandoi/index.html"),
         peninsular2026: path.resolve(import.meta.dirname, "peninsular-2026.html"),
+        predict:        path.resolve(import.meta.dirname, "predict.html"),
       },
     },
   },
