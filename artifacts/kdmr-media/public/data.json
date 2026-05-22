@@ -1,55 +1,6 @@
 {
   "winners": [
     {
-      "id": "win-001",
-      "name": "Atitih Yati Robert",
-      "branch": "KDCA Sabah",
-      "award": "Unduk Ngadau",
-      "year": 2025,
-      "tribe": "Dusun",
-      "district": "Tamparuli",
-      "origin": "KDCA Tamparuli",
-      "accentColor": "#f0a820",
-      "badge": "65th Unduk Ngadau — State Champion",
-      "heritage": {
-        "group": "Dusun Tamparuli",
-        "costume": "Sinuangga — Penampang-style adaptation in black and gold, adorned with hand-beaded himpogot sash and manik breastplate, representing the highland Dusun tradition of Tamparuli",
-        "language": "Kadazan-Dusun"
-      },
-      "bio": "Atitih Yati Robert was crowned the 65th Unduk Ngadau Kaamatan 2025 at Hongkod Koisaan, Penampang, triumphing over 51 finalists on 31 May 2025. A 26-year-old Bachelor of Education (Malay Language) graduate from Universiti Putra Malaysia, her victory was especially poignant — it was her second attempt, having first competed representing Kota Marudu eight years earlier. Her prize included RM17,500 cash, a RM35,000 NBUC scholarship, and a trip to South Korea.",
-      "achievements": [
-        "65th Unduk Ngadau Kaamatan 2025 — State Champion",
-        "RM35,000 NBUC Scholarship Recipient",
-        "People's Choice — 51-Finalist Grand Final"
-      ],
-      "votes": 512,
-      "imageUrl": "/images/Sample UN Winner.png"
-    },
-    {
-      "id": "win-002",
-      "name": "Vanessa Gunsanad",
-      "branch": "KDCA Sabah",
-      "award": "Unduk Ngadau",
-      "year": 2024,
-      "tribe": "Dusun",
-      "district": "Tambunan",
-      "origin": "KDCA Tambunan",
-      "accentColor": "#c084fc",
-      "heritage": {
-        "group": "Dusun Tambunan",
-        "costume": "Souduh Dusun in deep indigo and silver, featuring hand-stitched linangkit panels and togkol headpiece",
-        "language": "Dusun Tambunan dialect"
-      },
-      "bio": "Vanessa's mastery of Dusun oral poetry (tontolian) and her intricate knowledge of highland Dusun weaving traditions set her apart in the 2024 competition, making her the first Tambunan-origin winner in a decade.",
-      "achievements": [
-        "KDCA Sabah Unduk Ngadau 2024",
-        "Tontolian Oral Poetry Award",
-        "Highland Heritage Ambassador"
-      ],
-      "votes": 298,
-      "imageUrl": "/images/Sample UN Winner.png"
-    },
-    {
       "id": "win-003",
       "name": "Cynthia Rambilin",
       "branch": "KDCA Sabah",
@@ -1053,7 +1004,7 @@
     },
     {
       "id": "win-035",
-      "name": "Christebelle Masius",
+      "name": "Christebell Masius",
       "branch": "KDCA Sabah",
       "award": "Unduk Ngadau",
       "year": 2026,
@@ -2105,30 +2056,6 @@
       "achievements": [
         "Unduk Ngadau Kaamatan Telupid 2026 — District Champion",
         "Telupid Representative — 66th Unduk Ngadau State Finals"
-      ],
-      "votes": 0,
-      "imageUrl": "/images/placeholder-winner.png"
-    },
-    {
-      "id": "win-063",
-      "name": "Dovena Jessie Isabell Daniel",
-      "branch": "KDCA Sabah",
-      "award": "Unduk Ngadau",
-      "year": 2026,
-      "tribe": "Kadazan Dusun",
-      "district": "Sungai Manila",
-      "origin": "KDCA Sungai Manila",
-      "accentColor": "#f0a820",
-      "badge": "District Champion Sungai Manila 2026",
-      "heritage": {
-        "group": "Kadazan Dusun (Sungai Manila)",
-        "costume": "Traditional Sinuangga' ceremonial attire representing the Sungai Manila district, adorned with hand-crafted manik beadwork and the ornate silver songkop headdress",
-        "language": "Kadazan-Dusun"
-      },
-      "bio": "Dovena Jessie Isabell Daniel was crowned Unduk Ngadau Kaamatan Sungai Manila 2026, crowned at a celebratory event in the heart of Sabah. Representing the Kadazan Dusun cultural heritage of Sungai Manila, she will advance to the 66th Unduk Ngadau State Finals at Hongkod Koisaan, Penampang on 31 May 2026.",
-      "achievements": [
-        "Unduk Ngadau Kaamatan Sungai Manila 2026 — District Champion",
-        "Sungai Manila Representative — 66th Unduk Ngadau State Finals"
       ],
       "votes": 0,
       "imageUrl": "/images/placeholder-winner.png"
