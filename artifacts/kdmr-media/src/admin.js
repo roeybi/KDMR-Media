@@ -98,8 +98,10 @@ function renderQueue() {
         <td>${row.uploaded_by || '-'}</td>
         <td style="font-size:0.75rem;color:#888;">${date}</td>
         <td><span class="status-badge status-${row.status || 'pending'}">${row.status || 'pending'}</span></td>
-        <td>
+        <td style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <button class="copy-btn" data-url="${thumbUrl}" onclick="copyUrl(this)">Copy URL</button>
+          ${row.status !== 'approved' ? `<button class="action-btn approve-btn" onclick="updateStatus('${row.id}','approved',this)">✓ Approve</button>` : ''}
+          ${row.status !== 'rejected' ? `<button class="action-btn reject-btn" onclick="updateStatus('${row.id}','rejected',this)">✗ Reject</button>` : ''}
         </td>
       </tr>
     `;
@@ -124,7 +126,6 @@ window.copyUrl = async function(btn) {
     btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copy URL'; btn.classList.remove('copied'); }, 2000);
   } catch {
-    // Fallback
     const ta = document.createElement('textarea');
     ta.value = url;
     document.body.appendChild(ta);
@@ -133,6 +134,39 @@ window.copyUrl = async function(btn) {
     document.body.removeChild(ta);
     btn.textContent = 'Copied!';
     setTimeout(() => btn.textContent = 'Copy URL', 2000);
+  }
+};
+
+window.updateStatus = async function(id, newStatus, btn) {
+  const originalText = btn.textContent;
+  btn.textContent = '...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal',
+      },
+      body: JSON.stringify({ status: newStatus }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || `Update failed (${res.status})`);
+    }
+
+    // Update local data and re-render
+    const rowIndex = allRows.findIndex(r => r.id === id);
+    if (rowIndex !== -1) allRows[rowIndex].status = newStatus;
+    renderQueue();
+  } catch (err) {
+    btn.textContent = originalText;
+    btn.disabled = false;
+    alert(`Could not update status: ${err.message}`);
   }
 };
 
