@@ -489,6 +489,7 @@ export function mountLocatorHero(section) {
                 <clipPath id="cpSB42"><circle cx="321.8" cy="103.8" r="3.5"/></clipPath>
                 <clipPath id="cpSB43"><circle cx="312.8" cy="103.2" r="3.5"/></clipPath>
                 <clipPath id="cpSB44"><circle cx="308.2" cy="95.8" r="3.5"/></clipPath>
+                <clipPath id="cpSB45"><circle cx="292" cy="82" r="3.5"/></clipPath>
             </defs>
             <image href="/map-sabah.svg" x="244" y="32" width="66" height="76" preserveAspectRatio="none"/>
             <!-- compass -->
@@ -889,6 +890,16 @@ export function mountLocatorHero(section) {
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="placeholder-winner_nobg.png">
+                <circle cx="281" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
+                <line x1="281" y1="72" x2="292" y2="82" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
+                <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
+                <g class="un-node-body">
+                  <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
+                  <image href="/images/placeholder-winner_nobg.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
+                </g>
+              </g>
 <g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="placeholder-winner_nobg.png">
                 <circle cx="292" cy="80" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="292" y1="80" x2="311.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
@@ -982,7 +993,7 @@ export function mountLocatorHero(section) {
           <span class="ul-branch-chip">Melaka</span>
           <span class="ul-branch-chip">Johor</span>
           <span class="ul-branch-chip">Sarawak</span>
-          <span class="ul-branch-chip">45 Sabah Districts</span>
+          <span class="ul-branch-chip">46 Sabah Districts</span>
         </div>
       </div>
     </div>
