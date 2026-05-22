@@ -132,9 +132,11 @@ async function uploadPhoto() {
       throw new Error(err.message || `Upload sign failed (${signRes.status})`);
     }
 
-    const { data: signData } = await signRes.json();
-    const signedUrl = signData?.signedURL || signData?.signedUrl;
-    if (!signedUrl) throw new Error('No signed URL returned from Supabase');
+    const signData = await signRes.json();
+    // Supabase returns { url: "/object/upload/sign/...", token: "..." }
+    const relativeUrl = signData?.url;
+    if (!relativeUrl) throw new Error('No signed URL returned from Supabase');
+    const signedUrl = `${SUPABASE_URL}/storage/v1${relativeUrl}`;
 
     setProgress(40, 'Uploading file...');
 
