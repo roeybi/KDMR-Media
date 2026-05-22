@@ -971,7 +971,7 @@ export function mountLocatorHero(section) {
           <span>Hari Kaamatan 2026</span>
         </div>
         <h1 class="ul-title">Unduk<br><span>Ngadau</span><br>2026</h1>
-        <div class="ul-sub">KDM Diaspora · 51 Branches Nationwide</div>
+        <div class="ul-sub">KDMR Diaspora · 53 Branches Nationwide</div>
         <div class="ul-cd-label-main">⏱ Countdown to Kaamatan</div>
         <div class="ul-countdown">
           <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdD">--</div><div class="ul-cd-label">Days</div></div>
@@ -993,7 +993,7 @@ export function mountLocatorHero(section) {
           <span class="ul-branch-chip">Melaka</span>
           <span class="ul-branch-chip">Johor</span>
           <span class="ul-branch-chip">Sarawak</span>
-          <span class="ul-branch-chip">46 Sabah Districts</span>
+          <span class="ul-branch-chip">53 Sabah Districts</span>
         </div>
       </div>
     </div>
