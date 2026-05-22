@@ -48,6 +48,8 @@ let _pollTimer     = null;
 let _chatMessages  = [];
 let _chatOnline    = 1;
 let _pendingAction = null; // { type:'vote', candidateId } | { type:'chat', text }
+let _unCandidates  = [];   // all 2026 UN winners with liveVotes
+let _filterState   = { search: '', sort: 'votes' };
 
 // ────────────────────────────────────────────────
 //  UTILITIES
@@ -189,14 +191,13 @@ async function loadInitialChat() {
 }
 
 async function syncVoteCounts() {
-  if (!API_CONFIG.ENABLED || !_liveEvent?.candidates?.length) return;
+  if (!API_CONFIG.ENABLED || !_unCandidates.length) return;
   const rows = await sbFetch('live_votes', '?select=candidate_id');
   if (!rows) return;
   const counts = {};
   rows.forEach(r => { counts[r.candidate_id] = (counts[r.candidate_id] || 0) + 1; });
-  // Always overwrite from Supabase — including zero — so fake numbers never survive
-  _liveEvent.candidates.forEach(c => { c.liveVotes = counts[c.id] || 0; });
-  renderLeaderboard(_liveEvent.candidates);
+  _unCandidates.forEach(c => { c.liveVotes = counts[c.id] || 0; });
+  renderLeaderboard();
   updateRankingTicker();
 }
 
@@ -318,8 +319,11 @@ async function loadData() {
   if (_data) return _data;
   const res = await fetch(DATA_URL);
   if (!res.ok) throw new Error('Failed to load data.json');
-  _data       = await res.json();
-  _liveEvent  = _data.liveEvent || null;
+  _data         = await res.json();
+  _liveEvent    = _data.liveEvent || null;
+  _unCandidates = (_data.winners || [])
+    .filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
+    .map(w => ({ ...w, category: 'UN', liveVotes: 0 }));
   return _data;
 }
 
@@ -579,124 +583,150 @@ function initChat() {
 //  BLOCK 4 — LIVE LEADERBOARD ENGINE
 // ────────────────────────────────────────────────
 
-function renderLeaderboard(candidates) {
+function renderLbStats() {
+  const el = document.getElementById('lbStats');
+  if (!el || !_unCandidates.length) return;
+  const branches = new Set(_unCandidates.map(c => c.branch)).size;
+  const areas    = new Set(_unCandidates.map(c => c.district || c.branch)).size;
+  const stats = [
+    { value: _unCandidates.length, label: 'Contestants' },
+    { value: branches,             label: 'Branches'    },
+    { value: areas,                label: 'Areas'       },
+    { value: '2026',               label: 'Year', gold: true },
+  ];
+  el.innerHTML = stats.map(s => `
+    <div style="background:#0a0a0a;border:1px solid #1a1a1a;border-radius:3px;padding:14px 10px;text-align:center;">
+      <div style="font-size:1.4rem;font-weight:900;color:${s.gold ? '#f0a820' : '#f0f0f0'};letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">${s.value}</div>
+      <div style="font-size:0.48rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#444;margin-top:5px;">${s.label}</div>
+    </div>`).join('');
+}
+
+function renderLeaderboard() {
   const list = document.getElementById('leaderboardList');
   if (!list) return;
 
-  // Sort all candidates by liveVotes descending (UN first within ties by category order)
-  const CAT_ORDER = { UN: 0, MRK: 1, SG: 2 };
-  const sorted = [...(candidates || [])]
-    .sort((a, b) =>
-      (b.liveVotes || 0) - (a.liveVotes || 0) ||
-      (CAT_ORDER[a.category] ?? 9) - (CAT_ORDER[b.category] ?? 9)
-    );
+  const { search, sort } = _filterState;
+  const q = search.trim().toLowerCase();
 
-  // No candidates yet — show Coming Soon state
-  if (!sorted.length) {
-    list.innerHTML = `
-      <div style="padding:48px 24px;text-align:center;border:1px solid #1a1a1a;border-radius:2px;background:#0a0a0a;">
-        <div style="font-size:2rem;margin-bottom:12px;">🏆</div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;margin-bottom:10px;">Participant List</div>
-        <div style="font-size:1.05rem;font-weight:800;color:#f0f0f0;margin-bottom:8px;">Coming Soon</div>
-        <div style="font-size:0.75rem;color:#444;line-height:1.6;max-width:280px;margin:0 auto;">
-          Official 2026 State Final candidates will be announced here once confirmed.<br>
-          <span style="color:#f0a820;">Check back closer to 30 May.</span>
-        </div>
-      </div>`;
+  let visible = q
+    ? _unCandidates.filter(c =>
+        c.name.toLowerCase().includes(q) ||
+        (c.district || '').toLowerCase().includes(q) ||
+        c.branch.toLowerCase().includes(q))
+    : [..._unCandidates];
+
+  if (sort === 'name') {
+    visible.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sort === 'district') {
+    visible.sort((a, b) => (a.district || a.branch).localeCompare(b.district || b.branch));
+  } else if (sort === 'default') {
+    // original data.json order — already preserved in _unCandidates
+  } else {
+    // 'votes' — most supported first, tie-break by name
+    visible.sort((a, b) => (b.liveVotes || 0) - (a.liveVotes || 0) || a.name.localeCompare(b.name));
+  }
+
+  if (!visible.length) {
+    list.innerHTML = `<div style="padding:32px;text-align:center;color:#444;font-size:0.8rem;">No contestants found.</div>`;
     return;
   }
-  const maxVotes = Math.max(...sorted.map(c => c.liveVotes || 0), 1);
-  const baseUrl  = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-  list.innerHTML = sorted.map((c, i) => {
-    const acc    = CAT_ACCENT[c.category] || '#f0a820';
+  const maxVotes = Math.max(...visible.map(c => c.liveVotes || 0), 1);
+  const baseUrl  = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const acc      = '#f0a820';
+
+  list.innerHTML = visible.map((c, i) => {
     const badge  = RANK_BADGE[i] || { label: ordinal(i + 1), bg: '#1a1a1a', color: '#555' };
     const voted  = hasVoted(c.id);
     const pct    = ((c.liveVotes || 0) / maxVotes * 100).toFixed(1);
-    const imgUrl = baseUrl + (c.imageUrl || '/images/placeholder-winner.png');
+    const imgUrl = c.imageUrl ? baseUrl + c.imageUrl : null;
 
     return `
       <div class="lb-row ${voted ? 'lb-voted' : ''}" id="lb-row-${c.id}">
-
-        <!-- Rank badge -->
         <div style="flex-shrink:0;width:34px;text-align:center;">
           <span style="display:inline-block;background:${badge.bg};color:${badge.color};font-size:0.58rem;font-weight:900;letter-spacing:0.04em;padding:3px 6px;border-radius:2px;white-space:nowrap;">${badge.label}</span>
         </div>
-
-        <!-- Portrait thumbnail -->
         <div style="flex-shrink:0;width:44px;height:60px;border-radius:2px;overflow:hidden;background:#0a0a0a;border:1px solid #1a1a1a;">
-          <img src="${imgUrl}" alt="${c.name}" loading="lazy"
-            style="width:100%;height:100%;object-fit:cover;object-position:top center;"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:${acc}11;">
-            <span style="font-size:0.75rem;font-weight:900;color:${acc};">${initials(c.name)}</span>
+          ${imgUrl ? `<img src="${imgUrl}" alt="${c.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />` : ''}
+          <div style="display:${imgUrl ? 'none' : 'flex'};width:100%;height:100%;align-items:center;justify-content:center;background:${acc}11;">
+            <span style="font-size:0.72rem;font-weight:900;color:${acc};">${initials(c.name)}</span>
           </div>
         </div>
-
-        <!-- Info -->
         <div style="flex:1;min-width:0;">
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px;">
-            <span style="font-size:0.85rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px;">${c.name}</span>
-            <span style="font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:${acc}15;color:${acc};border:1px solid ${acc}30;padding:1px 6px;border-radius:1px;flex-shrink:0;">${CAT_LABEL[c.category] || c.category}</span>
+            <span style="font-size:0.85rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;">${c.name}</span>
+            <span style="font-size:0.48rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:${acc}15;color:${acc};border:1px solid ${acc}30;padding:1px 6px;border-radius:1px;flex-shrink:0;">Unduk Ngadau</span>
           </div>
-          <div style="font-size:0.62rem;color:#555;margin-bottom:7px;">${c.branch} · ${c.district}</div>
+          <div style="font-size:0.62rem;color:#555;margin-bottom:7px;">${c.branch} · ${c.district || ''}</div>
           <div style="display:flex;align-items:center;gap:8px;">
             <div class="vote-bar" style="flex:1;"><div class="vote-bar-fill" id="lb-bar-${c.id}" style="width:${pct}%;background:${acc};"></div></div>
             <span id="lb-votes-${c.id}" style="font-size:0.65rem;font-weight:700;color:${acc};font-variant-numeric:tabular-nums;min-width:40px;text-align:right;">${(c.liveVotes || 0).toLocaleString()}</span>
           </div>
         </div>
-
-        <!-- Cast Vote CTA -->
         <button class="cast-vote-btn vote-btn-live" id="lb-btn-${c.id}" data-id="${c.id}"
           style="background:${voted ? 'rgba(74,222,128,0.08)' : acc + '18'};color:${voted ? '#4ade80' : acc};border:1px solid ${voted ? 'rgba(74,222,128,0.3)' : acc + '35'};"
           ${voted ? 'disabled' : ''}>
           ${voted ? '✓ Voted' : 'Cast Vote'}
         </button>
-
-      </div>
-    `;
+      </div>`;
   }).join('');
 
-  // Single delegated click handler
-  list.addEventListener('click', e => {
-    const btn = e.target.closest('.vote-btn-live');
-    if (!btn || btn.disabled) return;
-    handleVote(btn.dataset.id);
-  });
-
-  // Update timestamp
   const updEl = document.getElementById('voteUpdatedAt');
-  if (updEl) {
-    updEl.textContent = `Updated ${new Date().toLocaleTimeString('en-MY', { hour: '2-digit', minute: '2-digit', hour12: false })}`;
+  if (updEl) updEl.textContent = `Updated ${new Date().toLocaleTimeString('en-MY', { hour: '2-digit', minute: '2-digit', hour12: false })}`;
+}
+
+function initLeaderboard() {
+  const list    = document.getElementById('leaderboardList');
+  const search  = document.getElementById('lbSearch');
+  const sortSel = document.getElementById('lbSort');
+
+  if (list) {
+    list.addEventListener('click', e => {
+      const btn = e.target.closest('.vote-btn-live');
+      if (!btn || btn.disabled) return;
+      handleVote(btn.dataset.id);
+    });
+  }
+  if (search) {
+    search.addEventListener('input', () => {
+      _filterState.search = search.value;
+      renderLeaderboard();
+    });
+  }
+  if (sortSel) {
+    sortSel.addEventListener('change', () => {
+      _filterState.sort = sortSel.value;
+      renderLeaderboard();
+    });
   }
 }
 
 function refreshLeaderboardRow(candidateId) {
-  const c = _liveEvent?.candidates?.find(x => x.id === candidateId);
+  const c = _unCandidates.find(x => x.id === candidateId);
   if (!c) return;
 
-  const acc = CAT_ACCENT[c.category] || '#f0a820';
-  const all = _liveEvent?.candidates || [];
-  const max = Math.max(...all.map(x => x.liveVotes || 0), 1);
+  const acc = '#f0a820';
+  const max = Math.max(..._unCandidates.map(x => x.liveVotes || 0), 1);
 
-  // Update vote bar + count
-  const bar     = document.getElementById(`lb-bar-${candidateId}`);
-  const voteEl  = document.getElementById(`lb-votes-${candidateId}`);
-  const btn     = document.getElementById(`lb-btn-${candidateId}`);
-  const row     = document.getElementById(`lb-row-${candidateId}`);
+  const bar    = document.getElementById(`lb-bar-${candidateId}`);
+  const voteEl = document.getElementById(`lb-votes-${candidateId}`);
+  const btn    = document.getElementById(`lb-btn-${candidateId}`);
+  const row    = document.getElementById(`lb-row-${candidateId}`);
 
   if (bar)    bar.style.width = ((c.liveVotes || 0) / max * 100).toFixed(1) + '%';
   if (voteEl) { voteEl.textContent = (c.liveVotes || 0).toLocaleString(); voteEl.classList.add('vote-pop'); setTimeout(() => voteEl.classList.remove('vote-pop'), 500); }
   if (btn)    { btn.innerHTML = '✓ Voted'; btn.style.cssText = `background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.3);`; btn.disabled = true; }
   if (row)    row.classList.add('lb-voted');
 
-  // Recalculate all bars in leaderboard after vote
-  all.forEach(x => {
+  // Recalculate all visible bars
+  _unCandidates.forEach(x => {
     const b = document.getElementById(`lb-bar-${x.id}`);
     if (b) b.style.width = ((x.liveVotes || 0) / max * 100).toFixed(1) + '%';
   });
 
-  // Update ranking ticker
+  // Re-sort leaderboard if sorted by votes
+  if (_filterState.sort === 'votes') setTimeout(renderLeaderboard, 600);
+
   updateRankingTicker();
 }
 
@@ -715,7 +745,7 @@ async function handleVote(candidateId) {
     return;
   }
 
-  const c = _liveEvent?.candidates?.find(x => x.id === candidateId);
+  const c = _unCandidates.find(x => x.id === candidateId);
   if (!c) return;
 
   // Disable the button immediately to prevent double-clicks
@@ -726,7 +756,7 @@ async function handleVote(candidateId) {
   if (API_CONFIG.ENABLED) {
     const result = await sbInsert('live_votes', {
       candidate_id: candidateId, candidate_name: c.name,
-      category: c.category, session_token: _session?.token,
+      category: 'UN', session_token: _session?.token,
       voted_at: new Date().toISOString(),
     });
     if (!result.ok) {
@@ -801,21 +831,23 @@ function startPolling() {
     // 2. Load event data
     await loadData();
 
+    // 3. Title overlay
     if (_liveEvent) {
-      // 3. Title overlay
       const titleEl = document.getElementById('liveTitle');
       if (titleEl) titleEl.textContent = _liveEvent.title;
-
-      // 4. Block 1 — stream player or countdown
-      initStream(_liveEvent.streamUrl);
-
-      // 5. Block 2 — dual ticker
-      initRankingTicker(_liveEvent.candidates || []);
-      initActivityTicker();
-
-      // 6. Block 4 — leaderboard (render before chat so voting works immediately)
-      renderLeaderboard(_liveEvent.candidates || []);
     }
+
+    // 4. Block 1 — stream player or countdown
+    initStream(_liveEvent?.streamUrl);
+
+    // 5. Block 2 — dual ticker (UN candidates drive the ranking ticker)
+    initRankingTicker(_unCandidates);
+    initActivityTicker();
+
+    // 6. Block 4 — leaderboard: stats + all 52 UN candidates
+    initLeaderboard();
+    renderLbStats();
+    renderLeaderboard();
 
     // 7. Block 3 — chat input listeners + load real messages
     initChat();
