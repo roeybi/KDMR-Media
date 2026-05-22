@@ -31,6 +31,12 @@
     .copy-btn { background:#1a1a1a; border:1px solid #333; color:#aaa; padding:4px 10px; border-radius:2px; font-size:0.72rem; cursor:pointer; transition:all 0.2s; }
     .copy-btn:hover { border-color:#f0a820; color:#f0a820; }
     .copy-btn.copied { border-color:#22c55e; color:#22c55e; }
+    .action-btn { border:none; padding:4px 10px; border-radius:2px; font-size:0.72rem; cursor:pointer; font-weight:600; transition:all 0.2s; }
+    .action-btn:disabled { opacity:0.5; cursor:not-allowed; }
+    .approve-btn { background:#16a34a; color:#fff; }
+    .approve-btn:hover:not(:disabled) { background:#15803d; }
+    .reject-btn { background:#991b1b; color:#fff; }
+    .reject-btn:hover:not(:disabled) { background:#7f1d1d; }
     .refresh-btn { background:#1a1a1a; border:1px solid #333; color:#aaa; padding:8px 16px; border-radius:2px; font-size:0.8rem; cursor:pointer; }
     .refresh-btn:hover { border-color:#f0a820; color:#f0a820; }
     .empty-state { text-align:center; padding:60px 24px; color:#555; }
