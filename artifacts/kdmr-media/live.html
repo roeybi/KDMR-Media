@@ -141,43 +141,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
             <img src="/mark-color.svg" alt="KDMR" style="width:28px;height:28px;display:block;flex-shrink:0;" />
             <div>
-              <div style="font-size:0.5rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;">Cultural Gate Pass · PDPA 2010</div>
-              <div style="font-size:0.72rem;font-weight:700;color:#888;">Hari Kaamatan 2026 State Final</div>
+              <div style="font-size:0.5rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#f0a820;" data-i18n="gate_pdpa_label">Cultural Gate Pass · PDPA 2010</div>
+              <div style="font-size:0.72rem;font-weight:700;color:#888;" data-i18n="gate_state_final">Hari Kaamatan 2026 State Final</div>
             </div>
           </div>
-          <h2 id="gateTitle" style="font-size:1.05rem;font-weight:900;color:#f0f0f0;margin:0 0 7px;letter-spacing:-0.02em;line-height:1.3;">Join the Arena — unlock votes &amp; live chat</h2>
-          <p id="gateHint" style="font-size:0.73rem;color:#555;margin:0;line-height:1.55;">Register once to cast real-time votes for every category and chat live with the community.</p>
+          <h2 id="gateTitle" style="font-size:1.05rem;font-weight:900;color:#f0f0f0;margin:0 0 7px;letter-spacing:-0.02em;line-height:1.3;" data-i18n="gate_title">Join the Arena — unlock votes &amp; live chat</h2>
+          <p id="gateHint" style="font-size:0.73rem;color:#555;margin:0;line-height:1.55;" data-i18n="gate_hint">Register once to cast real-time votes for every category and chat live with the community.</p>
         </div>
 
         <form id="gateForm" style="display:flex;flex-direction:column;gap:11px;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div><label class="gate-label">Full Name</label><input type="text" name="fullName" class="gate-input" placeholder="e.g. Sarah Binti Majin" required autocomplete="name"/></div>
-            <div><label class="gate-label">Username · Public name</label><input type="text" name="username" class="gate-input" placeholder="sarah_dusun_88" required maxlength="20" autocomplete="username"/></div>
+            <div><label class="gate-label" data-i18n="gate_label_name">Full Name</label><input type="text" name="fullName" class="gate-input" data-i18n="gate_placeholder_name" placeholder="e.g. Sarah Binti Majin" required autocomplete="name"/></div>
+            <div><label class="gate-label" data-i18n="gate_label_username">Username · Public name</label><input type="text" name="username" class="gate-input" data-i18n="gate_placeholder_username" placeholder="sarah_dusun_88" required maxlength="20" autocomplete="username"/></div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div><label class="gate-label">Email</label><input type="email" name="email" class="gate-input" placeholder="your@email.com" required autocomplete="email"/></div>
-            <div><label class="gate-label">Phone Number</label><input type="tel" name="phone" class="gate-input" placeholder="+60 12-345 6789" required autocomplete="tel"/></div>
+            <div><label class="gate-label" data-i18n="gate_label_email">Email</label><input type="email" name="email" class="gate-input" data-i18n="gate_placeholder_email" placeholder="your@email.com" required autocomplete="email"/></div>
+            <div><label class="gate-label" data-i18n="gate_label_phone">Phone Number</label><input type="tel" name="phone" class="gate-input" data-i18n="gate_placeholder_phone" placeholder="+60 12-345 6789" required autocomplete="tel"/></div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
             <div>
-              <label class="gate-label">Ethnicity</label>
+              <label class="gate-label" data-i18n="gate_label_ethnicity">Ethnicity</label>
               <select name="ethnicity" class="gate-input" style="cursor:pointer;" required>
-                <option value="" disabled selected>Select tribe</option>
-                <option value="Kadazan">Kadazan</option>
-                <option value="Dusun">Dusun</option>
-                <option value="Murut">Murut</option>
-                <option value="Rungus">Rungus</option>
-                <option value="Other">Other / Mixed</option>
+                <option value="" disabled selected data-i18n="gate_select_tribe">Select tribe</option>
+                <option value="Kadazan" data-i18n="tribe_kadazan">Kadazan</option>
+                <option value="Dusun" data-i18n="tribe_dusun">Dusun</option>
+                <option value="Murut" data-i18n="tribe_murut">Murut</option>
+                <option value="Rungus" data-i18n="tribe_rungus">Rungus</option>
+                <option value="Other" data-i18n="tribe_other">Other / Mixed</option>
               </select>
             </div>
-            <div><label class="gate-label">Origin / District</label><input type="text" name="origin" class="gate-input" placeholder="e.g. Penampang, KK" required/></div>
+            <div><label class="gate-label" data-i18n="gate_label_origin">Origin / District</label><input type="text" name="origin" class="gate-input" data-i18n="gate_placeholder_origin" placeholder="e.g. Penampang, KK" required/></div>
           </div>
           <label style="display:flex;align-items:flex-start;gap:9px;cursor:pointer;">
             <input type="checkbox" name="consent" class="gate-checkbox" required/>
-            <span style="font-size:0.68rem;color:#555;line-height:1.55;margin-top:1px;">I consent to KDMR Media collecting my profile data under Malaysia's PDPA 2010. Data retained 30 days post-event, then anonymised.</span>
+            <span style="font-size:0.68rem;color:#555;line-height:1.55;margin-top:1px;" data-i18n="gate_consent_text">I consent to KDMR Media collecting my profile data under Malaysia's PDPA 2010. Data retained 30 days post-event, then anonymised.</span>
           </label>
-          <p style="font-size:0.68rem;color:#444;text-align:center;line-height:1.6;margin:10px 0 4px;">Disclaimer: The KDMR Media popular vote has no bearing on official Hongkod Koisaan scoring.</p>
-          <button type="submit" class="gate-submit" id="gateSubmitBtn">Enter the Live Arena →</button>
+          <p style="font-size:0.68rem;color:#444;text-align:center;line-height:1.6;margin:10px 0 4px;" data-i18n="gate_disclaimer">Disclaimer: The KDMR Media popular vote has no bearing on official Hongkod Koisaan scoring.</p>
+          <button type="submit" class="gate-submit" id="gateSubmitBtn" data-i18n="gate_button_submit">Enter the Live Arena →</button>
           <p id="gateError" style="font-size:0.7rem;color:#ff6b6b;text-align:center;margin:2px 0 0;display:none;"></p>
         </form>
       </div>
@@ -256,22 +256,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="max-width:800px;margin:0 auto;padding:20px 14px 8px;">
       <div style="display:flex;align-items:center;gap:7px;margin-bottom:10px;">
         <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px 2px rgba(74,222,128,0.3);"></span>
-        <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f0f0f0;">Global Chat</span>
-        <span id="chatOnlineCount" style="font-size:0.5rem;color:#444;margin-left:auto;">1 online</span>
+        <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f0f0f0;" data-i18n="chat_title">Global Chat</span>
+        <span id="chatOnlineCount" style="font-size:0.5rem;color:#444;margin-left:auto;" data-i18n="chat_online_count">1 online</span>
       </div>
       <!-- Chat feed -->
       <div id="chatFeed" style="background:#0d0d0d;border:1px solid #1a1a1a;border-radius:3px 3px 0 0;height:320px;overflow-y:auto;scroll-behavior:smooth;">
         <div style="padding:14px;text-align:center;">
-          <span style="font-size:0.62rem;color:#555;">Welcome to the Live Arena. Be respectful and celebrate our shared heritage.</span>
+          <span style="font-size:0.62rem;color:#555;" data-i18n="chat_welcome_msg">Welcome to the Live Arena. Be respectful and celebrate our shared heritage.</span>
         </div>
       </div>
       <!-- Inline input bar — always enabled, intercepted if unauthenticated -->
       <div style="display:flex;background:#0a0a0a;border:1px solid #1a1a1a;border-top:none;border-radius:0 0 3px 3px;">
-        <input id="chatInput" type="text" maxlength="140" placeholder="Type comment here…"
+        <input id="chatInput" type="text" maxlength="140" data-i18n="chat_input_placeholder" placeholder="Type comment here…"
           style="flex:1;background:transparent;border:none;outline:none;padding:11px 14px;font-size:0.82rem;color:#f0f0f0;font-family:Inter,sans-serif;" />
         <button id="chatSendBtn"
           style="background:#f0a820;color:#0a0a0a;border:none;font-size:0.7rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0 20px;cursor:pointer;font-family:Inter,sans-serif;border-radius:0 0 3px 0;transition:background 0.15s;"
-          onmouseover="this.style.background='#ffc13a'" onmouseout="this.style.background='#f0a820'">Send</button>
+          onmouseover="this.style.background='#ffc13a'" onmouseout="this.style.background='#f0a820'" data-i18n="button_send">Send</button>
       </div>
     </div>
 
@@ -282,8 +282,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Section header -->
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
         <div>
-          <div style="font-size:0.5rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;margin-bottom:3px;">Rankings</div>
-          <div style="font-size:1rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.02em;">Unduk Ngadau 2026</div>
+          <div style="font-size:0.5rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;margin-bottom:3px;" data-i18n="label_rankings">Rankings</div>
+          <div style="font-size:1rem;font-weight:900;color:#f0f0f0;letter-spacing:-0.02em;" data-i18n="lb_title">Unduk Ngadau 2026</div>
         </div>
         <div style="flex:1;height:1px;background:linear-gradient(90deg,#1e1e1e,transparent);"></div>
         <span id="voteUpdatedAt" style="font-size:0.5rem;color:#333;letter-spacing:0.06em;text-transform:uppercase;"></span>
@@ -296,20 +296,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
         <div style="flex:1;min-width:200px;position:relative;">
           <svg style="position:absolute;left:11px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:0.35;" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input id="lbSearch" type="search" placeholder="Search contestant..."
+          <input id="lbSearch" type="search" data-i18n="lb_search_placeholder" placeholder="Search contestant..."
             style="width:100%;background:#0f0f0f;border:1px solid #222;color:#f0f0f0;font-size:0.78rem;padding:9px 12px 9px 32px;border-radius:3px;outline:none;font-family:Inter,sans-serif;box-sizing:border-box;" />
         </div>
         <select id="lbSort"
           style="background:#0f0f0f;border:1px solid #222;color:#f0f0f0;font-size:0.75rem;padding:9px 32px 9px 12px;border-radius:3px;outline:none;font-family:Inter,sans-serif;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23666'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 10px center;flex-shrink:0;">
-          <option value="votes">Sort: Highest Vote</option>
-          <option value="default">Sort: Default</option>
-          <option value="name">Sort: Name A–Z</option>
-          <option value="district">Sort: District</option>
+          <option value="votes" data-i18n="sort_highest_vote">Sort: Highest Vote</option>
+          <option value="default" data-i18n="sort_default">Sort: Default</option>
+          <option value="name" data-i18n="sort_name_az">Sort: Name A–Z</option>
+          <option value="district" data-i18n="sort_district">Sort: District</option>
         </select>
       </div>
 
       <!-- Disclaimer -->
-      <p style="font-size:0.72rem;color:#444;font-style:italic;line-height:1.6;margin:0 0 16px;max-width:640px;">Note: Community-driven popular vote for fan engagement only. Zero influence on official Hongkod Koisaan scoring.</p>
+      <p style="font-size:0.72rem;color:#444;font-style:italic;line-height:1.6;margin:0 0 16px;max-width:640px;" data-i18n="vote_note">Note: Community-driven popular vote for fan engagement only. Zero influence on official Hongkod Koisaan scoring.</p>
 
       <!-- Leaderboard list — populated by live.js -->
       <div id="leaderboardList" style="display:flex;flex-direction:column;gap:10px;"></div>
@@ -323,7 +323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span style="font-size:0.8rem;font-weight:800;color:#aaa;letter-spacing:-0.01em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
         </div>
         <div style="font-size:0.55rem;color:#555;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;">Live Arena · Hari Kaamatan 2026</div>
-        <div style="font-size:0.52rem;color:#444;">Celebrating the Kadazan Dusun Murut Rungus heritage of Sabah, Borneo</div>
+        <div style="font-size:0.52rem;color:#444;" data-i18n="footer_tagline">Celebrating the Kadazan Dusun Murut Rungus heritage of Sabah, Borneo</div>
       </div>
     </footer>
 
