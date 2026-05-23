@@ -501,7 +501,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span style="display:flex;flex-direction:column;line-height:1.1;"><span style="font-size:13px;">KDMR <span style="color:#f0a820;">·</span></span><span style="font-size:8.5px;color:#aaa;letter-spacing:0.06em;font-weight:700;">MEDIA</span></span>
   </a>
   <div style="display:flex;align-items:center;gap:10px;">
-    <a href="/live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.68rem;font-weight:700;padding:5px 10px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Watch Live & Vote</a>
+    <a href="/live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.68rem;font-weight:700;padding:5px 10px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;" data-i18n="nav_watch_live">Watch Live & Vote</a>
     <button id="langToggleBtn" style="background:transparent;border:1px solid rgba(190,142,60,0.3);color:#f3eddf;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;padding:5px 10px;border-radius:99px;cursor:pointer;transition:background 0.15s,color 0.15s;white-space:nowrap;font-family:Inter,sans-serif;" onmouseover="this.style.background='#be8e3c';this.style.color='#1a1612'" onmouseout="this.style.background='transparent';this.style.color='#f3eddf'" aria-label="Switch language">EN</button>
     <button onclick="var m=document.getElementById('predictMenu');m.style.display=m.style.display==='block'?'none':'block'" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;align-items:center;flex-shrink:0;" aria-label="Menu">
       <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -510,10 +510,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Predict page mobile menu -->
 <div id="predictMenu" style="display:none;position:fixed;top:52px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid #1e1e1e;padding:12px 16px;z-index:49;">
-  <a href="/" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Home</a>
+  <a href="/" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;" data-i18n="nav_home">Home</a>
   <a href="/unduk-ngadau/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#f0a820;color:#0a0a0a;padding:2px 6px;border-radius:2px;">UN</span> Unduk Ngadau</a>
-  <a href="/winners.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Winners</a>
-  <a href="/news.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">News</a>
+  <a href="/winners.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;" data-i18n="nav_winners">Winners</a>
+  <a href="/news.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;" data-i18n="nav_news">News</a>
 </div>
 </div>
 
@@ -550,10 +550,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="handle">@KDMRMEDIA</span>
         </div>
 
-        <div class="eyebrow"><span class="dot"></span><span data-bind="eyebrow">FAN PREDICTION · OFFICIAL TOP 7</span></div>
+        <div class="eyebrow"><span class="dot"></span><span data-bind="eyebrow" data-i18n="predict_card_eyebrow">FAN PREDICTION · OFFICIAL TOP 7</span></div>
 
         <div class="title-block">
-          <h1 class="title">Predicted by <em data-bind="user">you</em></h1>
+          <h1 class="title" data-i18n="predict_card_title">Predicted by <em data-bind="user">you</em></h1>
         </div>
 
         <!-- PODIUM (2 / 1 / 3 visual order) -->
@@ -565,10 +565,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="badge">2</div>
             <div class="meta">
-              <h3 class="name" data-bind="name">2nd Place</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_2nd_runner_up">2nd Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
-            <div class="ptile-caption">2nd Runner-up</div>
+            <div class="ptile-caption" data-i18n="caption_2nd_runner_up">2nd Runner-up</div>
           </div>
 
           <div class="ptile" data-rank="1" data-slot="1">
@@ -580,10 +580,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <path d="M3 18h18M3 8l4 4 5-6 5 6 4-4v10H3V8z"></path>
             </svg>
             <div class="meta">
-              <h3 class="name" data-bind="name">Champion</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_champion">Champion</h3>
               <div class="region" data-bind="region">—</div>
             </div>
-            <div class="ptile-caption">Champion</div>
+            <div class="ptile-caption" data-i18n="caption_champion">Champion</div>
           </div>
 
           <div class="ptile" data-rank="3" data-slot="3">
@@ -592,10 +592,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="badge">3</div>
             <div class="meta">
-              <h3 class="name" data-bind="name">3rd Place</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_1st_runner_up">3rd Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
-            <div class="ptile-caption">1st Runner-up</div>
+            <div class="ptile-caption" data-i18n="caption_1st_runner_up">1st Runner-up</div>
           </div>
 
         </div>
@@ -606,7 +606,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">4</div></div>
             <div class="badge">4</div>
             <div class="meta">
-              <h3 class="name" data-bind="name">4th Place</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_4th">4th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -614,7 +614,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">5</div></div>
             <div class="badge">5</div>
             <div class="meta">
-              <h3 class="name" data-bind="name">5th Place</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_5th">5th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -622,7 +622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">6</div></div>
             <div class="badge">6</div>
             <div class="meta">
-              <h3 class="name" data-bind="name">6th Place</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_6th">6th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -630,7 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">7</div></div>
             <div class="badge">7</div>
             <div class="meta">
-              <h3 class="name" data-bind="name">7th Place</h3>
+              <h3 class="name" data-bind="name" data-i18n="rank_7th">7th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -639,11 +639,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer">
           <div class="left">
             <span class="diamonds"><i></i><i></i><i></i><i></i></span>
-            <span class="bold">Follow @KDMRMEDIA</span> on FB &amp; IG<br/>
-            Make yours · <span class="bold">KDMRMEDIA.COM/PREDICT</span>
+            <span class="bold" data-i18n="card_follow">Follow @KDMRMEDIA</span> on FB &amp; IG<br/>
+            <span data-i18n="card_url">Make yours · <span class="bold">KDMRMEDIA.COM/PREDICT</span></span>
           </div>
           <span class="cta">
-            <span class="text">Predict Yours</span>
+            <span class="text" data-i18n="card_cta">Predict Yours</span>
             <span class="arrow">→</span>
           </span>
         </div>
@@ -657,22 +657,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- PANEL: real picker UI -->
   <aside class="panel">
     <div class="panel-scroll">
-      <h2>Predict Top 7</h2>
-      <p class="lede">Pick your champion &amp; Top 7 for Unduk Ngadau 2026. Card updates live.</p>
+      <h2 data-i18n="predict_panel_title">Predict Top 7</h2>
+      <p class="lede" data-i18n="predict_panel_desc">Pick your champion &amp; Top 7 for Unduk Ngadau 2026. Card updates live.</p>
 
       <div class="field">
-        <label>Your name (appears in title)</label>
+        <label data-i18n="predict_label_name">Your name (appears in title)</label>
         <input type="text" id="inUser" placeholder="e.g. Jenelyn" autocomplete="off" />
       </div>
 
       <div class="field">
-        <label>Color theme</label>
+        <label data-i18n="predict_label_theme">Color theme</label>
         <div class="variant-row" id="variantRow">
-          <button class="variant-btn active" data-v="hutan">Hutan</button>
-          <button class="variant-btn" data-v="bobohizan">Bobohizan</button>
-          <button class="variant-btn" data-v="linangkit">Linangkit</button>
-          <button class="variant-btn" data-v="sirih">Sirih</button>
-          <button class="variant-btn" data-v="padi">Padi</button>
+          <button class="variant-btn active" data-v="hutan" data-i18n="theme_hutan">Hutan</button>
+          <button class="variant-btn" data-v="bobohizan" data-i18n="theme_bobohizan">Bobohizan</button>
+          <button class="variant-btn" data-v="linangkit" data-i18n="theme_linangkit">Linangkit</button>
+          <button class="variant-btn" data-v="sirih" data-i18n="theme_sirih">Sirih</button>
+          <button class="variant-btn" data-v="padi" data-i18n="theme_padi">Padi</button>
         </div>
       </div>
 
@@ -684,18 +684,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="picker-header">
           Picking rank <span class="active-rank-badge" id="activeRankBadge">1</span>
         </div>
-        <input class="picker-search" id="pickerSearch" type="text" placeholder="Search by name or region…" autocomplete="off" />
+        <input class="picker-search" id="pickerSearch" type="text" data-i18n="predict_search_placeholder" placeholder="Search by name or region…" autocomplete="off" />
         <div class="contestant-grid" id="contestantGrid">
-          <div class="empty-grid" style="grid-column:span 2;">Loading contestants…</div>
+          <div class="empty-grid" style="grid-column:span 2;" data-i18n="predict_loading">Loading contestants…</div>
         </div>
       </div>
     </div>
 
     <div class="panel-actions">
-      <button class="btn-download" id="btnDownload">↓ Download PNG</button>
+      <button class="btn-download" id="btnDownload" data-i18n="button_download_png">↓ Download PNG</button>
       <div class="share-row">
-        <button class="btn-share btn-fb" id="btnFB">Facebook</button>
-        <button class="btn-share btn-ig" id="btnIG">IG Story</button>
+        <button class="btn-share btn-fb" id="btnFB" data-i18n="button_facebook">Facebook</button>
+        <button class="btn-share btn-ig" id="btnIG" data-i18n="button_ig_story">IG Story</button>
       </div>
     </div>
   </aside>
