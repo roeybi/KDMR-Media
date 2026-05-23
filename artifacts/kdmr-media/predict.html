@@ -617,116 +617,97 @@
             <p class="text-[10px] tracking-widest opacity-70 uppercase">Unduk Ngadau Kaamatan 2026</p>
           </div>
 
-          <!-- Grid body: rank 1 full-width champion banner, then 2-col for 2-7 -->
-          <div class="grid grid-cols-2 gap-x-3 gap-y-4 flex-1">
+          <!-- Grid body -->
+          <div class="grid grid-cols-2 gap-x-3 gap-y-6 flex-1">
 
-            <!-- Rank 1: col-span-2 champion banner -->
-            <div id="ps-slot-1" class="col-span-2 flex items-center gap-4 bg-black/10 p-3 rounded-lg border border-white/20">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-1" src="" alt="" crossorigin="anonymous"
-                     class="w-20 h-28 object-cover object-top rounded-md shadow-md"
-                     style="display:none;" />
-                <div id="ps-empty-1"
-                     class="w-20 h-28 flex items-center justify-center text-3xl opacity-25"
-                     data-html2canvas-ignore="true">🏆</div>
-                <span class="absolute top-1 left-1 w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-black leading-none"
-                      style="background:#f0a820;color:#0a0a0a;">1</span>
-              </div>
-              <div class="overflow-hidden flex-1">
+            <!-- Rank 1: col-span-2, champion banner -->
+            <div id="ps-slot-1" class="col-span-2 flex items-center gap-4 bg-black/10 p-3 rounded-lg border border-current/20 relative">
+              <div class="absolute -top-2 -left-2 bg-yellow-500 text-black w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs shadow-md z-10">1</div>
+              <img id="ps-photo-1" src="" alt="" crossorigin="anonymous"
+                   class="w-24 h-32 flex-shrink-0 object-cover object-top rounded-md shadow-md"
+                   style="display:none;" />
+              <div id="ps-empty-1"
+                   class="w-24 h-32 flex-shrink-0 flex items-center justify-center text-3xl opacity-25"
+                   data-html2canvas-ignore="true">🏆</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-1" class="font-bold text-xl leading-tight truncate">Champion</p>
                 <p id="ps-branch-1" class="text-sm opacity-80 mt-1 truncate">—</p>
               </div>
             </div>
 
             <!-- Rank 2 -->
-            <div id="ps-slot-2" class="flex items-center gap-3">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-2" src="" alt="" crossorigin="anonymous"
-                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
-                     style="display:none;" />
-                <div id="ps-empty-2" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">👑</div>
-                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-zinc-300 text-black flex items-center justify-center text-[7px] font-black leading-none">2</span>
-              </div>
-              <div class="overflow-hidden">
+            <div id="ps-slot-2" class="flex items-center gap-3 relative">
+              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">2</div>
+              <img id="ps-photo-2" src="" alt="" crossorigin="anonymous"
+                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
+                   style="display:none;" />
+              <div id="ps-empty-2" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">👑</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-2" class="font-bold text-sm leading-tight truncate">2nd Place</p>
                 <p id="ps-branch-2" class="text-[11px] opacity-70 truncate"></p>
               </div>
             </div>
 
             <!-- Rank 3 -->
-            <div id="ps-slot-3" class="flex items-center gap-3">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-3" src="" alt="" crossorigin="anonymous"
-                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
-                     style="display:none;" />
-                <div id="ps-empty-3" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">🥉</div>
-                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-amber-700 text-white flex items-center justify-center text-[7px] font-black leading-none">3</span>
-              </div>
-              <div class="overflow-hidden">
+            <div id="ps-slot-3" class="flex items-center gap-3 relative">
+              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">3</div>
+              <img id="ps-photo-3" src="" alt="" crossorigin="anonymous"
+                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
+                   style="display:none;" />
+              <div id="ps-empty-3" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">🥉</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-3" class="font-bold text-sm leading-tight truncate">3rd Place</p>
                 <p id="ps-branch-3" class="text-[11px] opacity-70 truncate"></p>
               </div>
             </div>
 
             <!-- Rank 4 -->
-            <div id="ps-slot-4" class="flex items-center gap-3">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-4" src="" alt="" crossorigin="anonymous"
-                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
-                     style="display:none;" />
-                <div id="ps-empty-4" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
-                      style="background:#252525;color:#888;">4</span>
-              </div>
-              <div class="overflow-hidden">
+            <div id="ps-slot-4" class="flex items-center gap-3 relative">
+              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">4</div>
+              <img id="ps-photo-4" src="" alt="" crossorigin="anonymous"
+                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
+                   style="display:none;" />
+              <div id="ps-empty-4" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-4" class="font-bold text-sm leading-tight truncate">4th Place</p>
                 <p id="ps-branch-4" class="text-[11px] opacity-70 truncate"></p>
               </div>
             </div>
 
             <!-- Rank 5 -->
-            <div id="ps-slot-5" class="flex items-center gap-3">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-5" src="" alt="" crossorigin="anonymous"
-                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
-                     style="display:none;" />
-                <div id="ps-empty-5" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
-                      style="background:#252525;color:#888;">5</span>
-              </div>
-              <div class="overflow-hidden">
+            <div id="ps-slot-5" class="flex items-center gap-3 relative">
+              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">5</div>
+              <img id="ps-photo-5" src="" alt="" crossorigin="anonymous"
+                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
+                   style="display:none;" />
+              <div id="ps-empty-5" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-5" class="font-bold text-sm leading-tight truncate">5th Place</p>
                 <p id="ps-branch-5" class="text-[11px] opacity-70 truncate"></p>
               </div>
             </div>
 
             <!-- Rank 6 -->
-            <div id="ps-slot-6" class="flex items-center gap-3">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-6" src="" alt="" crossorigin="anonymous"
-                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
-                     style="display:none;" />
-                <div id="ps-empty-6" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
-                      style="background:#252525;color:#888;">6</span>
-              </div>
-              <div class="overflow-hidden">
+            <div id="ps-slot-6" class="flex items-center gap-3 relative">
+              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">6</div>
+              <img id="ps-photo-6" src="" alt="" crossorigin="anonymous"
+                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
+                   style="display:none;" />
+              <div id="ps-empty-6" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-6" class="font-bold text-sm leading-tight truncate">6th Place</p>
                 <p id="ps-branch-6" class="text-[11px] opacity-70 truncate"></p>
               </div>
             </div>
 
             <!-- Rank 7 -->
-            <div id="ps-slot-7" class="flex items-center gap-3">
-              <div class="relative flex-shrink-0">
-                <img id="ps-photo-7" src="" alt="" crossorigin="anonymous"
-                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
-                     style="display:none;" />
-                <div id="ps-empty-7" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
-                      style="background:#252525;color:#888;">7</span>
-              </div>
-              <div class="overflow-hidden">
+            <div id="ps-slot-7" class="flex items-center gap-3 relative">
+              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">7</div>
+              <img id="ps-photo-7" src="" alt="" crossorigin="anonymous"
+                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
+                   style="display:none;" />
+              <div id="ps-empty-7" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+              <div class="flex-1 min-w-0">
                 <p id="ps-name-7" class="font-bold text-sm leading-tight truncate">7th Place</p>
                 <p id="ps-branch-7" class="text-[11px] opacity-70 truncate"></p>
               </div>
