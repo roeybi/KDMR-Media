@@ -361,7 +361,7 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Putrajaya — just south of KL (~101.70°E, 2.92°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmi" data-img="wendey-merrylen_nobg.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="wendey-merrylen_nobg.png">
               <circle cx="53" cy="133" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="53" y1="133" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
