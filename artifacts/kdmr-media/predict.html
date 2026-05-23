@@ -391,31 +391,25 @@
         .slot-third  { flex: 0 0 27%; }
         .podium-top { gap: 5px; }
       }
-      /* ── Capture Area (live poster) ─────────────────── */
-      #captureArea {
+      /* ── Export Stage (html2canvas capture target) ───── */
+      #exportStage {
         max-width: 420px; margin: 0 auto;
-        padding: 22px 18px 18px;
+        padding: 18px 16px 14px;
         border-radius: 12px;
         position: relative; overflow: hidden;
         background: #1A1612; color: #F3EDDF;
         transition: background 0.35s, color 0.35s;
       }
-      /* Scale podium to fit portrait width inside captureArea */
-      #captureArea .slot-first  { flex: 0 0 44%; }
-      #captureArea .slot-second { flex: 0 0 28%; }
-      #captureArea .slot-third  { flex: 0 0 28%; }
-      #captureArea .podium-top  { gap: 5px; }
-      #captureArea .podium-bottom { gap: 5px; }
-      #captureArea .stage-eyebrow { margin-bottom: 5px; }
-      #captureArea .stage-title   { font-size: 0.9rem; margin-bottom: 12px; }
-      #captureArea .platform-1 { height: 34px; }
-      #captureArea .platform-2 { height: 24px; }
-      #captureArea .platform-3 { height: 18px; }
-      #captureArea .platform-block { font-size: 0.5rem; }
-      /* Controls wrapper — below captureArea, aligned to same width */
-      .capture-controls {
-        max-width: 420px; margin: 20px auto 0;
-      }
+      /* Scale podium slots to fit portrait width */
+      #exportStage .slot-first  { flex: 0 0 44%; }
+      #exportStage .slot-second { flex: 0 0 28%; }
+      #exportStage .slot-third  { flex: 0 0 28%; }
+      #exportStage .podium-top  { gap: 5px; }
+      #exportStage .podium-bottom { gap: 5px; }
+      #exportStage .platform-1 { height: 34px; }
+      #exportStage .platform-2 { height: 24px; }
+      #exportStage .platform-3 { height: 18px; }
+      #exportStage .platform-block { font-size: 0.5rem; }
     </style>
   </head>
   <body style="background:#0a0a0a;color:#f0f0f0;">
@@ -483,13 +477,24 @@
 
     <!-- ── Stage / Podium ────────────────────────────────────── -->
     <section style="background:#080808;padding:40px 0 0;">
-      <div class="stage-section">
+
+      <!-- UI chrome: interactive label + instruction (not captured) -->
+      <div class="stage-section" style="padding-bottom:16px;">
         <div class="stage-eyebrow">My Prediction Stage</div>
         <h2 class="stage-title">Place your Top 7</h2>
-
-        <div class="instruction-pill">
+        <div class="instruction-pill" data-html2canvas-ignore="true">
           <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <span>Tap a contestant below, then tap a <strong>stage slot</strong> to place them. Tap the × to remove.</span>
+        </div>
+      </div>
+
+      <!-- ── #exportStage: html2canvas capture target ─────── -->
+      <div id="exportStage">
+
+        <!-- Poster header -->
+        <div style="flex-shrink:0;text-align:center;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:0.45rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;opacity:0.38;margin-bottom:3px;">Unduk Ngadau 2026 · KDMR Media</div>
+          <h2 id="posterTitle" style="margin:0;font-size:1rem;font-weight:900;letter-spacing:-0.03em;line-height:1.1;color:inherit;">My Top 7 Prediction</h2>
         </div>
 
         <!-- Top 3: podium layout -->
@@ -498,7 +503,7 @@
           <div class="podium-platform slot-second" style="width:100%;">
             <div class="slot slot-second" id="slot-2" data-rank="2">
               <div class="slot-inner" id="slot-inner-2">
-                <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:3/4;">
                   <div class="slot-empty-icon">👑</div>
                   <div class="slot-empty-label">2nd</div>
                 </div>
@@ -511,7 +516,7 @@
           <div class="podium-platform slot-first" style="width:100%;">
             <div class="slot slot-first" id="slot-1" data-rank="1">
               <div class="slot-inner" id="slot-inner-1">
-                <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:3/4;">
                   <div class="slot-empty-icon">🏆</div>
                   <div class="slot-empty-label">1st — Champion</div>
                 </div>
@@ -524,7 +529,7 @@
           <div class="podium-platform slot-third" style="width:100%;">
             <div class="slot slot-third" id="slot-3" data-rank="3">
               <div class="slot-inner" id="slot-inner-3">
-                <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:3/4;">
                   <div class="slot-empty-icon">🥉</div>
                   <div class="slot-empty-label">3rd</div>
                 </div>
@@ -538,7 +543,7 @@
         <div class="podium-bottom">
           <div class="slot slot-lower" id="slot-4" data-rank="4">
             <div class="slot-inner" id="slot-inner-4">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+              <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:2/3;">
                 <div class="slot-empty-icon">✨</div>
                 <div class="slot-empty-label">4th</div>
               </div>
@@ -546,7 +551,7 @@
           </div>
           <div class="slot slot-lower" id="slot-5" data-rank="5">
             <div class="slot-inner" id="slot-inner-5">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+              <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:2/3;">
                 <div class="slot-empty-icon">✨</div>
                 <div class="slot-empty-label">5th</div>
               </div>
@@ -554,7 +559,7 @@
           </div>
           <div class="slot slot-lower" id="slot-6" data-rank="6">
             <div class="slot-inner" id="slot-inner-6">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+              <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:2/3;">
                 <div class="slot-empty-icon">✨</div>
                 <div class="slot-empty-label">6th</div>
               </div>
@@ -562,20 +567,32 @@
           </div>
           <div class="slot slot-lower" id="slot-7" data-rank="7">
             <div class="slot-inner" id="slot-inner-7">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
+              <div class="slot-empty-content" data-html2canvas-ignore="true" style="aspect-ratio:2/3;">
                 <div class="slot-empty-icon">✨</div>
                 <div class="slot-empty-label">7th</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <!-- Poster footer -->
+        <div style="flex-shrink:0;margin-top:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding-left:2px;padding-right:2px;">
+          <div style="display:flex;align-items:center;gap:4px;">
+            <img src="/mark-color.svg" alt="" style="width:12px;height:12px;opacity:0.45;" />
+            <span style="font-size:0.42rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.35;">KDMR Media</span>
+          </div>
+          <div style="font-size:0.42rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.28;">kdmrmedia.com/predict</div>
+        </div>
+
+      </div><!-- /#exportStage -->
+
+      <div style="height:40px;"></div>
     </section>
 
-    <!-- ── Personalization + Share Poster ───────────────────── -->
+    <!-- ── Personalization ───────────────────────────────────── -->
     <section class="personalize-section">
       <div class="personalize-inner">
-        <div class="personalize-label">Personalize &amp; Preview Your Card <span></span></div>
+        <div class="personalize-label">Personalize Your Card <span></span></div>
 
         <!-- Name input -->
         <div style="margin-bottom:18px;">
@@ -588,7 +605,7 @@
         </div>
 
         <!-- Theme buttons -->
-        <div style="margin-bottom:28px;">
+        <div>
           <div style="font-size:0.72rem;font-weight:600;color:#666;margin-bottom:10px;letter-spacing:0.02em;">Theme</div>
           <div id="themeButtons" style="display:flex;flex-wrap:wrap;gap:8px;">
             <button class="theme-btn" data-theme="Bobohizan">Bobohizan</button>
@@ -599,129 +616,6 @@
           </div>
           <div id="themePreview" style="margin-top:10px;height:4px;width:160px;border-radius:2px;background:#1A1612;"></div>
         </div>
-
-        <!-- ── Share Poster: flat grid, fully static layout ── -->
-        <div style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#333;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
-          <span>Your Prediction Card</span>
-          <span style="flex:1;height:1px;background:#1a1a1a;display:block;"></span>
-          <span style="color:#555;">Scroll down to download ↓</span>
-        </div>
-
-        <div id="sharePoster"
-             class="max-w-[400px] mx-auto aspect-[4/5] flex flex-col justify-between p-6 rounded-xl shadow-2xl relative overflow-hidden ring-1 ring-white/10"
-             style="background:#1A1612;color:#F3EDDF;transition:background 0.35s,color 0.35s;">
-
-          <!-- Header -->
-          <div class="text-center mb-5">
-            <h2 id="posterTitle" class="text-2xl font-bold tracking-wider uppercase mb-1">My Top 7 Prediction</h2>
-            <p class="text-[10px] tracking-widest opacity-70 uppercase">Unduk Ngadau Kaamatan 2026</p>
-          </div>
-
-          <!-- Grid body -->
-          <div class="grid grid-cols-2 gap-x-3 gap-y-6 flex-1">
-
-            <!-- Rank 1: col-span-2, champion banner -->
-            <div id="ps-slot-1" class="col-span-2 flex items-center gap-4 bg-black/10 p-3 rounded-lg border border-current/20 relative">
-              <div class="absolute -top-2 -left-2 bg-yellow-500 text-black w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs shadow-md z-10">1</div>
-              <img id="ps-photo-1" src="" alt="" crossorigin="anonymous"
-                   class="w-24 h-32 flex-shrink-0 object-cover object-top rounded-md shadow-md"
-                   style="display:none;" />
-              <div id="ps-empty-1"
-                   class="w-24 h-32 flex-shrink-0 flex items-center justify-center text-3xl opacity-25"
-                   data-html2canvas-ignore="true">🏆</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-1" class="font-bold text-xl leading-tight truncate">Champion</p>
-                <p id="ps-branch-1" class="text-sm opacity-80 mt-1 truncate">—</p>
-              </div>
-            </div>
-
-            <!-- Rank 2 -->
-            <div id="ps-slot-2" class="flex items-center gap-3 relative">
-              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">2</div>
-              <img id="ps-photo-2" src="" alt="" crossorigin="anonymous"
-                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
-                   style="display:none;" />
-              <div id="ps-empty-2" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">👑</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-2" class="font-bold text-sm leading-tight truncate">2nd Place</p>
-                <p id="ps-branch-2" class="text-[11px] opacity-70 truncate"></p>
-              </div>
-            </div>
-
-            <!-- Rank 3 -->
-            <div id="ps-slot-3" class="flex items-center gap-3 relative">
-              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">3</div>
-              <img id="ps-photo-3" src="" alt="" crossorigin="anonymous"
-                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
-                   style="display:none;" />
-              <div id="ps-empty-3" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">🥉</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-3" class="font-bold text-sm leading-tight truncate">3rd Place</p>
-                <p id="ps-branch-3" class="text-[11px] opacity-70 truncate"></p>
-              </div>
-            </div>
-
-            <!-- Rank 4 -->
-            <div id="ps-slot-4" class="flex items-center gap-3 relative">
-              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">4</div>
-              <img id="ps-photo-4" src="" alt="" crossorigin="anonymous"
-                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
-                   style="display:none;" />
-              <div id="ps-empty-4" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-4" class="font-bold text-sm leading-tight truncate">4th Place</p>
-                <p id="ps-branch-4" class="text-[11px] opacity-70 truncate"></p>
-              </div>
-            </div>
-
-            <!-- Rank 5 -->
-            <div id="ps-slot-5" class="flex items-center gap-3 relative">
-              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">5</div>
-              <img id="ps-photo-5" src="" alt="" crossorigin="anonymous"
-                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
-                   style="display:none;" />
-              <div id="ps-empty-5" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-5" class="font-bold text-sm leading-tight truncate">5th Place</p>
-                <p id="ps-branch-5" class="text-[11px] opacity-70 truncate"></p>
-              </div>
-            </div>
-
-            <!-- Rank 6 -->
-            <div id="ps-slot-6" class="flex items-center gap-3 relative">
-              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">6</div>
-              <img id="ps-photo-6" src="" alt="" crossorigin="anonymous"
-                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
-                   style="display:none;" />
-              <div id="ps-empty-6" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-6" class="font-bold text-sm leading-tight truncate">6th Place</p>
-                <p id="ps-branch-6" class="text-[11px] opacity-70 truncate"></p>
-              </div>
-            </div>
-
-            <!-- Rank 7 -->
-            <div id="ps-slot-7" class="flex items-center gap-3 relative">
-              <div class="absolute -top-2 -left-2 bg-black/20 border border-current/10 w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] z-10">7</div>
-              <img id="ps-photo-7" src="" alt="" crossorigin="anonymous"
-                   class="w-14 h-16 flex-shrink-0 object-cover object-top rounded shadow-sm"
-                   style="display:none;" />
-              <div id="ps-empty-7" class="w-14 h-16 flex-shrink-0 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
-              <div class="flex-1 min-w-0">
-                <p id="ps-name-7" class="font-bold text-sm leading-tight truncate">7th Place</p>
-                <p id="ps-branch-7" class="text-[11px] opacity-70 truncate"></p>
-              </div>
-            </div>
-
-          </div><!-- /grid -->
-
-          <!-- Footer -->
-          <div class="mt-5 border-t border-white/20 pt-4 flex justify-between items-center px-1">
-            <div class="text-[9px] tracking-[0.2em] opacity-60 uppercase">KDMR Cultural Archive</div>
-            <div class="text-[10px] font-bold tracking-wide">kdmrmedia.com/predict</div>
-          </div>
-
-        </div><!-- /#sharePoster -->
 
       </div>
     </section>
@@ -805,12 +699,9 @@
       </div>
     </footer>
 
-    <!-- shareCardTemplate removed — screenshot taken directly of #captureArea -->
-    <div id="shareCardTemplate" style="display:none;" aria-hidden="true">
-    <div
-         style="width:1080px;height:1350px;
-                background:#1A1612;color:#F3EDDF;font-family:'Helvetica Neue',Arial,sans-serif;
-                display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;">
+    <!-- dead template removed -->
+    <div style="display:none;" aria-hidden="true">
+    <div>
 
       <!-- HEADER -->
       <div style="flex-shrink:0;padding:36px 48px 20px;border-bottom:1px solid rgba(255,255,255,0.08);">
