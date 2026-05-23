@@ -4,6 +4,7 @@ import html2canvas from 'html2canvas';
 const RANKS = [1, 2, 3, 4, 5, 6, 7];
 const PLACEHOLDER_IMG = '/images/placeholder-winner.png';
 const SAMPLE_IMG = '/images/Sample UN Winner.png';
+const BLANK_PIXEL = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 
 let allContestants = [];
 let filteredContestants = [];
@@ -285,7 +286,7 @@ function populateShareTemplate() {
         photoEl.style.display = 'block';
         initEl.style.display = 'none';
       } else {
-        photoEl.src = '';
+        photoEl.src = BLANK_PIXEL;
         photoEl.style.display = 'none';
         initEl.textContent = getInitials(c.name);
         initEl.style.color = meta.accent;
@@ -294,7 +295,7 @@ function populateShareTemplate() {
       nameEl.textContent = c.name;
       branchEl.textContent = branchLabel(c);
     } else {
-      photoEl.src = '';
+      photoEl.src = BLANK_PIXEL;
       photoEl.style.display = 'none';
       initEl.textContent = DEFAULT_ICONS[rank];
       initEl.style.color = meta.numColor;
@@ -321,9 +322,15 @@ async function downloadPrediction() {
 
   const template = document.getElementById('shareCardTemplate');
 
-  // 2. Pre-fetch visible cross-origin photos as blob URLs (avoids canvas taint)
+  // 2. Pre-fetch visible cross-origin photos as blob URLs (avoids canvas taint).
+  //    Wrap each fetch in its own 8s timeout so a slow Supabase image can't hang
+  //    the entire download flow on mobile.
   const imgs = Array.from(template.querySelectorAll('img[crossorigin]'));
   const blobMap = new Map();
+  const fetchWithTimeout = (url, ms) => Promise.race([
+    fetch(url, { mode: 'cors', credentials: 'omit' }),
+    new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms)),
+  ]);
 
   await Promise.all(imgs.map(async img => {
     const src = img.getAttribute('src');
@@ -331,27 +338,35 @@ async function downloadPrediction() {
     if (src.startsWith('data:') || src.startsWith('blob:')) return;
     if (src.endsWith('.svg')) return; // same-origin SVGs are safe
     try {
-      const resp = await fetch(src, { mode: 'cors', credentials: 'omit' });
+      const resp = await fetchWithTimeout(src, 8000);
       if (!resp.ok) return;
       const blob = await resp.blob();
       const blobUrl = URL.createObjectURL(blob);
       blobMap.set(img, { original: src, blobUrl });
       img.src = blobUrl;
-    } catch { /* leave as-is, html2canvas will try useCORS */ }
+    } catch (err) {
+      // Image fetch failed (CORS, timeout, network). Hide it so html2canvas
+      // doesn't choke on a broken/tainted image on iOS.
+      console.warn('[predict] image pre-fetch failed, hiding:', src, err?.message);
+      img.style.display = 'none';
+    }
   }));
 
+  // 3. Capture the template — wrap in 25s timeout to surface hangs
   try {
-    // 3. Capture the template
-    const canvas = await html2canvas(template, {
-      useCORS: true,
-      allowTaint: true,
-      scale: 1,
-      width: 1080,
-      height: 1350,
-      backgroundColor: '#0a0800',
-      logging: false,
-      imageTimeout: 12000,
-    });
+    const canvas = await Promise.race([
+      html2canvas(template, {
+        useCORS: true,
+        allowTaint: true,
+        scale: 1,
+        width: 1080,
+        height: 1350,
+        backgroundColor: '#0a0800',
+        logging: false,
+        imageTimeout: 8000,
+      }),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('html2canvas timed out after 25s')), 25000)),
+    ]);
 
     // 4. Trigger download
     const link = document.createElement('a');
@@ -359,8 +374,8 @@ async function downloadPrediction() {
     link.href = canvas.toDataURL('image/png');
     link.click();
   } catch (e) {
-    alert('Could not generate image. Please try again.');
-    console.error('[predict] html2canvas error:', e);
+    console.error('[predict] download failed:', e);
+    alert('Could not generate image: ' + (e?.message || 'unknown error') + '\n\nPlease screenshot the page as a fallback.');
   } finally {
     // Restore original src values and revoke blob URLs
     blobMap.forEach(({ original, blobUrl }, img) => {
