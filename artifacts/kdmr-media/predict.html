@@ -657,9 +657,10 @@
     </footer>
 
     <!-- ── Hidden Share Card Template (4:5 — 1080×1350) ───── -->
-    <!-- Positioned far off-screen so html2canvas can render it without display:none -->
+    <!-- Fixed off-screen so html2canvas sees fully-painted CSS — never display:none -->
+    <div style="position:fixed;top:0;left:-9999px;z-index:-1;overflow:hidden;" aria-hidden="true">
     <div id="shareCardTemplate"
-         style="position:absolute;left:-9999px;top:0;width:1080px;height:1350px;
+         style="width:1080px;height:1350px;
                 background:#1A1612;color:#F3EDDF;font-family:'Helvetica Neue',Arial,sans-serif;
                 display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;">
 
@@ -848,6 +849,7 @@
       </div>
 
     </div><!-- /#shareCardTemplate -->
+    </div><!-- /fixed off-screen wrapper -->
 
     <script type="module" src="./src/predict.js"></script>
     <script>
