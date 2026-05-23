@@ -306,6 +306,12 @@ function applyTheme(themeName) {
     stage.style.fontFamily = t.font;
   }
 
+  const tmpl = document.getElementById('renderTemplate');
+  if (tmpl) {
+    tmpl.style.background = t.bg;
+    tmpl.style.color = t.text;
+  }
+
   document.querySelectorAll('.theme-btn').forEach(btn => {
     const active = btn.dataset.theme === themeName;
     btn.style.borderColor = active ? '#f0a820' : '#2a2a2a';
@@ -338,10 +344,14 @@ function setupNameInput() {
     if (titleEl) {
       titleEl.textContent = name ? `Predicted by ${name}` : 'My Top 7 Prediction';
     }
+    const renderTitleEl = document.getElementById('renderTitle');
+    if (renderTitleEl) {
+      renderTitleEl.textContent = name ? `${name.toUpperCase()}'S TOP 7` : 'PREDICTION';
+    }
   });
 }
 
-// ─── DOWNLOAD — html2canvas on #sharePoster ───────────────────────────────────
+// ─── DOWNLOAD — html2canvas on #renderTemplate ────────────────────────────────
 
 function setupDownload() {
   document.getElementById('downloadBtn').addEventListener('click', downloadPrediction);
@@ -353,17 +363,42 @@ async function downloadPrediction() {
   btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M4 4l16 16"/></svg> Generating…`;
 
   try {
-    const target = document.querySelector('#exportStage');
+    // Populate the off-screen render template with current slot data
+    RANKS.forEach(r => {
+      const c = slots[r];
+      const imgEl   = document.getElementById(`renderImg${r}`);
+      const nameEl  = document.getElementById(`renderName${r}`);
+      const distEl  = document.getElementById(`renderDist${r}`);
+      const emptyEl = document.getElementById(`renderEmpty${r}`);
+
+      if (imgEl) {
+        if (c && !isPlaceholder(c.imageUrl)) {
+          imgEl.src = c.imageUrl;
+          imgEl.style.display = 'block';
+          if (emptyEl) emptyEl.style.display = 'none';
+        } else {
+          imgEl.src = '';
+          imgEl.style.display = 'none';
+          if (emptyEl) emptyEl.style.display = 'flex';
+        }
+      }
+      if (nameEl) nameEl.textContent = c ? c.name : '—';
+      if (distEl) distEl.textContent = c ? branchLabel(c) : '—';
+    });
+
+    // Allow browser to paint updated images before capture
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    const target = document.getElementById('renderTemplate');
     const canvas = await html2canvas(target, {
-      scale: 3,
+      scale: 2,
       useCORS: true,
       allowTaint: true,
       backgroundColor: null,
-      windowHeight: target.scrollHeight,
     });
 
     const link = document.createElement('a');
-    link.download = 'my-prediction.png';
+    link.download = 'my-kaamatan-prediction.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
 
