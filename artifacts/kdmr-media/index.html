@@ -561,6 +561,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </footer>
 
+    <!-- Hidden stub so script.js skips portrait-hero rendering -->
+    <div id="heroSection" data-hero="locator" style="display:none;" aria-hidden="true"></div>
+
+    <script type="module" src="./src/script.js"></script>
+
     <!-- ── Dynamic locator: map above prediction, countdown below ── -->
     <script type="module">
       if (new Date() < new Date('2026-06-01T00:00:00+08:00')) {
