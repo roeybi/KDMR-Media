@@ -982,10 +982,15 @@ export function mountLocatorHero(section) {
           <div class="ul-cd-sep">:</div>
           <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdS">--</div><div class="ul-cd-label">Secs</div></div>
         </div>
-        <a href="/unduk-ngadau/" class="ul-cta">
-          Meet the Champions
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <a href="/unduk-ngadau/" class="ul-cta">
+            Meet the Champions
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/predict.html" class="px-8 py-3 rounded-md font-sans font-bold tracking-widest uppercase transition-all bg-[#BE8E3C] text-[#1A1612] hover:bg-[#F3EDDF] shadow-[0_4px_14px_0_rgba(190,142,60,0.39)] active:scale-95 text-sm">
+            Predict Top 7
+          </a>
+        </div>
         <div class="ul-branches">
           <span class="ul-branch-chip">Pulau Pinang</span>
           <span class="ul-branch-chip">Klang Valley</span>
