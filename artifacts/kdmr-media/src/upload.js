@@ -111,7 +111,11 @@ function handleFile(file) {
 async function uploadPhoto() {
   const winnerId = document.getElementById('branchSelect').value;
   const winnerEntry = winnersData.find(w => w.id === winnerId);
-  const branch = winnerEntry ? winnerEntry.branch : winnerId;
+  const branch = winnerEntry
+    ? (winnerEntry.branch === 'KDCA Sabah'
+        ? (winnerEntry.district || winnerEntry.branch)
+        : winnerEntry.branch)
+    : winnerId;
   const winnerName = document.getElementById('winnerName').value;
   const contributor = document.getElementById('contributorName').value.trim();
   const notes = document.getElementById('notes').value.trim();
