@@ -1,10 +1,10 @@
 // predict.js — Top 7 Prediction module
-import html2canvas from 'html2canvas';
+// No external screenshot library — card drawn directly with Canvas 2D API
 
 const RANKS = [1, 2, 3, 4, 5, 6, 7];
 const PLACEHOLDER_IMG = '/images/placeholder-winner.png';
 const SAMPLE_IMG = '/images/Sample UN Winner.png';
-const BLANK_PIXEL = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+// No html2canvas dependency — card is drawn with Canvas 2D API
 
 let allContestants = [];
 let filteredContestants = [];
@@ -243,70 +243,7 @@ function setupReset() {
   });
 }
 
-// ─── SHARE CARD TEMPLATE — populate on demand ─────────────────────────────────
-// Rank metadata for styling each row
-
-const RANK_META = {
-  1: { accent: '#f0a820', numColor: '#f0a820', label: 'CHAMPION', labelColor: '#5a3800', nameSize: '22px', branchColor: '#6a4800' },
-  2: { accent: '#b8b8bc', numColor: '#b8b8bc', label: '2ND',      labelColor: '#404040', nameSize: '20px', branchColor: '#484848' },
-  3: { accent: '#a07840', numColor: '#a07840', label: '3RD',      labelColor: '#4a3010', nameSize: '20px', branchColor: '#4a3010' },
-  4: { accent: '#2e2e2e', numColor: '#3e3e3e', label: '4TH',      labelColor: '#2e2e2e', nameSize: '19px', branchColor: '#333' },
-  5: { accent: '#2e2e2e', numColor: '#3e3e3e', label: '5TH',      labelColor: '#2e2e2e', nameSize: '19px', branchColor: '#333' },
-  6: { accent: '#2e2e2e', numColor: '#3e3e3e', label: '6TH',      labelColor: '#2e2e2e', nameSize: '19px', branchColor: '#333' },
-  7: { accent: '#2e2e2e', numColor: '#3e3e3e', label: '7TH',      labelColor: '#2e2e2e', nameSize: '19px', branchColor: '#333' },
-};
-
-const DEFAULT_NAMES = {
-  1: 'Champion',       2: '2nd Runner-Up', 3: '3rd Runner-Up',
-  4: '4th Place',      5: '5th Place',     6: '6th Place',     7: '7th Place',
-};
-const DEFAULT_ICONS = { 1: '🏆', 2: '👑', 3: '🥉', 4: '✦', 5: '✦', 6: '✦', 7: '✦' };
-
-function populateShareTemplate() {
-  RANKS.forEach(rank => {
-    const c = slots[rank];
-    const meta = RANK_META[rank];
-
-    const row    = document.getElementById(`sc-row-${rank}`);
-    const photoEl = document.getElementById(`sc-photo-${rank}`);
-    const initEl  = document.getElementById(`sc-init-${rank}`);
-    const nameEl  = document.getElementById(`sc-name-${rank}`);
-    const branchEl = document.getElementById(`sc-branch-${rank}`);
-
-    if (!row || !photoEl || !initEl || !nameEl || !branchEl) return;
-
-    // Apply rank-specific accent and text colors
-    row.style.borderLeftColor = meta.accent;
-    nameEl.style.fontSize = meta.nameSize;
-    branchEl.style.color = meta.branchColor;
-
-    if (c) {
-      if (!isPlaceholder(c.imageUrl)) {
-        photoEl.src = c.imageUrl;
-        photoEl.style.display = 'block';
-        initEl.style.display = 'none';
-      } else {
-        photoEl.src = BLANK_PIXEL;
-        photoEl.style.display = 'none';
-        initEl.textContent = getInitials(c.name);
-        initEl.style.color = meta.accent;
-        initEl.style.display = 'flex';
-      }
-      nameEl.textContent = c.name;
-      branchEl.textContent = branchLabel(c);
-    } else {
-      photoEl.src = BLANK_PIXEL;
-      photoEl.style.display = 'none';
-      initEl.textContent = DEFAULT_ICONS[rank];
-      initEl.style.color = meta.numColor;
-      initEl.style.display = 'flex';
-      nameEl.textContent = DEFAULT_NAMES[rank];
-      branchEl.textContent = '— empty —';
-    }
-  });
-}
-
-// ─── DOWNLOAD (html2canvas on #shareCardTemplate) ─────────────────────────────
+// ─── DOWNLOAD — pure Canvas 2D (no html2canvas, bulletproof on iOS) ──────────
 
 function setupDownload() {
   document.getElementById('downloadBtn').addEventListener('click', downloadPrediction);
@@ -317,72 +254,229 @@ async function downloadPrediction() {
   btn.disabled = true;
   btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M4 4l16 16"/></svg> Generating…`;
 
-  // 1. Populate the template with current slot data
-  populateShareTemplate();
-
-  const template = document.getElementById('shareCardTemplate');
-
-  // 2. Pre-fetch visible cross-origin photos as blob URLs (avoids canvas taint).
-  //    Wrap each fetch in its own 8s timeout so a slow Supabase image can't hang
-  //    the entire download flow on mobile.
-  const imgs = Array.from(template.querySelectorAll('img[crossorigin]'));
-  const blobMap = new Map();
-  const fetchWithTimeout = (url, ms) => Promise.race([
-    fetch(url, { mode: 'cors', credentials: 'omit' }),
-    new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms)),
-  ]);
-
-  await Promise.all(imgs.map(async img => {
-    const src = img.getAttribute('src');
-    if (!src || img.style.display === 'none') return;
-    if (src.startsWith('data:') || src.startsWith('blob:')) return;
-    if (src.endsWith('.svg')) return; // same-origin SVGs are safe
-    try {
-      const resp = await fetchWithTimeout(src, 8000);
-      if (!resp.ok) return;
-      const blob = await resp.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      blobMap.set(img, { original: src, blobUrl });
-      img.src = blobUrl;
-    } catch (err) {
-      // Image fetch failed (CORS, timeout, network). Hide it so html2canvas
-      // doesn't choke on a broken/tainted image on iOS.
-      console.warn('[predict] image pre-fetch failed, hiding:', src, err?.message);
-      img.style.display = 'none';
-    }
-  }));
-
-  // 3. Capture the template — wrap in 25s timeout to surface hangs
   try {
-    const canvas = await Promise.race([
-      html2canvas(template, {
-        useCORS: true,
-        allowTaint: true,
-        scale: 1,
-        width: 1080,
-        height: 1350,
-        backgroundColor: '#0a0800',
-        logging: false,
-        imageTimeout: 8000,
-      }),
-      new Promise((_, rej) => setTimeout(() => rej(new Error('html2canvas timed out after 25s')), 25000)),
-    ]);
+    const canvas = document.createElement('canvas');
+    canvas.width = 1080;
+    canvas.height = 1350;
+    const ctx = canvas.getContext('2d');
+    const W = 1080, H = 1350;
 
-    // 4. Trigger download
+    // ── Helpers ──────────────────────────────────────────
+    const FONT = '"SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+    const fitText = (text, maxWidth, font) => {
+      ctx.font = font;
+      if (ctx.measureText(text).width <= maxWidth) return text;
+      let truncated = text;
+      while (truncated.length > 1 && ctx.measureText(truncated + '…').width > maxWidth) truncated = truncated.slice(0, -1);
+      return truncated + '…';
+    };
+
+    // ── Background ────────────────────────────────────────
+    ctx.fillStyle = '#0a0800';
+    ctx.fillRect(0, 0, W, H);
+    // Subtle grain (simplified for canvas)
+    ctx.globalAlpha = 0.02;
+    for (let i = 0; i < 40; i++) {
+      ctx.strokeStyle = '#f0a820';
+      const x = Math.random() * W, y = Math.random() * H;
+      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 80, y + 60); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+
+    // ── Top gold bar ───────────────────────────────────────
+    const goldGrad = ctx.createLinearGradient(0, 0, W, 0);
+    goldGrad.addColorStop(0, '#c07800');
+    goldGrad.addColorStop(0.28, '#f0a820');
+    goldGrad.addColorStop(0.5, '#ffd060');
+    goldGrad.addColorStop(0.72, '#f0a820');
+    goldGrad.addColorStop(1, '#c07800');
+    ctx.fillStyle = goldGrad;
+    ctx.fillRect(0, 0, W, 5);
+
+    // ── Load assets ──────────────────────────────────────────────
+    const loadImg = (src, useCors) => new Promise((resolve) => {
+      const img = new Image();
+      if (useCors) img.crossOrigin = 'anonymous';
+      img.onload = () => resolve(img);
+      img.onerror = () => resolve(null);
+      img.src = src;
+    });
+
+    // Logo (same-origin SVG — no crossOrigin)
+    const logoImg = await loadImg('/mark-color.svg', false);
+
+    // Pre-load all contestant photos in parallel
+    const photoPromises = RANKS.map(async rank => {
+      const c = slots[rank];
+      if (!c || isPlaceholder(c.imageUrl)) return { rank, img: null };
+      const img = await loadImg(c.imageUrl, true);
+      return { rank, img };
+    });
+    const photoMap = new Map((await Promise.all(photoPromises)).map(p => [p.rank, p.img]));
+
+    // ── Header (86px) ────────────────────────────────────────────
+    if (logoImg) {
+      ctx.drawImage(logoImg, 60, 22, 42, 42);
+    } else {
+      ctx.save();
+      ctx.translate(81, 43); ctx.rotate(Math.PI / 4);
+      ctx.fillStyle = '#f0a820'; ctx.fillRect(-14, -14, 28, 28);
+      ctx.restore();
+    }
+    ctx.fillStyle = '#f0f0f0';
+    ctx.font = `900 19px ${FONT}`;
+    ctx.textBaseline = 'middle';
+    ctx.fillText('KDMR·MEDIA', 116, 43);
+    ctx.fillStyle = '#2c1e00';
+    ctx.font = `700 9px ${FONT}`;
+    ctx.fillText('CULTURAL ARCHIVE · SABAH', 116, 58);
+    ctx.fillStyle = '#2c1e00';
+    ctx.textAlign = 'right';
+    ctx.font = `800 10px ${FONT}`;
+    ctx.fillText('UNDUK NGADAU 2026', 1020, 43);
+    ctx.textAlign = 'left';
+
+    // Gold divider
+    ctx.fillStyle = goldGrad;
+    ctx.fillRect(60, 86, 960, 3);
+
+    // ── Title block (135px) ───────────────────────────────────────
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#f0a820';
+    ctx.font = `800 11px ${FONT}`;
+    ctx.fillText('My Top 7', 540, 117);
+    ctx.fillStyle = '#f0f0f0';
+    ctx.font = `900 52px ${FONT}`;
+    ctx.fillText('PREDICTION', 540, 158);
+    ctx.fillStyle = '#2c1e00';
+    ctx.font = `11px ${FONT}`;
+    ctx.fillText('Unduk Ngadau 2026 State Finals · kdmrmedia.com', 540, 192);
+
+    // Thin separator
+    ctx.fillStyle = '#1e1200';
+    ctx.fillRect(60, 221, 960, 1);
+
+    // ── Rows (7×148 + 6×1 = 1042px) ─────────────────────────
+    const ROW_META = {
+      1: { accent: '#f0a820', num: '#f0a820', label: 'CHAMP', labelColor: '#5a3800', name: 22, branch: '#6a4800', bg: '#1a1000' },
+      2: { accent: '#b8b8bc', num: '#b8b8bc', label: '2ND',   labelColor: '#404040', name: 20, branch: '#484848', bg: '#111111' },
+      3: { accent: '#a07840', num: '#a07840', label: '3RD',   labelColor: '#4a3010', name: 20, branch: '#4a3010', bg: '#131008' },
+      4: { accent: '#2e2e2e', num: '#3e3e3e', label: '4TH',   labelColor: '#2e2e2e', name: 19, branch: '#333',     bg: '#0e0e0e' },
+      5: { accent: '#2e2e2e', num: '#3e3e3e', label: '5TH',   labelColor: '#2e2e2e', name: 19, branch: '#333',     bg: '#0e0e0e' },
+      6: { accent: '#2e2e2e', num: '#3e3e3e', label: '6TH',   labelColor: '#2e2e2e', name: 19, branch: '#333',     bg: '#0e0e0e' },
+      7: { accent: '#2e2e2e', num: '#3e3e3e', label: '7TH',   labelColor: '#2e2e2e', name: 19, branch: '#333',     bg: '#0e0e0e' },
+    };
+    const DEFAULT_NAMES = {
+      1: 'Champion', 2: '2nd Runner-Up', 3: '3rd Runner-Up',
+      4: '4th Place', 5: '5th Place', 6: '6th Place', 7: '7th Place',
+    };
+    const DEFAULT_ICONS = { 1: '🏆', 2: '👑', 3: '🥉', 4: '✦', 5: '✦', 6: '✦', 7: '✦' };
+
+    let y = 222;
+    const maxNameWidth = 1080 - 88 - 112 - 20 - 56 - 18;
+
+    for (const rank of RANKS) {
+      const c = slots[rank];
+      const m = ROW_META[rank];
+      const rowH = 148;
+
+      // Left accent
+      ctx.fillStyle = m.accent;
+      ctx.fillRect(0, y, 4, rowH);
+
+      // Rank number
+      ctx.fillStyle = m.num;
+      ctx.font = `900 38px ${FONT}`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(String(rank), 48, y + rowH / 2);
+
+      // Rank label
+      ctx.fillStyle = m.labelColor;
+      ctx.font = `800 8px ${FONT}`;
+      ctx.textBaseline = 'top';
+      ctx.fillText(m.label, 48, y + rowH / 2 + 14);
+
+      // Photo box
+      const px = 88, py = y + 18, pSize = 112;
+      ctx.fillStyle = m.bg;
+      ctx.fillRect(px, py, pSize, pSize);
+
+      const photoImg = photoMap.get(rank);
+      if (photoImg) {
+        // Crop to square top-center
+        const s = Math.min(photoImg.width, photoImg.height);
+        const sx = (photoImg.width - s) / 2;
+        const sy = 0;
+        ctx.drawImage(photoImg, sx, sy, s, s, px, py, pSize, pSize);
+      } else {
+        // Initials / emoji fallback
+        const fallback = c ? getInitials(c.name) : DEFAULT_ICONS[rank];
+        ctx.fillStyle = c ? m.accent : m.num;
+        ctx.font = `800 ${c ? 36 : 24}px ${FONT}`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(fallback, px + pSize / 2, py + pSize / 2 + 2);
+      }
+
+      // Name
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      ctx.fillStyle = '#f0f0f0';
+      const nameText = fitText(c ? c.name : DEFAULT_NAMES[rank], maxNameWidth, `800 ${m.name}px ${FONT}`);
+      ctx.font = `800 ${m.name}px ${FONT}`;
+      ctx.fillText(nameText, px + pSize + 20, y + 20);
+
+      // Branch
+      ctx.fillStyle = m.branch;
+      ctx.font = `500 13px ${FONT}`;
+      ctx.fillText(c ? branchLabel(c) : '— empty —', px + pSize + 20, y + 20 + m.name + 7);
+
+      // Separator
+      if (rank < 7) {
+        ctx.fillStyle = '#160e00';
+        ctx.fillRect(4, y + rowH, 1076, 1);
+      }
+
+      y += rowH + 1;
+    }
+
+    // Bottom gold divider
+    ctx.fillStyle = goldGrad;
+    ctx.fillRect(60, y, 960, 3);
+
+    // ── Footer (80px) ─────────────────────────────────────────────
+    const fy = y + 3 + 40;
+    if (logoImg) {
+      ctx.globalAlpha = 0.85;
+      ctx.drawImage(logoImg, 60, fy - 14, 28, 28);
+      ctx.globalAlpha = 1;
+    } else {
+      ctx.save(); ctx.translate(74, fy); ctx.rotate(Math.PI / 4);
+      ctx.fillStyle = '#f0a820'; ctx.fillRect(-9, -9, 18, 18); ctx.restore();
+    }
+    ctx.fillStyle = '#f0a820';
+    ctx.font = `900 14px ${FONT}`;
+    ctx.textBaseline = 'middle';
+    ctx.fillText('KDMR MEDIA', 98, fy);
+    ctx.fillStyle = '#2c1e00';
+    ctx.font = `9px ${FONT}`;
+    ctx.fillText('Cultural Archive · Sabah, Borneo', 98, fy + 16);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#2c1e00';
+    ctx.font = `600 12px ${FONT}`;
+    ctx.fillText('kdmrmedia.com', 1020, fy);
+
+    // ── Download ───────────────────────────────────────────────
     const link = document.createElement('a');
     link.download = 'my-kdmr-un2026-prediction.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
+
   } catch (e) {
-    console.error('[predict] download failed:', e);
+    console.error('[predict] canvas draw failed:', e);
     alert('Could not generate image: ' + (e?.message || 'unknown error') + '\n\nPlease screenshot the page as a fallback.');
   } finally {
-    // Restore original src values and revoke blob URLs
-    blobMap.forEach(({ original, blobUrl }, img) => {
-      img.src = original;
-      URL.revokeObjectURL(blobUrl);
-    });
-
     btn.disabled = false;
     btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> Download My Prediction`;
   }
