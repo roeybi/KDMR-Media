@@ -391,6 +391,31 @@
         .slot-third  { flex: 0 0 27%; }
         .podium-top { gap: 5px; }
       }
+      /* ── Capture Area (live poster) ─────────────────── */
+      #captureArea {
+        max-width: 420px; margin: 0 auto;
+        padding: 22px 18px 18px;
+        border-radius: 12px;
+        position: relative; overflow: hidden;
+        background: #1A1612; color: #F3EDDF;
+        transition: background 0.35s, color 0.35s;
+      }
+      /* Scale podium to fit portrait width inside captureArea */
+      #captureArea .slot-first  { flex: 0 0 44%; }
+      #captureArea .slot-second { flex: 0 0 28%; }
+      #captureArea .slot-third  { flex: 0 0 28%; }
+      #captureArea .podium-top  { gap: 5px; }
+      #captureArea .podium-bottom { gap: 5px; }
+      #captureArea .stage-eyebrow { margin-bottom: 5px; }
+      #captureArea .stage-title   { font-size: 0.9rem; margin-bottom: 12px; }
+      #captureArea .platform-1 { height: 34px; }
+      #captureArea .platform-2 { height: 24px; }
+      #captureArea .platform-3 { height: 18px; }
+      #captureArea .platform-block { font-size: 0.5rem; }
+      /* Controls wrapper — below captureArea, aligned to same width */
+      .capture-controls {
+        max-width: 420px; margin: 20px auto 0;
+      }
     </style>
   </head>
   <body style="background:#0a0a0a;color:#f0f0f0;">
@@ -456,124 +481,138 @@
       </div>
     </section>
 
-    <!-- ── Stage / Podium ────────────────────────────────────── -->
-    <section style="background:#080808;padding:40px 0 0;">
-      <div class="stage-section">
-        <div class="stage-eyebrow">My Prediction Stage</div>
-        <h2 class="stage-title">Place your Top 7</h2>
+    <!-- ── Stage + Controls ──────────────────────────────────── -->
+    <section style="background:#0a0a0a;padding:36px 0 40px;">
+      <div style="max-width:900px;margin:0 auto;padding:0 16px;">
 
-        <div class="instruction-pill">
+        <!-- ── CAPTURE AREA: the live poster that gets screenshot ── -->
+        <div id="captureArea">
+
+          <!-- Poster title (live-updated by name input) -->
+          <div style="text-align:center;margin-bottom:16px;">
+            <div style="font-size:0.5rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;opacity:0.45;margin-bottom:5px;">Unduk Ngadau 2026</div>
+            <h2 id="predictionTitle" style="margin:0;font-size:1.25rem;font-weight:900;letter-spacing:-0.03em;line-height:1.1;">My Top 7 Prediction</h2>
+          </div>
+
+          <div class="stage-eyebrow">My Prediction Stage</div>
+
+          <!-- Top 3: podium layout -->
+          <div class="podium-top">
+            <!-- 2nd -->
+            <div class="podium-platform slot-second" style="width:100%;">
+              <div class="slot slot-second" id="slot-2" data-rank="2">
+                <div class="slot-inner" id="slot-inner-2">
+                  <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                    <div class="slot-empty-icon">👑</div>
+                    <div class="slot-empty-label">2nd</div>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-block platform-2" style="width:100%;">2ND</div>
+            </div>
+
+            <!-- 1st -->
+            <div class="podium-platform slot-first" style="width:100%;">
+              <div class="slot slot-first" id="slot-1" data-rank="1">
+                <div class="slot-inner" id="slot-inner-1">
+                  <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                    <div class="slot-empty-icon">🏆</div>
+                    <div class="slot-empty-label">1st — Champion</div>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-block platform-1" style="width:100%;">CHAMPION</div>
+            </div>
+
+            <!-- 3rd -->
+            <div class="podium-platform slot-third" style="width:100%;">
+              <div class="slot slot-third" id="slot-3" data-rank="3">
+                <div class="slot-inner" id="slot-inner-3">
+                  <div class="slot-empty-content" style="aspect-ratio:3/4;">
+                    <div class="slot-empty-icon">🥉</div>
+                    <div class="slot-empty-label">3rd</div>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-block platform-3" style="width:100%;">3RD</div>
+            </div>
+          </div>
+
+          <!-- Bottom 4 -->
+          <div class="podium-bottom" style="margin-top:5px;">
+            <div class="slot slot-lower" id="slot-4" data-rank="4">
+              <div class="slot-inner" id="slot-inner-4">
+                <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                  <div class="slot-empty-icon">✨</div>
+                  <div class="slot-empty-label">4th</div>
+                </div>
+              </div>
+            </div>
+            <div class="slot slot-lower" id="slot-5" data-rank="5">
+              <div class="slot-inner" id="slot-inner-5">
+                <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                  <div class="slot-empty-icon">✨</div>
+                  <div class="slot-empty-label">5th</div>
+                </div>
+              </div>
+            </div>
+            <div class="slot slot-lower" id="slot-6" data-rank="6">
+              <div class="slot-inner" id="slot-inner-6">
+                <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                  <div class="slot-empty-icon">✨</div>
+                  <div class="slot-empty-label">6th</div>
+                </div>
+              </div>
+            </div>
+            <div class="slot slot-lower" id="slot-7" data-rank="7">
+              <div class="slot-inner" id="slot-inner-7">
+                <div class="slot-empty-content" style="aspect-ratio:2/3;">
+                  <div class="slot-empty-icon">✨</div>
+                  <div class="slot-empty-label">7th</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- In-poster footer branding -->
+          <div style="text-align:center;margin-top:14px;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.3;">kdmrmedia.com/predict</div>
+
+        </div><!-- /#captureArea -->
+
+        <!-- ── Instruction pill (outside poster) ── -->
+        <div class="instruction-pill" style="margin:16px auto 0;max-width:420px;">
           <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <span>Tap a contestant below, then tap a <strong>stage slot</strong> to place them. Tap the × to remove.</span>
+          <span>Tap a contestant below, then tap a <strong>stage slot</strong> to place them. Tap × to remove.</span>
         </div>
 
-        <!-- Top 3: podium layout -->
-        <div class="podium-top">
-          <!-- 2nd -->
-          <div class="podium-platform slot-second" style="width:100%;">
-            <div class="slot slot-second" id="slot-2" data-rank="2">
-              <div class="slot-inner" id="slot-inner-2">
-                <div class="slot-empty-content" style="aspect-ratio:3/4;">
-                  <div class="slot-empty-icon">👑</div>
-                  <div class="slot-empty-label">2nd</div>
-                </div>
-              </div>
-            </div>
-            <div class="platform-block platform-2" style="width:100%;">2ND</div>
+        <!-- ── Controls: name + theme (outside poster) ── -->
+        <div class="capture-controls">
+
+          <!-- Name input -->
+          <div style="margin-bottom:18px;">
+            <label for="predictionName" style="display:block;font-size:0.72rem;font-weight:600;color:#666;margin-bottom:8px;letter-spacing:0.02em;">
+              Enter your name <span style="color:#444;">(Optional)</span>
+            </label>
+            <input id="predictionName" type="text" class="name-input"
+                   placeholder="e.g., Remy"
+                   autocomplete="off" autocorrect="off" spellcheck="false" />
           </div>
 
-          <!-- 1st -->
-          <div class="podium-platform slot-first" style="width:100%;">
-            <div class="slot slot-first" id="slot-1" data-rank="1">
-              <div class="slot-inner" id="slot-inner-1">
-                <div class="slot-empty-content" style="aspect-ratio:3/4;">
-                  <div class="slot-empty-icon">🏆</div>
-                  <div class="slot-empty-label">1st — Champion</div>
-                </div>
-              </div>
+          <!-- Theme buttons -->
+          <div>
+            <div style="font-size:0.72rem;font-weight:600;color:#666;margin-bottom:10px;letter-spacing:0.02em;">Theme</div>
+            <div id="themeButtons" style="display:flex;flex-wrap:wrap;gap:8px;">
+              <button class="theme-btn" data-theme="Bobohizan">Bobohizan</button>
+              <button class="theme-btn" data-theme="Linangkit">Linangkit</button>
+              <button class="theme-btn" data-theme="Sirih">Sirih</button>
+              <button class="theme-btn" data-theme="Padi">Padi</button>
+              <button class="theme-btn" data-theme="Hutan">Hutan</button>
             </div>
-            <div class="platform-block platform-1" style="width:100%;">CHAMPION</div>
+            <div id="themePreview" style="margin-top:10px;height:4px;width:160px;border-radius:2px;background:#1A1612;"></div>
           </div>
 
-          <!-- 3rd -->
-          <div class="podium-platform slot-third" style="width:100%;">
-            <div class="slot slot-third" id="slot-3" data-rank="3">
-              <div class="slot-inner" id="slot-inner-3">
-                <div class="slot-empty-content" style="aspect-ratio:3/4;">
-                  <div class="slot-empty-icon">🥉</div>
-                  <div class="slot-empty-label">3rd</div>
-                </div>
-              </div>
-            </div>
-            <div class="platform-block platform-3" style="width:100%;">3RD</div>
-          </div>
-        </div>
+        </div><!-- /.capture-controls -->
 
-        <!-- Bottom 4 -->
-        <div class="podium-bottom">
-          <div class="slot slot-lower" id="slot-4" data-rank="4">
-            <div class="slot-inner" id="slot-inner-4">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
-                <div class="slot-empty-icon">✨</div>
-                <div class="slot-empty-label">4th</div>
-              </div>
-            </div>
-          </div>
-          <div class="slot slot-lower" id="slot-5" data-rank="5">
-            <div class="slot-inner" id="slot-inner-5">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
-                <div class="slot-empty-icon">✨</div>
-                <div class="slot-empty-label">5th</div>
-              </div>
-            </div>
-          </div>
-          <div class="slot slot-lower" id="slot-6" data-rank="6">
-            <div class="slot-inner" id="slot-inner-6">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
-                <div class="slot-empty-icon">✨</div>
-                <div class="slot-empty-label">6th</div>
-              </div>
-            </div>
-          </div>
-          <div class="slot slot-lower" id="slot-7" data-rank="7">
-            <div class="slot-inner" id="slot-inner-7">
-              <div class="slot-empty-content" style="aspect-ratio:2/3;">
-                <div class="slot-empty-icon">✨</div>
-                <div class="slot-empty-label">7th</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Personalization: Name + Theme ───────────────────── -->
-    <section class="personalize-section">
-      <div class="personalize-inner">
-        <div class="personalize-label">Personalize Your Card <span></span></div>
-
-        <!-- Name input -->
-        <div style="margin-bottom:22px;">
-          <label for="predictionName" style="display:block;font-size:0.72rem;font-weight:600;color:#666;margin-bottom:8px;letter-spacing:0.02em;">
-            Enter your name <span style="color:#444;">(Optional)</span>
-          </label>
-          <input id="predictionName" type="text" class="name-input"
-                 placeholder="e.g., Remy"
-                 autocomplete="off" autocorrect="off" spellcheck="false" />
-        </div>
-
-        <!-- Theme buttons -->
-        <div>
-          <div style="font-size:0.72rem;font-weight:600;color:#666;margin-bottom:10px;letter-spacing:0.02em;">Theme</div>
-          <div id="themeButtons" style="display:flex;flex-wrap:wrap;gap:8px;">
-            <button class="theme-btn" data-theme="Bobohizan">Bobohizan</button>
-            <button class="theme-btn" data-theme="Linangkit">Linangkit</button>
-            <button class="theme-btn" data-theme="Sirih">Sirih</button>
-            <button class="theme-btn" data-theme="Padi">Padi</button>
-            <button class="theme-btn" data-theme="Hutan">Hutan</button>
-          </div>
-          <div id="themePreview" style="margin-top:10px;height:4px;width:160px;border-radius:2px;background:#1A1612;"></div>
-        </div>
       </div>
     </section>
 
@@ -656,10 +695,9 @@
       </div>
     </footer>
 
-    <!-- ── Hidden Share Card Template (4:5 — 1080×1350) ───── -->
-    <!-- Fixed off-screen so html2canvas sees fully-painted CSS — never display:none -->
-    <div style="position:fixed;top:0;left:-9999px;z-index:-1;overflow:hidden;" aria-hidden="true">
-    <div id="shareCardTemplate"
+    <!-- shareCardTemplate removed — screenshot taken directly of #captureArea -->
+    <div id="shareCardTemplate" style="display:none;" aria-hidden="true">
+    <div
          style="width:1080px;height:1350px;
                 background:#1A1612;color:#F3EDDF;font-family:'Helvetica Neue',Arial,sans-serif;
                 display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;">
