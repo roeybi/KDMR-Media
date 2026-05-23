@@ -42,10 +42,10 @@ html, body { margin: 0; padding: 0; background: #0d0d0d; color: #eee; font-famil
 .topbar {
   position: fixed; top: 0; left: 0; right: 0; height: 48px;
   background: #090909; border-bottom: 1px solid #181818;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center;
   padding: 0 20px; z-index: 1000;
 }
-.topbar-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.topbar-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; }
 .topbar-logo svg { width: 26px; height: 26px; flex-shrink: 0; }
 .topbar-logo span { font-family: var(--ff-sans); font-weight: 700; font-size: 13px; color: #ddd; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
 .topbar-back {
@@ -500,10 +500,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </svg>
     <span style="display:flex;flex-direction:column;line-height:1.1;"><span style="font-size:13px;">KDMR <span style="color:#f0a820;">·</span></span><span style="font-size:8.5px;color:#aaa;letter-spacing:0.06em;font-weight:700;">MEDIA</span></span>
   </a>
-  <a href="/live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.68rem;font-weight:700;padding:5px 10px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Watch Live & Vote</a>
-  <button onclick="var m=document.getElementById('predictMenu');m.style.display=m.style.display==='block'?'none':'block'" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;align-items:center;flex-shrink:0;" aria-label="Menu">
-    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-  </button>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a href="/live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.68rem;font-weight:700;padding:5px 10px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Watch Live & Vote</a>
+    <button onclick="var m=document.getElementById('predictMenu');m.style.display=m.style.display==='block'?'none':'block'" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;align-items:center;flex-shrink:0;" aria-label="Menu">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
 
 <!-- Predict page mobile menu -->
 <div id="predictMenu" style="display:none;position:fixed;top:52px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid #1e1e1e;padding:12px 16px;z-index:49;">
