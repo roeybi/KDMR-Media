@@ -288,14 +288,10 @@ function applyTheme(themeName) {
   if (!t) return;
   currentTheme = themeName;
 
-  const template = document.getElementById('shareCardTemplate');
-  if (template) {
-    template.style.background = t.bg;
-    template.style.color = t.text;
-    template.style.fontFamily = t.font;
-    template.querySelectorAll('.sc-overlay').forEach(el => {
-      el.style.background = t.overlay;
-    });
+  const captureArea = document.getElementById('captureArea');
+  if (captureArea) {
+    captureArea.style.background = t.bg;
+    captureArea.style.color = t.text;
   }
 
   document.querySelectorAll('.theme-btn').forEach(btn => {
@@ -326,52 +322,14 @@ function setupNameInput() {
   if (!input) return;
   input.addEventListener('input', () => {
     const name = input.value.trim();
-    const titleEl = document.getElementById('sc-title');
+    const titleEl = document.getElementById('predictionTitle');
     if (titleEl) {
-      titleEl.textContent = name ? `Predicted by ${name}` : 'MY TOP 7 PREDICTION';
+      titleEl.textContent = name ? `Predicted by ${name}` : 'My Top 7 Prediction';
     }
   });
 }
 
-// ─── SHARE CARD TEMPLATE — populate on demand ─────────────────────────────────
-
-const DEFAULT_NAMES = {
-  1: 'Champion', 2: '2nd Runner-Up', 3: '3rd Runner-Up',
-  4: '4th Place', 5: '5th Place', 6: '6th Place', 7: '7th Place',
-};
-const DEFAULT_ICONS = { 1: '🏆', 2: '👑', 3: '🥉', 4: '✦', 5: '✦', 6: '✦', 7: '✦' };
-
-function populateShareTemplate() {
-  const name = document.getElementById('predictionName')?.value?.trim() || '';
-  const titleEl = document.getElementById('sc-title');
-  if (titleEl) titleEl.textContent = name ? `Predicted by ${name}` : 'MY TOP 7 PREDICTION';
-
-  RANKS.forEach(rank => {
-    const c = slots[rank];
-    const photoEl  = document.getElementById(`sc-photo-${rank}`);
-    const initEl   = document.getElementById(`sc-init-${rank}`);
-    const nameEl   = document.getElementById(`sc-name-${rank}`);
-    const branchEl = document.getElementById(`sc-branch-${rank}`);
-    if (!photoEl) return;
-
-    if (c && !isPlaceholder(c.imageUrl)) {
-      photoEl.src = c.imageUrl;
-      photoEl.style.display = 'block';
-      if (initEl) initEl.style.display = 'none';
-    } else {
-      photoEl.src = '';
-      photoEl.style.display = 'none';
-      if (initEl) {
-        initEl.textContent = c ? getInitials(c.name) : DEFAULT_ICONS[rank];
-        initEl.style.display = 'flex';
-      }
-    }
-    if (nameEl)   nameEl.textContent   = c ? c.name        : DEFAULT_NAMES[rank];
-    if (branchEl) branchEl.textContent = c ? branchLabel(c) : '—';
-  });
-}
-
-// ─── DOWNLOAD — html2canvas ───────────────────────────────────────────────────
+// ─── DOWNLOAD — html2canvas on the visible #captureArea ───────────────────────
 
 function setupDownload() {
   document.getElementById('downloadBtn').addEventListener('click', downloadPrediction);
@@ -382,55 +340,21 @@ async function downloadPrediction() {
   btn.disabled = true;
   btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M4 4l16 16"/></svg> Generating…`;
 
-  populateShareTemplate();
-
-  const template = document.getElementById('shareCardTemplate');
-
-  // Wait for every visible <img> in the template to fully load, then add a
-  // 800 ms paint-settle buffer before handing the DOM to html2canvas.
-  const imgs = [...template.querySelectorAll('img')]
-    .filter(img => img.src && img.style.display !== 'none');
-  await Promise.all(
-    imgs.map(img =>
-      img.complete
-        ? Promise.resolve()
-        : new Promise(r => { img.onload = r; img.onerror = r; })
-    )
-  );
-  await new Promise(r => setTimeout(r, 800));
-
-  const tryRender = (scale) =>
-    Promise.race([
-      html2canvas(template, {
-        scale,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: null,
-        logging: false,
-        imageTimeout: 10000,
-      }),
-      new Promise((_, rej) =>
-        setTimeout(() => rej(new Error(`html2canvas scale:${scale} timed out`)), 22000)
-      ),
-    ]);
-
   try {
-    let canvas;
-    try {
-      canvas = await tryRender(3);
-    } catch (e1) {
-      console.warn('[predict] scale:3 failed, retrying scale:1 —', e1.message);
-      canvas = await tryRender(1);
-    }
+    const canvas = await html2canvas(document.querySelector('#captureArea'), {
+      scale: 3,
+      useCORS: true,
+      backgroundColor: null,
+    });
 
     const link = document.createElement('a');
-    link.download = 'my-un2026-prediction.png';
+    link.download = 'my-prediction.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
 
   } catch (e) {
     console.error('[predict] download failed:', e);
-    alert('Could not generate image.\n\n' + (e?.message || 'Unknown error') + '\n\nPlease screenshot the page instead.');
+    alert('Could not generate image.\n\n' + (e?.message || 'Unknown error') + '\n\nTip: screenshot the page as a fallback.');
   } finally {
     btn.disabled = false;
     btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> Download My Prediction`;
