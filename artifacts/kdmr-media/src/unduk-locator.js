@@ -506,7 +506,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="262" cy="30.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-055_feyrashandy-hanlin-hanis_2026-05-23T15-14-17_clean.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -516,7 +516,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="254.3" cy="27" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-056_lora-derlina-lisa-jusley_2026-05-23T15-14-37_clean.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -526,7 +526,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="281.2" cy="36.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-057_jean-christzabeth-yusevender_2026-05-23T14-43-18_clean.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -536,7 +536,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="266.7" cy="37.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-058_aelvereny-vahidin_2026-05-23T15-21-48_clean.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -546,7 +546,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="273.6" cy="32.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-059_criszelbellkah-lorris_2026-05-22T17-13-07_clean.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -556,7 +556,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="230.3" cy="64.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-036_liane-melve-grace-lias_2026-05-23T12-41-09_clean.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -566,7 +566,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="225.1" cy="71.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.1" cy="71.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-037_joyce-nia-david_2026-05-23T12-42-11_clean.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.1" cy="71.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -576,7 +576,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.1" cy="57.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-038_essmerrellda-cafry_2026-05-23T16-02-03_clean.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -586,7 +586,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="238.3" cy="49.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-039_natalie-ally-hepeni_2026-05-23T16-04-34_clean.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -596,7 +596,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.7" cy="57.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-040_felecity-chen-sing-yee_2026-05-23T12-41-43_clean.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -606,7 +606,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="239.2" cy="64" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.2" cy="64" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-041_gadrette-gregory_2026-05-23T14-47-12_clean.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.2" cy="64" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -616,7 +616,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="237.7" cy="72.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="237.7" cy="72.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-042_viviyana-jenny_2026-05-23T15-52-16_clean.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="237.7" cy="72.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -626,7 +626,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="231" cy="77.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-043_amber-weysha-walter-john_2026-05-23T14-33-34_clean.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -636,7 +636,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="241.8" cy="42" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-044_juje-elor-francis_2026-05-23T08-38-54_clean.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -646,7 +646,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="257.7" cy="38.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-045_evyanarrey-larry_2026-05-23T08-43-14_clean.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -656,7 +656,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="249.2" cy="37.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.2" cy="37.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-060_althea-tan-pin-yan_2026-05-23T15-25-55_clean.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.2" cy="37.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -666,7 +666,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="224.5" cy="83.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-020_gelvia-vanessa-jenny_2026-05-23T14-48-34_clean.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -676,7 +676,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="235.3" cy="94.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-072_fedelia-viviana-venchin_2026-05-23T15-59-25_clean.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -686,7 +686,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="232.5" cy="86.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="232.5" cy="86.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-073_dorna-mayra-michael_2026-05-23T14-57-33_clean.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="232.5" cy="86.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -696,7 +696,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.7" cy="100.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-074_lorna-breetney-johnny_2026-05-23T14-55-13_clean.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -706,7 +706,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.3" cy="92" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-075_hyzlensiska-verron-johnny_2026-05-23T14-55-41_clean.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -716,7 +716,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="234.7" cy="103.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.7" cy="103.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-076_hilda-jaynissa-godwin_2026-05-23T14-28-24_clean.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.7" cy="103.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -726,7 +726,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="255.1" cy="46.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-035_christebell-masius_2026-05-23T14-22-32_clean.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -736,7 +736,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.3" cy="56.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-046_catsween-su-sun-ping_2026-05-23T08-43-41_clean.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -746,7 +746,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.1" cy="90.9" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-047_edreen-lynn-edward_2026-05-23T15-58-20_clean.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -756,7 +756,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.7" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-048_alysheron-maunsiong_2026-05-23T15-58-04_clean.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -766,7 +766,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-049_natalia-jinui_2026-05-23T12-52-34_clean.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -776,7 +776,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.2" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-050_radila-ifa-yanie_2026-05-23T08-35-46_clean.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -786,7 +786,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.7" cy="108.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-051_venica-tuboh_2026-05-23T08-34-49_clean.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -796,7 +796,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.4" cy="103.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-052_myra-evana-robert_2026-05-23T12-54-58_clean.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -806,7 +806,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="256.3" cy="108.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.3" cy="108.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-053_sahira-samson_2026-05-23T14-52-32_clean.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.3" cy="108.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -816,7 +816,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="261.9" cy="115.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="261.9" cy="115.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-054_kerishine-danil_2026-05-23T14-52-17_clean.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -826,7 +826,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-034_ceelecia-reeka-mosungin_2026-05-23T14-31-38_clean.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -836,7 +836,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="294.2" cy="51.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-015_dyann-dharlla-dominic_2026-05-23T16-01-14_clean.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -846,7 +846,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="290.1" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-061_candycyci-liakim_2026-05-23T14-50-05_clean.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -856,7 +856,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292.2" cy="60.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-062_raraa-cyra-eva-bella-stephen_2026-05-23T08-57-10_clean.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -876,7 +876,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="307" cy="63.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-064_vrenda-joan-taji_2026-05-23T13-02-40_clean.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -886,7 +886,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="310.4" cy="72.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-065_ally-denis_2026-05-23T13-02-17_clean.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -896,7 +896,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-078_anne-theresse-justin-sentian_2026-05-22T18-25-15_clean.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -906,7 +906,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="311.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="311.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-068_caesyzizi-liakim_2026-05-23T15-02-29_clean.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="311.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -916,7 +916,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="314.1" cy="88.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-069_mary-an-p-calica_2026-05-23T08-45-29_clean.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -926,7 +926,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="317.8" cy="96.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-070_rachel-justin_2026-05-23T15-07-43_clean.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -936,7 +936,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="321.8" cy="103.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-071_adylee-arisen_2026-05-23T14-30-00_clean.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -946,7 +946,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-066_elvisa-edna-robert_2026-05-23T09-04-28_clean.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -956,7 +956,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="308.2" cy="95.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="308.2" cy="95.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-067_christine-dionysius_2026-05-23T08-59-38_clean.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="308.2" cy="95.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
