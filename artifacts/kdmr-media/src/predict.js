@@ -204,15 +204,22 @@ function onSlotClick(rank) {
 }
 
 function placeInSlot(rank, contestant) {
-  RANKS.forEach(r => { if (slots[r] && slots[r].id === contestant.id) slots[r] = null; });
+  RANKS.forEach(r => {
+    if (slots[r] && slots[r].id === contestant.id) {
+      slots[r] = null;
+      updatePosterSlot(r, null);
+    }
+  });
   slots[rank] = contestant;
   renderSlot(rank);
+  updatePosterSlot(rank, contestant);
   renderPool();
 }
 
 function removeFromSlot(rank) {
   slots[rank] = null;
   renderSlot(rank);
+  updatePosterSlot(rank, null);
   renderPool();
 }
 
@@ -276,9 +283,37 @@ function setupSearch() {
 
 function setupReset() {
   document.getElementById('resetBtn').addEventListener('click', () => {
-    RANKS.forEach(r => { slots[r] = null; renderSlot(r); });
+    RANKS.forEach(r => { slots[r] = null; renderSlot(r); updatePosterSlot(r, null); });
     deselect();
   });
+}
+
+// ─── POSTER SYNC ─────────────────────────────────────────────────────────────
+
+const POSTER_DEFAULT_NAMES = {
+  1: 'Champion', 2: '2nd Place', 3: '3rd Place',
+  4: '4th Place', 5: '5th Place', 6: '6th Place', 7: '7th Place',
+};
+
+function updatePosterSlot(rank, contestant) {
+  const photoEl  = document.getElementById(`ps-photo-${rank}`);
+  const emptyEl  = document.getElementById(`ps-empty-${rank}`);
+  const nameEl   = document.getElementById(`ps-name-${rank}`);
+  const branchEl = document.getElementById(`ps-branch-${rank}`);
+  if (!photoEl) return;
+
+  if (contestant && !isPlaceholder(contestant.imageUrl)) {
+    photoEl.src = contestant.imageUrl;
+    photoEl.style.display = 'block';
+    if (emptyEl) emptyEl.style.display = 'none';
+  } else {
+    photoEl.src = '';
+    photoEl.style.display = 'none';
+    if (emptyEl) emptyEl.style.display = 'flex';
+  }
+
+  if (nameEl)   nameEl.textContent   = contestant ? contestant.name  : POSTER_DEFAULT_NAMES[rank];
+  if (branchEl) branchEl.textContent = contestant ? branchLabel(contestant) : '—';
 }
 
 // ─── THEME ENGINE ─────────────────────────────────────────────────────────────
@@ -288,10 +323,10 @@ function applyTheme(themeName) {
   if (!t) return;
   currentTheme = themeName;
 
-  const captureArea = document.getElementById('captureArea');
-  if (captureArea) {
-    captureArea.style.background = t.bg;
-    captureArea.style.color = t.text;
+  const poster = document.getElementById('sharePoster');
+  if (poster) {
+    poster.style.background = t.bg;
+    poster.style.color = t.text;
   }
 
   document.querySelectorAll('.theme-btn').forEach(btn => {
@@ -322,14 +357,14 @@ function setupNameInput() {
   if (!input) return;
   input.addEventListener('input', () => {
     const name = input.value.trim();
-    const titleEl = document.getElementById('predictionTitle');
+    const titleEl = document.getElementById('posterTitle');
     if (titleEl) {
       titleEl.textContent = name ? `Predicted by ${name}` : 'My Top 7 Prediction';
     }
   });
 }
 
-// ─── DOWNLOAD — html2canvas on the visible #captureArea ───────────────────────
+// ─── DOWNLOAD — html2canvas on #sharePoster ───────────────────────────────────
 
 function setupDownload() {
   document.getElementById('downloadBtn').addEventListener('click', downloadPrediction);
@@ -341,7 +376,7 @@ async function downloadPrediction() {
   btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5M4 4l16 16"/></svg> Generating…`;
 
   try {
-    const canvas = await html2canvas(document.querySelector('#captureArea'), {
+    const canvas = await html2canvas(document.querySelector('#sharePoster'), {
       scale: 3,
       useCORS: true,
       backgroundColor: null,
