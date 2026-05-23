@@ -386,6 +386,19 @@ async function downloadPrediction() {
 
   const template = document.getElementById('shareCardTemplate');
 
+  // Wait for every visible <img> in the template to fully load, then add a
+  // 800 ms paint-settle buffer before handing the DOM to html2canvas.
+  const imgs = [...template.querySelectorAll('img')]
+    .filter(img => img.src && img.style.display !== 'none');
+  await Promise.all(
+    imgs.map(img =>
+      img.complete
+        ? Promise.resolve()
+        : new Promise(r => { img.onload = r; img.onerror = r; })
+    )
+  );
+  await new Promise(r => setTimeout(r, 800));
+
   const tryRender = (scale) =>
     Promise.race([
       html2canvas(template, {
