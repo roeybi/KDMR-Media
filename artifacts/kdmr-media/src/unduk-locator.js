@@ -500,7 +500,7 @@ export function mountLocatorHero(section) {
               <text x="0" y="-5" text-anchor="middle" font-size="3" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
 
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-055" data-name="Kudat" data-sub="KDCA Kudat · 2026" data-winner="Feyrashandy Hanlin Hanis" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-055" data-name="Kudat" data-sub="KDCA Kudat · 2026" data-winner="Feyrashandy Hanlin Hanis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-055_feyrashandy-hanlin-hanis_2026-05-23T15-14-17_clean.png">
                 <circle cx="264" cy="52" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="52" x2="262" y2="30.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -510,7 +510,7 @@ export function mountLocatorHero(section) {
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-056" data-name="Banggi" data-sub="KDCA Banggi · 2026" data-winner="Lora Derlina Lisa Jusley" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-056" data-name="Banggi" data-sub="KDCA Banggi · 2026" data-winner="Lora Derlina Lisa Jusley" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-056_lora-derlina-lisa-jusley_2026-05-23T15-14-37_clean.png">
                 <circle cx="261" cy="49" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="261" y1="49" x2="254.3" y2="27" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -520,7 +520,7 @@ export function mountLocatorHero(section) {
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-057" data-name="Pitas" data-sub="KDCA Pitas · 2026" data-winner="Jean Christzabeth Yusevender" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-057" data-name="Pitas" data-sub="KDCA Pitas · 2026" data-winner="Jean Christzabeth Yusevender" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-057_jean-christzabeth-yusevender_2026-05-23T14-43-18_clean.png">
                 <circle cx="273" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="273" y1="57" x2="281.2" y2="36.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -530,7 +530,7 @@ export function mountLocatorHero(section) {
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-058" data-name="Kota Marudu" data-sub="KDCA Kota Marudu · 2026" data-winner="Aelvereny Vahidin" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-058" data-name="Kota Marudu" data-sub="KDCA Kota Marudu · 2026" data-winner="Aelvereny Vahidin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-058_aelvereny-vahidin_2026-05-23T15-21-48_clean.png">
                 <circle cx="267" cy="59" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="267" y1="59" x2="266.7" y2="37.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -540,7 +540,7 @@ export function mountLocatorHero(section) {
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-059" data-name="Matunggong" data-sub="KDCA Matunggong · 2026" data-winner="Criszelbellkah Lorris" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-059" data-name="Matunggong" data-sub="KDCA Matunggong · 2026" data-winner="Criszelbellkah Lorris" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-059_criszelbellkah-lorris_2026-05-22T17-13-07_clean.png">
                 <circle cx="270" cy="55" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="270" y1="55" x2="273.6" y2="32.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -550,7 +550,7 @@ export function mountLocatorHero(section) {
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-036" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Liane Melve Grace Lias" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-036" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Liane Melve Grace Lias" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-036_liane-melve-grace-lias_2026-05-23T12-41-09_clean.png">
                 <circle cx="252" cy="69" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="252" y1="69" x2="230.3" y2="64.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -560,7 +560,7 @@ export function mountLocatorHero(section) {
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-037" data-name="Tanjung Aru" data-sub="KDCA Tanjung Aru · 2026" data-winner="Joyce Nia David" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-037" data-name="Tanjung Aru" data-sub="KDCA Tanjung Aru · 2026" data-winner="Joyce Nia David" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-037_joyce-nia-david_2026-05-23T12-42-11_clean.png">
                 <circle cx="252" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="252" y1="72" x2="225.1" y2="71.5" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="225.1" cy="71.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -570,7 +570,7 @@ export function mountLocatorHero(section) {
                   <circle cx="225.1" cy="71.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-038" data-name="Inanam" data-sub="KDCA Inanam · 2026" data-winner="Essmerrellda Cafry" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-038" data-name="Inanam" data-sub="KDCA Inanam · 2026" data-winner="Essmerrellda Cafry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-038_essmerrellda-cafry_2026-05-23T16-02-03_clean.png">
                 <circle cx="254" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="254" y1="66" x2="234.1" y2="57.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -580,7 +580,7 @@ export function mountLocatorHero(section) {
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-039" data-name="Karambunai" data-sub="KDCA Karambunai · 2026" data-winner="Natalie Ally Hepeni" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-039" data-name="Karambunai" data-sub="KDCA Karambunai · 2026" data-winner="Natalie Ally Hepeni" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-039_natalie-ally-hepeni_2026-05-23T16-04-34_clean.png">
                 <circle cx="256" cy="64" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="64" x2="238.3" y2="49.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -590,7 +590,7 @@ export function mountLocatorHero(section) {
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-040" data-name="KDCA Bandaraya" data-sub="KDCA KDCA Bandaraya · 2026" data-winner="Felecity Chen Sing Yee" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-040" data-name="KDCA Bandaraya" data-sub="KDCA KDCA Bandaraya · 2026" data-winner="Felecity Chen Sing Yee" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-040_felecity-chen-sing-yee_2026-05-23T12-41-43_clean.png">
                 <circle cx="251" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="68" x2="225.7" y2="57.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -600,7 +600,7 @@ export function mountLocatorHero(section) {
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-041" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Gadrette Gregory" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-041" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Gadrette Gregory" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-041_gadrette-gregory_2026-05-23T14-47-12_clean.png">
                 <circle cx="256" cy="71" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="71" x2="239.2" y2="64" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="239.2" cy="64" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -610,7 +610,7 @@ export function mountLocatorHero(section) {
                   <circle cx="239.2" cy="64" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-042" data-name="Kapayan" data-sub="KDCA Kapayan · 2026" data-winner="Viviyana Jenny" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-042" data-name="Kapayan" data-sub="KDCA Kapayan · 2026" data-winner="Viviyana Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-042_viviyana-jenny_2026-05-23T15-52-16_clean.png">
                 <circle cx="257" cy="73" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="257" y1="73" x2="237.7" y2="72.4" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="237.7" cy="72.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -620,7 +620,7 @@ export function mountLocatorHero(section) {
                   <circle cx="237.7" cy="72.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-043" data-name="Putatan" data-sub="KDCA Putatan · 2026" data-winner="Amber Weysha Walter John" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-043" data-name="Putatan" data-sub="KDCA Putatan · 2026" data-winner="Amber Weysha Walter John" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-043_amber-weysha-walter-john_2026-05-23T14-33-34_clean.png">
                 <circle cx="253" cy="75" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="253" y1="75" x2="231" y2="77.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -630,7 +630,7 @@ export function mountLocatorHero(section) {
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-044" data-name="Tuaran" data-sub="KDCA Tuaran · 2026" data-winner="Juje Elor Francis" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-044" data-name="Tuaran" data-sub="KDCA Tuaran · 2026" data-winner="Juje Elor Francis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-044_juje-elor-francis_2026-05-23T08-38-54_clean.png">
                 <circle cx="256" cy="62" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="62" x2="241.8" y2="42" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -640,7 +640,7 @@ export function mountLocatorHero(section) {
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-045" data-name="Tamparuli" data-sub="KDCA Tamparuli · 2026" data-winner="Evyanarrey Larry" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-045" data-name="Tamparuli" data-sub="KDCA Tamparuli · 2026" data-winner="Evyanarrey Larry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-045_evyanarrey-larry_2026-05-23T08-43-14_clean.png">
                 <circle cx="263" cy="60" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="60" x2="257.7" y2="38.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -650,7 +650,7 @@ export function mountLocatorHero(section) {
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-060" data-name="Kota Belud" data-sub="KDCA Kota Belud · 2026" data-winner="Althea Tan Pin Yan" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-060" data-name="Kota Belud" data-sub="KDCA Kota Belud · 2026" data-winner="Althea Tan Pin Yan" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-060_althea-tan-pin-yan_2026-05-23T15-25-55_clean.png">
                 <circle cx="259" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="259" y1="57" x2="249.2" y2="37.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="249.2" cy="37.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -660,7 +660,7 @@ export function mountLocatorHero(section) {
                   <circle cx="249.2" cy="37.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-020" data-name="Papar" data-sub="KDCA Papar · 2026" data-winner="Gelvia Vanessa Jenny" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-020" data-name="Papar" data-sub="KDCA Papar · 2026" data-winner="Gelvia Vanessa Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-020_gelvia-vanessa-jenny_2026-05-23T14-48-34_clean.png">
                 <circle cx="251" cy="77" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="77" x2="224.5" y2="83.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -670,7 +670,7 @@ export function mountLocatorHero(section) {
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-072" data-name="Beaufort" data-sub="KDCA Beaufort · 2026" data-winner="Fedelia Viviana Venchin" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-072" data-name="Beaufort" data-sub="KDCA Beaufort · 2026" data-winner="Fedelia Viviana Venchin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-072_fedelia-viviana-venchin_2026-05-23T15-59-25_clean.png">
                 <circle cx="251" cy="82" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="82" x2="235.3" y2="94.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -680,7 +680,7 @@ export function mountLocatorHero(section) {
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-073" data-name="Membakut" data-sub="KDCA Membakut · 2026" data-winner="Dorna Mayra Michael" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-073" data-name="Membakut" data-sub="KDCA Membakut · 2026" data-winner="Dorna Mayra Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-073_dorna-mayra-michael_2026-05-23T14-57-33_clean.png">
                 <circle cx="251" cy="79" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="79" x2="232.5" y2="86.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="232.5" cy="86.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -690,7 +690,7 @@ export function mountLocatorHero(section) {
                   <circle cx="232.5" cy="86.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-074" data-name="Kuala Penyu" data-sub="KDCA Kuala Penyu · 2026" data-winner="Lorna Breetney Johnny" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-074" data-name="Kuala Penyu" data-sub="KDCA Kuala Penyu · 2026" data-winner="Lorna Breetney Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-074_lorna-breetney-johnny_2026-05-23T14-55-13_clean.png">
                 <circle cx="249" cy="85" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="249" y1="85" x2="226.7" y2="100.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -700,7 +700,7 @@ export function mountLocatorHero(section) {
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-075" data-name="Menumbok" data-sub="KDCA Menumbok · 2026" data-winner="Hyzlensiska Verron Johnny" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-075" data-name="Menumbok" data-sub="KDCA Menumbok · 2026" data-winner="Hyzlensiska Verron Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-075_hyzlensiska-verron-johnny_2026-05-23T14-55-41_clean.png">
                 <circle cx="248" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="248" y1="83" x2="226.3" y2="92" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -710,7 +710,7 @@ export function mountLocatorHero(section) {
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-076" data-name="Sipitang" data-sub="KDCA Sipitang · 2026" data-winner="Hilda Jaynissa Godwin" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-076" data-name="Sipitang" data-sub="KDCA Sipitang · 2026" data-winner="Hilda Jaynissa Godwin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-076_hilda-jaynissa-godwin_2026-05-23T14-28-24_clean.png">
                 <circle cx="249" cy="88" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="249" y1="88" x2="234.7" y2="103.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="234.7" cy="103.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -720,7 +720,7 @@ export function mountLocatorHero(section) {
                   <circle cx="234.7" cy="103.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-035_christebell-masius_2026-05-23T14-22-32_clean.png">
                 <circle cx="264" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="66" x2="255.1" y2="46.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -730,7 +730,7 @@ export function mountLocatorHero(section) {
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-046" data-name="Kiulu" data-sub="KDCA Kiulu · 2026" data-winner="Catsween Su Sun Ping" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-046" data-name="Kiulu" data-sub="KDCA Kiulu · 2026" data-winner="Catsween Su Sun Ping" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-046_catsween-su-sun-ping_2026-05-23T08-43-41_clean.png">
                 <circle cx="260" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="260" y1="68" x2="244.3" y2="56.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -740,7 +740,7 @@ export function mountLocatorHero(section) {
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-047" data-name="Keningau" data-sub="KDCA Keningau · 2026" data-winner="Edreen Lynn Edward" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-047" data-name="Keningau" data-sub="KDCA Keningau · 2026" data-winner="Edreen Lynn Edward" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-047_edreen-lynn-edward_2026-05-23T15-58-20_clean.png">
                 <circle cx="260" cy="79" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="260" y1="79" x2="244.1" y2="90.9" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -750,7 +750,7 @@ export function mountLocatorHero(section) {
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-048" data-name="Bingkor" data-sub="KDCA Bingkor · 2026" data-winner="Alysheron Maunsiong" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-048" data-name="Bingkor" data-sub="KDCA Bingkor · 2026" data-winner="Alysheron Maunsiong" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-048_alysheron-maunsiong_2026-05-23T15-58-04_clean.png">
                 <circle cx="263" cy="81" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="81" x2="256.7" y2="99.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -760,7 +760,7 @@ export function mountLocatorHero(section) {
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-049" data-name="Tambunan" data-sub="KDCA Tambunan · 2026" data-winner="Natalia Jinui" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-049" data-name="Tambunan" data-sub="KDCA Tambunan · 2026" data-winner="Natalia Jinui" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-049_natalia-jinui_2026-05-23T12-52-34_clean.png">
                 <circle cx="259" cy="74" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="259" y1="74" x2="239.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -770,7 +770,7 @@ export function mountLocatorHero(section) {
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-050" data-name="Tenom" data-sub="KDCA Tenom · 2026" data-winner="Radila Ifa Yanie" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-050" data-name="Tenom" data-sub="KDCA Tenom · 2026" data-winner="Radila Ifa Yanie" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-050_radila-ifa-yanie_2026-05-23T08-35-46_clean.png">
                 <circle cx="258" cy="84" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="258" y1="84" x2="242.2" y2="99.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -780,7 +780,7 @@ export function mountLocatorHero(section) {
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-051" data-name="Kemabong" data-sub="KDCA Kemabong · 2026" data-winner="Venica Tuboh" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-051" data-name="Kemabong" data-sub="KDCA Kemabong · 2026" data-winner="Venica Tuboh" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-051_venica-tuboh_2026-05-23T08-34-49_clean.png">
                 <circle cx="257" cy="87" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="257" y1="87" x2="242.7" y2="108.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -790,7 +790,7 @@ export function mountLocatorHero(section) {
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-052" data-name="Sook" data-sub="KDCA Sook · 2026" data-winner="Myra Evana Robert" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-052" data-name="Sook" data-sub="KDCA Sook · 2026" data-winner="Myra Evana Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-052_myra-evana-robert_2026-05-23T12-54-58_clean.png">
                 <circle cx="261" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="261" y1="83" x2="249.4" y2="103.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -800,7 +800,7 @@ export function mountLocatorHero(section) {
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-053" data-name="Nabawan" data-sub="KDCA Nabawan · 2026" data-winner="Sahira Samson" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-053" data-name="Nabawan" data-sub="KDCA Nabawan · 2026" data-winner="Sahira Samson" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-053_sahira-samson_2026-05-23T14-52-32_clean.png">
                 <circle cx="263" cy="89" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="89" x2="256.3" y2="108.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="256.3" cy="108.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -810,7 +810,7 @@ export function mountLocatorHero(section) {
                   <circle cx="256.3" cy="108.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-054" data-name="Pagalungan" data-sub="KDCA Pagalungan · 2026" data-winner="Kerishine Danil" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-054" data-name="Pagalungan" data-sub="KDCA Pagalungan · 2026" data-winner="Kerishine Danil" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-054_kerishine-danil_2026-05-23T14-52-17_clean.png">
                 <circle cx="264" cy="92" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="92" x2="261.9" y2="115.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="261.9" cy="115.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -820,7 +820,7 @@ export function mountLocatorHero(section) {
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-034_ceelecia-reeka-mosungin_2026-05-23T14-31-38_clean.png">
                 <circle cx="287" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="287" y1="57" x2="300.6" y2="46.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -830,7 +830,7 @@ export function mountLocatorHero(section) {
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-015" data-name="Beluran" data-sub="KDCA Beluran · 2026" data-winner="Dyann Dharlla Dominic" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-015" data-name="Beluran" data-sub="KDCA Beluran · 2026" data-winner="Dyann Dharlla Dominic" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-015_dyann-dharlla-dominic_2026-05-23T16-01-14_clean.png">
                 <circle cx="281" cy="62" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="281" y1="62" x2="294.2" y2="51.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -840,7 +840,7 @@ export function mountLocatorHero(section) {
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-061" data-name="Paitan" data-sub="KDCA Paitan · 2026" data-winner="Candycyci Liakim" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-061" data-name="Paitan" data-sub="KDCA Paitan · 2026" data-winner="Candycyci Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-061_candycyci-liakim_2026-05-23T14-50-05_clean.png">
                 <circle cx="280" cy="55" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="280" y1="55" x2="290.1" y2="41" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -850,7 +850,7 @@ export function mountLocatorHero(section) {
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-062" data-name="Telupid" data-sub="KDCA Telupid · 2026" data-winner="Raraa Cyra Eva Bella Stephen" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-062" data-name="Telupid" data-sub="KDCA Telupid · 2026" data-winner="Raraa Cyra Eva Bella Stephen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-062_raraa-cyra-eva-bella-stephen_2026-05-23T08-57-10_clean.png">
                 <circle cx="277" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="277" y1="68" x2="292.2" y2="60.4" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -860,17 +860,7 @@ export function mountLocatorHero(section) {
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-063" data-name="Sungai Manila" data-sub="KDCA Sungai Manila · 2026" data-winner="Dovena Jessie Isabell Daniel" data-img="placeholder-winner_nobg.png">
-                <circle cx="283" cy="74" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
-                <line x1="283" y1="74" x2="298.9" y2="75" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
-                <circle class="un-node-pulse" cx="298.9" cy="75" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
-                <g class="un-node-body">
-                  <circle cx="298.9" cy="75" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/placeholder-winner_nobg.png" x="295.4" y="71.5" width="7.0" height="7.0" clip-path="url(#cpSB36)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
-                  <circle cx="298.9" cy="75" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
-                </g>
-              </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-064" data-name="Kinabatangan" data-sub="KDCA Kinabatangan · 2026" data-winner="Vrenda Joan Taji" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-064" data-name="Kinabatangan" data-sub="KDCA Kinabatangan · 2026" data-winner="Vrenda Joan Taji" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-064_vrenda-joan-taji_2026-05-23T13-02-40_clean.png">
                 <circle cx="288" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="288" y1="68" x2="307" y2="63.5" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -880,7 +870,7 @@ export function mountLocatorHero(section) {
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-065" data-name="Sukau" data-sub="KDCA Sukau · 2026" data-winner="Ally Denis" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-065" data-name="Sukau" data-sub="KDCA Sukau · 2026" data-winner="Ally Denis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-065_ally-denis_2026-05-23T13-02-17_clean.png">
                 <circle cx="291" cy="73" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="291" y1="73" x2="310.4" y2="72.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -890,7 +880,7 @@ export function mountLocatorHero(section) {
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-078_anne-theresse-justin-sentian_2026-05-22T18-25-15_clean.png">
                 <circle cx="281" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="281" y1="72" x2="292" y2="82" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -900,7 +890,7 @@ export function mountLocatorHero(section) {
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-068_caesyzizi-liakim_2026-05-23T15-02-29_clean.png">
                 <circle cx="292" cy="80" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="292" y1="80" x2="311.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="311.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -910,7 +900,7 @@ export function mountLocatorHero(section) {
                   <circle cx="311.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-069" data-name="Tungku" data-sub="KDCA Tungku · 2026" data-winner="Mary-An P. Calica" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-069" data-name="Tungku" data-sub="KDCA Tungku · 2026" data-winner="Mary-An P. Calica" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-069_mary-an-p-calica_2026-05-23T08-45-29_clean.png">
                 <circle cx="294" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="294" y1="83" x2="314.1" y2="88.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -920,7 +910,7 @@ export function mountLocatorHero(section) {
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-070" data-name="Kunak" data-sub="KDCA Kunak · 2026" data-winner="Rachel Justin" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-070" data-name="Kunak" data-sub="KDCA Kunak · 2026" data-winner="Rachel Justin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-070_rachel-justin_2026-05-23T15-07-43_clean.png">
                 <circle cx="296" cy="86" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="296" y1="86" x2="317.8" y2="96.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -930,7 +920,7 @@ export function mountLocatorHero(section) {
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-071" data-name="Semporna" data-sub="KDCA Semporna · 2026" data-winner="Adylee Arisen" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-071" data-name="Semporna" data-sub="KDCA Semporna · 2026" data-winner="Adylee Arisen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-071_adylee-arisen_2026-05-23T14-30-00_clean.png">
                 <circle cx="298" cy="89" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="298" y1="89" x2="321.8" y2="103.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -940,7 +930,7 @@ export function mountLocatorHero(section) {
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvisa Edna Robert" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvisa Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-066_elvisa-edna-robert_2026-05-23T09-04-28_clean.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -950,7 +940,7 @@ export function mountLocatorHero(section) {
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-067" data-name="Kalabakan" data-sub="KDCA Kalabakan · 2026" data-winner="Christine Dionysius" data-img="placeholder-winner_nobg.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-067" data-name="Kalabakan" data-sub="KDCA Kalabakan · 2026" data-winner="Christine Dionysius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-067_christine-dionysius_2026-05-23T08-59-38_clean.png">
                 <circle cx="290" cy="85" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="290" y1="85" x2="308.2" y2="95.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="308.2" cy="95.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
