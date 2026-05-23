@@ -328,68 +328,68 @@ export function mountLocatorHero(section) {
               <text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
             <!-- Pulau Pinang — northwest coast (George Town ~100.34°E, 5.41°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30_clean.png">
               <circle cx="26" cy="80" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="26" y1="80" x2="16" y2="72" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="16" cy="72" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30_clean.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
             <!-- Perak — west coast, Ipoh area (~101.08°E, 4.59°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06_clean.png">
               <circle cx="33" cy="100" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="33" y1="100" x2="16" y2="100" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="16" cy="100" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06_clean.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
             <!-- Klang Valley — Kuala Lumpur area (~101.69°E, 3.14°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00_clean.png">
               <circle cx="52" cy="128" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="52" y1="128" x2="107" y2="116" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="107" cy="116" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00_clean.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
             <!-- Putrajaya — just south of KL (~101.70°E, 2.92°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png">
               <circle cx="53" cy="133" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="53" y1="133" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
             <!-- Melaka — west coast, south of KL (~102.24°E, 2.19°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29_clean.png">
               <circle cx="62" cy="148" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="62" y1="148" x2="112" y2="151" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="151" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29_clean.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
             <!-- Johor — southern tip, Johor Bahru (~103.74°E, 1.46°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00_clean.png">
               <circle cx="87" cy="167" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="87" y1="167" x2="112" y2="169" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="169" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00_clean.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -419,13 +419,13 @@ export function mountLocatorHero(section) {
               <text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
             <!-- Sarawak pin — dot on Kuching (southwest, ~110.33°E, 1.55°N) -->
-            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19.png">
+            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png">
               <circle cx="147" cy="165" r="2.5" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="147" y1="165" x2="158" y2="96" stroke="#f0a820" stroke-width="0.8" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="158" cy="96" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="158" cy="96" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngS)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19.png" x="147" y="85" width="22" height="22" clip-path="url(#cpSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png" x="147" y="85" width="22" height="22" clip-path="url(#cpSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="158" cy="96" r="11" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -1291,41 +1291,41 @@ export function mountLocatorMap(el) {
             </defs>
             <image href="/map-peninsula.svg" x="18" y="55" width="92" height="118" preserveAspectRatio="none"/>
             <g transform="translate(104,61)"><circle cx="0" cy="0" r="5" fill="none" stroke="#222" stroke-width="0.6"/><polygon points="0,-3.5 1,0 0,1.5 -1,0" fill="#2e2e2e"/><polygon points="0,3.5 1,0 0,-1.5 -1,0" fill="#1e1e1e"/><text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text></g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30_clean.png">
               <circle cx="26" cy="80" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="26" y1="80" x2="16" y2="72" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="16" cy="72" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30_clean.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06_clean.png">
               <circle cx="33" cy="100" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="33" y1="100" x2="16" y2="100" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="16" cy="100" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06_clean.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00_clean.png">
               <circle cx="52" cy="128" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="52" y1="128" x2="107" y2="116" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="107" cy="116" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00_clean.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png">
               <circle cx="60" cy="135" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="60" y1="135" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29_clean.png">
               <circle cx="62" cy="148" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="62" y1="148" x2="112" y2="151" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="151" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29_clean.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00_clean.png">
               <circle cx="65" cy="165" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="65" y1="165" x2="112" y2="169" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="169" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00_clean.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
           </svg>
         </div>
@@ -1337,10 +1337,10 @@ export function mountLocatorMap(el) {
               <clipPath id="cpSW2"><circle cx="118" cy="100" r="10"/></clipPath>
             </defs>
             <image href="/map-sarawak.svg" x="10" y="10" width="320" height="180" preserveAspectRatio="none"/>
-            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-02.png">
+            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png">
               <circle cx="122" cy="95" r="3" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="118" cy="100" r="16" fill="none" stroke="#f0a820" stroke-width="1" stroke-dasharray="3,3"/>
-              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-02.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
+              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
             </g>
           </svg>
         </div>
