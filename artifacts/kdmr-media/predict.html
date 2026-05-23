@@ -608,137 +608,137 @@
         </div>
 
         <div id="sharePoster"
-             style="max-width:28rem;margin:0 auto;aspect-ratio:4/5;padding:18px;
-                    display:flex;flex-direction:column;
-                    background:#1A1612;color:#F3EDDF;
-                    border-radius:12px;overflow:hidden;
-                    transition:background 0.35s,color 0.35s;">
+             class="max-w-[400px] mx-auto aspect-[4/5] flex flex-col justify-between p-6 rounded-xl shadow-2xl relative overflow-hidden ring-1 ring-white/10"
+             style="background:#1A1612;color:#F3EDDF;transition:background 0.35s,color 0.35s;">
 
-          <!-- Poster header -->
-          <div style="flex-shrink:0;text-align:center;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.1);">
-            <div style="font-size:0.48rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;opacity:0.4;margin-bottom:4px;">Unduk Ngadau 2026 · KDMR Media</div>
-            <h2 id="posterTitle" style="margin:0;font-size:1.05rem;font-weight:900;letter-spacing:-0.03em;line-height:1.1;">My Top 7 Prediction</h2>
+          <!-- Header -->
+          <div class="text-center mb-5">
+            <h2 id="posterTitle" class="text-2xl font-bold tracking-wider uppercase mb-1">My Top 7 Prediction</h2>
+            <p class="text-[10px] tracking-widest opacity-70 uppercase">Unduk Ngadau Kaamatan 2026</p>
           </div>
 
-          <!-- Grid: rank 1 full-width, then 2-col for ranks 2-7 -->
-          <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:5px;min-height:0;overflow:hidden;">
+          <!-- Grid body: rank 1 full-width champion banner, then 2-col for 2-7 -->
+          <div class="grid grid-cols-2 gap-x-3 gap-y-4 flex-1">
 
-            <!-- Rank 1: col-span-2, full width -->
-            <div id="ps-slot-1" style="grid-column:1/3;display:flex;flex-direction:column;border-radius:5px;overflow:hidden;background:#0d0d0d;">
-              <div style="flex:1;overflow:hidden;min-height:0;background:#0d0d0d;">
+            <!-- Rank 1: col-span-2 champion banner -->
+            <div id="ps-slot-1" class="col-span-2 flex items-center gap-4 bg-black/10 p-3 rounded-lg border border-white/20">
+              <div class="relative flex-shrink-0">
                 <img id="ps-photo-1" src="" alt="" crossorigin="anonymous"
-                     style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+                     class="w-20 h-28 object-cover object-top rounded-md shadow-md"
+                     style="display:none;" />
                 <div id="ps-empty-1"
-                     style="width:100%;height:100%;min-height:56px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;opacity:0.25;"
+                     class="w-20 h-28 flex items-center justify-center text-3xl opacity-25"
                      data-html2canvas-ignore="true">🏆</div>
+                <span class="absolute top-1 left-1 w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-black leading-none"
+                      style="background:#f0a820;color:#0a0a0a;">1</span>
               </div>
-              <div style="flex-shrink:0;padding:5px 8px;background:rgba(0,0,0,0.5);">
-                <div style="display:flex;align-items:center;gap:4px;">
-                  <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#f0a820;color:#0a0a0a;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:900;">1</span>
-                  <span id="ps-name-1" style="font-size:11px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">Champion</span>
-                </div>
-                <div id="ps-branch-1" style="font-size:9px;opacity:0.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:20px;color:inherit;">—</div>
+              <div class="overflow-hidden flex-1">
+                <p id="ps-name-1" class="font-bold text-xl leading-tight truncate">Champion</p>
+                <p id="ps-branch-1" class="text-sm opacity-80 mt-1 truncate">—</p>
               </div>
             </div>
 
-            <!-- Left column: ranks 2, 3, 4 -->
-            <div style="display:flex;flex-direction:column;gap:5px;min-height:0;overflow:hidden;">
-
-              <div id="ps-slot-2" style="flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#0d0d0d;min-height:0;">
-                <div style="flex:1;overflow:hidden;min-height:0;">
-                  <img id="ps-photo-2" src="" alt="" crossorigin="anonymous"
-                       style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
-                  <div id="ps-empty-2" style="width:100%;height:100%;min-height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0.25;" data-html2canvas-ignore="true">👑</div>
-                </div>
-                <div style="flex-shrink:0;padding:3px 5px;background:rgba(0,0,0,0.5);">
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span style="flex-shrink:0;width:12px;height:12px;border-radius:50%;background:#d4d4d8;color:#0a0a0a;display:inline-flex;align-items:center;justify-content:center;font-size:6px;font-weight:900;">2</span>
-                    <span id="ps-name-2" style="font-size:9px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">2nd</span>
-                  </div>
-                </div>
+            <!-- Rank 2 -->
+            <div id="ps-slot-2" class="flex items-center gap-3">
+              <div class="relative flex-shrink-0">
+                <img id="ps-photo-2" src="" alt="" crossorigin="anonymous"
+                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
+                     style="display:none;" />
+                <div id="ps-empty-2" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">👑</div>
+                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-zinc-300 text-black flex items-center justify-center text-[7px] font-black leading-none">2</span>
               </div>
-
-              <div id="ps-slot-3" style="flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#0d0d0d;min-height:0;">
-                <div style="flex:1;overflow:hidden;min-height:0;">
-                  <img id="ps-photo-3" src="" alt="" crossorigin="anonymous"
-                       style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
-                  <div id="ps-empty-3" style="width:100%;height:100%;min-height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0.25;" data-html2canvas-ignore="true">🥉</div>
-                </div>
-                <div style="flex-shrink:0;padding:3px 5px;background:rgba(0,0,0,0.5);">
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span style="flex-shrink:0;width:12px;height:12px;border-radius:50%;background:#a87239;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:6px;font-weight:900;">3</span>
-                    <span id="ps-name-3" style="font-size:9px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">3rd</span>
-                  </div>
-                </div>
+              <div class="overflow-hidden">
+                <p id="ps-name-2" class="font-bold text-sm leading-tight truncate">2nd Place</p>
+                <p id="ps-branch-2" class="text-[11px] opacity-70 truncate"></p>
               </div>
+            </div>
 
-              <div id="ps-slot-4" style="flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#0d0d0d;min-height:0;">
-                <div style="flex:1;overflow:hidden;min-height:0;">
-                  <img id="ps-photo-4" src="" alt="" crossorigin="anonymous"
-                       style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
-                  <div id="ps-empty-4" style="width:100%;height:100%;min-height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0.25;" data-html2canvas-ignore="true">✦</div>
-                </div>
-                <div style="flex-shrink:0;padding:3px 5px;background:rgba(0,0,0,0.5);">
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span style="flex-shrink:0;width:12px;height:12px;border-radius:50%;background:#252525;color:#888;display:inline-flex;align-items:center;justify-content:center;font-size:6px;font-weight:900;">4</span>
-                    <span id="ps-name-4" style="font-size:9px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">4th</span>
-                  </div>
-                </div>
+            <!-- Rank 3 -->
+            <div id="ps-slot-3" class="flex items-center gap-3">
+              <div class="relative flex-shrink-0">
+                <img id="ps-photo-3" src="" alt="" crossorigin="anonymous"
+                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
+                     style="display:none;" />
+                <div id="ps-empty-3" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">🥉</div>
+                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-amber-700 text-white flex items-center justify-center text-[7px] font-black leading-none">3</span>
               </div>
-
-            </div><!-- /left column -->
-
-            <!-- Right column: ranks 5, 6, 7 -->
-            <div style="display:flex;flex-direction:column;gap:5px;min-height:0;overflow:hidden;">
-
-              <div id="ps-slot-5" style="flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#0d0d0d;min-height:0;">
-                <div style="flex:1;overflow:hidden;min-height:0;">
-                  <img id="ps-photo-5" src="" alt="" crossorigin="anonymous"
-                       style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
-                  <div id="ps-empty-5" style="width:100%;height:100%;min-height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0.25;" data-html2canvas-ignore="true">✦</div>
-                </div>
-                <div style="flex-shrink:0;padding:3px 5px;background:rgba(0,0,0,0.5);">
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span style="flex-shrink:0;width:12px;height:12px;border-radius:50%;background:#252525;color:#888;display:inline-flex;align-items:center;justify-content:center;font-size:6px;font-weight:900;">5</span>
-                    <span id="ps-name-5" style="font-size:9px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">5th</span>
-                  </div>
-                </div>
+              <div class="overflow-hidden">
+                <p id="ps-name-3" class="font-bold text-sm leading-tight truncate">3rd Place</p>
+                <p id="ps-branch-3" class="text-[11px] opacity-70 truncate"></p>
               </div>
+            </div>
 
-              <div id="ps-slot-6" style="flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#0d0d0d;min-height:0;">
-                <div style="flex:1;overflow:hidden;min-height:0;">
-                  <img id="ps-photo-6" src="" alt="" crossorigin="anonymous"
-                       style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
-                  <div id="ps-empty-6" style="width:100%;height:100%;min-height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0.25;" data-html2canvas-ignore="true">✦</div>
-                </div>
-                <div style="flex-shrink:0;padding:3px 5px;background:rgba(0,0,0,0.5);">
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span style="flex-shrink:0;width:12px;height:12px;border-radius:50%;background:#252525;color:#888;display:inline-flex;align-items:center;justify-content:center;font-size:6px;font-weight:900;">6</span>
-                    <span id="ps-name-6" style="font-size:9px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">6th</span>
-                  </div>
-                </div>
+            <!-- Rank 4 -->
+            <div id="ps-slot-4" class="flex items-center gap-3">
+              <div class="relative flex-shrink-0">
+                <img id="ps-photo-4" src="" alt="" crossorigin="anonymous"
+                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
+                     style="display:none;" />
+                <div id="ps-empty-4" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
+                      style="background:#252525;color:#888;">4</span>
               </div>
-
-              <div id="ps-slot-7" style="flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#0d0d0d;min-height:0;">
-                <div style="flex:1;overflow:hidden;min-height:0;">
-                  <img id="ps-photo-7" src="" alt="" crossorigin="anonymous"
-                       style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
-                  <div id="ps-empty-7" style="width:100%;height:100%;min-height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0.25;" data-html2canvas-ignore="true">✦</div>
-                </div>
-                <div style="flex-shrink:0;padding:3px 5px;background:rgba(0,0,0,0.5);">
-                  <div style="display:flex;align-items:center;gap:3px;">
-                    <span style="flex-shrink:0;width:12px;height:12px;border-radius:50%;background:#252525;color:#888;display:inline-flex;align-items:center;justify-content:center;font-size:6px;font-weight:900;">7</span>
-                    <span id="ps-name-7" style="font-size:9px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:inherit;">7th</span>
-                  </div>
-                </div>
+              <div class="overflow-hidden">
+                <p id="ps-name-4" class="font-bold text-sm leading-tight truncate">4th Place</p>
+                <p id="ps-branch-4" class="text-[11px] opacity-70 truncate"></p>
               </div>
+            </div>
 
-            </div><!-- /right column -->
+            <!-- Rank 5 -->
+            <div id="ps-slot-5" class="flex items-center gap-3">
+              <div class="relative flex-shrink-0">
+                <img id="ps-photo-5" src="" alt="" crossorigin="anonymous"
+                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
+                     style="display:none;" />
+                <div id="ps-empty-5" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
+                      style="background:#252525;color:#888;">5</span>
+              </div>
+              <div class="overflow-hidden">
+                <p id="ps-name-5" class="font-bold text-sm leading-tight truncate">5th Place</p>
+                <p id="ps-branch-5" class="text-[11px] opacity-70 truncate"></p>
+              </div>
+            </div>
+
+            <!-- Rank 6 -->
+            <div id="ps-slot-6" class="flex items-center gap-3">
+              <div class="relative flex-shrink-0">
+                <img id="ps-photo-6" src="" alt="" crossorigin="anonymous"
+                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
+                     style="display:none;" />
+                <div id="ps-empty-6" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
+                      style="background:#252525;color:#888;">6</span>
+              </div>
+              <div class="overflow-hidden">
+                <p id="ps-name-6" class="font-bold text-sm leading-tight truncate">6th Place</p>
+                <p id="ps-branch-6" class="text-[11px] opacity-70 truncate"></p>
+              </div>
+            </div>
+
+            <!-- Rank 7 -->
+            <div id="ps-slot-7" class="flex items-center gap-3">
+              <div class="relative flex-shrink-0">
+                <img id="ps-photo-7" src="" alt="" crossorigin="anonymous"
+                     class="w-12 h-16 object-cover object-top rounded shadow-sm"
+                     style="display:none;" />
+                <div id="ps-empty-7" class="w-12 h-16 flex items-center justify-center text-xl opacity-25" data-html2canvas-ignore="true">✦</div>
+                <span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black leading-none"
+                      style="background:#252525;color:#888;">7</span>
+              </div>
+              <div class="overflow-hidden">
+                <p id="ps-name-7" class="font-bold text-sm leading-tight truncate">7th Place</p>
+                <p id="ps-branch-7" class="text-[11px] opacity-70 truncate"></p>
+              </div>
+            </div>
 
           </div><!-- /grid -->
 
-          <!-- Poster footer -->
-          <div style="flex-shrink:0;text-align:center;margin-top:8px;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.3;">kdmrmedia.com/predict</div>
+          <!-- Footer -->
+          <div class="mt-5 border-t border-white/20 pt-4 flex justify-between items-center px-1">
+            <div class="text-[9px] tracking-[0.2em] opacity-60 uppercase">KDMR Cultural Archive</div>
+            <div class="text-[10px] font-bold tracking-wide">kdmrmedia.com/predict</div>
+          </div>
 
         </div><!-- /#sharePoster -->
 
