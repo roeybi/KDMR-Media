@@ -982,15 +982,10 @@ export function mountLocatorHero(section) {
           <div class="ul-cd-sep">:</div>
           <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdS">--</div><div class="ul-cd-label">Secs</div></div>
         </div>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <a href="/unduk-ngadau/" class="ul-cta">
-            Meet the Champions
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="/predict.html" class="px-8 py-3 rounded-md font-bold tracking-widest uppercase transition-all bg-[#BE8E3C] text-[#1A1612] hover:bg-[#F3EDDF] shadow-[0_4px_14px_0_rgba(190,142,60,0.39)] active:scale-95 text-sm" style="font-family:inherit;">
-            Predict Top 7
-          </a>
-        </div>
+        <a href="/unduk-ngadau/" class="ul-cta">
+          Meet the Champions
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
         <div class="ul-branches">
           <span class="ul-branch-chip">Pulau Pinang</span>
           <span class="ul-branch-chip">Klang Valley</span>
@@ -1119,4 +1114,328 @@ export function mountLocatorHero(section) {
       }, 900);
     }, { passive: false });
   });
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+ * Split-mount helpers — used by index.html to render map and countdown
+ * as two separate sections with the prediction teaser between them.
+ * ───────────────────────────────────────────────────────────────────────── */
+
+function _ensureUlStyles() {
+  if (document.getElementById('ul-split-styles')) return;
+  const s = document.createElement('style');
+  s.id = 'ul-split-styles';
+  s.textContent = `
+    .ul-eyebrow { display:inline-flex;align-items:center;gap:8px;font-size:0.56rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;margin-bottom:18px; }
+    .ul-eyebrow-dot { width:6px;height:6px;background:#f0a820;border-radius:50%;box-shadow:0 0 6px #f0a820;animation:ul-pulse 1.8s ease-in-out infinite; }
+    @keyframes ul-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.75)} }
+    .ul-title { font-size:clamp(2rem,3.6vw,3rem);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#f0f0f0;margin:0 0 8px; }
+    .ul-title span { color:#f0a820; }
+    .ul-sub { font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(240,168,32,0.55);margin:0 0 28px; }
+    .ul-countdown { display:flex;gap:10px;margin-bottom:32px; }
+    .ul-cd-unit { text-align:center;min-width:52px; }
+    .ul-cd-num { font-size:1.6rem;font-weight:900;color:#f0a820;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;line-height:1; }
+    .ul-cd-label { font-size:0.48rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#3a3a3a;margin-top:4px; }
+    .ul-cd-sep { font-size:1.4rem;font-weight:900;color:rgba(240,168,32,0.3);align-self:flex-start;padding-top:2px; }
+    .ul-cd-label-main { font-size:0.52rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#333;margin-bottom:10px; }
+    .ul-cta { display:inline-flex;align-items:center;gap:8px;background:#f0a820;color:#0a0a0a;font-size:0.78rem;font-weight:800;letter-spacing:0.06em;padding:12px 24px;border-radius:2px;text-decoration:none;transition:background 0.18s,transform 0.18s; }
+    .ul-cta:hover { background:#f5c040;transform:translateY(-1px); }
+    .ul-branches { display:flex;flex-wrap:wrap;gap:6px;margin-top:24px; }
+    .ul-branch-chip { font-size:0.54rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#444;border:1px solid #222;padding:4px 10px;border-radius:2px;white-space:nowrap; }
+    .ul-map-label { display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px; }
+    .ul-map-label-line { flex:1;height:1px;background:linear-gradient(to right,transparent,#1e1e1e); }
+    .ul-map-label-text { font-size:0.52rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#2a2a2a;white-space:nowrap; }
+    .map-tab-btn { background:none;border:none;cursor:pointer;font-family:Inter,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#444;padding:10px 18px;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;white-space:nowrap; }
+    .map-tab-btn:hover { color:#888; }
+    .map-tab-btn.active { color:#f0a820;border-bottom-color:#f0a820; }
+    .map-panel { display:none;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:3px;overflow:visible; }
+    .map-panel.active { display:block; }
+    .map-panel-header { padding:8px 14px 6px;border-bottom:1px solid #161616; }
+    .map-panel-title { font-size:0.6rem;font-weight:800;color:#f0a820;letter-spacing:0.14em;text-transform:uppercase; }
+    .map-panel-sub { font-size:0.52rem;color:#3a3a3a;margin-top:1px;letter-spacing:0.06em; }
+    .un-node { cursor:pointer; }
+    .un-node-body { transition:transform 0.25s cubic-bezier(0.34,1.56,0.64,1);transform-box:fill-box;transform-origin:center; }
+    .un-node:hover .un-node-body { transform:scale(1.28);filter:drop-shadow(0 0 8px #f0a820aa); }
+    .un-node-pulse { opacity:0;transition:opacity 0.2s; }
+    .un-node:hover .un-node-pulse { opacity:1; }
+  `;
+  document.head.appendChild(s);
+}
+
+function _ensureUlTooltip() {
+  if (document.getElementById('undukTooltip')) return;
+  const ttEl = document.createElement('div');
+  ttEl.id = 'undukTooltip';
+  ttEl.style.cssText = 'position:fixed;pointer-events:none;z-index:9999;display:none;perspective:1200px;opacity:0;transition:opacity 0.18s ease;';
+  ttEl.innerHTML = `
+    <div id="undukTtCard" style="position:relative;width:200px;background:linear-gradient(160deg,rgba(32,24,10,0.96) 0%,rgba(14,11,6,0.97) 60%,rgba(8,6,3,0.98) 100%);border-radius:14px;padding:14px;border:1px solid rgba(240,168,32,0.32);box-shadow:0 30px 60px -16px rgba(0,0,0,0.95),0 20px 40px -10px rgba(240,168,32,0.22);transform-style:preserve-3d;transform:rotateX(10deg) rotateY(-8deg);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);overflow:visible;">
+      <div style="position:absolute;top:-1px;left:18%;right:18%;height:2px;background:linear-gradient(90deg,transparent,#f0a820,transparent);border-radius:2px;"></div>
+      <div style="position:absolute;top:7px;right:9px;font-size:0.5rem;font-weight:800;background:linear-gradient(135deg,#f5b830,#a06810);color:#0a0a0a;padding:2px 6px;border-radius:3px;letter-spacing:0.08em;">UN</div>
+      <div style="position:relative;height:118px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:10px;">
+        <img id="undukTtImg" src="" alt="" style="position:relative;max-width:120px;max-height:118px;width:auto;height:100%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,0.7)) drop-shadow(0 0 18px rgba(240,168,32,0.28));"/>
+      </div>
+      <div id="undukTtWinner" style="font-size:0.78rem;font-weight:800;color:#f5f1e8;letter-spacing:-0.01em;text-align:center;margin-bottom:3px;line-height:1.15;"></div>
+      <div id="undukTtBranch" style="font-size:0.58rem;font-weight:700;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;text-align:center;margin-bottom:2px;"></div>
+      <div id="undukTtSub" style="font-size:0.54rem;color:#777;letter-spacing:0.04em;text-align:center;"></div>
+    </div>`;
+  document.body.appendChild(ttEl);
+}
+
+function _attachUlNodes(container) {
+  const tooltip  = document.getElementById('undukTooltip');
+  if (!tooltip) return;
+  const ttCard   = document.getElementById('undukTtCard');
+  const ttImg    = document.getElementById('undukTtImg');
+  const ttWinner = document.getElementById('undukTtWinner');
+  const ttBranch = document.getElementById('undukTtBranch');
+  const ttSub    = document.getElementById('undukTtSub');
+  const nodes    = container.querySelectorAll('.un-node');
+
+  function positionTt(e) {
+    var TW = 232, TH = 240;
+    var x = e.clientX + 22, y = e.clientY - TH / 2;
+    if (x + TW > window.innerWidth  - 8) x = e.clientX - TW - 18;
+    if (y < 8) y = 8;
+    if (y + TH > window.innerHeight - 8) y = window.innerHeight - TH - 8;
+    tooltip.style.left = x + 'px';
+    tooltip.style.top  = y + 'px';
+    if (ttCard) {
+      var dx = (e.clientX - (x + TW/2)) / (TW/2);
+      var dy = (e.clientY - (y + TH/2)) / (TH/2);
+      ttCard.style.transform = 'rotateX(' + Math.max(-12,Math.min(12,dy*8)) + 'deg) rotateY(' + Math.max(-14,Math.min(14,-dx*10)) + 'deg)';
+    }
+  }
+
+  nodes.forEach(function(node) {
+    node.addEventListener('mouseenter', function(e) {
+      ttWinner.textContent = this.dataset.winner || '';
+      ttBranch.textContent = this.dataset.name   || '';
+      ttSub.textContent    = this.dataset.sub    || '';
+      ttImg.src = this.dataset.img ? '/images/' + this.dataset.img : '';
+      tooltip.style.display = 'block';
+      positionTt(e);
+      requestAnimationFrame(function() { tooltip.style.opacity = '1'; });
+    });
+    node.addEventListener('mousemove', positionTt);
+    node.addEventListener('mouseleave', function() {
+      tooltip.style.opacity = '0';
+      setTimeout(function() { tooltip.style.display = 'none'; }, 180);
+    });
+    node.addEventListener('click', function() {
+      var tab = this.dataset.tab || '', winner = this.dataset.winner || '';
+      var url = '/unduk-ngadau/';
+      if (tab) url += '?tab=' + encodeURIComponent(tab);
+      if (winner) url += (tab ? '&' : '?') + 'winner=' + encodeURIComponent(winner);
+      window.location.href = url;
+    });
+    node.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      ttWinner.textContent = this.dataset.winner || '';
+      ttBranch.textContent = this.dataset.name   || '';
+      ttSub.textContent    = this.dataset.sub    || '';
+      ttImg.src = this.dataset.img ? '/images/' + this.dataset.img : '';
+      var touch = e.touches[0];
+      var x = touch.clientX + 12, y = touch.clientY - 130;
+      if (x + 232 > window.innerWidth - 8) x = touch.clientX - 244;
+      if (y < 8) y = touch.clientY + 18;
+      tooltip.style.left = x + 'px'; tooltip.style.top = y + 'px';
+      tooltip.style.display = 'block';
+      requestAnimationFrame(function() { tooltip.style.opacity = '1'; });
+      var _tab = this.dataset.tab || '', _winner = this.dataset.winner || '';
+      setTimeout(function() {
+        tooltip.style.opacity = '0';
+        setTimeout(function() { tooltip.style.display = 'none'; }, 180);
+        var url = '/unduk-ngadau/';
+        if (_tab) url += '?tab=' + encodeURIComponent(_tab);
+        if (_winner) url += (_tab ? '&' : '?') + 'winner=' + encodeURIComponent(_winner);
+        window.location.href = url;
+      }, 900);
+    }, { passive: false });
+  });
+}
+
+/**
+ * Mount just the 3-tab interactive map into `el`.
+ * Used on the homepage above the prediction teaser section.
+ */
+export function mountLocatorMap(el) {
+  if (!el) return;
+  _ensureUlStyles();
+  _ensureUlTooltip();
+
+  el.style.cssText = 'background:#080808;border-bottom:1px solid #1a1a1a;padding:40px 16px 32px;';
+  el.innerHTML = `
+    <div style="max-width:860px;margin:0 auto;">
+      <div class="ul-map-label" style="margin-bottom:18px;">
+        <span class="ul-map-label-line"></span>
+        <span class="ul-map-label-text">◉ Unduk Locator · Diaspora Branches</span>
+        <span class="ul-map-label-line" style="background:linear-gradient(to left,transparent,#1e1e1e);"></span>
+      </div>
+      <div style="width:100%;">
+        <div style="display:flex;border-bottom:1px solid #1a1a1a;margin-bottom:0;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          <button class="map-tab-btn active" data-panel="peninsula" onclick="switchMapPanel(this,'peninsula')">Peninsular Malaysia</button>
+          <button class="map-tab-btn" data-panel="sarawak" onclick="switchMapPanel(this,'sarawak')">Sarawak</button>
+          <button class="map-tab-btn" data-panel="sabah" onclick="switchMapPanel(this,'sabah')">Sabah</button>
+        </div>
+        <div id="mapPanel-peninsula" class="map-panel active">
+          <div class="map-panel-header"><div class="map-panel-title">Peninsular Malaysia</div><div class="map-panel-sub">6 diaspora branches</div></div>
+          <svg id="peninsulaSvg" class="map-svg" viewBox="0 38 130 158" style="display:block;overflow:visible;max-width:480px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="ngP2" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/><feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.66  0 0 0 0 0.13  0 0 0 0.65 0" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <clipPath id="cpPP2"><circle cx="16" cy="72" r="8"/></clipPath>
+              <clipPath id="cpPK2"><circle cx="16" cy="100" r="7"/></clipPath>
+              <clipPath id="cpKV2"><circle cx="107" cy="116" r="9"/></clipPath>
+              <clipPath id="cpPJY2"><circle cx="116" cy="134" r="7"/></clipPath>
+              <clipPath id="cpM2"><circle cx="112" cy="151" r="7"/></clipPath>
+              <clipPath id="cpJB2"><circle cx="112" cy="169" r="9"/></clipPath>
+            </defs>
+            <image href="/map-peninsula.svg" x="18" y="55" width="92" height="118" preserveAspectRatio="none"/>
+            <g transform="translate(104,61)"><circle cx="0" cy="0" r="5" fill="none" stroke="#222" stroke-width="0.6"/><polygon points="0,-3.5 1,0 0,1.5 -1,0" fill="#2e2e2e"/><polygon points="0,3.5 1,0 0,-1.5 -1,0" fill="#1e1e1e"/><text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text></g>
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Pulau Pinang" data-sub="KDCA Pulau Pinang · 2026" data-winner="Jeraahfinah Jonis (Nanu)" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png">
+              <circle cx="26" cy="80" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="26" y1="80" x2="16" y2="72" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="16" cy="72" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body"><circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-05-22T16-04-30.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+            </g>
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png">
+              <circle cx="33" cy="100" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="33" y1="100" x2="16" y2="100" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="16" cy="100" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body"><circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-perak_valeriena-karen-aldrin_2026-05-22T16-26-06.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+            </g>
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00.png">
+              <circle cx="52" cy="128" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="52" y1="128" x2="107" y2="116" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="107" cy="116" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body"><circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-05-23T10-04-00.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+            </g>
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58.png">
+              <circle cx="60" cy="135" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="60" y1="135" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+            </g>
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png">
+              <circle cx="62" cy="148" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="62" y1="148" x2="112" y2="151" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="112" cy="151" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body"><circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-05-22T16-24-29.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+            </g>
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png">
+              <circle cx="65" cy="165" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <line x1="65" y1="165" x2="112" y2="169" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="112" cy="169" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
+              <g class="un-node-body"><circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-johor_josephine-magdeline-joseph_2026-05-22T16-24-00.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+            </g>
+          </svg>
+        </div>
+        <div id="mapPanel-sarawak" class="map-panel">
+          <div class="map-panel-header"><div class="map-panel-title">Sarawak</div><div class="map-panel-sub">1 diaspora branch</div></div>
+          <svg viewBox="0 0 340 200" style="display:block;overflow:visible;max-width:480px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="ngSW2" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/><feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.66  0 0 0 0 0.13  0 0 0 0.65 0" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <clipPath id="cpSW2"><circle cx="118" cy="100" r="10"/></clipPath>
+            </defs>
+            <image href="/map-sarawak.svg" x="10" y="10" width="320" height="180" preserveAspectRatio="none"/>
+            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-02.png">
+              <circle cx="122" cy="95" r="3" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
+              <circle class="un-node-pulse" cx="118" cy="100" r="16" fill="none" stroke="#f0a820" stroke-width="1" stroke-dasharray="3,3"/>
+              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-02.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
+            </g>
+          </svg>
+        </div>
+        <div id="mapPanel-sabah" class="map-panel">
+          <div class="map-panel-header"><div class="map-panel-title">Sabah</div><div class="map-panel-sub">53 districts · hometown branches</div></div>
+          <svg viewBox="200 20 140 120" style="display:block;overflow:visible;max-width:480px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="ngSB2" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/><feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.66  0 0 0 0 0.13  0 0 0 0.5 0" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <clipPath id="cpSB2_1"><circle cx="233" cy="34" r="3.5"/></clipPath><clipPath id="cpSB2_2"><circle cx="236" cy="41" r="3.5"/></clipPath><clipPath id="cpSB2_3"><circle cx="220" cy="51" r="3.5"/></clipPath><clipPath id="cpSB2_4"><circle cx="224" cy="58" r="3.5"/></clipPath><clipPath id="cpSB2_5"><circle cx="222" cy="65" r="3.5"/></clipPath><clipPath id="cpSB2_6"><circle cx="218" cy="71" r="3.5"/></clipPath><clipPath id="cpSB2_7"><circle cx="214" cy="78" r="3.5"/></clipPath><clipPath id="cpSB2_8"><circle cx="215" cy="85" r="3.5"/></clipPath><clipPath id="cpSB2_9"><circle cx="208" cy="78" r="3.5"/></clipPath><clipPath id="cpSB2_10"><circle cx="210" cy="85" r="3.5"/></clipPath>
+            </defs>
+            <image href="/map-sabah.svg" x="205" y="22" width="130" height="110" preserveAspectRatio="none"/>
+            <g transform="translate(320,30)"><circle cx="0" cy="0" r="4" fill="none" stroke="#222" stroke-width="0.5"/><polygon points="0,-2.8 0.8,0 0,1.2 -0.8,0" fill="#2e2e2e"/><polygon points="0,2.8 0.8,0 0,-1.2 -0.8,0" fill="#1e1e1e"/><text x="0" y="-5" text-anchor="middle" font-size="3" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text></g>
+            <g class="un-node" data-tab="Sabah (Central)" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Jesdelyn Avid Jamol" data-img="placeholder-winner_nobg.png"><circle cx="232" cy="41" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/><line x1="232" y1="41" x2="233" y2="34" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/><circle class="un-node-pulse" cx="233" cy="34" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/><g class="un-node-body"><circle cx="233" cy="34" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB2)"/><image href="/images/placeholder-winner_nobg.png" x="229.5" y="30.5" width="7" height="7" clip-path="url(#cpSB2_1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="233" cy="34" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/></g></g>
+            <g class="un-node" data-tab="Sabah (Central)" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Lhea Christy Gabriel" data-img="placeholder-winner_nobg.png"><circle cx="233" cy="44" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/><line x1="233" y1="44" x2="236" y2="41" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/><circle class="un-node-pulse" cx="236" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/><g class="un-node-body"><circle cx="236" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB2)"/><image href="/images/placeholder-winner_nobg.png" x="232.5" y="37.5" width="7" height="7" clip-path="url(#cpSB2_2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="236" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/></g></g>
+            <text x="212" y="130" font-size="4.5" fill="#2a2a2a" font-family="Inter,sans-serif" font-weight="600" letter-spacing="0.05em">53 districts — hover to explore</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  `;
+
+  _attachUlNodes(el);
+  window.switchMapPanel = function(btn, panelId) {
+    document.querySelectorAll('.map-tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.map-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    var panel = document.getElementById('mapPanel-' + panelId);
+    if (panel) panel.classList.add('active');
+  };
+}
+
+/**
+ * Mount just the countdown panel (title + timer + CTA + branch chips) into `el`.
+ * Used on the homepage below the prediction teaser section.
+ */
+export function mountLocatorCountdown(el) {
+  if (!el) return;
+  _ensureUlStyles();
+  el.style.cssText = 'background:#080808;border-bottom:1px solid #1a1a1a;padding:52px 16px 56px;';
+  el.innerHTML = `
+    <div style="max-width:520px;margin:0 auto;">
+      <div class="ul-eyebrow">
+        <span class="ul-eyebrow-dot"></span>
+        <span>Hari Kaamatan 2026</span>
+      </div>
+      <h2 class="ul-title" style="font-size:clamp(2.4rem,5vw,3.8rem);">Unduk<br><span>Ngadau</span><br>2026</h2>
+      <div class="ul-sub">KDMR Diaspora · 53 Branches Nationwide</div>
+      <div class="ul-cd-label-main">⏱ Countdown to Kaamatan</div>
+      <div class="ul-countdown">
+        <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdD">--</div><div class="ul-cd-label">Days</div></div>
+        <div class="ul-cd-sep">:</div>
+        <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdH">--</div><div class="ul-cd-label">Hours</div></div>
+        <div class="ul-cd-sep">:</div>
+        <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdM">--</div><div class="ul-cd-label">Mins</div></div>
+        <div class="ul-cd-sep">:</div>
+        <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdS">--</div><div class="ul-cd-label">Secs</div></div>
+      </div>
+      <a href="/unduk-ngadau/" class="ul-cta">
+        Meet the Champions
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="ul-branches">
+        <span class="ul-branch-chip">Pulau Pinang</span>
+        <span class="ul-branch-chip">Klang Valley</span>
+        <span class="ul-branch-chip">Putrajaya</span>
+        <span class="ul-branch-chip">Melaka</span>
+        <span class="ul-branch-chip">Johor</span>
+        <span class="ul-branch-chip">Sarawak</span>
+        <span class="ul-branch-chip">53 Sabah Districts</span>
+      </div>
+    </div>
+  `;
+
+  const TARGET = new Date('2026-05-30T08:00:00+08:00');
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function tick() {
+    var diff = TARGET - Date.now();
+    if (diff <= 0) {
+      var dEl = document.getElementById('ulCdD');
+      if (dEl) dEl.closest('.ul-countdown').innerHTML = '<span style="font-size:0.9rem;font-weight:700;color:#f0a820;letter-spacing:0.04em;">🎉 Kaamatan is here!</span>';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000)  / 60000);
+    var s = Math.floor((diff % 60000)    / 1000);
+    var dEl = document.getElementById('ulCdD');
+    var hEl = document.getElementById('ulCdH');
+    var mEl = document.getElementById('ulCdM');
+    var sEl = document.getElementById('ulCdS');
+    if (dEl) dEl.textContent = pad(d);
+    if (hEl) hEl.textContent = pad(h);
+    if (mEl) mEl.textContent = pad(m);
+    if (sEl) sEl.textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
 }
