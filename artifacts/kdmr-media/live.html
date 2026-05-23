@@ -122,6 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         pointer-events: none;
       }
       .countdown-digit { font-variant-numeric: tabular-nums; font-weight: 900; letter-spacing: -0.03em; }
+      @media (max-width: 640px) { #navLogoText { display: none; } }
     </style>
   </head>
   <body>
@@ -190,7 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:50px;display:flex;align-items:center;">
         <a href="/" style="display:flex;align-items:center;gap:9px;text-decoration:none;margin-right:auto;">
           <img src="/mark-color.svg" alt="KDMR" style="width:26px;height:26px;display:block;" />
-          <span style="font-size:0.9rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+          <span id="navLogoText" style="font-size:0.9rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
         </a>
         <div id="userPill" style="display:none;align-items:center;gap:6px;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.2);padding:3px 9px;border-radius:2px;margin-right:10px;min-width:0;max-width:120px;overflow:hidden;">
           <span style="width:5px;height:5px;border-radius:50%;background:#4ade80;flex-shrink:0;"></span>
