@@ -16,6 +16,8 @@
     "tailwindcss": "catalog:",
     "vite": "catalog:"
   },
-  "dependencies": {}
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  }
 
 }
