@@ -1379,17 +1379,17 @@ export function mountLocatorMap(el) {
 export function mountLocatorCountdown(el) {
   if (!el) return;
   _ensureUlStyles();
-  el.style.cssText = 'background:#080808;border-bottom:1px solid #1a1a1a;padding:52px 16px 56px;';
+  el.style.cssText = 'background:#080808;border-bottom:1px solid #1a1a1a;padding:56px 16px 60px;text-align:center;';
   el.innerHTML = `
-    <div style="max-width:520px;margin:0 auto;">
-      <div class="ul-eyebrow">
+    <div style="max-width:640px;margin:0 auto;">
+      <div class="ul-eyebrow" style="justify-content:center;">
         <span class="ul-eyebrow-dot"></span>
         <span>Hari Kaamatan 2026</span>
       </div>
-      <h2 class="ul-title" style="font-size:clamp(2.4rem,5vw,3.8rem);">Unduk<br><span>Ngadau</span><br>2026</h2>
-      <div class="ul-sub">KDMR Diaspora · 53 Branches Nationwide</div>
-      <div class="ul-cd-label-main">⏱ Countdown to Kaamatan</div>
-      <div class="ul-countdown">
+      <h2 class="ul-title" style="font-size:clamp(2.4rem,5vw,3.8rem);text-align:center;">Unduk <span>Ngadau</span> 2026</h2>
+      <div class="ul-sub" style="text-align:center;margin-bottom:32px;">KDMR Diaspora · 53 Branches Nationwide</div>
+      <div class="ul-cd-label-main" style="text-align:center;">⏱ Countdown to Kaamatan</div>
+      <div class="ul-countdown" style="justify-content:center;">
         <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdD">--</div><div class="ul-cd-label">Days</div></div>
         <div class="ul-cd-sep">:</div>
         <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdH">--</div><div class="ul-cd-label">Hours</div></div>
@@ -1398,11 +1398,13 @@ export function mountLocatorCountdown(el) {
         <div class="ul-cd-sep">:</div>
         <div class="ul-cd-unit"><div class="ul-cd-num" id="ulCdS">--</div><div class="ul-cd-label">Secs</div></div>
       </div>
-      <a href="/unduk-ngadau/" class="ul-cta">
-        Meet the Champions
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <div class="ul-branches">
+      <div style="margin-top:8px;margin-bottom:32px;">
+        <a href="/unduk-ngadau/" class="ul-cta" style="display:inline-flex;">
+          Meet the Champions
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="ul-branches" style="justify-content:center;">
         <span class="ul-branch-chip">Pulau Pinang</span>
         <span class="ul-branch-chip">Klang Valley</span>
         <span class="ul-branch-chip">Putrajaya</span>
