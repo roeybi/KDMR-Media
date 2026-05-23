@@ -17,6 +17,10 @@ const i18n = {
     nav_home:              "Home",
     nav_news_current:      "News",
 
+    /* ── Nav extras ── */
+    label_live:            "LIVE",
+    nav_top7_predict:      "Top 7 Predict",
+
     /* ── Stats bar ── */
     stat_contestants:      "Contestants",
     stat_states:           "States & Territories",
@@ -220,6 +224,10 @@ const i18n = {
     nav_follow_us:       "Ikuti Kami",
     nav_home:            "Laman Utama",
     nav_news_current:    "Berita",
+
+    /* ── Nav extras ── */
+    label_live:          "LANGSUNG",
+    nav_top7_predict:    "Ramalan Top 7",
 
     /* ── Stats bar ── */
     stat_contestants:    "Peserta",
@@ -431,12 +439,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       const val = dict[key];
-      if (val !== undefined && val !== "") {
-        if (val.includes("<")) {
-          el.innerHTML = val;
-        } else {
-          el.textContent = val;
-        }
+      if (val === undefined || val === "") return;
+      const tag = el.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") {
+        // Inputs/textareas: translate the placeholder attribute
+        el.placeholder = val;
+      } else if (val.includes("<")) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
       }
     });
   };
