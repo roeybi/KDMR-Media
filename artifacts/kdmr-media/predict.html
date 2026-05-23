@@ -323,6 +323,40 @@
       .download-note {
         font-size: 0.7rem; color: #333; margin-top: 12px;
       }
+      /* ── Personalization: name + theme ─────────── */
+      .personalize-section {
+        background: #0a0a0a; padding: 28px 16px 36px;
+        border-bottom: 1px solid #141414;
+      }
+      .personalize-inner {
+        max-width: 900px; margin: 0 auto;
+      }
+      .personalize-label {
+        font-size: 0.58rem; font-weight: 800; letter-spacing: 0.18em;
+        text-transform: uppercase; color: #333; margin-bottom: 20px;
+        display: flex; align-items: center; gap: 8px;
+      }
+      .personalize-label span { flex: 1; height: 1px; background: #1a1a1a; display: block; }
+      .name-input {
+        width: 100%; max-width: 320px;
+        padding: 11px 14px; background: #111; border: 1px solid #252525;
+        color: #f0f0f0; font-size: 0.875rem; font-family: Inter, sans-serif;
+        border-radius: 3px; outline: none; box-sizing: border-box;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .name-input::placeholder { color: #444; }
+      .name-input:focus {
+        border-color: rgba(240,168,32,0.5);
+        box-shadow: 0 0 0 3px rgba(240,168,32,0.06);
+      }
+      .theme-btn {
+        padding: 8px 18px; border-radius: 3px;
+        border: 1.5px solid #2a2a2a; background: transparent;
+        color: #666; font-size: 0.78rem; font-weight: 700;
+        cursor: pointer; font-family: Inter, sans-serif;
+        transition: all 0.15s;
+      }
+      .theme-btn:hover { border-color: #444; color: #aaa; }
       /* ── Reset link ─────────────────────────────── */
       .reset-btn {
         display: inline-flex; align-items: center; gap: 6px;
@@ -513,6 +547,36 @@
       </div>
     </section>
 
+    <!-- ── Personalization: Name + Theme ───────────────────── -->
+    <section class="personalize-section">
+      <div class="personalize-inner">
+        <div class="personalize-label">Personalize Your Card <span></span></div>
+
+        <!-- Name input -->
+        <div style="margin-bottom:22px;">
+          <label for="predictionName" style="display:block;font-size:0.72rem;font-weight:600;color:#666;margin-bottom:8px;letter-spacing:0.02em;">
+            Enter your name <span style="color:#444;">(Optional)</span>
+          </label>
+          <input id="predictionName" type="text" class="name-input"
+                 placeholder="e.g., Remy"
+                 autocomplete="off" autocorrect="off" spellcheck="false" />
+        </div>
+
+        <!-- Theme buttons -->
+        <div>
+          <div style="font-size:0.72rem;font-weight:600;color:#666;margin-bottom:10px;letter-spacing:0.02em;">Theme</div>
+          <div id="themeButtons" style="display:flex;flex-wrap:wrap;gap:8px;">
+            <button class="theme-btn" data-theme="Bobohizan">Bobohizan</button>
+            <button class="theme-btn" data-theme="Linangkit">Linangkit</button>
+            <button class="theme-btn" data-theme="Sirih">Sirih</button>
+            <button class="theme-btn" data-theme="Padi">Padi</button>
+            <button class="theme-btn" data-theme="Hutan">Hutan</button>
+          </div>
+          <div id="themePreview" style="margin-top:10px;height:4px;width:160px;border-radius:2px;background:#1A1612;"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ── Selected indicator (sticky) ──────────────────────── -->
     <div id="selectedIndicator">
       <span id="selectedLabel">Selected: —</span>
@@ -592,7 +656,198 @@
       </div>
     </footer>
 
-    <!-- #shareCardTemplate no longer needed — card is drawn via Canvas 2D API -->
+    <!-- ── Hidden Share Card Template (4:5 — 1080×1350) ───── -->
+    <!-- Positioned far off-screen so html2canvas can render it without display:none -->
+    <div id="shareCardTemplate"
+         style="position:absolute;left:-9999px;top:0;width:1080px;height:1350px;
+                background:#1A1612;color:#F3EDDF;font-family:'Helvetica Neue',Arial,sans-serif;
+                display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;">
+
+      <!-- HEADER -->
+      <div style="flex-shrink:0;padding:36px 48px 20px;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;opacity:0.45;margin-bottom:10px;">
+          Unduk Ngadau 2026 &middot; KDMR Media
+        </div>
+        <h2 id="sc-title" style="margin:0;font-size:38px;font-weight:900;letter-spacing:-0.03em;line-height:1.05;">
+          MY TOP 7 PREDICTION
+        </h2>
+      </div>
+
+      <!-- RANK 1 — full width -->
+      <div id="sc-slot-1" style="flex-shrink:0;height:290px;position:relative;overflow:hidden;background:rgba(0,0,0,0.25);">
+        <img id="sc-photo-1" src="" alt="" crossorigin="anonymous"
+             style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+        <div id="sc-init-1"
+             style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:72px;font-weight:900;">
+          🏆
+        </div>
+        <div class="sc-overlay"
+             style="position:absolute;bottom:0;left:0;width:100%;padding:16px 24px;
+                    background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+          <div style="font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;
+                      color:rgba(255,255,255,0.55);margin-bottom:5px;">Champion · 1st Place</div>
+          <div id="sc-name-1" style="font-size:26px;font-weight:900;letter-spacing:-0.02em;color:#fff;
+                                     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+          <div id="sc-branch-1" style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.55);margin-top:3px;
+                                        white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+        </div>
+        <div style="position:absolute;top:12px;left:14px;width:34px;height:34px;border-radius:50%;
+                    background:#f0a820;display:flex;align-items:center;justify-content:center;
+                    font-size:14px;font-weight:900;color:#0a0a0a;">1</div>
+      </div>
+
+      <!-- RANKS 2-7: 2-column grid -->
+      <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:2px;min-height:0;overflow:hidden;">
+
+        <!-- Left column: ranks 2, 3, 4 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+
+          <!-- Rank 2 -->
+          <div id="sc-slot-2" style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+            <img id="sc-photo-2" src="" alt="" crossorigin="anonymous"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+            <div id="sc-init-2"
+                 style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:36px;font-weight:900;">
+              👑
+            </div>
+            <div class="sc-overlay"
+                 style="position:absolute;bottom:0;left:0;width:100%;padding:8px 12px;
+                        background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+              <div id="sc-name-2" style="font-size:15px;font-weight:800;color:#fff;
+                                          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+              <div id="sc-branch-2" style="font-size:11px;color:rgba(255,255,255,0.5);
+                                            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+            </div>
+            <div style="position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;
+                        background:#d4d4d8;display:flex;align-items:center;justify-content:center;
+                        font-size:10px;font-weight:900;color:#0a0a0a;">2</div>
+          </div>
+
+          <!-- Rank 3 -->
+          <div id="sc-slot-3" style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+            <img id="sc-photo-3" src="" alt="" crossorigin="anonymous"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+            <div id="sc-init-3"
+                 style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:36px;font-weight:900;">
+              🥉
+            </div>
+            <div class="sc-overlay"
+                 style="position:absolute;bottom:0;left:0;width:100%;padding:8px 12px;
+                        background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+              <div id="sc-name-3" style="font-size:15px;font-weight:800;color:#fff;
+                                          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+              <div id="sc-branch-3" style="font-size:11px;color:rgba(255,255,255,0.5);
+                                            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+            </div>
+            <div style="position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;
+                        background:#a87239;display:flex;align-items:center;justify-content:center;
+                        font-size:10px;font-weight:900;color:#fff;">3</div>
+          </div>
+
+          <!-- Rank 4 -->
+          <div id="sc-slot-4" style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+            <img id="sc-photo-4" src="" alt="" crossorigin="anonymous"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+            <div id="sc-init-4"
+                 style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:36px;font-weight:900;opacity:0.5;">
+              ✦
+            </div>
+            <div class="sc-overlay"
+                 style="position:absolute;bottom:0;left:0;width:100%;padding:8px 12px;
+                        background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+              <div id="sc-name-4" style="font-size:15px;font-weight:800;color:#fff;
+                                          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+              <div id="sc-branch-4" style="font-size:11px;color:rgba(255,255,255,0.5);
+                                            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+            </div>
+            <div style="position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;
+                        background:#252525;display:flex;align-items:center;justify-content:center;
+                        font-size:10px;font-weight:900;color:#888;">4</div>
+          </div>
+
+        </div><!-- /left column -->
+
+        <!-- Right column: ranks 5, 6, 7 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+
+          <!-- Rank 5 -->
+          <div id="sc-slot-5" style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+            <img id="sc-photo-5" src="" alt="" crossorigin="anonymous"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+            <div id="sc-init-5"
+                 style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:36px;font-weight:900;opacity:0.5;">
+              ✦
+            </div>
+            <div class="sc-overlay"
+                 style="position:absolute;bottom:0;left:0;width:100%;padding:8px 12px;
+                        background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+              <div id="sc-name-5" style="font-size:15px;font-weight:800;color:#fff;
+                                          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+              <div id="sc-branch-5" style="font-size:11px;color:rgba(255,255,255,0.5);
+                                            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+            </div>
+            <div style="position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;
+                        background:#252525;display:flex;align-items:center;justify-content:center;
+                        font-size:10px;font-weight:900;color:#888;">5</div>
+          </div>
+
+          <!-- Rank 6 -->
+          <div id="sc-slot-6" style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+            <img id="sc-photo-6" src="" alt="" crossorigin="anonymous"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+            <div id="sc-init-6"
+                 style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:36px;font-weight:900;opacity:0.5;">
+              ✦
+            </div>
+            <div class="sc-overlay"
+                 style="position:absolute;bottom:0;left:0;width:100%;padding:8px 12px;
+                        background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+              <div id="sc-name-6" style="font-size:15px;font-weight:800;color:#fff;
+                                          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+              <div id="sc-branch-6" style="font-size:11px;color:rgba(255,255,255,0.5);
+                                            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+            </div>
+            <div style="position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;
+                        background:#252525;display:flex;align-items:center;justify-content:center;
+                        font-size:10px;font-weight:900;color:#888;">6</div>
+          </div>
+
+          <!-- Rank 7 -->
+          <div id="sc-slot-7" style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+            <img id="sc-photo-7" src="" alt="" crossorigin="anonymous"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+            <div id="sc-init-7"
+                 style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:36px;font-weight:900;opacity:0.5;">
+              ✦
+            </div>
+            <div class="sc-overlay"
+                 style="position:absolute;bottom:0;left:0;width:100%;padding:8px 12px;
+                        background:linear-gradient(to top,rgba(0,0,0,0.80),transparent);">
+              <div id="sc-name-7" style="font-size:15px;font-weight:800;color:#fff;
+                                          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+              <div id="sc-branch-7" style="font-size:11px;color:rgba(255,255,255,0.5);
+                                            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+            </div>
+            <div style="position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;
+                        background:#252525;display:flex;align-items:center;justify-content:center;
+                        font-size:10px;font-weight:900;color:#888;">7</div>
+          </div>
+
+        </div><!-- /right column -->
+
+      </div><!-- /ranks 2-7 grid -->
+
+      <!-- FOOTER -->
+      <div style="flex-shrink:0;height:72px;padding:0 48px;display:flex;align-items:center;
+                  justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="/mark-color.svg" width="22" height="22" alt="KDMR" />
+          <span style="font-size:13px;font-weight:700;opacity:0.6;letter-spacing:0.04em;">KDMR MEDIA</span>
+        </div>
+        <span style="font-size:12px;font-weight:600;opacity:0.4;letter-spacing:0.02em;">kdmrmedia.com/predict</span>
+      </div>
+
+    </div><!-- /#shareCardTemplate -->
 
     <script type="module" src="./src/predict.js"></script>
     <script>
