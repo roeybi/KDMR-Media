@@ -237,17 +237,24 @@ function renderSlot(rank) {
   slotEl.classList.remove('highlight');
 
   if (c) {
-    const imgHTML = isPlaceholder(c.imageUrl)
-      ? `<div class="slot-photo-placeholder" style="aspect-ratio:${aspectRatio};font-size:${isTop3 ? '2rem' : '1.4rem'};">${getInitials(c.name)}</div>`
-      : `<img class="slot-photo" src="${c.imageUrl}" alt="${c.name}" style="aspect-ratio:${aspectRatio};" loading="lazy" crossorigin="anonymous" />`;
+    const t = THEMES[currentTheme];
+    const overlayBg = t ? t.overlay : 'linear-gradient(to top,rgba(0,0,0,0.85),rgba(0,0,0,0.4) 50%,transparent)';
+    const nameSize  = isTop3 ? '0.64rem' : '0.56rem';
+    const branchSize = isTop3 ? '0.52rem' : '0.46rem';
+
+    const mediaHTML = isPlaceholder(c.imageUrl)
+      ? `<div class="slot-photo-placeholder" style="width:100%;height:100%;font-size:${isTop3 ? '2rem' : '1.4rem'};">${getInitials(c.name)}</div>`
+      : `<img class="slot-photo" src="${c.imageUrl}" alt="${c.name}" style="width:100%;height:100%;" loading="lazy" crossorigin="anonymous" />`;
 
     inner.innerHTML = `
       <span class="slot-rank-badge ${rankBadgeClass}">${rank}</span>
       <button class="slot-remove" data-html2canvas-ignore="true" title="Remove" aria-label="Remove ${c.name}" onclick="(function(e){e.stopPropagation();window.__predictRemoveSlot(${rank});})(event)">×</button>
-      ${imgHTML}
-      <div class="slot-name-bar">
-        <div class="slot-name">${c.name}</div>
-        <div class="slot-branch">${label}</div>
+      <div style="position:relative;width:100%;aspect-ratio:${aspectRatio};overflow:hidden;border-radius:4px;border:1px solid rgba(255,255,255,0.08);">
+        ${mediaHTML}
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 5px 5px;background:${overlayBg};text-align:center;z-index:2;">
+          <div style="font-size:${nameSize};font-weight:700;color:#fff;line-height:1.25;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-shadow:0 1px 4px rgba(0,0,0,0.9);">${c.name}</div>
+          <div style="font-size:${branchSize};color:rgba(255,255,255,0.72);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-transform:uppercase;letter-spacing:0.07em;margin-top:1px;">${label}</div>
+        </div>
       </div>`;
   } else {
     inner.innerHTML = `
@@ -296,6 +303,7 @@ function applyTheme(themeName) {
   if (stage) {
     stage.style.background = t.bg;
     stage.style.color = t.text;
+    stage.style.fontFamily = t.font;
   }
 
   document.querySelectorAll('.theme-btn').forEach(btn => {
