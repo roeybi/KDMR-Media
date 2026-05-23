@@ -844,12 +844,26 @@ function updateGrid() {
     card.appendChild(photoDiv);
     card.appendChild(info);
 
-    card.addEventListener('click', () => {
+    card.addEventListener('click', async () => {
       if (alreadyPicked) return;
+
+      // Show loading state on this card while we fetch the data URL
+      card.style.opacity = '0.5';
+      card.style.pointerEvents = 'none';
+
+      // Pre-fetch photo as a data URL so html-to-image can embed it without CORS restrictions
+      let photo = '';
+      if (hasPhoto) {
+        photo = await toDataUrl(c.imageUrl);
+      }
+
+      card.style.opacity = '';
+      card.style.pointerEvents = '';
+
       DATA.picks[activeRank] = {
         id: c.id, rank: activeRank,
         name: c.name, region: c.branch || '',
-        photo: hasPhoto ? c.imageUrl : '',
+        photo,
       };
       render();
       buildRankRows();
@@ -863,6 +877,26 @@ function updateGrid() {
 
     grid.appendChild(card);
   });
+}
+
+// ================================================================
+//  IMAGE → DATA URL  (pre-fetch so html-to-image never needs CORS)
+// ================================================================
+async function toDataUrl(url) {
+  try {
+    const res = await fetch(url, { mode: 'cors', cache: 'force-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const blob = await res.blob();
+    return new Promise((resolve, reject) => {
+      const r = new FileReader();
+      r.onload = () => resolve(r.result);
+      r.onerror = reject;
+      r.readAsDataURL(blob);
+    });
+  } catch (e) {
+    console.warn('[predict] toDataUrl failed for', url, e.message);
+    return '';
+  }
 }
 
 // ================================================================
