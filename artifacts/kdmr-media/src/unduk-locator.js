@@ -987,7 +987,7 @@ export function mountLocatorHero(section) {
             Meet the Champions
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="/predict.html" class="px-8 py-3 rounded-md font-sans font-bold tracking-widest uppercase transition-all bg-[#BE8E3C] text-[#1A1612] hover:bg-[#F3EDDF] shadow-[0_4px_14px_0_rgba(190,142,60,0.39)] active:scale-95 text-sm">
+          <a href="/predict.html" class="px-8 py-3 rounded-md font-bold tracking-widest uppercase transition-all bg-[#BE8E3C] text-[#1A1612] hover:bg-[#F3EDDF] shadow-[0_4px_14px_0_rgba(190,142,60,0.39)] active:scale-95 text-sm" style="font-family:inherit;">
             Predict Top 7
           </a>
         </div>
