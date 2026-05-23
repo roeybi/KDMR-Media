@@ -7,6 +7,8 @@
  * Unauthenticated vote/chat actions → registration modal → pending action executes on unlock.
  */
 
+import { createClient } from '@supabase/supabase-js';
+
 // ────────────────────────────────────────────────
 //  CONFIG
 // ────────────────────────────────────────────────
@@ -41,15 +43,17 @@ const RANK_BADGE = [
 //  STATE
 // ────────────────────────────────────────────────
 
-let _data          = null;
-let _session       = null;
-let _liveEvent     = null;
-let _pollTimer     = null;
-let _chatMessages  = [];
-let _chatOnline    = 1;
-let _pendingAction = null; // { type:'vote', candidateId } | { type:'chat', text }
-let _unCandidates  = [];   // all 2026 UN winners with liveVotes
-let _filterState   = { search: '', sort: 'votes' };
+let _data              = null;
+let _session           = null;
+let _liveEvent         = null;
+let _pollTimer         = null;
+let _chatMessages      = [];
+let _chatOnline        = 1;
+let _pendingAction     = null; // { type:'vote', candidateId } | { type:'chat', text }
+let _unCandidates      = [];   // all 2026 UN winners with liveVotes
+let _filterState       = { search: '', sort: 'votes' };
+let _supabase          = null; // Supabase JS client (used for Realtime)
+const _pendingLocalVotes = new Set(); // IDs voted locally — dedup against Realtime events
 
 // ────────────────────────────────────────────────
 //  UTILITIES
@@ -142,6 +146,15 @@ function showToast(msg, type = 'success') {
 // ────────────────────────────────────────────────
 //  SUPABASE
 // ────────────────────────────────────────────────
+
+function getSupabase() {
+  if (!_supabase) {
+    _supabase = createClient(API_CONFIG.SUPABASE_URL, API_CONFIG.SUPABASE_ANON_KEY, {
+      auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+    });
+  }
+  return _supabase;
+}
 
 async function sbInsert(table, row) {
   try {
@@ -679,6 +692,49 @@ function renderLeaderboard() {
   if (updEl) updEl.textContent = `Updated ${new Date().toLocaleTimeString('en-MY', { hour: '2-digit', minute: '2-digit', hour12: false })}`;
 }
 
+// ── FLIP-animated leaderboard re-sort ──────────────────────────────────────
+// Uses First/Last/Invert/Play: snapshot old Y positions → re-render → compute
+// delta → apply instant inverse transform → animate to 0. Smooth ~500ms reorder.
+function animatedRenderLeaderboard() {
+  const list = document.getElementById('leaderboardList');
+  if (!list) { renderLeaderboard(); return; }
+
+  // FIRST: snapshot current top positions of all visible rows
+  const firstPos = {};
+  list.querySelectorAll('.lb-row[id^="lb-row-"]').forEach(el => {
+    firstPos[el.id] = el.getBoundingClientRect().top;
+  });
+
+  // UPDATE: full re-render (new sorted order in DOM)
+  renderLeaderboard();
+
+  // LAST → INVERT → PLAY: animate each row from old position to new
+  list.querySelectorAll('.lb-row[id^="lb-row-"]').forEach(el => {
+    const first = firstPos[el.id];
+    if (first === undefined) return; // new element — no animation needed
+    const last  = el.getBoundingClientRect().top;
+    const delta = first - last;
+    if (Math.abs(delta) < 1) return; // no meaningful movement
+
+    // Snap element back to its old visual position (no transition)
+    el.style.transition = 'none';
+    el.style.transform  = `translateY(${delta}px)`;
+
+    // On next two frames: enable transition and release to natural position
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
+        el.style.transform  = '';
+        // Clean up inline styles after animation finishes
+        el.addEventListener('transitionend', () => {
+          el.style.transition = '';
+          el.style.transform  = '';
+        }, { once: true });
+      });
+    });
+  });
+}
+
 function initLeaderboard() {
   const list    = document.getElementById('leaderboardList');
   const search  = document.getElementById('lbSearch');
@@ -728,8 +784,8 @@ function refreshLeaderboardRow(candidateId) {
     if (b) b.style.width = ((x.liveVotes || 0) / max * 100).toFixed(1) + '%';
   });
 
-  // Re-sort leaderboard if sorted by votes
-  if (_filterState.sort === 'votes') setTimeout(renderLeaderboard, 600);
+  // Re-sort leaderboard if sorted by votes (with animation)
+  if (_filterState.sort === 'votes') setTimeout(animatedRenderLeaderboard, 600);
 
   updateRankingTicker();
 }
@@ -756,6 +812,9 @@ async function handleVote(candidateId) {
   const btn = document.getElementById(`lb-btn-${candidateId}`);
   if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
 
+  // Track local vote so the Realtime INSERT event doesn't double-count it
+  _pendingLocalVotes.add(candidateId);
+
   // Supabase-first: only mark voted after server confirms
   if (API_CONFIG.ENABLED) {
     const result = await sbInsert('live_votes', {
@@ -764,6 +823,8 @@ async function handleVote(candidateId) {
       voted_at: new Date().toISOString(),
     });
     if (!result.ok) {
+      // Insert failed — remove from pending so Realtime doesn't skip a future real event
+      _pendingLocalVotes.delete(candidateId);
       // Restore button so user can retry
       if (btn) { btn.disabled = false; btn.textContent = 'Cast Vote'; }
       if (result.status === 409) {
@@ -786,7 +847,7 @@ async function handleVote(candidateId) {
 }
 
 // ────────────────────────────────────────────────
-//  POLLING (real API mode only)
+//  POLLING (fallback — used if Realtime unavailable)
 // ────────────────────────────────────────────────
 
 function startPolling() {
@@ -810,6 +871,85 @@ function startPolling() {
       }
     }
   }, POLL_INTERVAL);
+}
+
+// ────────────────────────────────────────────────
+//  REALTIME (Supabase WebSocket subscriptions)
+//
+//  Requires Realtime to be enabled on the Supabase project for
+//  the `live_votes` and `live_chat` tables. If the subscription
+//  fails to connect, `startPolling()` runs as fallback.
+// ────────────────────────────────────────────────
+
+function startRealtime() {
+  if (!API_CONFIG.ENABLED) return;
+
+  const sb = getSupabase();
+  let realtimeConnected = false;
+
+  // ── Live votes → instant leaderboard re-sort with FLIP animation ──
+  sb.channel('kdmr_live_votes')
+    .on('postgres_changes',
+      { event: 'INSERT', schema: 'public', table: 'live_votes' },
+      payload => {
+        const { candidate_id } = payload.new;
+
+        // Skip if this INSERT came from our own local vote (already counted optimistically)
+        if (_pendingLocalVotes.has(candidate_id)) {
+          _pendingLocalVotes.delete(candidate_id);
+          return;
+        }
+
+        const c = _unCandidates.find(x => x.id === candidate_id);
+        if (c) {
+          c.liveVotes = (c.liveVotes || 0) + 1;
+          if (_filterState.sort === 'votes') {
+            animatedRenderLeaderboard();
+          } else {
+            // Just refresh the affected row's bar + count without resorting
+            const max    = Math.max(..._unCandidates.map(x => x.liveVotes || 0), 1);
+            const bar    = document.getElementById(`lb-bar-${candidate_id}`);
+            const voteEl = document.getElementById(`lb-votes-${candidate_id}`);
+            if (bar)    bar.style.width = ((c.liveVotes || 0) / max * 100).toFixed(1) + '%';
+            if (voteEl) voteEl.textContent = (c.liveVotes || 0).toLocaleString();
+            // Recalculate all other bars too (max may have changed)
+            _unCandidates.forEach(x => {
+              const b = document.getElementById(`lb-bar-${x.id}`);
+              if (b) b.style.width = ((x.liveVotes || 0) / max * 100).toFixed(1) + '%';
+            });
+          }
+          updateRankingTicker();
+        }
+      })
+    .subscribe(status => {
+      if (status === 'SUBSCRIBED') {
+        realtimeConnected = true;
+      } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+        if (!realtimeConnected) startPolling(); // fall back if we never connected
+      }
+    });
+
+  // ── Live chat → instant message append ──
+  sb.channel('kdmr_live_chat')
+    .on('postgres_changes',
+      { event: 'INSERT', schema: 'public', table: 'live_chat' },
+      payload => {
+        const r = payload.new;
+        const msg = {
+          id: r.message_id, token: r.session_token,
+          username: r.username, text: r.text, sentAt: r.sent_at,
+        };
+        if (!_chatMessages.find(x => x.id === msg.id)) {
+          _chatMessages.push(msg);
+          if (_chatMessages.length > 100) _chatMessages = _chatMessages.slice(-100);
+          renderChat();
+        }
+      })
+    .subscribe();
+
+  // Safety net: start polling for chat anyway as belt-and-suspenders
+  // (Realtime deduplication in renderChat already prevents double-rendering)
+  startPolling();
 }
 
 // ────────────────────────────────────────────────
@@ -861,8 +1001,8 @@ function startPolling() {
     // 8. Sync live vote counts from Supabase
     await syncVoteCounts();
 
-    // 9. Start real-time polling (chat + future expansions)
-    startPolling();
+    // 9. Start Supabase Realtime (votes + chat); falls back to polling if unavailable
+    startRealtime();
 
   } catch (err) {
     console.error('[KDMR Live] Bootstrap error:', err);
