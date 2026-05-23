@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/index.css" />
     <style>
       /* ── Film grain ─────────────────────────────── */
@@ -698,7 +699,205 @@
       </div>
     </footer>
 
-    <!-- dead template removed -->
+    <!-- ── #renderTemplate: off-screen html2canvas capture target ─── -->
+    <div id="renderTemplate"
+         style="position:fixed;top:0;left:-9999px;z-index:-50;
+                width:1080px;height:1350px;
+                background:#1A1612;color:#F3EDDF;
+                font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+                display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;">
+
+      <!-- HEADER -->
+      <div style="flex-shrink:0;height:160px;padding:28px 48px 20px;
+                  border-bottom:1px solid rgba(255,255,255,0.08);
+                  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="/mark-color.svg" alt="" crossorigin="anonymous"
+               style="width:26px;height:26px;object-fit:contain;opacity:0.75;"
+               onerror="this.style.display='none'" />
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;opacity:0.45;">
+            Unduk Ngadau 2026 &middot; KDMR Media
+          </span>
+        </div>
+        <h1 id="renderTitle"
+            style="margin:0;font-size:52px;font-weight:400;font-style:italic;
+                   font-family:'Instrument Serif',Georgia,'Times New Roman',serif;
+                   letter-spacing:0.02em;line-height:1.0;text-align:center;color:inherit;">
+          PREDICTION
+        </h1>
+      </div>
+
+      <!-- RANK 1: full-width hero -->
+      <div style="flex-shrink:0;height:430px;position:relative;overflow:hidden;background:rgba(0,0,0,0.2);">
+        <div style="position:absolute;top:14px;left:18px;z-index:10;
+                    width:38px;height:38px;border-radius:50%;background:#f0a820;
+                    display:flex;align-items:center;justify-content:center;
+                    font-size:16px;font-weight:900;color:#0a0a0a;box-shadow:0 2px 8px rgba(0,0,0,0.5);">1</div>
+        <img id="renderImg1" src="" alt="" crossorigin="anonymous"
+             style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+        <div id="renderEmpty1"
+             style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                    font-size:72px;opacity:0.25;">🏆</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;
+                    padding:48px 36px 22px;
+                    background:linear-gradient(to top,rgba(0,0,0,0.92),rgba(0,0,0,0.5) 55%,transparent);
+                    z-index:5;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+                      color:rgba(255,255,255,0.5);margin-bottom:6px;">Champion · 1st Place</div>
+          <div id="renderName1"
+               style="font-size:30px;font-weight:800;color:#fff;line-height:1.1;
+                      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+                      text-shadow:0 2px 10px rgba(0,0,0,0.9);">—</div>
+          <div id="renderDist1"
+               style="font-size:15px;font-weight:500;color:rgba(255,255,255,0.58);margin-top:5px;
+                      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+        </div>
+      </div>
+
+      <!-- RANKS 2–3: side by side -->
+      <div style="flex-shrink:0;height:300px;display:flex;gap:2px;">
+
+        <!-- Rank 2 -->
+        <div style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.15);">
+          <div style="position:absolute;top:10px;left:12px;z-index:10;
+                      width:30px;height:30px;border-radius:50%;background:#d4d4d8;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:13px;font-weight:900;color:#0a0a0a;">2</div>
+          <img id="renderImg2" src="" alt="" crossorigin="anonymous"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+          <div id="renderEmpty2"
+               style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                      font-size:44px;opacity:0.25;">👑</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 16px 14px;
+                      background:linear-gradient(to top,rgba(0,0,0,0.92),rgba(0,0,0,0.5) 60%,transparent);z-index:5;">
+            <div id="renderName2"
+                 style="font-size:17px;font-weight:800;color:#fff;line-height:1.2;
+                        white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+                        text-shadow:0 1px 5px rgba(0,0,0,0.9);">—</div>
+            <div id="renderDist2"
+                 style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:3px;
+                        white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+          </div>
+        </div>
+
+        <!-- Rank 3 -->
+        <div style="flex:1;position:relative;overflow:hidden;background:rgba(0,0,0,0.15);">
+          <div style="position:absolute;top:10px;left:12px;z-index:10;
+                      width:30px;height:30px;border-radius:50%;background:#a87239;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:13px;font-weight:900;color:#fff;">3</div>
+          <img id="renderImg3" src="" alt="" crossorigin="anonymous"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+          <div id="renderEmpty3"
+               style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                      font-size:44px;opacity:0.25;">🥉</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 16px 14px;
+                      background:linear-gradient(to top,rgba(0,0,0,0.92),rgba(0,0,0,0.5) 60%,transparent);z-index:5;">
+            <div id="renderName3"
+                 style="font-size:17px;font-weight:800;color:#fff;line-height:1.2;
+                        white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+                        text-shadow:0 1px 5px rgba(0,0,0,0.9);">—</div>
+            <div id="renderDist3"
+                 style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:3px;
+                        white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">—</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RANKS 4–7: 2×2 grid -->
+      <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;overflow:hidden;min-height:0;">
+
+        <!-- Rank 4 -->
+        <div style="position:relative;overflow:hidden;background:rgba(0,0,0,0.15);">
+          <div style="position:absolute;top:8px;left:10px;z-index:10;
+                      width:26px;height:26px;border-radius:50%;background:#1e1e1e;border:1px solid #3a3a3a;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:11px;font-weight:900;color:#888;">4</div>
+          <img id="renderImg4" src="" alt="" crossorigin="anonymous"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+          <div id="renderEmpty4"
+               style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                      font-size:32px;opacity:0.2;">✦</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 12px 10px;
+                      background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);z-index:5;">
+            <div id="renderName4" style="font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px rgba(0,0,0,0.9);">—</div>
+            <div id="renderDist4" style="font-size:11px;color:rgba(255,255,255,0.52);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px;">—</div>
+          </div>
+        </div>
+
+        <!-- Rank 5 -->
+        <div style="position:relative;overflow:hidden;background:rgba(0,0,0,0.15);">
+          <div style="position:absolute;top:8px;left:10px;z-index:10;
+                      width:26px;height:26px;border-radius:50%;background:#1e1e1e;border:1px solid #3a3a3a;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:11px;font-weight:900;color:#888;">5</div>
+          <img id="renderImg5" src="" alt="" crossorigin="anonymous"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+          <div id="renderEmpty5"
+               style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                      font-size:32px;opacity:0.2;">✦</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 12px 10px;
+                      background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);z-index:5;">
+            <div id="renderName5" style="font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px rgba(0,0,0,0.9);">—</div>
+            <div id="renderDist5" style="font-size:11px;color:rgba(255,255,255,0.52);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px;">—</div>
+          </div>
+        </div>
+
+        <!-- Rank 6 -->
+        <div style="position:relative;overflow:hidden;background:rgba(0,0,0,0.15);">
+          <div style="position:absolute;top:8px;left:10px;z-index:10;
+                      width:26px;height:26px;border-radius:50%;background:#1e1e1e;border:1px solid #3a3a3a;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:11px;font-weight:900;color:#888;">6</div>
+          <img id="renderImg6" src="" alt="" crossorigin="anonymous"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+          <div id="renderEmpty6"
+               style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                      font-size:32px;opacity:0.2;">✦</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 12px 10px;
+                      background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);z-index:5;">
+            <div id="renderName6" style="font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px rgba(0,0,0,0.9);">—</div>
+            <div id="renderDist6" style="font-size:11px;color:rgba(255,255,255,0.52);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px;">—</div>
+          </div>
+        </div>
+
+        <!-- Rank 7 -->
+        <div style="position:relative;overflow:hidden;background:rgba(0,0,0,0.15);">
+          <div style="position:absolute;top:8px;left:10px;z-index:10;
+                      width:26px;height:26px;border-radius:50%;background:#1e1e1e;border:1px solid #3a3a3a;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:11px;font-weight:900;color:#888;">7</div>
+          <img id="renderImg7" src="" alt="" crossorigin="anonymous"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:none;" />
+          <div id="renderEmpty7"
+               style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;
+                      font-size:32px;opacity:0.2;">✦</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 12px 10px;
+                      background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);z-index:5;">
+            <div id="renderName7" style="font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px rgba(0,0,0,0.9);">—</div>
+            <div id="renderDist7" style="font-size:11px;color:rgba(255,255,255,0.52);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px;">—</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div style="flex-shrink:0;height:100px;padding:0 48px;
+                  border-top:1px solid rgba(255,255,255,0.08);
+                  display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="/mark-color.svg" alt="" crossorigin="anonymous"
+               style="width:24px;height:24px;object-fit:contain;opacity:0.65;"
+               onerror="this.style.display='none'" />
+          <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.55;">KDMR Media</span>
+        </div>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.06em;opacity:0.4;">kdmrmedia.com/predict</span>
+      </div>
+
+    </div><!-- /#renderTemplate -->
+
+    <!-- dead sc-slot block (hidden) -->
     <div style="display:none;" aria-hidden="true">
     <div>
 
