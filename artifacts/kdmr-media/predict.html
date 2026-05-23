@@ -47,7 +47,7 @@ html, body { margin: 0; padding: 0; background: #0d0d0d; color: #eee; font-famil
 }
 .topbar-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .topbar-logo svg { width: 26px; height: 26px; flex-shrink: 0; }
-.topbar-logo span { font-family: var(--ff-sans); font-weight: 700; font-size: 13px; color: #ddd; letter-spacing: 0.14em; text-transform: uppercase; }
+.topbar-logo span { font-family: var(--ff-sans); font-weight: 700; font-size: 13px; color: #ddd; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
 .topbar-back {
   font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.14em;
   text-transform: uppercase; color: #555; text-decoration: none;
@@ -475,10 +475,11 @@ body { padding-top: 48px; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .page { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
-  .stage { height: clamp(360px, 90vw, 540px); padding: 12px; }
-  .panel { border-left: none; border-top: 1px solid #1e1e1e; }
-  .contestant-grid { max-height: 160px; }
+  .page { grid-template-columns: 1fr; grid-template-rows: auto auto; height: auto; }
+  .stage { height: clamp(300px, 78vw, 480px); padding: 12px; }
+  .panel { border-left: none; border-top: 1px solid #1e1e1e; height: auto; overflow: visible; }
+  .panel-scroll { flex: none; overflow-y: visible; }
+  .contestant-grid { max-height: 200px; }
 }
 </style>
 </head>
