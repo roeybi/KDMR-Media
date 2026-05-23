@@ -331,70 +331,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <!-- ── Cinematic Hero — Legend of the Week ────────────────── -->
-    <!-- Populated by initIndex() in script.js via pickFeatured(data) -->
-    <section class="hero-cinema" id="heroSection">
-      <!-- Portrait column -->
-      <div class="hero-portrait">
-        <div class="hero-deco" aria-hidden="true"></div>
-        <div style="position:absolute;top:24px;left:24px;z-index:3;font-size:0.56rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:rgba(240,168,32,0.5);border:1px solid rgba(240,168,32,0.12);padding:4px 12px;border-radius:2px;" id="heroYearBadge">2026 Season</div>
-        <div class="hero-avatar-wrap" id="heroAvatarWrap">
-          <span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">—</span>
-        </div>
-        <div class="hero-badge-anchor" style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;">
-          <span id="heroBadgeChip" style="display:none;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.22);color:#f0a820;font-size:0.52rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:4px 14px;border-radius:2px;white-space:nowrap;"></span>
-        </div>
-      </div>
-      <!-- Story column -->
-      <div class="hero-story">
-        <div style="max-width:500px;width:100%;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px;">
-            <span class="live-dot" style="flex-shrink:0;"></span>
-            <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;">Legend of the Week</span>
-          </div>
-          <h1 id="heroName" style="font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-0.03em;line-height:1.04;color:#f0f0f0;margin:0 0 10px;">—</h1>
-          <div id="heroSubtitle" style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f0a820;opacity:0.7;margin-bottom:24px;">—</div>
-          <p id="heroBioText" style="font-size:0.9rem;color:#5a5a5a;line-height:1.9;margin:0 0 36px;max-width:430px;">…</p>
-          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-            <!-- heroCtaBtn href & text set by script.js based on winner award type -->
-            <a id="heroCtaBtn" href="/unduk-ngadau/" class="cta-glow">Explore Her Story →</a>
-            <!-- heroVoteBtn — redirects to Live Arena voting page -->
-            <button id="heroVoteBtn" class="vote-btn">
-              <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;box-shadow:0 0 6px #ef4444;flex-shrink:0;"></span>
-              Vote in Live Arena →
-            </button>
-          </div>
-          <!-- heroVotes & heroShareBtn shown/populated by script.js after data loads -->
-          <div style="margin-top:20px;display:flex;align-items:center;gap:12px;">
-            <div id="heroVotes" style="font-size:0.68rem;color:#333;letter-spacing:0.06em;"></div>
-            <button id="heroShareBtn" class="hero-share-btn" title="Share this winner">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-              <span id="heroShareLabel">Share</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Stats bar ───────────────────────────────────────────── -->
-    <!-- Values animated by animateCount() in script.js -->
-    <div style="background:#0d0d0d;border-bottom:1px solid #1a1a1a;padding:14px 16px;">
-      <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-        <div style="text-align:center;">
-          <div id="statContestants" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
-          <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Contestants</div>
-        </div>
-        <div style="text-align:center;">
-          <div id="statStates" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
-          <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">States &amp; Territories</div>
-        </div>
-        <div style="text-align:center;">
-          <div id="statDistricts" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
-          <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Districts</div>
-        </div>
-      </div>
-    </div>
-
     <!-- ── Top 7 Prediction Teaser ─────────────────────────────── -->
     <section style="padding:52px 16px 48px;background:#080808;border-bottom:1px solid #1a1a1a;">
       <div style="max-width:1000px;margin:0 auto;">
@@ -458,6 +394,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="margin-top:12px;font-size:0.5rem;font-weight:700;color:#444;letter-spacing:0.2em;text-transform:uppercase;">Official 2026 Prediction Engine</div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ── Stats bar ───────────────────────────────────────────── -->
+    <!-- Values animated by animateCount() in script.js -->
+    <div style="background:#0d0d0d;border-bottom:1px solid #1a1a1a;padding:14px 16px;">
+      <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+        <div style="text-align:center;">
+          <div id="statContestants" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Contestants</div>
+        </div>
+        <div style="text-align:center;">
+          <div id="statStates" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">States &amp; Territories</div>
+        </div>
+        <div style="text-align:center;">
+          <div id="statDistricts" style="font-size:1.6rem;font-weight:800;color:#f0a820;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">—</div>
+          <div style="font-size:0.62rem;font-weight:600;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">Districts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Cinematic Hero — Legend of the Week ────────────────── -->
+    <!-- Populated by initIndex() in script.js via pickFeatured(data) -->
+    <section class="hero-cinema" id="heroSection">
+      <!-- Portrait column -->
+      <div class="hero-portrait">
+        <div class="hero-deco" aria-hidden="true"></div>
+        <div style="position:absolute;top:24px;left:24px;z-index:3;font-size:0.56rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:rgba(240,168,32,0.5);border:1px solid rgba(240,168,32,0.12);padding:4px 12px;border-radius:2px;" id="heroYearBadge">2026 Season</div>
+        <div class="hero-avatar-wrap" id="heroAvatarWrap">
+          <span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">—</span>
+        </div>
+        <div class="hero-badge-anchor" style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;">
+          <span id="heroBadgeChip" style="display:none;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.22);color:#f0a820;font-size:0.52rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:4px 14px;border-radius:2px;white-space:nowrap;"></span>
+        </div>
+      </div>
+      <!-- Story column -->
+      <div class="hero-story">
+        <div style="max-width:500px;width:100%;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px;">
+            <span class="live-dot" style="flex-shrink:0;"></span>
+            <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:#f0a820;">Legend of the Week</span>
+          </div>
+          <h1 id="heroName" style="font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-0.03em;line-height:1.04;color:#f0f0f0;margin:0 0 10px;">—</h1>
+          <div id="heroSubtitle" style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f0a820;opacity:0.7;margin-bottom:24px;">—</div>
+          <p id="heroBioText" style="font-size:0.9rem;color:#5a5a5a;line-height:1.9;margin:0 0 36px;max-width:430px;">…</p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <!-- heroCtaBtn href & text set by script.js based on winner award type -->
+            <a id="heroCtaBtn" href="/unduk-ngadau/" class="cta-glow">Explore Her Story →</a>
+            <!-- heroVoteBtn — redirects to Live Arena voting page -->
+            <button id="heroVoteBtn" class="vote-btn">
+              <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;box-shadow:0 0 6px #ef4444;flex-shrink:0;"></span>
+              Vote in Live Arena →
+            </button>
+          </div>
+          <!-- heroVotes & heroShareBtn shown/populated by script.js after data loads -->
+          <div style="margin-top:20px;display:flex;align-items:center;gap:12px;">
+            <div id="heroVotes" style="font-size:0.68rem;color:#333;letter-spacing:0.06em;"></div>
+            <button id="heroShareBtn" class="hero-share-btn" title="Share this winner">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              <span id="heroShareLabel">Share</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
