@@ -123,46 +123,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       .countdown-digit { font-variant-numeric: tabular-nums; font-weight: 900; letter-spacing: -0.03em; }
     </style>
-    <style>
-    /* Global nav spacing — fixed header (80px) + fixed bottom bar (128px) */
-    body { padding-top: 5rem !important; padding-bottom: 8rem !important; }
-  </style>
-</head>
+  </head>
   <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMLPZJ9D"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id="kdmr-global-nav">
-  <header class="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 bg-[#2E4234] text-[#F3EDDF] shadow-md border-b border-[#BE8E3C]/20">
-    <a href="/" class="font-serif text-2xl font-bold tracking-widest">KDMR</a>
-    <button id="menuOpenBtn" class="p-2 focus:outline-none active:scale-95 transition-transform">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-    </button>
-  </header>
-
-  <div id="mobileMenu" class="fixed inset-0 z-[60] bg-[#1A1612] text-[#F3EDDF] flex-col hidden overflow-y-auto">
-    <div class="flex items-center justify-end px-6 py-4">
-      <button id="menuCloseBtn" class="p-2 focus:outline-none active:scale-95 transition-transform">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-    </div>
-    <nav class="flex flex-col items-center justify-center flex-grow gap-8 pb-20">
-      <a href="/" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Home</a>
-      <a href="/predict.html" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Predict Top 7</a>
-      <a href="/winners.html" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Winners Hub</a>
-      <a href="/unduk-ngadau/" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Unduk Ngadau Map</a>
-      <a href="/peninsular-2026.html" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Peninsular 2026</a>
-    </nav>
-  </div>
-
-  <div class="fixed bottom-0 inset-x-0 z-40 p-4 bg-gradient-to-t from-[#1A1612] via-[#1A1612]/80 to-transparent pb-6">
-    <a href="/live.html" class="block w-full bg-[#8C2A26] text-[#F3EDDF] text-center font-sans font-bold text-lg py-4 rounded-xl shadow-[0_4px_14px_0_rgba(140,42,38,0.5)] uppercase tracking-widest active:scale-95 transition-transform border border-white/10">
-      🔴 Watch Live & Vote
-    </a>
-  </div>
-</div>
-
 
     <!-- ═══════════════════════════════════════════════
          GATE MODAL — triggered by vote/chat actions only
@@ -220,6 +186,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ═══════════════════════════════════════════════
          NAV
          ════════════════════════════════════════════════ -->
+    <nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.96);border-bottom:1px solid #1a1a1a;backdrop-filter:blur(12px);">
+      <div style="max-width:1200px;margin:0 auto;padding:0 16px;height:50px;display:flex;align-items:center;">
+        <a href="/" style="display:flex;align-items:center;gap:9px;text-decoration:none;margin-right:auto;">
+          <img src="/mark-color.svg" alt="KDMR" style="width:26px;height:26px;display:block;" />
+          <span style="font-size:0.9rem;font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">KDMR<span style="color:#f0a820;">·</span>MEDIA</span>
+        </a>
+        <div id="userPill" style="display:none;align-items:center;gap:6px;background:rgba(240,168,32,0.08);border:1px solid rgba(240,168,32,0.2);padding:3px 9px;border-radius:2px;margin-right:10px;">
+          <span style="width:5px;height:5px;border-radius:50%;background:#4ade80;"></span>
+          <span id="userPillName" style="font-size:0.68rem;font-weight:600;color:#f0a820;"></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <a href="/live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.72rem;font-weight:700;padding:7px 14px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Watch Live & Vote</a>
+          <button id="mobileMenuBtn" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;" aria-label="Menu" onclick="document.getElementById('mobileMenu').style.display=document.getElementById('mobileMenu').style.display==='none'?'block':'none'">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" style="display:none;border-top:1px solid #1a1a1a;padding:12px 16px;background:rgba(10,10,10,0.96);">
+        <a href="/" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Home</a>
+        <a href="/unduk-ngadau/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#f0a820;color:#0a0a0a;padding:2px 6px;border-radius:2px;">UN</span> Unduk Ngadau</a>
+        <a href="/winners.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">Winners</a>
+        <a href="/predict.html" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:600;color:#a78bfa;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#7c3aed;color:#fff;padding:2px 6px;border-radius:2px;">P7</span> Top 7 Predict</a>
+        <a href="/news.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;">News</a>
+      </div>
+    </nav>
 
     <!-- ═══════════════════════════════════════════════
          BLOCK 1 — VIDEO PLAYER ARENA
