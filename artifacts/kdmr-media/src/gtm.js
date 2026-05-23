@@ -29,14 +29,22 @@
   }
 
   /* ── 2. Inject noscript iframe into <body> as first child if missing ──────────── */
-  if (!document.querySelector('noscript iframe[src*="googletagmanager.com/ns.html"]')) {
-    const noscript = document.createElement('noscript');
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.googletagmanager.com/ns.html?id=' + GTM_ID;
-    iframe.height = '0';
-    iframe.width  = '0';
-    iframe.style.cssText = 'display:none;visibility:hidden';
-    noscript.appendChild(iframe);
-    document.body.insertBefore(noscript, document.body.firstChild);
+  function injectBodyTag() {
+    if (!document.querySelector('noscript iframe[src*="googletagmanager.com/ns.html"]')) {
+      const noscript = document.createElement('noscript');
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.googletagmanager.com/ns.html?id=' + GTM_ID;
+      iframe.height = '0';
+      iframe.width  = '0';
+      iframe.style.cssText = 'display:none;visibility:hidden';
+      noscript.appendChild(iframe);
+      document.body.insertBefore(noscript, document.body.firstChild);
+    }
+  }
+  // Script runs in <head> before <body> exists — defer until DOM is ready
+  if (document.body) {
+    injectBodyTag();
+  } else {
+    document.addEventListener('DOMContentLoaded', injectBodyTag);
   }
 })();
