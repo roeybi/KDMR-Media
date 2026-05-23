@@ -83,7 +83,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ── Sub-header banner (sits above map + hero) ────────────────── -->
     <div style="background:rgba(240,168,32,0.06);border-bottom:1px solid rgba(240,168,32,0.12);padding:0 16px;height:36px;display:flex;align-items:center;gap:10px;flex-shrink:0;">
       <span style="font-size:0.6rem;font-weight:800;background:#f0a820;color:#0a0a0a;padding:2px 8px;border-radius:2px;letter-spacing:0.08em;">UN</span>
-      <span style="font-size:0.72rem;font-weight:600;color:#888;letter-spacing:0.06em;text-transform:uppercase;">Unduk Ngadau — Hari Kaamatan Cultural Champion</span>
+      <span style="font-size:0.72rem;font-weight:600;color:#888;letter-spacing:0.06em;text-transform:uppercase;" data-i18n="un_header_label">Unduk Ngadau — Hari Kaamatan Cultural Champion</span>
     </div>
 
     <!-- ── Unduk Locator — Interactive SVG Peninsula Map ─────────────── -->
@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Section label -->
         <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;">
           <span style="flex:1;height:1px;background:linear-gradient(to right,transparent,#222);"></span>
-          <span style="font-size:0.55rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#3a3a3a;white-space:nowrap;">◉ Unduk Locator · Diaspora Branches</span>
+          <span style="font-size:0.55rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#3a3a3a;white-space:nowrap;" data-i18n="un_locator_label">◉ Unduk Locator · Diaspora Branches</span>
           <span style="flex:1;height:1px;background:linear-gradient(to left,transparent,#222);"></span>
         </div>
 
@@ -129,16 +129,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- Tab nav -->
         <div style="display:flex;border-bottom:1px solid #1a1a1a;margin-bottom:0;overflow-x:auto;-webkit-overflow-scrolling:touch;">
-          <button class="map-tab-btn active" data-panel="peninsula" onclick="switchMapPanel(this,'peninsula')">Peninsular Malaysia</button>
-          <button class="map-tab-btn" data-panel="sarawak" onclick="switchMapPanel(this,'sarawak')">Sarawak</button>
-          <button class="map-tab-btn" data-panel="sabah" onclick="switchMapPanel(this,'sabah')">Sabah</button>
+          <button class="map-tab-btn active" data-panel="peninsula" onclick="switchMapPanel(this,'peninsula')" data-i18n="tab_peninsular">Peninsular Malaysia</button>
+          <button class="map-tab-btn" data-panel="sarawak" onclick="switchMapPanel(this,'sarawak')" data-i18n="tab_sarawak">Sarawak</button>
+          <button class="map-tab-btn" data-panel="sabah" onclick="switchMapPanel(this,'sabah')" data-i18n="tab_sabah">Sabah</button>
         </div>
 
         <!-- Panel 1: Peninsular Malaysia -->
         <div id="mapPanel-peninsula" class="map-panel active">
           <div class="map-panel-header">
             <div class="map-panel-title">Peninsular Malaysia</div>
-            <div class="map-panel-sub">6 diaspora branches</div>
+            <div class="map-panel-sub" data-i18n="count_peninsula_branches">6 diaspora branches</div>
           </div>
           <svg id="peninsulaSvg" class="map-svg" viewBox="0 38 130 158" style="display:block;overflow:visible;max-width:380px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -249,7 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="mapPanel-sarawak" class="map-panel">
           <div class="map-panel-header">
             <div class="map-panel-title">Sarawak</div>
-            <div class="map-panel-sub">1 branch</div>
+            <div class="map-panel-sub" data-i18n="count_sarawak_branches">1 branch</div>
           </div>
           <svg id="sarawakSvg" class="map-svg" viewBox="114 72 152 128" style="display:block;overflow:visible;max-width:440px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
             <defs>
