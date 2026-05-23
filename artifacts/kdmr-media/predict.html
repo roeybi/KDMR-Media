@@ -481,7 +481,6 @@ body { padding-top: 48px; }
   .panel-scroll { flex: none; overflow-y: visible; }
   .contestant-grid { max-height: 200px; }
 }
-@media (max-width: 640px) { .topbar-logo span { display: none; } }
 </style>
 </head>
 <body>
@@ -499,7 +498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <path d="M 32 32.7 L 45.3 46 L 32 59.3 L 18.7 46 Z" fill="#2E4234"></path>
       <path d="M 18 18.7 L 31.3 32 L 18 45.3 L 4.7 32 Z" fill="#F3EDDF"></path>
     </svg>
-    <span>KDMR · Media</span>
+    <span style="display:flex;flex-direction:column;line-height:1.1;"><span style="font-size:13px;">KDMR <span style="color:#f0a820;">·</span></span><span style="font-size:8.5px;color:#aaa;letter-spacing:0.06em;font-weight:700;">MEDIA</span></span>
   </a>
   <a href="/live.html" style="background:#f0a820;color:#0a0a0a;font-size:0.68rem;font-weight:700;padding:5px 10px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">Watch Live & Vote</a>
   <button onclick="var m=document.getElementById('predictMenu');m.style.display=m.style.display==='block'?'none':'block'" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;align-items:center;flex-shrink:0;" aria-label="Menu">
