@@ -14,6 +14,7 @@ const ADMIN_HASH = '64e48f3bf07307f751c02213b95e0b5e1e8351597dfbe12bce5cbf115591
 
 let allRows = [];
 let currentFilter = 'all';
+let winnerMap = {}; // win-XXX → { branch, district, name }
 
 // ─── PASSCODE GATE ─────────────────────────────────────────────────────────
 
@@ -35,6 +36,39 @@ async function checkAdminPasscode() {
   }
 }
 
+// ─── WINNER MAP ─────────────────────────────────────────────────────────────
+
+async function buildWinnerMap() {
+  try {
+    const res = await fetch('./data.json');
+    const data = await res.json();
+    (data.winners || []).forEach(w => {
+      winnerMap[w.id] = {
+        name: w.name,
+        branch: w.branch,
+        district: w.district || w.branch,
+      };
+    });
+  } catch {
+    // non-fatal — branch display will fall back to raw value
+  }
+}
+
+// Resolve a branch value: if it's a win-XXX ID, return the human district label.
+function resolveBranch(raw) {
+  if (!raw) return '-';
+  if (/^win-\d+$/i.test(raw)) {
+    const entry = winnerMap[raw];
+    if (entry) {
+      return entry.branch === 'KDCA Sabah'
+        ? entry.district
+        : entry.branch;
+    }
+    return raw; // fallback if not in map
+  }
+  return raw;
+}
+
 // ─── QUEUE LOADING ─────────────────────────────────────────────────────────
 
 async function loadQueue() {
@@ -42,6 +76,8 @@ async function loadQueue() {
   tbody.innerHTML = '<tr><td colspan="8" class="empty-state">Loading submissions...</td></tr>';
 
   try {
+    await buildWinnerMap();
+
     const res = await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}?select=*&order=uploaded_at.desc`, {
       headers: {
         'apikey': SUPABASE_ANON_KEY,
@@ -89,10 +125,11 @@ function renderQueue() {
       ? new Date(row.uploaded_at).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
       : '-';
     const thumbUrl = row.public_url || `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${row.filename}`;
+    const branchDisplay = resolveBranch(row.branch);
     return `
       <tr data-id="${row.id}">
         <td><img src="${thumbUrl}" class="thumb" alt="" loading="lazy" onerror="this.style.display='none'"></td>
-        <td><strong>${row.branch || '-'}</strong></td>
+        <td><strong>${branchDisplay}</strong></td>
         <td>${row.winner_name || '-'}</td>
         <td style="font-family:monospace;font-size:0.75rem;color:#888;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${row.filename}</td>
         <td>${row.uploaded_by || '-'}</td>
@@ -100,7 +137,7 @@ function renderQueue() {
         <td><span class="status-badge status-${row.status || 'pending'}">${row.status || 'pending'}</span></td>
         <td style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <button class="copy-btn" data-url="${thumbUrl}" onclick="copyUrl(this)">Copy URL</button>
-          <button class="copy-btn agent-btn" data-text="${row.branch} | ${row.winner_name} | ${thumbUrl}" onclick="copyForAgent(this)" title="Copy formatted string to send to agent">📋 Copy for Agent</button>
+          <button class="copy-btn agent-btn" data-text="${branchDisplay} | ${row.winner_name} | ${thumbUrl}" onclick="copyForAgent(this)" title="Copy formatted string to send to agent">📋 Copy for Agent</button>
           ${row.status !== 'approved' ? `<button class="action-btn approve-btn" onclick="updateStatus('${row.id}','approved',this)">✓ Approve</button>` : ''}
           ${row.status !== 'rejected' ? `<button class="action-btn reject-btn" onclick="updateStatus('${row.id}','rejected',this)">✗ Reject</button>` : ''}
         </td>
