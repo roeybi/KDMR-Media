@@ -481,12 +481,46 @@ body { padding-top: 48px; }
   .contestant-grid { max-height: 160px; }
 }
 </style>
+  <style>
+    /* Global nav spacing — fixed header (80px) + fixed bottom bar (128px) */
+    body { padding-top: 5rem !important; padding-bottom: 8rem !important; }
+  </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMLPZJ9D"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<div id="kdmr-global-nav">
+  <header class="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 bg-[#2E4234] text-[#F3EDDF] shadow-md border-b border-[#BE8E3C]/20">
+    <a href="/" class="font-serif text-2xl font-bold tracking-widest">KDMR</a>
+    <button id="menuOpenBtn" class="p-2 focus:outline-none active:scale-95 transition-transform">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </header>
+
+  <div id="mobileMenu" class="fixed inset-0 z-[60] bg-[#1A1612] text-[#F3EDDF] flex-col hidden overflow-y-auto">
+    <div class="flex items-center justify-end px-6 py-4">
+      <button id="menuCloseBtn" class="p-2 focus:outline-none active:scale-95 transition-transform">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center justify-center flex-grow gap-8 pb-20">
+      <a href="/" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Home</a>
+      <a href="/predict.html" class="font-serif text-3xl font-bold tracking-wide text-[\#BE8E3C]">Predict Top 7</a>
+      <a href="/winners.html" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Winners Hub</a>
+      <a href="/unduk-ngadau/" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Unduk Ngadau Map</a>
+      <a href="/peninsular-2026.html" class="font-serif text-3xl font-bold tracking-wide hover:text-[\#BE8E3C] transition-colors">Peninsular 2026</a>
+    </nav>
+  </div>
+
+  <div class="fixed bottom-0 inset-x-0 z-40 p-4 bg-gradient-to-t from-[#1A1612] via-[#1A1612]/80 to-transparent pb-6">
+    <a href="/live.html" class="block w-full bg-[#8C2A26] text-[#F3EDDF] text-center font-sans font-bold text-lg py-4 rounded-xl shadow-[0_4px_14px_0_rgba(140,42,38,0.5)] uppercase tracking-widest active:scale-95 transition-transform border border-white/10">
+      🔴 Watch Live & Vote
+    </a>
+  </div>
+</div>
+
 
 <!-- ── Topbar ─────────────────────────────────────────────────── -->
 <div class="topbar">
