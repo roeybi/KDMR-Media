@@ -973,6 +973,17 @@ function scheduleCache() {
   _cardBlob = null;
   _cacheTimer = setTimeout(async () => {
     try {
+      // Wait for every <img> in the card to finish loading (or fail/timeout)
+      // before rendering — otherwise html-to-image captures blank slots.
+      const imgs = Array.from(document.querySelectorAll('#predictCard img'));
+      await Promise.all(imgs.map(img => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise(resolve => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', resolve, { once: true });
+          setTimeout(resolve, 8000); // give up after 8 s
+        });
+      }));
       const dataUrl = await generateCardDataUrl();
       _cardBlob = await (await fetch(dataUrl)).blob();
     } catch (_) { _cardBlob = null; }
