@@ -1015,8 +1015,76 @@ async function shareCard(btnId, btnLabel) {
   }
 }
 
-function shareFacebook() { shareCard('btnFB', 'Facebook'); }
-function shareIGStory()   { shareCard('btnIG', 'IG Story'); }
+// Facebook: generate the card image, download it to the device,
+// then open Facebook so the user can upload it as a photo post/story.
+async function shareFacebook() {
+  const btn = document.getElementById('btnFB');
+  btn.disabled = true;
+  btn.textContent = 'Generating…';
+  try {
+    const dataUrl = await generateCardDataUrl();
+    const blob = await (await fetch(dataUrl)).blob();
+    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      // Native share sheet — Facebook appears as an option
+      btn.textContent = 'Opening…';
+      await navigator.share({
+        files: [file],
+        title: 'My Kaamatan Top 7 Prediction',
+        text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! Make yours at kdmrmedia.com/predict @KDMRMEDIA',
+      });
+    } else {
+      // Fallback: download the image then open Facebook
+      const a = document.createElement('a');
+      a.download = 'my-kaamatan-prediction.png';
+      a.href = dataUrl;
+      a.click();
+      setTimeout(() => window.open('https://www.facebook.com/', '_blank'), 700);
+    }
+  } catch (e) {
+    if (e.name !== 'AbortError') console.error('[predict] fb share failed:', e);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Facebook';
+  }
+}
+
+// IG Story: generate the card image and share directly to Instagram Story.
+// On iOS/Android, navigator.share with a file surfaces Instagram Story
+// in the native share sheet. Fallback opens the Instagram story camera
+// (instagram://story-camera) after downloading the image.
+async function shareIGStory() {
+  const btn = document.getElementById('btnIG');
+  btn.disabled = true;
+  btn.textContent = 'Generating…';
+  try {
+    const dataUrl = await generateCardDataUrl();
+    const blob = await (await fetch(dataUrl)).blob();
+    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      btn.textContent = 'Opening…';
+      await navigator.share({
+        files: [file],
+        title: 'My Kaamatan Top 7 Prediction',
+        text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! @KDMRMEDIA',
+      });
+    } else {
+      // Fallback: download image then open Instagram story camera
+      const a = document.createElement('a');
+      a.download = 'my-kaamatan-prediction.png';
+      a.href = dataUrl;
+      a.click();
+      setTimeout(() => { window.location.href = 'instagram://story-camera'; }, 700);
+    }
+  } catch (e) {
+    if (e.name !== 'AbortError') console.error('[predict] ig share failed:', e);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'IG Story';
+  }
+}
 
 // ================================================================
 //  BOOT
