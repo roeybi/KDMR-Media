@@ -940,6 +940,21 @@ function fitStage() {
 }
 
 // ================================================================
+//  SHARED CARD RENDERER
+//  fetchRequestInit cache:'no-cache' forces a fresh CORS fetch for
+//  Supabase portrait images — fixes the "empty photo" bug on mobile
+//  Safari where the browser's cached copy lacks CORS headers and
+//  taints the canvas.
+// ================================================================
+async function generateCardDataUrl() {
+  return htmlToImage.toPng(document.getElementById('predictCard'), {
+    width: 1080, height: 1350, pixelRatio: 1,
+    skipFonts: false,
+    fetchRequestInit: { mode: 'cors', cache: 'no-cache' },
+  });
+}
+
+// ================================================================
 //  DOWNLOAD
 // ================================================================
 async function downloadCard() {
@@ -947,10 +962,7 @@ async function downloadCard() {
   btn.disabled = true;
   btn.textContent = 'Generating…';
   try {
-    const dataUrl = await htmlToImage.toPng(document.getElementById('predictCard'), {
-      width: 1080, height: 1350, pixelRatio: 1,
-      skipFonts: false,
-    });
+    const dataUrl = await generateCardDataUrl();
     const a = document.createElement('a');
     a.download = 'my-kaamatan-prediction.png';
     a.href = dataUrl;
@@ -965,22 +977,19 @@ async function downloadCard() {
 }
 
 // ================================================================
-//  SHARE
+//  SHARE — Facebook & IG Story
+//  Both buttons generate the card image and trigger the native OS
+//  share sheet (Web Share API Level 2 — file sharing).
+//  On mobile this opens the system picker so the user can send to
+//  Facebook, Instagram Story, WhatsApp, etc. directly.
+//  Fallback: downloads the image with manual instructions.
 // ================================================================
-function shareFacebook() {
-  window.open('https://www.facebook.com/sharer/sharer.php?u=' +
-    encodeURIComponent('https://kdmrmedia.com/predict') + '&quote=' +
-    encodeURIComponent('I just made my Unduk Ngadau Kaamatan 2026 Top 7 prediction! Make yours at kdmrmedia.com/predict'), '_blank');
-}
-
-async function shareIGStory() {
-  const btn = document.getElementById('btnIG');
+async function shareCard(btnId, btnLabel) {
+  const btn = document.getElementById(btnId);
   btn.disabled = true;
-  btn.textContent = 'Saving…';
+  btn.textContent = 'Generating…';
   try {
-    const dataUrl = await htmlToImage.toPng(document.getElementById('predictCard'), {
-      width: 1080, height: 1350, pixelRatio: 1,
-    });
+    const dataUrl = await generateCardDataUrl();
     const blob = await (await fetch(dataUrl)).blob();
     const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
 
@@ -991,20 +1000,23 @@ async function shareIGStory() {
         text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! @KDMRMEDIA',
       });
     } else {
-      // Fallback: just download
+      // Fallback: download the image with instructions
       const a = document.createElement('a');
       a.download = 'my-kaamatan-prediction.png';
       a.href = dataUrl;
       a.click();
-      alert('Image saved! Open Instagram → + Story → select the saved image.');
+      alert('Image saved!\n\nFor Facebook: Upload it as a photo post or story.\nFor Instagram: Open IG → + Story → select the saved image.');
     }
   } catch (e) {
-    if (e.name !== 'AbortError') console.error('[predict] ig share failed:', e);
+    if (e.name !== 'AbortError') console.error('[predict] share failed:', e);
   } finally {
     btn.disabled = false;
-    btn.textContent = 'IG Story';
+    btn.textContent = btnLabel;
   }
 }
+
+function shareFacebook() { shareCard('btnFB', 'Facebook'); }
+function shareIGStory()   { shareCard('btnIG', 'IG Story'); }
 
 // ================================================================
 //  BOOT
