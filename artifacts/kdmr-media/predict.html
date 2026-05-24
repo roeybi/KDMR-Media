@@ -834,7 +834,10 @@ function updateGrid() {
 
   const shown = allContestants.filter(c => {
     if (!q) return true;
-    return c.name.toLowerCase().includes(q) || (c.branch || '').toLowerCase().includes(q);
+    return c.name.toLowerCase().includes(q)
+      || (c.branch || '').toLowerCase().includes(q)
+      || (c.district || '').toLowerCase().includes(q)
+      || (c.tribe || '').toLowerCase().includes(q);
   });
 
   if (!shown.length) {
