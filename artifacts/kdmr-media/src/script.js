@@ -459,7 +459,7 @@ function renderSabahGrid() {
     return `
       <div class="sabah-card" data-id="${w.id}" title="${w.name} — ${w.district}">
         <div class="sabah-card-photo">
-          ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
+          ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
           <div class="sabah-card-initials" style="display:${hasPhoto ? 'none' : 'flex'}">${inits}</div>
         </div>
         <div class="sabah-card-info">
@@ -493,7 +493,7 @@ function renderPeninsularGrid() {
     return `
       <div class="peninsular-card ${isActive ? 'active' : ''}" data-id="${w.id}" title="${w.name} — ${branchShort}">
         <div class="peninsular-card-photo">
-          ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
+          ${hasPhoto ? `<img src="${w.imageUrl}" alt="${w.name}" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
           <div class="peninsular-card-initials" style="display:${hasPhoto ? 'none' : 'flex'}">${inits}</div>
         </div>
         <div class="peninsular-card-info">
