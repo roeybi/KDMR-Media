@@ -453,7 +453,6 @@ body { padding-top: 48px; }
 
 /* Actions footer */
 .panel-actions { padding: 14px 18px; border-top: 1px solid #1e1e1e; background: #0f0f0f; }
-.btn-share:disabled { opacity: 0.45; cursor: wait; }
 .share-row {
   display: flex; align-items: center; gap: 7px;
 }
@@ -466,11 +465,34 @@ body { padding-top: 48px; }
   font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em;
   text-transform: uppercase; cursor: pointer; border-radius: 3px;
   transition: border-color 0.12s, color 0.12s;
+  position: relative; overflow: hidden;
 }
-.btn-share:hover { border-color: #444; color: #ddd; }
-.btn-fb:hover { border-color: #4267B2; color: #4267B2; }
-.btn-ig:hover { border-color: #E1306C; color: #E1306C; }
-.btn-dl:hover { border-color: #888; color: #ccc; }
+.btn-share:hover:not(:disabled) { border-color: #444; color: #ddd; }
+.btn-share:disabled { cursor: wait; }
+.btn-fb:hover:not(:disabled) { border-color: #4267B2; color: #4267B2; }
+.btn-ig:hover:not(:disabled) { border-color: #E1306C; color: #E1306C; }
+.btn-dl:hover:not(:disabled) { border-color: #888; color: #ccc; }
+
+/* Spinner shown inside buttons while card is preparing */
+@keyframes kdmr-spin { to { transform: rotate(360deg); } }
+.btn-share::before {
+  content: ''; display: none;
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid #333; border-top-color: var(--padi-soft);
+  animation: kdmr-spin 0.65s linear infinite;
+  vertical-align: middle; margin-right: 5px;
+}
+.btn-share.preparing { color: #444; border-color: #1e1e1e; pointer-events: none; }
+.btn-share.preparing::before { display: inline-block; }
+
+/* Status line below share row */
+.share-status {
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #555;
+  text-align: center; padding-top: 7px; min-height: 16px;
+  transition: opacity 0.3s;
+}
+.share-status:empty { opacity: 0; }
 .empty-grid {
   padding: 20px 10px; text-align: center; color: #383838;
   font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
@@ -701,6 +723,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="btn-share btn-ig" id="btnIG" data-i18n="button_ig_story">IG Story</button>
         <button class="btn-share btn-dl" id="btnDownload" data-i18n="button_download_png">Download</button>
       </div>
+      <div class="share-status" id="shareStatus"></div>
     </div>
   </aside>
 
@@ -1061,27 +1084,84 @@ async function generateCardDataUrl() {
 // ================================================================
 let _cardBlob = null;
 let _cacheTimer = null;
+let _cacheState = 'idle'; // 'idle' | 'loading' | 'ready' | 'error'
+let _cacheAbortTimer = null;
+
+// ---------------------------------------------------------------
+//  updateShareUI  —  sync button + status text to _cacheState
+// ---------------------------------------------------------------
+function updateShareUI() {
+  const preparing = _cacheState === 'loading';
+  const statusMsg = preparing
+    ? (window.__i18nT ? window.__i18nT('share_preparing') : 'Loading images…')
+    : (_cacheState === 'error'
+        ? (window.__i18nT ? window.__i18nT('share_ready_fallback') : 'Ready — tap to share')
+        : '');
+
+  ['btnFB', 'btnIG', 'btnDownload'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.disabled = preparing;
+    btn.classList.toggle('preparing', preparing);
+  });
+
+  const statusEl = document.getElementById('shareStatus');
+  if (statusEl) statusEl.textContent = statusMsg;
+}
+
 function scheduleCache() {
   clearTimeout(_cacheTimer);
+  clearTimeout(_cacheAbortTimer);
   _cardBlob = null;
+  _cacheState = 'loading';
+  updateShareUI();
+
   _cacheTimer = setTimeout(async () => {
+    // Safety valve: if the whole process takes > 30 s, re-enable buttons
+    // so the user isn't locked out forever on a very slow connection.
+    _cacheAbortTimer = setTimeout(() => {
+      if (_cacheState === 'loading') {
+        _cacheState = 'error';
+        updateShareUI();
+      }
+    }, 30000);
+
     try {
-      // Wait for every <img> in the card to start loading before we
-      // begin the blob pre-fetch (avoids fetching a URL that render()
-      // hasn't written into img.src yet on very slow devices).
+      // Wait for every portrait <img> in the card to finish loading
+      // (or give up after 15 s per image on slow connections).
       const imgs = Array.from(document.querySelectorAll('#predictCard img'));
       await Promise.all(imgs.map(img => {
-        if (img.complete) return Promise.resolve();
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
         return new Promise(resolve => {
           img.addEventListener('load', resolve, { once: true });
           img.addEventListener('error', resolve, { once: true });
-          setTimeout(resolve, 5000);
+          setTimeout(resolve, 15000); // extended for slow 3G / mobile data
         });
       }));
-      const dataUrl = await generateCardDataUrl(); // handles blob pre-fetch
+
+      const dataUrl = await generateCardDataUrl(); // blob pre-fetch inside
       _cardBlob = await (await fetch(dataUrl)).blob();
-    } catch (_) { _cardBlob = null; }
-  }, 800); // slightly longer debounce so last pick settles
+      _cacheState = 'ready';
+    } catch (_) {
+      _cardBlob = null;
+      _cacheState = 'error';
+    } finally {
+      clearTimeout(_cacheAbortTimer);
+      updateShareUI();
+    }
+  }, 800);
+}
+
+// Wait for the background cache to finish (used by share handlers
+// when the user taps before the cache is ready).
+function waitForCache(maxMs = 30000) {
+  if (_cacheState !== 'loading') return Promise.resolve();
+  return new Promise(resolve => {
+    const check = setInterval(() => {
+      if (_cacheState !== 'loading') { clearInterval(check); resolve(); }
+    }, 200);
+    setTimeout(() => { clearInterval(check); resolve(); }, maxMs);
+  });
 }
 
 // ================================================================
