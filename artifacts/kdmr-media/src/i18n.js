@@ -162,6 +162,7 @@ const i18n = {
     vote_note:             "Note: Community-driven popular vote for fan engagement only. Zero influence on official Hongkod Koisaan scoring.",
 
     /* ── Predict page ── */
+    slot_empty_label:      "Empty — tap to pick",
     predict_page_title:    "Predict Top 7 — Unduk Ngadau 2026 | KDMR Media",
     predict_page_desc:     "Build your 2026 official fan prediction card.",
     predict_panel_title:   "Predict Top 7",
@@ -370,6 +371,7 @@ const i18n = {
     vote_note:           "Nota: Undian popular komuniti hanya untuk penglibatan peminat. Tiada pengaruh ke atas pemarkahan rasmi Hongkod Koisaan.",
 
     /* ── Predict page ── */
+    slot_empty_label:    "Kosong — ketik untuk pilih",
     predict_page_title:  "Ramalan Top 7 — Unduk Ngadau 2026 | KDMR Media",
     predict_page_desc:   "Bina kad ramalan rasmi peminat 2026 anda.",
     predict_panel_title: "Ramalan Top 7",
@@ -423,6 +425,10 @@ const i18n = {
 
 let currentLang = "en";
 
+// Global translation helper — available immediately (before DOMContentLoaded).
+// Other scripts (e.g. predict.html inline script) can call window.__i18nT(key).
+window.__i18nT = key => i18n[currentLang]?.[key] ?? i18n.en[key] ?? key;
+
 document.addEventListener("DOMContentLoaded", () => {
   const langBtn = document.getElementById("langToggleBtn");
   if (!langBtn) return;
@@ -431,18 +437,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const htmlLang = document.documentElement.lang;
   if (htmlLang === "ms") currentLang = "ms";
 
+  // Keep global helper in sync
+  window.__i18nT = key => i18n[currentLang]?.[key] ?? i18n.en[key] ?? key;
+
   // Set initial button label
   langBtn.textContent = currentLang === "ms" ? "EN" : "BM";
 
   const apply = () => {
+    // Update global helper before translating so inline scripts can read it
+    window.__i18nT = key => i18n[currentLang]?.[key] ?? i18n.en[key] ?? key;
     const dict = i18n[currentLang];
     document.querySelectorAll("[data-i18n]").forEach(el => {
+      // Skip elements with data-bind — those are managed by the page's own
+      // render() function; i18n must not overwrite contestant names / dynamic values.
+      if (el.hasAttribute("data-bind")) return;
       const key = el.getAttribute("data-i18n");
       const val = dict[key];
       if (val === undefined || val === "") return;
       const tag = el.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA") {
-        // Inputs/textareas: translate the placeholder attribute
         el.placeholder = val;
       } else if (val.includes("<")) {
         el.innerHTML = val;
@@ -450,6 +463,8 @@ document.addEventListener("DOMContentLoaded", () => {
         el.textContent = val;
       }
     });
+    // Notify other scripts (e.g. predict.html render loop) that lang changed
+    document.dispatchEvent(new CustomEvent("kdmr:langchange", { detail: { lang: currentLang } }));
   };
 
   langBtn.addEventListener("click", () => {
