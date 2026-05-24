@@ -212,6 +212,8 @@ body { padding-top: 48px; }
   background-image: repeating-linear-gradient(135deg,
     var(--c-photo-stripe-a) 0 12px, var(--c-photo-stripe-b) 12px 24px);
 }
+/* Drop the diagonal stripe when a portrait is present (same fix as .ptile) */
+.rtile .photo:has(img) { background-image: none; }
 .rtile .photo .mono {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
