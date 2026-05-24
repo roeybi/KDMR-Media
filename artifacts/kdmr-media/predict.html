@@ -891,7 +891,7 @@ function updateGrid() {
 
     const info = document.createElement('div');
     info.className = 'c-info';
-    info.innerHTML = `<div class="c-name">${c.name}</div><div class="c-region">${c.branch || ''}</div>`;
+    info.innerHTML = `<div class="c-name">${c.name}</div><div class="c-region">${c.origin || c.branch || ''}</div>`;
 
     card.appendChild(photoDiv);
     card.appendChild(info);
@@ -914,7 +914,7 @@ function updateGrid() {
 
       DATA.picks[activeRank] = {
         id: c.id, rank: activeRank,
-        name: c.name, region: c.branch || '',
+        name: c.name, region: c.origin || c.branch || '',
         photo,
       };
       render();
