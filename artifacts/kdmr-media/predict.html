@@ -765,6 +765,7 @@ function render() {
       if (monoEl) monoEl.style.display = '';
     }
   }
+  scheduleCache();
 }
 
 // ================================================================
@@ -955,6 +956,27 @@ async function generateCardDataUrl() {
 }
 
 // ================================================================
+//  BACKGROUND CARD CACHING
+//  iOS Safari requires navigator.share() to be called within the
+//  transient-activation window of a tap (~1 s). Generating the card
+//  image takes 2-4 s, so we pre-render it in the background after
+//  every card change and cache the Blob. The share buttons then call
+//  navigator.share() synchronously with the pre-cached file.
+// ================================================================
+let _cardBlob = null;
+let _cacheTimer = null;
+function scheduleCache() {
+  clearTimeout(_cacheTimer);
+  _cardBlob = null;
+  _cacheTimer = setTimeout(async () => {
+    try {
+      const dataUrl = await generateCardDataUrl();
+      _cardBlob = await (await fetch(dataUrl)).blob();
+    } catch (_) { _cardBlob = null; }
+  }, 600);
+}
+
+// ================================================================
 //  DOWNLOAD
 // ================================================================
 async function downloadCard() {
@@ -978,112 +1000,67 @@ async function downloadCard() {
 
 // ================================================================
 //  SHARE — Facebook & IG Story
-//  Both buttons generate the card image and trigger the native OS
-//  share sheet (Web Share API Level 2 — file sharing).
-//  On mobile this opens the system picker so the user can send to
-//  Facebook, Instagram Story, WhatsApp, etc. directly.
-//  Fallback: downloads the image with manual instructions.
+//  Uses the pre-cached Blob from scheduleCache() so navigator.share()
+//  is called synchronously within the tap gesture (iOS transient-
+//  activation window). Falling back to download + manual open when
+//  the cache isn't ready or the API is unavailable.
 // ================================================================
-async function shareCard(btnId, btnLabel) {
-  const btn = document.getElementById(btnId);
-  btn.disabled = true;
-  btn.textContent = 'Generating…';
-  try {
-    const dataUrl = await generateCardDataUrl();
-    const blob = await (await fetch(dataUrl)).blob();
-    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
-
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      await navigator.share({
-        files: [file],
-        title: 'My Kaamatan Top 7 Prediction',
-        text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! @KDMRMEDIA',
-      });
-    } else {
-      // Fallback: download the image with instructions
-      const a = document.createElement('a');
-      a.download = 'my-kaamatan-prediction.png';
-      a.href = dataUrl;
-      a.click();
-      alert('Image saved!\n\nFor Facebook: Upload it as a photo post or story.\nFor Instagram: Open IG → + Story → select the saved image.');
-    }
-  } catch (e) {
-    if (e.name !== 'AbortError') console.error('[predict] share failed:', e);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = btnLabel;
-  }
-}
-
-// Facebook: generate the card image, download it to the device,
-// then open Facebook so the user can upload it as a photo post/story.
 async function shareFacebook() {
   const btn = document.getElementById('btnFB');
-  btn.disabled = true;
-  btn.textContent = 'Generating…';
+  const blob = _cardBlob;
+  if (blob && navigator.canShare) {
+    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
+    if (navigator.canShare({ files: [file] })) {
+      btn.disabled = true; btn.textContent = 'Opening…';
+      try {
+        await navigator.share({
+          files: [file],
+          title: 'My Kaamatan Top 7 Prediction',
+          text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! Make yours at kdmrmedia.com/predict @KDMRMEDIA',
+        });
+      } catch (e) { if (e.name !== 'AbortError') console.error('[predict] fb share failed:', e); }
+      finally { btn.disabled = false; btn.textContent = 'Facebook'; }
+      return;
+    }
+  }
+  // Fallback: generate on-demand, download, then open Facebook
+  btn.disabled = true; btn.textContent = 'Generating…';
   try {
     const dataUrl = await generateCardDataUrl();
-    const blob = await (await fetch(dataUrl)).blob();
-    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
-
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      // Native share sheet — Facebook appears as an option
-      btn.textContent = 'Opening…';
-      await navigator.share({
-        files: [file],
-        title: 'My Kaamatan Top 7 Prediction',
-        text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! Make yours at kdmrmedia.com/predict @KDMRMEDIA',
-      });
-    } else {
-      // Fallback: download the image then open Facebook
-      const a = document.createElement('a');
-      a.download = 'my-kaamatan-prediction.png';
-      a.href = dataUrl;
-      a.click();
-      setTimeout(() => window.open('https://www.facebook.com/', '_blank'), 700);
-    }
-  } catch (e) {
-    if (e.name !== 'AbortError') console.error('[predict] fb share failed:', e);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Facebook';
-  }
+    const a = document.createElement('a');
+    a.download = 'my-kaamatan-prediction.png'; a.href = dataUrl; a.click();
+    setTimeout(() => window.open('https://www.facebook.com/', '_blank'), 700);
+  } catch (e) { console.error('[predict] fb share failed:', e); }
+  finally { btn.disabled = false; btn.textContent = 'Facebook'; }
 }
 
-// IG Story: generate the card image and share directly to Instagram Story.
-// On iOS/Android, navigator.share with a file surfaces Instagram Story
-// in the native share sheet. Fallback opens the Instagram story camera
-// (instagram://story-camera) after downloading the image.
 async function shareIGStory() {
   const btn = document.getElementById('btnIG');
-  btn.disabled = true;
-  btn.textContent = 'Generating…';
+  const blob = _cardBlob;
+  if (blob && navigator.canShare) {
+    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
+    if (navigator.canShare({ files: [file] })) {
+      btn.disabled = true; btn.textContent = 'Opening…';
+      try {
+        await navigator.share({
+          files: [file],
+          title: 'My Kaamatan Top 7 Prediction',
+          text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! @KDMRMEDIA',
+        });
+      } catch (e) { if (e.name !== 'AbortError') console.error('[predict] ig share failed:', e); }
+      finally { btn.disabled = false; btn.textContent = 'IG Story'; }
+      return;
+    }
+  }
+  // Fallback: generate on-demand, download, then open Instagram
+  btn.disabled = true; btn.textContent = 'Generating…';
   try {
     const dataUrl = await generateCardDataUrl();
-    const blob = await (await fetch(dataUrl)).blob();
-    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
-
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      btn.textContent = 'Opening…';
-      await navigator.share({
-        files: [file],
-        title: 'My Kaamatan Top 7 Prediction',
-        text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! @KDMRMEDIA',
-      });
-    } else {
-      // Fallback: download image then open Instagram story camera
-      const a = document.createElement('a');
-      a.download = 'my-kaamatan-prediction.png';
-      a.href = dataUrl;
-      a.click();
-      setTimeout(() => { window.location.href = 'instagram://story-camera'; }, 700);
-    }
-  } catch (e) {
-    if (e.name !== 'AbortError') console.error('[predict] ig share failed:', e);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'IG Story';
-  }
+    const a = document.createElement('a');
+    a.download = 'my-kaamatan-prediction.png'; a.href = dataUrl; a.click();
+    setTimeout(() => { window.location.href = 'instagram://story-camera'; }, 700);
+  } catch (e) { console.error('[predict] ig share failed:', e); }
+  finally { btn.disabled = false; btn.textContent = 'IG Story'; }
 }
 
 // ================================================================
