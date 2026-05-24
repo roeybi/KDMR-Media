@@ -934,22 +934,40 @@ function updateGrid() {
 
 // ================================================================
 //  IMAGE → DATA URL  (pre-fetch so html-to-image never needs CORS)
+//  Retries twice with a 10 s timeout each. On total failure, returns
+//  the raw URL instead of an empty string — so render() still writes
+//  <img src="…"> and the on-screen card shows the photo (normal
+//  <img> loading doesn't need CORS). The share-time blob pre-fetch
+//  in generateCardDataUrl() then handles CORS for canvas capture.
 // ================================================================
 async function toDataUrl(url) {
-  try {
-    const res = await fetch(url, { mode: 'cors', cache: 'force-cache' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const blob = await res.blob();
-    return new Promise((resolve, reject) => {
-      const r = new FileReader();
-      r.onload = () => resolve(r.result);
-      r.onerror = reject;
-      r.readAsDataURL(blob);
-    });
-  } catch (e) {
-    console.warn('[predict] toDataUrl failed for', url, e.message);
-    return '';
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 10000);
+      try {
+        const res = await fetch(url, {
+          mode: 'cors', cache: 'no-cache', signal: ctrl.signal,
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blob = await res.blob();
+        return await new Promise((resolve, reject) => {
+          const r = new FileReader();
+          r.onload = () => resolve(r.result);
+          r.onerror = reject;
+          r.readAsDataURL(blob);
+        });
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (e) {
+      console.warn(`[predict] toDataUrl attempt ${attempt} failed for`, url, e.message);
+      if (attempt < 2) await new Promise(r => setTimeout(r, 400));
+    }
   }
+  // Final fallback: return the raw URL so the on-screen <img> still loads
+  // and prefetchPortraitsAsBlobs() can retry it at share time.
+  return url;
 }
 
 // ================================================================
