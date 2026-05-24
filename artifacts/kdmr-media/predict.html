@@ -553,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="handle">@KDMRMEDIA</span>
         </div>
 
-        <div class="eyebrow"><span class="dot"></span><span data-bind="eyebrow" data-i18n="predict_card_eyebrow">FAN PREDICTION · OFFICIAL TOP 7</span></div>
+        <div class="eyebrow"><span class="dot"></span><span data-bind="eyebrow">FAN PREDICTION · OFFICIAL TOP 7</span></div>
 
         <div class="title-block">
           <h1 class="title" data-i18n="predict_card_title">Predicted by <em data-bind="user">you</em></h1>
@@ -568,7 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="badge">2</div>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_2nd_runner_up">2nd Place</h3>
+              <h3 class="name" data-bind="name">2nd Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
             <div class="ptile-caption" data-i18n="caption_2nd_runner_up">2nd Runner-up</div>
@@ -583,7 +583,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <path d="M3 18h18M3 8l4 4 5-6 5 6 4-4v10H3V8z"></path>
             </svg>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_champion">Champion</h3>
+              <h3 class="name" data-bind="name">Champion</h3>
               <div class="region" data-bind="region">—</div>
             </div>
             <div class="ptile-caption" data-i18n="caption_champion">Champion</div>
@@ -595,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="badge">3</div>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_1st_runner_up">3rd Place</h3>
+              <h3 class="name" data-bind="name">3rd Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
             <div class="ptile-caption" data-i18n="caption_1st_runner_up">1st Runner-up</div>
@@ -609,7 +609,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">4</div></div>
             <div class="badge">4</div>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_4th">4th Place</h3>
+              <h3 class="name" data-bind="name">4th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -617,7 +617,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">5</div></div>
             <div class="badge">5</div>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_5th">5th Place</h3>
+              <h3 class="name" data-bind="name">5th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -625,7 +625,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">6</div></div>
             <div class="badge">6</div>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_6th">6th Place</h3>
+              <h3 class="name" data-bind="name">6th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -633,7 +633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="photo"><div class="mono" data-bind="mono">7</div></div>
             <div class="badge">7</div>
             <div class="meta">
-              <h3 class="name" data-bind="name" data-i18n="rank_7th">7th Place</h3>
+              <h3 class="name" data-bind="name">7th Place</h3>
               <div class="region" data-bind="region">—</div>
             </div>
           </div>
@@ -717,7 +717,22 @@ const DATA = {
   picks: [null, null, null, null, null, null, null, null], // index 0 unused
 };
 
-const RANK_LABELS = { 1:'Champion', 2:'2nd Runner-up', 3:'1st Runner-up', 4:'Top 7', 5:'Top 7', 6:'Top 7', 7:'Top 7' };
+// RANK_LABELS is language-aware — reads from window.__i18nT set by i18n.js.
+// Called as a function so it always reflects the current language.
+function getRankLabels() {
+  const t = window.__i18nT || (k => k);
+  return {
+    1: t('caption_champion'),
+    2: t('caption_2nd_runner_up'),
+    3: t('caption_1st_runner_up'),
+    4: t('caption_top7'),
+    5: t('caption_top7'),
+    6: t('caption_top7'),
+    7: t('caption_top7'),
+  };
+}
+// Legacy alias kept for any remaining references
+const RANK_LABELS = getRankLabels();
 const PLACEHOLDER_PATHS = ['/images/placeholder-winner.png', '/images/Sample UN Winner.png'];
 
 let allContestants = [];
@@ -729,8 +744,12 @@ let activeRank = 1;
 function render() {
   const card = document.getElementById('predictCard');
   card.setAttribute('data-variant', DATA.variant);
-  card.querySelector('[data-bind="user"]').textContent = DATA.user || 'you';
-  card.querySelector('[data-bind="eyebrow"]').textContent = DATA.eyebrow;
+  // Only override the user placeholder when a name has been entered;
+  // otherwise let i18n keep "you" / "anda" from the translated template.
+  if (DATA.user) card.querySelector('[data-bind="user"]').textContent = DATA.user;
+  // Eyebrow uses i18n when available, falls back to the English default.
+  card.querySelector('[data-bind="eyebrow"]').textContent =
+    (window.__i18nT ? window.__i18nT('predict_card_eyebrow') : null) || DATA.eyebrow;
 
   for (let rank = 1; rank <= 7; rank++) {
     const tile = card.querySelector(`[data-slot="${rank}"]`);
@@ -741,8 +760,8 @@ function render() {
     let img = photoZone ? photoZone.querySelector('img') : null;
 
     if (!pick) {
-      // Empty state
-      tile.querySelector('[data-bind="name"]').textContent = RANK_LABELS[rank];
+      // Empty state — use current-language label
+      tile.querySelector('[data-bind="name"]').textContent = getRankLabels()[rank];
       tile.querySelector('[data-bind="region"]').textContent = '—';
       if (monoEl) { monoEl.textContent = String(rank); monoEl.style.display = ''; }
       if (img) img.remove();
@@ -789,11 +808,11 @@ function buildRankRows() {
 
     const lbl  = document.createElement('span');
     lbl.className = 'rank-label';
-    lbl.textContent = RANK_LABELS[r];
+    lbl.textContent = getRankLabels()[r];
 
     const pik  = document.createElement('span');
     pik.className = 'rank-pick';
-    pik.textContent = pick ? pick.name : 'Empty — tap to pick';
+    pik.textContent = pick ? pick.name : (window.__i18nT ? window.__i18nT('slot_empty_label') : 'Empty — tap to pick');
 
     row.appendChild(num);
     row.appendChild(lbl);
@@ -1133,6 +1152,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       '<div class="empty-grid" style="grid-column:span 2;">Failed to load — please refresh.</div>';
     console.error('[predict] data.json load failed:', e);
   }
+});
+
+// When i18n.js switches language it dispatches 'kdmr:langchange'.
+// Re-render the card and sidebar so all rank labels / eyebrow / empty-slot
+// text immediately reflect the new language without a page reload.
+document.addEventListener('kdmr:langchange', () => {
+  render();
+  buildRankRows();
 });
 </script>
 <script type="module" src="./src/i18n.js"></script>
