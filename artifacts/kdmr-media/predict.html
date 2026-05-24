@@ -966,25 +966,77 @@ function fitStage() {
 }
 
 // ================================================================
+//  PORTRAIT PRE-FETCHER
+//  Downloads every remote portrait in the card as a same-origin
+//  blob URL before html-to-image runs. Blob URLs require zero CORS
+//  negotiation during canvas paint, so html-to-image never races a
+//  slow CORS fetch for any slot — all images are already in memory.
+//  Returns a cleanup function that restores original srcs and
+//  releases blob memory (call it in a finally block).
+// ================================================================
+async function prefetchPortraitsAsBlobs(card) {
+  const imgs = Array.from(card.querySelectorAll('img[src]'))
+    .filter(img => img.src && /^https?:\/\//.test(img.src));
+
+  const origSrcs = new Map();
+  const blobUrls = [];
+
+  await Promise.allSettled(imgs.map(async img => {
+    const orig = img.getAttribute('src') || img.src;
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 12000); // 12 s per image
+      try {
+        const res = await fetch(orig, {
+          mode: 'cors', cache: 'no-cache', signal: ctrl.signal,
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blobUrl = URL.createObjectURL(await res.blob());
+        blobUrls.push(blobUrl);
+        origSrcs.set(img, orig);
+        img.src = blobUrl;
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (_) { /* keep original src — html-to-image will attempt it */ }
+  }));
+
+  // Give the browser two animation frames to paint the new blob srcs
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+  // Return a cleanup function
+  return function cleanup() {
+    origSrcs.forEach((orig, img) => { try { img.src = orig; } catch (_) {} });
+    blobUrls.forEach(url => URL.revokeObjectURL(url));
+  };
+}
+
+// ================================================================
 //  SHARED CARD RENDERER
-//  fetchRequestInit cache:'no-cache' forces a fresh CORS fetch for
-//  Supabase portrait images — fixes the "empty photo" bug on mobile
-//  Safari where the browser's cached copy lacks CORS headers and
-//  taints the canvas.
+//  Pre-fetches all portrait images as blob URLs so html-to-image
+//  paints from memory (no CORS round-trips during canvas capture).
 // ================================================================
 async function generateCardDataUrl() {
-  return htmlToImage.toPng(document.getElementById('predictCard'), {
-    width: 1080, height: 1350, pixelRatio: 1,
-    skipFonts: false,
-    fetchRequestInit: { mode: 'cors', cache: 'no-cache' },
-  });
+  const card = document.getElementById('predictCard');
+  const cleanup = await prefetchPortraitsAsBlobs(card);
+  try {
+    return await htmlToImage.toPng(card, {
+      width: 1080, height: 1350, pixelRatio: 1,
+      skipFonts: false,
+      // Blob URLs are same-origin, but keep CORS mode as fallback for
+      // any image whose pre-fetch failed and still has an http src.
+      fetchRequestInit: { mode: 'cors', cache: 'no-cache' },
+    });
+  } finally {
+    cleanup();
+  }
 }
 
 // ================================================================
 //  BACKGROUND CARD CACHING
 //  iOS Safari requires navigator.share() to be called within the
 //  transient-activation window of a tap (~1 s). Generating the card
-//  image takes 2-4 s, so we pre-render it in the background after
+//  image takes 2–5 s, so we pre-render it in the background after
 //  every card change and cache the Blob. The share buttons then call
 //  navigator.share() synchronously with the pre-cached file.
 // ================================================================
@@ -995,21 +1047,22 @@ function scheduleCache() {
   _cardBlob = null;
   _cacheTimer = setTimeout(async () => {
     try {
-      // Wait for every <img> in the card to finish loading (or fail/timeout)
-      // before rendering — otherwise html-to-image captures blank slots.
+      // Wait for every <img> in the card to start loading before we
+      // begin the blob pre-fetch (avoids fetching a URL that render()
+      // hasn't written into img.src yet on very slow devices).
       const imgs = Array.from(document.querySelectorAll('#predictCard img'));
       await Promise.all(imgs.map(img => {
-        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        if (img.complete) return Promise.resolve();
         return new Promise(resolve => {
           img.addEventListener('load', resolve, { once: true });
           img.addEventListener('error', resolve, { once: true });
-          setTimeout(resolve, 8000); // give up after 8 s
+          setTimeout(resolve, 5000);
         });
       }));
-      const dataUrl = await generateCardDataUrl();
+      const dataUrl = await generateCardDataUrl(); // handles blob pre-fetch
       _cardBlob = await (await fetch(dataUrl)).blob();
     } catch (_) { _cardBlob = null; }
-  }, 600);
+  }, 800); // slightly longer debounce so last pick settles
 }
 
 // ================================================================
