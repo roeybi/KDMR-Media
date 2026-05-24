@@ -453,19 +453,16 @@ body { padding-top: 48px; }
 
 /* Actions footer */
 .panel-actions { padding: 14px 18px; border-top: 1px solid #1e1e1e; background: #0f0f0f; }
-.btn-download {
-  display: block; width: 100%; padding: 13px 16px;
-  background: var(--padi); color: var(--bobohizan);
-  border: none; cursor: pointer; border-radius: 3px;
-  font-family: var(--ff-sans); font-weight: 700; font-size: 14px;
-  letter-spacing: 0.06em; text-transform: uppercase;
-  margin-bottom: 8px; transition: opacity 0.15s;
+.btn-share:disabled { opacity: 0.45; cursor: wait; }
+.share-row {
+  display: flex; align-items: center; gap: 7px;
 }
-.btn-download:hover { opacity: 0.88; }
-.btn-download:disabled { opacity: 0.45; cursor: wait; }
-.share-row { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.share-label {
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #444; white-space: nowrap; flex-shrink: 0;
+}
 .btn-share {
-  padding: 10px; border: 1px solid #242424; background: #0a0a0a; color: #888;
+  flex: 1; padding: 10px 6px; border: 1px solid #242424; background: #0a0a0a; color: #888;
   font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em;
   text-transform: uppercase; cursor: pointer; border-radius: 3px;
   transition: border-color 0.12s, color 0.12s;
@@ -473,6 +470,7 @@ body { padding-top: 48px; }
 .btn-share:hover { border-color: #444; color: #ddd; }
 .btn-fb:hover { border-color: #4267B2; color: #4267B2; }
 .btn-ig:hover { border-color: #E1306C; color: #E1306C; }
+.btn-dl:hover { border-color: #888; color: #ccc; }
 .empty-grid {
   padding: 20px 10px; text-align: center; color: #383838;
   font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
@@ -697,10 +695,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="panel-actions">
-      <button class="btn-download" id="btnDownload" data-i18n="button_download_png">↓ Download PNG</button>
       <div class="share-row">
+        <span class="share-label" data-i18n="share_to_label">Share to:</span>
         <button class="btn-share btn-fb" id="btnFB" data-i18n="button_facebook">Facebook</button>
         <button class="btn-share btn-ig" id="btnIG" data-i18n="button_ig_story">IG Story</button>
+        <button class="btn-share btn-dl" id="btnDownload" data-i18n="button_download_png">Download</button>
       </div>
     </div>
   </aside>
@@ -1073,7 +1072,7 @@ function scheduleCache() {
 async function downloadCard() {
   const btn = document.getElementById('btnDownload');
   btn.disabled = true;
-  btn.textContent = 'Generating…';
+  btn.textContent = 'Loading…';
   try {
     const dataUrl = await generateCardDataUrl();
     const a = document.createElement('a');
@@ -1085,7 +1084,7 @@ async function downloadCard() {
     alert('Download failed: ' + (e.message || 'Unknown error') + '\n\nTip: try a different browser, or screenshot the card.');
   } finally {
     btn.disabled = false;
-    btn.textContent = '↓ Download PNG';
+    btn.textContent = 'Download';
   }
 }
 
