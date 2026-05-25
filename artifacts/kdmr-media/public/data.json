@@ -1,30 +1,6 @@
 {
   "winners": [
     {
-      "id": "win-003",
-      "name": "Cynthia Rambilin",
-      "branch": "KDCA Sabah",
-      "award": "Unduk Ngadau",
-      "year": 2023,
-      "tribe": "Rungus",
-      "district": "Kudat",
-      "origin": "KDCA Kudat",
-      "accentColor": "#f472b6",
-      "heritage": {
-        "group": "Rungus Kudat",
-        "costume": "Full Rungus bridal regalia — tinangkong (black wrap skirt) with intricate manik collar, arm rings, and brass coil anklets",
-        "language": "Rungus dialect"
-      },
-      "bio": "Cynthia's victory in 2023 was historic — the first Rungus queen from Kudat to win the KDCA Sabah crown. Her breathtaking performance of the monogit dance and her encyclopedic knowledge of Rungus ritual songs left the audience spellbound.",
-      "achievements": [
-        "KDCA Sabah Unduk Ngadau 2023",
-        "First Rungus winner from Kudat",
-        "Monogit Dance Excellence Award"
-      ],
-      "votes": 411,
-      "imageUrl": "/images/Sample UN Winner.png"
-    },
-    {
       "id": "win-004",
       "name": "Roselind Mansul",
       "branch": "KDCA Sabah",
