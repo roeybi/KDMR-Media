@@ -506,7 +506,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="262" cy="30.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-055_feyrashandy-hanlin-hanis_2026-05-24T16-57-28.jpegclip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-055_feyrashandy-hanlin-hanis_2026-05-24T16-57-28_clean.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -516,7 +516,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="254.3" cy="27" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-056_lora-derlina-lisa-jusley_2026-05-24T14-54-09.jpegclip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-056_lora-derlina-lisa-jusley_2026-05-24T14-54-09_clean.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -526,7 +526,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="281.2" cy="36.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-057_jean-christzabeth-yusevender_2026-05-24T17-24-03.jpegclip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-057_jean-christzabeth-yusevender_2026-05-24T17-24-03_clean.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -536,7 +536,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="266.7" cy="37.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-058_aelvereny-vahidin_2026-05-24T16-44-04.jpegclip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-058_aelvereny-vahidin_2026-05-24T16-44-04_clean.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -546,7 +546,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="273.6" cy="32.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-059_criszelbellkah-lorris_2026-05-24T17-09-39.jpegclip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-059_criszelbellkah-lorris_2026-05-24T17-09-39_clean.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -556,7 +556,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="230.3" cy="64.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-036_liane-melve-grace-lias_2026-05-24T15-54-08.jpegclip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-036_liane-melve-grace-lias_2026-05-24T15-54-08_clean.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -576,7 +576,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.1" cy="57.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-038_essmerrellda-cafry_2026-05-24T15-41-06.jpegclip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-038_essmerrellda-cafry_2026-05-24T15-41-06_clean.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -586,7 +586,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="238.3" cy="49.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-039_natalie-ally-hepeni_2026-05-24T15-48-43.jpegclip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-039_natalie-ally-hepeni_2026-05-24T15-48-43_clean.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -596,7 +596,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.7" cy="57.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-040_felecity-chen-sing-yee_2026-05-24T15-59-30.jpegclip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-040_felecity-chen-sing-yee_2026-05-24T15-59-30_clean.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -626,7 +626,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="231" cy="77.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-043_amber-weysha-walter-john_2026-05-24T17-47-18.jpegclip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-043_amber-weysha-walter-john_2026-05-24T17-47-18_clean.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -636,7 +636,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="241.8" cy="42" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-044_juje-elor-francis_2026-05-24T16-27-17.jpegclip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-044_juje-elor-francis_2026-05-24T16-27-17_clean.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -646,7 +646,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="257.7" cy="38.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-045_evyanarrey-larry_2026-05-24T16-17-34.jpegclip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-045_evyanarrey-larry_2026-05-24T16-17-34_clean.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -666,7 +666,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="224.5" cy="83.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-020_gelvia-vanessa-jenny_2026-05-24T17-17-31.jpegclip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-020_gelvia-vanessa-jenny_2026-05-24T17-17-31_clean.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -676,7 +676,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="235.3" cy="94.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-072_fedelia-viviana-venchin_2026-05-24T15-10-24.jpegclip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-072_fedelia-viviana-venchin_2026-05-24T15-10-24_clean.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -696,7 +696,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.7" cy="100.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-074_lorna-breetney-johnny_2026-05-24T16-50-52.jpegclip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-074_lorna-breetney-johnny_2026-05-24T16-50-52_clean.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -706,7 +706,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.3" cy="92" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-075_hyzlensiska-verron-johnny_2026-05-24T16-52-17.jpegclip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-075_hyzlensiska-verron-johnny_2026-05-24T16-52-17_clean.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -726,7 +726,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="255.1" cy="46.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-035_christebell-masius_2026-05-24T17-56-20.jpegclip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-035_christebell-masius_2026-05-24T17-56-20_clean.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -736,7 +736,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.3" cy="56.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-046_catsween-su-sun-ping_2026-05-24T16-28-38.jpegclip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-046_catsween-su-sun-ping_2026-05-24T16-28-38_clean.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -746,7 +746,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.1" cy="90.9" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-047_edreen-lynn-edward_2026-05-24T15-19-09.jpegclip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-047_edreen-lynn-edward_2026-05-24T15-19-09_clean.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -756,7 +756,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.7" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-048_alysheron-maunsiong_2026-05-24T15-22-59.jpegclip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-048_alysheron-maunsiong_2026-05-24T15-22-59_clean.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -766,7 +766,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-049_natalia-jinui_2026-05-24T17-42-01.jpegclip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-049_natalia-jinui_2026-05-24T17-42-01_clean.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -776,7 +776,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.2" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-050_radila-ifa-yanie_2026-05-24T17-33-51.jpegclip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-050_radila-ifa-yanie_2026-05-24T17-33-51_clean.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -786,7 +786,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.7" cy="108.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-051_venica-tuboh_2026-05-24T16-05-57.jpegclip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-051_venica-tuboh_2026-05-24T16-05-57_clean.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -796,7 +796,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.4" cy="103.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-052_myra-evana-robert_2026-05-24T14-57-47.jpegclip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-052_myra-evana-robert_2026-05-24T14-57-47_clean.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -826,7 +826,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-034_ceelecia-reeka-mosungin_2026-05-24T17-59-06.jpegclip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-034_ceelecia-reeka-mosungin_2026-05-24T17-59-06_clean.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -836,7 +836,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="294.2" cy="51.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-015_dyann-dharlla-dominic_2026-05-24T15-16-14.jpegclip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-015_dyann-dharlla-dominic_2026-05-24T15-16-14_clean.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -846,7 +846,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="290.1" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-061_candycyci-liakim_2026-05-24T17-14-06.jpegclip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-061_candycyci-liakim_2026-05-24T17-14-06_clean.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -856,7 +856,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292.2" cy="60.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-062_raraa-cyra-eva-bella-stephen_2026-05-24T17-36-11.jpegclip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-062_raraa-cyra-eva-bella-stephen_2026-05-24T17-36-11_clean.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -866,7 +866,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="307" cy="63.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-064_vrenda-joan-taji_2026-05-24T16-13-11.jpegclip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-064_vrenda-joan-taji_2026-05-24T16-13-11_clean.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -876,7 +876,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="310.4" cy="72.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-065_ally-denis_2026-05-24T16-14-17.jpegclip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-065_ally-denis_2026-05-24T16-14-17_clean.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -886,7 +886,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-078_anne-theresse-justin-sentian_2026-05-24T15-35-39.jpegclip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-078_anne-theresse-justin-sentian_2026-05-24T15-35-39_clean.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -906,7 +906,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="314.1" cy="88.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-069_mary-an-p-calica_2026-05-24T17-31-28.jpegclip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-069_mary-an-p-calica_2026-05-24T17-31-28_clean.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -916,7 +916,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="317.8" cy="96.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-070_rachel-justin_2026-05-24T17-07-49.jpegclip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-070_rachel-justin_2026-05-24T17-07-49_clean.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -926,7 +926,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="321.8" cy="103.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-071_adylee-arisen_2026-05-24T18-01-59.jpegclip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-071_adylee-arisen_2026-05-24T18-01-59_clean.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -936,7 +936,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-066_elvisa-edna-robert_2026-05-24T17-39-28.jpegclip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
