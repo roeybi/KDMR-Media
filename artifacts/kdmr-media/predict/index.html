@@ -1,0 +1,1320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WMLPZJ9D');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8" />
+<title>Predict Top 7 — Unduk Ngadau 2026 | KDMR Media</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Pick your Top 7 for Unduk Ngadau Kaamatan 2026. Build your prediction card and download it." />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bobohizan: #1A1612;
+  --bobohizan-2: #2A2520;
+  --bobohizan-3: #3A3530;
+  --linangkit: #F3EDDF;
+  --linangkit-2: #E8E0CC;
+  --kinabalu: #C9C2B3;
+  --sirih: #8C2A26;
+  --sirih-deep: #5E1A18;
+  --padi: #BE8E3C;
+  --padi-soft: #D9B97A;
+  --hutan: #2E4234;
+  --hutan-deep: #1F2E24;
+  --ff-display: "Instrument Serif", Georgia, serif;
+  --ff-sans: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --ff-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #0d0d0d; color: #eee; font-family: var(--ff-sans); }
+
+/* ── Topbar ─────────────────────────────────────────────────── */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  background: #090909; border-bottom: 1px solid #181818;
+  display: flex; align-items: center;
+  padding: 0 20px; z-index: 1000;
+}
+.topbar-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; }
+.topbar-logo svg { width: 26px; height: 26px; flex-shrink: 0; }
+.topbar-logo span { font-family: var(--ff-sans); font-weight: 700; font-size: 13px; color: #ddd; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+.topbar-back {
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #555; text-decoration: none;
+  display: flex; align-items: center; gap: 6px;
+}
+.topbar-back:hover { color: #aaa; }
+
+/* ── Page layout ────────────────────────────────────────────── */
+body { padding-top: 48px; }
+.page {
+  height: calc(100vh - 48px);
+  display: grid;
+  grid-template-columns: 1fr 380px;
+}
+
+/* ── Stage (card preview) ───────────────────────────────────── */
+.stage {
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; overflow: hidden; background: #111;
+}
+.stage-inner {
+  width: 1080px; height: 1350px;
+  transform-origin: center center;
+  flex-shrink: 0;
+}
+
+/* ================================================================
+   CARD — 1080 × 1350 (4:5) — BYTE-FOR-BYTE from predict-tool.html
+   ================================================================ */
+.card {
+  width: 1080px; height: 1350px;
+  position: relative; overflow: hidden;
+  font-family: var(--ff-sans);
+  background: var(--c-bg); color: var(--c-body);
+}
+.card .bg-mark {
+  position: absolute; right: -120px; bottom: -120px;
+  width: 520px; height: 520px;
+  opacity: var(--c-bg-mark-opacity); pointer-events: none;
+}
+.card .strip {
+  position: absolute; top: 56px; left: 60px; right: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card .brand { display: flex; align-items: center; gap: 16px; }
+.card .brand .mark { width: 44px; height: 44px; display: block; flex-shrink: 0; }
+.card .brand .wordmark {
+  font-weight: 700; letter-spacing: 0.26em; font-size: 16px;
+  text-transform: uppercase; line-height: 1; color: var(--c-body);
+}
+.card .brand .wordmark .sub {
+  display: block; font-family: var(--ff-mono); font-weight: 400;
+  font-size: 10px; letter-spacing: 0.22em; color: var(--c-body);
+  opacity: 0.6; margin-top: 6px;
+}
+.card .strip .handle {
+  font-family: var(--ff-mono); font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--c-body); opacity: 0.7;
+}
+.card .eyebrow {
+  position: absolute; top: 144px; left: 60px;
+  font-family: var(--ff-mono); font-size: 13px; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--c-eyebrow);
+}
+.card .eyebrow .dot {
+  display: inline-block; width: 6px; height: 6px;
+  background: var(--padi); transform: rotate(45deg);
+  margin: 0 14px 2px 0; vertical-align: middle;
+}
+.card .title-block { position: absolute; top: 178px; left: 60px; right: 60px; }
+.card .title {
+  font-family: var(--ff-display); font-size: 76px; line-height: 0.96;
+  letter-spacing: -0.01em; font-weight: 400; margin: 0; color: var(--c-title);
+}
+.card .title em { font-style: italic; color: var(--c-title-em); font-weight: 400; }
+
+/* Podium */
+.card .podium {
+  position: absolute; top: 320px; left: 60px;
+  width: 960px; height: 480px;
+  display: grid; grid-template-columns: 280px 360px 280px;
+  column-gap: 20px; align-items: end;
+}
+.ptile {
+  position: relative; border: 1px solid var(--c-tile-border);
+  background: var(--c-tile-bg); overflow: hidden;
+}
+.ptile[data-rank="1"] { height: 480px; }
+.ptile[data-rank="2"], .ptile[data-rank="3"] { height: 400px; }
+.ptile .photo {
+  position: absolute; inset: 0; background: var(--c-photo-bg);
+  background-image: repeating-linear-gradient(135deg,
+    var(--c-photo-stripe-a) 0 14px, var(--c-photo-stripe-b) 14px 28px);
+}
+/* When a portrait img is present, drop the diagonal stripe so transparent
+   PNG cutouts (background-removed portraits) don't show stripes behind them. */
+.ptile .photo:has(img) { background-image: none; }
+.ptile .photo img, .rtile .photo img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 18%; display: block;
+}
+.ptile .photo .mono {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-display); font-style: italic;
+  font-size: 200px; color: var(--c-mono-color); line-height: 1;
+}
+.ptile[data-rank="1"] .photo .mono { font-size: 260px; }
+.ptile .meta {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 16px 18px 18px;
+  background: var(--c-meta-bg); border-top: 2px solid var(--c-meta-accent); z-index: 2;
+}
+.ptile[data-rank="1"] .meta { --c-meta-accent: var(--padi); padding-top: 18px; }
+.ptile[data-rank="2"] .meta { --c-meta-accent: var(--kinabalu); }
+.ptile[data-rank="3"] .meta { --c-meta-accent: var(--padi-soft); }
+.ptile .name {
+  font-family: var(--ff-display); font-size: 22px; line-height: 1.05;
+  color: var(--c-meta-name); margin: 0 0 6px; font-weight: 400;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; text-wrap: balance; min-height: 2.1em;
+}
+.ptile[data-rank="1"] .name { font-size: 26px; }
+.ptile .region {
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--c-meta-region); line-height: 1;
+}
+.badge {
+  position: absolute; top: 14px; left: 14px;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--badge-bg); color: var(--badge-fg);
+  font-family: var(--ff-mono); font-size: 15px; font-weight: 500; z-index: 3;
+}
+.ptile[data-rank="1"] .badge { width: 48px; height: 48px; font-size: 18px; --badge-bg: var(--padi); --badge-fg: var(--bobohizan); }
+.ptile[data-rank="2"] .badge { --badge-bg: var(--kinabalu); --badge-fg: var(--bobohizan); }
+.ptile[data-rank="3"] .badge { --badge-bg: var(--padi-soft); --badge-fg: var(--bobohizan); }
+.ptile[data-rank="1"] .crown {
+  position: absolute; top: 14px; right: 14px;
+  width: 24px; height: 24px; color: var(--padi); z-index: 3;
+}
+.ptile-caption {
+  position: absolute; left: 0; right: 0; top: calc(100% + 14px);
+  text-align: center; font-family: var(--ff-mono); font-size: 12px;
+  letter-spacing: 0.32em; text-transform: uppercase; color: var(--c-caption);
+}
+.ptile[data-rank="1"] .ptile-caption { color: var(--padi); font-weight: 500; }
+
+/* Runners 4–7 */
+.card .runners {
+  position: absolute; top: 850px; left: 60px;
+  width: 960px; height: 280px;
+  display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 16px;
+}
+.rtile {
+  position: relative; border: 1px solid var(--c-tile-border);
+  background: var(--c-tile-bg); overflow: hidden;
+}
+.rtile .photo {
+  position: absolute; top: 0; left: 0; right: 0; height: 64%;
+  background: var(--c-photo-bg);
+  background-image: repeating-linear-gradient(135deg,
+    var(--c-photo-stripe-a) 0 12px, var(--c-photo-stripe-b) 12px 24px);
+}
+/* Drop the diagonal stripe when a portrait is present (same fix as .ptile) */
+.rtile .photo:has(img) { background-image: none; }
+.rtile .photo .mono {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-display); font-style: italic;
+  font-size: 92px; color: var(--c-mono-color); line-height: 1;
+}
+.rtile .meta {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 36%;
+  padding: 12px 14px 14px; background: var(--c-meta-bg);
+  border-top: 1px solid var(--c-tile-border); z-index: 2;
+}
+.rtile .name {
+  font-family: var(--ff-display); font-size: 17px; line-height: 1.05;
+  color: var(--c-meta-name); margin: 0 0 4px; font-weight: 400;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; text-wrap: balance;
+}
+.rtile .region {
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--c-meta-region); line-height: 1;
+}
+.rtile .badge {
+  width: 28px; height: 28px; font-size: 12px; top: 10px; left: 10px;
+  --badge-bg: var(--c-rbadge-bg); --badge-fg: var(--c-rbadge-fg);
+}
+
+/* Footer */
+.card .footer {
+  position: absolute; left: 60px; right: 60px; bottom: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 24px; border-top: 1px solid var(--c-divider);
+}
+.card .footer .left {
+  font-family: var(--ff-mono); font-size: 12px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--c-body); opacity: 0.85; line-height: 1.5;
+}
+.card .footer .left .bold { font-weight: 500; opacity: 1; color: var(--c-body); }
+.card .footer .cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--c-cta-bg); color: var(--c-cta-fg);
+  padding: 16px 24px; font-family: var(--ff-sans); font-weight: 600;
+  font-size: 16px; letter-spacing: 0.04em; line-height: 1;
+}
+.card .footer .cta .arrow { font-family: var(--ff-mono); font-size: 18px; }
+.card .footer .diamonds { display: inline-flex; gap: 6px; margin-right: 14px; vertical-align: middle; }
+.card .footer .diamonds i { width: 8px; height: 8px; transform: rotate(45deg); display: inline-block; }
+.card .footer .diamonds i:nth-child(1) { background: var(--sirih); }
+.card .footer .diamonds i:nth-child(2) { background: var(--padi); }
+.card .footer .diamonds i:nth-child(3) { background: var(--hutan); }
+.card .footer .diamonds i:nth-child(4) { background: var(--linangkit); }
+
+/* ================================================================
+   5 PALETTE VARIANTS
+   ================================================================ */
+.card[data-variant="hutan"] {
+  --c-bg: var(--hutan); --c-bg-mark-opacity: 0.05;
+  --c-body: var(--linangkit); --c-title: var(--linangkit); --c-title-em: var(--padi-soft); --c-eyebrow: var(--padi-soft);
+  --c-tile-border: rgba(243,237,223,0.06); --c-tile-bg: var(--bobohizan);
+  --c-photo-bg: var(--bobohizan-2); --c-photo-stripe-a: rgba(243,237,223,0.04); --c-photo-stripe-b: rgba(243,237,223,0.09);
+  --c-mono-color: rgba(217,185,122,0.25);
+  --c-meta-bg: var(--bobohizan); --c-meta-name: var(--linangkit); --c-meta-region: var(--padi-soft);
+  --c-rbadge-bg: var(--bobohizan-3); --c-rbadge-fg: var(--linangkit);
+  --c-caption: var(--kinabalu); --c-divider: rgba(243,237,223,0.14);
+  --c-cta-bg: var(--linangkit); --c-cta-fg: var(--hutan-deep);
+}
+.card[data-variant="bobohizan"] {
+  --c-bg: var(--bobohizan); --c-bg-mark-opacity: 0.06;
+  --c-body: var(--linangkit); --c-title: var(--linangkit); --c-title-em: var(--padi-soft); --c-eyebrow: var(--padi-soft);
+  --c-tile-border: rgba(243,237,223,0.08); --c-tile-bg: var(--bobohizan-2);
+  --c-photo-bg: var(--bobohizan-3); --c-photo-stripe-a: rgba(243,237,223,0.04); --c-photo-stripe-b: rgba(243,237,223,0.10);
+  --c-mono-color: rgba(217,185,122,0.22);
+  --c-meta-bg: var(--bobohizan); --c-meta-name: var(--linangkit); --c-meta-region: var(--padi-soft);
+  --c-rbadge-bg: var(--bobohizan-3); --c-rbadge-fg: var(--linangkit);
+  --c-caption: var(--kinabalu); --c-divider: rgba(243,237,223,0.14);
+  --c-cta-bg: var(--linangkit); --c-cta-fg: var(--bobohizan);
+}
+.card[data-variant="linangkit"] {
+  --c-bg: var(--linangkit); --c-bg-mark-opacity: 0.08;
+  --c-body: var(--bobohizan); --c-title: var(--bobohizan); --c-title-em: var(--sirih); --c-eyebrow: var(--sirih);
+  --c-tile-border: rgba(26,22,18,0.10); --c-tile-bg: var(--linangkit-2);
+  --c-photo-bg: var(--bobohizan); --c-photo-stripe-a: rgba(243,237,223,0.06); --c-photo-stripe-b: rgba(243,237,223,0.12);
+  --c-mono-color: rgba(217,185,122,0.32);
+  --c-meta-bg: var(--linangkit-2); --c-meta-name: var(--bobohizan); --c-meta-region: var(--sirih);
+  --c-rbadge-bg: var(--bobohizan); --c-rbadge-fg: var(--linangkit);
+  --c-caption: var(--bobohizan); --c-divider: rgba(26,22,18,0.18);
+  --c-cta-bg: var(--bobohizan); --c-cta-fg: var(--linangkit);
+}
+.card[data-variant="sirih"] {
+  --c-bg: var(--sirih); --c-bg-mark-opacity: 0.07;
+  --c-body: var(--linangkit); --c-title: var(--linangkit); --c-title-em: var(--padi-soft); --c-eyebrow: var(--padi-soft);
+  --c-tile-border: rgba(243,237,223,0.10); --c-tile-bg: var(--bobohizan);
+  --c-photo-bg: var(--sirih-deep); --c-photo-stripe-a: rgba(243,237,223,0.05); --c-photo-stripe-b: rgba(243,237,223,0.11);
+  --c-mono-color: rgba(217,185,122,0.28);
+  --c-meta-bg: var(--bobohizan); --c-meta-name: var(--linangkit); --c-meta-region: var(--padi-soft);
+  --c-rbadge-bg: var(--bobohizan-3); --c-rbadge-fg: var(--linangkit);
+  --c-caption: var(--padi-soft); --c-divider: rgba(243,237,223,0.18);
+  --c-cta-bg: var(--bobohizan); --c-cta-fg: var(--linangkit);
+}
+.card[data-variant="padi"] {
+  --c-bg: var(--padi); --c-bg-mark-opacity: 0.10;
+  --c-body: var(--bobohizan); --c-title: var(--bobohizan); --c-title-em: var(--sirih-deep); --c-eyebrow: var(--sirih-deep);
+  --c-tile-border: rgba(26,22,18,0.18); --c-tile-bg: var(--bobohizan);
+  --c-photo-bg: var(--bobohizan-2); --c-photo-stripe-a: rgba(217,185,122,0.08); --c-photo-stripe-b: rgba(217,185,122,0.16);
+  --c-mono-color: rgba(217,185,122,0.32);
+  --c-meta-bg: var(--bobohizan); --c-meta-name: var(--linangkit); --c-meta-region: var(--padi-soft);
+  --c-rbadge-bg: var(--padi-soft); --c-rbadge-fg: var(--bobohizan);
+  --c-caption: var(--sirih-deep); --c-divider: rgba(26,22,18,0.22);
+  --c-cta-bg: var(--bobohizan); --c-cta-fg: var(--linangkit);
+}
+
+/* ================================================================
+   PICKER PANEL
+   ================================================================ */
+.panel {
+  background: #131313; border-left: 1px solid #1e1e1e;
+  display: flex; flex-direction: column;
+  height: 100%; overflow: hidden; font-family: var(--ff-sans); color: #ddd;
+}
+.panel-scroll { flex: 1; overflow-y: auto; padding: 20px 18px; }
+.panel-scroll::-webkit-scrollbar { width: 4px; }
+.panel-scroll::-webkit-scrollbar-track { background: transparent; }
+.panel-scroll::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+
+.panel h2 {
+  font-family: var(--ff-display); font-style: italic;
+  font-size: 22px; margin: 0 0 3px; color: #fff;
+}
+.panel .lede { font-size: 11px; color: #666; margin: 0 0 16px; line-height: 1.5; }
+.panel label {
+  display: block; font-size: 10px; font-family: var(--ff-mono);
+  letter-spacing: 0.14em; text-transform: uppercase; color: #666; margin: 0 0 5px;
+}
+.panel input[type="text"] {
+  width: 100%; background: #0a0a0a; border: 1px solid #242424; color: #eee;
+  padding: 9px 12px; font-family: var(--ff-sans); font-size: 13px;
+  border-radius: 3px; outline: none;
+}
+.panel input[type="text"]:focus { border-color: var(--padi); }
+.panel .field { margin-bottom: 12px; }
+.panel hr { border: none; border-top: 1px solid #1e1e1e; margin: 14px 0; }
+
+.variant-row { display: flex; gap: 5px; flex-wrap: wrap; }
+.variant-btn {
+  flex: 1 1 calc(33% - 4px); min-width: 0;
+  padding: 7px 8px; background: #0a0a0a; border: 1px solid #242424; color: #999;
+  font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; cursor: pointer; border-radius: 3px;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+}
+.variant-btn:hover { border-color: #3a3a3a; color: #ddd; }
+.variant-btn.active { border-color: var(--padi); background: rgba(190,142,60,0.12); color: var(--padi); }
+
+/* Rank slots */
+.rank-slots { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+.rank-row {
+  display: flex; align-items: center; gap: 8px; padding: 8px 10px;
+  border: 1px solid #1e1e1e; border-radius: 3px; cursor: pointer;
+  transition: border-color 0.12s, background 0.12s; min-width: 0;
+}
+.rank-row:hover { border-color: #2e2e2e; background: #161616; }
+.rank-row.active { border-color: var(--padi); background: rgba(190,142,60,0.05); }
+.rank-num {
+  flex-shrink: 0; width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-mono); font-size: 11px; font-weight: 500;
+  background: #1e1e1e; color: #777; border-radius: 1px;
+  transition: background 0.12s, color 0.12s;
+}
+.rank-row[data-rank="1"] .rank-num { background: var(--padi); color: var(--bobohizan); }
+.rank-row[data-rank="2"] .rank-num { background: var(--kinabalu); color: var(--bobohizan); }
+.rank-row[data-rank="3"] .rank-num { background: var(--padi-soft); color: var(--bobohizan); }
+.rank-row.active .rank-num { background: var(--padi); color: var(--bobohizan); }
+.rank-label {
+  flex-shrink: 0; font-family: var(--ff-mono); font-size: 9px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: #555; width: 72px;
+}
+.rank-pick { flex: 1; font-size: 11px; color: #888; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.rank-row.active .rank-pick,
+.rank-row.filled .rank-pick { color: #ccc; }
+.rank-clear {
+  flex-shrink: 0; background: none; border: none; color: #383838;
+  font-size: 15px; cursor: pointer; padding: 0 2px; line-height: 1;
+  transition: color 0.1s;
+}
+.rank-clear:hover { color: #c0160e; }
+
+/* Contestant picker zone */
+.picker-zone { border: 1px solid #1e1e1e; border-radius: 4px; overflow: hidden; }
+.picker-header {
+  padding: 8px 10px; background: #0e0e0e; border-bottom: 1px solid #1e1e1e;
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #555; display: flex; align-items: center; gap: 8px;
+}
+.picker-header .active-rank-badge {
+  background: var(--padi); color: var(--bobohizan);
+  font-size: 10px; font-weight: 600;
+  padding: 1px 6px; border-radius: 2px;
+}
+.picker-search {
+  display: block; width: 100%; padding: 8px 10px;
+  background: #0a0a0a; border: none; border-bottom: 1px solid #1e1e1e;
+  color: #ddd; font-family: var(--ff-sans); font-size: 12px; outline: none;
+}
+.picker-search::placeholder { color: #3a3a3a; }
+.contestant-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; max-height: 240px; overflow-y: auto; background: #0d0d0d;
+}
+.contestant-grid::-webkit-scrollbar { width: 3px; }
+.contestant-grid::-webkit-scrollbar-thumb { background: #222; }
+.c-card {
+  display: flex; align-items: center; gap: 8px; padding: 8px 10px;
+  cursor: pointer; border-bottom: 1px solid #161616; border-right: 1px solid #161616;
+  transition: background 0.1s; min-width: 0;
+}
+.c-card:hover { background: #161610; }
+.c-card.picked { opacity: 0.28; cursor: default; pointer-events: none; }
+.c-photo {
+  flex-shrink: 0; width: 30px; height: 38px;
+  overflow: hidden; background: #1a1a1a; position: relative; border-radius: 1px;
+}
+.c-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block; }
+.c-mono {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-display); font-style: italic;
+  font-size: 18px; color: rgba(190,142,60,0.45);
+}
+.c-info { min-width: 0; }
+.c-name {
+  font-size: 10.5px; font-weight: 600; color: #ccc; line-height: 1.3;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.c-region {
+  font-size: 8.5px; font-family: var(--ff-mono); letter-spacing: 0.08em;
+  color: #555; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Actions footer */
+.panel-actions { padding: 14px 18px; border-top: 1px solid #1e1e1e; background: #0f0f0f; }
+.share-row {
+  display: flex; align-items: center; gap: 7px;
+}
+.share-label {
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #444; white-space: nowrap; flex-shrink: 0;
+}
+.btn-share {
+  flex: 1; padding: 10px 6px; border: 1px solid #242424; background: #0a0a0a; color: #888;
+  font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; cursor: pointer; border-radius: 3px;
+  transition: border-color 0.12s, color 0.12s;
+  position: relative; overflow: hidden;
+}
+.btn-share:hover:not(:disabled) { border-color: #444; color: #ddd; }
+.btn-share:disabled { cursor: wait; }
+.btn-fb:hover:not(:disabled) { border-color: #4267B2; color: #4267B2; }
+.btn-ig:hover:not(:disabled) { border-color: #E1306C; color: #E1306C; }
+.btn-dl:hover:not(:disabled) { border-color: #888; color: #ccc; }
+
+/* Spinner shown inside buttons while card is preparing */
+@keyframes kdmr-spin { to { transform: rotate(360deg); } }
+.btn-share::before {
+  content: ''; display: none;
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid #333; border-top-color: var(--padi-soft);
+  animation: kdmr-spin 0.65s linear infinite;
+  vertical-align: middle; margin-right: 5px;
+}
+.btn-share.preparing { color: #444; border-color: #1e1e1e; pointer-events: none; }
+.btn-share.preparing::before { display: inline-block; }
+
+/* Status line below share row */
+.share-status {
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #555;
+  text-align: center; padding-top: 7px; min-height: 16px;
+  transition: opacity 0.3s;
+}
+.share-status:empty { opacity: 0; }
+.empty-grid {
+  padding: 20px 10px; text-align: center; color: #383838;
+  font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page { grid-template-columns: 1fr; grid-template-rows: auto auto; height: auto; }
+  .stage { height: clamp(300px, 78vw, 480px); padding: 12px; }
+  .panel { border-left: none; border-top: 1px solid #1e1e1e; height: auto; overflow: visible; }
+  .panel-scroll { flex: none; overflow-y: visible; }
+  .contestant-grid { max-height: 200px; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMLPZJ9D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ── Topbar ─────────────────────────────────────────────────── -->
+<div class="topbar">
+  <a href="/" class="topbar-logo">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="KDMR Media">
+      <path d="M 32 4.7 L 45.3 18 L 32 31.3 L 18.7 18 Z" fill="#8C2A26"></path>
+      <path d="M 46 18.7 L 59.3 32 L 46 45.3 L 32.7 32 Z" fill="#BE8E3C"></path>
+      <path d="M 32 32.7 L 45.3 46 L 32 59.3 L 18.7 46 Z" fill="#2E4234"></path>
+      <path d="M 18 18.7 L 31.3 32 L 18 45.3 L 4.7 32 Z" fill="#F3EDDF"></path>
+    </svg>
+    <span style="display:flex;flex-direction:column;line-height:1.1;"><span style="font-size:13px;">KDMR <span style="color:#f0a820;">·</span></span><span style="font-size:8.5px;color:#aaa;letter-spacing:0.06em;font-weight:700;">MEDIA</span></span>
+  </a>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a href="/live" style="background:#f0a820;color:#0a0a0a;font-size:0.68rem;font-weight:700;padding:5px 10px;border-radius:2px;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;" data-i18n="nav_watch_live">Watch Live & Vote</a>
+    <button id="langToggleBtn" style="background:transparent;border:1px solid rgba(190,142,60,0.3);color:#f3eddf;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;padding:5px 10px;border-radius:99px;cursor:pointer;transition:background 0.15s,color 0.15s;white-space:nowrap;font-family:Inter,sans-serif;" onmouseover="this.style.background='#be8e3c';this.style.color='#1a1612'" onmouseout="this.style.background='transparent';this.style.color='#f3eddf'" aria-label="Switch language">EN</button>
+    <button onclick="var m=document.getElementById('predictMenu');m.style.display=m.style.display==='block'?'none':'block'" style="background:transparent;border:none;cursor:pointer;padding:6px;color:#888;display:flex;align-items:center;flex-shrink:0;" aria-label="Menu">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+<!-- Predict page mobile menu -->
+<div id="predictMenu" style="display:none;position:fixed;top:52px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid #1e1e1e;padding:12px 16px;z-index:49;">
+  <a href="/" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;" data-i18n="nav_home">Home</a>
+  <a href="/unduk-ngadau/" style="display:flex;align-items:center;gap:8px;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;"><span style="font-size:0.6rem;font-weight:800;background:#f0a820;color:#0a0a0a;padding:2px 6px;border-radius:2px;">UN</span> Unduk Ngadau</a>
+  <a href="/winners.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;" data-i18n="nav_winners">Winners</a>
+  <a href="/news.html" style="display:block;padding:10px 0;font-size:0.875rem;font-weight:500;color:#888;text-decoration:none;border-bottom:1px solid #1a1a1a;" data-i18n="nav_news">News</a>
+</div>
+</div>
+
+<!-- ── Main layout ────────────────────────────────────────────── -->
+<div class="page">
+
+  <!-- STAGE: card preview -->
+  <div class="stage">
+    <div class="stage-inner" id="stageInner">
+
+      <!-- ====== THE CARD — byte-for-byte from predict-tool.html ====== -->
+      <div class="card" id="predictCard" data-variant="hutan">
+
+        <svg class="bg-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 32 4.7 L 45.3 18 L 32 31.3 L 18.7 18 Z" fill="currentColor"></path>
+          <path d="M 46 18.7 L 59.3 32 L 46 45.3 L 32.7 32 Z" fill="currentColor"></path>
+          <path d="M 32 32.7 L 45.3 46 L 32 59.3 L 18.7 46 Z" fill="currentColor"></path>
+          <path d="M 18 18.7 L 31.3 32 L 18 45.3 L 4.7 32 Z" fill="currentColor"></path>
+        </svg>
+
+        <div class="strip">
+          <div class="brand">
+            <svg class="mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="KDMR Media">
+              <path d="M 32 4.7 L 45.3 18 L 32 31.3 L 18.7 18 Z" fill="#8C2A26"></path>
+              <path d="M 46 18.7 L 59.3 32 L 46 45.3 L 32.7 32 Z" fill="#BE8E3C"></path>
+              <path d="M 32 32.7 L 45.3 46 L 32 59.3 L 18.7 46 Z" fill="#2E4234"></path>
+              <path d="M 18 18.7 L 31.3 32 L 18 45.3 L 4.7 32 Z" fill="#1A1612"></path>
+            </svg>
+            <div class="wordmark">
+              KDMR · Media
+              <span class="sub">UNDUK NGADAU 2026 · TOP 7 PREDICTION</span>
+            </div>
+          </div>
+          <span class="handle">@KDMRMEDIA</span>
+        </div>
+
+        <div class="eyebrow"><span class="dot"></span><span data-bind="eyebrow">FAN PREDICTION · OFFICIAL TOP 7</span></div>
+
+        <div class="title-block">
+          <h1 class="title" data-i18n="predict_card_title">Predicted by <em data-bind="user">you</em></h1>
+        </div>
+
+        <!-- PODIUM (2 / 1 / 3 visual order) -->
+        <div class="podium">
+
+          <div class="ptile" data-rank="2" data-slot="2">
+            <div class="photo">
+              <div class="mono" data-bind="mono">2</div>
+            </div>
+            <div class="badge">2</div>
+            <div class="meta">
+              <h3 class="name" data-bind="name">2nd Place</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+            <div class="ptile-caption" data-i18n="caption_2nd_runner_up">2nd Runner-up</div>
+          </div>
+
+          <div class="ptile" data-rank="1" data-slot="1">
+            <div class="photo">
+              <div class="mono" data-bind="mono">1</div>
+            </div>
+            <div class="badge">1</div>
+            <svg class="crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18h18M3 8l4 4 5-6 5 6 4-4v10H3V8z"></path>
+            </svg>
+            <div class="meta">
+              <h3 class="name" data-bind="name">Champion</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+            <div class="ptile-caption" data-i18n="caption_champion">Champion</div>
+          </div>
+
+          <div class="ptile" data-rank="3" data-slot="3">
+            <div class="photo">
+              <div class="mono" data-bind="mono">3</div>
+            </div>
+            <div class="badge">3</div>
+            <div class="meta">
+              <h3 class="name" data-bind="name">3rd Place</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+            <div class="ptile-caption" data-i18n="caption_1st_runner_up">1st Runner-up</div>
+          </div>
+
+        </div>
+
+        <!-- RUNNERS 4–7 -->
+        <div class="runners">
+          <div class="rtile" data-slot="4">
+            <div class="photo"><div class="mono" data-bind="mono">4</div></div>
+            <div class="badge">4</div>
+            <div class="meta">
+              <h3 class="name" data-bind="name">4th Place</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+          </div>
+          <div class="rtile" data-slot="5">
+            <div class="photo"><div class="mono" data-bind="mono">5</div></div>
+            <div class="badge">5</div>
+            <div class="meta">
+              <h3 class="name" data-bind="name">5th Place</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+          </div>
+          <div class="rtile" data-slot="6">
+            <div class="photo"><div class="mono" data-bind="mono">6</div></div>
+            <div class="badge">6</div>
+            <div class="meta">
+              <h3 class="name" data-bind="name">6th Place</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+          </div>
+          <div class="rtile" data-slot="7">
+            <div class="photo"><div class="mono" data-bind="mono">7</div></div>
+            <div class="badge">7</div>
+            <div class="meta">
+              <h3 class="name" data-bind="name">7th Place</h3>
+              <div class="region" data-bind="region">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="left">
+            <span class="diamonds"><i></i><i></i><i></i><i></i></span>
+            <span class="bold" data-i18n="card_follow">Follow @KDMRMEDIA</span> on FB &amp; IG<br/>
+            <span data-i18n="card_url">Make yours · <span class="bold">KDMRMEDIA.COM/PREDICT</span></span>
+          </div>
+          <span class="cta">
+            <span class="text" data-i18n="card_cta">Predict Yours</span>
+            <span class="arrow">→</span>
+          </span>
+        </div>
+
+      </div>
+      <!-- ====== END card ====== -->
+
+    </div>
+  </div>
+
+  <!-- PANEL: real picker UI -->
+  <aside class="panel">
+    <div class="panel-scroll">
+      <h2 data-i18n="predict_panel_title">Predict Top 7</h2>
+      <p class="lede" data-i18n="predict_panel_desc">Pick your champion &amp; Top 7 for Unduk Ngadau 2026. Card updates live.</p>
+
+      <div class="field">
+        <label data-i18n="predict_label_name">Your name (appears in title)</label>
+        <input type="text" id="inUser" placeholder="e.g. Jenelyn" autocomplete="off" />
+      </div>
+
+      <div class="field">
+        <label data-i18n="predict_label_theme">Color theme</label>
+        <div class="variant-row" id="variantRow">
+          <button class="variant-btn active" data-v="hutan" data-i18n="theme_hutan">Hutan</button>
+          <button class="variant-btn" data-v="bobohizan" data-i18n="theme_bobohizan">Bobohizan</button>
+          <button class="variant-btn" data-v="linangkit" data-i18n="theme_linangkit">Linangkit</button>
+          <button class="variant-btn" data-v="sirih" data-i18n="theme_sirih">Sirih</button>
+          <button class="variant-btn" data-v="padi" data-i18n="theme_padi">Padi</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="rankSlots"></div>
+
+      <div class="picker-zone" id="pickerZone">
+        <div class="picker-header">
+          Picking rank <span class="active-rank-badge" id="activeRankBadge">1</span>
+        </div>
+        <input class="picker-search" id="pickerSearch" type="text" data-i18n="predict_search_placeholder" placeholder="Search by name or region…" autocomplete="off" />
+        <div class="contestant-grid" id="contestantGrid">
+          <div class="empty-grid" style="grid-column:span 2;" data-i18n="predict_loading">Loading contestants…</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-actions">
+      <div class="share-row">
+        <span class="share-label" data-i18n="share_to_label">Share to:</span>
+        <button class="btn-share btn-fb" id="btnFB" data-i18n="button_facebook">Facebook</button>
+        <button class="btn-share btn-ig" id="btnIG" data-i18n="button_ig_story">IG Story</button>
+        <button class="btn-share btn-dl" id="btnDownload" data-i18n="button_download_png">Download</button>
+      </div>
+      <div class="share-status" id="shareStatus"></div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script>
+// ================================================================
+//  DATA — single source of truth
+// ================================================================
+const DATA = {
+  user: '',
+  variant: 'hutan',
+  eyebrow: 'FAN PREDICTION · OFFICIAL TOP 7',
+  picks: [null, null, null, null, null, null, null, null], // index 0 unused
+};
+
+// RANK_LABELS is language-aware — reads from window.__i18nT set by i18n.js.
+// Called as a function so it always reflects the current language.
+function getRankLabels() {
+  const t = window.__i18nT || (k => k);
+  return {
+    1: t('caption_champion'),
+    2: t('caption_2nd_runner_up'),
+    3: t('caption_1st_runner_up'),
+    4: t('caption_top7'),
+    5: t('caption_top7'),
+    6: t('caption_top7'),
+    7: t('caption_top7'),
+  };
+}
+// Legacy alias kept for any remaining references
+const RANK_LABELS = getRankLabels();
+const PLACEHOLDER_PATHS = ['/images/placeholder-winner.png', '/images/Sample UN Winner.png'];
+
+let allContestants = [];
+let activeRank = 1;
+
+// ================================================================
+//  RENDER — pull DATA into the card DOM (exact contract from predict-tool.html)
+// ================================================================
+function render() {
+  const card = document.getElementById('predictCard');
+  card.setAttribute('data-variant', DATA.variant);
+  // Only override the user placeholder when a name has been entered;
+  // otherwise let i18n keep "you" / "anda" from the translated template.
+  if (DATA.user) card.querySelector('[data-bind="user"]').textContent = DATA.user;
+  // Eyebrow uses i18n when available, falls back to the English default.
+  card.querySelector('[data-bind="eyebrow"]').textContent =
+    (window.__i18nT ? window.__i18nT('predict_card_eyebrow') : null) || DATA.eyebrow;
+
+  for (let rank = 1; rank <= 7; rank++) {
+    const tile = card.querySelector(`[data-slot="${rank}"]`);
+    if (!tile) continue;
+    const pick = DATA.picks[rank];
+    const monoEl = tile.querySelector('[data-bind="mono"]');
+    const photoZone = tile.querySelector('.photo');
+    let img = photoZone ? photoZone.querySelector('img') : null;
+
+    if (!pick) {
+      // Empty state — use current-language label
+      tile.querySelector('[data-bind="name"]').textContent = getRankLabels()[rank];
+      tile.querySelector('[data-bind="region"]').textContent = '—';
+      if (monoEl) { monoEl.textContent = String(rank); monoEl.style.display = ''; }
+      if (img) img.remove();
+      continue;
+    }
+
+    tile.querySelector('[data-bind="name"]').textContent = pick.name || '—';
+    tile.querySelector('[data-bind="region"]').textContent = pick.region || '';
+    if (monoEl) monoEl.textContent = (pick.name || '?').trim().charAt(0).toUpperCase();
+
+    if (pick.photo) {
+      if (!img) {
+        img = document.createElement('img');
+        img.setAttribute('data-bind', 'photo');
+        img.setAttribute('alt', pick.name || '');
+        img.setAttribute('crossorigin', 'anonymous');
+        if (photoZone) photoZone.appendChild(img);
+      }
+      if (img.src !== pick.photo) img.src = pick.photo;
+      if (monoEl) monoEl.style.display = 'none';
+    } else {
+      if (img) img.remove();
+      if (monoEl) monoEl.style.display = '';
+    }
+  }
+  scheduleCache();
+}
+
+// ================================================================
+//  RANK ROWS
+// ================================================================
+function buildRankRows() {
+  const container = document.getElementById('rankSlots');
+  container.innerHTML = '';
+  for (let r = 1; r <= 7; r++) {
+    const pick = DATA.picks[r];
+    const row = document.createElement('div');
+    row.className = 'rank-row' + (r === activeRank ? ' active' : '') + (pick ? ' filled' : '');
+    row.dataset.rank = r;
+
+    const num  = document.createElement('span');
+    num.className = 'rank-num';
+    num.textContent = r;
+
+    const lbl  = document.createElement('span');
+    lbl.className = 'rank-label';
+    lbl.textContent = getRankLabels()[r];
+
+    const pik  = document.createElement('span');
+    pik.className = 'rank-pick';
+    pik.textContent = pick ? pick.name : (window.__i18nT ? window.__i18nT('slot_empty_label') : 'Empty — tap to pick');
+
+    row.appendChild(num);
+    row.appendChild(lbl);
+    row.appendChild(pik);
+
+    if (pick) {
+      const clr = document.createElement('button');
+      clr.className = 'rank-clear';
+      clr.title = 'Remove';
+      clr.textContent = '×';
+      clr.addEventListener('click', e => {
+        e.stopPropagation();
+        DATA.picks[r] = null;
+        render();
+        buildRankRows();
+        updateGrid();
+      });
+      row.appendChild(clr);
+    }
+
+    row.addEventListener('click', () => setActiveRank(r));
+    container.appendChild(row);
+  }
+}
+
+function setActiveRank(rank) {
+  activeRank = rank;
+  document.querySelectorAll('.rank-row').forEach(row =>
+    row.classList.toggle('active', parseInt(row.dataset.rank) === rank));
+  const badge = document.getElementById('activeRankBadge');
+  if (badge) badge.textContent = rank;
+}
+
+// ================================================================
+//  CONTESTANT GRID
+// ================================================================
+function updateGrid() {
+  const q = (document.getElementById('pickerSearch').value || '').toLowerCase().trim();
+  const grid = document.getElementById('contestantGrid');
+  grid.innerHTML = '';
+
+  const shown = allContestants.filter(c => {
+    if (!q) return true;
+    return c.name.toLowerCase().includes(q)
+      || (c.branch || '').toLowerCase().includes(q)
+      || (c.district || '').toLowerCase().includes(q)
+      || (c.tribe || '').toLowerCase().includes(q);
+  });
+
+  if (!shown.length) {
+    grid.innerHTML = '<div class="empty-grid" style="grid-column:span 2;">No matches</div>';
+    return;
+  }
+
+  shown.forEach(c => {
+    const alreadyPicked = DATA.picks.slice(1).some(p => p && p.id === c.id);
+    const card = document.createElement('div');
+    card.className = 'c-card' + (alreadyPicked ? ' picked' : '');
+
+    const hasPhoto = c.imageUrl && !PLACEHOLDER_PATHS.includes(c.imageUrl);
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'c-photo';
+    if (hasPhoto) {
+      const img = document.createElement('img');
+      img.src = c.imageUrl;
+      img.alt = c.name;
+      img.crossOrigin = 'anonymous';
+      img.loading = 'lazy';
+      photoDiv.appendChild(img);
+    } else {
+      const mono = document.createElement('span');
+      mono.className = 'c-mono';
+      mono.textContent = c.name.trim().charAt(0).toUpperCase();
+      photoDiv.appendChild(mono);
+    }
+
+    const info = document.createElement('div');
+    info.className = 'c-info';
+    info.innerHTML = `<div class="c-name">${c.name}</div><div class="c-region">${c.origin || c.branch || ''}</div>`;
+
+    card.appendChild(photoDiv);
+    card.appendChild(info);
+
+    card.addEventListener('click', async () => {
+      if (alreadyPicked) return;
+
+      // Show loading state on this card while we fetch the data URL
+      card.style.opacity = '0.5';
+      card.style.pointerEvents = 'none';
+
+      // Pre-fetch photo as a data URL so html-to-image can embed it without CORS restrictions
+      let photo = '';
+      if (hasPhoto) {
+        photo = await toDataUrl(c.imageUrl);
+      }
+
+      card.style.opacity = '';
+      card.style.pointerEvents = '';
+
+      DATA.picks[activeRank] = {
+        id: c.id, rank: activeRank,
+        name: c.name, region: c.origin || c.branch || '',
+        photo,
+      };
+      render();
+      buildRankRows();
+
+      // Auto-advance to next empty rank
+      for (let r = 1; r <= 7; r++) {
+        if (!DATA.picks[r]) { setActiveRank(r); break; }
+      }
+      updateGrid();
+    });
+
+    grid.appendChild(card);
+  });
+}
+
+// ================================================================
+//  IMAGE → DATA URL  (pre-fetch so html-to-image never needs CORS)
+//  Retries twice with a 10 s timeout each. On total failure, returns
+//  the raw URL instead of an empty string — so render() still writes
+//  <img src="…"> and the on-screen card shows the photo (normal
+//  <img> loading doesn't need CORS). The share-time blob pre-fetch
+//  in generateCardDataUrl() then handles CORS for canvas capture.
+// ================================================================
+async function toDataUrl(url) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 10000);
+      try {
+        const res = await fetch(url, {
+          mode: 'cors', cache: 'no-cache', signal: ctrl.signal,
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blob = await res.blob();
+        return await new Promise((resolve, reject) => {
+          const r = new FileReader();
+          r.onload = () => resolve(r.result);
+          r.onerror = reject;
+          r.readAsDataURL(blob);
+        });
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (e) {
+      console.warn(`[predict] toDataUrl attempt ${attempt} failed for`, url, e.message);
+      if (attempt < 2) await new Promise(r => setTimeout(r, 400));
+    }
+  }
+  // Final fallback: return the raw URL so the on-screen <img> still loads
+  // and prefetchPortraitsAsBlobs() can retry it at share time.
+  return url;
+}
+
+// ================================================================
+//  VIEWPORT SCALER
+// ================================================================
+function fitStage() {
+  const stage = document.querySelector('.stage');
+  const inner = document.getElementById('stageInner');
+  if (!stage || !inner) return;
+  const pad = 24 * 2;
+  const sw = stage.clientWidth - pad;
+  const sh = stage.clientHeight - pad;
+  const scale = Math.min(sw / 1080, sh / 1350, 1);
+  inner.style.transform = `scale(${scale})`;
+}
+
+// ================================================================
+//  PORTRAIT PRE-FETCHER
+//  Downloads every remote portrait in the card as a same-origin
+//  blob URL before html-to-image runs. Blob URLs require zero CORS
+//  negotiation during canvas paint, so html-to-image never races a
+//  slow CORS fetch for any slot — all images are already in memory.
+//  Returns a cleanup function that restores original srcs and
+//  releases blob memory (call it in a finally block).
+// ================================================================
+async function prefetchPortraitsAsBlobs(card) {
+  const imgs = Array.from(card.querySelectorAll('img[src]'))
+    .filter(img => img.src && /^https?:\/\//.test(img.src));
+
+  const origSrcs = new Map();
+  const blobUrls = [];
+
+  await Promise.allSettled(imgs.map(async img => {
+    const orig = img.getAttribute('src') || img.src;
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 12000); // 12 s per image
+      try {
+        const res = await fetch(orig, {
+          mode: 'cors', cache: 'no-cache', signal: ctrl.signal,
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blobUrl = URL.createObjectURL(await res.blob());
+        blobUrls.push(blobUrl);
+        origSrcs.set(img, orig);
+        img.src = blobUrl;
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (_) { /* keep original src — html-to-image will attempt it */ }
+  }));
+
+  // Give the browser two animation frames to paint the new blob srcs
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+  // Return a cleanup function
+  return function cleanup() {
+    origSrcs.forEach((orig, img) => { try { img.src = orig; } catch (_) {} });
+    blobUrls.forEach(url => URL.revokeObjectURL(url));
+  };
+}
+
+// ================================================================
+//  SHARED CARD RENDERER
+//  Pre-fetches all portrait images as blob URLs so html-to-image
+//  paints from memory (no CORS round-trips during canvas capture).
+// ================================================================
+async function generateCardDataUrl() {
+  const card = document.getElementById('predictCard');
+  const cleanup = await prefetchPortraitsAsBlobs(card);
+  try {
+    return await htmlToImage.toPng(card, {
+      width: 1080, height: 1350, pixelRatio: 1,
+      skipFonts: false,
+      // Blob URLs are same-origin, but keep CORS mode as fallback for
+      // any image whose pre-fetch failed and still has an http src.
+      fetchRequestInit: { mode: 'cors', cache: 'no-cache' },
+    });
+  } finally {
+    cleanup();
+  }
+}
+
+// ================================================================
+//  BACKGROUND CARD CACHING
+//  iOS Safari requires navigator.share() to be called within the
+//  transient-activation window of a tap (~1 s). Generating the card
+//  image takes 2–5 s, so we pre-render it in the background after
+//  every card change and cache the Blob. The share buttons then call
+//  navigator.share() synchronously with the pre-cached file.
+// ================================================================
+let _cardBlob = null;
+let _cacheTimer = null;
+let _cacheState = 'idle'; // 'idle' | 'loading' | 'ready' | 'error'
+let _cacheAbortTimer = null;
+
+// ---------------------------------------------------------------
+//  updateShareUI  —  sync button + status text to _cacheState
+// ---------------------------------------------------------------
+function updateShareUI() {
+  const preparing = _cacheState === 'loading';
+  const statusMsg = preparing
+    ? (window.__i18nT ? window.__i18nT('share_preparing') : 'Loading images…')
+    : (_cacheState === 'error'
+        ? (window.__i18nT ? window.__i18nT('share_ready_fallback') : 'Ready — tap to share')
+        : '');
+
+  ['btnFB', 'btnIG', 'btnDownload'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.disabled = preparing;
+    btn.classList.toggle('preparing', preparing);
+  });
+
+  const statusEl = document.getElementById('shareStatus');
+  if (statusEl) statusEl.textContent = statusMsg;
+}
+
+function scheduleCache() {
+  clearTimeout(_cacheTimer);
+  clearTimeout(_cacheAbortTimer);
+  _cardBlob = null;
+  _cacheState = 'loading';
+  updateShareUI();
+
+  _cacheTimer = setTimeout(async () => {
+    // Safety valve: if the whole process takes > 30 s, re-enable buttons
+    // so the user isn't locked out forever on a very slow connection.
+    _cacheAbortTimer = setTimeout(() => {
+      if (_cacheState === 'loading') {
+        _cacheState = 'error';
+        updateShareUI();
+      }
+    }, 30000);
+
+    try {
+      // Wait for every portrait <img> in the card to finish loading
+      // (or give up after 15 s per image on slow connections).
+      const imgs = Array.from(document.querySelectorAll('#predictCard img'));
+      await Promise.all(imgs.map(img => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise(resolve => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', resolve, { once: true });
+          setTimeout(resolve, 15000); // extended for slow 3G / mobile data
+        });
+      }));
+
+      const dataUrl = await generateCardDataUrl(); // blob pre-fetch inside
+      _cardBlob = await (await fetch(dataUrl)).blob();
+      _cacheState = 'ready';
+    } catch (_) {
+      _cardBlob = null;
+      _cacheState = 'error';
+    } finally {
+      clearTimeout(_cacheAbortTimer);
+      updateShareUI();
+    }
+  }, 800);
+}
+
+// Wait for the background cache to finish (used by share handlers
+// when the user taps before the cache is ready).
+function waitForCache(maxMs = 30000) {
+  if (_cacheState !== 'loading') return Promise.resolve();
+  return new Promise(resolve => {
+    const check = setInterval(() => {
+      if (_cacheState !== 'loading') { clearInterval(check); resolve(); }
+    }, 200);
+    setTimeout(() => { clearInterval(check); resolve(); }, maxMs);
+  });
+}
+
+// ================================================================
+//  DOWNLOAD
+// ================================================================
+async function downloadCard() {
+  const btn = document.getElementById('btnDownload');
+  btn.disabled = true;
+  btn.textContent = 'Loading…';
+  try {
+    const dataUrl = await generateCardDataUrl();
+    const a = document.createElement('a');
+    a.download = 'my-kaamatan-prediction.png';
+    a.href = dataUrl;
+    a.click();
+  } catch (e) {
+    console.error('[predict] download failed:', e);
+    alert('Download failed: ' + (e.message || 'Unknown error') + '\n\nTip: try a different browser, or screenshot the card.');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Download';
+  }
+}
+
+// ================================================================
+//  SHARE — Facebook & IG Story
+//  Uses the pre-cached Blob from scheduleCache() so navigator.share()
+//  is called synchronously within the tap gesture (iOS transient-
+//  activation window). Falling back to download + manual open when
+//  the cache isn't ready or the API is unavailable.
+// ================================================================
+async function shareFacebook() {
+  const btn = document.getElementById('btnFB');
+  const blob = _cardBlob;
+  if (blob && navigator.canShare) {
+    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
+    if (navigator.canShare({ files: [file] })) {
+      btn.disabled = true; btn.textContent = 'Opening…';
+      try {
+        await navigator.share({
+          files: [file],
+          title: 'My Kaamatan Top 7 Prediction',
+          text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! Make yours at kdmrmedia.com/predict @KDMRMEDIA',
+        });
+      } catch (e) { if (e.name !== 'AbortError') console.error('[predict] fb share failed:', e); }
+      finally { btn.disabled = false; btn.textContent = 'Facebook'; }
+      return;
+    }
+  }
+  // Fallback: generate on-demand, download, then open Facebook
+  btn.disabled = true; btn.textContent = 'Generating…';
+  try {
+    const dataUrl = await generateCardDataUrl();
+    const a = document.createElement('a');
+    a.download = 'my-kaamatan-prediction.png'; a.href = dataUrl; a.click();
+    setTimeout(() => window.open('https://www.facebook.com/', '_blank'), 700);
+  } catch (e) { console.error('[predict] fb share failed:', e); }
+  finally { btn.disabled = false; btn.textContent = 'Facebook'; }
+}
+
+async function shareIGStory() {
+  const btn = document.getElementById('btnIG');
+  const blob = _cardBlob;
+  if (blob && navigator.canShare) {
+    const file = new File([blob], 'my-kaamatan-prediction.png', { type: 'image/png' });
+    if (navigator.canShare({ files: [file] })) {
+      btn.disabled = true; btn.textContent = 'Opening…';
+      try {
+        await navigator.share({
+          files: [file],
+          title: 'My Kaamatan Top 7 Prediction',
+          text: 'My Top 7 prediction for Unduk Ngadau Kaamatan 2026! @KDMRMEDIA',
+        });
+      } catch (e) { if (e.name !== 'AbortError') console.error('[predict] ig share failed:', e); }
+      finally { btn.disabled = false; btn.textContent = 'IG Story'; }
+      return;
+    }
+  }
+  // Fallback: generate on-demand, download, then open Instagram
+  btn.disabled = true; btn.textContent = 'Generating…';
+  try {
+    const dataUrl = await generateCardDataUrl();
+    const a = document.createElement('a');
+    a.download = 'my-kaamatan-prediction.png'; a.href = dataUrl; a.click();
+    setTimeout(() => { window.location.href = 'instagram://story-camera'; }, 700);
+  } catch (e) { console.error('[predict] ig share failed:', e); }
+  finally { btn.disabled = false; btn.textContent = 'IG Story'; }
+}
+
+// ================================================================
+//  BOOT
+// ================================================================
+document.addEventListener('DOMContentLoaded', async () => {
+  // Wire name input
+  document.getElementById('inUser').addEventListener('input', e => {
+    DATA.user = e.target.value;
+    render();
+  });
+
+  // Wire variant buttons
+  document.querySelectorAll('.variant-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      DATA.variant = btn.dataset.v;
+      document.querySelectorAll('.variant-btn').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  // Wire search
+  document.getElementById('pickerSearch').addEventListener('input', () => updateGrid());
+
+  // Wire actions
+  document.getElementById('btnDownload').addEventListener('click', downloadCard);
+  document.getElementById('btnFB').addEventListener('click', shareFacebook);
+  document.getElementById('btnIG').addEventListener('click', shareIGStory);
+
+  // Scale card to viewport
+  fitStage();
+  window.addEventListener('resize', fitStage);
+
+  // Initial render (empty state)
+  buildRankRows();
+  render();
+
+  // Load real contestants
+  try {
+    const res = await fetch('./data.json');
+    const data = await res.json();
+    allContestants = (data.winners || [])
+      .filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
+      .sort((a, b) => {
+        const aOut = a.branch !== 'KDCA Sabah';
+        const bOut = b.branch !== 'KDCA Sabah';
+        if (aOut !== bOut) return aOut ? -1 : 1;
+        return a.name.localeCompare(b.name);
+      });
+    updateGrid();
+  } catch (e) {
+    document.getElementById('contestantGrid').innerHTML =
+      '<div class="empty-grid" style="grid-column:span 2;">Failed to load — please refresh.</div>';
+    console.error('[predict] data.json load failed:', e);
+  }
+});
+
+// When i18n.js switches language it dispatches 'kdmr:langchange'.
+// Re-render the card and sidebar so all rank labels / eyebrow / empty-slot
+// text immediately reflect the new language without a page reload.
+document.addEventListener('kdmr:langchange', () => {
+  render();
+  buildRankRows();
+});
+</script>
+<script type="module" src="../src/i18n.js"></script>
+
+</body>
+</html>
