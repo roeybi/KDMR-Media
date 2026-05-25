@@ -234,6 +234,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       dropBtn.addEventListener('click', e => { e.stopPropagation(); dropMenu.style.display = dropMenu.style.display==='block'?'none':'block'; });
       document.addEventListener('click', () => { dropMenu.style.display='none'; });
     </script>
+    <!-- ── Feedback Form ──────────────────────────────────────── -->
+    <section id="feedbackSection" data-feedback-form data-page="/peninsular-2026" style="background:#0a0a0a;border-top:1px solid #1a1a1a;padding:48px 16px;">
+    </section>
+
     <script type="module" src="./src/i18n.js"></script>
+    <script type="module" src="./src/feedback.js"></script>
   </body>
 </html>
