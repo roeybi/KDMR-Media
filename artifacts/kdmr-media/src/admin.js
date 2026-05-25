@@ -40,7 +40,7 @@ async function checkAdminPasscode() {
 
 async function buildWinnerMap() {
   try {
-    const res = await fetch('./data.json');
+    const res = await fetch(import.meta.env.BASE_URL + 'data.json');
     const data = await res.json();
     (data.winners || []).forEach(w => {
       winnerMap[w.id] = {
