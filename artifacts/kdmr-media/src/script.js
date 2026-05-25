@@ -414,7 +414,7 @@ function renderStats(entry, panelId) {
     </div>
   `;
   document.getElementById(btnId)?.addEventListener('click', function() {
-    window.location.href = import.meta.env.BASE_URL + 'live.html';
+    window.location.href = import.meta.env.BASE_URL + '/live';
   });
 }
 
@@ -989,7 +989,7 @@ async function initIndex(data) {
     }
     if (voteBtn) {
       voteBtn.addEventListener('click', () => {
-        window.location.href = import.meta.env.BASE_URL + 'live.html';
+        window.location.href = import.meta.env.BASE_URL + '/live';
       });
     }
 
