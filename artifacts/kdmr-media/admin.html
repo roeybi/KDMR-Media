@@ -45,6 +45,21 @@
     .filter-bar { display:flex; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
     .filter-btn { background:#111; border:1px solid #222; color:#888; padding:6px 14px; border-radius:2px; font-size:0.75rem; cursor:pointer; }
     .filter-btn.active { border-color:#f0a820; color:#f0a820; background:rgba(240,168,32,0.08); }
+    .tab-bar { display:flex; gap:4px; border-bottom:1px solid #1a1a1a; margin-bottom:24px; }
+    .tab-btn { background:none; border:none; color:#888; font-size:0.82rem; font-weight:600; padding:10px 20px; cursor:pointer; border-bottom:2px solid transparent; }
+    .tab-btn.active { color:#f0a820; border-bottom-color:#f0a820; }
+    .label-valid { background:rgba(34,197,94,0.12); color:#4ade80; }
+    .label-kiv { background:rgba(240,168,32,0.12); color:#f0a820; }
+    .label-spam { background:rgba(239,68,68,0.12); color:#f87171; }
+    .label-new { background:rgba(168,85,247,0.12); color:#c084fc; }
+    .github-btn { background:#333; color:#fff; }
+    .github-btn:hover:not(:disabled) { background:#555; }
+    .dismiss-btn { background:#7f1d1d; color:#fff; }
+    .dismiss-btn:hover:not(:disabled) { background:#991b1b; }
+    .pat-input { background:#0a0a0a; border:1px solid #333; color:#f0a820; padding:8px 12px; font-size:0.72rem; border-radius:2px; font-family:monospace; width:280px; }
+    .pat-input:focus { border-color:#f0a820; outline:none; }
+    .feedback-msg { max-width:320px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .feedback-msg.expanded { white-space:normal; overflow:visible; }
   </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#f0f0f0] font-['Inter',sans-serif] min-h-screen">
@@ -64,7 +79,7 @@
     </div>
   </div>
 
-  <!-- Queue -->
+  <!-- Dashboard -->
   <div id="queueContainer" style="display:none;">
     <header style="border-bottom:1px solid #1a1a1a; padding:16px 24px;">
       <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
@@ -75,46 +90,90 @@
           <span style="font-weight:800;font-size:0.95rem;color:#f0f0f0;">KDMR-MEDIA</span>
           <span style="font-size:0.75rem;color:#f0a820;font-weight:600;">ADMIN</span>
         </div>
-        <button id="refreshBtn" class="refresh-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px;"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-          Refresh
-        </button>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <label style="font-size:0.72rem;color:#666;">GitHub PAT:</label>
+          <input type="password" id="githubPatInput" class="pat-input" placeholder="ghp_..." style="width:180px;" />
+          <button id="refreshBtn" class="refresh-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px;"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+        </div>
       </div>
     </header>
 
     <main style="padding:32px 24px;">
       <div style="max-width:1200px;margin:0 auto;">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
-          <h1 style="font-size:1.3rem;font-weight:700;color:#f0f0f0;">Upload Queue</h1>
-          <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="pending">Pending</button>
-            <button class="filter-btn" data-filter="approved">Approved</button>
-            <button class="filter-btn" data-filter="rejected">Rejected</button>
+        <!-- Tabs -->
+        <div class="tab-bar">
+          <button class="tab-btn active" data-tab="uploads">Upload Queue</button>
+          <button class="tab-btn" data-tab="feedback">Feedback</button>
+        </div>
+
+        <!-- Uploads Panel -->
+        <div id="uploadsPanel">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
+            <h1 style="font-size:1.3rem;font-weight:700;color:#f0f0f0;">Upload Queue</h1>
+            <div class="filter-bar">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="pending">Pending</button>
+              <button class="filter-btn" data-filter="approved">Approved</button>
+              <button class="filter-btn" data-filter="rejected">Rejected</button>
+            </div>
           </div>
+          <div style="background:#111;border:1px solid #1a1a1a;border-radius:4px;overflow-x:auto;">
+            <table class="queue-table">
+              <thead>
+                <tr>
+                  <th>Preview</th>
+                  <th>Branch</th>
+                  <th>Winner</th>
+                  <th>Filename</th>
+                  <th>Uploaded By</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Public URL</th>
+                </tr>
+              </thead>
+              <tbody id="queueBody">
+                <tr><td colspan="8" class="empty-state">Loading submissions...</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="queueStats" style="margin-top:16px;font-size:0.75rem;color:#555;"></div>
         </div>
 
-        <div style="background:#111;border:1px solid #1a1a1a;border-radius:4px;overflow-x:auto;">
-          <table class="queue-table">
-            <thead>
-              <tr>
-                <th>Preview</th>
-                <th>Branch</th>
-                <th>Winner</th>
-                <th>Filename</th>
-                <th>Uploaded By</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Public URL</th>
-              </tr>
-            </thead>
-            <tbody id="queueBody">
-              <tr><td colspan="8" class="empty-state">Loading submissions...</td></tr>
-            </tbody>
-          </table>
+        <!-- Feedback Panel -->
+        <div id="feedbackPanel" style="display:none;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
+            <h1 style="font-size:1.3rem;font-weight:700;color:#f0f0f0;">User Feedback</h1>
+            <div class="filter-bar" id="feedbackFilterBar">
+              <button class="filter-btn active" data-fbfilter="all">All</button>
+              <button class="filter-btn" data-fbfilter="new">New</button>
+              <button class="filter-btn" data-fbfilter="valid">Valid</button>
+              <button class="filter-btn" data-fbfilter="kiv">KIV</button>
+              <button class="filter-btn" data-fbfilter="spam">Spam</button>
+            </div>
+          </div>
+          <div style="background:#111;border:1px solid #1a1a1a;border-radius:4px;overflow-x:auto;">
+            <table class="queue-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Page</th>
+                  <th>Message</th>
+                  <th>Label</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="feedbackBody">
+                <tr><td colspan="7" class="empty-state">Loading feedback...</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="feedbackStats" style="margin-top:16px;font-size:0.75rem;color:#555;"></div>
         </div>
-
-        <div id="queueStats" style="margin-top:16px;font-size:0.75rem;color:#555;"></div>
       </div>
     </main>
   </div>
