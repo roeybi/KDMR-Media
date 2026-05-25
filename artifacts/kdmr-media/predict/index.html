@@ -1288,7 +1288,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Load real contestants
   try {
-    const res = await fetch('./data.json');
+    const res = await fetch('/data.json');
     const data = await res.json();
     allContestants = (data.winners || [])
       .filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
