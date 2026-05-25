@@ -52,7 +52,7 @@ let currentTheme = 'Bobohizan';
 
 async function init() {
   try {
-    const res = await fetch('./data.json');
+    const res = await fetch(import.meta.env.BASE_URL + 'data.json');
     const data = await res.json();
     allContestants = (data.winners || [])
       .filter(w => w.year === 2026 && w.award === 'Unduk Ngadau')
