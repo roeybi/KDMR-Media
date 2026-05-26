@@ -367,7 +367,14 @@ function renderPortrait(entry) {
   if (nameEl) { nameEl.textContent = entry.name; nameEl.style.display = ''; }
 
   const yearEl = document.getElementById('portraitYear');
-  if (yearEl) { yearEl.textContent = `${entry.branch}  ·  ${entry.tribe}`; yearEl.style.display = ''; }
+  if (yearEl) {
+    const isSabah = entry.branch === 'KDCA Sabah';
+    const subText = isSabah
+      ? `KDCA ${entry.district}  ·  ${entry.year}`
+      : `${entry.branch}  ·  ${entry.tribe}`;
+    yearEl.textContent = subText;
+    yearEl.style.display = '';
+  }
 
   // ── Ambient page glow ──────────────────────────────────────────────────
   const ambEl = document.getElementById('ambientBg');
