@@ -930,7 +930,7 @@ export function mountLocatorHero(section) {
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvisa Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
@@ -1832,7 +1832,7 @@ export function mountLocatorMap(el) {
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvisa Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
