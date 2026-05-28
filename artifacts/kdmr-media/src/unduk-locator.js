@@ -500,453 +500,453 @@ export function mountLocatorHero(section) {
               <text x="0" y="-5" text-anchor="middle" font-size="3" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
 
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-055" data-name="Kudat" data-sub="KDCA Kudat · 2026" data-winner="Feyrashandy Hanlin Hanis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-055_feyrashandy-hanlin-hanis_2026-05-24T16-57-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-055" data-name="Kudat" data-sub="KDCA Kudat · 2026" data-winner="Feyrashandy Hanlin Hanis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kudat_feyrashandy-hanlin-hanis_2026-05-27T16-48-56.png">
                 <circle cx="264" cy="52" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="52" x2="262" y2="30.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="262" cy="30.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-055_feyrashandy-hanlin-hanis_2026-05-24T16-57-28_clean.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kudat_feyrashandy-hanlin-hanis_2026-05-27T16-48-56.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-056" data-name="Banggi" data-sub="KDCA Banggi · 2026" data-winner="Lora Derlina Lisa Jusley" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-056_lora-derlina-lisa-jusley_2026-05-24T14-54-09_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-056" data-name="Banggi" data-sub="KDCA Banggi · 2026" data-winner="Lora Derlina Lisa Jusley" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/banggi_lora-derlina-lisa-jusley_2026-05-27T16-42-23.png">
                 <circle cx="261" cy="49" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="261" y1="49" x2="254.3" y2="27" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="254.3" cy="27" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-056_lora-derlina-lisa-jusley_2026-05-24T14-54-09_clean.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/banggi_lora-derlina-lisa-jusley_2026-05-27T16-42-23.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-057" data-name="Pitas" data-sub="KDCA Pitas · 2026" data-winner="Jean Christzabeth Yusevender" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-057_jean-christzabeth-yusevender_2026-05-24T17-24-03_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-057" data-name="Pitas" data-sub="KDCA Pitas · 2026" data-winner="Jean Christzabeth Yusevender" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pitas_jean-christzabeth-yusevender_2026-05-27T17-02-31.png">
                 <circle cx="273" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="273" y1="57" x2="281.2" y2="36.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="281.2" cy="36.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-057_jean-christzabeth-yusevender_2026-05-24T17-24-03_clean.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pitas_jean-christzabeth-yusevender_2026-05-27T17-02-31.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-058" data-name="Kota Marudu" data-sub="KDCA Kota Marudu · 2026" data-winner="Aelvereny Vahidin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-058_aelvereny-vahidin_2026-05-24T16-44-04_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-058" data-name="Kota Marudu" data-sub="KDCA Kota Marudu · 2026" data-winner="Aelvereny Vahidin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-marudu_aelvereny-vahidin_2026-05-27T16-47-55.png">
                 <circle cx="267" cy="59" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="267" y1="59" x2="266.7" y2="37.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="266.7" cy="37.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-058_aelvereny-vahidin_2026-05-24T16-44-04_clean.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-marudu_aelvereny-vahidin_2026-05-27T16-47-55.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-059" data-name="Matunggong" data-sub="KDCA Matunggong · 2026" data-winner="Criszelbellkah Lorris" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-059_criszelbellkah-lorris_2026-05-24T17-09-39_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-059" data-name="Matunggong" data-sub="KDCA Matunggong · 2026" data-winner="Criszelbellkah Lorris" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/matunggong_criszelbellkah-lorris_2026-05-27T16-49-48.png">
                 <circle cx="270" cy="55" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="270" y1="55" x2="273.6" y2="32.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="273.6" cy="32.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-059_criszelbellkah-lorris_2026-05-24T17-09-39_clean.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/matunggong_criszelbellkah-lorris_2026-05-27T16-49-48.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-036" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Liane Melve Grace Lias" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-036_liane-melve-grace-lias_2026-05-24T15-54-08_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-036" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Liane Melve Grace Lias" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-kinabalu_liane-melve-grace-lias_2026-05-27T16-47-36.png">
                 <circle cx="252" cy="69" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="252" y1="69" x2="230.3" y2="64.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="230.3" cy="64.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-036_liane-melve-grace-lias_2026-05-24T15-54-08_clean.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-kinabalu_liane-melve-grace-lias_2026-05-27T16-47-36.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-037" data-name="Tanjung Aru" data-sub="KDCA Tanjung Aru · 2026" data-winner="Joyce Nia David" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-037_joyce-nia-david_2026-05-23T12-42-11_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-037" data-name="Tanjung Aru" data-sub="KDCA Tanjung Aru · 2026" data-winner="Joyce Nia David" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tanjung-aru_joyce-nia-david_2026-05-27T17-04-57.png">
                 <circle cx="252" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="252" y1="72" x2="225.1" y2="71.5" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="225.1" cy="71.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.1" cy="71.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-037_joyce-nia-david_2026-05-23T12-42-11_clean.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tanjung-aru_joyce-nia-david_2026-05-27T17-04-57.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.1" cy="71.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-038" data-name="Inanam" data-sub="KDCA Inanam · 2026" data-winner="Essmerrellda Cafry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-038_essmerrellda-cafry_2026-05-24T15-41-06_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-038" data-name="Inanam" data-sub="KDCA Inanam · 2026" data-winner="Essmerrellda Cafry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/inanam_essmerrellda-cafry_2026-05-27T16-43-31.png">
                 <circle cx="254" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="254" y1="66" x2="234.1" y2="57.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.1" cy="57.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-038_essmerrellda-cafry_2026-05-24T15-41-06_clean.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/inanam_essmerrellda-cafry_2026-05-27T16-43-31.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-039" data-name="Karambunai" data-sub="KDCA Karambunai · 2026" data-winner="Natalie Ally Hepeni" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-039_natalie-ally-hepeni_2026-05-24T15-48-43_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-039" data-name="Karambunai" data-sub="KDCA Karambunai · 2026" data-winner="Natalie Ally Hepeni" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/karambunai_natalie-ally-hepeni_2026-05-27T16-45-04.png">
                 <circle cx="256" cy="64" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="64" x2="238.3" y2="49.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="238.3" cy="49.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-039_natalie-ally-hepeni_2026-05-24T15-48-43_clean.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/karambunai_natalie-ally-hepeni_2026-05-27T16-45-04.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-040" data-name="KDCA Bandaraya" data-sub="KDCA KDCA Bandaraya · 2026" data-winner="Felecity Chen Sing Yee" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-040_felecity-chen-sing-yee_2026-05-24T15-59-30_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-040" data-name="KDCA Bandaraya" data-sub="KDCA KDCA Bandaraya · 2026" data-winner="Felecity Chen Sing Yee" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-bandaraya_felecity-chen-sing-yee_2026-05-27T16-45-34.png">
                 <circle cx="251" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="68" x2="225.7" y2="57.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.7" cy="57.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-040_felecity-chen-sing-yee_2026-05-24T15-59-30_clean.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-bandaraya_felecity-chen-sing-yee_2026-05-27T16-45-34.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-041" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Gadrette Gregory" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-041_gadrette-gregory_2026-05-23T14-47-12_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-041" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Gadrette Gregory" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/penampang_gadrette-gregory_2026-05-27T17-01-12.png">
                 <circle cx="256" cy="71" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="71" x2="239.2" y2="64" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="239.2" cy="64" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.2" cy="64" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-041_gadrette-gregory_2026-05-23T14-47-12_clean.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/penampang_gadrette-gregory_2026-05-27T17-01-12.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.2" cy="64" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-042" data-name="Kapayan" data-sub="KDCA Kapayan · 2026" data-winner="Viviyana Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-042_viviyana-jenny_2026-05-23T15-52-16_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-042" data-name="Kapayan" data-sub="KDCA Kapayan · 2026" data-winner="Viviyana Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kapayan_viviyana-jenny_2026-05-27T16-44-41.png">
                 <circle cx="257" cy="73" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="257" y1="73" x2="237.7" y2="72.4" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="237.7" cy="72.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="237.7" cy="72.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-042_viviyana-jenny_2026-05-23T15-52-16_clean.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kapayan_viviyana-jenny_2026-05-27T16-44-41.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="237.7" cy="72.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-043" data-name="Putatan" data-sub="KDCA Putatan · 2026" data-winner="Amber Weysha Walter John" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-043_amber-weysha-walter-john_2026-05-24T17-47-18_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-043" data-name="Putatan" data-sub="KDCA Putatan · 2026" data-winner="Amber Weysha Walter John" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/putatan_amber-weysha-walter-john_2026-05-27T17-02-46.png">
                 <circle cx="253" cy="75" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="253" y1="75" x2="231" y2="77.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="231" cy="77.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-043_amber-weysha-walter-john_2026-05-24T17-47-18_clean.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/putatan_amber-weysha-walter-john_2026-05-27T17-02-46.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-044" data-name="Tuaran" data-sub="KDCA Tuaran · 2026" data-winner="Juje Elor Francis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-044_juje-elor-francis_2026-05-24T16-27-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-044" data-name="Tuaran" data-sub="KDCA Tuaran · 2026" data-winner="Juje Elor Francis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tuaran_juje-elor-francis_2026-05-27T17-06-14.png">
                 <circle cx="256" cy="62" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="62" x2="241.8" y2="42" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="241.8" cy="42" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-044_juje-elor-francis_2026-05-24T16-27-17_clean.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tuaran_juje-elor-francis_2026-05-27T17-06-14.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-045" data-name="Tamparuli" data-sub="KDCA Tamparuli · 2026" data-winner="Evyanarrey Larry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-045_evyanarrey-larry_2026-05-24T16-17-34_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-045" data-name="Tamparuli" data-sub="KDCA Tamparuli · 2026" data-winner="Evyanarrey Larry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tamparuli_evyanarrey-larry_2026-05-27T17-04-44.png">
                 <circle cx="263" cy="60" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="60" x2="257.7" y2="38.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="257.7" cy="38.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-045_evyanarrey-larry_2026-05-24T16-17-34_clean.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tamparuli_evyanarrey-larry_2026-05-27T17-04-44.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-060" data-name="Kota Belud" data-sub="KDCA Kota Belud · 2026" data-winner="Althea Tan Pin Yan" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-060_althea-tan-pin-yan_2026-05-23T15-25-55_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-060" data-name="Kota Belud" data-sub="KDCA Kota Belud · 2026" data-winner="Althea Tan Pin Yan" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-belud_althea-tan-pin-yan_2026-05-27T16-47-18.png">
                 <circle cx="259" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="259" y1="57" x2="249.2" y2="37.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="249.2" cy="37.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.2" cy="37.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-060_althea-tan-pin-yan_2026-05-23T15-25-55_clean.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-belud_althea-tan-pin-yan_2026-05-27T16-47-18.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.2" cy="37.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-020" data-name="Papar" data-sub="KDCA Papar · 2026" data-winner="Gelvia Vanessa Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-020_gelvia-vanessa-jenny_2026-05-24T17-17-31_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-020" data-name="Papar" data-sub="KDCA Papar · 2026" data-winner="Gelvia Vanessa Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/papar_gelvia-vanessa-jenny_2026-05-27T17-00-57.png">
                 <circle cx="251" cy="77" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="77" x2="224.5" y2="83.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="224.5" cy="83.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-020_gelvia-vanessa-jenny_2026-05-24T17-17-31_clean.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/papar_gelvia-vanessa-jenny_2026-05-27T17-00-57.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-072" data-name="Beaufort" data-sub="KDCA Beaufort · 2026" data-winner="Fedelia Viviana Venchin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-072_fedelia-viviana-venchin_2026-05-24T15-10-24_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-072" data-name="Beaufort" data-sub="KDCA Beaufort · 2026" data-winner="Fedelia Viviana Venchin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beaufort_fedelia-viviana-venchin_2026-05-27T16-42-40.png">
                 <circle cx="251" cy="82" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="82" x2="235.3" y2="94.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="235.3" cy="94.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-072_fedelia-viviana-venchin_2026-05-24T15-10-24_clean.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beaufort_fedelia-viviana-venchin_2026-05-27T16-42-40.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-073" data-name="Membakut" data-sub="KDCA Membakut · 2026" data-winner="Dorna Mayra Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-073_dorna-mayra-michael_2026-05-23T14-57-33_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-073" data-name="Membakut" data-sub="KDCA Membakut · 2026" data-winner="Dorna Mayra Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/membakut_dorna-mayra-michael_2026-05-27T16-50-03.png">
                 <circle cx="251" cy="79" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="79" x2="232.5" y2="86.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="232.5" cy="86.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="232.5" cy="86.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-073_dorna-mayra-michael_2026-05-23T14-57-33_clean.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/membakut_dorna-mayra-michael_2026-05-27T16-50-03.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="232.5" cy="86.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-074" data-name="Kuala Penyu" data-sub="KDCA Kuala Penyu · 2026" data-winner="Lorna Breetney Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-074_lorna-breetney-johnny_2026-05-24T16-50-52_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-074" data-name="Kuala Penyu" data-sub="KDCA Kuala Penyu · 2026" data-winner="Lorna Breetney Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kuala-penyu_lorna-breetney-johnny_2026-05-27T16-48-41.png">
                 <circle cx="249" cy="85" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="249" y1="85" x2="226.7" y2="100.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.7" cy="100.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-074_lorna-breetney-johnny_2026-05-24T16-50-52_clean.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kuala-penyu_lorna-breetney-johnny_2026-05-27T16-48-41.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-075" data-name="Menumbok" data-sub="KDCA Menumbok · 2026" data-winner="Hyzlensiska Verron Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-075_hyzlensiska-verron-johnny_2026-05-24T16-52-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-075" data-name="Menumbok" data-sub="KDCA Menumbok · 2026" data-winner="Hyzlensiska Verron Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/menumbok_hyzlensiska-verron-johnny_2026-05-27T16-50-29.png">
                 <circle cx="248" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="248" y1="83" x2="226.3" y2="92" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.3" cy="92" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-075_hyzlensiska-verron-johnny_2026-05-24T16-52-17_clean.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/menumbok_hyzlensiska-verron-johnny_2026-05-27T16-50-29.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-076" data-name="Sipitang" data-sub="KDCA Sipitang · 2026" data-winner="Hilda Jaynissa Godwin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-076_hilda-jaynissa-godwin_2026-05-23T14-28-24_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-076" data-name="Sipitang" data-sub="KDCA Sipitang · 2026" data-winner="Hilda Jaynissa Godwin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sipitang_hilda-jaynissa-godwin_2026-05-27T17-03-45.png">
                 <circle cx="249" cy="88" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="249" y1="88" x2="234.7" y2="103.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="234.7" cy="103.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.7" cy="103.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-076_hilda-jaynissa-godwin_2026-05-23T14-28-24_clean.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sipitang_hilda-jaynissa-godwin_2026-05-27T17-03-45.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.7" cy="103.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-035_christebell-masius_2026-05-24T17-56-20_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/ranau_christebell-masius_2026-05-27T17-03-04.png">
                 <circle cx="264" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="66" x2="255.1" y2="46.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="255.1" cy="46.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-035_christebell-masius_2026-05-24T17-56-20_clean.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/ranau_christebell-masius_2026-05-27T17-03-04.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-046" data-name="Kiulu" data-sub="KDCA Kiulu · 2026" data-winner="Catsween Su Sun Ping" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-046_catsween-su-sun-ping_2026-05-24T16-28-38_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-046" data-name="Kiulu" data-sub="KDCA Kiulu · 2026" data-winner="Catsween Su Sun Ping" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kiulu_catsween-su-sun-ping_2026-05-27T16-47-02.png">
                 <circle cx="260" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="260" y1="68" x2="244.3" y2="56.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.3" cy="56.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-046_catsween-su-sun-ping_2026-05-24T16-28-38_clean.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kiulu_catsween-su-sun-ping_2026-05-27T16-47-02.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-047" data-name="Keningau" data-sub="KDCA Keningau · 2026" data-winner="Edreen Lynn Edward" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-047_edreen-lynn-edward_2026-05-24T15-19-09_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-047" data-name="Keningau" data-sub="KDCA Keningau · 2026" data-winner="Edreen Lynn Edward" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/keningau_edreen-lynn-edward_2026-05-27T16-46-30.png">
                 <circle cx="260" cy="79" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="260" y1="79" x2="244.1" y2="90.9" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.1" cy="90.9" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-047_edreen-lynn-edward_2026-05-24T15-19-09_clean.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/keningau_edreen-lynn-edward_2026-05-27T16-46-30.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-048" data-name="Bingkor" data-sub="KDCA Bingkor · 2026" data-winner="Alysheron Maunsiong" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-048_alysheron-maunsiong_2026-05-24T15-22-59_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-048" data-name="Bingkor" data-sub="KDCA Bingkor · 2026" data-winner="Alysheron Maunsiong" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/bingkor_alysheron-maunsiong_2026-05-27T16-43-09.png">
                 <circle cx="263" cy="81" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="81" x2="256.7" y2="99.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.7" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-048_alysheron-maunsiong_2026-05-24T15-22-59_clean.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/bingkor_alysheron-maunsiong_2026-05-27T16-43-09.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-049" data-name="Tambunan" data-sub="KDCA Tambunan · 2026" data-winner="Natalia Jinui" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-049_natalia-jinui_2026-05-24T17-42-01_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-049" data-name="Tambunan" data-sub="KDCA Tambunan · 2026" data-winner="Natalia Jinui" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tambunan_natalia-jinui_2026-05-27T17-04-30.png">
                 <circle cx="259" cy="74" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="259" y1="74" x2="239.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-049_natalia-jinui_2026-05-24T17-42-01_clean.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tambunan_natalia-jinui_2026-05-27T17-04-30.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-050" data-name="Tenom" data-sub="KDCA Tenom · 2026" data-winner="Radila Ifa Yanie" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-050_radila-ifa-yanie_2026-05-24T17-33-51_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-050" data-name="Tenom" data-sub="KDCA Tenom · 2026" data-winner="Radila Ifa Yanie" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tenom_radila-ifa-yanie_2026-05-27T17-05-40.png">
                 <circle cx="258" cy="84" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="258" y1="84" x2="242.2" y2="99.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.2" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-050_radila-ifa-yanie_2026-05-24T17-33-51_clean.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tenom_radila-ifa-yanie_2026-05-27T17-05-40.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-051" data-name="Kemabong" data-sub="KDCA Kemabong · 2026" data-winner="Venica Tuboh" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-051_venica-tuboh_2026-05-24T16-05-57_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-051" data-name="Kemabong" data-sub="KDCA Kemabong · 2026" data-winner="Venica Tuboh" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kemabong_venica-tuboh_2026-05-27T16-46-13.png">
                 <circle cx="257" cy="87" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="257" y1="87" x2="242.7" y2="108.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.7" cy="108.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-051_venica-tuboh_2026-05-24T16-05-57_clean.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kemabong_venica-tuboh_2026-05-27T16-46-13.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-052" data-name="Sook" data-sub="KDCA Sook · 2026" data-winner="Myra Evana Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-052_myra-evana-robert_2026-05-24T14-57-47_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-052" data-name="Sook" data-sub="KDCA Sook · 2026" data-winner="Myra Evana Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sook_myra-evana-robert_2026-05-27T17-04-03.png">
                 <circle cx="261" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="261" y1="83" x2="249.4" y2="103.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.4" cy="103.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-052_myra-evana-robert_2026-05-24T14-57-47_clean.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sook_myra-evana-robert_2026-05-27T17-04-03.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-053" data-name="Nabawan" data-sub="KDCA Nabawan · 2026" data-winner="Sahira Samson" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-053_sahira-samson_2026-05-23T14-52-32_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-053" data-name="Nabawan" data-sub="KDCA Nabawan · 2026" data-winner="Sahira Samson" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/nabawan_sahira-samson_2026-05-27T16-50-43.png">
                 <circle cx="263" cy="89" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="89" x2="256.3" y2="108.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="256.3" cy="108.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.3" cy="108.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-053_sahira-samson_2026-05-23T14-52-32_clean.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/nabawan_sahira-samson_2026-05-27T16-50-43.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.3" cy="108.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-054" data-name="Pagalungan" data-sub="KDCA Pagalungan · 2026" data-winner="Kerishine Danil" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-054_kerishine-danil_2026-05-23T14-52-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-054" data-name="Pagalungan" data-sub="KDCA Pagalungan · 2026" data-winner="Kerishine Danil" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pagalungan_kerishine-danil_2026-05-27T16-50-58.png">
                 <circle cx="264" cy="92" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="92" x2="261.9" y2="115.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="261.9" cy="115.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="261.9" cy="115.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-054_kerishine-danil_2026-05-23T14-52-17_clean.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pagalungan_kerishine-danil_2026-05-27T16-50-58.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-034_ceelecia-reeka-mosungin_2026-05-24T17-59-06_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png">
                 <circle cx="287" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="287" y1="57" x2="300.6" y2="46.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-034_ceelecia-reeka-mosungin_2026-05-24T17-59-06_clean.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-015" data-name="Beluran" data-sub="KDCA Beluran · 2026" data-winner="Dyann Dharlla Dominic" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-015_dyann-dharlla-dominic_2026-05-24T15-16-14_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-015" data-name="Beluran" data-sub="KDCA Beluran · 2026" data-winner="Dyann Dharlla Dominic" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beluran_dyann-dharlla-dominic_2026-05-27T16-42-55.png">
                 <circle cx="281" cy="62" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="281" y1="62" x2="294.2" y2="51.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="294.2" cy="51.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-015_dyann-dharlla-dominic_2026-05-24T15-16-14_clean.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beluran_dyann-dharlla-dominic_2026-05-27T16-42-55.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-061" data-name="Paitan" data-sub="KDCA Paitan · 2026" data-winner="Candycyci Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-061_candycyci-liakim_2026-05-24T17-14-06_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-061" data-name="Paitan" data-sub="KDCA Paitan · 2026" data-winner="Candycyci Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/paitan_candycyci-liakim_2026-05-27T16-51-10.png">
                 <circle cx="280" cy="55" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="280" y1="55" x2="290.1" y2="41" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="290.1" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-061_candycyci-liakim_2026-05-24T17-14-06_clean.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/paitan_candycyci-liakim_2026-05-27T16-51-10.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-062" data-name="Telupid" data-sub="KDCA Telupid · 2026" data-winner="Raraa Cyra Eva Bella Stephen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-062_raraa-cyra-eva-bella-stephen_2026-05-24T17-36-11_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-062" data-name="Telupid" data-sub="KDCA Telupid · 2026" data-winner="Raraa Cyra Eva Bella Stephen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/telupid_raraa-cyra-eva-bella-stephen_2026-05-27T17-05-27.png">
                 <circle cx="277" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="277" y1="68" x2="292.2" y2="60.4" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292.2" cy="60.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-062_raraa-cyra-eva-bella-stephen_2026-05-24T17-36-11_clean.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/telupid_raraa-cyra-eva-bella-stephen_2026-05-27T17-05-27.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-064" data-name="Kinabatangan" data-sub="KDCA Kinabatangan · 2026" data-winner="Vrenda Joan Taji" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-064_vrenda-joan-taji_2026-05-24T16-13-11_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-064" data-name="Kinabatangan" data-sub="KDCA Kinabatangan · 2026" data-winner="Vrenda Joan Taji" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kinabatangan_vrenda-joan-taji_2026-05-27T16-46-49.png">
                 <circle cx="288" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="288" y1="68" x2="307" y2="63.5" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="307" cy="63.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-064_vrenda-joan-taji_2026-05-24T16-13-11_clean.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kinabatangan_vrenda-joan-taji_2026-05-27T16-46-49.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-065" data-name="Sukau" data-sub="KDCA Sukau · 2026" data-winner="Ally Denis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-065_ally-denis_2026-05-24T16-14-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-065" data-name="Sukau" data-sub="KDCA Sukau · 2026" data-winner="Ally Denis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sukau_ally-denis_2026-05-27T17-04-16.png">
                 <circle cx="291" cy="73" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="291" y1="73" x2="310.4" y2="72.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="310.4" cy="72.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-065_ally-denis_2026-05-24T16-14-17_clean.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sukau_ally-denis_2026-05-27T17-04-16.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-078_anne-theresse-justin-sentian_2026-05-24T15-35-39_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tongod_anne-theresse-justin-sentian_2026-05-27T17-05-56.png">
                 <circle cx="281" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="281" y1="72" x2="292" y2="82" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-078_anne-theresse-justin-sentian_2026-05-24T15-35-39_clean.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tongod_anne-theresse-justin-sentian_2026-05-27T17-05-56.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-068_caesyzizi-liakim_2026-05-23T15-02-29_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/lahad-datu_caesyzizi-liakim_2026-05-27T16-49-31.png">
                 <circle cx="292" cy="80" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="292" y1="80" x2="311.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="311.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="311.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-068_caesyzizi-liakim_2026-05-23T15-02-29_clean.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/lahad-datu_caesyzizi-liakim_2026-05-27T16-49-31.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="311.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-069" data-name="Tungku" data-sub="KDCA Tungku · 2026" data-winner="Mary-An P. Calica" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-069_mary-an-p-calica_2026-05-24T17-31-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-069" data-name="Tungku" data-sub="KDCA Tungku · 2026" data-winner="Mary-An P. Calica" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tungku_mary-an-p-calica_2026-05-27T17-08-29.png">
                 <circle cx="294" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="294" y1="83" x2="314.1" y2="88.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="314.1" cy="88.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-069_mary-an-p-calica_2026-05-24T17-31-28_clean.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tungku_mary-an-p-calica_2026-05-27T17-08-29.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-070" data-name="Kunak" data-sub="KDCA Kunak · 2026" data-winner="Rachel Justin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-070_rachel-justin_2026-05-24T17-07-49_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-070" data-name="Kunak" data-sub="KDCA Kunak · 2026" data-winner="Rachel Justin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kunak_rachel-justin_2026-05-27T16-49-13.png">
                 <circle cx="296" cy="86" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="296" y1="86" x2="317.8" y2="96.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="317.8" cy="96.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-070_rachel-justin_2026-05-24T17-07-49_clean.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kunak_rachel-justin_2026-05-27T16-49-13.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-071" data-name="Semporna" data-sub="KDCA Semporna · 2026" data-winner="Adylee Arisen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-071_adylee-arisen_2026-05-24T18-01-59_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-071" data-name="Semporna" data-sub="KDCA Semporna · 2026" data-winner="Adylee Arisen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/semporna_adylee-arisen_2026-05-27T17-03-33.png">
                 <circle cx="298" cy="89" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="298" y1="89" x2="321.8" y2="103.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="321.8" cy="103.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-071_adylee-arisen_2026-05-24T18-01-59_clean.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/semporna_adylee-arisen_2026-05-27T17-03-33.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-067" data-name="Kalabakan" data-sub="KDCA Kalabakan · 2026" data-winner="Christine Dionysius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-067_christine-dionysius_2026-05-23T08-59-38_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-067" data-name="Kalabakan" data-sub="KDCA Kalabakan · 2026" data-winner="Christine Dionysius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kalabakan_christine-dionysius_2026-05-27T16-44-05.png">
                 <circle cx="290" cy="85" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="290" y1="85" x2="308.2" y2="95.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="308.2" cy="95.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="308.2" cy="95.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-067_christine-dionysius_2026-05-23T08-59-38_clean.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kalabakan_christine-dionysius_2026-05-27T16-44-05.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="308.2" cy="95.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1402,453 +1402,453 @@ export function mountLocatorMap(el) {
               <text x="0" y="-5" text-anchor="middle" font-size="3" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
 
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-055" data-name="Kudat" data-sub="KDCA Kudat · 2026" data-winner="Feyrashandy Hanlin Hanis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-055_feyrashandy-hanlin-hanis_2026-05-24T16-57-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-055" data-name="Kudat" data-sub="KDCA Kudat · 2026" data-winner="Feyrashandy Hanlin Hanis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kudat_feyrashandy-hanlin-hanis_2026-05-27T16-48-56.png">
                 <circle cx="264" cy="52" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="52" x2="262" y2="30.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="262" cy="30.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-055_feyrashandy-hanlin-hanis_2026-05-24T16-57-28_clean.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kudat_feyrashandy-hanlin-hanis_2026-05-27T16-48-56.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-056" data-name="Banggi" data-sub="KDCA Banggi · 2026" data-winner="Lora Derlina Lisa Jusley" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-056_lora-derlina-lisa-jusley_2026-05-24T14-54-09_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-056" data-name="Banggi" data-sub="KDCA Banggi · 2026" data-winner="Lora Derlina Lisa Jusley" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/banggi_lora-derlina-lisa-jusley_2026-05-27T16-42-23.png">
                 <circle cx="261" cy="49" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="261" y1="49" x2="254.3" y2="27" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="254.3" cy="27" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-056_lora-derlina-lisa-jusley_2026-05-24T14-54-09_clean.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/banggi_lora-derlina-lisa-jusley_2026-05-27T16-42-23.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-057" data-name="Pitas" data-sub="KDCA Pitas · 2026" data-winner="Jean Christzabeth Yusevender" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-057_jean-christzabeth-yusevender_2026-05-24T17-24-03_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-057" data-name="Pitas" data-sub="KDCA Pitas · 2026" data-winner="Jean Christzabeth Yusevender" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pitas_jean-christzabeth-yusevender_2026-05-27T17-02-31.png">
                 <circle cx="273" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="273" y1="57" x2="281.2" y2="36.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="281.2" cy="36.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-057_jean-christzabeth-yusevender_2026-05-24T17-24-03_clean.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pitas_jean-christzabeth-yusevender_2026-05-27T17-02-31.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-058" data-name="Kota Marudu" data-sub="KDCA Kota Marudu · 2026" data-winner="Aelvereny Vahidin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-058_aelvereny-vahidin_2026-05-24T16-44-04_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-058" data-name="Kota Marudu" data-sub="KDCA Kota Marudu · 2026" data-winner="Aelvereny Vahidin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-marudu_aelvereny-vahidin_2026-05-27T16-47-55.png">
                 <circle cx="267" cy="59" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="267" y1="59" x2="266.7" y2="37.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="266.7" cy="37.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-058_aelvereny-vahidin_2026-05-24T16-44-04_clean.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-marudu_aelvereny-vahidin_2026-05-27T16-47-55.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-059" data-name="Matunggong" data-sub="KDCA Matunggong · 2026" data-winner="Criszelbellkah Lorris" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-059_criszelbellkah-lorris_2026-05-24T17-09-39_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-059" data-name="Matunggong" data-sub="KDCA Matunggong · 2026" data-winner="Criszelbellkah Lorris" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/matunggong_criszelbellkah-lorris_2026-05-27T16-49-48.png">
                 <circle cx="270" cy="55" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="270" y1="55" x2="273.6" y2="32.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="273.6" cy="32.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-059_criszelbellkah-lorris_2026-05-24T17-09-39_clean.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/matunggong_criszelbellkah-lorris_2026-05-27T16-49-48.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-036" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Liane Melve Grace Lias" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-036_liane-melve-grace-lias_2026-05-24T15-54-08_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-036" data-name="Kota Kinabalu" data-sub="KDCA Kota Kinabalu · 2026" data-winner="Liane Melve Grace Lias" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-kinabalu_liane-melve-grace-lias_2026-05-27T16-47-36.png">
                 <circle cx="252" cy="69" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="252" y1="69" x2="230.3" y2="64.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="230.3" cy="64.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-036_liane-melve-grace-lias_2026-05-24T15-54-08_clean.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-kinabalu_liane-melve-grace-lias_2026-05-27T16-47-36.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-037" data-name="Tanjung Aru" data-sub="KDCA Tanjung Aru · 2026" data-winner="Joyce Nia David" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-037_joyce-nia-david_2026-05-23T12-42-11_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-037" data-name="Tanjung Aru" data-sub="KDCA Tanjung Aru · 2026" data-winner="Joyce Nia David" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tanjung-aru_joyce-nia-david_2026-05-27T17-04-57.png">
                 <circle cx="252" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="252" y1="72" x2="225.1" y2="71.5" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="225.1" cy="71.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.1" cy="71.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-037_joyce-nia-david_2026-05-23T12-42-11_clean.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tanjung-aru_joyce-nia-david_2026-05-27T17-04-57.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.1" cy="71.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-038" data-name="Inanam" data-sub="KDCA Inanam · 2026" data-winner="Essmerrellda Cafry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-038_essmerrellda-cafry_2026-05-24T15-41-06_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-038" data-name="Inanam" data-sub="KDCA Inanam · 2026" data-winner="Essmerrellda Cafry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/inanam_essmerrellda-cafry_2026-05-27T16-43-31.png">
                 <circle cx="254" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="254" y1="66" x2="234.1" y2="57.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.1" cy="57.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-038_essmerrellda-cafry_2026-05-24T15-41-06_clean.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/inanam_essmerrellda-cafry_2026-05-27T16-43-31.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-039" data-name="Karambunai" data-sub="KDCA Karambunai · 2026" data-winner="Natalie Ally Hepeni" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-039_natalie-ally-hepeni_2026-05-24T15-48-43_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-039" data-name="Karambunai" data-sub="KDCA Karambunai · 2026" data-winner="Natalie Ally Hepeni" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/karambunai_natalie-ally-hepeni_2026-05-27T16-45-04.png">
                 <circle cx="256" cy="64" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="64" x2="238.3" y2="49.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="238.3" cy="49.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-039_natalie-ally-hepeni_2026-05-24T15-48-43_clean.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/karambunai_natalie-ally-hepeni_2026-05-27T16-45-04.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-040" data-name="KDCA Bandaraya" data-sub="KDCA KDCA Bandaraya · 2026" data-winner="Felecity Chen Sing Yee" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-040_felecity-chen-sing-yee_2026-05-24T15-59-30_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-040" data-name="KDCA Bandaraya" data-sub="KDCA KDCA Bandaraya · 2026" data-winner="Felecity Chen Sing Yee" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-bandaraya_felecity-chen-sing-yee_2026-05-27T16-45-34.png">
                 <circle cx="251" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="68" x2="225.7" y2="57.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.7" cy="57.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-040_felecity-chen-sing-yee_2026-05-24T15-59-30_clean.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-bandaraya_felecity-chen-sing-yee_2026-05-27T16-45-34.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-041" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Gadrette Gregory" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-041_gadrette-gregory_2026-05-23T14-47-12_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-041" data-name="Penampang" data-sub="KDCA Penampang · 2026" data-winner="Gadrette Gregory" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/penampang_gadrette-gregory_2026-05-27T17-01-12.png">
                 <circle cx="256" cy="71" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="71" x2="239.2" y2="64" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="239.2" cy="64" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.2" cy="64" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-041_gadrette-gregory_2026-05-23T14-47-12_clean.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/penampang_gadrette-gregory_2026-05-27T17-01-12.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.2" cy="64" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-042" data-name="Kapayan" data-sub="KDCA Kapayan · 2026" data-winner="Viviyana Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-042_viviyana-jenny_2026-05-23T15-52-16_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-042" data-name="Kapayan" data-sub="KDCA Kapayan · 2026" data-winner="Viviyana Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kapayan_viviyana-jenny_2026-05-27T16-44-41.png">
                 <circle cx="257" cy="73" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="257" y1="73" x2="237.7" y2="72.4" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="237.7" cy="72.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="237.7" cy="72.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-042_viviyana-jenny_2026-05-23T15-52-16_clean.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kapayan_viviyana-jenny_2026-05-27T16-44-41.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="237.7" cy="72.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-043" data-name="Putatan" data-sub="KDCA Putatan · 2026" data-winner="Amber Weysha Walter John" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-043_amber-weysha-walter-john_2026-05-24T17-47-18_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-043" data-name="Putatan" data-sub="KDCA Putatan · 2026" data-winner="Amber Weysha Walter John" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/putatan_amber-weysha-walter-john_2026-05-27T17-02-46.png">
                 <circle cx="253" cy="75" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="253" y1="75" x2="231" y2="77.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="231" cy="77.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-043_amber-weysha-walter-john_2026-05-24T17-47-18_clean.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/putatan_amber-weysha-walter-john_2026-05-27T17-02-46.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-044" data-name="Tuaran" data-sub="KDCA Tuaran · 2026" data-winner="Juje Elor Francis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-044_juje-elor-francis_2026-05-24T16-27-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-044" data-name="Tuaran" data-sub="KDCA Tuaran · 2026" data-winner="Juje Elor Francis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tuaran_juje-elor-francis_2026-05-27T17-06-14.png">
                 <circle cx="256" cy="62" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="256" y1="62" x2="241.8" y2="42" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="241.8" cy="42" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-044_juje-elor-francis_2026-05-24T16-27-17_clean.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tuaran_juje-elor-francis_2026-05-27T17-06-14.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-045" data-name="Tamparuli" data-sub="KDCA Tamparuli · 2026" data-winner="Evyanarrey Larry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-045_evyanarrey-larry_2026-05-24T16-17-34_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-045" data-name="Tamparuli" data-sub="KDCA Tamparuli · 2026" data-winner="Evyanarrey Larry" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tamparuli_evyanarrey-larry_2026-05-27T17-04-44.png">
                 <circle cx="263" cy="60" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="60" x2="257.7" y2="38.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="257.7" cy="38.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-045_evyanarrey-larry_2026-05-24T16-17-34_clean.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tamparuli_evyanarrey-larry_2026-05-27T17-04-44.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-060" data-name="Kota Belud" data-sub="KDCA Kota Belud · 2026" data-winner="Althea Tan Pin Yan" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-060_althea-tan-pin-yan_2026-05-23T15-25-55_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-060" data-name="Kota Belud" data-sub="KDCA Kota Belud · 2026" data-winner="Althea Tan Pin Yan" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-belud_althea-tan-pin-yan_2026-05-27T16-47-18.png">
                 <circle cx="259" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="259" y1="57" x2="249.2" y2="37.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="249.2" cy="37.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.2" cy="37.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-060_althea-tan-pin-yan_2026-05-23T15-25-55_clean.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-belud_althea-tan-pin-yan_2026-05-27T16-47-18.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.2" cy="37.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-020" data-name="Papar" data-sub="KDCA Papar · 2026" data-winner="Gelvia Vanessa Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-020_gelvia-vanessa-jenny_2026-05-24T17-17-31_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-020" data-name="Papar" data-sub="KDCA Papar · 2026" data-winner="Gelvia Vanessa Jenny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/papar_gelvia-vanessa-jenny_2026-05-27T17-00-57.png">
                 <circle cx="251" cy="77" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="77" x2="224.5" y2="83.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="224.5" cy="83.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-020_gelvia-vanessa-jenny_2026-05-24T17-17-31_clean.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/papar_gelvia-vanessa-jenny_2026-05-27T17-00-57.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-072" data-name="Beaufort" data-sub="KDCA Beaufort · 2026" data-winner="Fedelia Viviana Venchin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-072_fedelia-viviana-venchin_2026-05-24T15-10-24_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-072" data-name="Beaufort" data-sub="KDCA Beaufort · 2026" data-winner="Fedelia Viviana Venchin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beaufort_fedelia-viviana-venchin_2026-05-27T16-42-40.png">
                 <circle cx="251" cy="82" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="82" x2="235.3" y2="94.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="235.3" cy="94.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-072_fedelia-viviana-venchin_2026-05-24T15-10-24_clean.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beaufort_fedelia-viviana-venchin_2026-05-27T16-42-40.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-073" data-name="Membakut" data-sub="KDCA Membakut · 2026" data-winner="Dorna Mayra Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-073_dorna-mayra-michael_2026-05-23T14-57-33_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-073" data-name="Membakut" data-sub="KDCA Membakut · 2026" data-winner="Dorna Mayra Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/membakut_dorna-mayra-michael_2026-05-27T16-50-03.png">
                 <circle cx="251" cy="79" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="251" y1="79" x2="232.5" y2="86.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="232.5" cy="86.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="232.5" cy="86.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-073_dorna-mayra-michael_2026-05-23T14-57-33_clean.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/membakut_dorna-mayra-michael_2026-05-27T16-50-03.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="232.5" cy="86.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-074" data-name="Kuala Penyu" data-sub="KDCA Kuala Penyu · 2026" data-winner="Lorna Breetney Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-074_lorna-breetney-johnny_2026-05-24T16-50-52_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-074" data-name="Kuala Penyu" data-sub="KDCA Kuala Penyu · 2026" data-winner="Lorna Breetney Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kuala-penyu_lorna-breetney-johnny_2026-05-27T16-48-41.png">
                 <circle cx="249" cy="85" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="249" y1="85" x2="226.7" y2="100.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.7" cy="100.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-074_lorna-breetney-johnny_2026-05-24T16-50-52_clean.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kuala-penyu_lorna-breetney-johnny_2026-05-27T16-48-41.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-075" data-name="Menumbok" data-sub="KDCA Menumbok · 2026" data-winner="Hyzlensiska Verron Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-075_hyzlensiska-verron-johnny_2026-05-24T16-52-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-075" data-name="Menumbok" data-sub="KDCA Menumbok · 2026" data-winner="Hyzlensiska Verron Johnny" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/menumbok_hyzlensiska-verron-johnny_2026-05-27T16-50-29.png">
                 <circle cx="248" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="248" y1="83" x2="226.3" y2="92" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.3" cy="92" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-075_hyzlensiska-verron-johnny_2026-05-24T16-52-17_clean.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/menumbok_hyzlensiska-verron-johnny_2026-05-27T16-50-29.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-076" data-name="Sipitang" data-sub="KDCA Sipitang · 2026" data-winner="Hilda Jaynissa Godwin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-076_hilda-jaynissa-godwin_2026-05-23T14-28-24_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-076" data-name="Sipitang" data-sub="KDCA Sipitang · 2026" data-winner="Hilda Jaynissa Godwin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sipitang_hilda-jaynissa-godwin_2026-05-27T17-03-45.png">
                 <circle cx="249" cy="88" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="249" y1="88" x2="234.7" y2="103.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="234.7" cy="103.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.7" cy="103.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-076_hilda-jaynissa-godwin_2026-05-23T14-28-24_clean.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sipitang_hilda-jaynissa-godwin_2026-05-27T17-03-45.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.7" cy="103.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-035_christebell-masius_2026-05-24T17-56-20_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/ranau_christebell-masius_2026-05-27T17-03-04.png">
                 <circle cx="264" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="66" x2="255.1" y2="46.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="255.1" cy="46.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-035_christebell-masius_2026-05-24T17-56-20_clean.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/ranau_christebell-masius_2026-05-27T17-03-04.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-046" data-name="Kiulu" data-sub="KDCA Kiulu · 2026" data-winner="Catsween Su Sun Ping" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-046_catsween-su-sun-ping_2026-05-24T16-28-38_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-046" data-name="Kiulu" data-sub="KDCA Kiulu · 2026" data-winner="Catsween Su Sun Ping" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kiulu_catsween-su-sun-ping_2026-05-27T16-47-02.png">
                 <circle cx="260" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="260" y1="68" x2="244.3" y2="56.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.3" cy="56.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-046_catsween-su-sun-ping_2026-05-24T16-28-38_clean.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kiulu_catsween-su-sun-ping_2026-05-27T16-47-02.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-047" data-name="Keningau" data-sub="KDCA Keningau · 2026" data-winner="Edreen Lynn Edward" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-047_edreen-lynn-edward_2026-05-24T15-19-09_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-047" data-name="Keningau" data-sub="KDCA Keningau · 2026" data-winner="Edreen Lynn Edward" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/keningau_edreen-lynn-edward_2026-05-27T16-46-30.png">
                 <circle cx="260" cy="79" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="260" y1="79" x2="244.1" y2="90.9" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.1" cy="90.9" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-047_edreen-lynn-edward_2026-05-24T15-19-09_clean.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/keningau_edreen-lynn-edward_2026-05-27T16-46-30.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-048" data-name="Bingkor" data-sub="KDCA Bingkor · 2026" data-winner="Alysheron Maunsiong" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-048_alysheron-maunsiong_2026-05-24T15-22-59_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-048" data-name="Bingkor" data-sub="KDCA Bingkor · 2026" data-winner="Alysheron Maunsiong" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/bingkor_alysheron-maunsiong_2026-05-27T16-43-09.png">
                 <circle cx="263" cy="81" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="81" x2="256.7" y2="99.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.7" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-048_alysheron-maunsiong_2026-05-24T15-22-59_clean.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/bingkor_alysheron-maunsiong_2026-05-27T16-43-09.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-049" data-name="Tambunan" data-sub="KDCA Tambunan · 2026" data-winner="Natalia Jinui" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-049_natalia-jinui_2026-05-24T17-42-01_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-049" data-name="Tambunan" data-sub="KDCA Tambunan · 2026" data-winner="Natalia Jinui" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tambunan_natalia-jinui_2026-05-27T17-04-30.png">
                 <circle cx="259" cy="74" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="259" y1="74" x2="239.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-049_natalia-jinui_2026-05-24T17-42-01_clean.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tambunan_natalia-jinui_2026-05-27T17-04-30.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-050" data-name="Tenom" data-sub="KDCA Tenom · 2026" data-winner="Radila Ifa Yanie" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-050_radila-ifa-yanie_2026-05-24T17-33-51_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-050" data-name="Tenom" data-sub="KDCA Tenom · 2026" data-winner="Radila Ifa Yanie" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tenom_radila-ifa-yanie_2026-05-27T17-05-40.png">
                 <circle cx="258" cy="84" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="258" y1="84" x2="242.2" y2="99.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.2" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-050_radila-ifa-yanie_2026-05-24T17-33-51_clean.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tenom_radila-ifa-yanie_2026-05-27T17-05-40.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-051" data-name="Kemabong" data-sub="KDCA Kemabong · 2026" data-winner="Venica Tuboh" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-051_venica-tuboh_2026-05-24T16-05-57_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-051" data-name="Kemabong" data-sub="KDCA Kemabong · 2026" data-winner="Venica Tuboh" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kemabong_venica-tuboh_2026-05-27T16-46-13.png">
                 <circle cx="257" cy="87" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="257" y1="87" x2="242.7" y2="108.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.7" cy="108.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-051_venica-tuboh_2026-05-24T16-05-57_clean.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kemabong_venica-tuboh_2026-05-27T16-46-13.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-052" data-name="Sook" data-sub="KDCA Sook · 2026" data-winner="Myra Evana Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-052_myra-evana-robert_2026-05-24T14-57-47_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-052" data-name="Sook" data-sub="KDCA Sook · 2026" data-winner="Myra Evana Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sook_myra-evana-robert_2026-05-27T17-04-03.png">
                 <circle cx="261" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="261" y1="83" x2="249.4" y2="103.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.4" cy="103.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-052_myra-evana-robert_2026-05-24T14-57-47_clean.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sook_myra-evana-robert_2026-05-27T17-04-03.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-053" data-name="Nabawan" data-sub="KDCA Nabawan · 2026" data-winner="Sahira Samson" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-053_sahira-samson_2026-05-23T14-52-32_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-053" data-name="Nabawan" data-sub="KDCA Nabawan · 2026" data-winner="Sahira Samson" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/nabawan_sahira-samson_2026-05-27T16-50-43.png">
                 <circle cx="263" cy="89" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="263" y1="89" x2="256.3" y2="108.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="256.3" cy="108.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.3" cy="108.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-053_sahira-samson_2026-05-23T14-52-32_clean.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/nabawan_sahira-samson_2026-05-27T16-50-43.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.3" cy="108.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-054" data-name="Pagalungan" data-sub="KDCA Pagalungan · 2026" data-winner="Kerishine Danil" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-054_kerishine-danil_2026-05-23T14-52-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-054" data-name="Pagalungan" data-sub="KDCA Pagalungan · 2026" data-winner="Kerishine Danil" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pagalungan_kerishine-danil_2026-05-27T16-50-58.png">
                 <circle cx="264" cy="92" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="92" x2="261.9" y2="115.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="261.9" cy="115.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="261.9" cy="115.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-054_kerishine-danil_2026-05-23T14-52-17_clean.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pagalungan_kerishine-danil_2026-05-27T16-50-58.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-034_ceelecia-reeka-mosungin_2026-05-24T17-59-06_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png">
                 <circle cx="287" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="287" y1="57" x2="300.6" y2="46.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-034_ceelecia-reeka-mosungin_2026-05-24T17-59-06_clean.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-015" data-name="Beluran" data-sub="KDCA Beluran · 2026" data-winner="Dyann Dharlla Dominic" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-015_dyann-dharlla-dominic_2026-05-24T15-16-14_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-015" data-name="Beluran" data-sub="KDCA Beluran · 2026" data-winner="Dyann Dharlla Dominic" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beluran_dyann-dharlla-dominic_2026-05-27T16-42-55.png">
                 <circle cx="281" cy="62" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="281" y1="62" x2="294.2" y2="51.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="294.2" cy="51.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-015_dyann-dharlla-dominic_2026-05-24T15-16-14_clean.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/beluran_dyann-dharlla-dominic_2026-05-27T16-42-55.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-061" data-name="Paitan" data-sub="KDCA Paitan · 2026" data-winner="Candycyci Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-061_candycyci-liakim_2026-05-24T17-14-06_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-061" data-name="Paitan" data-sub="KDCA Paitan · 2026" data-winner="Candycyci Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/paitan_candycyci-liakim_2026-05-27T16-51-10.png">
                 <circle cx="280" cy="55" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="280" y1="55" x2="290.1" y2="41" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="290.1" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-061_candycyci-liakim_2026-05-24T17-14-06_clean.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/paitan_candycyci-liakim_2026-05-27T16-51-10.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-062" data-name="Telupid" data-sub="KDCA Telupid · 2026" data-winner="Raraa Cyra Eva Bella Stephen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-062_raraa-cyra-eva-bella-stephen_2026-05-24T17-36-11_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-062" data-name="Telupid" data-sub="KDCA Telupid · 2026" data-winner="Raraa Cyra Eva Bella Stephen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/telupid_raraa-cyra-eva-bella-stephen_2026-05-27T17-05-27.png">
                 <circle cx="277" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="277" y1="68" x2="292.2" y2="60.4" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292.2" cy="60.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-062_raraa-cyra-eva-bella-stephen_2026-05-24T17-36-11_clean.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/telupid_raraa-cyra-eva-bella-stephen_2026-05-27T17-05-27.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-064" data-name="Kinabatangan" data-sub="KDCA Kinabatangan · 2026" data-winner="Vrenda Joan Taji" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-064_vrenda-joan-taji_2026-05-24T16-13-11_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-064" data-name="Kinabatangan" data-sub="KDCA Kinabatangan · 2026" data-winner="Vrenda Joan Taji" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kinabatangan_vrenda-joan-taji_2026-05-27T16-46-49.png">
                 <circle cx="288" cy="68" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="288" y1="68" x2="307" y2="63.5" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="307" cy="63.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-064_vrenda-joan-taji_2026-05-24T16-13-11_clean.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kinabatangan_vrenda-joan-taji_2026-05-27T16-46-49.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-065" data-name="Sukau" data-sub="KDCA Sukau · 2026" data-winner="Ally Denis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-065_ally-denis_2026-05-24T16-14-17_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-065" data-name="Sukau" data-sub="KDCA Sukau · 2026" data-winner="Ally Denis" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sukau_ally-denis_2026-05-27T17-04-16.png">
                 <circle cx="291" cy="73" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="291" y1="73" x2="310.4" y2="72.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="310.4" cy="72.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-065_ally-denis_2026-05-24T16-14-17_clean.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sukau_ally-denis_2026-05-27T17-04-16.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-078_anne-theresse-justin-sentian_2026-05-24T15-35-39_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-078" data-name="Tongod" data-sub="KDCA Tongod · 2026" data-winner="Anne Theresse Justin Sentian" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tongod_anne-theresse-justin-sentian_2026-05-27T17-05-56.png">
                 <circle cx="281" cy="72" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="281" y1="72" x2="292" y2="82" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-078_anne-theresse-justin-sentian_2026-05-24T15-35-39_clean.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tongod_anne-theresse-justin-sentian_2026-05-27T17-05-56.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-068_caesyzizi-liakim_2026-05-23T15-02-29_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-068" data-name="Lahad Datu" data-sub="KDCA Lahad Datu · 2026" data-winner="Caesyzizi Liakim" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/lahad-datu_caesyzizi-liakim_2026-05-27T16-49-31.png">
                 <circle cx="292" cy="80" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="292" y1="80" x2="311.1" y2="80.7" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="311.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="311.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-068_caesyzizi-liakim_2026-05-23T15-02-29_clean.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/lahad-datu_caesyzizi-liakim_2026-05-27T16-49-31.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="311.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-069" data-name="Tungku" data-sub="KDCA Tungku · 2026" data-winner="Mary-An P. Calica" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-069_mary-an-p-calica_2026-05-24T17-31-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-069" data-name="Tungku" data-sub="KDCA Tungku · 2026" data-winner="Mary-An P. Calica" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tungku_mary-an-p-calica_2026-05-27T17-08-29.png">
                 <circle cx="294" cy="83" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="294" y1="83" x2="314.1" y2="88.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="314.1" cy="88.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-069_mary-an-p-calica_2026-05-24T17-31-28_clean.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tungku_mary-an-p-calica_2026-05-27T17-08-29.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-070" data-name="Kunak" data-sub="KDCA Kunak · 2026" data-winner="Rachel Justin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-070_rachel-justin_2026-05-24T17-07-49_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-070" data-name="Kunak" data-sub="KDCA Kunak · 2026" data-winner="Rachel Justin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kunak_rachel-justin_2026-05-27T16-49-13.png">
                 <circle cx="296" cy="86" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="296" y1="86" x2="317.8" y2="96.3" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="317.8" cy="96.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-070_rachel-justin_2026-05-24T17-07-49_clean.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kunak_rachel-justin_2026-05-27T16-49-13.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-071" data-name="Semporna" data-sub="KDCA Semporna · 2026" data-winner="Adylee Arisen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-071_adylee-arisen_2026-05-24T18-01-59_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-071" data-name="Semporna" data-sub="KDCA Semporna · 2026" data-winner="Adylee Arisen" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/semporna_adylee-arisen_2026-05-27T17-03-33.png">
                 <circle cx="298" cy="89" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="298" y1="89" x2="321.8" y2="103.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="321.8" cy="103.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-071_adylee-arisen_2026-05-24T18-01-59_clean.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/semporna_adylee-arisen_2026-05-27T17-03-33.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/cleaned/win-066_elvisa-edna-robert_2026-05-24T17-39-28_clean.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-067" data-name="Kalabakan" data-sub="KDCA Kalabakan · 2026" data-winner="Christine Dionysius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-067_christine-dionysius_2026-05-23T08-59-38_clean.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-067" data-name="Kalabakan" data-sub="KDCA Kalabakan · 2026" data-winner="Christine Dionysius" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kalabakan_christine-dionysius_2026-05-27T16-44-05.png">
                 <circle cx="290" cy="85" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="290" y1="85" x2="308.2" y2="95.8" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="308.2" cy="95.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="308.2" cy="95.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/win-067_christine-dionysius_2026-05-23T08-59-38_clean.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kalabakan_christine-dionysius_2026-05-27T16-44-05.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="308.2" cy="95.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
