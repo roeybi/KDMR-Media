@@ -358,23 +358,22 @@ function initStream(streamUrl) {
     const isYouTube  = embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be');
 
     if (isFacebook) {
-      // Facebook video — embed iframe is broken on mobile (3rd-party cookies blocked).
-      // Show a poster + direct link that opens in the native Facebook app / browser.
-      wrap.innerHTML = `
-        <div style="position:absolute;inset:0;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(24,119,242,0.07) 0%,transparent 65%);"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);"></div>
-          <div style="position:relative;z-index:1;text-align:center;padding:24px;">
-            <div style="font-size:clamp(0.85rem,2vw,1.1rem);font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;margin-bottom:6px;">Hari Kaamatan 2026</div>
-            <div style="font-size:0.7rem;color:#888;margin-bottom:22px;">Tap to watch the live broadcast on Facebook</div>
-            <a href="${embedUrl}" target="_blank" rel="noopener"
-              style="display:inline-flex;align-items:center;gap:10px;background:#1877F2;color:#fff;font-size:0.82rem;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;letter-spacing:0.02em;transition:opacity 0.15s;"
-              onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              Watch Live on Facebook →
-            </a>
-          </div>
-        </div>`;
+      // Facebook video plugin embed — plays inline on the site.
+      // autoplay is OFF: mobile browsers block autoplay, which left the
+      // player stuck on a thumbnail. With it off, the user taps play and
+      // the video plays inline (no redirect to Facebook).
+      const fbSrc = 'https://www.facebook.com/plugins/video.php'
+        + '?href=' + encodeURIComponent(embedUrl)
+        + '&show_text=false&width=1280&autoplay=false&allowfullscreen=true';
+      const frame = document.createElement('iframe');
+      frame.src = fbSrc;
+      frame.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block;';
+      frame.setAttribute('scrolling', 'no');
+      frame.setAttribute('frameborder', '0');
+      frame.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen';
+      frame.allowFullscreen = true;
+      frame.title = 'Hari Kaamatan 2026 Live Stream';
+      wrap.appendChild(frame);
 
     } else if (isYouTube) {
       // YouTube — embedding may be disabled; show poster + watch button
