@@ -213,23 +213,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
 
     <!-- ═══════════════════════════════════════════════
-         BLOCK 1 — VIDEO PLAYER ARENA
-         Full-width, zero obstruction, pinned to top
+         BLOCK 1 — VIDEO + CHAT SPLIT
+         Desktop: video (left) + chat (right) side-by-side.
+         Mobile: stacks vertically as before.
          ════════════════════════════════════════════════ -->
-    <div style="width:100%;background:#000;position:relative;">
-      <!-- 16:9 video container -->
-      <div style="position:relative;width:100%;padding-top:56.25%;" id="streamWrap">
-        <!-- Injected by live.js — YouTube iframe or fallback countdown -->
+    <style>
+      .live-split { display:grid; grid-template-columns:1fr; gap:0; }
+      .live-video-area { position:relative; background:#000; }
+      .live-video-area .aspect-box { position:relative; width:100%; padding-top:56.25%; }
+      .live-chat-area { background:#0a0a0a; padding:14px; border-top:1px solid #1a1a1a; }
+      .live-chat-area #chatFeed { height:260px; }
+      @media (min-width:900px) {
+        .live-split { grid-template-columns: minmax(0,1.2fr) minmax(0,0.6fr); gap:0; max-width:1400px; margin:0 auto; }
+        .live-chat-area { border-top:none; border-left:1px solid #1a1a1a; display:flex; flex-direction:column; }
+        .live-chat-area #chatFeed { flex:1; min-height:0; height:auto; }
+      }
+    </style>
+    <div class="live-split">
+      <!-- Video column -->
+      <div class="live-video-area">
+        <div class="aspect-box" id="streamWrap">
+          <!-- Injected by live.js — YouTube iframe or fallback countdown -->
+        </div>
+        <!-- Stream Credit -->
+        <div style="background:#0a0a0a;border-top:1px solid #111;padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p style="font-size:0.62rem;color:#444;margin:0;line-height:1.5;text-align:center;">
+            Live stream broadcast by <strong style="color:#555;">TV Sabah</strong>.
+            All rights reserved © TV Sabah. This stream is provided for community viewing only — KDMR Media claims no ownership of this content.
+          </p>
+        </div>
       </div>
-    </div>
-
-    <!-- ── Stream Credit ───────────────────────────── -->
-    <div style="background:#0a0a0a;border-top:1px solid #111;padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <p style="font-size:0.62rem;color:#444;margin:0;line-height:1.5;text-align:center;">
-        Live stream broadcast by <strong style="color:#555;">TV Sabah</strong>.
-        All rights reserved © TV Sabah. This stream is provided for community viewing only — KDMR Media claims no ownership of this content.
-      </p>
+      <!-- Chat column -->
+      <div class="live-chat-area">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:10px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px 2px rgba(74,222,128,0.3);"></span>
+          <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f0f0f0;" data-i18n="chat_title">Global Chat</span>
+          <span id="chatOnlineCount" style="font-size:0.5rem;color:#444;margin-left:auto;" data-i18n="chat_online_count">1 online</span>
+        </div>
+        <!-- Chat feed -->
+        <div id="chatFeed" style="background:#0d0d0d;border:1px solid #1a1a1a;border-radius:3px 3px 0 0;overflow-y:auto;scroll-behavior:smooth;">
+          <div style="padding:14px;text-align:center;">
+            <span style="font-size:0.62rem;color:#555;" data-i18n="chat_welcome_msg">Welcome to the Live Arena. Be respectful and celebrate our shared heritage.</span>
+          </div>
+        </div>
+        <!-- Inline input bar — always enabled, intercepted if unauthenticated -->
+        <div style="display:flex;background:#0a0a0a;border:1px solid #1a1a1a;border-top:none;border-radius:0 0 3px 3px;">
+          <input id="chatInput" type="text" maxlength="140" data-i18n="chat_input_placeholder" placeholder="Type comment here…"
+            style="flex:1;background:transparent;border:none;outline:none;padding:11px 14px;font-size:0.82rem;color:#f0f0f0;font-family:Inter,sans-serif;" />
+          <button id="chatSendBtn"
+            style="background:#f0a820;color:#0a0a0a;border:none;font-size:0.7rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0 20px;cursor:pointer;font-family:Inter,sans-serif;border-radius:0 0 3px 0;transition:background 0.15s;"
+            onmouseover="this.style.background='#ffc13a'" onmouseout="this.style.background='#f0a820'" data-i18n="button_send">Send</button>
+        </div>
+      </div>
     </div>
 
     <!-- ═══════════════════════════════════════════════
@@ -255,32 +291,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- Populated by live.js -->
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
-         BLOCK 3 — COMMUNITY CHAT ARENA
-         Full-width scrollable chat with inline input bar
-         ════════════════════════════════════════════════ -->
-    <div style="max-width:800px;margin:0 auto;padding:20px 14px 8px;">
-      <div style="display:flex;align-items:center;gap:7px;margin-bottom:10px;">
-        <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px 2px rgba(74,222,128,0.3);"></span>
-        <span style="font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f0f0f0;" data-i18n="chat_title">Global Chat</span>
-        <span id="chatOnlineCount" style="font-size:0.5rem;color:#444;margin-left:auto;" data-i18n="chat_online_count">1 online</span>
-      </div>
-      <!-- Chat feed -->
-      <div id="chatFeed" style="background:#0d0d0d;border:1px solid #1a1a1a;border-radius:3px 3px 0 0;height:320px;overflow-y:auto;scroll-behavior:smooth;">
-        <div style="padding:14px;text-align:center;">
-          <span style="font-size:0.62rem;color:#555;" data-i18n="chat_welcome_msg">Welcome to the Live Arena. Be respectful and celebrate our shared heritage.</span>
-        </div>
-      </div>
-      <!-- Inline input bar — always enabled, intercepted if unauthenticated -->
-      <div style="display:flex;background:#0a0a0a;border:1px solid #1a1a1a;border-top:none;border-radius:0 0 3px 3px;">
-        <input id="chatInput" type="text" maxlength="140" data-i18n="chat_input_placeholder" placeholder="Type comment here…"
-          style="flex:1;background:transparent;border:none;outline:none;padding:11px 14px;font-size:0.82rem;color:#f0f0f0;font-family:Inter,sans-serif;" />
-        <button id="chatSendBtn"
-          style="background:#f0a820;color:#0a0a0a;border:none;font-size:0.7rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0 20px;cursor:pointer;font-family:Inter,sans-serif;border-radius:0 0 3px 0;transition:background 0.15s;"
-          onmouseover="this.style.background='#ffc13a'" onmouseout="this.style.background='#f0a820'" data-i18n="button_send">Send</button>
       </div>
     </div>
 
