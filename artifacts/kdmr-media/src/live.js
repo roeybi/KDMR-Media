@@ -344,6 +344,54 @@ async function loadData() {
 //  BLOCK 1 — STREAM PLAYER
 // ────────────────────────────────────────────────
 
+// Load the Facebook JS SDK once, then render any .fb-video elements.
+let _fbSdkPromise = null;
+function loadFacebookSdk() {
+  if (_fbSdkPromise) return _fbSdkPromise;
+  _fbSdkPromise = new Promise((resolve) => {
+    if (window.FB) { resolve(window.FB); return; }
+    if (!document.getElementById('fb-root')) {
+      const root = document.createElement('div');
+      root.id = 'fb-root';
+      document.body.insertBefore(root, document.body.firstChild);
+    }
+    window.fbAsyncInit = function () {
+      window.FB.init({ xfbml: false, version: 'v19.0' });
+      resolve(window.FB);
+    };
+    const s = document.createElement('script');
+    s.async = true; s.defer = true; s.crossOrigin = 'anonymous';
+    s.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0';
+    document.body.appendChild(s);
+  });
+  return _fbSdkPromise;
+}
+
+function mountFacebookVideo(wrap, videoUrl) {
+  const width = Math.round(wrap.clientWidth) || 800;
+  wrap.innerHTML = `
+    <div style="position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;">
+      <div class="fb-video"
+        data-href="${videoUrl}"
+        data-width="${width}"
+        data-show-text="false"
+        data-allowfullscreen="true"
+        data-autoplay="false"></div>
+    </div>`;
+  const target = wrap.querySelector('.fb-video');
+  loadFacebookSdk().then((FB) => {
+    if (FB && FB.XFBML) FB.XFBML.parse(wrap);
+  });
+  // Re-fit width once after the SDK has had a moment (handles late layout)
+  setTimeout(() => {
+    const w = Math.round(wrap.clientWidth);
+    if (target && w && String(w) !== target.getAttribute('data-width')) {
+      target.setAttribute('data-width', String(w));
+      if (window.FB && window.FB.XFBML) window.FB.XFBML.parse(wrap);
+    }
+  }, 1200);
+}
+
 function initStream(streamUrl) {
   const wrap = document.getElementById('streamWrap');
   if (!wrap) return;
@@ -358,22 +406,11 @@ function initStream(streamUrl) {
     const isYouTube  = embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be');
 
     if (isFacebook) {
-      // Facebook video plugin embed — plays inline on the site.
-      // autoplay is OFF: mobile browsers block autoplay, which left the
-      // player stuck on a thumbnail. With it off, the user taps play and
-      // the video plays inline (no redirect to Facebook).
-      const fbSrc = 'https://www.facebook.com/plugins/video.php'
-        + '?href=' + encodeURIComponent(embedUrl)
-        + '&show_text=false&width=1280&autoplay=false&allowfullscreen=true';
-      const frame = document.createElement('iframe');
-      frame.src = fbSrc;
-      frame.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block;';
-      frame.setAttribute('scrolling', 'no');
-      frame.setAttribute('frameborder', '0');
-      frame.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen';
-      frame.allowFullscreen = true;
-      frame.title = 'Hari Kaamatan 2026 Live Stream';
-      wrap.appendChild(frame);
+      // Facebook LIVE embed via the official SDK (XFBML fb-video).
+      // The lightweight plugins/video.php iframe only buffers a chunk of a
+      // live stream then freezes — it's built for recorded video. The full
+      // SDK player handles continuous live playback inline (no redirect).
+      mountFacebookVideo(wrap, embedUrl);
 
     } else if (isYouTube) {
       // YouTube — embedding may be disabled; show poster + watch button
