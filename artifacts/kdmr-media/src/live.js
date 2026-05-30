@@ -379,6 +379,16 @@ function mountFacebookVideo(wrap, videoUrl) {
     frame.title = 'Hari Kaamatan 2026 Live Stream';
     wrap.innerHTML = '';
     wrap.appendChild(frame);
+
+    // Subtle recovery bar — if the player ever stalls/freezes, the viewer can
+    // reload it in place or, as a last resort, open the broadcast on Facebook.
+    const bar = document.createElement('div');
+    bar.style.cssText = 'position:absolute;bottom:8px;right:8px;z-index:5;display:flex;gap:6px;font-family:Inter,sans-serif;';
+    bar.innerHTML = `
+      <button type="button" id="fbReloadBtn" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);color:#ddd;font-size:0.62rem;font-weight:600;padding:4px 9px;border-radius:999px;cursor:pointer;">↻ Reload</button>
+      <a href="${videoUrl}" target="_blank" rel="noopener" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);color:#ddd;font-size:0.62rem;font-weight:600;padding:4px 9px;border-radius:999px;text-decoration:none;">Open on Facebook ↗</a>`;
+    wrap.appendChild(bar);
+    bar.querySelector('#fbReloadBtn').addEventListener('click', () => mountFacebookVideo(wrap, videoUrl));
   }, { once: true });
 }
 
@@ -396,10 +406,10 @@ function initStream(streamUrl) {
     const isYouTube  = embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be');
 
     if (isFacebook) {
-      // Facebook LIVE embed via the official SDK (XFBML fb-video).
-      // The lightweight plugins/video.php iframe only buffers a chunk of a
-      // live stream then freezes — it's built for recorded video. The full
-      // SDK player handles continuous live playback inline (no redirect).
+      // Facebook LIVE embed via a click-to-load player (see mountFacebookVideo):
+      // our own tappable play button -> on tap, inject the plugins/video.php
+      // iframe with autoplay inside the gesture so it starts playing inline
+      // without relying on Facebook's own (hard-to-tap on mobile) play button.
       mountFacebookVideo(wrap, embedUrl);
 
     } else if (isYouTube) {
