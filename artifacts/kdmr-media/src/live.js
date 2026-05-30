@@ -392,6 +392,72 @@ function mountFacebookVideo(wrap, videoUrl) {
   }, { once: true });
 }
 
+// Parse a YouTube video ID from any common URL shape:
+// watch?v=ID, youtu.be/ID, /live/ID, /embed/ID, /shorts/ID.
+function parseYouTubeId(url) {
+  const patterns = [
+    /[?&]v=([^&#]+)/,
+    /youtu\.be\/([^?&#/]+)/,
+    /\/live\/([^?&#/]+)/,
+    /\/embed\/([^?&#/]+)/,
+    /\/shorts\/([^?&#/]+)/,
+  ];
+  for (const re of patterns) {
+    const m = url.match(re);
+    if (m && m[1]) return m[1];
+  }
+  return null;
+}
+
+function mountYouTubeVideo(wrap, videoUrl) {
+  const vidId = parseYouTubeId(videoUrl);
+
+  // If it's a channel "/live" URL with no resolvable video id, embed the
+  // channel live feed via the live_stream player; otherwise embed by id.
+  let src;
+  if (vidId) {
+    src = `https://www.youtube.com/embed/${vidId}?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1`;
+  } else {
+    const chanMatch = videoUrl.match(/youtube\.com\/(?:@[^/]+|channel\/[^/]+|c\/[^/]+)/);
+    if (chanMatch) {
+      // channel handle/live page — fall back to a watch link, can't embed reliably
+      src = null;
+    }
+  }
+
+  if (!src) {
+    wrap.innerHTML = `
+      <div style="position:absolute;inset:0;background:#0a0a0a;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;">
+        <div>
+          <div style="font-size:0.85rem;font-weight:800;color:#f0f0f0;margin-bottom:6px;">Hari Kaamatan 2026 — Live</div>
+          <div style="font-size:0.7rem;color:#888;margin-bottom:18px;">Tap below to watch the live broadcast on YouTube.</div>
+          <a href="${videoUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#ff0000;color:#fff;font-size:0.82rem;font-weight:700;padding:12px 22px;border-radius:4px;text-decoration:none;">Watch Live on YouTube →</a>
+        </div>
+      </div>`;
+    return;
+  }
+
+  const frame = document.createElement('iframe');
+  frame.src = src;
+  frame.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block;';
+  frame.setAttribute('frameborder', '0');
+  frame.setAttribute('scrolling', 'no');
+  frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  frame.allowFullscreen = true;
+  frame.title = 'Hari Kaamatan 2026 Live Stream';
+  wrap.innerHTML = '';
+  wrap.appendChild(frame);
+
+  // Subtle recovery affordance — reload in place or open on YouTube.
+  const bar = document.createElement('div');
+  bar.style.cssText = 'position:absolute;bottom:8px;right:8px;z-index:5;display:flex;gap:6px;font-family:Inter,sans-serif;';
+  bar.innerHTML = `
+    <button type="button" id="ytReloadBtn" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);color:#ddd;font-size:0.62rem;font-weight:600;padding:4px 9px;border-radius:999px;cursor:pointer;">↻ Reload</button>
+    <a href="${videoUrl}" target="_blank" rel="noopener" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);color:#ddd;font-size:0.62rem;font-weight:600;padding:4px 9px;border-radius:999px;text-decoration:none;">Open on YouTube ↗</a>`;
+  wrap.appendChild(bar);
+  bar.querySelector('#ytReloadBtn').addEventListener('click', () => mountYouTubeVideo(wrap, videoUrl));
+}
+
 function initStream(streamUrl) {
   const wrap = document.getElementById('streamWrap');
   if (!wrap) return;
@@ -413,31 +479,11 @@ function initStream(streamUrl) {
       mountFacebookVideo(wrap, embedUrl);
 
     } else if (isYouTube) {
-      // YouTube — embedding may be disabled; show poster + watch button
-      const vidMatch = embedUrl.match(/embed\/([^?&]+)/) || embedUrl.match(/[?&]v=([^&]+)/);
-      const vidId    = vidMatch ? vidMatch[1] : null;
-      const watchUrl = vidId
-        ? `https://www.youtube.com/watch?v=${vidId}`
-        : embedUrl;
-      const thumbUrl = vidId
-        ? `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`
-        : '';
-
-      wrap.innerHTML = `
-        <div style="position:absolute;inset:0;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;">
-          ${thumbUrl ? `<img src="${thumbUrl}" alt="Live Stream" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45;" onerror="this.style.display='none'" />` : ''}
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);"></div>
-          <div style="position:relative;z-index:1;text-align:center;padding:24px;">
-            <div style="font-size:clamp(0.85rem,2vw,1.1rem);font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;margin-bottom:6px;">Hari Kaamatan 2026</div>
-            <div style="font-size:0.7rem;color:#888;margin-bottom:22px;">Embedding disabled by broadcaster — watch directly on YouTube</div>
-            <a href="${watchUrl}" target="_blank" rel="noopener"
-              style="display:inline-flex;align-items:center;gap:10px;background:#ff0000;color:#fff;font-size:0.82rem;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;letter-spacing:0.02em;transition:opacity 0.15s;"
-              onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-              <svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M17.6 2.2C17.4 1.4 16.8.8 16 .6 14.6.2 9 .2 9 .2S3.4.2 2 .6C1.2.8.6 1.4.4 2.2 0 3.6 0 6.5 0 6.5s0 2.9.4 4.3c.2.8.8 1.4 1.6 1.6C3.4 12.8 9 12.8 9 12.8s5.6 0 7-.4c.8-.2 1.4-.8 1.6-1.6.4-1.4.4-4.3.4-4.3s0-2.9-.4-4.3zM7.2 9.3V3.7L11.9 6.5 7.2 9.3z"/></svg>
-              Watch Live on YouTube →
-            </a>
-          </div>
-        </div>`;
+      // YouTube LIVE — true inline embed. YouTube's player handles live
+      // playback and mobile reliably (unlike Facebook), so we embed it
+      // directly with autoplay (muted, required for mobile autoplay) and
+      // playsinline so iOS plays it in place instead of going fullscreen.
+      mountYouTubeVideo(wrap, embedUrl);
     }
   } else {
     // Countdown fallback
