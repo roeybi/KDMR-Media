@@ -344,52 +344,42 @@ async function loadData() {
 //  BLOCK 1 — STREAM PLAYER
 // ────────────────────────────────────────────────
 
-// Load the Facebook JS SDK once, then render any .fb-video elements.
-let _fbSdkPromise = null;
-function loadFacebookSdk() {
-  if (_fbSdkPromise) return _fbSdkPromise;
-  _fbSdkPromise = new Promise((resolve) => {
-    if (window.FB) { resolve(window.FB); return; }
-    if (!document.getElementById('fb-root')) {
-      const root = document.createElement('div');
-      root.id = 'fb-root';
-      document.body.insertBefore(root, document.body.firstChild);
-    }
-    window.fbAsyncInit = function () {
-      window.FB.init({ xfbml: false, version: 'v19.0' });
-      resolve(window.FB);
-    };
-    const s = document.createElement('script');
-    s.async = true; s.defer = true; s.crossOrigin = 'anonymous';
-    s.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0';
-    document.body.appendChild(s);
-  });
-  return _fbSdkPromise;
-}
-
+// Click-to-load Facebook player.
+// We render our OWN play button (plain HTML — always tappable on mobile,
+// unlike Facebook's in-player button or the SDK player). On tap we inject
+// the Facebook iframe with autoplay enabled. Because the iframe is created
+// synchronously inside the tap gesture, the browser's user-activation lets
+// it start playing right away — no second tap on Facebook's controls needed.
 function mountFacebookVideo(wrap, videoUrl) {
-  const width = Math.round(wrap.clientWidth) || 800;
   wrap.innerHTML = `
-    <div style="position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;">
-      <div class="fb-video"
-        data-href="${videoUrl}"
-        data-width="${width}"
-        data-show-text="false"
-        data-allowfullscreen="true"
-        data-autoplay="false"></div>
-    </div>`;
-  const target = wrap.querySelector('.fb-video');
-  loadFacebookSdk().then((FB) => {
-    if (FB && FB.XFBML) FB.XFBML.parse(wrap);
-  });
-  // Re-fit width once after the SDK has had a moment (handles late layout)
-  setTimeout(() => {
-    const w = Math.round(wrap.clientWidth);
-    if (target && w && String(w) !== target.getAttribute('data-width')) {
-      target.setAttribute('data-width', String(w));
-      if (window.FB && window.FB.XFBML) window.FB.XFBML.parse(wrap);
-    }
-  }, 1200);
+    <button id="fbPlayBtn" type="button" aria-label="Play live broadcast"
+      style="position:absolute;inset:0;width:100%;height:100%;border:none;cursor:pointer;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:0;font-family:Inter,sans-serif;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(24,119,242,0.14) 0%,transparent 65%);"></div>
+      <div style="position:relative;z-index:1;width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,0.96);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 28px rgba(0,0,0,0.45);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#0a0a0a" style="margin-left:4px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </div>
+      <div style="position:relative;z-index:1;text-align:center;">
+        <div style="font-size:clamp(0.85rem,2vw,1.05rem);font-weight:800;color:#f0f0f0;letter-spacing:-0.02em;">Hari Kaamatan 2026 — Live</div>
+        <div style="font-size:0.68rem;color:#999;margin-top:4px;">Tap to start the live broadcast</div>
+      </div>
+    </button>`;
+
+  const btn = wrap.querySelector('#fbPlayBtn');
+  btn.addEventListener('click', () => {
+    const fbSrc = 'https://www.facebook.com/plugins/video.php'
+      + '?href=' + encodeURIComponent(videoUrl)
+      + '&show_text=false&width=1280&autoplay=true&allowfullscreen=true';
+    const frame = document.createElement('iframe');
+    frame.src = fbSrc;
+    frame.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block;';
+    frame.setAttribute('scrolling', 'no');
+    frame.setAttribute('frameborder', '0');
+    frame.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen';
+    frame.allowFullscreen = true;
+    frame.title = 'Hari Kaamatan 2026 Live Stream';
+    wrap.innerHTML = '';
+    wrap.appendChild(frame);
+  }, { once: true });
 }
 
 function initStream(streamUrl) {
