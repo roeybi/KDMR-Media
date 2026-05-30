@@ -447,15 +447,6 @@ function mountYouTubeVideo(wrap, videoUrl) {
   frame.title = 'Hari Kaamatan 2026 Live Stream';
   wrap.innerHTML = '';
   wrap.appendChild(frame);
-
-  // Subtle recovery affordance — reload in place or open on YouTube.
-  const bar = document.createElement('div');
-  bar.style.cssText = 'position:absolute;bottom:8px;right:8px;z-index:5;display:flex;gap:6px;font-family:Inter,sans-serif;';
-  bar.innerHTML = `
-    <button type="button" id="ytReloadBtn" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);color:#ddd;font-size:0.62rem;font-weight:600;padding:4px 9px;border-radius:999px;cursor:pointer;">↻ Reload</button>
-    <a href="${videoUrl}" target="_blank" rel="noopener" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.18);color:#ddd;font-size:0.62rem;font-weight:600;padding:4px 9px;border-radius:999px;text-decoration:none;">Open on YouTube ↗</a>`;
-  wrap.appendChild(bar);
-  bar.querySelector('#ytReloadBtn').addEventListener('click', () => mountYouTubeVideo(wrap, videoUrl));
 }
 
 function initStream(streamUrl) {
