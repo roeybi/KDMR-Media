@@ -575,11 +575,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ── Dynamic locator: map above prediction, countdown below ── -->
     <script type="module">
-      if (new Date() < new Date('2026-06-01T00:00:00+08:00')) {
-        const { mountLocatorMap, mountLocatorCountdown } = await import('./src/unduk-locator.js');
-        mountLocatorMap(document.getElementById('locatorMapSection'));
-        mountLocatorCountdown(document.getElementById('locatorCountdownSection'));
-      }
+      const { mountLocatorMap, mountLocatorCountdown } = await import('./src/unduk-locator.js');
+      mountLocatorMap(document.getElementById('locatorMapSection'));
+      mountLocatorCountdown(document.getElementById('locatorCountdownSection'));
     </script>
     <script>
       /* Mobile menu toggle — inline to avoid FOUC before ES module loads */
