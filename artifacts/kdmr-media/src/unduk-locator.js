@@ -419,13 +419,13 @@ export function mountLocatorHero(section) {
               <text x="0" y="-6" text-anchor="middle" font-size="3.5" fill="#2e2e2e" font-family="Inter,sans-serif" font-weight="700">N</text>
             </g>
             <!-- Sarawak pin — dot on Kuching (southwest, ~110.33°E, 1.55°N) -->
-            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png">
+            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-06-04T14-15-15.png">
               <circle cx="147" cy="165" r="2.5" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="147" y1="165" x2="158" y2="96" stroke="#f0a820" stroke-width="0.8" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="158" cy="96" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="158" cy="96" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngS)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png" x="147" y="85" width="22" height="22" clip-path="url(#cpSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-06-04T14-15-15.png" x="147" y="85" width="22" height="22" clip-path="url(#cpSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="158" cy="96" r="11" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -820,13 +820,13 @@ export function mountLocatorHero(section) {
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-06-04T14-16-08.png">
                 <circle cx="287" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="287" y1="57" x2="300.6" y2="46.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-06-04T14-16-08.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -930,13 +930,13 @@ export function mountLocatorHero(section) {
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-06-04T14-16-46.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-06-04T14-16-46.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1327,10 +1327,10 @@ export function mountLocatorMap(el) {
               <clipPath id="cpSW2"><circle cx="118" cy="100" r="10"/></clipPath>
             </defs>
             <image href="/map-sarawak.svg" x="10" y="10" width="320" height="180" preserveAspectRatio="none"/>
-            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png">
+            <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-06-04T14-15-15.png">
               <circle cx="122" cy="95" r="3" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="118" cy="100" r="16" fill="none" stroke="#f0a820" stroke-width="1" stroke-dasharray="3,3"/>
-              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-05-22T16-25-19_clean.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
+              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-sarawak_deanera-clarissa-jamdin_2026-06-04T14-15-15.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
             </g>
           </svg>
         </div>
@@ -1722,13 +1722,13 @@ export function mountLocatorMap(el) {
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-034" data-name="Sandakan" data-sub="KDCA Sandakan · 2026" data-winner="Ceelecia Reeka Mosungin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-06-04T14-16-08.png">
                 <circle cx="287" cy="57" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="287" y1="57" x2="300.6" y2="46.1" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-05-27T17-03-21.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sandakan_ceelecia-reeka-mosungin_2026-06-04T14-16-08.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1832,13 +1832,13 @@ export function mountLocatorMap(el) {
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-066" data-name="Tawau" data-sub="KDCA Tawau · 2026" data-winner="Elvyra Edna Robert" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-06-04T14-16-46.png">
                 <circle cx="297" cy="91" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="297" y1="91" x2="312.8" y2="103.2" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-05-27T17-05-11.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tawau_elvyra-edna-robert_2026-06-04T14-16-46.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
