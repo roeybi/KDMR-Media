@@ -1188,7 +1188,81 @@ async function initIndex(data) {
 
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+  // ── Winner Detail Modal (Top 7 cards) ──────────────────────────────────
+  initWinnerModal(data);
+
   initGlobalSearch(data);
+}
+
+function initWinnerModal(data) {
+  const modal = document.getElementById('winnerModal');
+  const content = document.getElementById('winnerModalContent');
+  const closeBtn = document.getElementById('winnerModalClose');
+  if (!modal || !content) return;
+
+  const cards = document.querySelectorAll('.top7-card[data-winid]');
+  if (cards.length === 0) return;
+
+  const allWinners = data.winners || [];
+  const winners = allWinners.filter(w => w.award === 'Unduk Ngadau' && w.year === 2026);
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const winId = card.dataset.winid;
+      const winner = winners.find(w => w.id === winId);
+      if (!winner) return;
+      openWinnerModal(winner);
+    });
+  });
+
+  function openWinnerModal(w) {
+    const imgHtml = w.imageUrl
+      ? `<img src="${w.imageUrl}" alt="${w.name}" style="width:100%;height:240px;object-fit:cover;object-position:top center;display:block;border-radius:4px 4px 0 0;">`
+      : '';
+    const achievements = (w.achievements || []).map(a => `<li style="margin-bottom:4px;">${a}</li>`).join('');
+    const heritageHtml = w.heritage
+      ? `<div style="margin-top:16px;padding:14px;background:#0a0a0a;border-radius:3px;border:1px solid #1a1a1a;">
+           <div style="font-size:0.58rem;font-weight:800;color:#555;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Heritage</div>
+           <div style="font-size:0.78rem;color:#888;line-height:1.65;">
+             <strong style="color:#ccc;">${w.heritage.group || ''}</strong>
+             ${w.heritage.costume ? `<p style="margin:6px 0 0;">${w.heritage.costume}</p>` : ''}
+             ${w.heritage.language ? `<p style="margin:4px 0 0;color:#666;">Language: ${w.heritage.language}</p>` : ''}
+           </div>
+         </div>`
+      : '';
+
+    content.innerHTML = `
+      ${imgHtml}
+      <div style="padding:24px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <span style="font-size:0.62rem;font-weight:800;color:#f0a820;letter-spacing:0.1em;text-transform:uppercase;">${w.badge || w.award || 'Winner'}</span>
+        </div>
+        <h2 style="font-size:1.35rem;font-weight:900;color:#f0f0f0;margin:0 0 12px;letter-spacing:-0.02em;">${w.name}</h2>
+        <div style="font-size:0.75rem;color:#666;margin-bottom:16px;">${w.branch || ''} · ${w.district || ''} · ${w.tribe || ''}</div>
+        <p style="font-size:0.85rem;color:#aaa;line-height:1.7;margin:0 0 16px;">${w.bio || ''}</p>
+        ${achievements ? `<div style="margin-top:16px;">
+          <div style="font-size:0.58rem;font-weight:800;color:#555;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Achievements</div>
+          <ul style="font-size:0.78rem;color:#888;line-height:1.65;margin:0;padding-left:18px;">${achievements}</ul>
+        </div>` : ''}
+        ${heritageHtml}
+      </div>
+    `;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  closeBtn?.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
 }
 
 // ─── Bootstrap ────────────────────────────────────────────────────────────
