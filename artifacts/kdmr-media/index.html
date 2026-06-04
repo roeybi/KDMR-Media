@@ -332,6 +332,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <!-- ── Winner Detail Modal ──────────────────────────────────────── -->
+    <div id="winnerModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px;">
+      <div id="winnerModalCard" style="background:#111;border:1px solid #1a1a1a;border-radius:4px;max-width:520px;width:100%;max-height:85vh;overflow-y:auto;position:relative;">
+        <button id="winnerModalClose" style="position:absolute;top:12px;right:12px;background:transparent;border:none;color:#888;cursor:pointer;padding:4px;z-index:10;" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div id="winnerModalContent"></div>
+      </div>
+    </div>
+
     <!-- ── Locator Map ─────────────────────────────────────────── -->
     <section id="locatorMapSection" style="background:#080808;border-bottom:1px solid #1a1a1a;"></section>
 
@@ -361,6 +371,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Header -->
         <div class="reveal" style="text-align:center;margin-bottom:36px;">
           <div style="font-size:0.6rem;font-weight:700;color:#555;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">66th Unduk Ngadau Kaamatan 2026</div>
+          <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f0a820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm11 13v4"/><path d="M10 21h4"/></svg>
+            <span style="font-size:0.72rem;font-weight:800;color:#f0a820;letter-spacing:0.15em;text-transform:uppercase;">Congratulations</span>
+          </div>
           <h2 style="font-size:clamp(2.4rem,6.5vw,4rem);font-weight:900;color:#f0f0f0;letter-spacing:-0.04em;line-height:1.0;margin:0 0 14px;font-family:Inter,sans-serif;">The Top 7<br><span style="color:#f0a820;">Finalists & Winners</span></h2>
           <p style="font-size:0.68rem;font-weight:600;color:#888;letter-spacing:0.14em;text-transform:uppercase;margin:0;">Official Results from Hongkod Koisaan, Penampang</p>
         </div>
@@ -369,53 +383,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="display:flex;gap:clamp(5px,1.4vw,12px);align-items:flex-end;justify-content:center;overflow-x:auto;padding:4px 4px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
 
           <!-- Card 1 — 6th place (left outer) -->
-          <div class="reveal" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(58px,9vw,96px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sook_myra-evana-robert_2026-06-04T13-58-58.png" alt="Myra Evana Robert" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;">
+          <div class="reveal top7-card" data-winid="win-052" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(58px,9vw,96px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(240,168,32,0.12)';this.style.borderColor='rgba(240,168,32,0.3)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#1c1c1c';">
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/sook_myra-evana-robert_2026-06-04T13-58-58.png" alt="Myra Evana Robert" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;pointer-events:none;">
               <div style="font-size:0.38rem;font-weight:800;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;">6th place</div>
             </div>
           </div>
           <!-- Card 2 — 4th place -->
-          <div class="reveal reveal-d1" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(74px,11.5vw,122px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pagalungan_kerishine-danil_2026-06-04T13-57-07.png" alt="Kerishine Danil" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;">
+          <div class="reveal reveal-d1 top7-card" data-winid="win-054" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(74px,11.5vw,122px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(240,168,32,0.12)';this.style.borderColor='rgba(240,168,32,0.3)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#1c1c1c';">
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/pagalungan_kerishine-danil_2026-06-04T13-57-07.png" alt="Kerishine Danil" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;pointer-events:none;">
               <div style="font-size:0.38rem;font-weight:800;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;">4th place</div>
             </div>
           </div>
           <!-- Card 3 — 2nd place -->
-          <div class="reveal reveal-d2" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(92px,14.5vw,152px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/matunggong_criszelbellkah-lorris_2026-06-04T13-56-18.png" alt="Criszelbellkah Lorris" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;">
+          <div class="reveal reveal-d2 top7-card" data-winid="win-059" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(92px,14.5vw,152px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(240,168,32,0.12)';this.style.borderColor='rgba(240,168,32,0.3)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#1c1c1c';">
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/matunggong_criszelbellkah-lorris_2026-06-04T13-56-18.png" alt="Criszelbellkah Lorris" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;pointer-events:none;">
               <div style="font-size:0.38rem;font-weight:800;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;">2nd place</div>
             </div>
           </div>
 
-          <!-- Card 4 — 1st place (center peak) -->
-          <div class="reveal reveal-d2" style="flex:0 0 clamp(64px,12vw,112px);height:clamp(120px,19vw,192px);border:1.5px solid rgba(240,168,32,0.45);border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/papar_gelvia-vanessa-jenny_2026-06-04T13-57-30.png" alt="Gelvia Vanessa Jenny" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:6px 4px 5px;text-align:center;">
-              <div style="font-size:0.42rem;font-weight:800;color:#f0a820;letter-spacing:0.1em;text-transform:uppercase;line-height:1.3;">1st place</div>
+          <!-- Card 4 — Champion (center peak) -->
+          <div class="reveal reveal-d2 top7-card top7-champion" data-winid="win-020" style="flex:0 0 clamp(64px,12vw,112px);height:clamp(120px,19vw,192px);border:1.5px solid rgba(240,168,32,0.45);border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 40px rgba(240,168,32,0.22), 0 0 60px rgba(240,168,32,0.08)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+            <div style="position:absolute;inset:-2px;background:linear-gradient(135deg, rgba(240,168,32,0.15), rgba(240,168,32,0.05));z-index:0;pointer-events:none;"></div>
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/papar_gelvia-vanessa-jenny_2026-06-04T13-57-30.png" alt="Gelvia Vanessa Jenny" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;position:relative;z-index:1;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:6px 4px 5px;text-align:center;pointer-events:none;z-index:2;">
+              <div style="font-size:0.42rem;font-weight:800;color:#f0a820;letter-spacing:0.1em;text-transform:uppercase;line-height:1.3;">Champion</div>
             </div>
           </div>
 
           <!-- Card 5 — 3rd place -->
-          <div class="reveal reveal-d2" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(92px,14.5vw,152px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-kinabalu_liane-melve-grace-lias_2026-06-04T13-55-01.png" alt="Liane Melve Grace Lias" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;">
+          <div class="reveal reveal-d2 top7-card" data-winid="win-036" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(92px,14.5vw,152px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(240,168,32,0.12)';this.style.borderColor='rgba(240,168,32,0.3)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#1c1c1c';">
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kota-kinabalu_liane-melve-grace-lias_2026-06-04T13-55-01.png" alt="Liane Melve Grace Lias" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;pointer-events:none;">
               <div style="font-size:0.38rem;font-weight:800;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;">3rd place</div>
             </div>
           </div>
           <!-- Card 6 — 5th place -->
-          <div class="reveal reveal-d3" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(74px,11.5vw,122px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/penampang_gadrette-gregory_2026-06-04T13-57-40.png" alt="Gadrette Gregory" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;">
+          <div class="reveal reveal-d3 top7-card" data-winid="win-041" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(74px,11.5vw,122px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(240,168,32,0.12)';this.style.borderColor='rgba(240,168,32,0.3)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#1c1c1c';">
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/penampang_gadrette-gregory_2026-06-04T13-57-40.png" alt="Gadrette Gregory" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;pointer-events:none;">
               <div style="font-size:0.38rem;font-weight:800;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;">5th place</div>
             </div>
           </div>
           <!-- Card 7 — 7th place (right outer) -->
-          <div class="reveal reveal-d4" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(58px,9vw,96px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;">
-            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tuaran_juje-elor-francis_2026-06-04T14-01-22.png" alt="Juje Elor Francis" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;">
+          <div class="reveal reveal-d4 top7-card" data-winid="win-044" style="flex:0 0 clamp(46px,8.5vw,86px);height:clamp(58px,9vw,96px);border:1px solid #1c1c1c;border-radius:3px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s, border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(240,168,32,0.12)';this.style.borderColor='rgba(240,168,32,0.3)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#1c1c1c';">
+            <img src="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/tuaran_juje-elor-francis_2026-06-04T14-01-22.png" alt="Juje Elor Francis" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;pointer-events:none;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:4px 2px 3px;text-align:center;pointer-events:none;">
               <div style="font-size:0.38rem;font-weight:800;color:#f0a820;letter-spacing:0.08em;text-transform:uppercase;">7th place</div>
             </div>
           </div>
