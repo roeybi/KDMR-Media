@@ -361,13 +361,13 @@ export function mountLocatorHero(section) {
               </g>
             </g>
             <!-- Putrajaya — just south of KL (~101.70°E, 2.92°N) -->
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendy-merrylen-s-jasmin_2026-06-04T13-51-03.png">
               <circle cx="53" cy="133" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="53" y1="133" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendy-merrylen-s-jasmin_2026-06-04T13-51-03.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -1299,11 +1299,11 @@ export function mountLocatorMap(el) {
               <circle class="un-node-pulse" cx="107" cy="116" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body"><circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-klang-valley_finafayena-primus_2026-06-04T13-50-04.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
-            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png">
+            <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendy-merrylen-s-jasmin_2026-06-04T13-51-03.png">
               <circle cx="60" cy="135" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="60" y1="135" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendey-merrylen-s-jasmine_2026-05-23T10-00-58_clean.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-putrajaya_wendy-merrylen-s-jasmin_2026-06-04T13-51-03.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
             <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="https://erbyhmliuqopwrspxbir.supabase.co/storage/v1/object/public/contributor-uploads/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-06-04T13-50-21.png">
               <circle cx="62" cy="148" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
