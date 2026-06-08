@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    // Decap CMS OAuth callback redirect
+    // Pass the query string (containing the auth code) back to the admin page
+    var target = '/admin/index.html' + window.location.search + window.location.hash;
+    window.location.replace(target);
+  </script>
+  <p>Redirecting to admin...</p>
+</body>
+</html>
