@@ -40,6 +40,7 @@ export default defineConfig({
         live:         path.resolve(import.meta.dirname, "live/index.html"),
         upload:       path.resolve(import.meta.dirname, "upload.html"),
         admin:        path.resolve(import.meta.dirname, "admin.html"),
+        cmsAdmin:     path.resolve(import.meta.dirname, "admin/index.html"),
         undukNgadau:    path.resolve(import.meta.dirname, "unduk-ngadau/index.html"),
         mrk:            path.resolve(import.meta.dirname, "mrk/index.html"),
         sugandoi:       path.resolve(import.meta.dirname, "sugandoi/index.html"),
