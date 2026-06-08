@@ -933,6 +933,12 @@ function startPolling() {
   if (_pollTimer) clearInterval(_pollTimer);
 
   _pollTimer = setInterval(async () => {
+    // Stop polling if the live event has ended
+    if (_liveEvent && _liveEvent.status === 'ended') {
+      clearInterval(_pollTimer);
+      _pollTimer = null;
+      return;
+    }
     // Poll for new chat messages since the last one we have
     const lastMsg  = _chatMessages[_chatMessages.length - 1];
     const since    = lastMsg ? lastMsg.sentAt : new Date(0).toISOString();
