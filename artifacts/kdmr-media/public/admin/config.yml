@@ -3,6 +3,8 @@ backend:
   repo: roeybi/KDMR-Media
   branch: main
   base_url: https://kdmrmedia.com
+  auth:
+    client_id: Ov23liaOGNibL0OOlK7y
 
 # Cloudinary media library for external blob storage
 media_library:
