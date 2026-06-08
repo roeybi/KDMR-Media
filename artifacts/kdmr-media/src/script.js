@@ -962,15 +962,6 @@ async function initIndex(data) {
       avatarWrap.style.backgroundSize = 'cover';
       avatarWrap.style.backgroundPosition = 'top center';
       avatarWrap.style.backgroundRepeat = 'no-repeat';
-      // Invisible img for onerror fallback only
-      const probe = document.createElement('img');
-      probe.src = photoUrl;
-      probe.style.cssText = 'display:none;position:absolute;';
-      probe.onerror = () => {
-        avatarWrap.style.backgroundImage = '';
-        avatarWrap.innerHTML = `<span id="heroInitials" style="font-size:3.8rem;font-weight:900;color:#f0a820;letter-spacing:-0.06em;line-height:1;">${initials(legend.name)}</span>`;
-      };
-      avatarWrap.appendChild(probe);
     } else if (ini) {
       ini.textContent = initials(legend.name);
     }
