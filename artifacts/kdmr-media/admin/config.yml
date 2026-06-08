@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Cloudinary media library for external blob storage
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: YOUR_CLOUDINARY_CLOUD_NAME
+    api_key: YOUR_CLOUDINARY_API_KEY
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+          width: 1200
+          crop: limit
+
+publish_mode: editorial_workflow
+
+# Collections
+collections:
+  - name: articles
+    label: Articles
+    folder: articles
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly identifier (e.g. my-article-title)" }
+      - { label: "Description", name: "description", widget: "text", hint: "Short summary for previews and SEO" }
+      - { label: "Banner Image", name: "banner", widget: "image", required: false, hint: "Uploads to Cloudinary CDN automatically" }
+      - { label: "Content Body", name: "body", widget: "markdown" }
