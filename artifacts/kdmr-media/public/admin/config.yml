@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: roeybi/KDMR-Media
   branch: main
+  base_url: https://kdmrmedia.com
 
 # Cloudinary media library for external blob storage
 media_library:
