@@ -2,8 +2,8 @@ backend:
   name: github
   repo: roeybi/KDMR-Media
   branch: main
-  auth_type: implicit
-  app_id: Ov23liaOGNibL0OOlK7y
+  base_url: https://api.netlify.com
+  site_id: cool-heliotrope-490049.netlify.app
 
 # Cloudinary media library for external blob storage
 media_library:
