@@ -334,7 +334,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="16" cy="72" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/contestants/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-06-04T13-50-52.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/JERAAHFINAH JONIS - KDCA PULAU PINANG.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -345,7 +345,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="16" cy="100" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/contestants/kdca-perak_valeriena-karen-aldrin_2026-06-04T13-50-37.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/VALERIEANA KAREN ALDRIN - KDCA PERAK.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -356,7 +356,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="107" cy="116" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/contestants/kdca-klang-valley_finafayena-primus_2026-06-04T13-50-04.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/FINAFAYENA PRIMUS - KDCA KLANG VALLEY.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -367,7 +367,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/contestants/kdca-putrajaya_wendy-merrylen-s-jasmin_2026-06-04T13-51-03.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/WENDEY MERRYLEN S. JASMIN - KDCA PUTRAJAYA.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -378,7 +378,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="112" cy="151" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/contestants/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-06-04T13-50-21.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/CLARISSA JANE AHAP - KDCA MELAKA.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -389,7 +389,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="112" cy="169" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP)"/>
-                <image href="/images/contestants/kdca-johor_josephine-magdeline-joseph_2026-06-04T13-49-41.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/JOSEPHINE MAGDELINE JOSEPH - KDCA JOHOR.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -425,7 +425,7 @@ export function mountLocatorHero(section) {
               <circle class="un-node-pulse" cx="158" cy="96" r="15" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
               <g class="un-node-body">
                 <circle cx="158" cy="96" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngS)"/>
-                <image href="/images/contestants/kdca-sarawak_deanera-clarissa-jamdin_2026-06-04T14-15-15.png" x="147" y="85" width="22" height="22" clip-path="url(#cpSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                <image href="/images/contestants/DEANERA CLARISSA - KDCA SARAWAK.png" x="147" y="85" width="22" height="22" clip-path="url(#cpSWK)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                 <circle cx="158" cy="96" r="11" fill="none" stroke="#f0a820" stroke-width="1.4"/>
               </g>
             </g>
@@ -506,7 +506,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="262" cy="30.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kudat_feyrashandy-hanlin-hanis_2026-06-04T13-55-38.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/FEYRASHANDY HANLIN HANIS - KUDAT.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -516,7 +516,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="254.3" cy="27" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/banggi_lora-derlina-lisa-jusley_2026-06-04T13-51-34.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/LORA DERLINA LISA JUSLEY - BANGGI.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -526,7 +526,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="281.2" cy="36.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/pitas_jean-christzabeth-yusevender_2026-06-04T13-57-52.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/JEAN CHRISTZABETH YUSEVENDER - PITAS.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -536,7 +536,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="266.7" cy="37.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kota-marudu_aelvereny-vahidin_2026-06-04T13-55-13.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/AELVERENY VAHIDIN @ YAHIDIN - KOTA MARUDU.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -546,7 +546,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="273.6" cy="32.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/matunggong_criszelbellkah-lorris_2026-06-04T13-56-18.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CRISZELBELLKAH LORRIS - MATUNGGONG.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -556,7 +556,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="230.3" cy="64.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kota-kinabalu_liane-melve-grace-lias_2026-06-04T13-55-01.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/LIANE MELVE GRACE - KOTA KINABALU.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -566,7 +566,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="225.1" cy="71.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.1" cy="71.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tanjung-aru_joyce-nia-david_2026-06-04T14-00-16.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/JOYCE NIA DAVID - TANJUNG ARU.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.1" cy="71.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -576,7 +576,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.1" cy="57.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/inanam_essmerrellda-cafry_2026-06-04T13-52-25.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ESSMERRELLDA CAFRY @ CLEMEN - INANAM.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -586,7 +586,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="238.3" cy="49.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/karambunai_natalie-ally-hepeni_2026-06-04T13-53-23.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/NATALIE ALLY HEPENI - KDCA KARAMBUNAI.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -596,7 +596,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.7" cy="57.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kdca-bandaraya_felecity-chen-sing-yee_2026-06-04T13-53-40.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/FELECITY CHEN SING YEE - BANDARAYA.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -606,7 +606,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="239.2" cy="64" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.2" cy="64" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/penampang_gadrette-gregory_2026-06-04T13-57-40.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/GADRETTE GREGORY - PENAMPANG.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.2" cy="64" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -616,7 +616,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="237.7" cy="72.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="237.7" cy="72.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kapayan_viviyana-jenny_2026-06-04T13-53-06.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/VIVI YANA JENNY - KDCA KAPAYAN.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="237.7" cy="72.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -626,7 +626,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="231" cy="77.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/putatan_amber-weysha-walter-john_2026-06-04T13-58-07.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/AMBER WEYSHA WALTER - PUTATAN.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -636,7 +636,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="241.8" cy="42" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tuaran_juje-elor-francis_2026-06-04T14-01-22.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/JUJE ELOR @ FRANCIS - TUARAN.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -646,7 +646,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="257.7" cy="38.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tamparuli_evyanarrey-larry_2026-06-04T13-59-33.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/EVYANAREY LARRY - TAMPARULI.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -656,7 +656,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="249.2" cy="37.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.2" cy="37.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kota-belud_althea-tan-pin-yan_2026-06-04T13-54-44.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ALTHEA TAN PIN YAN - KOTA BELUD.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.2" cy="37.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -666,7 +666,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="224.5" cy="83.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/papar_gelvia-vanessa-jenny_2026-06-04T13-57-30.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/GELVIA VANESSA BINTI JENNY - PAPAR.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -676,7 +676,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="235.3" cy="94.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/beaufort_fedelia-viviana-venchin_2026-06-04T13-51-47.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/FEDELIA VIVIANA VENCHIN - BEAUFORT.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -686,7 +686,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="232.5" cy="86.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="232.5" cy="86.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/membakut_dorna-mayra-michael_2026-06-04T13-56-33.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/DORNA MAYRA MICHAEL - MEMBAKUT.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="232.5" cy="86.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -696,7 +696,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.7" cy="100.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kuala-penyu_lorna-breetney-johnny_2026-06-04T13-55-28.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/LORNA BREETNEY JOHNNY - KUALA PENYU.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -706,7 +706,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.3" cy="92" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/menumbok_hyzlensiska-verron-johnny_2026-06-04T13-56-45.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/HYZLENSISKA VERRON JOHNNY - MENUMBOK.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -716,17 +716,17 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="234.7" cy="103.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.7" cy="103.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sipitang_hilda-jaynissa-godwin_2026-06-04T13-58-41.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/HILDA JAYNISSA GODWIN - SIPITANG.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.7" cy="103.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="/images/contestants/ranau_christebell-masius_2026-06-04T13-58-22.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="/images/contestants/CHRISTEBELL MASIUS - RANAU.png">
                 <circle cx="264" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="66" x2="255.1" y2="46.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="255.1" cy="46.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/ranau_christebell-masius_2026-06-04T13-58-22.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CHRISTEBELL MASIUS - RANAU.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -736,7 +736,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.3" cy="56.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kiulu_catsween-su-sun-ping_2026-06-04T13-54-32.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CATSWEEN SU SUN PING - KIULU.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -746,7 +746,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.1" cy="90.9" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/keningau_edreen-lynn-edward_2026-06-04T13-54-10.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/EDREEN LYNN EDWARD - KENINGAU.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -756,7 +756,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.7" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/bingkor_alysheron-maunsiong_2026-06-04T13-52-12.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ALYSHERON MAUNSIONG - BINGKOR.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -766,7 +766,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tambunan_natalia-jinui_2026-06-04T13-59-20.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/NATALIA JINUI - TAMBUNAN.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -776,7 +776,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.2" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tenom_radila-ifa-yanie_2026-06-04T14-01-02.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/RADILA IFA YANIE - TENOM.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -786,7 +786,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.7" cy="108.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kemabong_venica-tuboh_2026-06-04T13-53-56.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/VENICA TUBOH @ PAUZIN - KEMABONG.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -796,7 +796,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.4" cy="103.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sook_myra-evana-robert_2026-06-04T13-58-58.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/MYRA EVANA ROBERT - SOOK.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -806,7 +806,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="256.3" cy="108.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.3" cy="108.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/nabawan_sahira-samson_2026-06-04T13-56-56.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/SAHIRA SAMSON - NABAWAN.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.3" cy="108.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -816,7 +816,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="261.9" cy="115.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="261.9" cy="115.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/pagalungan_kerishine-danil_2026-06-04T13-57-07.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/KERISHINE DANIL - PAGALUNGAN.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -826,7 +826,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sandakan_ceelecia-reeka-mosungin_2026-06-04T14-16-08.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CEELECIA REEKA MOSUNGIN - SANDAKAN.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -836,7 +836,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="294.2" cy="51.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/beluran_dyann-dharlla-dominic_2026-06-04T13-52-03.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/DYANN DHARLLA DOMINIC - BELURAN.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -846,7 +846,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="290.1" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/paitan_candycyci-liakim_2026-06-04T13-57-20.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CANDYCYCI LIAKIM - PAITAN.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -856,7 +856,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292.2" cy="60.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/telupid_raraa-cyra-eva-bella-stephen_2026-06-04T14-00-48.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CYRA EVA BELLA STEPHEN - TELUPID.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -866,7 +866,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="307" cy="63.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kinabatangan_vrenda-joan-taji_2026-06-04T13-54-20.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/VRENDA JOAAN DEFTENNEAY TAJI - KINABATANGAN.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -876,7 +876,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="310.4" cy="72.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sukau_ally-denis_2026-06-04T13-59-07.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ALLY DENIS - SUKAU.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -886,7 +886,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tongod_anne-theresse-justin-sentian_2026-06-04T14-01-12.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ANNE THERESSE JUSTIN SENTIAN - TONGOD.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -896,7 +896,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="311.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="311.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/lahad-datu_caesyzizi-liakim_2026-06-04T13-56-03.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CAESYZIZI LIAKIM - LAHAD DATU.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="311.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -906,7 +906,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="314.1" cy="88.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tungku_mary-an-p-calica_2026-06-04T14-01-34.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/MARY-AN P. CALICA - TUNGKU.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -916,7 +916,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="317.8" cy="96.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kunak_rachel-justin_2026-06-04T13-55-49.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/RACHEL JUSTIN - KUNAK.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -926,7 +926,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="321.8" cy="103.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/semporna_adylee-arisen_2026-06-04T13-58-32.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ADYLEE ARISEN - SEMPORNA.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -936,7 +936,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tawau_elvyra-edna-robert_2026-06-04T14-16-46.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ELVYRA EDNA ROBERT - TAWAU.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -946,7 +946,7 @@ export function mountLocatorHero(section) {
                 <circle class="un-node-pulse" cx="308.2" cy="95.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="308.2" cy="95.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kalabakan_christine-dionysius_2026-06-04T13-52-54.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CHRISTINE DIONYSIUS - KALABAKAN.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="308.2" cy="95.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1289,37 +1289,37 @@ export function mountLocatorMap(el) {
               <circle cx="26" cy="80" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="26" y1="80" x2="16" y2="72" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="16" cy="72" r="12" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/kdca-pulau-pinang_jeraahfinah-jonis-nanu_2026-06-04T13-50-52.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="16" cy="72" r="8.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/JERAAHFINAH JONIS - KDCA PULAU PINANG.png" x="8" y="64" width="16" height="16" clip-path="url(#cpPP2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="72" r="8" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
             <g class="un-node" data-tab="Peninsular Malaysia" data-name="Perak" data-sub="KDCA Perak · 2026" data-winner="Valeriena Karen Aldrin" data-img="/images/contestants/VALERIEANA KAREN ALDRIN - KDCA PERAK.png">
               <circle cx="33" cy="100" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="33" y1="100" x2="16" y2="100" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="16" cy="100" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/kdca-perak_valeriena-karen-aldrin_2026-06-04T13-50-37.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="16" cy="100" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/VALERIEANA KAREN ALDRIN - KDCA PERAK.png" x="9" y="93" width="14" height="14" clip-path="url(#cpPK2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="16" cy="100" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
             <g class="un-node" data-tab="Peninsular Malaysia" data-name="Klang Valley" data-sub="KDCA Klang Valley · 2026" data-winner="Finafayena Primus" data-img="/images/contestants/FINAFAYENA PRIMUS - KDCA KLANG VALLEY.png">
               <circle cx="52" cy="128" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="52" y1="128" x2="107" y2="116" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="107" cy="116" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/kdca-klang-valley_finafayena-primus_2026-06-04T13-50-04.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="107" cy="116" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/FINAFAYENA PRIMUS - KDCA KLANG VALLEY.png" x="98" y="107" width="18" height="18" clip-path="url(#cpKV2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="107" cy="116" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
             <g class="un-node" data-tab="Peninsular Malaysia" data-name="Putrajaya" data-sub="KDCA Putrajaya · 2026" data-winner="Wendy Merrylen S. Jasmin" data-img="/images/contestants/WENDEY MERRYLEN S. JASMIN - KDCA PUTRAJAYA.png">
               <circle cx="60" cy="135" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="60" y1="135" x2="116" y2="134" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="116" cy="134" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/kdca-putrajaya_wendy-merrylen-s-jasmin_2026-06-04T13-51-03.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="116" cy="134" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/WENDEY MERRYLEN S. JASMIN - KDCA PUTRAJAYA.png" x="109" y="127" width="14" height="14" clip-path="url(#cpPJY2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="116" cy="134" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
             <g class="un-node" data-tab="Peninsular Malaysia" data-name="Melaka" data-sub="KDCA Melaka · 2026" data-winner="Clarissa Jane Ahap Fred Michael" data-img="/images/contestants/CLARISSA JANE AHAP - KDCA MELAKA.png">
               <circle cx="62" cy="148" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="62" y1="148" x2="112" y2="151" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="151" r="11" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/kdca-melaka_clarissa-jane-ahap-fred-michae_2026-06-04T13-50-21.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="112" cy="151" r="7.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/CLARISSA JANE AHAP - KDCA MELAKA.png" x="105" y="144" width="14" height="14" clip-path="url(#cpM2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="151" r="7" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
             <g class="un-node" data-tab="Peninsular Malaysia" data-name="Johor" data-sub="KDCA Johor · 2026" data-winner="Josephine Magdeline Joseph" data-img="/images/contestants/JOSEPHINE MAGDELINE JOSEPH - KDCA JOHOR.png">
               <circle cx="65" cy="165" r="2" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <line x1="65" y1="165" x2="112" y2="169" stroke="#f0a820" stroke-width="0.6" opacity="0.45" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="112" cy="169" r="13" fill="none" stroke="#f0a820" stroke-width="0.8" stroke-dasharray="2.5,2.5"/>
-              <g class="un-node-body"><circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/kdca-johor_josephine-magdeline-joseph_2026-06-04T13-49-41.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
+              <g class="un-node-body"><circle cx="112" cy="169" r="9.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.6" filter="url(#ngP2)"/><image href="/images/contestants/JOSEPHINE MAGDELINE JOSEPH - KDCA JOHOR.png" x="103" y="160" width="18" height="18" clip-path="url(#cpJB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="112" cy="169" r="9" fill="none" stroke="#f0a820" stroke-width="1.4"/></g>
             </g>
           </svg>
         </div>
@@ -1334,7 +1334,7 @@ export function mountLocatorMap(el) {
             <g class="un-node" data-tab="Sarawak" data-name="Sarawak" data-sub="KDCA Sarawak · 2026" data-winner="Deanera Clarissa Jamdin" data-img="/images/contestants/DEANERA CLARISSA - KDCA SARAWAK.png">
               <circle cx="122" cy="95" r="3" fill="#f0a820" opacity="0.75" style="pointer-events:none;"/>
               <circle class="un-node-pulse" cx="118" cy="100" r="16" fill="none" stroke="#f0a820" stroke-width="1" stroke-dasharray="3,3"/>
-              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="/images/contestants/kdca-sarawak_deanera-clarissa-jamdin_2026-06-04T14-15-15.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
+              <g class="un-node-body"><circle cx="118" cy="100" r="11" fill="#0a0a0a" stroke="#f0a820" stroke-width="1.8" filter="url(#ngSW2)"/><image href="/images/contestants/DEANERA CLARISSA - KDCA SARAWAK.png" x="108" y="90" width="20" height="20" clip-path="url(#cpSW2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/><circle cx="118" cy="100" r="10" fill="none" stroke="#f0a820" stroke-width="1.5"/></g>
             </g>
           </svg>
         </div>
@@ -1412,7 +1412,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="262" cy="30.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="262" cy="30.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kudat_feyrashandy-hanlin-hanis_2026-06-04T13-55-38.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/FEYRASHANDY HANLIN HANIS - KUDAT.png" x="258.5" y="27.1" width="7.0" height="7.0" clip-path="url(#cpSB0)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="262" cy="30.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1422,7 +1422,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="254.3" cy="27" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="254.3" cy="27" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/banggi_lora-derlina-lisa-jusley_2026-06-04T13-51-34.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/LORA DERLINA LISA JUSLEY - BANGGI.png" x="250.8" y="23.5" width="7.0" height="7.0" clip-path="url(#cpSB1)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="254.3" cy="27" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1432,7 +1432,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="281.2" cy="36.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="281.2" cy="36.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/pitas_jean-christzabeth-yusevender_2026-06-04T13-57-52.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/JEAN CHRISTZABETH YUSEVENDER - PITAS.png" x="277.7" y="33.1" width="7.0" height="7.0" clip-path="url(#cpSB2)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="281.2" cy="36.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1442,7 +1442,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="266.7" cy="37.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="266.7" cy="37.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kota-marudu_aelvereny-vahidin_2026-06-04T13-55-13.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/AELVERENY VAHIDIN @ YAHIDIN - KOTA MARUDU.png" x="263.2" y="34.2" width="7.0" height="7.0" clip-path="url(#cpSB3)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="266.7" cy="37.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1452,7 +1452,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="273.6" cy="32.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="273.6" cy="32.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/matunggong_criszelbellkah-lorris_2026-06-04T13-56-18.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CRISZELBELLKAH LORRIS - MATUNGGONG.png" x="270.1" y="29.2" width="7.0" height="7.0" clip-path="url(#cpSB4)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="273.6" cy="32.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1462,7 +1462,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="230.3" cy="64.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="230.3" cy="64.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kota-kinabalu_liane-melve-grace-lias_2026-06-04T13-55-01.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/LIANE MELVE GRACE - KOTA KINABALU.png" x="226.8" y="61.2" width="7.0" height="7.0" clip-path="url(#cpSB5)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="230.3" cy="64.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1472,7 +1472,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="225.1" cy="71.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.1" cy="71.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tanjung-aru_joyce-nia-david_2026-06-04T14-00-16.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/JOYCE NIA DAVID - TANJUNG ARU.png" x="221.6" y="68.0" width="7.0" height="7.0" clip-path="url(#cpSB6)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.1" cy="71.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1482,7 +1482,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="234.1" cy="57.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.1" cy="57.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/inanam_essmerrellda-cafry_2026-06-04T13-52-25.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ESSMERRELLDA CAFRY @ CLEMEN - INANAM.png" x="230.6" y="53.7" width="7.0" height="7.0" clip-path="url(#cpSB7)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.1" cy="57.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1492,7 +1492,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="238.3" cy="49.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="238.3" cy="49.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/karambunai_natalie-ally-hepeni_2026-06-04T13-53-23.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/NATALIE ALLY HEPENI - KDCA KARAMBUNAI.png" x="234.8" y="46.2" width="7.0" height="7.0" clip-path="url(#cpSB8)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="238.3" cy="49.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1502,7 +1502,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="225.7" cy="57.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="225.7" cy="57.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kdca-bandaraya_felecity-chen-sing-yee_2026-06-04T13-53-40.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/FELECITY CHEN SING YEE - BANDARAYA.png" x="222.2" y="53.6" width="7.0" height="7.0" clip-path="url(#cpSB9)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="225.7" cy="57.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1512,7 +1512,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="239.2" cy="64" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.2" cy="64" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/penampang_gadrette-gregory_2026-06-04T13-57-40.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/GADRETTE GREGORY - PENAMPANG.png" x="235.7" y="60.5" width="7.0" height="7.0" clip-path="url(#cpSB10)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.2" cy="64" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1522,7 +1522,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="237.7" cy="72.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="237.7" cy="72.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kapayan_viviyana-jenny_2026-06-04T13-53-06.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/VIVI YANA JENNY - KDCA KAPAYAN.png" x="234.2" y="68.9" width="7.0" height="7.0" clip-path="url(#cpSB11)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="237.7" cy="72.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1532,7 +1532,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="231" cy="77.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="231" cy="77.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/putatan_amber-weysha-walter-john_2026-06-04T13-58-07.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/AMBER WEYSHA WALTER - PUTATAN.png" x="227.5" y="74.1" width="7.0" height="7.0" clip-path="url(#cpSB12)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="231" cy="77.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1542,7 +1542,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="241.8" cy="42" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="241.8" cy="42" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tuaran_juje-elor-francis_2026-06-04T14-01-22.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/JUJE ELOR @ FRANCIS - TUARAN.png" x="238.3" y="38.5" width="7.0" height="7.0" clip-path="url(#cpSB13)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="241.8" cy="42" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1552,7 +1552,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="257.7" cy="38.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="257.7" cy="38.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tamparuli_evyanarrey-larry_2026-06-04T13-59-33.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/EVYANAREY LARRY - TAMPARULI.png" x="254.2" y="34.8" width="7.0" height="7.0" clip-path="url(#cpSB14)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="257.7" cy="38.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1562,7 +1562,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="249.2" cy="37.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.2" cy="37.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kota-belud_althea-tan-pin-yan_2026-06-04T13-54-44.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ALTHEA TAN PIN YAN - KOTA BELUD.png" x="245.7" y="34.3" width="7.0" height="7.0" clip-path="url(#cpSB15)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.2" cy="37.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1572,7 +1572,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="224.5" cy="83.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="224.5" cy="83.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/papar_gelvia-vanessa-jenny_2026-06-04T13-57-30.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/GELVIA VANESSA BINTI JENNY - PAPAR.png" x="221.0" y="79.7" width="7.0" height="7.0" clip-path="url(#cpSB16)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="224.5" cy="83.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1582,7 +1582,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="235.3" cy="94.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="235.3" cy="94.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/beaufort_fedelia-viviana-venchin_2026-06-04T13-51-47.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/FEDELIA VIVIANA VENCHIN - BEAUFORT.png" x="231.8" y="90.6" width="7.0" height="7.0" clip-path="url(#cpSB17)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="235.3" cy="94.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1592,7 +1592,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="232.5" cy="86.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="232.5" cy="86.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/membakut_dorna-mayra-michael_2026-06-04T13-56-33.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/DORNA MAYRA MICHAEL - MEMBAKUT.png" x="229.0" y="82.6" width="7.0" height="7.0" clip-path="url(#cpSB18)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="232.5" cy="86.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1602,7 +1602,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="226.7" cy="100.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.7" cy="100.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kuala-penyu_lorna-breetney-johnny_2026-06-04T13-55-28.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/LORNA BREETNEY JOHNNY - KUALA PENYU.png" x="223.2" y="97.1" width="7.0" height="7.0" clip-path="url(#cpSB19)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.7" cy="100.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1612,7 +1612,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="226.3" cy="92" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="226.3" cy="92" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/menumbok_hyzlensiska-verron-johnny_2026-06-04T13-56-45.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/HYZLENSISKA VERRON JOHNNY - MENUMBOK.png" x="222.8" y="88.5" width="7.0" height="7.0" clip-path="url(#cpSB20)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="226.3" cy="92" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1622,17 +1622,17 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="234.7" cy="103.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="234.7" cy="103.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sipitang_hilda-jaynissa-godwin_2026-06-04T13-58-41.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/HILDA JAYNISSA GODWIN - SIPITANG.png" x="231.2" y="99.8" width="7.0" height="7.0" clip-path="url(#cpSB21)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="234.7" cy="103.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
-<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="/images/contestants/ranau_christebell-masius_2026-06-04T13-58-22.png">
+<g class="un-node un-sabah-ind" data-tab="Sabah (Central)" data-winid="win-035" data-name="Ranau" data-sub="KDCA Ranau · 2026" data-winner="Christebelle Masius" data-img="/images/contestants/CHRISTEBELL MASIUS - RANAU.png">
                 <circle cx="264" cy="66" r="1.2" fill="#f0a820" opacity="0.8" style="pointer-events:none;"/>
                 <line x1="264" y1="66" x2="255.1" y2="46.6" stroke="#f0a820" stroke-width="0.35" opacity="0.5" style="pointer-events:none;"/>
                 <circle class="un-node-pulse" cx="255.1" cy="46.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="255.1" cy="46.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/ranau_christebell-masius_2026-06-04T13-58-22.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CHRISTEBELL MASIUS - RANAU.png" x="251.6" y="43.1" width="7.0" height="7.0" clip-path="url(#cpSB22)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="255.1" cy="46.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1642,7 +1642,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="244.3" cy="56.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.3" cy="56.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kiulu_catsween-su-sun-ping_2026-06-04T13-54-32.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CATSWEEN SU SUN PING - KIULU.png" x="240.8" y="52.7" width="7.0" height="7.0" clip-path="url(#cpSB23)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.3" cy="56.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1652,7 +1652,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="244.1" cy="90.9" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="244.1" cy="90.9" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/keningau_edreen-lynn-edward_2026-06-04T13-54-10.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/EDREEN LYNN EDWARD - KENINGAU.png" x="240.6" y="87.4" width="7.0" height="7.0" clip-path="url(#cpSB24)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="244.1" cy="90.9" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1662,7 +1662,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="256.7" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.7" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/bingkor_alysheron-maunsiong_2026-06-04T13-52-12.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ALYSHERON MAUNSIONG - BINGKOR.png" x="253.2" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB25)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.7" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1672,7 +1672,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="239.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="239.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tambunan_natalia-jinui_2026-06-04T13-59-20.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/NATALIA JINUI - TAMBUNAN.png" x="235.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB26)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="239.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1682,7 +1682,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="242.2" cy="99.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.2" cy="99.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tenom_radila-ifa-yanie_2026-06-04T14-01-02.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/RADILA IFA YANIE - TENOM.png" x="238.7" y="95.7" width="7.0" height="7.0" clip-path="url(#cpSB27)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.2" cy="99.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1692,7 +1692,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="242.7" cy="108.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="242.7" cy="108.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kemabong_venica-tuboh_2026-06-04T13-53-56.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/VENICA TUBOH @ PAUZIN - KEMABONG.png" x="239.2" y="105.3" width="7.0" height="7.0" clip-path="url(#cpSB28)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="242.7" cy="108.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1702,7 +1702,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="249.4" cy="103.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="249.4" cy="103.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sook_myra-evana-robert_2026-06-04T13-58-58.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/MYRA EVANA ROBERT - SOOK.png" x="245.9" y="100.1" width="7.0" height="7.0" clip-path="url(#cpSB29)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="249.4" cy="103.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1712,7 +1712,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="256.3" cy="108.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="256.3" cy="108.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/nabawan_sahira-samson_2026-06-04T13-56-56.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/SAHIRA SAMSON - NABAWAN.png" x="252.8" y="105.2" width="7.0" height="7.0" clip-path="url(#cpSB30)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="256.3" cy="108.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1722,7 +1722,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="261.9" cy="115.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="261.9" cy="115.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/pagalungan_kerishine-danil_2026-06-04T13-57-07.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/KERISHINE DANIL - PAGALUNGAN.png" x="258.4" y="111.8" width="7.0" height="7.0" clip-path="url(#cpSB31)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="261.9" cy="115.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1732,7 +1732,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="300.6" cy="46.1" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="300.6" cy="46.1" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sandakan_ceelecia-reeka-mosungin_2026-06-04T14-16-08.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CEELECIA REEKA MOSUNGIN - SANDAKAN.png" x="297.1" y="42.6" width="7.0" height="7.0" clip-path="url(#cpSB32)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="300.6" cy="46.1" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1742,7 +1742,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="294.2" cy="51.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="294.2" cy="51.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/beluran_dyann-dharlla-dominic_2026-06-04T13-52-03.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/DYANN DHARLLA DOMINIC - BELURAN.png" x="290.7" y="48.2" width="7.0" height="7.0" clip-path="url(#cpSB33)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="294.2" cy="51.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1752,7 +1752,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="290.1" cy="41" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="290.1" cy="41" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/paitan_candycyci-liakim_2026-06-04T13-57-20.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CANDYCYCI LIAKIM - PAITAN.png" x="286.6" y="37.5" width="7.0" height="7.0" clip-path="url(#cpSB34)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="290.1" cy="41" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1762,7 +1762,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="292.2" cy="60.4" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292.2" cy="60.4" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/telupid_raraa-cyra-eva-bella-stephen_2026-06-04T14-00-48.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CYRA EVA BELLA STEPHEN - TELUPID.png" x="288.7" y="56.9" width="7.0" height="7.0" clip-path="url(#cpSB35)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292.2" cy="60.4" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1772,7 +1772,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="307" cy="63.5" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="307" cy="63.5" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kinabatangan_vrenda-joan-taji_2026-06-04T13-54-20.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/VRENDA JOAAN DEFTENNEAY TAJI - KINABATANGAN.png" x="303.5" y="60.0" width="7.0" height="7.0" clip-path="url(#cpSB37)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="307" cy="63.5" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1782,7 +1782,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="310.4" cy="72.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="310.4" cy="72.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/sukau_ally-denis_2026-06-04T13-59-07.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ALLY DENIS - SUKAU.png" x="306.9" y="68.7" width="7.0" height="7.0" clip-path="url(#cpSB38)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="310.4" cy="72.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1792,7 +1792,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="292" cy="82" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="292" cy="82" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tongod_anne-theresse-justin-sentian_2026-06-04T14-01-12.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ANNE THERESSE JUSTIN SENTIAN - TONGOD.png" x="288.5" y="78.5" width="7.0" height="7.0" clip-path="url(#cpSB45)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="292" cy="82" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1802,7 +1802,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="311.1" cy="80.7" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="311.1" cy="80.7" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/lahad-datu_caesyzizi-liakim_2026-06-04T13-56-03.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CAESYZIZI LIAKIM - LAHAD DATU.png" x="307.6" y="77.2" width="7.0" height="7.0" clip-path="url(#cpSB39)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="311.1" cy="80.7" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1812,7 +1812,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="314.1" cy="88.6" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="314.1" cy="88.6" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tungku_mary-an-p-calica_2026-06-04T14-01-34.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/MARY-AN P. CALICA - TUNGKU.png" x="310.6" y="85.1" width="7.0" height="7.0" clip-path="url(#cpSB40)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="314.1" cy="88.6" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1822,7 +1822,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="317.8" cy="96.3" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="317.8" cy="96.3" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kunak_rachel-justin_2026-06-04T13-55-49.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/RACHEL JUSTIN - KUNAK.png" x="314.3" y="92.8" width="7.0" height="7.0" clip-path="url(#cpSB41)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="317.8" cy="96.3" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1832,7 +1832,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="321.8" cy="103.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="321.8" cy="103.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/semporna_adylee-arisen_2026-06-04T13-58-32.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ADYLEE ARISEN - SEMPORNA.png" x="318.3" y="100.3" width="7.0" height="7.0" clip-path="url(#cpSB42)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="321.8" cy="103.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1842,7 +1842,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="312.8" cy="103.2" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="312.8" cy="103.2" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/tawau_elvyra-edna-robert_2026-06-04T14-16-46.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/ELVYRA EDNA ROBERT - TAWAU.png" x="309.3" y="99.7" width="7.0" height="7.0" clip-path="url(#cpSB43)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="312.8" cy="103.2" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
@@ -1852,7 +1852,7 @@ export function mountLocatorMap(el) {
                 <circle class="un-node-pulse" cx="308.2" cy="95.8" r="5.5" fill="none" stroke="#f0a820" stroke-width="0.5" stroke-dasharray="1.2,1.2"/>
                 <g class="un-node-body">
                   <circle cx="308.2" cy="95.8" r="3.5" fill="#0a0a0a" stroke="#f0a820" stroke-width="0.8" filter="url(#ngSB)"/>
-                  <image href="/images/contestants/kalabakan_christine-dionysius_2026-06-04T13-52-54.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
+                  <image href="/images/contestants/CHRISTINE DIONYSIUS - KALABAKAN.png" x="304.7" y="92.3" width="7.0" height="7.0" clip-path="url(#cpSB44)" preserveAspectRatio="xMidYMid slice" style="pointer-events:none;"/>
                   <circle cx="308.2" cy="95.8" r="3.5" fill="none" stroke="#f0a820" stroke-width="0.6"/>
                 </g>
               </g>
